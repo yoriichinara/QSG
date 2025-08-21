@@ -1,0 +1,116 @@
+\section{Formula de Taylor}
+
+\ejemplo{
+    A ideia é aproximar funções por polinômios, visando uma forma \(f(p+v) = P_k[v] + \Gamma_k[v]\), onde \(P_k\) é um polinômio na variável \(v\) de ordem \(k\) e \(\Gamma_k\) é um erro de ordem \(\sigma (\|v\|^k)\).
+    \tcblower
+    \begin{example}
+        Se \(f\in C^2(U)\) e \(p\in U\), então  
+        \[ f(p+v) = \underbrace{f(p) + \sum \frac{\partial f }{\partial x_i}(p)v_i+ \frac{1}{2}\sum \frac{\partial f}{\partial x_i \partial x_j}(p) v_iv_j}_{P_2[v]} + \underbrace{\sigma(\|v\|^2)}_{\Gamma_2[v]}.\]
+    \end{example}
+}
+
+\begin{definition}
+    Seja \(k\geq 2\). Dizemos que \(f:U\ab\subseteq \R^n \to \R\) é \(k\)\emph{-diff} em \(p\in U\) se \(f\) é diff em \(p\) e \(\exists \mathcal{V}_p\) tal que \(\forall i\leq n, \ \frac{\partial f }{\partial x_i}(p): \mathcal{V}_p \to \R\) são \((k-1)\)-diff em \(p\). 
+\end{definition}
+
+\Ei 
+
+\begin{example}
+    \(f \in C^k(U)\)  é \(k\)-diff em \(p\in U\). 
+\end{example} 
+%\begin{exercise}
+%    Muestre que el Teorema de Schwarz vale en general para funciones \(2\)-diff. \textcolor{gray}{\(\rightarrow\) Consultar Elon Musk} 
+%\end{exercise}
+
+\Ef
+
+\begin{definition}
+    Seja \(f\) função \(k\)-diff em \(p\), o \emph{diferencial \(k\)-ésimo} de \(f\) em \(p\) é dado por %\(d^kf(p): \R^n \to \R\) tal que 
+    \[v\mapsto d^kf(p)v^{\otimes k} = \sum \frac{\partial^k f }{\partial x_{i_1}  \cdots \partial x_{i_k}}(p)v_{i_1}\cdots v_{i_k}. \] 
+\end{definition}
+\begin{note} 
+    \(d^kf(p)v^{\otimes k}\) é um polinômio homogêneo de grau \(k\)
+\end{note}
+
+\ejemplo{\centering 
+    \(d^2f(p)v = vA(p) v^T\) é uma forma bilinear quadrâtica de grau 2.  
+    \tcblower
+    \begin{example}
+    Para \(f:\R^2\to \R\), sendo \(v=(h,k)\) temos \[ d^2f(p)v^{\otimes 2} = \frac{\partial^2 f}{\partial x^2}(p)h^2 + 2 \frac{\partial^2 f }{\partial x\partial y}(p)hk+ \frac{\partial^2 f}{\partial y^2}(p)k^2.\]  
+    \end{example}
+}
+    
+\Ef
+
+\begin{definition}
+    Seja \(f\) função \(2\)-diff  em \(p\), a \emph{Hessiana} da \(f\) em \(p\), é a matriz   
+    \[ Hf(p) = \left(\frac{\partial^2 f}{\partial x_i\partial x_j}(p)\right)_{i,j} =  \begin{pmatrix}
+        \frac{\partial^2 f }{\partial x_1^2}(p) & \cdots &  \frac{\partial^2 f }{\partial x_1 \partial x_n}(p) \\
+        \vdots & \ddots & \vdots \\
+        \frac{\partial^2 f }{\partial x_n \partial x_1}(p) & \cdots & \frac{\partial^2 f }{\partial x_n^2}(p)
+    \end{pmatrix}.\]
+\end{definition}
+\begin{note}
+    Pelo \(\blacksquare\) (Schwarz), \(\exists !Hf(p) \in \operatorname{Sym}_n(\R)\) tal que 
+    \[d^2f(p)v^{\otimes 2} = \langle Hf(p)\cdot v, v\rangle. \] 
+\end{note}
+
+\Ei 
+
+%\begin{exercise}
+%    Muestre que si \(f\) es \(k\)-diff en \(p\) entonces \(d^kf(p)v^{\otimes k} = \sum \binom{k}{\alpha}\partial^\alpha f(p)v^\alpha\), donde \( |\alpha|=k\). \textcolor{gray}{\(\rightarrow\) Haga el ejercicio combinatorial, haga aparecer la expresión} 
+%\end{exercise}
+ 
+\Ef
+
+\begin{definition}
+    \(f \in C^{k} (\U_p)\) se anula à ordem \(k+1\) em \(p\) se \(\forall \alpha :  |\alpha|\leq k\), \( d^\alpha f (p)=0\). 
+\end{definition}
+
+\Ei
+
+\begin{exercise}
+    Se \(f(\textbf{x})= \sum_{|\alpha|\leq k} c_\alpha \textbf{x}^\alpha \) se anula identicamente numa vizinhaza do origem então \(\forall \alpha, \ c_\alpha = 0\). \textcolor{gray}{\(\rightarrow \) Hmmm }
+\end{exercise}
+
+\Ef
+
+\begin{theorem}
+    Sejam \(k\geq 1\) e \(f\) uma função \(k\)-diff em \(0\in \R^n\). Se \(f\) se anula à ordem \(k+1 \) então \(f(v)=\sigma(\|v\|^k)\).
+\end{theorem}
+\demo{Faz por indução, no paso indutivo use o TVM - \(\R^n\) para representar \(f(v)\) e calcule \(\lim\limits_{v\to 0} \frac{f(v)}{\|v\|^k} \). Considere a função \(\Gamma_k(v)\) dada por 
+\- \vspace{-0.5cm}\[v \mapsto f(p+v) - \sum^k \frac{1}{j!} \  d^jf(p) v^{\otimes j}, \]
+observe que ela é \(k\)-diff no \(0\) e se anula à ordem \(k+1\).} 
+\begin{corollary}[\emph{Fórmula de Taylor Infinitesimal}]%[Colorario]
+    Se \(f\) é \(k\)-diff em \(p\) então
+    \[f(p+v)= \sum^k \frac{1}{j!} \  d^jf(p) v^{\otimes j}  + \sigma(\|v\|^k).\] 
+\end{corollary}    
+\begin{note}
+    Fazendo \(\textbf{x}=p+v\), obtemos sua versão mais familiar  
+    \[f(\textbf{x}) = \sum_{|\alpha|\leq k}\frac{\partial^\alpha f (p)}{\alpha !} \ (\textbf{x}-p)^\alpha + \sigma(\|\textbf{x}-p\|^k). \]
+\end{note}
+
+%\begin{exercise}
+%    Cálcule la Fórmula de Taylor Infinitesimal de orden \(k=5\) de \(f(x,y) = \frac{x}{1+xy}\) en \(0\). \textcolor{gray}{\(\rightarrow\) Reexprese con serie geométrica y analice los sumandos } 
+%\end{exercise}
+\begin{exercise}
+    Seja \(f\) função \(k\)-diff. Usando Taylor prove a volta do último Teorema, conclua a unicidade. \textcolor{gray}{\(\rightarrow\) Suponga que \(\exists P_i(v)\) homógeneo... }
+\end{exercise}
+
+\Ef 
+\begin{proposition}[\emph{Fórmula de Taylor com Restos}]
+    Sejam \(a \in I\ab\subset \R\) e \(\varphi \in C^{k+1}(I)\), então \(\varphi (x) = P_k[x] + \Gamma_k[x]\), onde \(\Gamma_k(x) \) pode ser,   
+    \begin{enumerate}[label = \roman*.]
+        \item \( \frac{\varphi^{(i+1)}(c)}{(i+1)!} \ (x-a)^{(i+1)}\) para algum \(c\in I\ \ \rightarrow \) \emph{Resto de Lagrange}. 
+        \item \( \int_a^x \frac{\varphi^{(k+1)}(t)}{k!}\ (x-t)^k\ dt\ \ \rightarrow \)  \emph{Resto Integral}. 
+    \end{enumerate} 
+\end{proposition}
+
+\begin{corollary}[\emph{Fórmula de Taylor con Restos - \(\R^n\)} ]
+    Seja \(f\in C^{k+1}(U)\). Então \(\forall p\in U\) e \(\vec{v}\in \R^n\) tais que \([p,p+tv]\subseteq U\) temos \(f(p+v) = P_k[v] + \Gamma_k[v]\), onde \(\Gamma_k[v]\) pode ser, 
+    \begin{enumerate}[label = \roman*.]
+        \item \(\frac{d^{k+1}f(p+\theta v)}{(k+1)!}  v^{\otimes (k+1)}\) para algún \(\theta \in (0,1)\ \ \rightarrow \) \emph{Resto de Lagrange}. 
+        \item \(\int_0^1 \frac{(1-t)^k}{k!} d^{k+1}f(p+tv) v^{\otimes (k+1)} dt\ \ \rightarrow  \)  \emph{Resto Integral}. 
+    \end{enumerate}
+\end{corollary}
+\demo{Aplique o sabido numa variável à função \(\varphi(t) = f(p+tv)\). Expresse o diferencial como soma, e desenvolva até chegar à forma descrita. }

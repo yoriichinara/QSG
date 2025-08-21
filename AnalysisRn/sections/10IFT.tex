@@ -1,0 +1,212 @@
+\subsection{Teorema da Função Inversa}
+\begin{definition}
+    \(F : U\ab\subseteq \R^n\to \R^n\) é \emph{diffeomorfismo local} de classe \(C^k\) em \(p\in U\) se \(\exists \mathcal{V}_p\subseteq U\) tal que \(^k F: \mathcal{V}_p\simeq F(\mathcal{V}_p)\ab \subseteq \R^n\). Denotamos \(^k F: \mathcal{V}_p\). 
+\end{definition}
+
+%\begin{example}
+%    \(\forall \theta \in  \R\) la aplicación \(F: (r,\theta)\mapsto (r\cos(\theta),r\sin(\theta))\) es \(^k F: \mathcal{V}_{(r,\theta)}\). 
+%\end{example}
+
+\begin{theorem}[\emph{Função Inversa}]
+    Sejam \(F \in C^k(U; \R^n)\) e \(p\in U\). A aplicação \(F\) é \(^k F : \mathcal{V}_p\) sse \(DF(p)\) é isomorfismo.  
+\end{theorem}
+
+\begin{enumerate}[left = 0cm]
+\item[] \demo{
+    \parbox[b]{0.66\linewidth}{\textcolor{black}{\emph{Nota}.} Basta ver a volta. Sem perda de generalidade, podemos supor que \(p=0\), \(F(p) = 0 \) e \(DF = \id_{n}\). Remeta-se ao gráfico, nele,  {\small (*) \(= [DF(p)]^{-1 }(\textbf{x}-F(p))\)} e {\small (**) \(= [DF(p)]^{-1 }(F(\textbf{x}+p)- F(p)) \)}. Nestes novos termos \(F(\textbf{x}) = \textbf{x} + R(\textbf{x})\), onde \(R(\textbf{x})= \sigma (\|\textbf{x}\|)\). }\parbox[a]{0.3\linewidth}{\ } 
+}
+
+\begin{tikzpicture}[scale=1.2, >=to, shift={(11.4cm,2.1cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+    
+    \node (Up) at (0,0) {\small $U-p$};
+    \node (Rn) at (2,0) {$\mathbb{R}^n$};
+    \node (Rn2) at (2,2) {$\mathbb{R}^n$};
+    \node (U) at (0,2) {\small $U$};
+    
+    \node (b1) at (0,-0.7) {\footnotesize $\textbf{x}$};
+    \node (b2) at (2,-0.7) { \footnotesize (**)};
+    \node (b2) at (1,-0.7) {$\longmapsto$};
+
+    \node (c2) at (1,-1.5) {};
+    \node (c3) at (1,-2.3) {};
+
+    \node (a) at (-1,0) {\footnotesize$\textbf{x}$};
+    \node (b) at (-1,2) {\footnotesize$\textbf{x}+p$};
+    \node (a1) at (-1,1) {\rotatebox{90}{$\longmapsto$}};
+
+    \node (c) at (2.8,0) {\footnotesize (*)};
+    \node (d) at (2.8,2) {\footnotesize$\textbf{x}$};
+    \node (c1) at (2.8,1) {\rotatebox{-90}{$\longmapsto$}};
+
+    \draw[->] (Up) -- node[above, xshift = -0.45cm, yshift = -0.3cm] {\scriptsize \rotatebox{90}{diff}} (U);
+    \draw[->] (Up) -- node[left] {\scriptsize } (Rn);
+    \draw[->] (U) -- node[above] {\scriptsize \(F\) } (Rn2);
+    \draw[->] (Rn2) -- node[right, xshift = 0.15cm, yshift = 0cm] {\scriptsize \rotatebox{-90}{diff}} (Rn);
+    \draw[->, color = gray, >=to] (0.85,0.85) arc (240:-60:0.25);
+
+\end{tikzpicture}
+\- \vspace{-2.2cm}
+\item[] \begin{lemma}
+    Seja \(F:U\ab\subseteq \R^n \to \R^m\) aplicação diff em \(p\in U\), então \(\forall \epsilon >0\), \( \exists \V_p \) tal que \(\forall\textbf{x} \in \V_p\), \(\|F(\textbf{x})- F(p)\| \leq (\|DF(p)\|+\epsilon )\|\x - p\|\). \textcolor{gray}{\(\rightarrow \) Use a definição de diff com \(v= \x-p\)} 
+\end{lemma}
+\item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
+    \centering \(\exists \V_0\) tal que \(F: \V_0 \hookrightarrow F(\V_0)\)  
+    \tcblower 
+    \textcolor{gray}{\(DR(0)=0\), logo para \(\epsilon = \frac{1}{2}\), \(\exists\V_0\) tal que \(\forall \textbf{x}_1, \textbf{x}_2 \in \V_0\), \(\|R(\textbf{x}_1) - R(\textbf{x}_2)\|\leq \frac{1}{2}\|\textbf{x}_1-\textbf{x}_2\|\). Reinterprete em termos da \(F\) e concluia.}  
+\end{tcolorbox}
+\begin{definition}
+    Sejam \(M, \ N\) espaços métricos. Uma aplicação \(T:M\to N\) é uma \emph{contração} se \(\exists c<1\) tal que \(\|T(x)- T(y)\|\leq c\|x-y\|\). 
+\end{definition}
+\begin{theorem}[\emph{Ponto Fixo Banach}]
+    Se \(X\ce\subseteq \R^n\) e \(T:X\to X\) é uma contração, então \(\exists! \ x^*\in X \) tal que \(T(x^*)= x^*\) e \(\forall x_0 \in X, \ \lim\limits_{n\to \infty} T^n(x_0) = x^*\).   
+\end{theorem}
+\item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
+    \centering \(F(\V_0)\ab \subseteq \R^n\) 
+    \tcblower 
+    \textcolor{gray}{Tome \(p \in \V_0\), \(q = F(p) \in F(\V_0)\). Defina \(\forall \textbf{y} \in \V_0 \), \(T_{\textbf{y}}: \textbf{x} \mapsto  \textbf{y} - R(\textbf{x})\). Tome \(r>0\) tal que \(B[p,r] \subset \V_0\). Suponha \(\|\textbf{y}- q\|<\frac{r}{2} = \epsilon\) e \(\textbf{x} \in B[p,r]\). Desenvolva \(\|T_{\textbf{y}}(\textbf{x}) - p\|\) e aplique \(\blacksquare\) (Punto Fixo). }%\textbf{x} - (F(\textbf{x})- \textbf{y})
+\end{tcolorbox}
+\begin{lemma}
+    Seja \(L \in GL_n(\R)\). A aplicação \(\operatorname{inv}: L \mapsto L^{-1} \) é diff. \textcolor{gray}{\(\rightarrow \) Faz direito \(\text{inv}(L+H)\) e use a serie geométrica de Neumann}    
+\end{lemma}
+\item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
+    \centering \(F^{-1} \in C^k(F(\V_0; \R^n))\) %é diff em \(F(\V_0)\) e \(D[F^{-1}](q) = [DF(p)]^{-1}\) 
+    \tcblower
+    \textcolor{gray}{ \parbox[a]{0.65\linewidth}{{\small \(^\bullet\)} \(\|DF(p)- \id_{n}\| = \|DR(p)\| < \frac{1}{2}\) implica \(DF(p)\) invertível. Sendo \(q = F(p)\), para \(0<w \ll \epsilon\), \(\exists v\in \R^n\) tal que \(F(p+v) = q+w\). Desenvolva a expressão \(F^{-1}(q+w)\), apontando para a definição de diff. } \parbox[b]{0.35\linewidth}{ \ } \\ 
+    {\small \(^\bullet\)} Para verificar a classe basta usar o lemma no diagrama acima.
+    }
+\end{tcolorbox}
+\begin{tikzpicture}[scale = 1.2, >=to, shift={(10.5cm,2.3cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+    
+    \node (Up) at (0,0) {\small $\V_0$};
+    \node (Rn) at (2.5,0) {\small $GL(\R^n)$};
+    \node (Rn2) at (2.5,2) {\small $GL(\R^n)$};
+    \node (U) at (0,2) {\small $F(\V_0)$};
+    
+    \node (c) at (3.6,0) {\footnotesize $L$};
+    \node (d) at (3.6,2) {\footnotesize$L^{-1}$};
+    \node (c1) at (3.6,1) {\rotatebox{90}{$\longmapsto$}};
+
+    \draw[->] (Up) -- node[above, xshift = -0.45cm, yshift = -0.2cm] {\scriptsize \(F\)} (U);
+    \draw[->] (Up) -- node[below] {\scriptsize \(DF\)} (Rn);
+    \draw[->] (U) -- node[above] {\scriptsize \(D[F^{-1}]\) } (Rn2);
+    \draw[->] (Rn) -- node[right, xshift = 0.05cm, yshift = 0cm] {\scriptsize \(\text{inv}\)} (Rn2);
+    \draw[->, color = gray, >=to] (1.15,0.85) arc (240:-60:0.25);
+
+\end{tikzpicture}
+\end{enumerate}
+
+%\begin{proof}
+%    \begin{enumerate}[label=(\Roman*)]
+              
+            
+%            \begin{enumerate}[label = (\alph*)]
+%                \\ 
+%                \- \vspace{2.7cm} \\ 
+%                \- \todo[gris, backgroundcolor= none]{\- \vspace{2.95cm}} %\todo[gris]{ \hspace{0.55cm} \(D[F^{-1}] \circ F = \text{inv}\circ DF \)} 
+%                \item \(F^{-1} \in C^k(F(\V_0);\R^n)\) 
+
+
+%                \- \vspace{-0.7cm}
+                %\begin{definition}
+                %    \(GL(\R^n):= \{L \in \mathcal{L}(\R^n; \R^n ): L \text{ es isomorfismo}\} \). 
+                %\end{definition}
+                
+%            \end{enumerate}
+%    \end{enumerate}
+%    \- \vspace{-0.6cm}
+%\end{proof}
+\- \vspace{-2cm}
+
+\begin{corollary}
+    Seja \(F \in C^k(U;\R^n)\) tal que \(\forall p \in U\), \(\det(JF(p))\neq 0\), então \(F\) é uma aplicação aberta. Mais ainda, se \(F\) injeta então \(^k F: U \simeq F(U)\). 
+\end{corollary}
+%\begin{example}
+%    \(F: (x,y) \mapsto (x^2+y^2, 2xy)\). \textcolor{gray}{\(\rightarrow\) Estudie la función, la existencia de diffeomorfismos, alguna de las inversas, las regiones que identifican, etc }
+%\end{example}
+
+\subsection{Teorema da Função Implícita}
+
+%\begin{theorem}[Función Implícita]
+%    Sean \(g\in C^k(U)\) e \(p\in U\) tal\todo[orange, noline]{El enunciado es equivalentemente enunciable para cada variable \(x_i\)} que \(g(p)=0\) e \(\frac{\partial g }{\partial x_n}(p)\neq 0 \), entonces, \(\exists \delta > 0\) e \(\exists f:\mathcal{V}_p\subseteq \R^{n-1}\to \R \) tales que 
+%    \begin{enumerate}[label = \roman*.]
+%        \item \(\textbf{x} \in \mathcal{V}_p\) e \(|y - p_n|<\delta  \ \Rightarrow \ g(x_1, x_2, \ldots, x_{n-1}, y)=0\). 
+%        \item \(f \in C^k(\mathcal{V}_p)\) e \(\frac{\partial f}{\partial x_j}(\textbf{x}) = - \frac{\partial g }{\partial x_j}(\textbf{x}, f(\textbf{x})) / \frac{\partial g}{\partial x_n}(\textbf{x}, f(\textbf{x}))\). 
+%    \end{enumerate} 
+%\end{theorem}
+
+
+\begin{theorem}[\emph{Função Implícita}]
+    Sejam \(U\ab\subseteq \R^n\times \R^m\), \(G\in C^k(U;\R^m)\) e \((p,q)\in U\). Se \(G(p,q) = 0 \) e \(\det JG_q(p,q)\neq 0\), então \(\exists \mathcal{W}_q\) e \(\exists F\in C^k(\mathcal{V}_p;\R^m)\) tais que 
+    \[\mathcal{V}_p\times \mathcal{W}_q \ni (\textbf{x},\textbf{y}) \Rightarrow G(\textbf{x},\textbf{y}) =  G(\textbf{x}, F(\textbf{x})) =0.\] 
+%    \textcolor{gray}{\(\rightarrow\) \(G\) es localmente el gráfico de la función \(F\)}
+\end{theorem}
+\demo{\parbox[b]{0.2\linewidth}{ \ } \parbox[a]{0.8\linewidth}{Tome \(\Phi: (\textbf{x}, \textbf{y}) \mapsto (\textbf{x}, G(\textbf{x},\textbf{y}))\), veja que é \(C^k(U; \R^n\times \R^m)\) e \(\det (J\Phi )\neq 0\). Pelo \(\blacksquare\) (TFI) \( ^k \Phi: \mathcal{V}_p\times \mathcal{W}_q\) e \(\exists \Phi^{-1}: (\textbf{x}, \textbf{y})\mapsto (\textbf{x}, \Psi(\textbf{x}, \textbf{y}))\) diffeomorfismo, o resultado segue tomando \(F(\textbf{x}):= \Psi(\textbf{x}, 0)\).} 
+}
+\begin{tikzpicture}[scale= 1.25, >=to, shift={(-3.3cm,-3.3cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+    \node at (5,6.5) {\small $J\Phi$}; 
+    \node at (5,6) {\small \rotatebox{90}{$=$}}; 
+  \node at (5,5) {%
+    \small$
+    \left(
+    \begin{array}{c:c}
+    \id_{n} & 0 \rule{0em}{0em}\\
+    \hdashline  
+    \rule{0pt}{1.2em}
+    \frac{\partial G_i}{\partial x_j} & \frac{\partial G_i}{\partial y_j}
+    \end{array}
+    \right)
+    $
+  };
+\end{tikzpicture}
+%\begin{exercise}
+%    Demuestre el Teorema de la Función Implícita usando el Teorema de la Función Inversa. \textcolor{gray}{\(\rightarrow \) Son todos caras de una misma cosa}
+%\end{exercise}
+%\begin{note}
+%    Con esas hipótesis, \(\{g(\textbf{x})=0\}\), es, en una vecindad de \(p = (p_1, \ldots, p_{n-1})\) el gráfico de una función \(f(x_1, \ldots, x_{n-1})\). 
+%\end{note}
+\vspace{-1cm}
+\begin{corollary}
+Pelo \(\blacksquare\) (Regla da Cadeia) temos \(JG_q(p,q) \cdot JF_p  = - JG_p(p,q)\).   
+\end{corollary}
+
+\ejemplo{
+    O \(\blacksquare\) (Função Implícita) garante que podemos despejar algumas variáveis em termos das outras. 
+    \tcblower
+\begin{example}
+    \(g: (x,y) \mapsto x^2 + y^2 -1 \), encontre \(y= f(x)\) em \(A= \{(x,y): x>0\}\). \textcolor{gray}{\(\rightarrow \) Clássico de cálculo, relacione com as hipóteses do Teorema } 
+\end{example}
+}
+
+\begin{corollary}
+    \(^kH\subseteq \R^n\) hipersuperficie é localmente o gráfico de uma função.  
+\end{corollary}
+
+
+\begin{proposition}
+    Se \(^k H\subseteq \R^n\) é hipersuperficie definida por \(g(\textbf{x})=0\), \(p\in H\) e \(c\in C^k(\mathcal{V}_\epsilon;H)\) é um caminho em \(H\), então \(\ker dg(p):= \{c{'}(0): c(0) = p \}\).
+\end{proposition}
+
+\demo{(\(\supseteq \)) Aplique \(\blacksquare\) (Regla da Cadeia) na função \((g \circ c)(t)\). (\(\subseteq\)) \(\exists i \leq n \) tal que \(\frac{\partial g}{\partial x_i}(p) \neq 0\), suponha que é a última \(i=n\). Tome \(\vec{v}\in \R^n\) tal que \(dg(p)\cdot v=0\), aplique \(\blacksquare\) (Função Implícita) conseguindo \(c(t)= (p_j + tv_j, f(p_j+tv_j))\). Use nela o primero corolário do mesmo Teorema. \vspace{-0.5cm}}
+
+\begin{definition}
+    Seja \(p \in \ ^k H\subseteq \R^n\). O \emph{espaço tangente} a \(H\) em \(p\), é o dado por   
+    \[T_pH:= \ker dg(p) = \{\vec{v} \in \R^n: \langle \nabla g(p), v\rangle = 0\}. \]
+\end{definition}
+\begin{note}
+    \(T_pH\leq \R^n\) não necessariamente passa por \(p\).
+\end{note}
+%\begin{note}
+%    Otra definición equivalente es \(T_p H:= \{\vec{v} \in \R^n : \langle \nabla g(p) ,v\rangle = 0\}\).  
+%\end{note}
+
+\begin{example}
+    Para \(H = \mathbb{S}^{n-1}\) temos \(T_p H := \{\vec{v}\in \R^n : \langle p, v\rangle = 0\}\). \textcolor{gray}{\(\rightarrow\) Faça o exercício gráfico, note também que \(\forall c>0,\  \nabla g(p) \perp H = \{g(\textbf{x})-c=0\}\)}
+\end{example}
+
+\begin{lemma}
+    Sejam \(V\) espaço vetorial sobre \(\R\) e \(\ell_1, \ell_2 \in V^{*}\). Se \(\ker \ell_1 \subseteq \ker \ell_2\) então \(\exists \lambda \in \R \) tal que \(\ell_2 = \lambda \ell_1 \). 
+\end{lemma}
+\begin{corollary}
+    \(\blacksquare\) (Multiplicadores de Lagrange). \textcolor{gray}{\(\rightarrow\) Use a definição por caminhos de \(\ker dg(p)\) e aplique o lemma acima}
+\end{corollary}
+

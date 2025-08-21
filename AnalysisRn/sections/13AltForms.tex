@@ -1,0 +1,410 @@
+\section{Formas Differenciais}
+
+\ejemplo{
+    Nosso objetivo é uma noção geral de integral em variedades que não dependa da escolha da parametrização local.
+    \tcblower
+\begin{example} \- \vspace{-0.5cm}
+    \[\int_a^b \overbrace{f(t) \ dt}^{\overset{\text{Forma Diff}}{\uparrow}}  \ \ \ \overset{^{t\to 2u}}{=}\ \ \  \int_{\frac{a}{2}}^{\frac{b}{2}} f(2u)  \ 2du. \]
+\end{example}
+}
+
+\subsection{Formas Alternadas}
+
+\begin{definition}
+    Seja \(V\) espaço vectorial. Uma $k$-\emph{forma} alternada é uma função \(k\)-linear, \(\alpha: V^k \to \R\) tal que, se \(v_i = v_j\) para algum \(i\neq j\) então \(\alpha(v_1, \ldots, v_k) = 0\). 
+\end{definition}
+
+\begin{example}
+    \(\alpha: V \to \R\) linear é \(1\)-forma alternada. \textcolor{gray}{\(\rightarrow\) A antissimetria é trivial}
+\end{example}
+
+\begin{note}
+    \(V^0 = \{\emptyset\}\), logo, uma $0$-forma é simplesmente um \(\alpha(o) \in \R\). 
+\end{note}
+
+\parbox[l]{0.7\linewidth}{
+
+\begin{example}
+    A função \(\det : (\R^2)^2 \to \R\) é \(2\)-forma alternada em \(V= \R^2\), onde 
+    \[\begin{pmatrix}
+        a \\ b
+    \end{pmatrix}\times \begin{pmatrix}
+        c \\ d
+    \end{pmatrix} \mapsto \det\begin{pmatrix}
+        a & c \\ 
+        b & d
+    \end{pmatrix}.\]  
+\end{example}
+}
+
+\begin{tikzpicture}[>=to, shift={(14.4cm,2.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay, scale = 0.75]
+    % Definimos los vectores v1 y v2
+    \coordinate (O) at (0,0);
+    \coordinate (v1) at (3.5,0);
+    \coordinate (v2) at (1,2);
+    
+    % Calculamos los otros vértices del paralelogramo
+    \coordinate (v1v2) at ($(v1) + (v2)$);
+    
+    % Sombra del área
+    \fill[gray!10] (O) -- (v1) -- (v1v2) -- (v2) -- cycle;
+    %\fill[pattern={Lines[angle=0,distance=4pt,line width=0.4pt]},pattern color=gray] (O) -- (v1) -- (v1v2) -- (v2) -- cycle;
+    \node[thick] at (2,1.02) {\textbf{$P$}};
+    \draw[->, thick] (2.1,0.65) arc (-90:55:0.4);
+    % Dibujo de los lados
+    \draw[thick, gray!23] (O) -- (v1) -- (v1v2) -- (v2) -- cycle;
+
+    % Dibujo de los vectores
+    \draw[->, black, thick] (O) -- (v1) node[midway, below, yshift = -0.05cm] {$v_1$};
+    \draw[->, black, thick] (O) -- (v2) node[midway, above left ] {$v_2$};
+
+    % Ejes
+    \node at (1.7,-1.6) { \rotatebox{-90}{\large$\rightsquigarrow$}};
+    \node at (2.3,-1.6) { $\alpha$};
+%    \node at (2.1,-1.6) {\LARGE \rotatebox{-90}{$\rightsquigarrow$}};
+    \draw[<->, gray] (-0,-2.4) -- (3.5,-2.4) node[above right] {\textcolor{black}{$\R$}};
+    \fill[thick] (1.76,-2.4) circle (2pt);
+    %\draw[->, gray] (0,-0.5) -- (0,3) node[above] {$y$};
+\end{tikzpicture}
+
+\- \vspace{-2cm} 
+\begin{note}
+    A função \(\alpha\) é tipo um "volume" \(k\)-dimensional com sinal, dada pela "orientação" ou ordem de os \(v_i\). 
+\end{note}
+
+\begin{definition}
+    \centering \(A^k(V):=\{\alpha \ | \ \alpha \text{ é } k\text{-forma alternada}\}\)
+\end{definition} 
+%\begin{note}
+%    \(A^k(V)\) es espacio vectorial.
+%\end{note}% al espacio vectorial de todas las $k$-formas definidas en \(V\).  
+
+\begin{lemma}
+    Seja \(\alpha \in A^k(V)\) e \(i<j\). Então,  
+    \begin{enumerate}[label = \roman*.]
+        \item \(\alpha (v_1, \ldots, v_i, \ldots, v_j, \ldots, v_k) = -\alpha (v_1, \ldots, v_j, \ldots, v_i, \ldots, v_k)\).
+        \textcolor{gray}{\(\rightarrow \) Denote \(\alpha(v_i,v_j)\) e faça a conta \(0=\alpha(v_i+v_j, v_i+v_j)\)}
+        \item Se \(v_1, \ldots, v_k\) são l.d. então \(\alpha (v_1, \ldots, v_k) = 0\). \textcolor{gray}{\(\rightarrow\) Expresse \(v_1 = \sum \lambda_jv_j\) e faça a conta}
+    \end{enumerate}
+\end{lemma}
+
+\begin{corollary}
+    As formas alternadas são antisimetricas. Se \(S_k\) é o grupo de permutações de ordem \(k\) e \(\operatorname{sgn} : S_k \ni \sigma \mapsto \operatorname{sgn}(\sigma) \in \{-1, 1\}\) então,
+    \[\alpha(v_{\sigma(1)}, \ldots, v_{\sigma(k)}) = \operatorname{sgn}(\sigma) \cdot \alpha(v_1, \ldots, v_{k}) .\] 
+\end{corollary}
+
+\begin{note} 
+    \(S_k \ni \sigma = \prod \tau_j : \tau_j\) é transposição, assim, \(\operatorname{sgn}(\sigma) = (-1)^{|J|}\).
+\end{note}
+
+\ejemplo{\centering Espaços não triviais \( \sim \ \dim V = n\)
+\tcblower 
+\begin{example}
+    \(A^0(V) = \R \), \(A^1(V) = V^*\) e \(A^k(V) = \{0\}\) se \(k > n\). \textcolor{gray}{\(\rightarrow \) Segue de o lemma sobre dependencia linear}
+\end{example}
+}
+
+\begin{exercise}[Projetor Alternado]
+    Seja \(f: V^k \to \R\) função $k$-linear, então 
+    \[Af :  (v_1, \ldots, v_k) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f(v_{\sigma(1)}, \ldots, v_{\sigma(k)}),\] 
+    é uma $k$-forma alternada. Em particular, se \(f\) é alternada, então \(Af = f \). 
+\end{exercise}
+
+\begin{definition}
+    Sejam \(T \in \mathcal{L}(V;W)\) e \(\alpha \in A^k(W)\). O \emph{pullback} de \(\alpha \) por \(T\) é a função \(T^*\alpha: V^k \to \R\) tal que \((v_1, \ldots, v_k) \mapsto \alpha (Tv_1, \ldots, Tv_k)\). 
+\end{definition}
+
+\ejemplo{
+ \centering   \(T^* : A^k(W)\to A^k(V)\)
+    \tcblower
+\begin{example}
+    \(\pi: \R^3 \ni (x,y,z) \mapsto (x,y) \in \R^2\) e \(\det \in A^2(\R^2)\) então, 
+\vspace{-0.3cm}
+    \[\pi^*\alpha ((x,y,z), (x{'}, y{'}, z{'})) = \alpha( (x,y), (x{'}, y{'})) = \det \begin{pmatrix}
+        x & x{'}\\ 
+        y & y{'}
+    \end{pmatrix}. \] 
+\end{example}
+}
+
+\let\originalwedge\wedge 
+\renewcommand{\wedge}{\mathbin{\scriptstyle\originalwedge}}
+
+\begin{definition}
+    Sejam \(\alpha \in A^p(V)\) e \(\beta \in A^q(V)\). O \emph{produto exterior} de \(\alpha\) e \(\beta\) é a função \(\alpha \wedge \beta : V^{p+q} \to \R\) dada por,  
+    {\[(v_1, \ldots, v_{p+q}) \mapsto \frac{1}{p!q!} \sum_\sigma \operatorname{sgn}(\sigma) \alpha(v_{\sigma(1)}, \ldots, v_{\sigma(p)}) \beta(v_{\sigma(p+1)},\ldots, v_{\sigma(p+q)}).\]}
+\end{definition}
+
+\begin{example}
+    Sejam \(\alpha, \beta \in A^1(V)\). Então,  \(\alpha \wedge \beta \in A^2(V)\) é a dada por
+    \vspace{-0.2cm}
+    \[(v_1, v_2) \mapsto \alpha(v_1)\beta(v_2) - \alpha(v_2)\beta(v_1) =\det  \begin{pmatrix}
+        \alpha(v_1) & \beta(v_1) \\ 
+        \alpha(v_2) & \beta(v_2) 
+    \end{pmatrix}.\] 
+\end{example}
+
+%\begin{example}
+%    \(\Lambda^0(\R^2) = \R\), \(\Lambda^1(\R^2) = \R e_1^* \oplus \R e_2^*\) e \(\Lambda^2(\R^2) = \R (e_1^* \wedge e_2^*)\).   
+%\end{example}
+
+\begin{proposition}
+    Sejam \(\alpha \in A^p(V),\ \beta \in A^q(V)\) e \(\gamma \in A^r(V)\). Então, o produto \(\wedge\) é:   
+    \begin{enumerate}[label = \roman*.]
+        \item \(A^p(V) \times A^q(V) \ni (\alpha, \beta )\to \alpha \wedge \beta \in A^{p+q}(V)\), bém definido.   
+        \item Bilinear, se \(p = r \Rightarrow (\alpha + \lambda \gamma) \wedge \beta =  \alpha \wedge \beta + \lambda (\gamma \wedge \beta)\), na outra coordenada, se \(q = r \Rightarrow \alpha  \wedge (\beta+ \lambda \gamma) =  \alpha \wedge \beta + \lambda (\alpha \wedge \gamma) \). %\textcolor{gray}{\(\rightarrow \) ii. e v. Directos de la definición} 
+        \item Anticonmutativo, \(\alpha \wedge \beta =  (-1)^{pq} \beta \wedge \alpha\). \textcolor{gray}{\(\rightarrow \) Tome a permutação \[\begin{pmatrix}
+    1\ \ \ \cdots \ \ \  p & p+1  \cdots  p+q\\ 
+    q+ 1 \cdots  q+p & 1 \ \ \  \cdots \ \ \  q
+\end{pmatrix}\] }
+        \item Associativo, \((\alpha \wedge \beta) \wedge \gamma = \alpha \wedge (\beta \wedge \gamma)\). \textcolor{gray}{\(\rightarrow \) Use o projetor alternado em \(f(v_i), \ i \in \{n\in \N : n\leq p+q+r\}\) e faça as contas chatas}
+        \item Compativél com pullback, \(T^*(\alpha \wedge \beta) = T^*\alpha \wedge T^*\beta\).   
+    \end{enumerate} 
+\end{proposition}
+
+\begin{theorem}
+    Sejam \(V\) espaço vectorial e \([l_1, \ldots, l_n]\) uma base l.i. Então, \(\forall k\leq n \), temos que \(A^k(V) = [l_{i_1}\wedge \cdots \wedge l_{i_k}]\). Em particular, \(\dim A^k(V) = \binom{n}{k}\).   
+\end{theorem}
+
+%\ejemplo{\centering Pullback de cambio de base%
+%\tcblower
+\begin{example}
+    Se \(V = [\omega_1, \ldots, \omega_n]\) (l.i.) e \(\alpha \in A^n(V)\) então, \(\alpha(v_1, \ldots, v_n) = \det(a_{ij}) \alpha(\omega_1, \ldots, \omega_n)\), onde \(v_j = \sum a_{ij}\omega_i\). \textcolor{gray}{ \(\rightarrow \ T^*\alpha = \det(T)\alpha\)}  
+\end{example}
+%}
+
+\begin{example}
+    \- \vspace{-1cm}
+    \[(\R^3)^{*} = [e_1^*, e_2^*, e_3^*] \leadsto  \begin{cases}
+        A^0(\R^3) = \R\\ 
+        A^1(\R^3) = \R e_1^* \oplus \R e_2^*\oplus\R e_3^*\\ 
+        A^2(\R^3) = \R (e_1^* \wedge e_2^*)\oplus \R (e_1^* \wedge e_3^*)\oplus \R (e_2^* \wedge e_3^*)\\ 
+        A^3(\R^3) = \R ( e_1^* \wedge e_2^*\wedge e_3^*) \sim \det(\R^3) \\ 
+    \end{cases}\]   
+\end{example}
+
+\subsection{Formas Differenciais}
+
+
+
+\begin{note}
+    Se \( \varphi = (\x_1, \ldots, \x_d): \U_p \to \R^d\) é uma carta local de \(^r_dM \subseteq \R^n\), lembre-se que \([d\x_1, \ldots, d\x_d]  = (T_pM)^* = A^1(T_pM)\). %Também, \(A^k(T_pM) = [d\x_{i_1}\wedge \cdots \wedge d\x_{i_k}]\). 
+\end{note}
+\- \vspace{-0.8cm}
+\begin{definition}
+    Uma \emph{$k$-forma diff} de classe \(C^r\) em \(^r_dM\subseteq \R^n\), é uma associação 
+    \[^r_k\omega : M \ni p \mapsto \omega(p) = \sum f_{i_1, \ldots, i_k} \ d\x_{i_1}\wedge \cdots \wedge d\x_{i_k} \in A^k(T_pM), \] 
+    tal que, \(\forall \varphi = (\x_1, \ldots, \x_d)\), as funções \(f_{i_1, \ldots, i_k}\in C^r ( \U_p;\R)\).
+\end{definition}
+
+%\ejemplo{Basta probar para un único atlas }
+
+\begin{note}
+    Em deante tudo será \(C^\infty\), variedades, aplicações, formas, etc. 
+\end{note}
+
+\begin{definition}
+    \centering \(\Omega^k(M):= \{ \omega \ | \ \omega \text{ é } k\text{-forma diff}\}\)  
+\end{definition}
+
+\ejemplo{ %\centering \(_nM = U\ab\subseteq \R^n\) e \(dx_i = e_i^*\)
+%\tcblower
+\- \vspace{-0.6cm}
+    \[\sum f_{i_1, \ldots, i_k} \ dx_{i_1}\wedge \cdots \wedge dx_{i_k} = \omega  \in \Omega^k(U\ab) \ \textcolor{verdeoscuro}{\Leftrightarrow} \ f_{i_1, \ldots, i_k} \in C^\infty(U)\]
+    \tcblower
+        {\footnotesize \(\bullet\)} Se \(U = I\subset \R \), então \(\omega = f(t)  dt \in \Omega^1(I)\) sse \(f \in C^\infty(I)\).    \\ 
+        %\item Si \(M = U\ab \subseteq \R^2\) de coordenadas \((x,y)\) entonces,  
+        {\footnotesize \(\bullet\)} Se \( U\subseteq \R^2 \) e \(f,g \in C^\infty( U)\) então 
+        \(f \in \Omega^0(U),  \  f dx + g dy \in \Omega^1(U) \text{\  e}  \ f (dx \wedge dy) \in \Omega^2(U)\). 
+}
+
+\begin{note}
+    Em geral, \(\Omega^0(M)=C^\infty(M;\R)\) e se \(f \in C^\infty(M; \R)\) então \(df \in \Omega^1(M)\), pois, \(df(p)\in (T_pM)^* = A^1(T_pM)\).    
+\end{note}
+
+\begin{exercise}
+    Seja \(\varphi = (\x_1, \ldots, \x_d) : \U_p \to \R^d\) carta local de \(_dM\), então 
+    \[df\Big|_{\U_p} = \sum \frac{\partial f }{\partial \x_i} \ d\x_i, \ \text{sendo }  \frac{\partial f }{\partial \x_i}(p) := \frac{\partial }{\partial t_i} (f\circ \varphi^{-1})(\varphi(p)).\]
+    Onde, \((t_1, \ldots, t_d)\) são as coordenadas canônicas de \(\R^d\).  
+\end{exercise}
+
+\ejemplo{
+\centering \((\omega \wedge \eta)(p) = \omega (p) \wedge \eta (p)\) 
+\tcblower
+\begin{example}
+    Em \(M= \R^2\), tém-se \((e^{x+y}dx + x dy) \wedge (y dx) = -xy \ (dx \wedge dy)\). 
+\end{example}
+}
+
+\begin{proposition}
+    Uma aplicação \(F\in C^\infty(M;N)\) induce, \(\forall p \in M\), uma outra aplicação via pullback \(F^*: \Omega^k(N) \to \Omega^k(M)\)  tal que, 
+    \[  \omega\textcolor{gray}{(p)} \mapsto F^*\omega \textcolor{gray}{(p)} = DF\textcolor{gray}{(p)}^*\omega(F\textcolor{gray}{(p)}).\] 
+\end{proposition}
+\vspace{-0.4cm}
+
+\begin{example}
+    Se \(g \in \Omega^0(N)\) então \(F^*g = g \circ F\) e \(F^*(dg) = d(F^*g) = d (g\circ F)\).   
+\end{example}
+
+\begin{tikzpicture}[>=to, shift={(7.3cm,-3.5cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+    \draw[thick, red] (1.3,-0.3) -- (1.3,0.3) -- (5.3,0.3); 
+    \node[red] at (8.5,0.3) {$F^*\y_{i_1} = \sum \frac{\partial F^*\y_{i_1}}{\partial \x_j}d\x_j $};
+\end{tikzpicture}
+
+\vspace{-1cm}
+
+\begin{note}
+    Na hora das contas, se \(\varphi = (\x_1, \ldots, \x_{d_1})\) e \(\varphi{'}(\y_1, \ldots, \y_{d_2})\) são cartas locais de \(p\) e \(F(p)\) respetivamente, tais que \(F(\U_p)\subseteq \mathcal{V}_{F(p)}\), então 
+    \begin{align*}
+        \omega\Big|_{\mathcal{V}_{F(p)}} &=  \underset{\rotatebox{-90}{$\Rightarrow$}}{\sum} g_{i_1, \ldots, i_k} d\y_{i_1} \wedge \cdots \wedge d\y_{i_k} \\  
+        (F^*\omega )\Big|_{\U_p} = \sum &F^*g_{i_1, \ldots, i_k} d(\textcolor{red}{F^*\y_{i_1}} ) \wedge \cdots \wedge d(F^*\y_{i_k})  \hspace{4cm}
+    \end{align*}
+\end{note}
+ 
+Em particular, se \(F = \iota: M \to N\) então \(\iota^*\omega = \omega|_{_M}\).
+
+\begin{example}
+    Sejam \( \omega = fdx + g dy \in \Omega^1(\R^2)\) e \(c: I\subset \R \to \R^2\) uma curva suave, então \(c^*\omega = (f(c(t))c_1{'}(t) + g(c(t))c_2{'}(t)) dt\).  
+\end{example}
+
+\begin{example}[Forma de angulo]
+    \(\displaystyle d\theta = \frac{y dx - xdy }{x^2+ y^2} \in \Omega^1(\R^2\setminus\{0\})\). 
+\end{example}
+
+%\ejemplo{\ \(\iota: \E^1 \to \R^2 \setminus \{0\} \Rightarrow d\theta|_{_{\E^1}} \in \Omega^1(\E^1)\)}
+
+\begin{definition}
+    Uma variedade \(_dM\) é \emph{orientavél} se \(\exists \omega \in \Omega^d(M)\), chamada \emph{forma de orientação}, tal que \(\forall p \in M, \ \omega(p)\neq 0 \). 
+\end{definition}
+
+\begin{example}
+    \(\R^n\) é orientavél com \(\omega = dx_1 \wedge \cdots \wedge dx_n\) e \(\E^1\) com \(\omega = d\theta\Big|_{_{\E^1}}\).
+\end{example}
+\begin{example}
+    A faixa de Möbius não é orientavél. 
+\end{example}
+
+\begin{definition}
+    Sejam \(M\) orientavél e \(\omega, \omega{'} \in \Omega^d(M)\) formas de orientação.  Então, \(\omega \sim \omega{'}\) se \(\exists f>0\) tal que \(\omega = f \omega{'}\). Uma \emph{orientação} de \(M\) é \([\omega]/\hspace{-0.1cm}\sim\). 
+\end{definition}
+
+\begin{exercise}
+    Se \(M\) é conexa e orientavél então tém só dois orientações. %\(\operatorname{card}(\Omega^d(M) /\hspace{-0.1cm} \sim) = 2 \).
+\end{exercise}
+
+\begin{definition}
+    Seja \(M\) orientavél. A \emph{forma de volume} de \(M\) é a única representante \(\omega_\text{vol}\) de \([\omega]\in \Omega^d(M)/\hspace{-0.1cm}\sim\), tal que, \(\forall [w_1, \ldots, w_d]\) base ortonormal de \(T_pM\), 
+    \[\omega_\text{vol}(w_1, \ldots, w_d) = 1 \ \ \text{e} \ \ \omega(w_1,\ldots, w_d) > 0.\] 
+\end{definition}
+
+\begin{example}
+    \(\omega_\text{vol} = dx_1 \wedge \cdots \wedge dx_n\) é a forma de volume de \(\R^n\). 
+\end{example}
+
+\ejemplo{\centering  \(\omega_\text{vol}\) em \(_{n-1}H\subseteq \R^n\) hipersuperficie
+\tcblower
+\parbox[a]{0\linewidth}{ \ } 
+\parbox[b]{1\linewidth}{
+\begin{example}
+    \(H := \{\x \in \R^n: g(\x)=0\}\) é orientavél. Sendo \(\vec{n}(p) = \frac{\nabla g(p) }{\|\nabla g(p)\|} \perp  T_pH\), sua forma de volume é
+    \[\omega_\text{vol} = \sum (-1^{i+1}) \vec{n_i} \  d\x_1\wedge \cdots \wedge \textcolor{gray}{\widehat{d\x_i}} \wedge \cdots \wedge d\x_n \Big|_{H}.\hspace{4.5cm}\]     
+\end{example}
+} 
+}
+
+\begin{tikzpicture}[>=to, shift={(15.8cm,2.8cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+    \node[gray] at (0,0) {\footnotesize$\det \begin{pmatrix}
+        \textcolor{red}{\Big|} &\Big| &  &\Big| \\ 
+        \textcolor{red}{\vec{n}}& v_2 & \cdots &v_n \\ 
+        \textcolor{red}{\Big|} &\Big| &  &\Big|
+    \end{pmatrix}$};  
+\end{tikzpicture}
+
+%\begin{tikzpicture}[>=to, shift={(2.9cm,1.5cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+%    \draw[thick] (0,0) -- (0,0.25) -- (10.8,0.25); 
+%\end{tikzpicture}
+
+\vspace{-1cm}
+
+\begin{example}
+    Em \(H = \E^{n-1}\subseteq \R^n\) temos \(\vec{n}(x) = \frac{\x}{\|\x\|}\), logo, 
+    \[\omega_\text{vol} = \sum (-1)^{i+1} x_i \ d\x_1 \wedge \cdots \wedge \textcolor{gray}{\widehat{d\x_i}} \wedge \cdots \wedge d\x_n\Big|_{\E^{n-1}}.\]
+\end{example}
+
+%\begin{exercise}
+%    Faça \(\psi^*\omega_\text{vol}\) de \(\E^{n-1}\), com \(\psi\) sendo as coordenadas esféricas.  
+%\end{exercise}
+
+\subsection{Derivada Exterior}
+
+\begin{note}
+    A idea agora é entender como se derivam as formas diferenciais. 
+\end{note}
+
+\begin{theorem}
+    \(\forall M, \ \forall k \in \N\), \(\exists !d_i \in \mathcal{L}(\Omega^k(M) ; \Omega^{k+1}(M))\), onde \(d_i: \omega \mapsto d\omega\) verifica,  
+    \begin{enumerate}[label= \roman*.]
+        \item Derivada de uma função, \(\Omega^0(M) = C^\infty(M) \ni f \mapsto df \in \Omega^1(M)\). 
+        \item Regla de Leibniz com sinal, se \(\omega \in \Omega^p(M)\) e \(\eta\in \Omega^q(M)\) então, 
+        \[ d(\omega \wedge \eta ) = d\omega \wedge \eta + (-1)^p \omega \wedge d \eta. \]
+        \item \(d^2 =0\), se \(\omega \in \Omega^k(M)\) então \(d (d\omega) = 0\). \textcolor{gray}{\(\rightarrow \) Motivada pelo \(\blacksquare\) (\emph{Schwarz})}
+        \item Compativél com pullback, se \(F \in C^\infty (M;N)\) e \(\omega \in \Omega^k(N)\) então, 
+        \[d(F^*\omega) = F^*(d\omega).\] 
+    \end{enumerate}
+\end{theorem}
+
+
+
+\begin{example}
+    Sendo \(I = (i_1, \ldots, i_k)\) e \(\sum f_{I} \  d\x_{I} = \omega \in \Omega^k(M)\), temos,     
+    \begin{equation*}
+        d\omega = \sum   df_I \ d\x_I. 
+    \end{equation*} 
+\end{example}
+%\ejemplo{\(\rightarrow\) Desarme usando las propiedades del Teorema previo. Siendo  tenemos,\[d\left(\sum f_I d\x_I\right) = \sum df_I d\x_I\]. En este caso, la condición \(d^2= 0 \) se traduce en \(\operatorname{rot}\circ \nabla = 0 = \operatorname{div}\circ \operatorname{rot}\)}
+%\begin{figure}[!h]
+%    \centering     
+%\begin{tikzpicture}[>=stealth]
+%
+% Nodos fila superior
+%\node (A1) at (0,1.5) {$\Omega^0(U)$};
+%\node (A2) at (2.5,1.5) {$\Omega^1(U)$};
+%\node (A3) at (5.5,1.5) {$\Omega^2(U)$};
+%\node (A4) at (8,1.5) {$\Omega^3(U)$};
+
+% Nodos fila inferior
+%\node (B1) at (0,0) {$C^\infty(U)$};
+%\node (B2) at (2.5,0) {$C^\infty(U;\R^3)$};
+%\node (B3) at (5.5,0) {$C^\infty(U;\R^3)$};
+%\node (B4) at (8,0) {$C^\infty(U)$};
+
+% Flechas horizontales fila superior (e)
+%\draw[->] (A1) -- (A2) node[midway, above] {$d$};
+%\draw[->] (A2) -- (A3) node[midway, above] {$d$};
+%\draw[->] (A3) -- (A4) node[midway, above] {$d$};
+%
+% Flechas horizontales fila inferior (e)
+%\draw[->] (B1) -- (B2) node[midway, below] {\footnotesize$\nabla$};
+%\draw[->] (B2) -- (B3) node[midway, below] {\footnotesize$\operatorname{rot}$};
+%\draw[->] (B3) -- (B4) node[midway, below] {\footnotesize$\operatorname{div} $};
+
+% Flechas verticales (w)
+%\draw[->,white] (A1) -- (B1) node[midway, left, xshift = 0.2cm] {\textcolor{black}{\rotatebox{-90}{$\cong$}}};
+%\draw[->,white] (A2) -- (B2) node[midway, left, xshift = 0.2cm] {\textcolor{black}{\rotatebox{-90}{$\cong$}}};
+%\draw[->,white] (A3) -- (B3) node[midway, left, xshift = 0.2cm] {\textcolor{black}{\rotatebox{-90}{$\cong$}}};
+%\draw[->,white] (A4) -- (B4) node[midway, left, xshift = 0.2cm] {\textcolor{black}{\rotatebox{-90}{$\cong$}}};
+
+%\end{tikzpicture}
+%\caption{\(_3M= U\ab\subseteq \R^3\)}
+%    \end{figure}
+
+\vspace{-0.5cm}
+\begin{definition}
+    \(\omega \in \Omega^k(M)\) é \emph{exata} se \(\exists \eta \in \Omega^{k-1}(M)\) tal que \(\omega = d\eta\). Por outro lado, se \(d\omega = 0 \) dezimos então que é \emph{fechada}. 
+\end{definition}
+\begin{note}
+    Ver que \(\omega \) é exata é "resolver" EDPs, ou seja integrar.
+\end{note}
+%\begin{exercise}
+%    Muestre que \(d\theta \in \Omega^1(\R^2\setminus \{0\})\), es cerrada, pero no exacta. \textcolor{gray}{\(\rightarrow\) Es exacta solo en abiertos de la forma \(\R^2\setminus  (-\infty, 0]\)} 
+%\end{exercise}

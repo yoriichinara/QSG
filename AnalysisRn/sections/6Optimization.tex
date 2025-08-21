@@ -1,0 +1,141 @@
+\section{Pontos Críticos}
+\begin{definition}
+    Seja \(f\) diff em \(p\). O ponto \(p\) é \emph{ponto crítico} de \(f\) sse \(df(p)=\nabla f(p)=0\). 
+\end{definition}
+%\begin{note}
+%    Equivalente a dizer que \(\forall i\leq n, \ \frac{\partial f }{\partial x_i}(p)= 0\)
+%\end{note}
+\Ei
+
+\begin{example}
+    \(f(x,y) = x^2 + 3y^4+ 4y^3 - 12y^2\). \textcolor{gray}{\(\rightarrow\) Faz a conta }
+\end{example}
+
+\Ef
+
+%\begin{definition}
+%    \(f: U\ab \subseteq \R^n \to \R\) tem um \emph{extremo local} en \(p\in U\) sii \(\exists \mathcal{V}_p\) tal que \(\forall \textbf{x}\in \mathcal{V}_p\) se tiene \(f(\textbf{x}) \leq f(p)\) (máximo local) o \(f(p) \leq f(\textbf{x})\) (mínimo local).  
+%\end{definition}
+\begin{proposition}
+    Se \(f\) tem um extremo local em \(p\) então \(p\) é ponto crítico. \textcolor{gray}{\(\rightarrow \ 0\) es extremo local de \(\varphi_i(t) = f(p+te_i)\)}
+\end{proposition}
+% \begin{note}
+%     El objetivo ahora es clasificar como máximo o mínimo o ninguno de los dos. 
+% \end{note} \(f(\textbf{x}) - f(p)\)
+\ejemplo{
+    O comportamento de \(f\) em \(\U_p\) é determinado pelo primeiro termo não nulo de sua expansão de Taylor, ou seja, \(d^2f(p)v^{\otimes 2} = \langle Hf(p)\cdot v, v\rangle\). 
+    \tcblower
+\begin{example}
+    Se \(Hf(p)\) é diagonal tal que \(Hf(p)=(\lambda_1, \ldots,\lambda_n)\), então 
+    \[f(p+v)= f(p) + \cancel{df(p)} + \frac{1}{2}\sum \lambda_i v_i^2 + \sigma(\|v\|^2);\]
+    Se \(\forall i\leq n, \ \lambda_i > 0 \Rightarrow p\) é mínimo local de \(f\). Analogamente, se \(\forall i\leq n, \ \lambda_i <0 \Rightarrow p\) é máximo local de \(f\). %\textcolor{gray}{\(\rightarrow\) \(f(p+v)\) é \(f(p)\) mais algo positivo (o negativo)} 
+\end{example}
+}
+
+\begin{definition}
+    A forma quadrâtica de \(A \in \operatorname{Sym}_n(\R)\) é \emph{positiva} se \(\forall v\in \R^n \setminus \{0\}\), \(\langle Av, v\rangle > 0\), \emph{negativa} se \(\langle Av, v\rangle<0\) ou \emph{indefinida} se for outro o caso. 
+\end{definition}
+
+\Ei
+
+\begin{example}
+    \(v\mapsto \|v\|^2\), é positiva. \textcolor{gray}{\( \rightarrow \) É representada pela matriz \(\id_n\)}   
+\end{example}
+\begin{example}
+    \((t,x,y,z) \mapsto t^2-x^2-y^2-z^2\) é indefinida. \textcolor{gray}{\(\rightarrow\) É representada pela matriz diagonal \(A = (1,-1,-1,-1)\)}
+\end{example}
+\Ef
+
+%\begin{theorem}[Teorema Espectral]
+%    Toda matriz símetrica posee base ortonormal de autovectores (es diagonalizable). 
+%\end{theorem}
+
+\begin{lemma}
+    Sejam \(A\in \operatorname{Sym}_{n}(\R)\) e \(\lambda_1, \ldots, \lambda_n\) seus autovalores. Então \(A\) é positiva (ou negativa) sse \( \forall i\leq n, \ \lambda_i>0 \) (ou \(\lambda_i <0\)). \textcolor{gray}{\(\rightarrow \) Teorema Espectral}
+\end{lemma}
+
+\begin{theorem}
+    Seja \(f\) função \(2\)-diff em \(p\in U\) ponto crítico. Se \(Hf(p)\) é positiva (ou negativa) então \(f(p)\) é um mínimo (ou máximo) local. 
+\end{theorem}
+\demo{Use \ \(\mathbb{S}^{n-1} \ni \vec{u}\mapsto \langle Hf(p)u, u \rangle\) para argumentar a existência de uma cota. Interprete essa cota no desenvolvimiento de Taylor de ordem $2$. }
+
+\begin{definition}
+    Seja \(f\) função \(2\)-diff, \(p\) ponto crítico de \(f\) e \(\lambda_1, \ldots, \lambda_n\) os autovalores de \(Hf(p)\). O ponto \(p\) é \emph{ponto de sela} sse \(\exists \ i,j\leq n\) tais que \(\lambda_i\lambda_j <0\). 
+\end{definition}
+\begin{note}
+    Se \(\lambda_i > 0 \) então \(f\) tem mínimo local na direção de \(\vec{v_i}\) (seu autovetor), 
+    \[\langle Hf(p)\cdot v_i, v_i\rangle = \lambda_i \langle v_i, v_i\rangle > 0\]   
+\end{note}
+\begin{example}
+    \(f(x,y) = x^2 + 3y^4+ 4y^3 - 12y^2\). \textcolor{gray}{\(\rightarrow\) Estude os pontos \(p\) tais que \(\nabla f(p)=0\) e sua clasificação segum \(Hf(p)\) }
+\end{example}
+
+    
+\begin{definition}
+   Um ponto crítico \(p\) de \(f\) é \emph{degenerado} se \(\det (Hf(p)) =0\).  
+\end{definition}
+
+%\begin{exercise}
+%    Sea \(f(x,y)= (y-x^2)(y-2x^2)\). Muestre que \((0,0)\) es un punto degenerado, la restricción a cualquier recta que pasa por el origen tiene mínimo local en \((0,0)\), sin embargo, \(f(0,0)\) no es un mínimo local. \textcolor{gray}{\(\rightarrow\) Para el análisis considere los conjuntos donde \(f>0\) y \(f<0\)}  
+%\end{exercise}
+
+\subsection{Otimização}
+
+\begin{theorem}[\emph{Bolzano-Weierstrass}]
+    Sejam \(K\subseteq \R^n\) compacto. Se \(f:K\to \R\) é continua, então tem máximo e mínimo global em \(K\). 
+\end{theorem}
+%\begin{note}
+%     
+%\end{note}
+\ejemplo{\centering ¿\(+\) condições para que funcione mesmo em não compactos?
+\tcblower
+\begin{example}
+    Seja \((x,y) \mapsto \frac{x}{x^2 + (y-1)^2 + 4 }\) en \(Q = \{(x,y) : x\geq 0 \text{ y } y\geq 0\}\). \textcolor{gray}{\(\rightarrow\) Estude os pontos críticos ¿O que acontece quando \(\|\textbf{x}\|\to \infty\)? }  
+\end{example}
+}
+
+\begin{lemma}
+    Sejam \(F\ce\subseteq \R^n\) não limitado e \(f:X\to \R\) continua, então  
+    \begin{enumerate}[label=\roman*.]
+        \item Se \(f(\textbf{x})\to \infty \) quando \(\|\textbf{x}\|\to \infty \), então \(f\) tem mínimo global em \(F\).
+        \item Se \(f(\textbf{x}) \to 0\) quando \(\|\textbf{x}\|\to \infty\), então \(f\) tem máximo global em \(F\).
+    \end{enumerate}   
+\end{lemma}
+
+\demo{i. \(\exists R>0\) tal que se \(\|\textbf{x}\| > R\), então \(f(\textbf{x})> f(p)\), onde \(\|p\| \leq R\). \\ 
+ii. Mesmo negócio. }
+
+\subsection{Problemas com Condições}
+
+\begin{definition}
+    Seja  \(g\in C^k(U)\) tal que \(\forall p \in \ker (g), \ dg(p)\neq 0\). O conjunto \(^k H:= \{\textbf{x} \in \R^n : g(\textbf{x}) = 0\}\) é \emph{hipersuperficie} de classe \(C^k\) definida por \(g(\textbf{x})=0\). 
+\end{definition}
+
+\begin{example}
+    \(\mathbb{S}^{n-1} = \{\textbf{x}\in \R^n: \|\textbf{x}\| = 1\}\) definida pelos ceros da função \(g(\textbf{x})= \|\x\|^2- 1 \) é \(^\infty H \subseteq \R^n\). \textcolor{gray}{\(\rightarrow \) Verifique a condição \(g(p)=0 \Rightarrow dg(p)\neq 0\)} 
+\end{example}
+%\begin{note}
+%    Las hipersuperficies son en particular variedades de clase \(C^k\), la condición al diferencial garantiza que no tiene singularidades y \(TpH = \{\vec{v}\in \R^n: dg(p) v =0\}\). 
+%\end{note}
+\ejemplo{
+    \centering \(\E^1\subseteq \R^2\) é fechado e limitado 
+\tcblower
+\begin{example}
+    \(f(x,y) = \|\x\|^2+y\) en \(\mathbb{D}=\{ \textbf{x} \in \R^2: \|\textbf{x}\| \leq 1 \}\). \textcolor{gray}{\(\rightarrow\) Halle \(p : \nabla f(p)=0\) ¿Que hay de los puntos en \(f|_{_{\mathbb{S}^1}}\)?}
+\end{example}
+}
+
+\Ef
+
+\begin{theorem}[\emph{Multiplicadores de Lagrange}]
+    Sejam \(U\ab \subseteq \R^n, \ f \in C^1(U)\) e \(^1 H\subseteq U\) hipersuperficie. Então \(p\in U\) é extremo local de \(f\Big|_H\) sse \(\exists \lambda \in \R\) tal que \(df(p) =\lambda dg(p)\).   
+\end{theorem} 
+
+% \begin{example}
+%     Halle los extremos de \(f:\mathbb{S}^1\mapsto x^2+y^2+y\). \textcolor{gray}{\(\rightarrow \) Resuelva el sistema \(df = \lambda dg, \ g=0\)}. 
+% \end{example}
+
+\begin{theorem}[\emph{Teorema Espectral}]
+    Toda matriz símetrica admite uma base ortonormal de autovetores (é diagonalizável). %\footnote{Apareciendo en este caso como consecuencia de los multiplicadores de Lagrange.} 
+\end{theorem}
+\demo{Tome \(\mathbb{S}^1 \ni u \mapsto \langle Au, u \rangle \), e um vetor \(u_1\) que a máximiza. Do sistema observa-se que \(u_1\) é autovetor com autovalor \(\lambda_1\). Tome o complemento ortogonal de \([u_1]\) e formule o argumento indutivo. }

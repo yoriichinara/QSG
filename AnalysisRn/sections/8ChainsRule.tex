@@ -1,0 +1,38 @@
+\subsection{Regla da Cadeia}
+
+\begin{theorem}
+    Sejam \(U\ab \subseteq \R^n\), \(V\ab \subseteq \R^r\), \(F: U\to \R^r\) diff en \(p\) e \(G:V\to \R^m\) diff em \(F(p)\). Então \(G \circ F\) é diff em \(p\) e \(D(G\circ F)(p) = DG(F(p))\cdot DF(p)\). 
+\end{theorem}
+
+\demo{\parbox[a]{0.7\linewidth}{Faz \(q = F(p) \), \(L = DF(p)\), \(M = DG(q)\) e \(H = G \circ F\). Expanda os restos e escreva \(\Gamma_H(v)\) em termos de \(\Gamma_F(v)\) e \(\Gamma_G(w)\). Desmonte as expressões e faza análise do erro.} \parbox[b]{0.3\linewidth}{ }}
+
+\begin{tikzpicture}[>=to, shift={(8.5cm,1.5cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+    
+    \node (Rn2) at (5.5,2) {$\mathbb{R}^n$};
+    \node (Rk) at (8.5,2) {$\mathbb{R}^m$};
+    \node (Rm2) at (7,0) {$\mathbb{R}^r$};
+
+    \draw[->] (Rn2) -- node[above] {\scriptsize $D(G \circ F)(p)$} (Rk);
+    \draw[->] (Rn2) -- node[left] {\scriptsize $DF(p)$} (Rm2);
+    \draw[->] (Rm2) -- node[right] {\scriptsize $DG(F(p))$} (Rk);
+    \draw[->, color = gray, >=to] (6.9,1.1) arc (240:-60:0.25);
+
+\end{tikzpicture}
+
+\begin{corollary}
+    \vspace{-1cm}Se \(F \in C^k(U;\R^r)\) e \(G \in C^k(V;\R^m)\) então \(G\circ F \in C^k(U; \R^m)\). 
+\end{corollary}
+%\- \vspace{-0.5cm}
+\ejemplo{
+ \centering   Um velho conhecido 
+ \tcblower
+\begin{example}
+    Sejam \(c:I\subset \R\to\R^n\) e \(f:\R^n\to \R\). %Então \(D(f\circ c )(t) = Df(c(t))\cdot Dc(t) = df(c(t)) \cdot c'(t) \). 
+    Se \(c(t) = p + tv\) e \(\varphi (t) = (f\circ c) (t)\) então  temos \(\varphi'(t) = df(p+tv)\cdot v.\)% \textcolor{gray}{\(\rightarrow\) Ya la estabamos usando!}
+\end{example}
+}
+%\begin{example}[Ecuación de onda en dimensión $1$]
+%    Sea \(c \in \R\) fijo, las soluciones \(f\in C^2(\R^2)\) de la ecuación diferencial  
+%    \[\frac{\partial^2f}{\partial t^2} = c^2 \frac{\partial^2 f}{\partial x^2},\]
+%    pueden ser encontradas usando el cambio de coordenadas de D'Alembert. \textcolor{gray}{\(\rightarrow\) Use el cambio de coordenadas \(\begin{cases}u &= x +ct \\ v &= x- ct\end{cases}\), reescriba la ecuación y resuelvala } 
+%\end{example}

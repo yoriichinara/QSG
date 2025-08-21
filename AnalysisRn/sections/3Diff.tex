@@ -1,0 +1,99 @@
+\section{O Diferencial} 
+
+\begin{definition}
+    Seja \(U\ab\subseteq \R^n\). Uma função \(f:U \to \R\) é \emph{diff} em \(p\in U \) sse \(\exists \ell : \R^n \to \R\) lineal, tal que 
+    \[f(p+v) = f(p) + \ell\cdot v + \sigma(\|v\|), \text{ \ quando} \ v\to 0. \]
+\end{definition}
+\vspace{-0.4cm}
+\begin{lemma}
+    Se \(f\) é diff em \(p\), então \(\forall \vec{v}\in \R^n\), temos \( \ell \cdot v =\frac{\partial f }{\partial v}(p)\). \textcolor{gray}{\(\rightarrow \) Vá de uma definição a outra} %\todo[orange, noline]{La derivada \(v\)-direccional es lineal}%En particular \direccionales son lineales en esa dirección.}. \footnote{Esto también implica que las derivadas direccionales son lineales en esa dirección.}
+
+\end{lemma}
+%\begin{note}[Colorario]
+%    Si \(f\) es diff en \(p\), entonces \(\forall \vec{v}\in \R^n, \exists \frac{\partial f}{\partial v }(p)\) y son lineales . 
+%\end{note}
+\begin{definition}
+    Se \(f\) é diff em \(p\) então o \emph{diferencial} de \(f\) em \(p\) é a função lineal \(df(p):\U_p\to \R\) dada por 
+    \[df(p)\cdot v := \sum^n \frac{\partial f}{\partial x_i}(p)\cdot v_i.\]
+\end{definition} %\section*{Aula III}
+\alerta{\centering \(\exists \frac{\partial f}{\partial x_i}(p)\) \textcolor{red}{\(\nRightarrow \)} \(df(p)\) lineal \textcolor{red}{\(\nRightarrow\)} \(f\) diff en \(p\)}
+\begin{example}
+    \(f: \R^n \ni \textbf{x} \mapsto \|\textbf{x}\|^2 \in \R\). \textcolor{gray}{\(\rightarrow\) Como em nosso primeiro exemplo}
+\end{example}
+%\begin{exercise}
+%    El diferencial de una función lineal es él mismo. \textcolor{gray}{\(\rightarrow\) Valgase de la linealidad para separar y acomodar la definición }
+%\end{exercise}
+
+
+\begin{proposition}
+    Se \(f\) é diff em \(p\), então \(f\) é continua em \(p\). \textcolor{gray}{\(\rightarrow \) Faz \(v\to 0\) na definição }
+\end{proposition}
+
+  
+\ejemplo{\centering \(\nexists df(p) \ \textcolor{verdeoscuro}{\Leftarrow} \ \mathcal{L}(\R^n;\R) \not\ni\exists \frac{\partial f}{\partial v}(p) \ \  \textcolor{verdeoscuro}{\big|} \ \ \forall \vec{v} \in \R^n,\  \exists \frac{\partial f }{\partial v }(p)\) \textcolor{red}{\(\nRightarrow\)} \(\exists df(p)\).
+\tcblower
+ 
+\begin{example}
+    \(0\neq (x,y) \mapsto \frac{xy^2}{\|\textbf{x}\|^2}\), nula em \(0\). \textcolor{gray}{\(\rightarrow f(v) = \sigma(\|v\|)\)? Estude a linearidade das direcionais no \(0\)}  
+\end{example}
+\begin{example}
+    \(0\neq (x,y) \mapsto \frac{xy^3}{x^2 + y^4}\), nula em \(0\). \textcolor{gray}{\(\rightarrow \) Proceda como no anterior}  
+\end{example}
+}
+\begin{note} 
+    A mecânica para \textbf{descartar} diff consiste em (i) continuidade no \(p\); (ii) \(\exists \frac{\partial f}{\partial x_i}(p)\) lineares e (iii) \(\exists \frac{\partial f}{\partial v}(p) \) lineares.  
+\end{note}
+%\begin{example}
+%    \ \(\displaystyle f(x,y) = \begin{cases}
+%        \frac{g(x,y)}{x^2+y^2}, \ &\text{si}\ (x,y)\neq 0 \\
+%        0, \ &\text{e.o.c}
+%    \end{cases}\). 
+%\end{example}
+
+
+\begin{theorem}
+    Se \(f \in C^1(U)\) então \(f\) é diff em \(U\). %\footnote{\(C^1 \Rightarrow C^0 \land \exists \frac{\partial f}{\partial x_i}\) continuas. } 
+\end{theorem}
+\demo{Tome un caminho poligonal \(\Gamma \) de \(p\) até \(p+v\) para escrever \(f(p+v)-f(p) = \sum f(p_i)- f(p_{i-1})\). Aplique TVM a cada termo da soma e faça aparecer as derivadas parciais. Separe a soma e verifique por definição. }  
+
+\begin{example}
+    \(\R[\x] \ni p(\x)\) é diff. 
+\end{example}
+\begin{example}
+    \(\pi_i: \R^n \ni \x \mapsto x_i \in \R \) é diff.  % \emph{(espacio dual)}\footnote{\(dx_i\) mide los incrementos de las variables independientes y los relaciona con los de la variable dependiente, osea \(df\).}. Suponiendo que pasa para cada \(p\in U\) el diferencial de \(f\) se escribe de forma única como 
+\end{example}
+\begin{note}
+    Além de ser linear, \(dx_i(p) = x_i \). Portanto, o espaço dual \({(\R^n)}^*=[dx_i]\), de modo que o diferencial da \(f\) se escreve de forma única como    
+    \[df(p) = \sum^n \frac{\partial f }{\partial x_i}(p) \ dx_i. \]
+\end{note}
+
+%\begin{example}
+%    \(\Theta(x,y) = \arctan (y/x) \) definida para \((x,y)\neq 0\). \textcolor{gray}{\(\rightarrow\) Haga las cuentas e interprete, quién es \(d\Theta\)?} 
+%\end{example}
+%\begin{lemma}
+%    \textcolor{rojoscuro}{\underline{\textbf{Exercise}}} \ Si\todo[gris, noline]{\textcolor{gray}{\(\rightarrow \) Manipule límites, para el cociente analice primero \(d(1/g)\)}} \(f,g\) son diff en \(p\), entonces las funciones \(f+g,\ fg\) e \(f/g\) son diff en \(p\) (para dominio adecuados), también\vspace{-0.2cm},  { \small 
+%    \[d(f+g) = df + dg\ \ ;\ \ d(fg) = f\cdot dg + df\cdot g\ \ ; \ \ d\left(\frac{f}{g}\right) = \frac{df\cdot g - f\cdot dg}{g^2}.\] }
+%\end{lemma}
+%\vspace{-0.1in}
+\Ef
+
+\begin{definition}
+    Se \(f\) é diff em \(p\), então chamamos de \emph{gradiente} de \(f\) em \(p\) o vector 
+    \[\nabla f(p) := \left(\frac{\partial f}{\partial x_1}(p),\ldots,\frac{\partial f}{\partial x_n}(p)\right). \]
+\end{definition}
+
+\begin{note}
+    Para \(\vec{v}\in \R^n\) temos \(\langle \nabla f(p) , v\rangle = \frac{\partial f}{\partial v}(p)\), supoendo \(\|v\|=1\), então 
+    \[\Big|\frac{\partial f}{\partial v}(p)\Big| = |\langle \nabla f (p), v\rangle| \leq \|\nabla f(p)\|\|v\|,\]
+    ou seja, o gradiente aponta na direção de maior crescimento de \(f\) em \(p\).  
+\end{note}
+%\ejemplo{Este es el pilar del método del gradiente, cuyo objetivo es minimizar}
+
+\begin{definition}
+    Seja \(f:U\ab\subseteq \R^n\to \R\). Dizemos que \(p \in U\) é extremo local da \(f\) se \(\exists \delta >0\) tal que \(\|\x-p\|<\delta\) implica \(f(p) \leq f(\x) \) ou \(f(\x) \leq f(p)\). 
+\end{definition}
+\begin{exercise}
+    Se \(f\) é diff em \(p\) extremo local da \(f\), então \(\nabla f (p) = 0\). \textcolor{gray}{\(\rightarrow\) Trabalhe o limite em direções opostas}
+\end{exercise}
+
+\Ef

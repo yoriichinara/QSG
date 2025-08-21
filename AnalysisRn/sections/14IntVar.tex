@@ -1,0 +1,164 @@
+\section{Integração em Variedades}
+
+\begin{note}
+    Nesta seção \(I = [0,1]\subset \R\). 
+\end{note}
+
+\subsection{Integração em Cadeias}
+
+\begin{definition}
+    Um \(k\)\emph{-bloco singular} em \(M\) é uma aplicação \(\sigma \in C^\infty(I^k; M)\).
+\end{definition}
+
+%\ejemplo{ \centering  
+%    \tcblower
+\begin{example}[$n$-bloco padrão em \(\R^n\)]
+    \(\id_{I^n} : I^n \to I^n \subset \R^n \). 
+\end{example}
+%}
+\begin{example}%[$n$-bloco padrão em \(\R^n\)]
+    Uma curva suave \(c : I \to M \) é um \(1\)-bloco singular. 
+\end{example}
+
+\alerta{
+\centering \(\sigma \  \ k\)-bloco singular \(\textcolor{red}{\neq}  \ \ \operatorname{Im}(\sigma)\subseteq M\) 
+\tcblower
+\begin{example}
+    \(\sigma: I^n \ni \x \mapsto p \in M \) é um $n$-bloco singular.%, chamamos ele em particular de $n$\emph{-cubo singular}. 
+\end{example}
+}
+
+\begin{definition}
+    Sejam \(\omega \in \Omega^k(M)\) e \(\sigma \) um $k$-bloco singular. Então,  
+    \[\int_\sigma \omega = \int_{I^k} \sigma^*\omega = \int_{I^k}f(\x) \ dx_1\wedge \cdots \wedge dx_k =\int_{I^k} f(\x) \ d\x. \]  
+\end{definition}
+
+\ejemplo{
+\centering Integral de linha
+\tcblower
+\begin{example}
+    Sejam \(c(t) : [a,b] \to U\ab\subseteq \R^n\) curva suave e \(\overset{n}{\sum} f_i \ dx_i = \omega \in \Omega^k(U) \), então temos
+    \[\oint_c \omega = \int_a^b c^*\omega \ dt = \int_a^b \sum^n (f_i \circ c)(t) c_i{'}(t) \ dt\]
+\end{example}
+}
+
+%\parbox[l]{0.6\linewidth}{
+\begin{definition}
+    Uma $k$\emph{-cadeia} de blocos singulares em \(M\) é uma expresão da forma 
+    \[ c = \overset{k}{\sum} n_i \sigma_i, \ n_i \in \mathbb{Z} \ \text{e } \sigma_i:I^k\to  M.\] 
+    %onde \(n_j \in \mathbb{Z} \) e \(\sigma_j: I^k \to M \) é um $k$-cubo singular.
+\end{definition}
+%}
+\vspace{0.3cm}
+\begin{example}
+ \(c = 2c_1 + c_2 \textcolor{red}{-} c_3\).    
+\end{example}
+
+\- \vspace{-1cm}
+\begin{tikzpicture}[>=to, shift={(8.25cm,-1.1cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+  % Dibuja la cuadrícula de puntos
+
+  % C1
+  \draw[thick] (0.5,2.5) to[out=-20, in=180] (2.5,3) node[yshift = 3cm, xshift=1cm, midway, above] {$c_1$};
+    \fill (0.5,2.5) circle (2pt);
+  % C2
+  \draw[thick] (2.5,3) to[out=-45, in=170] (4,2) node[yshift = 2.5cm, xshift=3.7cm, midway, above] {$c_2$};
+    \fill (2.5,3) circle (2pt);
+    \fill (4,2) circle (2pt);
+
+  % C3
+  \draw[red] (5,2.5) to[out=60, in=225] (5.7,3.5) node[yshift = 2.3cm, xshift=6cm, midway, above] {\textcolor{black}{$c_3$}};
+    \fill (5.7,3.5) circle (2pt);
+    \fill (5,2.5) circle (2pt);
+
+    \node at (1.6,2.7) {\rotatebox{33}{$>$}};
+    \node at (1.4,2.6) {\rotatebox{33}{$>$}};
+    \node at (3.12,2.4) {\rotatebox{-39}{$>$}};
+
+    \node[red] at (5.35,3.05) {\rotatebox{230}{$>$}};
+
+\end{tikzpicture}
+
+\begin{note}
+    Mais formalmente, as $k$-cadeias são elementos do grupo abeliano livre gerado pelos $k$-blocos singulares. 
+\end{note}
+\vspace{-0.3cm}
+%\parbox[l]{0.3\linewidth}{\ }
+\begin{definition}
+    Se \(\omega \in \Omega^k(M)\) e \(c \) é uma $k$-cadeia singular, então \(\displaystyle \int_c \omega =  \sum^k n_i\int_{\sigma_i} \omega .\)  
+\end{definition}
+
+\vspace{-0.3cm}
+\begin{definition}
+    Seja \(\sigma \) um $k$-bloco singular. O \emph{borde} de \(\sigma\) é a \((k-1)\)-cadeia dada por
+    \- \vspace{-0.2cm}
+    \[\hspace{5cm} \partial \sigma = \sum^k (-1)^i (\sigma_{(i,0)}- \sigma_{(i,1)}).\]
+\end{definition}
+
+\begin{tikzpicture}[scale= 1, >=to, shift={(2.9cm,0.3cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+
+  % Coordenadas de los vértices del cuadrado
+  \coordinate (A) at (-0.5,1);
+  \coordinate (B) at (0.5,1);
+  \coordinate (C) at (0.5,2);
+  \coordinate (D) at (-0.5,2);
+
+  % Relleno del área interior
+  \fill[gray!13] (A) -- (B) -- (C) -- (D) -- cycle;
+
+  % Cuadro con flechas en los bordes
+  \draw[thick] (A) -- (B); %node[midway, below] {\small $\sigma_{(2,0)}$};
+  \draw[thick] (B) -- (C) ;%node[midway, right] {\small $\sigma_{(1,1)}$};
+  \draw[thick] (D) -- (C) ;%node[midway, above] {\small $\sigma_{(2,1)}$}; % misma etiqueta que la derecha (según imagen)
+  \draw[thick] (A) -- (D) ;%node[midway, left] {\small $\sigma_{(1,0)}$};
+  \node[thick] at ($(A) + (2,0.5)$) {$ \longrightarrow $};
+  \node[thick] at ($(A) + (2,1)$) {$ \partial $};
+  \node[thick] at ($(A) + (0.5,0)$) {\small\rotatebox{0}{$>$}};
+  \node[thick] at ($(D) + (0.5,0)$) {\small\rotatebox{0}{$>$}};
+  \node[thick] at ($(B) + (0,0.5)$) {\small\rotatebox{90}{$>$}};
+  \node[thick] at ($(A) + (0,0.5)$) {\small\rotatebox{90}{$>$}};
+
+  % Puntos negros en los vértices
+  \foreach \point in {A,B,C,D}
+    \fill[black] (\point) circle (1.5pt);
+
+
+% Coordenadas de los vértices del cuadrado
+  \coordinate (A) at (2.5,1);
+  \coordinate (B) at (3.5,1);
+  \coordinate (C) at (3.5,2);
+  \coordinate (D) at (2.5,2);
+
+  % Relleno del área interior
+%  \fill[gray!13] (A) -- (B) -- (C) -- (D) -- cycle;
+
+  % Cuadro con flechas en los bordes
+  \draw[thick] (A) -- (B) ;%node[midway, below] {\small $\sigma_{(2,0)}$};
+  \draw[thick] (B) -- (C) ;%node[midway, right] {\small $\sigma_{(1,1)}$};
+  \draw[thick] (D) -- (C) ;%node[midway, above] {\small $\sigma_{(2,1)}$}; % misma etiqueta que la derecha (según imagen)
+  \draw[thick] (A) -- (D) ;%node[midway, left] {\small $\sigma_{(1,0)}$};
+
+%  \node[thick] at ($(A) + (-0.75,2.5)$) {\small $M$};
+% \draw[thick, ->] ($(A) + (-1.75,2)$) to[in=180, out=90] ($(A) + (-1.25,2.5)$);
+%  \draw[thick, ->] ($(A) + (0.5,2)$) to[in=0, out=90] ($(A) + (-0.25,2.5)$);
+
+  \node[thick] at ($(A) + (1.85,0.5)$) {$\sim $};
+  \node[thick] at ($(A) + (0.5,0)$) {\small\rotatebox{0}{$>$}};
+  \node[thick] at ($(D) + (0.5,0)$) {\small\rotatebox{180}{$>$}};
+  \node[thick] at ($(B) + (0,0.5)$) {\small\rotatebox{90}{$>$}};
+  \node[thick] at ($(A) + (0,0.5)$) {\small\rotatebox{270}{$>$}};
+
+  % Puntos negros en los vértices
+  \foreach \point in {A,B,C,D}
+    \fill[black] (\point) circle (1.5pt);
+\end{tikzpicture}
+
+\vspace{-1cm}
+\begin{exercise}
+    Se \(c\) é uma $k$-cadeia, então \(\partial (\partial c) = 0 \). \textcolor{gray}{\(\rightarrow\) \(\partial^2 = 0\), olha no Spivak}  
+\end{exercise}
+
+\begin{theorem}[\emph{Stokes}]
+    Seja \(\omega \in \Omega^{k-1}(M)\) e \(c\) $k$-cadeia em \(M\), então
+    \[\int_c d\omega = \int_{\partial c } \omega.\]
+\end{theorem}

@@ -1,0 +1,93 @@
+\section{Aplicações Diferenciais}
+
+\begin{definition}
+    Uma \emph{aplicação} é uma função vetorial \(F:U\ab \subseteq \R^n \to \R^m\) cujas componentes são funções escalares \(F_i: U \to \R\).  
+\end{definition}
+\begin{example}
+    Um \emph{caminho} em \(\R^m \) é uma aplicação \(c: I \subset \R \to \R^m\). 
+\end{example}
+\begin{definition}
+    Uma  aplicação \(F:U\ab\subseteq \R^n \to \R^m\) é \emph{diff} em \(p\in U\) sse \(\exists L\in \Li(\R^n;\R^m)\) tal que \(F(p+v) = F(p) + Lv + \sigma (\|v\|)\). 
+\end{definition}
+\begin{note}
+    \(\sigma(v): \R^n \to \R^m\), logo, \(r(v) = \sigma(\|v\|)\) sse \(\forall i \leq m, \ r_i(v) = \sigma(\|v\|)\).
+\end{note}    
+\begin{lemma}
+    Uma aplicação \(F = (F_1, \ldots, F_m): U \to \R^m\) é diff em \(p\) sse \(\forall i\leq m,\ F_i\) é diff em \(p\) e \(L_i = dF_i(p)\).  
+\end{lemma}
+\demo{(\(\Rightarrow\)) É direto da definição tomando a  \(L_i\) de \(L\) existente. (\(\Leftarrow\)) Lembre-se que se \(\exists dF_i\), é único, use isso para armar \(L\) e exponer a aproximação de \(F(p+v)\) com erro de ordem \(\sigma (\|v\|)\).}
+
+\begin{corollary}
+    Se \(F\) é uma aplicação diff em \(p\) então é continua em \(p\). %\textcolor{gray}{ \(\rightarrow\) As componentes são diff}  
+\end{corollary}
+
+\begin{definition}
+    Se  \(F\) é diff em \(p\), definimos a \emph{derivada} de \(F\) em \(p\) como 
+    \[L = DF(p) = (dF_1(p), dF_2(p), \ldots, dF_m(p)).\]
+\end{definition}
+
+\begin{note} 
+  \vspace{-0.3cm}  A notação NUNCA é um detalhe menor.
+\end{note}
+
+\begin{example}
+    \(f:U\ab \subseteq \R^n\to \R \) diff é uma aplicação diff e \(Df(p)= df(p)\).  
+\end{example}
+
+%\begin{example}
+%    Si \(F\) es afín, osea \(F(x) = Lx + b\) con \(L: \R^n \to \R^m\) lineal, entonces es diff e \(DF(p) = L \). \textcolor{gray}{\(\rightarrow\) Desarme \(F(p+v)\) y llegue a la definición }  
+%\end{example}
+
+%\todo[orange, noline]{\- \vspace{0.1cm}\[\frac{\partial F}{\partial x_j}(p) = \sum_i \frac{\partial F_i}{\partial x_j}(p) \cdot e_i\] \- \vspace{-0.15cm}}
+%\begin{note}
+%    Tenemos nociones análogas de derivadas direccionales, 
+%    {\small \[\frac{\partial F}{\partial v}(p) = DF(p) \cdot v = \left(\frac{\partial F_1}{\partial v}(p)\cdot v, \frac{\partial F_2}{\partial v}(p)\cdot v, \ldots, \frac{\partial F_m}{\partial v}(p)\cdot  v \right).\]}
+%\end{note}
+
+\begin{definition}
+    Seja \(F\) aplicação diff em \(p\). A \emph{Jacobiana} da \(F\) é a matriz \(JF(p) \in M_{m\times n }(\R)\) que representa a derivada \(DF(p)\) na base canônica, 
+    \[M_{m\times n}(\R) \ni JF(p) = \left(\frac{\partial F_i}{\partial x_j}(p)\right) \ \ \  i\leq m, \ j\leq n. \] 
+\end{definition}
+\begin{note} 
+   Outra notação comum é \(JF(p) = \frac{\partial (F_1,F_2,\ldots,F_m)}{\partial (x_1,x_2, \ldots , x_n)}(p)\). 
+\end{note}
+\Ei
+
+\begin{example}
+    Para \(f\in C^k(U)\) temos \(Jf(p) = \nabla f(p) \in M_{1\times n} (\R) \cong (\R^n)^*\).  
+\end{example}
+\begin{example}
+    Seja \(c(t) = (c_1, \ldots, c_m):I \subset \R \to \R^m\) caminho diff. Para ele temos \(Jc(t) = (c_1'(t), \ldots, c_m'(t))^T \in M_{m\times 1}(\R)\cong \R^m\), o \emph{vetor tangente}. 
+\end{example}
+%\begin{example}
+%    \(U = \{(r,\theta) : r>0, -\pi < \theta <\pi\}\) e \(F:(r,\theta)\mapsto (r\cos(\theta), r\sin(\theta))\). \textcolor{gray}{\(\rightarrow\) Cuestión de voleo, cálcule la Jacobiana } 
+%\end{example}
+
+\Ef
+
+\begin{definition}
+    Uma aplicação \(F:U\ab\subseteq \R^n\to \R^m\) vai ser de classe \(C^k(U; \R^m)\) sse \(\forall i\leq m\), \(F_i\in C^k(U)\). %, denotamos \(F\in C^k(U;\R^m)\). 
+\end{definition}
+\begin{corollary}
+    Se \(F\in C^1(U;\R^m)\) então \(F\) é diff em \(U\). \textcolor{gray}{\(\rightarrow\) Imediato de seu semelhante para funções escalares }
+\end{corollary}
+
+\subsection{Derivadas de Ordem Superior}
+
+\begin{note}
+    Uma aplicação \(F:U\ab\subseteq \R^n \to \R^m\) diff induce uma outra aplicação \(DF: U \to \mathcal{L}(\R^n;\R^m)\cong M_{m\times n }(\R) \cong \R^{mn}\) tal que \(p \mapsto DF(p)\) y cujas componentes são (sob identificação) as funções \(\frac{\partial F_i}{\partial x_j}\). Nesse sentido,   
+    \begin{itemize}
+        \item \(F \in C^1(U; \R^m)\) sse \(F\) é diff e \(DF \in C^0(U;\R^{mn})\).
+        \item \(F \in C^2(U; \R^m)\) sse \(F \in C^1(U; \R^m)\) e \(D^2F \in C^1(U, \mathcal{L}(\R^n; \R^m))\), onde 
+        \[D^2F: p \mapsto D (DF) (p).\]
+    \end{itemize}
+\end{note}
+
+\begin{proposition}
+    Sejam \(V_1, V_2, W\) espaços vetoriais sobre \(\mathbb{K}\), então \(\mathcal{L}(V_1;\mathcal{L}(V_2;W))\) \( \cong \mathcal{L}(V_1\otimes V_2;W)\), o espaço de aplicações bilineares.  
+\end{proposition}
+
+\begin{definition}
+    A derivada \(k\)-ésima de uma aplicação \(F:U\ab \subseteq \R^n \to \R^m\), se existir, é uma aplicação multilinear \(D^kF(p): \underbrace{\R^n \otimes \cdots \otimes \R^n}_{k \text{ veces}} \to \R^m\) tal que 
+    \[v^{(1)}\otimes \cdots \otimes v^{(k)}\mapsto \frac{\partial^k F}{ \partial v^{(1)}\cdots \partial v^{(k)}}(p) = \sum \frac{\partial^k F}{\partial x_{i_1} x_{i_k}} (p) \ v_{i_1}^{(1)}\cdots v_{i_k}^{(k)}. \]
+\end{definition}

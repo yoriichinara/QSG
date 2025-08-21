@@ -1,0 +1,232 @@
+% PROGRAMA DE PÓS-GRADUAÇÃO EM ECONOMIA APLICADA
+% UNIVERSIDADE FEDERAL DO RIO GRANDE - FURG
+
+% ===========================================================
+
+\documentclass[a4paper, 17pt]{extarticle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PACOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[margin = 0.5in, bottom = 2in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{subcaption}
+\usepackage{arydshln}
+%\usepackage{pdfcomment}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{lipsum}	
+\usepackage{amsfonts,amsmath,amssymb, amsthm, pifont}
+\usepackage{booktabs}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref} 
+\usepackage{todonotes} 
+\usepackage{dsfont}
+\usepackage{cancel}
+\usepackage{layout}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{tikz-3dplot} 
+\usepackage[absolute, overlay]{textpos} 
+\usetikzlibrary{arrows.meta, cd, patterns, patterns.meta}
+\usepackage[bottom]{footmisc}
+
+% Configuração da Fonte
+\usepackage{times} % Fonte: Times New Roman
+
+% PACOTES ESSENCIAIS
+\usepackage{caption}  
+\usepackage{titlesec}  
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries} % formato de la fuente
+  {\S \hspace{-0cm} \thesection}              % etiqueta de la sección (con símbolo ♦)
+  {0.5em}                        % espacio entre el número y el título
+  {}                           % código antes del título
+
+%\setlength{\footskip}{10pt} % Espacio entre texto y pie de página
+\renewcommand{\footnoterule}{\vspace{5pt}\hrule width 0.3\linewidth\vspace{5pt}}
+\setlength{\textheight}{750pt}
+%\setlength{\textwidth}{530pt}
+%\setlength{\headsep}{10pt}
+%\setlength{\marginparwidth}{145pt}
+%\setlength{\marginparsep}{12pt}
+%\setlength{\topmargin}{-60pt}
+
+\definecolor{verdeoscuro}{RGB}{0,100,0} % Un verde bastante oscuro
+\definecolor{rojoscuro}{RGB}{139,0,0} % rojo oscuro tipo "DarkRed"
+
+%\pagestyle{empty}
+
+\newcommand{\ejemplo}[1]{%
+  \begin{tcolorbox}[colframe=verdeoscuro, colback=white!1, boxrule=0.8pt]
+    #1
+  \end{tcolorbox}
+}
+\newcommand{\alerta}[1]{%
+  \begin{tcolorbox}[colframe=red, colback=white!1, boxrule=0.8pt]
+    #1
+  \end{tcolorbox}
+}
+\newcommand{\demo}[1]{%
+  \begin{tcolorbox}[colframe=gray, colback=white!1, boxrule=0.8pt]
+    \textcolor{gray}{#1}
+  \end{tcolorbox}
+}
+
+\todostyle{orange}{
+    linecolor=orange,        % Flecha negra
+    bordercolor=orange,      % Borde negro
+    textcolor=black!90,      % Borde negro
+    backgroundcolor=white!33,  % Sin relleno de color
+    size=\scriptsize           % Tamaño de texto
+}
+\todostyle{green}{
+    linecolor=verdeoscuro,        % Flecha negra
+    bordercolor=verdeoscuro,      % Borde negro
+    textcolor=black!90,      % Borde negro
+    backgroundcolor=white!33,  % Sin relleno de color
+    size=\scriptsize           % Tamaño de texto
+}
+\todostyle{red}{
+    linecolor=red,        % Flecha negra
+    bordercolor=red,      % Borde negro
+    textcolor=black!90,      % Borde negro
+    backgroundcolor=white!33,  % Sin relleno de color
+    size=\scriptsize           % Tamaño de texto
+}
+\todostyle{red2}{
+  linecolor=rojoscuro,        % Flecha negra
+  bordercolor=rojoscuro,      % Borde negro
+  textcolor=black!90,      % Borde negro
+  backgroundcolor=white!33,  % Sin relleno de color
+  size=\scriptsize           % Tamaño de texto
+}
+\todostyle{gris}{
+  linecolor=gray,        % Flecha negra
+  bordercolor=gray,      % Borde negro
+  textcolor=black!90,      % Borde negro
+  backgroundcolor=white!33,  % Sin relleno de color
+  size=\scriptsize           % Tamaño de texto
+}
+\begin{document} %Início do Documento
+
+%\layout
+%\newpage 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%  MEU PREAMBULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\renewcommand\@makefnmark{%
+  \hbox{\@textsuperscript{\color{magenta}\normalfont\@thefnmark}}}
+\renewcommand\@makefntext[1]{%
+  \noindent\makebox[1.8em][r]{\textsuperscript{\color{magenta}\@thefnmark}}#1}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem*{definition}{\rotatebox{45}{\large \(\square\)}}
+
+\theoremstyle{plain}
+\newtheorem*{lemma}{{\scriptsize \(\square\)}}
+\newtheorem*{proposition}{{\large \(\square\)}}
+\newtheorem*{theorem}{{\large \(\blacksquare\)}} 
+
+\makeatletter
+% Eliminar la puntuación del estilo 'plain' y 'definition'
+\def\@thm@headpunct{} % Elimina el punto de los títulos de los teoremas
+
+% Modificar el estilo de 'plain' y 'definition'
+\def\th@plain{%
+  %\thm@headfont{\normalfont\bfseries} % Mantener la fuente normal, sin negrita
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional 
+}
+
+\def\th@definition{%
+  %\thm@headfont{\normalfont\bfseries} % Fuente normal para el título
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional
+}
+
+\def\th@remark{%
+  %\thm@headfont{\normalfont\bfseries} % Fuente normal para el título
+  %\thm@notefont{\normalfont} % El texto de la nota (si la hay) no será en negrita
+  \thm@headpunct{} % Sin puntuación adicional
+}
+\makeatother
+
+
+
+\theoremstyle{remark}
+\newtheorem*{example}{\textcolor{verdeoscuro}{\underline{{Exemplo}}}}
+\newtheorem*{exercise}{\textcolor{rojoscuro}{\underline{{Exercise}}}}\theoremstyle{remark}
+\newtheorem*{note}{\textnormal{\emph{Nota. }}}
+\newtheorem*{corollary}{\textnormal{\emph{Corolário. }}}
+
+\newcommand{\id}{\mathds{1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\Ei}{}
+\newcommand{\Ef}{}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\E}{\mathbb{S}}
+\newcommand{\ab}{^{\text{\ding{71}}}}
+\newcommand{\ce}{^{\text{\ding{70}}}}
+\newcommand{\x}{\textbf{x}}
+\newcommand{\y}{\textbf{y}}
+
+
+\setlength{\columnsep}{1in}
+
+%\begin{multicols}{2}
+
+\-\vspace{-1.3cm} 
+
+\par\noindent \includegraphics[width = \linewidth]{Imagens/Header.png} 
+
+%%%%%%%%%%%%%%%%%%%%%%%% CONFIG. DO TÍTULO %%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center} %Inicia a centralização
+{%{ \Large QUALI SURVIVAL GUIDE COLLECTION} \\ 
+\LARGE \textbf{\(^{+3}\)Notas de Topologia}} \vspace{0.1in}   \\
+ { \today }\\ 
+ {\small
+ \vspace{0.4cm}\emph{"Alguma frase" }\hfill Nestor Heli Aponte Avila\(^{1}\) \\ 
+  
+Dono da frase \hfill \href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.br}}} %\\
+%Prof. Piper Pimienta \\
+%\href{mailto:pipe@dac.unicamp.br}{\url{pipe@dac.unicamp.br}}}
+\end{center} %Finaliza a centralização
+\- \vspace{-1cm}
+
+{\small ** Abstrasct muito abstract . **\vspace{0.3cm}}%, destinado àqueles que já possuem alguma familiaridade com o assunto, pois não contém demonstrações formais, apenas as ideias por trás delas. Sinceramente, um fã da simplicidade. \\ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large \textbf{Notação}} \hfill \text{\rotatebox{45}{\large $\square$}}  Definição \hfill \((-)^{\text{\ding{71}}}\)  Aberto \hfill  \((-)^{\text{\ding{70}}}\) Fechado \\ 
+\- \hspace{4.7cm}{\scriptsize$\square$} \ Lema \hspace{2.9cm} {\large$\square$} \ Proposição \hspace{1.3cm}  {\large $\blacksquare$}  \ Teorema
+
+\input{sections/1Conjuntos.tex}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% REFERÊNCIAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{9}
+
+%\bibitem{martin1966complex}
+%Martin, D. y Ahlfors, L.V. (1966). \textit{Complex Analysis}. New York: McGraw-Hill.
+
+\bibitem{lima2004analise}
+Lima, Elon Lages (2004). \textit{An{\'a}lise real Vol. 2}. IMPA, Rio de Janeiro.
+
+\end{thebibliography}
+
+%\end{multicols}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% APÊNDICES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

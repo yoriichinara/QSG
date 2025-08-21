@@ -1,0 +1,38 @@
+\section{Desigualdade do Valor Medio} 
+\begin{lemma}
+    Sejam \(f:U\ab\subseteq \R^n \to \R \), \(p\in U\) e \(\vec{v} \in \R^n\) tais que \([p,p+v]\subseteq U\). Se \(\forall t \in (0,1)\) a função \(\varphi : t \mapsto f(p+tv)\) é diff em \(p+tv\), então \(\varphi\) é diff em \(t\) e \(\varphi{'} (t) = df(p+tv)\cdot v= \frac{\partial f }{\partial v} (p+tv)\). \textcolor{gray}{\(\rightarrow \) Faz \( h\to 0 \) de \(\varphi(t+h)\)}
+\end{lemma}
+
+
+\begin{theorem}[\emph{TVM - \(\R^n\)}]
+    Seja \(f:U\ab\subseteq \R^n\to \R\) continua em \([p,p+v]\) e diff em \((p, p+tv)\), então \(\exists\theta \in (0,1)\) tal que \(f(p+v)-f(p)= df(p+\theta v )\cdot v \). 
+\end{theorem} 
+\demo{Tome \(\varphi(t) = f(p+tv)\), aplique o lema acima e TVM.}
+
+\begin{corollary}[\emph{DVM - \(\R^n\)}]
+    Sejam \(f: U\ab\subseteq \R^n \to \R\) diff, \(K\subset U\) convexo e \( c\geq 0 \) tal que \(\forall \textbf{x}\in K, \ \|df(\textbf{x})\|\leq c\). Então, \(\forall p,q\in K \) temos  \(\|f(p)-f(q)\|\leq c \|p-q\|\). \textcolor{gray}{\(\rightarrow\) Tome \(q = p+v\) no Teorema anterior} 
+\end{corollary}
+
+%\begin{exercise}
+%    Muestre que si \(f\in C^1(U)\) y \(K\) es compacto, entonces la hipótesís del colorario es automaticamente satisfecha para algún \(c\geq 0\).  \textcolor{gray}{\(\rightarrow\) Bolzano-Weierstrass} 
+%\end{exercise}
+\newcommand{\Li}{\mathcal{L}}
+\begin{definition}
+    Seja \(\ell \in \Li(\R^n; \R)\). Definimos \(\displaystyle \|\ell \| := \sup_{\|v\|=1} |\ell v |\).  
+\end{definition}
+
+\begin{exercise}
+    Se \(\exists \vec{w}\in \R^n\) tal que \(\ell v = \langle w, v \rangle \), então \(\|\ell\| = \|w\|\). Em particular, se \(f\) é diff em \(p\), então \(\|df(p)\|= \|\nabla f (p)\|\). \textcolor{gray}{\(\rightarrow \) Use Cauchy-Schwarz para provar as duas desigualdades} 
+\end{exercise}
+
+\begin{definition}
+    Uma função \(f:X\subset \R^n\to \R \) é \emph{Lipschitz continua} se \(\exists c\geq 0\) tal que \(\forall p,q \in X, \ \|f(p)-f(q)\|\leq c \|p-q\|\). 
+\end{definition}
+\begin{corollary}
+   \(\blacksquare\) TVM - \(\R^n\) implica \(f\) Lipschitz em \(K\). 
+\end{corollary}
+
+\Ei
+
+
+

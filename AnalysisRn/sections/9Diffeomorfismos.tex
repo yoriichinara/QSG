@@ -1,0 +1,55 @@
+\section{Diffeomorfismos} 
+
+\begin{definition}
+    Sejam \(U\ab, V\ab \subseteq \R^n\). Uma aplicação \(F:U \to V\) é \emph{diffeomorfismo} de classe \(C^k\), se \(F \in C^k(U;\R^n)\) é bijeção com \(F^{-1} \in C^k(V;\R^n)\).    
+\end{definition}
+
+\begin{note} 
+    Por praticidade na notação escrevemos \(^kF: U\simeq V\).
+\end{note}
+
+\begin{example}
+   \(F:(t,x)\mapsto (x-ct, x+ct ) \) é \(^\infty F: U\simeq V\), onde \(U=V=\R^2\). \textcolor{gray}{\(\rightarrow \) Faza as contas e observe como é a inversa} 
+\end{example}
+%\begin{example}
+%    Sean \(U = \left\{(r,\theta ):|\theta| < \frac{\pi}{2}, r>0\right\}\), \(V= \{ (x,y) : x>0\}\) la aplicación \(F: (r,\theta ) \mapsto  (r\cos (\theta),r\sin (\theta))\) es \(^\infty F: U\simeq V \). 
+%\end{example}
+\ejemplo{
+\centering Diffeomorfismo \textcolor{verdeoscuro}{\(\Rightarrow\)} Homeomorfismo
+    \tcblower
+\begin{example}
+    Sea \(I\subset \R\). ¿ \(\exists \ ^k F: I\simeq \mathbb{S}^1\)? \textcolor{gray}{\(\rightarrow\) Não, tire um ponto da esfera}
+\end{example}
+}
+
+\begin{definition}
+\centering \ \(\B^n:= \{\textbf{x} \in \R^n: \|\textbf{x}\| < 1\}\)
+\end{definition}
+\begin{example}
+    \(\exists \ ^\infty F:\R^n \simeq \B^{n}\).  \textcolor{gray}{\(\rightarrow\) Tome \( F: \B^n  \ni \textbf{x} \mapsto \frac{\textbf{x}}{\sqrt{1-\|\textbf{x}\|^2}}\in \R^n\) }
+\end{example}
+
+\alerta{\centering \(F\in C^k(U;\R^n)\) bijetiva \textcolor{red}{\(\nRightarrow \)}  \(F^{-1}\in C^k(F(U);\R^n)\) 
+\tcblower
+\begin{example}
+    \(F: \R \ni t\mapsto t^3 \) não é \(^kF:\R\not\simeq \R\).  \textcolor{gray}{\(\rightarrow\) \(F^{-1}\) não é diff em \(0\)} 
+\end{example}
+}
+     
+\begin{corollary}
+    Da regla da cadeia, se \(F\) é diffeomorfismo, então \(\forall p \in U\), \(DF(p)\in \mathcal{L}(\R^n; \R^n)\) é invertível, mais ainda, sendo \(F(p)=q\) temos  
+    \[D[F^{-1}](q) = [DF(p)]^{-1}.\]
+    Em termos de matrices, \(\det(JF(p))\neq 0\) e \([JF^{-1}](q) = [JF(p)]^{-1}\).
+%    \textcolor{gray}{\(\rightarrow\) Cálcule \(D ( F \circ F^{-1})\)} 
+\end{corollary}
+
+%\begin{example}
+%    \((r,\theta) \mapsto (r\cos(\theta), r\sin(\theta))= (x,y)\). \textcolor{gray}{\(\rightarrow\) Cálcule \(JF, \ J[F^{-1}]\), analice los determinantes, y la identificación que hace de los puntos en \(\R^2\)} 
+%\end{example}
+\begin{note}
+    ¿Vale a volta do corolário em alguma vizinhaza $\V_p$? \textcolor{gray}{ Sim! }
+\end{note}
+
+% \begin{theorem}
+%     \emph{Función Inversa.} Sea \(F: U\ab \subseteq \R^n\) de clase \(C^k\) y \(p \in U \) tal que \(DF(p)\) es invertible. Entonces \(\exists V_p\ab \) tal que \(F(V)\ab\subseteq \R^n \)  y \(F\Big|P_V\) es un diffeomorfismo. 
+% \end{theorem}

@@ -1,0 +1,82 @@
+\section{Funções de Classe \(C^k\)}
+ 
+\begin{definition}
+    Seja \(f: U\ab\subseteq \R^n \to \R\) tal que \(\forall p \in U, \exists \frac{\partial f }{\partial x_i}(p): U \to \R\), definimos a \emph{derivada de segundo ordem} de \(f\) como 
+    \[\frac{\partial^2 f}{\partial x_j \partial x_i}(p) := \frac{\partial}{\partial x_j}\left(\frac{\partial f}{\partial x_i}\right)(p).\]
+\end{definition}
+\begin{note}
+    O ordem é importante, em geral. De forma análoga, definimos as $k$-ésimas derivadas  de \(f\).
+\end{note}
+
+\begin{definition}
+    Seja \(k\in \{0\}\cup \N \). Uma função \(f:U\ab\subseteq \R^n\to \R\) é de classe \(C^k(U)\) se \(\forall p \in U, \forall m \leq k, \exists \partial^m f(p)\) continua em \(p\). 
+\end{definition}
+
+\begin{note}
+\(f \in C^0\Leftrightarrow f\) continua; \(f \in C^\infty \Leftrightarrow f\) é \emph{suave}.  
+\end{note}
+%Note que van a existir varias derivadas de orden \(k\), dependiendo del valor de \(n\)
+\begin{example}
+    O anel de polinômios \(\R[x_1,\ldots,x_n]\subseteq C^\infty(\R^n)\). 
+\end{example}
+\begin{example}
+    \(\det(T): M_{n}(\R) \cong \R^{n^2}\to \R\) é de classe \(C^\infty\). \textcolor{gray}{\(\rightarrow\) É polinomial}
+\end{example}
+\begin{example}
+    Seja \(f: x\mapsto x^{1/3}\), então \(f \in C^0(\R)\) mais não é de classe \(C^1\) em \(0\). \textcolor{gray}{\(\rightarrow\) Veja o que acontece com o límite nesse punto}
+\end{example}
+
+%\begin{textblock*}{5cm}(14.75cm, 1cm) % ancho de la caja y posición (x,y)
+%  \includegraphics[width=5cm]{Imagens/2-1.pdf}
+%\end{textblock*}
+%\begin{textblock*}{5cm}(15.4cm, 1.3cm) % ancho de la caja y posición (x,y)
+%  \scriptsize \textcolor{blue}{---} \ \(\sqrt[3]{t} \)
+%\end{textblock*}
+%    Muestre que \(C^k(U)\) es una \(\R\)-álgebra\todo[orange,noline]{\(f \in C^k(U) \Rightarrow\frac{1}{f}\in C^k(U) \) siempre que \(f(\textbf{x})\neq 0\) en \(U\)} conmutativa, con la suma y el produto usual de funciones. Además de es eso pruebe que 
+%    \[C^0(U)\supsetneq C^1(U)\supsetneq \cdots \supsetneq C^\infty(U), \]
+%    Y note que los elementos inversos son aquellos que no se anulan.  \textcolor{gray}{\(\rightarrow\) Ni idea}
+%\end{exercise}
+%\begin{example}
+%    \(\displaystyle f(x,y) = \begin{cases}
+%        \frac{xy(x^2+y^2)}{x^2+y^2}, \ &\text{si}\ (x,y)\neq 0 \\
+%        0, \ &\text{e.o.c.}
+%    \end{cases}\). \textcolor{gray}{\(\rightarrow\) Estudie diff en \(p=0\)}
+%\end{example}
+
+
+\begin{theorem}[\emph{Schwarz}] 
+    Se \(f \in C^2(U)\), então \(\forall i,j \leq n\) temos  
+    \[\frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2 f }{\partial x_j \partial x_i}.\]
+\end{theorem}
+
+\demo{\parbox[a]{0.25\linewidth}{\- }\parbox[b]{0.75\linewidth}{Basta ver \(n=2\). Defina \( S = f(x+h, y+k) - f(x+h,y) - f(x, y+k) + f(x,y)\) e \(\varphi(t) = f(t, y+k) - f(t, y)\), aplique TVM \(\times 2\) e manobre até obter uma igualdade a \(S\). O resultado segue de fazer o mesmo a \(\psi(t)\), fixando a outra coordenada.}}
+\begin{tikzpicture}[scale = 0.8, >=to, shift={(2.1cm,3.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+
+  % Círculo dashed
+  \draw[dashed, color = gray, opacity = 0.7] (0.6,-1.8) arc[start angle = -60, end angle = 60, radius = 2.4cm];
+
+  % Coordenadas del rectángulo
+  \coordinate (A) at (-1,1.5);
+  \fill[gray] (A)  circle (2pt);
+  \coordinate (B) at (0.7,1.5);
+  \fill[gray] (B)  circle (2pt);
+  \coordinate (C) at (0.7,-0.8);
+  \fill[gray] (C)  circle (2pt);
+  \coordinate (D) at (-1,-0.8);
+  \fill[gray] (D)  circle (2pt);
+
+  % Dibujo del rectángulo
+  \fill[color = gray, opacity = 0.3] (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw[thick, gray] (A) -- (B) -- (C) -- (D) -- cycle;
+
+  % Etiquetas de los vértices
+  \node[above, color = gray]  at (A) {\tiny$(x,y+k)$};
+  \node[above right, color = gray] at (B) {\tiny$(x+h,y+k)$};
+  \node[below right, color = gray] at (C) {\tiny$(x+h,y)$};
+  \node[below, color = gray]  at (D) {\tiny$(x,y)$};
+
+\end{tikzpicture}
+\- \vspace{-1cm}
+\begin{corollary}
+    Se \(f\in C^k(U)\) então não importa o ordem em que são tomadas as derivadas de ordem \(m\leq k\). \textcolor{gray}{\(\rightarrow\) É uma questão de trabalhá-las 2 a 2}
+\end{corollary}

@@ -1,0 +1,308 @@
+\subsection{Imersões, Submersões e Posto Constante}
+
+\begin{definition}
+    Uma aplicação \(F\) diff em \(p\) é \emph{imersão} em \(p\) se \(DF(p): \R^n \to \R^m\) inyecta. Em particular, \(n\leq m\).
+\end{definition}
+  
+\begin{example}[Imersão Canônica] 
+    \(\iota : \R^n \ni \textbf{x}\mapsto (\textbf{x}, 0) \in \R^m\). 
+\end{example}
+
+\ejemplo{
+\centering \(c: I \subset \R \to \R^m\) caminho diff é imersão \textcolor{verdeoscuro}{\(\Leftrightarrow\)} \(c{'}(t) \neq 0\)
+\tcblower
+\begin{example}
+  \(t\mapsto (t^2, t^3)\) e \(s\mapsto (s^2-1, s^3-s)\). \textcolor{gray}{ \(\rightarrow\) Faça as contas}
+\end{example}
+}
+
+\begin{theorem}[\emph{Forma Local das Imersões}] 
+    Seja \(F \in C^k(U; \R^m)\) imersão em \(p\in U\). Então, \(\exists \mathcal{V}_p\subseteq U\) e \(\exists \ ^k G:\mathcal{W}_{F(p)} \simeq W\ab\) tais que 
+    \[ G \circ F: \mathcal{V}_p \ni \textbf{x} \mapsto (\textbf{x}, 0) \in \R^m. \]
+\end{theorem}
+\demo{\parbox[a]{0.7\linewidth}{\vspace{0.2cm}Considere a base \([DF(p)\cdot e_i, v_j]= \R^m\). Tome \(H: U \times \R^{m-n} \to \R^m\) tal que, 
+\[(\textbf{x}, x_j) \mapsto F(\textbf{x}) + \sum x_jv_j.\] Use \(\blacksquare\) (Função Inversa) a \(H\) em \((p,0)\). Finalmente, faça \(G = H^{-1}\) e estableça as vizinhanzas.\vspace{0.2cm}} \parbox[b]{0.3\linewidth}{  }
+} 
+\begin{tikzpicture}[scale= 1, >=to, shift={(12.9cm,5.1cm)}, baseline={(current bounding box.center)}, remember picture, overlay]%, shift={(14.85cm,-0.9cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+  % Puntos
+    \coordinate (O) at (1, -1.5); 
+  % Espacio V
+  \draw[<->, thick, color = gray, opacity = 0.5] (O) + (0,-1) -- + (0,1);
+  \draw[thick] (O) + (0,-0.4) -- + (0,0.63);
+  \node[above, color = gray] at ($(O) + (0,1.2)$) {$\R^n$};
+  \node[left] at ($(O) + (-0.1cm,-0cm)$) {\small $\mathcal{V}_p$};
+  \fill (O) + (0,0.1) circle (1pt);
+  \node[above, yshift = -0.23cm] at ($(O) + (0,-0.45)$) {\rotatebox{90}{$($}};
+  \node[above, yshift = -0.23cm] at ($(O) + (0,0.5)$) {\rotatebox{90}{$)$}};
+
+  % Flecha F
+  \coordinate (W) at (3,-0.5); 
+  % Espacio W
+  \draw[thick]   (W) +(0.1,0.1) to[bend left= 25]  + (0.6,0.6);
+  \draw[thick]   (W) + (0.6,0.6) to[bend left= -25]  + (1.1,1.1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1.4);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W) + (-0.3,0) --  +(1.4,0);
+  \node[above, xshift = 1.1cm, yshift = -0.6cm] at ($(W) + (0.6, 0.6)$) {\small $\mathcal{W}_{F(p)}$};
+  \fill (W) + (0.6,0.6) circle (1pt);
+  \draw[style=dashed, color = black]   (W) + (0.6,0.6) circle (0.4);
+  \fill[color = black, opacity = 0.1]   (W) + (0.6,0.6) circle (0.4);
+  \node[above, color = gray] at ($(W) + (1.6,1.2)$) {$\R^m$};
+
+  % Flecha F
+  \coordinate (W) at (3,-3.5); 
+  \draw[->, thick] (1.7,-0.2) -- (2.4,0.2) node[above, xshift = -0.5cm, yshift = -0.1cm] {\rotatebox{30}{\small $F$}};
+  \draw[->, thick] (3.6,-1) -- (3.6,-2) node[left, xshift = -0.1cm, yshift = 0.5cm] {\small $G$};
+  \draw[->, thick, color = gray] (4,-2) -- (4,-1) node[right, xshift = 0.1cm, yshift = -0.5cm] {\small $H$};
+  \draw[->, thick] (1.7,-2.7) -- (2.4,-3) node[above, xshift = -0.6cm, yshift = -0.7cm] {\rotatebox{-26}{\small $G \circ F$}};
+  % Espacio W
+  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W) + (-0.3,0) --  +(1.4,0);
+  \node[above, xshift = 1.2cm, yshift = -0.7cm] at ($(W) + (-0.7, 1.3)$) {\small $W$};
+  \fill (W) + (0.6,0) circle (1pt);
+  \draw[style=dashed, color = black]   (W) + (0.6,0) circle (0.4);
+  \fill[pattern={Lines[angle=0,distance=2pt,line width=0.4pt]},pattern color=black, opacity = 0.3]   (W) + (0.6,0) circle (0.4);
+  \node[above, color = gray] at ($(W) + (1.5,0.3)$) {$\R^m$};
+  \draw[thick]   (W)+(0.2,0) --  + (1,0);
+  \draw[->, color = gray, >=to] (2.1,-1.6) arc (240:-60:0.25);
+
+\end{tikzpicture}
+\vspace{-1cm}
+\begin{corollary}
+    Se \(F\in C^1(U; \R^m)\) é imersão, então \(F\) é localmente injetiva. 
+\end{corollary}
+
+%\begin{tikzpicture}[scale=1, thick, every node/.style={font=\small}]
+
+
+\begin{definition}
+    Uma aplicação \(F\) diff em \(p\) é \emph{submersão} se \(DF(p):\R^n\to \R^m \) é sobrejetiva. Em particular, \( n\geq m\).  
+\end{definition}
+
+\begin{example}[Submersão Canônica]
+    \(\pi : \R^n \ni (\textbf{x}, x_{m+1}, \ldots, x_n) \mapsto \textbf{x} \in \R^m\). 
+\end{example}
+ 
+\ejemplo{
+\centering \(f: U\ab\subseteq \R^n \to \R\) diff em \(p\) é submersão \textcolor{verdeoscuro}{\(\Leftrightarrow\)} \(df(p)\neq 0\). 
+\tcblower
+\begin{example}
+    \((x,y)\mapsto xy\) é submersão em \(\R^2\setminus \{0\}\). 
+\end{example}
+}
+ 
+\begin{theorem}[\emph{Forma Local das Submersões}]
+   Seja \(F\in C^k(U; \R^m)\) submersão em \(p\in U\). Então, \(\exists \mathcal{V}_p\subseteq U\) e \(\exists \ ^kG: V\ab \simeq  \mathcal{V}_p\) tais que  
+   \[F\circ G : V \ni (\textbf{x}, x_{m+1}, \ldots, x_n) \mapsto \textbf{x} \in \R^m.   \]
+\end{theorem}
+\demo{\parbox[b]{0.35\linewidth}{ \textcolor{white}{dx} }\parbox[a]{0.65\linewidth}{\vspace{0.5cm}Tire uma base l.i. \([DF(p)\cdot e_j]= \R^m\). Tome \(H: U \to \R^m \times \R^{n-m}\) tal que \(\textbf{x}\mapsto (F(\textbf{x}), x_j)\). Estude \([DH(p)\cdot v]\), pelo \(\blacksquare\) (Função Inversa) \(H\) é diffeomorfismo. Faça \(G= H^{-1}\) e estableça as vizinhanzas.\vspace{0.5cm}}  
+}
+
+\- \vspace{-0.4cm}\begin{tikzpicture}[scale= 1, >=to, shift={(0.65cm,4.85cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+  % Puntos
+    \coordinate (W) at (0,-1); 
+  % Espacio V
+  \draw[thick]   (W) +(0.9,0.1) to[bend left= 25]  + (0.6,0.6);
+  \draw[thick]   (W) + (0.6,0.6) to[bend left= -25]  + (0.3,1.1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1.4);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W) + (-0.3,0) --  +(1.4,0);
+  \node[above, xshift = 0.65cm, yshift = -0.5cm] at ($(W) + (0.6, 0.6)$) {\small $\mathcal{V}_{p}$};
+  \fill (W) + (0.6,0.6) circle (1pt);
+  \draw[style=dashed, color = black]   (W) + (0.6,0.6) circle (0.4);
+  \fill[color = black, opacity = 0.1]   (W) + (0.6,0.6) circle (0.4);
+  \node[above, color = gray] at ($(W) + (0.7,1.4)$) {$\R^n$};
+  %\draw[<->, thick, color = gray, opacity = 0.5] (O) + (0,-1) -- + (0,1);
+  %\draw[thick] (O) + (0,-0.5) -- + (0,0.5);
+  %\node[above, color = gray] at ($(O) + (0,1.2)$) {$\R^n$};
+  %\node[left] at ($(O) + (-0.1cm,-0cm)$) {\small $\mathcal{V}_p$};
+  %\fill (O) circle (1pt);
+  %\node[above, yshift = -0.23cm] at ($(O) + (0,-0.45)$) {\rotatebox{90}{$($}};
+  %\node[above, yshift = -0.23cm] at ($(O) + (0,0.5)$) {\rotatebox{90}{$)$}};
+
+  % Flecha F
+  \coordinate (W) at (4,-0.7); 
+  % Espacio W
+  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W) + (-0.3,0) --  +(1.4,0);
+  \node[above, xshift = 0.5cm, yshift = -0.2cm] at ($(W) + (0.6, 0.6)$) {\small $V$};
+  \fill (W) + (0.6,0) circle (1pt);
+  \draw[thick] (W) + (0.6,-0.4) -- + (0.6, 0.4);
+  \draw[style=dashed, color = black]   (W) + (0.6,0) circle (0.4);
+  \fill[pattern={Lines[angle=90,distance=2pt,line width=0.4pt]},pattern color=black, opacity = 0.3]   (W) + (0.6,0) circle (0.4);
+  \fill[];
+  \node[above, color = gray] at ($(W) + (0.6,1)$) {$\R^n$};
+
+  % Flecha F
+  \coordinate (W) at (2.6,-3.5); 
+  \draw[->, thick] (0.9,-1.7) -- (1.6, -2.4) node[above, xshift = -0.7cm, yshift = -0.3cm] {\small \rotatebox{-42}{\small $F$}};
+  \draw[->, thick] (3.2,-0.1) -- (2,-0.1) node[midway, above, xshift = -0cm, yshift = 0cm] {\small $G$};
+  \draw[->, thick, color = gray] (2,-0.5) -- (3.2,-0.5) node[midway, below, xshift = 0cm, yshift = -0cm] {\small $H$};
+  \draw[->, thick] (4.2,-1.6) -- (3.6, -2.4) node[midway, below, xshift = 0.5cm, yshift = 0.75cm] {\rotatebox{55}{\small $F \circ G$}};
+  % Espacio W
+%  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1);
+  \draw[<->, thick, color = gray, opacity = 0.5]   (W) + (-1.2,0) --  +(1.2,0);
+  \node[above, xshift = 1.2cm, yshift = -0.7cm] at ($(W) + (-1.2, 0.9)$) {\small $F(p)$};
+  \fill (W) + (0,0) circle (1pt);
+  %\draw[style=dashed, color = black]   (W) + (0.6,0) circle (0.4);
+  %\fill[color = black, opacity = 0.1]   (W) + (0.6,0) circle (0.4);
+  \node[above, color = gray] at ($(W) + (2,0)$) {$\R^m$};
+  %\draw[thick]   (W)+(0.53,0) --  + (-0.53,0);
+  %\node at ($(W)+(-0.5,0)$) {\((\)};
+  %\node at ($(W)+(0.5,0)$) {\()\)};
+  \draw[->, color = gray, >=to] (2.7,-2) arc (-60:240:0.25);
+
+\end{tikzpicture}
+
+\begin{corollary}
+    Se \(F\in C^1(U; \R^m)\) é submersão, então \(F\) é aberta. \textcolor{gray}{ \(\rightarrow \) Composição de abertas é aberta, projeções também }
+\end{corollary}
+
+\begin{note}
+  Imersões e submersões são \textbf{localmente} canônicas, salvo mudanças de coordenadas via diffeomorfismo.
+\end{note}
+
+\begin{definition}[Posto]
+  Se \(L\in \mathcal{L}(\R^n ;\R^m)\), então \(\operatorname{rank}(L):= \dim [Le_i]\leq \min \{n,m\}\).  
+  \[\operatorname{rank}(L) = \max\{ r: \exists M_r(L)\text{ com } \det (M_r)\neq 0\}.\]
+  \[\operatorname{rank}(L) = \min\{n, m\} \Leftrightarrow \begin{cases}
+      L \text{ é isomorfismo }, \ n=m \\
+      L \text{ é injetiva }, \  n< m \\
+      L \text{ é sobrejetiva } ,\ n> m 
+    \end{cases}\] 
+\end{definition}
+
+\begin{theorem}[\emph{Posto Constante}]
+    Seja \(F \in C^k(\U_p; \R^m)\) tal que \(\forall \x\in \mathcal{U}_p\), \(\operatorname{rank}(DF(\textbf{x})) = r\). Então, \(\exists  ^k G: V\ab \to \mathcal{V}_p\) e \(\exists ^k H : \mathcal{W}_{F(p)} \to W\ab\) tais que 
+    \[H\circ F \circ G : \mathcal{V}_p \ni \textbf{x} \mapsto (x_1, \ldots, x_r, 0) \in \R^m. \]   
+\end{theorem}
+
+\begin{enumerate}[left = 0cm]
+
+\item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt] 
+\centering \textcolor{black}{\(\exists ^k G: V\ab \to \mathcal{V}_p\)}
+\tcblower
+\textcolor{gray}{\([DF(p)]\cong \R^r\leq \R^m\). Aplique \(\blacksquare\) (FLS) a \(\pi:(\x^{(r)},\x^{(m-r)}) \mapsto \textbf{x}^{(r)}\). Logo, \(\exists \ ^k G: V\ab\simeq \mathcal{V}_p\) tal que \(\pi\circ F\circ G:(\x^{(r)}, \x^{(n-r)}) \mapsto \x^{(r)}\).}
+\end{tcolorbox}
+
+\item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt] 
+  \centering \(F\circ G: \x^{(n)}\mapsto (\x^{(r)}, y_i(\x)^{(n-r)}) \)
+  \tcblower 
+\parbox[a]{0.85\linewidth}{\textcolor{gray}{Note que, sendo \(q = G^{-1}(p)\), \(\exists \mathcal{V}_q= V\) onde \(\operatorname{rank}(J(F\circ G)(\textbf{x}))=r\), ou seja que \(D\equiv 0\). Logo, \(y_i(\textbf{x}) = y_i(\textbf{x}^{(r)}, q^{(n-r)})\). 
+}\vspace{-0cm}}
+\parbox[b]{0.15\linewidth}{  }
+\end{tcolorbox}
+
+\begin{tikzpicture}[>=to, shift={(11.25cm,-2.65cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+  %\node at (5,6.7) {\small $J(F\circ G)$};
+  %\node at (5,6.2) {\small \rotatebox{90}{$=$}};
+  \node at (5,5) {%
+    \small $ 
+%    J(F\circ G) = 
+    \left(
+    \begin{array}{c:c}
+    \id_{r} & 0 \rule{0em}{0em}\\
+    \hdashline  
+    \rule{0pt}{1.2em}
+    C & D
+    \end{array}
+    \right)
+    $
+  };
+\end{tikzpicture}
+
+\vspace{-1cm}
+
+\item[]\begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt] 
+  \centering \(\exists ^k H : \mathcal{W}_{F(p)} \to W\ab\)
+  \tcblower
+  \textcolor{gray}{
+  Seja \(\iota: \textbf{x}^{(r)} \mapsto (\textbf{x}^{(r)}, q^{(n-r)})\). Use \(\blacksquare\) (FLI) na função 
+  \(F\circ G\circ \iota : \textbf{x}^{(r)} \mapsto (\textbf{x}^{(r)}, y_i(\textbf{x}^{(r)},q))\). Termine de establecer as vizinhanzas e concluia. }
+\end{tcolorbox}
+
+\end{enumerate}
+
+\begin{figure}[!h]%{0.45\linewidth}
+\centering
+\begin{tikzpicture}[scale = 1.2, >=to]%, shift={(14.85cm,-0.9cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+  % Puntos
+  \coordinate (W) at (0,0); 
+  % Espacio V
+  \draw[thick]   (W) +(0.9,0.1) to[bend left= 25]  + (0.6,0.6);
+  \draw[thick]   (W) + (0.6,0.6) to[bend left= -25]  + (0.3,1.1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1.4);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W) + (-0.3,0) --  +(1.4,0);
+  \node[above, xshift = 0.65cm, yshift = -0.5cm] at ($(W) + (0.6, 1.5)$) {\small $\mathcal{V}_{p}$};
+  \fill (W) + (0.6,0.6) circle (1pt);
+  \draw[style=dashed, color = black]   (W) + (0.6,0.6) circle (0.4);
+  \fill[color = black, opacity = 0.1]   (W) + (0.6,0.6) circle (0.4);
+  \node[above, color = gray] at ($(W) + (-0.8,0.4)$) {$\R^n$};
+  
+  \coordinate (W) at (4,0); 
+  % Espacio V
+  \draw[thick]   (W) +(0.1,0.1) to[bend left= 25]  + (0.6,0.6);
+  \draw[thick]   (W) + (0.6,0.6) to[bend left= -25]  + (1.1,1.1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1.1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W) + (-0.3,0) --  +(1.4,0);
+  \node[above, xshift = 0.65cm, yshift = -0.5cm] at ($(W) + (-0.6, 1.6)$) {\small $\mathcal{W}_{F(p)}$};
+  \fill (W) + (0.6,0.6) circle (1pt);
+  \draw[style=dashed, color = black]   (W) + (0.6,0.6) circle (0.4);
+  \fill[color = black, opacity = 0.1]   (W) + (0.6,0.6) circle (0.4);
+  \node[above, color = gray] at ($(W) + (2.2,0.4)$) {$\R^m$};
+
+% BELOW
+  \coordinate (W) at (0,-2.5); 
+  % Espacio W
+  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W) + (-0.3,0) --  +(1.4,0);
+  \node[above, xshift = 0.5cm, yshift = -0.2cm] at ($(W) + (0.6, 0.6)$) {\small $V$};
+  \fill (W) + (0.6,0) circle (1pt);
+  \draw[thick] (W) + (0.6,-0.4) -- + (0.6, 0.4);
+  \draw[style=dashed, color = black]   (W) + (0.6,0) circle (0.4);
+  \fill[pattern={Lines[angle=90,distance=2pt,line width=0.4pt]},pattern color=black, opacity = 0.3]   (W) + (0.6,0) circle (0.4);
+  \fill[];
+  \node[above, color = gray] at ($(W) + (-0.8,0.1)$) {$\R^n$};
+
+  \draw[->, thick] (W) + (0.6,1) -- +(0.6,2) node[midway, left, xshift = -0.1cm, yshift = 0cm] {\small $G$};
+  \draw[->, thick] (W) + (4.6,2) -- +(4.6,1) node[midway, right, xshift = 0.1cm, yshift = 0cm] {\small $H$};
+
+  \coordinate (W) at (4,-2.5); 
+  % Espacio W
+  \draw[->, thick, color = gray, opacity = 0.5]   (W)+(0,-0.3) --  + (0,1);
+  \draw[->, thick, color = gray, opacity = 0.5]   (W) + (-0.3,0) --  +(1.4,0);
+  \node[above, xshift = 0.5cm, yshift = -0.2cm] at ($(W) + (0.6, 0.6)$) {\small $W$};
+  \fill (W) + (0.6,0) circle (1pt);
+  \draw[thick] (W) + (0.2,0) -- + (1, 0);
+  \draw[style=dashed, color = black]   (W) + (0.6,0) circle (0.4);
+  \fill[pattern={Lines[angle=0,distance=2pt,line width=0.4pt]},pattern color=black, opacity = 0.3]   (W) + (0.6,0) circle (0.4);
+  \fill[];
+  \node[above, color = gray] at ($(W) + (2.2,0.1)$) {$\R^m$};
+  % Flecha F
+  \coordinate (W) at (2.9,-3.5); 
+  \draw[->, thick] (2.1,0.6) -- (3.1,0.6) node[midway, above, xshift = -0cm, yshift = 0cm] {\small $F$};
+  \draw[->, thick] (2.1,-2.3) -- (3.1,-2.3) node[midway, below, xshift = -0cm, yshift = -0.1cm] {\small $H\circ F\circ G$};
+  \draw[->, color = gray, >=to] (2.5,-1.1) arc (240:-60:0.25);
+
+\end{tikzpicture}
+\caption{\(\blacksquare\) (Posto Constante)} 
+\end{figure}
+
+\begin{note}
+    A função \(\operatorname{rank}: U \to \N\) é semi-continua inferiormente.
+\end{note}
+
+\begin{corollary}%[Colorarios]
+  Os Teoremas de Função Inversa e Formas Locais (Imersões e Submersões) são diretos. Sejam \(F\in C^1(U;\R^m)\) e \(p\in U\). Então
+  \begin{enumerate}[label = \roman*.]
+    \item Se \(\operatorname{rank}(JF(p)) = r=\min \{n,m\}\) então \( \exists \mathcal{V}_p\) onde \(JF_r(\textbf{x}) \in GL_r(\R)\). 
+    \item Se \(F\) é localmente injetiva então é imersão em \(V\ab\subset U\) denso em \(U\). \textcolor{gray}{\(\rightarrow \) Aplique \(\blacksquare\) (Posto Constante), a segunda afirmação segue da semi-continuidade inferior}
+    \item Se \(F\) é aberta então é submersão em \(V\ab\subset U\) denso em \(U\). 
+  \end{enumerate}
+\end{corollary}
+
+\alerta{
+  \centering É preciso que o posto seja consta em TODA uma vizinhanza
+  \tcblower
+\begin{example}
+  \(F: \R^2 \ni (t,s)\mapsto (t^2, t^3, s ) \in \R^3\) ¿Existem coordenadas como no Teorema em alguma vizinhanza de origem? \textcolor{gray}{\(\rightarrow \) Não} %\(\operatorname{rank}(JF(0,0))\)}
+\end{example}
+}

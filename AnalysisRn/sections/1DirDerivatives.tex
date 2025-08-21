@@ -1,0 +1,56 @@
+\section{Derivadas Direcionais}
+
+\begin{definition}%[\textbf{Derivada Direccional}] 
+  Seja \(f:U\ab\subseteq \R^n\to \mathbb{R}\) uma função escalar. Para \(\vec{v}\in \mathbb{R}^n\) e \(p\in U\), a $v$-\textit{direcional derivada} de \(f\) em \(p\), se existir, é dada por 
+  {\begin{equation*}
+  \frac{\partial f}{\partial v}(p) := \lim\limits_{h\to 0} \frac{f(p+hv) - f(p)}{h} \hspace{0in} \sim \hspace{0in} f(p+hv) = f(p) + \frac{\partial f }{\partial v}(p)\cdot h + \sigma(h).
+  \end{equation*}}
+  \begin{note}
+  Se \(v = e_i\) então \(\frac{\partial f}{\partial x_i}(p)\) é a $i$-ésima \textit{derivada parcial} de $f$ em $p$.
+  \end{note}
+\end{definition}
+
+\Ei
+\ejemplo{ \centering \(\exists \alpha \in \R : f(p+hv) = f(p) + \alpha h + \sigma(h)\Rightarrow \frac{\partial f }{\partial v}(p) = \alpha\)
+\tcblower
+\begin{example}
+  \(f:\R^2 \ni \x \mapsto \|\x \|^2\in \R \). \textcolor{gray}{\(\rightarrow \) Use produto interno e encontre \(\alpha\)} %\todo[green]{Calculate the limit, develop with intern product properties and find \(\alpha\).}.
+\end{example}}
+%\begin{exercise}
+%  Let \(\lambda\in \R\) and \(\vec{v},\vec{\omega} \in \R^n\). Show that \(\frac{\partial f }{\partial \lambda v} (p) = \lambda \frac{\partial f }{\partial v}(p)\). Does the following equality always hold? \(\frac{\partial f }{\partial (v+\omega)}(p) = \frac{\partial f }{\partial v}(p) + \frac{\partial f }{\partial \omega}(p )\). \textcolor{gray}{\(\rightarrow\) Manipulate and restate the expresion of the limit} 
+%\end{exercise}
+%\begin{example}
+%  \(g :\R^2\backslash\{0\}\to \R\) such that \((x,y) \mapsto \arctan (y/x)\). \textcolor{gray}{\(\rightarrow\) Just calculate} 
+%\end{example}
+\alerta{ \centering
+\(\forall j\leq n, \ \exists \frac{\partial f}{\partial x_j}(p)\) \textcolor{red}{\(\nRightarrow \)} \(\forall \vec{v} \in \R^n, \ \exists \frac{\partial f}{\partial v}(p)\) \textcolor{red}{\(\nRightarrow\)} \(f\) continua em \(p\)
+\tcblower 
+ \begin{example}{ 
+   \( (x,y) \mapsto x+y, \text{ \ se }x=0\ \text{or}\ y=0\)}, nula no caso contrario. \textcolor{gray}{\(\rightarrow\) Prove diferentes direções em \(0\)}
+\end{example}
+%\- \tcblower
+\begin{example}
+  \(0\neq (x,y) \mapsto  \frac{xy^2}{\|x\|^2}\), nula em \(0\). \textcolor{gray}{\(\rightarrow\) Estude a continuidade no \(0\)}
+\end{example}
+}
+ 
+\begin{definition}[\emph{Conexidade}]
+\(X\ab\subseteq \R^n\) é \emph{conexo} sse \(\nexists  U\ab,V\ab\subseteq \R^n\) não vazios tais que \(U\cap V \neq \emptyset\) e \(X \subseteq U\cup V\). 
+\end{definition}
+
+\Ei
+
+\begin{lemma}
+  Se \(U\ab\subseteq \R^n\) é conexo, então \(\forall p,q\in U, \exists \Gamma\) caminho poligonal em \(U\) com vértices \(p = p_0, p_1, \ldots, p_k = q,\) tais que \(p_{i+1}- p_i\) é colinear com algum \(e_j\). 
+  \textcolor{gray}{\(\rightarrow \) É por construção, só lembre que \(U\) é aberto.}
+  %\footnote{O lema só vale em \(U\) aberto, pense em \({\mathbb{S}^{1}}\).}
+\end{lemma}
+
+%\- \vspace{-0.3cm}\\ 
+\begin{proposition}
+  Seja \(U\ab\subseteq \R^n\) conexo e \(f:U\to \R\) função tal que \(\forall p \in U,\ \forall i\leq n\) as derivadas \(\frac{\partial f}{\partial x_i}(p) = 0\) em \(U\), então \(f\) é constante. 
+\end{proposition}
+\demo{Use o lemma, aplique TVM para \(\varphi(t) = f(p_i + te_j)\), quem é \(\varphi{'} (\theta)\)?}
+%\begin{exercise}
+%  If $\forall p\in U, \exists M>0$ such that \(\Big|\frac{\partial f}{\partial x_i}(p) \Big|\leq M\) then $f$ is continuous in \(U\). \textcolor{gray}{\(\rightarrow \) Re-express \(f(p+v)- f(p)\) and get summands to which to apply MVT (case \(\R\)) as we did in the previous proposition}
+%\end{exercise}
