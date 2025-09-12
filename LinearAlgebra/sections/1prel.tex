@@ -1,0 +1,218 @@
+\section*{\S \ \ Preliminares}
+
+É preciso lembrar algumos resultados do curso de Álgebra Linear I, podem ser aprofundados se queser nos capítulos 5 e 6 de \cite{MA719}. Também, algumas propiedades e detalhes do anel de polinômios.  
+
+%\begin{definition}%[]
+%    Um par \((A, +)\) é chamado de \emph{grupo abeliano} se \(A\neq \emptyset\) e \(+: A\times A \to A\) é uma operação binaria tal que, \(\forall a, b, c \in A\): 
+%    \begin{enumerate}[left = 1.7cm]
+%        \item[(G1)] Asocia, \((a+b)+c = a + (a+c)\). 
+%        \item[(G2)] Tém neutro, \(\exists ! e \in A : a+e =e+a = a\).  
+%        \item[(G3)] Tém inversos, \(\exists ! (-a) \in A : a + (-a)= (-a)+a=e \). 
+%        \item[(G4)] Comuta, \(a+b = b + a\). 
+%    \end{enumerate}
+%\end{definition}
+
+%\begin{definition}
+%    Um \emph{corpo} é uma tripla \((\F, +, \cdot)\) onde \(\F\neq \emptyset\) e \(+,\cdot : \F\times \F \to \F\) são operações binarias tais que,
+%    \begin{enumerate}[left = 1.7cm]
+%        \item[(C1)] \((\F,+)\) é grupo abeliano. 
+%        \item[(C2)] O produto \(\cdot\), asocia, comuta e \((\F,\cdot)\setminus \{0\}\) é grupo abeliano.
+%        \item[(C3)] Distributividade, \(\forall x,y,z \in \F\), \((x+y)\cdot z= x\cdot z + y\cdot z\). 
+%    \end{enumerate}
+%\end{definition}
+
+\subsection*{Espaços Vetoriais}
+
+\begin{definition}
+   Sejam \(\F\) um corpo, e \(V\neq \emptyset\). Um \(\F\)\emph{-espaço vetorial} é uma tripla \((V,+,\cdot)\) onde, \(+:V\times V \to V\) e \(\cdot : \F \times V \to V\) são operações tais que, \(\forall \lambda, \mu \in \F\), \(\forall v, w \in V\), temos, 
+   \begin{enumerate}[left =1.7cm]
+        \item[(V1)] \((V,+)\) é grupo abeliano.  
+        \item[(V2)] \((V,\cdot)\) asocia, \(\lambda \cdot(\mu \cdot v) = (\lambda \cdot \mu) \cdot v\).  
+        \item[(V3)] Distributividade I, \((\lambda + \mu ) \cdot v = \lambda \cdot v + \mu\cdot  v\).  
+        \item[(V4)] Distributividade II, \(\lambda \cdot (v+ w) = \lambda \cdot v + \lambda \cdot w\).  
+        \item[(V5)] Neutro da multiplicação (por escalar), \(1 \cdot v = v \).  
+   \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    Um subconjunto \(W \subseteq V\) não vacío é dito de \emph{subespaço}, denotamos \(W\leq V\), se \(\forall w_1, w_2 \in W\), \(\forall \lambda \in \F\), temos \( w_1 + \lambda w_2 \in W \).   
+\end{definition}
+
+\begin{definition}
+    Sejam \(\alpha = (v_i)\) uma familia de vetores em \(V\) e \(m\in \N\). Uma \emph{combinação linear} de \(\alpha\), é um vetor em \(V\) da forma \(v = \sum_{j\leq m} x_{i_j}v_{i_j}\), onde \(x_{i_j} \in \F\).
+\end{definition}
+
+\begin{note}
+    Denotamos por \([\alpha]\), ao conjunto de todas as combinações lineares de \(\alpha\), repare que \([\alpha]\leq V\). Também, se \(\alpha = \{v\}\) então \([\alpha] = [v] = \F v\). 
+\end{note}
+
+\begin{definition}
+    Uma familia \(\alpha = (v_i)\) é l.i. sse \(\forall j \in I\), \(v_j \notin [\alpha \setminus \{v_j\}]\). Alem disso, se \([\alpha] = V\) então \(\alpha\) é chamada de \emph{base} de \(V\). 
+\end{definition}
+
+\theoremnum{5.5.1.}
+\begin{theorem}
+    Todo espaço vetorial tém base e quaisquer duas bases tém mesma cardinalidade. \textcolor{gray}{\(\rightarrow \) \cite[Pág. 185]{MA719}}%\textcolor{gray}{\(\rightarrow\) O Teorema da para definir \(\dim V := \#\alpha\)}
+\end{theorem}
+
+\begin{definition}
+    Seja \(\alpha\) uma base de \(V\). Então, \(\dim V := \# \alpha\) é a \emph{dimensão} de \(V\).  
+\end{definition}
+
+\begin{definition}
+    Seja \((V_i)\) familia de subespaços em \(V\), definimos a soma deles somo sendo \(\sum V_i := \left[\bigcup V_i\right]\). A soma é direta se \(\forall j\in I\), \(V_j \cap \sum_{i\neq j} V_i =\{0\}\). 
+\end{definition}
+
+\begin{note}
+    Se a soma é direta escrevemos \(\bigoplus V_i\). 
+\end{note}
+
+\propositionnum{5.3.7.}
+\begin{proposition}
+    \label{prop:5.3.7}
+    A soma \(\sum V_i\) é direta sse \(\forall v\in \sum V_i\), \(\exists m\in \N \) e \(\exists! v_{i_j} \in V_{i_j}\) tais que \(v = \sum_{j\leq m} v_{i_j}\). \textcolor{gray}{\(\rightarrow\)  \cite[Pág. 174]{MA719}} 
+\end{proposition}
+
+\propositionnum{5.4.6.}
+\begin{proposition}
+    \label{prop:5.4.6}
+    Sejam \(\alpha = (v_i)\) e \(V_i = \F v_i\) então \(\alpha\) é l.i. sse \(\sum \F v_i\) é direta. 
+\end{proposition}
+
+\newcommand{\comentario}[1]{\textcolor{gray}{\(\rightarrow\) #1}}
+
+\begin{corollary}
+    \(\alpha\) é base sse \(\forall i\in I,\ v_i \neq 0\) e \(V = \bigoplus \F v_i\). Logo, da \(\square \) \ref{prop:5.3.7} temos que \(\forall v\in V\), \(\exists m \in \N\) e \(\exists !x_{i_j} \in \F\) tais que \(v = \sum_{j\leq m } x_{i_j}v_{i_j}\). \comentario{\cite[Pág. 178]{MA719}}
+\end{corollary}
+
+\begin{note}
+Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identificamos comumente,  
+\[(x_{i_j}) =: [v]_\alpha \sim  [ x_{i_1}, \cdots,  x_{i_m}]^T \in M_{m\times 1}(\F).\]
+\end{note}
+\- \vspace{-1.4cm}
+\propositionnum{ \hspace{-0.3cm}}
+
+
+\subsection*{Transformações Lineares}
+
+\begin{definition}
+    Sejam \(V\) e \(W\) \(\F\)-espaços vetoriais. Uma função \(T: V \to W\) é dita \emph{linear} se \(\forall v_1, v_2 \in V\) e \(\forall \lambda \in \F \) tém-se que \(T(v_1 + \lambda v_2) = T(v_1) + \lambda T(v_2)\). 
+\end{definition}
+
+\begin{definition}
+    Sejam \(T: V \to W\) linear, \(\alpha = (v_j)\) e \(\beta = (w_i)\) bases de \(V\) e \(W \) respetivamente. Então, se \([T(v_j)]_\beta= (a_{ij})\), a \emph{matriz asociada} \([T]_\beta^\alpha := (a_{ij})\) determina \(T\) no sentido que, \(\forall v \in V\), \([T(v)]_\beta = [T]_\beta^\alpha [v]_\alpha\). 
+\end{definition}
+
+\begin{note}
+    Se \(W= V \) e \(T = \id_{_V}\), então \([\id_{_V}]^\alpha_\beta\) é a matriz cambio de base. 
+\end{note}
+
+\theoremnum{6.1.6.}
+\begin{theorem}
+    Sejam \(\alpha = (v_i)\) base de \(V\) e \(\beta = (w_i)\) familia de vetores em \(W\), então \(\exists ! T:V\to W \) linear tal que \(\forall i \in I,\ T(v_i) = w_i\). 
+\end{theorem}
+    
+\begin{note}
+    O espaço vetorial das funções \(f: V \to W\), com a soma e o produto usuais é denotado no texto como \(\mathcal{F}(V,W)\).   
+\end{note}
+
+\renewcommand{\hom}{\operatorname{Hom}_\F}
+\newcommand{\ehom}{\operatorname{End}_\F}
+
+\begin{definition}  
+  \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \). Se \(V = W\) então denotamos \(\ehom(V) = \hom(V,V)\). \footnote{"\(\operatorname{Hom}\)" vém de homomorfismo e "\(\operatorname{End}\)" de endomorfismo.}   
+\end{definition}   
+
+\propositionnum{0.1.}
+\begin{proposition}
+    %Sejam \(\alpha\) e \(\beta\) bases de \(V\) e \(W\) respetivamente, então, 
+\label{prop:0.1}
+    Algumas propiedades coletadas de \cite[Seç. 6.1]{MA719}. 
+    \begin{enumerate}[left = 0.55cm, label = (\alph*)]
+        \item \(\hom(V,W) \leq \mathcal{F}(V,W)\). 
+        \item Sejam \(\alpha = (v_j)\) e \(\beta = (w_i) \) bases de \(V\) e \(W\) fixas. A função  \(\zeta : \hom(V,W) \ni T \mapsto [T]^\alpha_\beta \in M_{\#I \times \#J}(\F) \) é linear e injetora. 
+        \item Sejam \(\gamma, \ \alpha\) e \(\beta\) bases de \(U,\ V\) e \(W\), \(S \in \hom(U,V)\) e \(T\in \hom(V,W)\) então \(T\circ S \in \hom(U,W)\) e \([T\circ S]^\gamma_\beta = [T]^\alpha_\beta [S]^\gamma_\alpha\).
+        \item Se \(\alpha \) e \(\beta \) são bases de \(V\) e \(W\), e \(T \in \hom(V,W)\) é invertivél então \(T^{-1} \in \hom(W,V)\) e \([T^{-1}]^\beta_\alpha = ([T]^\alpha_\beta)^{-1}\).
+    \end{enumerate}
+\end{proposition}
+
+\begin{definition}
+    \(T\in \hom(V,W)\) é um \emph{isomorfismo} se fora sobrejetivo. Dois espaços são \emph{isomorfos}, \(V\cong W\), se \(\exists T\in \hom(V,W)\) isomorfismo.  
+\end{definition}
+
+\begin{note}
+    A transformação \(\zeta\) do ítem (b) é sobrejetiva se \(\#J < \infty\).
+\end{note}
+
+\theoremnum{6.1.9.}
+\begin{theorem}
+    \(V\cong W\) sse \(\dim V = \dim W\). \comentario{\cite[Pág. 191]{MA719}}
+\end{theorem}
+
+\begin{proposition}
+    Seja \(T\in \hom(V,W)\). Se \(U \leq V\) e \(U'\leq W\) então também \(T(U)\leq W\) e \(T^{-1}(U')\leq V\). \comentario{\cite[Pág. 199]{MA719}}
+\end{proposition}
+
+\begin{definition}
+    \centering 
+    \(V_{_T} := T^{-1}(\{0\}) = \mathcal{N}(T)\) \  e \  \(\operatorname{Im}(T) := T(V)\). 
+\end{definition}
+
+\begin{note}
+    Chamamos estos espaços especiais de \emph{núcleo} e \emph{imagem} de \(T\) e suas dimensões de \emph{nulidade} e \emph{posto}. 
+\end{note}
+
+\theoremnum{6.3.6.}
+\begin{theorem}
+    \(\dim V = \dim V_{_T} + \dim V(T)\). \comentario{\cite[Pág. 201]{MA719}}
+\end{theorem}
+
+\propositionnum{6.3.9.}
+\begin{proposition}
+    \(T \) é injetora sse \(V_{_T} = \{0\}\). \comentario{\cite[Pág. 202]{MA719}}
+\end{proposition}
+
+
+\begin{note}
+    Se \(T\in \ehom(V)\) então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ veces }} \in \ehom(V)\), por convenção \(T^0 = \id_{_V}\). Seguindo o ítem (a) da \(\square \) \ref{prop:0.1} , \(\forall p \in \mathcal{P}(\F)\) temos,  
+    \[p(t) = \sum^m a_kt^k \ \ \ \sim \ \ \ P(T) = \sum^m a_kT^k \in \ehom(V).\] 
+\end{note}
+
+\vspace{-0.6cm}
+\[** \ \ V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\} \ \ **\]
+
+\begin{definition}
+    Sejam \(\lambda \in \F\) e \(p = t-\lambda \). Se \(\exists v\in V_p \setminus\{0\}\) então \(V_p\) é \emph{autoespaço}, \(v\) um \emph{autovetor}, ambos associados ao \emph{autovalor} \(\lambda\). 
+\end{definition}
+
+\begin{note}
+    No \cite[Pág. 208]{MA719} tém a primeira e equivalente definição de autoespaço como sendo \(V_\lambda = \{v\in V: T(v) = \lambda v \}\neq \{0\}\). 
+\end{note}
+
+\begin{definition}
+    \(T\) é \emph{diagonalizavél} se \(\exists \beta \) base de \(V\) formada por autovetores.
+\end{definition}
+
+\begin{note}
+    No caso diagonalizavél e tudo perfeito de mais, pois se \(\lambda_j\) são os autovalores dos \(v_j \in \beta \) então, \([T]^\beta_\beta = \operatorname{diag}(\lambda_j)\). Em versão matricial temos,
+    \[[T]^\beta_\beta = [\id_{_V}]^\alpha_\beta [T]^\alpha_\alpha [\id_{_V}]^\beta_\alpha \ \ \sim \ \ B = P^{-1} A P.\]
+    É sabido que não todos os operadores são diagonalizavéis. O objetivo do \cite[Cap. 8]{MA719} é ver que, ainda assim, sempre e possivél levar \(T\) a uma matriz quasi-diagonal $B$ (Formas Canônicas). 
+\end{note}
+
+\subsection*{O Anel de Polinômios \(\mathcal{P}(\F)\)}
+
+\begin{definition}
+    Sejam \(I = \{t^k: k\in \mathbb{Z}_\geq0\}\) conjunto respeitando as leis usuais de potências\footnote{Quer dizer que \(t^0 =1\) e \(t^m\cdot t^n=t^{m+n}\).  } e \((\F,+,\cdot)\) um corpo. Defina, \(\forall i \in I\), o espaço vetorial \(V_i = \{a_it^i: a_i \in \F, \  t^i \in I\}\), com as operações, 
+    \begin{itemize}
+        \item \(+: V_i \times V_i \ni (a_it^i , b_it^i) \mapsto (a_i+b_i)t^i \in V_i\). 
+        \item \(\cdot: \F \times V_i \ni (\lambda, a_it^i) \mapsto (\lambda\cdot a_i) t^i \in V_i\). 
+%        \item Leis de potências usuais, \(t^0 =1\), \(t^1 = t \) e \(t^k \cdot t^l = t^{k+l}\). 
+%        \item Soma, \(\sum^m a_k t^k + \sum^n b_k t^k = \sum^{\max\{n,m\}} (a_k+b_k) t^k\). 
+    \end{itemize} 
+    Assim, o anel de polinômios com coeficientes em \(\F\) é \(\mathcal{P}(\F) := \sum V_i\).  
+\end{definition}
+
+\newcommand{\Pol}{\mathcal{P}(\F)}
+\begin{note}
+    Em particular, \(\Pol\) é um espaço vetorial, \(\dim \Pol = \infty\), \(\alpha = \{1, t, t^2, \ldots \}\) é uma base e temos um producto bém definido.\footnote{Ou todo junto, um álgebra comutativa.} 
+\end{note}

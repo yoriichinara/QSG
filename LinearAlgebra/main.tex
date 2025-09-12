@@ -13,6 +13,7 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{multicol}
+\usepackage{xparse}
 \usepackage{subcaption}
 \usepackage{arydshln}
 %\usepackage{pdfcomment}
@@ -127,13 +128,20 @@
 \makeatother
 
 \theoremstyle{definition}
-\newtheorem*{definition}{\rotatebox{45}{\large \(\boxdot\)}}
+\newtheorem*{definition}{\rotatebox{45}{\large \(\boxdot\)}} 
 
 \theoremstyle{plain}
 \newtheorem*{lemma}{{\scriptsize \(\square\)}}
-\newtheorem*{proposition}{{\large \(\square\)}}
-\newtheorem*{theorem}{{\large \(\blacksquare\)}} 
+\newtheorem{proposition}{{\large \(\square\)}}
+\newtheorem{theorem}{{\large \(\blacksquare\)}} 
 
+\newcommand{\propositionnum}[1]{%
+  \renewcommand{\theproposition}{#1}%
+}
+
+\newcommand{\theoremnum}[1]{%
+\renewcommand{\thetheorem}{#1}%
+}
 \makeatletter
 % Eliminar la puntuación del estilo 'plain' y 'definition'
 \def\@thm@headpunct{} % Elimina el punto de los títulos de los teoremas
@@ -164,10 +172,11 @@
 \newtheorem*{example}{\textcolor{verdeoscuro}{\underline{{Exemplo}}}}
 \newtheorem*{exercise}{\textcolor{rojoscuro}{\underline{{Exercise}}}}\theoremstyle{remark}
 \newtheorem*{note}{\textnormal{\emph{Nota. }}}
-\newtheorem*{corollary}{{\scriptsize $\blacksquare$}}
+\newtheorem*{corollary}{{\scriptsize \(\boxtimes\)}} 
 
 \newcommand{\id}{\mathds{1}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
 \newcommand{\B}{\mathbb{B}}
 \newcommand{\Ei}{}
 \newcommand{\Ef}{}
@@ -193,23 +202,22 @@
 
 \begin{center} %Inicia a centralização
 {%{ \Large QUALI SURVIVAL GUIDE COLLECTION} \\ 
- \LARGE \textbf{\(^{+1}\)Notas de Análise no \(\mathbb{R}^n\)}} \vspace{0.1in}   \\
+ \LARGE \textbf{\(^{+2}\)Notas de Álgebra Linear II}} \vspace{0.1in}   \\
  { \today }\\ 
  {\small
- \vspace{0.4cm}\emph{"Tudo posso naquele que me fortalece" }\hfill Nestor Heli Aponte Avila\(^{1}\) \\ 
-  
-Elon 4:13 \hfill \href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.br}}} %\\
+ \vspace{0.4cm}\emph{"No princípio Deus criou os céus, a terra e...}\hfill Nestor Heli Aponte Avila\(^{1}\) \\ 
+\emph{a Álgebra Linear"} - Gênesis 1:1 \hfill \href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.br}}} %\\
 %Prof. Piper Pimienta \\
 %\href{mailto:pipe@dac.unicamp.br}{\url{pipe@dac.unicamp.br}}}
 \end{center} %Finaliza a centralização
 \- \vspace{-1cm}
 
-{\small ** Conteúdo basado na disciplina MM720 (Análise no R(n)) ministrada pelo professor Tiago Jardím Fonseca no período 2025-I. **\vspace{0.3cm}}%, destinado àqueles que já possuem alguma familiaridade com o assunto, pois não contém demonstrações formais, apenas as ideias por trás delas. Sinceramente, um fã da simplicidade. \\ 
+{\small ** Conteúdo basado na disciplina MM719 (Álgebra Linear) ministrada pelo profesor Adriano Moura e  \cite{MA719}, de sua autoría também, no período 2025-II. **\vspace{0.3cm}}%, destinado àqueles que já possuem alguma familiaridade com o assunto, pois não contém demonstrações formais, apenas as ideias por trás delas. Sinceramente, um fã da simplicidade. \\ 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {\large \textbf{Notação}} \hfill \text{\rotatebox{45}{\large $\boxdot$}}  Definição \hfill \((-)^{\text{\ding{71}}}\)  Aberto \hfill  \((-)^{\text{\ding{70}}}\) Fechado \\ 
-{\scriptsize$\square$} \ Lema \hspace{2.4cm} {\large$\square$} \ Proposição \hspace{1.5cm}  {\large $\blacksquare$}  \ Teorema \hspace{2cm} {\scriptsize $\blacksquare$}  \ Corolário
+{\scriptsize$\square$} \ Lema \hspace{2.4cm} {\large$\square$} \ Proposição \hspace{1.5cm}  {\large $\blacksquare$}  \ Teorema \hspace{2cm} {\scriptsize $\boxtimes$}  \ Corolário
 %\begin{center}
 %  \setlength{\tabcolsep}{20pt}
 %  \begin{tabular}{c c c }
@@ -218,20 +226,7 @@ Elon 4:13 \hfill \href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.b
 %  \end{tabular}
 %\end{center}
 
-\input{sections/1DirDerivatives.tex}
-\input{sections/2CkFunctions.tex} 
-\input{sections/3Diff.tex}
-\input{sections/4MVT.tex}
-\input{sections/5Taylor.tex}
-\input{sections/6Optimization.tex}
-\input{sections/7DiffAplications.tex}
-\input{sections/8ChainsRule.tex}
-\input{sections/9Diffeomorfismos.tex}
-\input{sections/10IFT.tex} 
-\input{sections/11InmSubPostConst.tex} 
-\input{sections/12VarDiff.tex}
-\input{sections/13AltForms.tex}
-\input{sections/14IntVar.tex}
+\input{sections/1prel.tex} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% REFERÊNCIAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -240,8 +235,8 @@ Elon 4:13 \hfill \href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.b
 %\bibitem{martin1966complex}
 %Martin, D. y Ahlfors, L.V. (1966). \textit{Complex Analysis}. New York: McGraw-Hill.
 
-\bibitem{lima2004analise}
-Lima, Elon Lages (2004). \textit{An{\'a}lise real Vol. 2}. IMPA, Rio de Janeiro.
+\bibitem{MA719}
+Moura, Adriano (2025). \textit{Álgebra Linear com Geometría Analítica}. UNICAMP, Campinas, SP. 
 
 \end{thebibliography}
 
