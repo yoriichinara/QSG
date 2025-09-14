@@ -1,0 +1,224 @@
+\section{Teoria Geral de Operadores Lineares}
+
+\vspace{-0.3cm}
+Se \(T\in \ehom(V)\) então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ veces }} \in \ehom(V)\), por convenção \(T^0 = \id_{_V}\). Seguindo o ítem (a) da \(\square \) \ref{prop:0.1} , \(\forall p \in \mathcal{P}(\F)\) temos,  
+\[p(t) = \sum^m a_kt^k \ \ \ \leadsto \ \ \ P(T) = \sum^m a_kT^k \in \ehom(V).\] 
+Também, seguindo a notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\}\). De aquí pra frente seja \(T\in \ehom(V)\) fixo. 
+
+\begin{note}
+    Sendo \(p = t-\lambda\), temos uma definição equivalente de autoespaço como sendo \(V_p \neq \{0\}\). 
+\end{note}
+
+\subsection{Polinômio Mínimo e Descomposição Primária}
+
+\begin{definition}
+    Sejam \(\lambda \in \F\), \(m\in \N\) e \(p(t) = (t-\lambda)^m\). Se \(\exists v\in V_p\setminus \{0\}\) é chamado de \emph{autovetor geralizado} associado ao autovalor \(\lambda\).  
+\end{definition}
+
+\begin{definition}
+    \(W\leq V\) é \emph{\(T\)-invariante} se \(T(W) \subseteq W\), e a restrição de \(T|_{_W}\) e chamada de o \emph{operador inducido} em \(W\). 
+\end{definition}
+
+\begin{lemma}
+    \textbf{8.1.1.} Se \(S, T \in \ehom(V)\) são tais que \(S\circ T = T \circ S\), então \(V_{_S}\) é \(T\)-inv. \comentario{ Se \(w \in V_{_S} \Rightarrow S(T(w)) = T(S(w)) = 0 \Rightarrow T(w)\in V_{_S}\)}%ariante.  
+\end{lemma}
+
+\begin{note}
+    Dado que \(p(T) \circ T = T\circ p(T)\) os subespaçõs \(V_p \) são \(T\)-inv, e também, \(\forall p, f \in \Pol \), \(V_p \subseteq V_{fp}\). Em particular, \(\forall k \in \mathbb{Z}_{\geq 0}, \ V_{p^k} \subseteq V_{p^{k+1}}\). 
+\end{note}
+
+\begin{definition}
+    Sejam \(\lambda \in F\) e \(V_{\ p}^\infty := \bigcup_{k\geq0} V_{p^k}\). No caso, \(p = (t-\lambda)\) então \(V_{\ p}^\infty \) é chamado de \emph{autoespaço geralizado} associado ao \(\lambda\). 
+\end{definition}
+
+\begin{note}
+    \(V_{\ p}^\infty \) é \(T\)-inv e se \(\dim V =n < \infty\) então \(V_{\ p}^\infty = V_{p^n}\). 
+\end{note}
+\begin{definition}
+    \centering \(\mathscr{A}_{T}:= \{p \in \Pol: p(T) =0\}\)
+\end{definition}
+
+\propositionnum{8.1.3.}
+\begin{proposition}
+    \label{prop:8.1.3}
+    Se \(\dim V = n < \infty \) então \(\mathscr{A}_{T}\neq \{0\}\).  
+\end{proposition}
+
+\demo{
+Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \(\{T^j\}_{j=0}^m\) é l.d. Tome \(m \) mínimo e faça \(f(T) := T^m - \sum^{m-1} a_k T^k \in \mathscr{A}_{T}\). 
+}
+
+\propositionnum{8.1.4.}
+\newcommand{\an}{\mathscr{A}}
+\begin{proposition}
+    Se \(\an_{T}\neq \{0\}\) então \(\exists ! m_T\in \Pol\) mônico tal que \( \forall f \in \an_{T}, \ m_T\ | \ f\).  
+\end{proposition}
+
+\demo{  
+    \(\an_{T} \) é ideal então \( \exists ! m_T\) tal que \(\an_{T} = \langle m_T\rangle\). Se prefer pegue \(m_T\) de menor grau possivél, suponha \(f = m_T q +r\) e conclua que \(r = 0\). Para unicidade suponha outro e usei \(\square\) \ref{prop:0.2} (e). 
+}
+\begin{note}
+    No caso que \(\an_{T} = \{0\}\) fazemos \(m_T :=0\) é assim que \(V = V_{m_{T}}\). Se \(S = T|_{V_p}\) então \(p \in \an_{_S}\). Também, pose-se verificar que o polinômio construido na \(\square\) \ref{prop:8.1.3} é de fato \(m_T\). 
+\end{note}
+
+\hypertarget{lemma816}{}
+\begin{lemma}
+    \textbf{8.1.6.} Se \(f, g \in \Pol\) co-primos então, a restrição de \(f|_{V_g}\) é injetora.  \comentario{Faz usando o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}, lembre-se que \(1 \leadsto \id_{_V}\)}
+\end{lemma}
+
+\propositionnum{8.1.7.}
+\begin{proposition}
+    \label{prop:8.1.7}
+    Seja \(\an_{T} \neq \{0\}\) e \(p \in \Pol\) primo. Então, \(V_p \neq \{0\}\) \(\leftrightharpoons\) \(p\ | \ m_T\). 
+\end{proposition}
+
+\demo{
+    \((\Rightarrow )\) Suponha \(p \ \nmid \ m_T\) então são co-primos, aplique {\scriptsize\(\square\)} \hyperlink{lemma816}{ 8.1.6.} e conclua \(V_p = \{0\}\). \((\Leftarrow)\) Suponha \(p\ | \ m_T\) e \(V_p = \{0\}\) e contradiga.
+} 
+
+\begin{corollary}
+    \label{coro:8.1.8}
+    \textbf{8.1.8.} Seja \(\an_{T} \neq \{0\}\) e \(p \in \Pol\). Então, \(V_p\neq \{0\}\) \(\leftrightharpoons\) \(\exists f \in \dIv(m_T)\) e \(\exists g \in \Pol\) tais que \(p = gf\). Se \(\nexists q \in \dIv(m_T)\) tal que \(q \ | \ g\) então \(V_p = V_f\). 
+\end{corollary}
+
+\demo{
+    É coisa de fatorar em primos, ter prensentes as propiedades \(\square\) \ref{prop:0.2} (a), \(V_{p}\subseteq V_{fp}\) e conseguir as hipótese da \(\square \) \ref{prop:8.1.7}. 
+    %\((\Rightarrow)\) Fatore em primos, \(p = \prod^m p_i^{k_i}\), para \( v \in V_p\setminus \{0\}\), pelo menos um \(p_j^{k_j} \in \an_{_T}\) o anula. Note que \(\{0\} \neq V_{p_j^{k_j}}\supseteq V_{p_j}\) e aplique a \(\square\) \ref{prop:8.1.7}, defina \(f = p_j\). \((\Leftarrow) \) De novo fatore \(f = \prod^m p_i^{k_i}\) pela propiedade \( \square\) \ref{prop:0.2} (a) \(p_j\ | \ m_T\), logo, de novo por \(\square\) \ref{prop:8.1.7} temos \(\{0\}\neq V_{p_j} \subseteq V_f \subseteq V_p\).  
+}
+
+\begin{definition}
+    Sejam \(v\in V\) e \(\forall k \in \mathbb{Z}_{\geq 0}, \ v_k = T^k(v)\). A familia \(\mathscr{C}^\infty_T(v):= (v_k)\)  é chamada de \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_T(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). 
+\end{definition}
+
+\begin{note}
+    É fácil ver que \(C_T(v)\) é \(T\)-inv. Alternativamente, pode-se definir \(C_T(v) = \mathscr{C}_T^m(v)  \), onde \(m = \dim C_T(v) \in \mathbb{Z}_{\geq 0} \cup \{\infty\}\). 
+\end{note}
+
+%\begin{definition}
+%    \(W\leq V\) é \(T\)\emph{-cíclico} se \(\exists w \in V\) tal que \(W = C_T(w)\).
+%\end{definition}
+
+%\begin{lemma}
+%    \(V_\lambda \neq \{0\}\) é \(T\)-cíclico \(\leftrightharpoons\) \(\dim V_\lambda = \{1\}\). 
+%\end{lemma}
+     
+\begin{definition}
+    Para \(\alpha = (v_i)\) familia em \(V\) definimos \(C_T(\alpha):= \sum C_T(v_i)\).  
+\end{definition}
+
+%\begin{note}
+%    Se \(T = \id_{_V}\) ou os \(v_i \in \alpha \) foram autovetores, então \(C_T(\alpha) = [\alpha]\).  
+%\end{note}
+
+\begin{note}
+    Se \(\dim V = n < \infty\) então num análise analogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{T,v}= m_v\) pensando no mínimo \(m\) tal que \(\mathscr{C}^m_T(v)\) é l.d.. Também, \(C_T(v)\subseteq V_{m_v}\) \(\leftarrow T\)-inv, sendo \(S = T|_{V_{m_v}}\) temos \(m_v = m_S\). 
+\end{note}
+
+\begin{corollary}
+    \textbf{8.1.9.} \(\forall v \in V\) temos \(m_v \ | \ m_T\). \comentario{Segue da observação acima e \(\square\) \ref{prop:8.1.7}}
+\end{corollary}
+
+\propositionnum{8.1.11.}
+\begin{proposition}
+    \label{prop:8.1.11}
+    Sejam \(m \in \N\) e \(p_1, p_2, \ldots, p_m\in \Pol \) co-primos dois a dois. Então a soma \(\sum^m V_{\ p_j}^\infty\) é direta.
+\end{proposition}
+
+\demo{
+    Seguendo \(\square\) \ref{prop:5.4.6}, pega \(v_j \in V^\infty_{\ p_j}\setminus \{0\}\) e mostra que \(\alpha = (v_j)\) é l.i.. Faz por indução, no paso indutivo suponha \(\sum^{m} a_j v_j = 0 \) e \(g = \prod_{j< m} p_j\). Usa o {\scriptsize\( \square\)} \hyperlink{lemma816}{8.1.6.} com cada \(g_j = p_j\) e \(f = p_m\) pra concluir \(a_m =0\).    
+}
+
+\propositionnum{8.1.12.}
+\begin{proposition}
+    \label{prop:8.1.12}
+    Sejam \(m \in \N\) e \(f_1, f_2, \ldots, f_m \in \Pol\) co-primos dois a dois e \(f = \prod^m f_j\). Então, \(V_f = \bigoplus V_{f_j}\). \comentario{Não suporta resumo, olha \cite[Pág. 261]{MA719}}
+\end{proposition}
+
+\theoremnum{8.1.13.}
+\begin{theorem}[\emph{Descomposição Primária}]
+    \label{thm:8.1.13}
+    Sejam \(\an_T\neq \{0\}\) e \(\prod^m p_j^{k_j}\) a fatoração em primos de \(m_T\). Então, \(V= \bigoplus V_{p_j^{k_j}}\). 
+\end{theorem}
+
+\demo{
+   Faça \(p_j^{k_j}= f_j\) na \(\square\) \ref{prop:8.1.12}, o resultado segue do fato de \(V = V_{m_T}\). 
+}
+
+\begin{note}
+    Os termos da soma são chamados de \emph{subespaços} \(T\)\emph{-primarios}.
+\end{note}
+
+\hypertarget{lemma8116}{}
+\begin{lemma}
+    \textbf{8.1.16.} Sejam \(p\in \Pol\) primo e \(u,v\in V\) tais que \(m_u = m_v = p \). Então, ocurre exatamente uma das duas opções a seguir,
+    \begin{enumerate}[label = \roman*., left=2cm]
+        \item \(C_T(u) = C_T(v)\). \hspace{2cm} ii. \(C_T(u) \cap C_T(v) = \{0\}\). 
+    \end{enumerate} 
+\end{lemma}
+\begin{itemize}[left=0cm]
+    \item[] \(* \ C_T(v) = \{q(T)(v): q \in \Pol\}\ *\) \comentario{Prova meramente conjuntista} 
+    \item[] \demo{
+    O resultado segue de mostrar \(\forall w \in C_T(v)\), \(C_T(v) = C_T(w)\). Prova as duas contenções usando a igualdade acima e o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}. 
+}
+\end{itemize}
+
+\propositionnum{8.1.17.}
+\begin{proposition}
+    Seja \(p\in \Pol\) primo tal que \(\dim V_p <\infty \). Então, \(\exists l\in \mathbb{Z}_{\geq 0}\) e \(v_1, v_2, \ldots, v_l \in V_p\) tais que \(V_p = \bigoplus^l C_T(v_k) \). 
+\end{proposition}
+
+\demo{
+    Basta ver que \(\forall v\in V_p\setminus \bigoplus^{l-1} C_T(v_k)\) temos \(C_T(v)\cap \bigoplus^{l-1} C_T(v_k) = \{0\}\). Suponha \(w\neq 0 \) naquela interseção e usa os varios fatos em {\scriptsize\(\square\)} \hyperlink{lemma8116}{8.1.16.} pra contradizer, conseguindo ver que \(v \in \bigoplus^{l-1} C_T(v_k)\).  
+}
+
+\propositionnum{8.1.18.}
+\begin{proposition}
+    Seja \(p_j\in \Pol\) primo tal que \(\dim V_{\ p_j}^\infty < \infty\). Então, 
+    \[\gr(p_j)\ | \ \dim V_{\ p_j}^\infty \text{  \ \ e \ \  } n_j := \frac{\dim V_{\ p_j}^\infty}{\gr(p_j)} \geq \min\{k: V_{\ p_j}^\infty = V_{p_j^k}\}.\] 
+\end{proposition}
+
+\demo{
+    A demostração não suporta resumo, olha se queser \cite[Pág. 263]{MA719}. 
+}
+
+\begin{note}
+    Pode e debe-se verificar que \(\min\{k: V_{\ p }^\infty = V_{p^k}\} = k_j\) do \(\blacksquare\) \ref{thm:8.1.13}, é assim que conseguimos definir o \emph{polinômio carateristico} como sendo \(c_T := \prod^m p_j^{n_j} \in \an_T\), exatamente o mesmo do \(\blacksquare\) (\emph{Caley-Hamilton}). 
+\end{note}
+
+\ejemplo{
+    \centering Encontrando a Descomposição Primária
+    \tcblower
+    \begin{description}
+        \item[Paso 1.] Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
+        \item[Paso 2.] Encontre \(c_T= \det (t\id_{_V} - A)\) e sua fatoração em primos \(c_T = \prod^m p_j^{n_j}\). \comentario{Precisa habilidade na hora das contas do \(\det\)}
+        \item[Paso 3.] Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\).  
+    \end{description}
+}
+
+\begin{note}
+    Na hora das contas são úteis as propiedades,
+    \begin{enumerate}[label = \roman*.]
+        \item \(\det (a_{ij}) = \sum (-1)^{i+j} a_{ij} M_{ij}\). \comentario{Formula de Laplace}
+        \item  {\small\( \det \left(\begin{bmatrix}
+            A & 0 \\ 
+            C & B
+        \end{bmatrix}\right) = \det \left(\begin{bmatrix}
+            A & C \\ 
+            0 & B
+        \end{bmatrix}\right) = \det A \det B\) }. \comentario{\(A\)  e \(B\) quadradas } 
+        \item {\small \(\begin{bmatrix}
+        | & \cdots & | \\ 
+        \mu a_{i1} & \cdots & \mu a_{in}\\
+        | & \cdots & |
+        \end{bmatrix} = \mu \det \left(\begin{bmatrix}
+        | & \cdots & | \\ 
+        a_{i1} & \cdots & a_{in}\\
+        | & \cdots & |
+        \end{bmatrix}\right)\)}. \comentario{Saca múltiplos das filas}
+    \end{enumerate}
+\end{note}
+
+\subsection{Complementos Invariantes e Bases Cíclicas}
+
+\subsection{Formas Canônicas}
+

@@ -70,19 +70,19 @@
 \propositionnum{5.3.7.}
 \begin{proposition}
     \label{prop:5.3.7}
-    A soma \(\sum V_i\) é direta sse \(\forall v\in \sum V_i\), \(\exists m\in \N \) e \(\exists! v_{i_j} \in V_{i_j}\) tais que \(v = \sum_{j\leq m} v_{i_j}\). \textcolor{gray}{\(\rightarrow\)  \cite[Pág. 174]{MA719}} 
+    A soma \(\sum V_i\) é direta \(\leftrightharpoons\) \(\forall v\in \sum V_i\), \(\exists m\in \N \) e \(\exists! v_{i_j} \in V_{i_j}\) tais que \(v = \sum_{j\leq m} v_{i_j}\). \textcolor{gray}{\(\rightarrow\)  \cite[Pág. 174]{MA719}} 
 \end{proposition}
 
 \propositionnum{5.4.6.}
 \begin{proposition}
     \label{prop:5.4.6}
-    Sejam \(\alpha = (v_i)\) e \(V_i = \F v_i\) então \(\alpha\) é l.i. sse \(\sum \F v_i\) é direta. 
+    Sejam \(\alpha = (v_i)\) e \(V_i = \F v_i\) então \(\alpha\) é l.i. \(\leftrightharpoons\) \(\sum \F v_i\) é direta. 
 \end{proposition}
 
 \newcommand{\comentario}[1]{\textcolor{gray}{\(\rightarrow\) #1}}
 
 \begin{corollary}
-    \(\alpha\) é base sse \(\forall i\in I,\ v_i \neq 0\) e \(V = \bigoplus \F v_i\). Logo, da \(\square \) \ref{prop:5.3.7} temos que \(\forall v\in V\), \(\exists m \in \N\) e \(\exists !x_{i_j} \in \F\) tais que \(v = \sum_{j\leq m } x_{i_j}v_{i_j}\). \comentario{\cite[Pág. 178]{MA719}}
+    \(\alpha\) é base \(\leftrightharpoons\) \(\forall i\in I,\ v_i \neq 0\) e \(V = \bigoplus \F v_i\). Logo, da \(\square \) \ref{prop:5.3.7} temos que \(\forall v\in V\), \(\exists m \in \N\) e \(\exists !x_{i_j} \in \F\) tais que \(v = \sum_{j\leq m } x_{i_j}v_{i_j}\). \comentario{\cite[Pág. 178]{MA719}}
 \end{corollary}
 
 \begin{note}
@@ -120,7 +120,7 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
 \newcommand{\ehom}{\operatorname{End}_\F}
 
 \begin{definition}  
-  \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \). Se \(V = W\) então denotamos \(\ehom(V) = \hom(V,V)\). \footnote{"\(\operatorname{Hom}\)" vém de homomorfismo e "\(\operatorname{End}\)" de endomorfismo.}   
+  \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \). Se \(V = W\) então denotamos \(\ehom(V) = \hom(V,V)\).\footnote{"\(\operatorname{Hom}\)" vém de homomorfismo e "\(\operatorname{End}\)" de endomorfismo.}   
 \end{definition}   
 
 \propositionnum{0.1.}
@@ -146,9 +146,10 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
 
 \theoremnum{6.1.9.}
 \begin{theorem}
-    \(V\cong W\) sse \(\dim V = \dim W\). \comentario{\cite[Pág. 191]{MA719}}
+    \(V\cong W\) \(\leftrightharpoons\) \(\dim V = \dim W\). \comentario{\cite[Pág. 191]{MA719}}
 \end{theorem}
 
+\propositionnum{\ \hspace{-0.3cm}}
 \begin{proposition}
     Seja \(T\in \hom(V,W)\). Se \(U \leq V\) e \(U'\leq W\) então também \(T(U)\leq W\) e \(T^{-1}(U')\leq V\). \comentario{\cite[Pág. 199]{MA719}}
 \end{proposition}
@@ -169,25 +170,16 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
 
 \propositionnum{6.3.9.}
 \begin{proposition}
-    \(T \) é injetora sse \(V_{_T} = \{0\}\). \comentario{\cite[Pág. 202]{MA719}}
+    \(T \) é injetora \(\leftrightharpoons\) \(V_{_T} = \{0\}\). \comentario{\cite[Pág. 202]{MA719}}
 \end{proposition}
 
-
-\begin{note}
-    Se \(T\in \ehom(V)\) então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ veces }} \in \ehom(V)\), por convenção \(T^0 = \id_{_V}\). Seguindo o ítem (a) da \(\square \) \ref{prop:0.1} , \(\forall p \in \mathcal{P}(\F)\) temos,  
-    \[p(t) = \sum^m a_kt^k \ \ \ \sim \ \ \ P(T) = \sum^m a_kT^k \in \ehom(V).\] 
-\end{note}
-
-\vspace{-0.6cm}
-\[** \ \ V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\} \ \ **\]
-
 \begin{definition}
-    Sejam \(\lambda \in \F\) e \(p = t-\lambda \). Se \(\exists v\in V_p \setminus\{0\}\) então \(V_p\) é \emph{autoespaço}, \(v\) um \emph{autovetor}, ambos associados ao \emph{autovalor} \(\lambda\). 
+    Sejam \(\lambda \in \F\) e \(V_\lambda = \{v\in V: T(v) = \lambda v \}\). Se \(\exists v\in V_\lambda \setminus\{0\}\) então \(V_\lambda\) é \emph{autoespaço} e \(v\) um \emph{autovetor}, ambos associados ao \emph{autovalor} \(\lambda\). 
 \end{definition}
 
-\begin{note}
-    No \cite[Pág. 208]{MA719} tém a primeira e equivalente definição de autoespaço como sendo \(V_\lambda = \{v\in V: T(v) = \lambda v \}\neq \{0\}\). 
-\end{note}
+%\begin{note}
+%    No \cite[Pág. 208]{MA719} tém a primeira e equivalente definição de autoespaço como sendo . 
+%\end{note}
 
 \begin{definition}
     \(T\) é \emph{diagonalizavél} se \(\exists \beta \) base de \(V\) formada por autovetores.
@@ -201,8 +193,17 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
 
 \subsection*{O Anel de Polinômios \(\mathcal{P}(\F)\)}
 
+Não vou aprofundar nos detalhes relaçoados com anels, fica muito longe. Por tanto, recomendo rever os conceitos de anel, ideal, domínio de integridade, ideal principal, PID e UFD-Algoritmo de Euclides. 
+%\begin{definition}
+%    Seja \(R\neq \emptyset \). Um \emph{anel} é uma tripla \((R, +, \cdot) \), com operações tais que, 
+%    \begin{enumerate}[left = 1.6cm]
+%        \item[(R1)] \((A,+)\) é grupo comutativo.
+%        \item[(R2)] \((A, \cdot)\) é asociativa e tém neutro. 
+%        \item[(R3)] A multiplicação distribui a soma a esquerda e dereita. 
+%    \end{enumerate}
+%\end{definition}
 \begin{definition}
-    Sejam \(I = \{t^k: k\in \mathbb{Z}_\geq0\}\) conjunto respeitando as leis usuais de potências\footnote{Quer dizer que \(t^0 =1\) e \(t^m\cdot t^n=t^{m+n}\).  } e \((\F,+,\cdot)\) um corpo. Defina, \(\forall i \in I\), o espaço vetorial \(V_i = \{a_it^i: a_i \in \F, \  t^i \in I\}\), com as operações, 
+    Sejam \(I = \{t^k: k\in \mathbb{Z}_\geq0\}\) conjunto respeitando as leis usuais de potências e \((\F,+,\cdot)\) um corpo.\footnote{Quer dizer que \(t^0 =1\) e \(t^m\cdot t^n=t^{m+n}\).  } Defina, \(\forall i \in I\), o espaço vetorial \(V_i = \{a_it^i: a_i \in \F, \  t^i \in I\}\), com as operações, 
     \begin{itemize}
         \item \(+: V_i \times V_i \ni (a_it^i , b_it^i) \mapsto (a_i+b_i)t^i \in V_i\). 
         \item \(\cdot: \F \times V_i \ni (\lambda, a_it^i) \mapsto (\lambda\cdot a_i) t^i \in V_i\). 
@@ -214,5 +215,75 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
 
 \newcommand{\Pol}{\mathcal{P}(\F)}
 \begin{note}
-    Em particular, \(\Pol\) é um espaço vetorial, \(\dim \Pol = \infty\), \(\alpha = \{1, t, t^2, \ldots \}\) é uma base e temos um producto bém definido.\footnote{Ou todo junto, um álgebra comutativa.} 
+    \(\Pol\) é uma estructura maravilhosa pois, só por mençõar algumas de suas carateristícas que seram de nosso interes aquí,  
+    \begin{itemize}
+        \item É espaço vetorial de dimensão infinita e \(\alpha = \{1, t, t^2, \ldots\}\) é uma base, seguindo a \(\square \) \ref{prop:5.3.7}, \(\Pol \ni p(t) = \sum^m_{k=0}a_{i_k}t^{i_k}\). 
+        \item Temos um produto bém definido e comutativo que distribui a soma, o que faz dele um anel e mais geralmente uma álgebra comutativa.  
+        \item É PID, ou seja que todo ideal é gerado. 
+        \item PID \(\Rightarrow \) UFD, ou seja que temos fatorização única em primos, propie-dades de divisibilidade e algoritmo da divisão.
+    \end{itemize}
+\end{note}
+
+\newcommand{\gr}{\operatorname{gr}}
+\begin{definition}
+    Seja \(g(t) = \sum^m a_k t^k \in \Pol\) tal que \(a_m \neq 0\). Então o \emph{grau}, \(\gr(g):= m\) e no caso de \(a_m =1\) dizemos que \(g\) é \emph{mônico}. 
+\end{definition}
+%\begin{definition}
+%    Seja \(R\) um anel comutativo e \(I\subseteq R\). Diz-se que \(I\) é um \emph{ideal} se, 
+%    \begin{enumerate}[left = 1.4cm]
+%        \item[(I1)] \((I,+)\) é um subgrupo aditivo de \((R,+ )\). 
+%        \item[(I2)] \(\forall r \in R, \ \forall x \in I\), \(rx \in I\).   
+%    \end{enumerate}
+%\end{definition}
+
+%\begin{note}
+%    \(I\) é \emph{ideal principal} se \(\exists a \in R\) tal que  \(I = \langle a\rangle:= \{ra: r\in R\}\).
+%\end{note} 
+
+\newcommand{\dIv}{\operatorname{Div}}
+\begin{definition}
+    \(\Pol \ni g\) divide \(f \in \Pol\), \(g\ | \ f\),  sse \(\exists q \in \Pol\) tal que \(f = gq\). Também, o conjunto dos divisores é \(\dIv(f):= \{g\in \Pol : g\ | \ f\}\). 
+\end{definition}
+
+\begin{definition}
+    Diz-se que \(p \in \Pol\setminus \F^\times \) é \emph{primo} sse \(\dIv(p) = \{1, p\}\). 
+\end{definition}
+
+\theoremnum{\ \hspace{-0.3cm}}
+\begin{theorem}[\emph{Fatoração em primos}]
+    Seja \(f\in \Pol \setminus \{1\}\) mônico. Então, \(\{p_j \in \dIv(f): p_j \text{ e primo}\}\) é finito e \(\exists !k_j \in \N\) tais que \(f = p_1^{k_1}p_2^{k_2}\cdots p_n^{k_n}\). 
+\end{theorem}
+
+\propositionnum{0.2.}
+\begin{proposition}
+    \label{prop:0.2}
+    Algumas propiedades da divisibilidade, 
+    \begin{enumerate}[left = 0.55cm, label = (\alph*)]
+        \item \(g \ | \ f\) e \(f \ | \ h \Rightarrow g\ | \ h \).\hspace{3cm} (b) \ \(g \ | \ f \ \leftrightharpoons\  \gr(g) \leq \gr(f)\).   
+        \item[(c)] \(g\ | \ f \) e \(g \ | \ h\Rightarrow g\ | \ (f+h)\). \hspace{1.5cm }  (d) \ Se \(g\ | \ f \Rightarrow  \forall r \in \Pol, \   g \ | \ f r\).  \vspace{-0.4cm}\\ 
+        \- \hspace{2.7cm}(e) \ \(g \ | \ f\) e \(f \ | \ g \ \leftrightharpoons \ \exists \lambda \in \F^{\times}: f = \lambda g\).  
+    \end{enumerate}
+\end{proposition}
+
+\theoremnum{ \ \hspace{-0.5cm}}
+\begin{theorem}[\emph{Algoritmo da Divisão}]
+    Sejam \(f, \ g \in \Pol\) com \(g\neq 0\). Então, \(\exists ! q, r \in \Pol \) tais que \(f = gq +r\) e \( \gr(r) < \gr(g)\). 
+\end{theorem}
+
+\newcommand{\mdc}{\operatorname{mdc}}
+\theoremnum{\ \hspace{-0.3cm}}
+\begin{theorem}
+    Sejam \(n\in \mathbb{Z}_{\geq 2}\) e \(f_1, f_2, \ldots, f_n\) não todos nulos, então \(\exists ! d \in \Pol\) mônico ao que chamamos de \(\mdc(f_j)\) que verifica, 
+    \begin{enumerate}[label=\roman*.]
+        \item \(d \in \bigcap^n \dIv(f_j)\) \hspace{4cm} ii. \ Se \(e \in \bigcap^n \dIv(f_j)  \Rightarrow e \ | \ d\). 
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[\emph{Bézout}]
+    \label{thm:bezout}
+    Se \(d = \mdc(f_j)\) então \(\exists a_j \in \Pol\) tais que \(\sum^n a_j f_j = d\). 
+\end{theorem}
+
+\begin{note}
+    Caso particular \(\mdc(f_1, f_2)=1\), tá dizendo que \(\exists a, b \in \Pol\) tais que \(a(t)f_1(t) + b(t)f_2(t)= 1\), isso sería importante mais pra frente.\footnote{Não falei, mais quando isso acontece diz-se que \(f_1\) e \(f_2\) são coprimos}
 \end{note}
