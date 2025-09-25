@@ -60,6 +60,8 @@
 
 %\pagestyle{empty}
 
+\newcommand{\comentario}[1]{\textcolor{gray}{\(\rightarrow \) #1}}
+
 \newcommand{\ejemplo}[1]{%
   \begin{tcolorbox}[colframe=verdeoscuro, colback=white!1, boxrule=0.8pt]
     #1
@@ -131,8 +133,10 @@
 
 \theoremstyle{plain}
 \newtheorem*{lemma}{{\scriptsize \(\square\)}}
+%\renewcommand{\thelemma}{\thesection.\arabic{lemma}.}
 \newtheorem*{proposition}{{\large \(\square\)}}
-\newtheorem*{theorem}{{\large \(\blacksquare\)}} 
+\newtheorem*{theorem}{{\large \(\blacksquare\)}}
+%\renewcommand{\thetheorem}{\thesection.\arabic{theorem}.}
 
 \makeatletter
 % Eliminar la puntuación del estilo 'plain' y 'definition'
@@ -172,6 +176,7 @@
 \newcommand{\Ei}{}
 \newcommand{\Ef}{}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\U}{\mathcal{U}}
 \newcommand{\V}{\mathcal{V}}
 \newcommand{\E}{\mathbb{S}}

@@ -5,13 +5,13 @@
   {\begin{equation*}
   \frac{\partial f}{\partial v}(p) := \lim\limits_{h\to 0} \frac{f(p+hv) - f(p)}{h} \hspace{0in} \sim \hspace{0in} f(p+hv) = f(p) + \frac{\partial f }{\partial v}(p)\cdot h + \sigma(h).
   \end{equation*}}
-  \begin{note}
-  Se \(v = e_i\) então \(\frac{\partial f}{\partial x_i}(p)\) é a $i$-ésima \textit{derivada parcial} de $f$ em $p$.
-  \end{note}
 \end{definition}
+\vspace{-0.3cm}
+\begin{note}
+  Se \(v = e_j\) então \(\frac{\partial f}{\partial x_j}(p)\) é a \textit{$j$-ésima derivada parcial} de $f$ em $p$.
+\end{note}
 
-\Ei
-\ejemplo{ \centering \(\exists \alpha \in \R : f(p+hv) = f(p) + \alpha h + \sigma(h)\Rightarrow \frac{\partial f }{\partial v}(p) = \alpha\)
+\ejemplo{ \centering \(\exists \alpha \in \R : f(p+hv) = f(p) + \alpha h + \sigma(h)\ \textcolor{verdeoscuro}{\Rightarrow}\  \frac{\partial f }{\partial v}(p) = \alpha\)
 \tcblower
 \begin{example}
   \(f:\R^2 \ni \x \mapsto \|\x \|^2\in \R \). \textcolor{gray}{\(\rightarrow \) Use produto interno e encontre \(\alpha\)} %\todo[green]{Calculate the limit, develop with intern product properties and find \(\alpha\).}.
@@ -30,7 +30,7 @@
 \end{example}
 %\- \tcblower
 \begin{example}
-  \(0\neq (x,y) \mapsto  \frac{xy^2}{\|x\|^2}\), nula em \(0\). \textcolor{gray}{\(\rightarrow\) Estude a continuidade no \(0\)}
+  \(0\neq (x,y) \mapsto  \frac{xy^2}{\|\x\|^2}\), nula em \(0\). \textcolor{gray}{\(\rightarrow\) Estude a continuidade no \(0\)}
 \end{example}
 }
  
@@ -40,17 +40,23 @@
 
 \Ei
 
+\hypertarget{lemma11}{}
 \begin{lemma}
-  Se \(U\ab\subseteq \R^n\) é conexo, então \(\forall p,q\in U, \exists \Gamma\) caminho poligonal em \(U\) com vértices \(p = p_0, p_1, \ldots, p_k = q,\) tais que \(p_{i+1}- p_i\) é colinear com algum \(e_j\). 
+  \textbf{1.1.} Se \(U\ab\subseteq \R^n\) é conexo, então \(\forall p,q\in U, \exists \Gamma\) caminho poligonal em \(U\) com vértices \(p = p_0, p_1, \ldots, p_k = q,\) tais que \(p_{i+1}- p_i\) é colinear com algum \(e_j\). 
   \textcolor{gray}{\(\rightarrow \) É por construção, só lembre que \(U\) é aberto.}
   %\footnote{O lema só vale em \(U\) aberto, pense em \({\mathbb{S}^{1}}\).}
 \end{lemma}
 
-%\- \vspace{-0.3cm}\\ 
+\hypertarget{thmTVMR}{}
+\begin{theorem}[\emph{TVM - \(\R\)}]
+  Seja \(\varphi: [0,1] \to \R\) função continua em \([0,1]\) e diff em \((0,1)\), então \(\exists \theta \in (0,1)\) tal que \(\varphi'(\theta) = \varphi(1) - \varphi(0)\). 
+\end{theorem}
 \begin{proposition}
-  Seja \(U\ab\subseteq \R^n\) conexo e \(f:U\to \R\) função tal que \(\forall p \in U,\ \forall i\leq n\) as derivadas \(\frac{\partial f}{\partial x_i}(p) = 0\) em \(U\), então \(f\) é constante. 
+  Seja \(U\ab\subseteq \R^n\) conexo e \(f:U\to \R\) função tal que \(\forall j\leq n\) as derivadas \(\frac{\partial f}{\partial x_j}\equiv 0\) em \(U\), então \(f\) é constante. 
 \end{proposition}
-\demo{Use o lemma, aplique TVM para \(\varphi(t) = f(p_i + te_j)\), quem é \(\varphi{'} (\theta)\)?}
+
+\demo{Use o {\scriptsize\(\square\)} \hyperlink{lemma11}{1.1.}, aplique \(\blacksquare\) \hyperlink{thmTVMR}{\emph{(TVM - \(\R\))}} em \(\varphi(t) = f(p_i + te_j)\), quem é \(\varphi{'} (\theta)\)?}
+
 %\begin{exercise}
 %  If $\forall p\in U, \exists M>0$ such that \(\Big|\frac{\partial f}{\partial x_i}(p) \Big|\leq M\) then $f$ is continuous in \(U\). \textcolor{gray}{\(\rightarrow \) Re-express \(f(p+v)- f(p)\) and get summands to which to apply MVT (case \(\R\)) as we did in the previous proposition}
 %\end{exercise}

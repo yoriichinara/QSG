@@ -1,20 +1,20 @@
 \section{O Diferencial} 
 
+\renewcommand{\hom}{\operatorname{Hom}}
 \begin{definition}
-    Seja \(U\ab\subseteq \R^n\). Uma função \(f:U \to \R\) é \emph{diff} em \(p\in U \) sse \(\exists \ell : \R^n \to \R\) lineal, tal que 
-    \[f(p+v) = f(p) + \ell\cdot v + \sigma(\|v\|), \text{ \ quando} \ v\to 0. \]
+    Sejam \(f:U\ab\subseteq \R \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in \hom(\R^n,\R)\) tal que \(f(p+v) = f(p) + \ell\cdot v + \sigma(\|v\|), \text{ \ quando} \ v\to 0. \footnote{\(\hom(\R^n, \R)= \hom_\R(\R^n, \R)\), olha as notas de Álgebra Linear II.}\)
 \end{definition}
-\vspace{-0.4cm}
-\begin{lemma}
-    Se \(f\) é diff em \(p\), então \(\forall \vec{v}\in \R^n\), temos \( \ell \cdot v =\frac{\partial f }{\partial v}(p)\). \textcolor{gray}{\(\rightarrow \) Vá de uma definição a outra} %\todo[orange, noline]{La derivada \(v\)-direccional es lineal}%En particular \direccionales son lineales en esa dirección.}. \footnote{Esto también implica que las derivadas direccionales son lineales en esa dirección.}
+%\vspace{-0.4cm}
+\begin{note}
+    Se \(f\) é diff em \(p\), então \(\forall \vec{v}\in \R^n\), \( \frac{\partial f }{\partial v}(p) = \ell \cdot v \).% \textcolor{gray}{\(\rightarrow \) Vá de uma definição a outra} %\todo[orange, noline]{La derivada \(v\)-direccional es lineal}%En particular \direccionales son lineales en esa dirección.}. \footnote{Esto también implica que las derivadas direccionales son lineales en esa dirección.}
 
-\end{lemma}
+\end{note}
 %\begin{note}[Colorario]
 %    Si \(f\) es diff en \(p\), entonces \(\forall \vec{v}\in \R^n, \exists \frac{\partial f}{\partial v }(p)\) y son lineales . 
 %\end{note}
 \begin{definition}
-    Se \(f\) é diff em \(p\) então o \emph{diferencial} de \(f\) em \(p\) é a função lineal \(df(p):\U_p\to \R\) dada por 
-    \[df(p)\cdot v := \sum^n \frac{\partial f}{\partial x_i}(p)\cdot v_i.\]
+    Seja \(f\) diff em \(p\). O \emph{diferencial} de \(f\) em \(p\) é a função linear \(df(p):\U_p\to \R\) dada por 
+    \(df(p)\cdot v := \sum^n \frac{\partial f}{\partial x_j}(p)\cdot v_j\).
 \end{definition} %\section*{Aula III}
 \alerta{\centering \(\exists \frac{\partial f}{\partial x_i}(p)\) \textcolor{red}{\(\nRightarrow \)} \(df(p)\) lineal \textcolor{red}{\(\nRightarrow\)} \(f\) diff en \(p\)}
 \begin{example}
@@ -30,7 +30,7 @@
 \end{proposition}
 
   
-\ejemplo{\centering \(\nexists df(p) \ \textcolor{verdeoscuro}{\Leftarrow} \ \mathcal{L}(\R^n;\R) \not\ni\exists \frac{\partial f}{\partial v}(p) \ \  \textcolor{verdeoscuro}{\big|} \ \ \forall \vec{v} \in \R^n,\  \exists \frac{\partial f }{\partial v }(p)\) \textcolor{red}{\(\nRightarrow\)} \(\exists df(p)\).
+\ejemplo{\centering \(\nexists df(p) \ \textcolor{verdeoscuro}{\Leftarrow} \ \hom(\R^n,\R) \not\ni\exists \frac{\partial f}{\partial v}(p) \ \  \textcolor{verdeoscuro}{\big|} \ \ \forall \vec{v} \in \R^n,\  \exists \frac{\partial f }{\partial v }(p)\) \textcolor{red}{\(\nRightarrow\)} \(\exists df(p)\).
 \tcblower
  
 \begin{example}
@@ -54,18 +54,16 @@
 \begin{theorem}
     Se \(f \in C^1(U)\) então \(f\) é diff em \(U\). %\footnote{\(C^1 \Rightarrow C^0 \land \exists \frac{\partial f}{\partial x_i}\) continuas. } 
 \end{theorem}
-\demo{Tome un caminho poligonal \(\Gamma \) de \(p\) até \(p+v\) para escrever \(f(p+v)-f(p) = \sum f(p_i)- f(p_{i-1})\). Aplique TVM a cada termo da soma e faça aparecer as derivadas parciais. Separe a soma e verifique por definição. }  
+\demo{Seja \(\Gamma \) caminho poligonal de \(p\) até \(p+v\), escreva \(f(p+v)-f(p) = \sum f(p_i)- f(p_{i-1})\). Aplique \(\blacksquare\) \hyperlink{thmTVMR}{(\emph{TVM - \(\R\)})} a cada termo da soma e faça aparecer as parciais. Separe a soma e verifique por definição. }  
 
-\begin{example}
-    \(\R[\x] \ni p(\x)\) é diff. 
-\end{example}
-\begin{example}
-    \(\pi_i: \R^n \ni \x \mapsto x_i \in \R \) é diff.  % \emph{(espacio dual)}\footnote{\(dx_i\) mide los incrementos de las variables independientes y los relaciona con los de la variable dependiente, osea \(df\).}. Suponiendo que pasa para cada \(p\in U\) el diferencial de \(f\) se escribe de forma única como 
-\end{example}
-\begin{note}
-    Além de ser linear, \(dx_i(p) = x_i \). Portanto, o espaço dual \({(\R^n)}^*=[dx_i]\), de modo que o diferencial da \(f\) se escreve de forma única como    
-    \[df(p) = \sum^n \frac{\partial f }{\partial x_i}(p) \ dx_i. \]
-\end{note}
+%\begin{example}
+%    \(\R[\x] \ni p(\x)\) é diff. 
+%\end{example}
+\ejemplo{\centering  \(p(\x) \in \R[\x]\) é diff \textcolor{verdeoscuro}{\(\Rightarrow\)} \(\pi_j: \x \mapsto x_j \) é diff
+\tcblower
+    Além disso, \(dx_j(p) (v) = v_j \), então \(dx_j(p)(e_i) = \delta_{ij}\), ou seja que \(\alpha^* = (dx_j)\) é a base dual da base canônica, e escrevemos de manera única 
+    \[ df(p) = \sum^n \frac{\partial f }{\partial x_j}(p) \ dx_j. \]
+}
 
 %\begin{example}
 %    \(\Theta(x,y) = \arctan (y/x) \) definida para \((x,y)\neq 0\). \textcolor{gray}{\(\rightarrow\) Haga las cuentas e interprete, quién es \(d\Theta\)?} 
@@ -83,17 +81,5 @@
 \end{definition}
 
 \begin{note}
-    Para \(\vec{v}\in \R^n\) temos \(\langle \nabla f(p) , v\rangle = \frac{\partial f}{\partial v}(p)\), supoendo \(\|v\|=1\), então 
-    \[\Big|\frac{\partial f}{\partial v}(p)\Big| = |\langle \nabla f (p), v\rangle| \leq \|\nabla f(p)\|\|v\|,\]
-    ou seja, o gradiente aponta na direção de maior crescimento de \(f\) em \(p\).  
+    \(\forall \vec{v}\in \R^n,\ \langle \nabla f(p) , v\rangle = \frac{\partial f}{\partial v}(p)\). Se \(\|v\|=1\), então \( |\langle \nabla f (p), v\rangle| \leq \|\nabla f(p)\|\), o gradiente aponta na direção de maior crescimento.  
 \end{note}
-%\ejemplo{Este es el pilar del método del gradiente, cuyo objetivo es minimizar}
-
-\begin{definition}
-    Seja \(f:U\ab\subseteq \R^n\to \R\). Dizemos que \(p \in U\) é extremo local da \(f\) se \(\exists \delta >0\) tal que \(\|\x-p\|<\delta\) implica \(f(p) \leq f(\x) \) ou \(f(\x) \leq f(p)\). 
-\end{definition}
-\begin{exercise}
-    Se \(f\) é diff em \(p\) extremo local da \(f\), então \(\nabla f (p) = 0\). \textcolor{gray}{\(\rightarrow\) Trabalhe o limite em direções opostas}
-\end{exercise}
-
-\Ef
