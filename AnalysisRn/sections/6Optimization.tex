@@ -110,11 +110,11 @@ ii. Mesmo negócio. }
 \subsection{Problemas com Condições}
 
 \begin{definition}
-    Seja  \(g\in C^k(U)\) tal que \(\forall p \in \ker (g), \ dg(p)\neq 0\). O conjunto \(^k H:= \{\textbf{x} \in \R^n : g(\textbf{x}) = 0\}\) é \emph{hipersuperficie} de classe \(C^k\) definida por \(g(\textbf{x})=0\). 
+    Seja  \(g\in C^k(U)\) tal que \(\forall p \in \ker (g), \ dg(p)\neq 0\). O conjunto \(^k H:= \{\textbf{x} \in \R^n : g(\textbf{x}) = 0\}\) é uma \emph{hipersuperficie} de classe \(C^k\) definida por \(g(\textbf{x})=0\). 
 \end{definition}
 
 \begin{example}
-    \(\mathbb{S}^{n-1} = \{\textbf{x}\in \R^n: \|\textbf{x}\| = 1\}\) definida pelos ceros da função \(g(\textbf{x})= \|\x\|^2- 1 \) é \(^\infty H \subseteq \R^n\). \textcolor{gray}{\(\rightarrow \) Verifique a condição \(g(p)=0 \Rightarrow dg(p)\neq 0\)} 
+    \(H=\mathbb{S}^{n-1} := \{\textbf{x}\in \R^n: \|\textbf{x}\| = 1\}\) definida por \(g(\textbf{x})= \|\x\|^2- 1 \) é uma \(^\infty H \subseteq \R^n\). \textcolor{gray}{\(\rightarrow \) Verifique a condição \(g(p)=0 \Rightarrow dg(p)\neq 0\)} 
 \end{example}
 %\begin{note}
 %    Las hipersuperficies son en particular variedades de clase \(C^k\), la condición al diferencial garantiza que no tiene singularidades y \(TpH = \{\vec{v}\in \R^n: dg(p) v =0\}\). 
@@ -123,14 +123,14 @@ ii. Mesmo negócio. }
     \centering \(\E^1\subseteq \R^2\) é fechado e limitado 
 \tcblower
 \begin{example}
-    \(f(x,y) = \|\x\|^2+y\) en \(\mathbb{D}=\{ \textbf{x} \in \R^2: \|\textbf{x}\| \leq 1 \}\). \textcolor{gray}{\(\rightarrow\) Halle \(p : \nabla f(p)=0\) ¿Que hay de los puntos en \(f|_{_{\mathbb{S}^1}}\)?}
+    \(f(x,y) = \|\x\|^2+y\) em \(\overline{\mathbb{D}}=\{ \textbf{x} \in \R^2: \|\textbf{x}\| \leq 1 \}\). \textcolor{gray}{\(\rightarrow\) Encontre os \(p : \nabla f(p)=0\) ¿O que acontece com os valores de \(f|_{_{\mathbb{S}^1}}\)?}
 \end{example}
 }
 
 \Ef
 
 \begin{theorem}[\emph{Multiplicadores de Lagrange}]
-    Sejam \(U\ab \subseteq \R^n, \ f \in C^1(U)\) e \(^1 H\subseteq U\) hipersuperficie. Então \(p\in U\) é extremo local de \(f\Big|_H\) sse \(\exists \lambda \in \R\) tal que \(df(p) =\lambda dg(p)\).   
+    Sejam \(U\ab \subseteq \R^n, \ f \in C^1(U)\) e \(^1 H\subseteq U\). Então, \(p\in H\) é extremo local de \(f|_{_H}\) \(\leftrightharpoons\) \(\exists \lambda \in \R\) tal que \(df(p) =\lambda dg(p)\).   
 \end{theorem} 
 
 % \begin{example}

@@ -2,7 +2,7 @@
 
 \renewcommand{\hom}{\operatorname{Hom}}
 \begin{definition}
-    Sejam \(f:U\ab\subseteq \R \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in \hom(\R^n,\R)\) tal que \(f(p+v) = f(p) + \ell\cdot v + \sigma(\|v\|), \text{ \ quando} \ v\to 0. \footnote{\(\hom(\R^n, \R)= \hom_\R(\R^n, \R)\), olha as notas de Álgebra Linear II.}\)
+    Sejam \(f:U\ab\subseteq \R \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in (\R^n)'\) tal que \(f(p+v) = f(p) + \ell\cdot v + \sigma(\|v\|), \text{ \ quando} \ v\to 0. \footnote{\((\R^n)' := \hom_\R(\R^n, \R)\), o espaço dual, olha as notas de Álgebra Linear II.}\)
 \end{definition}
 %\vspace{-0.4cm}
 \begin{note}
@@ -30,7 +30,7 @@
 \end{proposition}
 
   
-\ejemplo{\centering \(\nexists df(p) \ \textcolor{verdeoscuro}{\Leftarrow} \ \hom(\R^n,\R) \not\ni\exists \frac{\partial f}{\partial v}(p) \ \  \textcolor{verdeoscuro}{\big|} \ \ \forall \vec{v} \in \R^n,\  \exists \frac{\partial f }{\partial v }(p)\) \textcolor{red}{\(\nRightarrow\)} \(\exists df(p)\).
+\ejemplo{\centering \(\nexists df(p) \ \textcolor{verdeoscuro}{\Leftarrow} \ (\R^n)' \not\ni\exists \frac{\partial f}{\partial v}(p) \ \  \textcolor{verdeoscuro}{\big|} \ \ \forall \vec{v} \in \R^n,\  \exists \frac{\partial f }{\partial v }(p)\) \textcolor{red}{\(\nRightarrow\)} \(\exists df(p)\).
 \tcblower
  
 \begin{example}
@@ -50,9 +50,9 @@
 %    \end{cases}\). 
 %\end{example}
 
-
+\hypertarget{thm31}{}
 \begin{theorem}
-    Se \(f \in C^1(U)\) então \(f\) é diff em \(U\). %\footnote{\(C^1 \Rightarrow C^0 \land \exists \frac{\partial f}{\partial x_i}\) continuas. } 
+    \textbf{3.1.} Se \(f \in C^1(U)\) então \(f\) é diff em \(U\). %\footnote{\(C^1 \Rightarrow C^0 \land \exists \frac{\partial f}{\partial x_i}\) continuas. } 
 \end{theorem}
 \demo{Seja \(\Gamma \) caminho poligonal de \(p\) até \(p+v\), escreva \(f(p+v)-f(p) = \sum f(p_i)- f(p_{i-1})\). Aplique \(\blacksquare\) \hyperlink{thmTVMR}{(\emph{TVM - \(\R\)})} a cada termo da soma e faça aparecer as parciais. Separe a soma e verifique por definição. }  
 
@@ -61,7 +61,7 @@
 %\end{example}
 \ejemplo{\centering  \(p(\x) \in \R[\x]\) é diff \textcolor{verdeoscuro}{\(\Rightarrow\)} \(\pi_j: \x \mapsto x_j \) é diff
 \tcblower
-    Além disso, \(dx_j(p) (v) = v_j \), então \(dx_j(p)(e_i) = \delta_{ij}\), ou seja que \(\alpha^* = (dx_j)\) é a base dual da base canônica, e escrevemos de manera única 
+    Além disso, \(dx_j(p) (v) = v_j \), então \(dx_j(p)(e_i) = \delta_{ij}\), ou seja que \(\alpha' = (dx_j)\) é a base dual da base canônica, e escrevemos de manera única 
     \[ df(p) = \sum^n \frac{\partial f }{\partial x_j}(p) \ dx_j. \]
 }
 
