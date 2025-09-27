@@ -1,7 +1,7 @@
 \section{Diffeomorfismos} 
 
 \begin{definition}
-    Sejam \(U\ab, V\ab \subseteq \R^n\). Uma aplicação \(F:U \to V\) é \emph{diffeomorfismo} de classe \(C^k\), se \(F \in C^k(U;\R^n)\) é bijeção com \(F^{-1} \in C^k(V;\R^n)\).    
+    Sejam \(U\ab, V\ab \subseteq \R^n\). Uma aplicação \(F:U \to V\) é \emph{diffeomorfismo} de classe \(C^k\), se é bijetiva, \(F \in C^k(U,\R^n)\)  e \(F^{-1} \in C^k(V,\R^n)\).    
 \end{definition}
 
 \begin{note} 
@@ -15,7 +15,7 @@
 %    Sean \(U = \left\{(r,\theta ):|\theta| < \frac{\pi}{2}, r>0\right\}\), \(V= \{ (x,y) : x>0\}\) la aplicación \(F: (r,\theta ) \mapsto  (r\cos (\theta),r\sin (\theta))\) es \(^\infty F: U\simeq V \). 
 %\end{example}
 \ejemplo{
-\centering Diffeomorfismo \textcolor{verdeoscuro}{\(\Rightarrow\)} Homeomorfismo
+\centering \(\neg\) Homeomorfismo \textcolor{verdeoscuro}{\(\Rightarrow\)} \(\neg\) Diffeomorfismo  
     \tcblower
 \begin{example}
     Sea \(I\subset \R\). ¿ \(\exists \ ^k F: I\simeq \mathbb{S}^1\)? \textcolor{gray}{\(\rightarrow\) Não, tire um ponto da esfera}
@@ -36,18 +36,18 @@
 \end{example}
 }
      
+\hypertarget{corol81}{}
 \begin{corollary}
-    Da regla da cadeia, se \(F\) é diffeomorfismo, então \(\forall p \in U\), \(DF(p)\in \mathcal{L}(\R^n; \R^n)\) é invertível, mais ainda, sendo \(F(p)=q\) temos  
-    \[D[F^{-1}](q) = [DF(p)]^{-1}.\]
-    Em termos de matrices, \(\det(JF(p))\neq 0\) e \([JF^{-1}](q) = [JF(p)]^{-1}\).
+    \textbf{8.1.} Do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})}, se \(F\) é diffeomorfismo, então \(\forall p \in U\), \(DF(p)\in \hom(\R^n, \R^n)\) é invertível, mais ainda, sendo \(F(p)=q\) temos  
+    \[D[F^{-1}](q) = [DF(p)]^{-1}  \ \ \sim \ \   [JF^{-1}](q) = [JF(p)]^{-1}.\]
 %    \textcolor{gray}{\(\rightarrow\) Cálcule \(D ( F \circ F^{-1})\)} 
 \end{corollary}
 
-%\begin{example}
-%    \((r,\theta) \mapsto (r\cos(\theta), r\sin(\theta))= (x,y)\). \textcolor{gray}{\(\rightarrow\) Cálcule \(JF, \ J[F^{-1}]\), analice los determinantes, y la identificación que hace de los puntos en \(\R^2\)} 
-%\end{example}
+\begin{example}
+    \((r,\theta) \mapsto (r\cos(\theta), r\sin(\theta))= (x,y)\). \textcolor{gray}{\(\rightarrow\) Encontre \(JF, \ J[F^{-1}]\), seus determinantes, e observe a identificação que faz em \(\R^2\)} 
+\end{example}
 \begin{note}
-    ¿Vale a volta do corolário em alguma vizinhaza $\V_p$? \textcolor{gray}{ Sim! }
+    ¿Vale a volta do {\scriptsize \(\boxtimes\)} \hyperlink{corol81}{8.1.} em alguma vizinhaza $\V_p$? \textcolor{gray}{ Sim! }
 \end{note}
 
 % \begin{theorem}
