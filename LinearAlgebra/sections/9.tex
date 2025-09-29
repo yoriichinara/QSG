@@ -7,8 +7,8 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 \end{definition}
 
 \begin{definition}
-    Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j\leq k\), \(\forall (v_{i_0}) \in \Pi V_j \) fixo \(: v_{j_0} =0\), \(\forall(v_i), (v_i') \in \Pi V_j\) e \(\forall \lambda \in \F\), 
-    \[  \textstyle \phi_j ((v_{i_0}) + (v_i+ \lambda v_i')_{_{\delta_j}}) = \phi ((v_{i_0})+ (v_i)_{_{\delta_j}}) + \lambda \phi((v_{i_0})+(v_i')_{_{\delta_j}}).\footnote{Entendase \((v_i)_{_{\delta_j}}:= (v_i\cdot \delta_j)\).}\]  
+    Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j\leq k\), \(\forall (v_{i_0}) \in \Pi V_j \) fixo \(: v_{j_0} =0\), \(\forall(v_{i_1}), (v_{i_2}) \in \Pi V_j\) e \(\forall \lambda \in \F\), 
+    \[  \textstyle \phi_j ((v_{i_0}) + (v_{i_1}+ \lambda v_{i_2})_{_{\delta_j}}) = \phi ((v_{i_0})+ (v_{i_1})_{_{\delta_j}}) + \lambda \phi((v_{i_0})+(v_{i_2})_{_{\delta_j}}).\footnote{Entendase \((v_i)_{_{\delta_j}}:= (v_i\cdot \delta_j)\).}\]  
 \end{definition}
 
 \vspace{-0.5cm}
@@ -31,16 +31,21 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 \theoremnum{9.1.3.}
 \begin{theorem}
     \label{thm:9.1.3}
-    Pra cada \(j\leq k\) sejam \(\alpha_j = (v_{i,j})_{i \in I_j}\) uma base de \(V_j\), \(I = \Pi^k I_j\) e \((w_\textbf{i})_{\textbf{i} \in I}\), familia de vetores em \(W\). Então, \(\exists ! \phi \in \hom^k(\Pi V_j, W)\) tal que \(\forall \textbf{i} \in I\) temos \(\phi((v_{\textbf{i}, j})) = w_\textbf{i}\). 
+    \(\forall j\leq k\) seja \(\alpha_j = (v_{i,j})_{i \in I_j}\) base de \(V_j\), \(I = \Pi^k I_j\) e \((w_\textbf{i})_{\textbf{i} \in I}\) familia de vetores em \(W\). Então, \(\exists ! \phi \in \hom^k(\Pi V_j, W):\forall \textbf{i} \in I\) temos \(\phi((v_{\textbf{i}, j})) = w_\textbf{i}\). 
 \end{theorem}
 
 \comentario{A demostração é completamente análoga da feita pra \(\blacksquare\) \ref{thm:6.1.6}, mudando, claro, o não despreciavél negôcio da gestão dos índices}
 
 \propositionnum{9.1.4.}
 \begin{proposition}
+    \label{prop:9.1.4}
     Sejam \(V_j\), \(\alpha_j\) como no \(\blacksquare\) \ref{thm:9.1.3}, \(\beta = (w_s)_{s\in S}\) uma base de \(W\), \(\textbf{v}_\textbf{i}:= (v_{\textbf{i},j})_{\textbf{i} \in I}\) e \(\forall (\textbf{i}, s) \in I \times S\) seja \(\phi_{\textbf{i}, s} \in \hom^k(\Pi V_j, W)\) o único tal que \(\forall \textbf{i}' \in I, \phi_{\textbf{i},s}(v_{\textbf{i}'}) = \delta_{\textbf{i}, \textbf{i}'} w_s\). Então \((\phi_{\textbf{i}, s})\) é l.i., mas ainda, se \(\forall j\leq k, \dim V_j < \infty \) então \((\phi_{\textbf{i}, s})\) é base do \(\hom^k(\Pi V_j, W)\). 
 \end{proposition}
 
-\demo{
-    dsakfj
+\comentario{
+    A demostração não suporta resumo, mais segue sendo o mesmo negôcio de sempre, pega \(\Gamma = \{\gamma_1, \cdots, \gamma_m\} \subseteq I \times S\) finita e mostra que \(\sum^m a_l \phi_{\gamma_l} = 0 \) \(\leftrightharpoons\) \(\forall j \leq m, \ a_j = 0 \), olha se queser \cite[Pág. 299]{MA719}
 }
+
+\begin{corollary}
+    Sempre temos \(\dim \hom^k(\Pi V_j, W) \geq \dim W \cdot \prod \dim V_j\) com igualdade só no caso em que  \(\forall j \leq k,\ \dim V_j <\infty\). %\footnote{Um abordagem em termos de cardinais pode mostrar que a desigualdade é estrita de fato. }
+\end{corollary}
