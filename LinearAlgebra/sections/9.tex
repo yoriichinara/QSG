@@ -7,8 +7,8 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 \end{definition}
 
 \begin{definition}
-    Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j\leq k\), \(\forall (v_{i_0}) \in \Pi V_j \) fixo \(: v_{j_0} =0\), \(\forall(v_{i_1}), (v_{i_2}) \in \Pi V_j\) e \(\forall \lambda \in \F\), 
-    \[  \textstyle \phi_j ((v_{i_0}) + (v_{i_1}+ \lambda v_{i_2})_{_{\delta_j}}) = \phi ((v_{i_0})+ (v_{i_1})_{_{\delta_j}}) + \lambda \phi((v_{i_0})+(v_{i_2})_{_{\delta_j}}).\footnote{Entendase \((v_i)_{_{\delta_j}}:= (v_i\cdot \delta_j)\).}\]  
+    Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j_0\leq k\) fixo, \(\forall(v_{1,j_0}), (v_{2,j_0} ) \in \Pi V_j \) e \( \forall \lambda \in \F\) temos,   
+    \[  \textstyle \phi_{j_0} ((v_{1,j_0})+ \lambda( v_{2,j_0})) = \phi ( (v_{1,j_0})) + \lambda \phi((v_{2,j_0})).\footnote{Entendase \((v_{i,j_0}) \in \Pi V_j: \forall j\neq j_0,\ v_{i,j} \in V_j\) ta fixo.}\]  
 \end{definition}
 
 \vspace{-0.5cm}
@@ -17,7 +17,7 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 \end{definition}
 
 \begin{note}
-    Se \(\forall j\leq k\), \(V_j =V\) então \(\hom^k(\Pi V_j,W) = \hom^k(V,W)\). Também, se  \(W = \F \), chamamos seus elementos de \emph{formas $k$-lineares} em \(V\). 
+    Se \(\forall j\leq k\), \(V_j =V\) então \(\hom^k(\Pi V_j,W) = \hom^k(V,W)\) e se \(W = \F \), chamamos seus elementos de \emph{formas $k$-lineares} em \(V\). 
 \end{note}
 
 \alerta{
@@ -34,7 +34,12 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
     \(\forall j\leq k\) seja \(\alpha_j = (v_{i,j})_{i \in I_j}\) base de \(V_j\), \(I = \Pi^k I_j\) e \((w_\textbf{i})_{\textbf{i} \in I}\) familia de vetores em \(W\). Então, \(\exists ! \phi \in \hom^k(\Pi V_j, W):\forall \textbf{i} \in I\) temos \(\phi((v_{\textbf{i}, j})) = w_\textbf{i}\). 
 \end{theorem}
 
-\comentario{A demostração é completamente análoga da feita pra \(\blacksquare\) \ref{thm:6.1.6}, mudando, claro, o não despreciavél negôcio da gestão dos índices}
+\newcommand{\bi}{\textbf{i}}
+\demo{Pra \((v_{1,j}) \in \hom^k(\Pi V_j, W)\) e \(\forall j \leq k\) sejam \( (a_{i_{j},j}) = [v_{{1,j}}]_{\alpha_{j}}\) com \(i_j \leq m_j \in \mathbb{Z}_{\geq 0} \), supondo \(\phi\) seja $k$-linear e \(I_m:=\prod I_{m_j} \) mostre,    
+\[\textstyle \phi((v_{1,j})) = \sum_{\bi \in I_m} \left(\prod^k a_{\bi,j}\right) \cdot  \phi((v_{\bi,j})).\]
+Use aquela expressão pra replicar a demostração do \(\blacksquare\) \ref{thm:6.1.6}. 
+}%A unicidade segue da unicidade das coordenadas. Agora, com \(j_0\) fixo olha pra \(\phi((v_{1,j_0}) + \lambda(v_{2,j_0}))\).  } = \sum_{\bi \in I_m} \left(\prod a_{i_j,j}\right) \cdot  w_\bi
+%\demo{A demostração é completamente análoga da feita pra \(\blacksquare\) \ref{thm:6.1.6}, mudando, claro, o não despreciavél negôcio da gestão dos índices}
 
 \propositionnum{9.1.4.}
 \begin{proposition}
@@ -49,3 +54,75 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 \begin{corollary}
     Sempre temos \(\dim \hom^k(\Pi V_j, W) \geq \dim W \cdot \prod \dim V_j\) com igualdade só no caso em que  \(\forall j \leq k,\ \dim V_j <\infty\). %\footnote{Um abordagem em termos de cardinais pode mostrar que a desigualdade é estrita de fato. }
 \end{corollary}
+
+\setcounter{subsection}{1}
+\subsection{Dualidade}
+
+\begin{definition}
+    Seja \(V\) \(\F\)-espaço vetorial. Então, \(V':= \hom(V,\F)\) é o \emph{espaço dual} de \(V\) e \(f \in V'\) é chamado de \emph{funcional linear} em \(V\).   
+\end{definition}
+
+\begin{definition}
+    Sejam \(W\) e \(V\) \(\F\)-espaços vetoriais. Chamamos de \emph{pareamiento bilinear} os elementos \(\phi \in \hom^2(W\times V,\F)\).  
+\end{definition}
+
+\begin{example}
+    \(\operatorname{av}: V' \times V \ni (f,v) \mapsto f(v) \in \F\). \comentario{Função avaliação, mostre que ta bém definida, ou seja, \(\operatorname{av} \in \hom^2(V'\times V, \F )\) }
+\end{example}   
+ 
+\begin{note}
+    Segue da \(\square\) \ref{prop:9.1.4} que se \(\alpha = (v_i)\) é base de \(V\), então \(\alpha' = (f_i)\), onde \(f_i(v_j) = \delta_{ij}\) é l.i. em \(V'\), base no caso \(\dim V <\infty\). \footnote{Aquí pensamos em \(W=\F = [1]\), espaço vetorial de dimensão um sobre se mesmo. }%\(\square\) \ref{prop:9.1.4} segue que 
+\end{note}
+
+\hypertarget{corol921}{}
+\begin{corollary}
+    \textbf{9.2.1.} Seja \(v\in V\) tal que \(\forall f \in V',\ f(v) = 0 \), então \(v = 0\). \comentario{Se \(v\neq 0\), então \(\exists \alpha \) base de \(V\) tal que \(v = v_{i_0}\in \alpha\), assim \(f_{i_0}(v_{i_0}) = 1 \neq 0\) }
+\end{corollary}
+ 
+\propositionnum{9.2.2.}
+\begin{proposition}
+    \label{prop:9.2.2}
+   Seja \(I\) tal que  \(\# I = \dim V\) então \(V'\cong \mathcal{F}(I, \F)\). 
+\end{proposition}
+
+\demo{
+Sejam \(\alpha = (v_i)\) base de \(V\) e \(\mathcal{F} (I,\F) \ni (a_i) \sim a: i \mapsto a_i \in \F\). Trabalha com \(
+    T: V' \ni f\mapsto (f(v_i)) \in \mathcal{F} (I,\F)\) e \(S: \mathcal{F} (I, \F) \ni (a_i) \mapsto (f: v_j \mapsto a_j)\), mostra que são lineares e inversas a uma da outra. 
+}
+
+\begin{corollary}
+    Segue de \(\square\) \ref{prop:9.2.2} que se \(\dim V = \infty \) então \([\alpha^*] \subset V'\). \comentario{Na demostração \(T([\alpha^*]) = \{(a_i) \in \mathcal{F}(I,\F) : a_i \neq 0 \text{ em finitos }i \} \subset \mathcal{F}(I, \F) \cong V'\)} 
+\end{corollary}
+
+\begin{note}
+    Isso só mostra que \(\alpha^*\) não é base de \(V'\), afirmar \(\dim V' > \dim V\) mesmo sendo certa, precisa mais coisa (analisé de cardinais).   
+\end{note}
+
+\propositionnum{}
+\begin{lemma}
+    Sendo \(V\) \(\F\)-espaço vetorial a função \(J_V: V \ni \textcolor{red}{v \mapsto} \overset{\underset{\rotatebox{90}{$\in$}}{V''}}{\textcolor{red}{J_V(v)}}: \overset{\underset{\rotatebox{90}{$\in$}}{V'}}{f}\mapsto f(v) \in \F\) 
+    é bém definida, linear e injetora.  
+\end{lemma}
+
+\demo{
+    Bém definida é ver que \(J_V(v) \in V''\), olha pra \(J_V(v)(f+\lambda g)\). Linearidade é quase-imediata e a última afirmação segue do {\scriptsize\(\boxtimes\)} \hyperlink{corol921}{9.2.1.}.   
+}
+
+\begin{corollary}
+    Se \(\dim V < \infty\) então \(\dim V = \dim V' = \dim V''\) e \(J_V: V \cong V''\). 
+\end{corollary}
+
+\begin{lemma}
+    Sejam \(V, \ W\) \(\F\)-espaços vetoriais e \(T\in \hom(V,W)\). A \emph{adjunta} de \(T\), \(T': W' \to V'\) que leva \( f \mapsto f\circ T \) é uma transformação linear. \comentario{Segue de propiedades da composição} 
+\end{lemma}
+
+\propositionnum{9.2.3.}
+\begin{proposition}
+    Sejam \(V, \ W\) \(\F\)-espaços vetorias de dimensão finita, \(\alpha\) e \(\beta \) bases pra eles, respetivamente e \(T\in \hom(V,W)\). Então, \([T']^{\beta^*}_{\alpha^*} = ([T]^\alpha_\beta)^t\). 
+\end{proposition}
+
+\demo{
+    Sejam \(\alpha = (v_j)\), \(\beta= w_i\) e  \([T]^\alpha_\beta = (a_{ij})\). Escreva \(T(v_j) = \sum^{m} a_{ij} w_i\), logo note que a entrada \(b_{ji}\) da \([T']^{\beta^*}_{\alpha^*}\) é precisamente \(T'(g_i)(v_j)\). 
+}
+
+\subsection{Pareamientos Bilineares}
