@@ -69,14 +69,15 @@
     \tcblower 
     \textcolor{gray}{Sejam \(p \in \V_0\), \(q = F(p) \in F(\V_0)\). Defina \(\forall \textbf{y} \in \V_0 \), \(T_{\textbf{y}}: \textbf{x} \mapsto  \textbf{y} - R(\textbf{x})\) e tome \(r>0 : B[p,r] \subset \V_0\). Suponha \(\|\textbf{y}- q\|<\frac{r}{2} = \epsilon\) e \(\textbf{x} \in B[p,r]\). Desenvolva \(\|T_{\textbf{y}}(\textbf{x}) - p\|\) e aplique \(\blacksquare\) \hyperlink{thmPFB}{(\emph{Ponto Fixo Banach})}. }%\textbf{x} - (F(\textbf{x})- \textbf{y})
 \end{tcolorbox}
+\hypertarget{lemma83}{}
 \begin{lemma}
-    Seja \(L \in GL_n(\R)\). A aplicação \(\operatorname{inv}: L \mapsto L^{-1} \) é diff. \textcolor{gray}{\(\rightarrow \) Faz direito \(\text{inv}(L+H)\) e use a serie geométrica de Neumann}    
+    \textbf{8.3.} Seja \(L \in GL_n(\R)\). A aplicação \(\operatorname{inv}: L \mapsto L^{-1} \) é diff. \textcolor{gray}{\(\rightarrow \) Faz direito \(\text{inv}(L+H)\) e use a serie geométrica de Neumann}    
 \end{lemma}
 \item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
     \centering \(F^{-1} \in C^k(F(\V_0), \R^n)\) %é diff em \(F(\V_0)\) e \(D[F^{-1}](q) = [DF(p)]^{-1}\) 
     \tcblower
     \textcolor{gray}{ \parbox[a]{0.65\linewidth}{{\small \(^\bullet\)} \(\|DF(p)- \id_{n}\| = \|DR(p)\| < \frac{1}{2}\) implica \(DF(p)\) invertível. Sendo \(q = F(p)\), para \(0<\|w\| \ll \epsilon\), \(\exists v\in \R^n\) tal que \(F(p+v) = q+w\). Desenvolva a expressão \(F^{-1}(q+w)\), apontando para a definição de diff. } \parbox[b]{0.35\linewidth}{ \ } \\ 
-    {\small \(^\bullet\)} Para verificar a classe basta usar o lemma no diagrama acima.
+    {\small \(^\bullet\)} A afirmação respeito da classe segue de {\scriptsize \(\square\)} \hyperlink{lemma83}{8.3.} no diagrama.
     }
 \end{tcolorbox}
 \begin{tikzpicture}[scale = 1.2, >=to, shift={(10.5cm,2.3cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
@@ -122,7 +123,7 @@
 \- \vspace{-2cm}
 
 \begin{corollary}
-    Seja \(F \in C^k(U,\R^n)\) tal que \(\forall p \in U\), \(\det(JF(p))\neq 0\), então \(F\) é uma aplicação aberta. Mais ainda, se \(F\) injeta então \(^k F: U \simeq F(U)\). 
+    Seja \(F \in C^k(U,\R^n)\) tal que \(\forall p \in U\), \(\det JF(p)\neq 0\), então \(F\) é uma aplicação aberta. Mais ainda, se \(F\) injeta então \(^k F: U \simeq F(U)\). 
 \end{corollary}
 %\begin{example}
 %    \(F: (x,y) \mapsto (x^2+y^2, 2xy)\). \textcolor{gray}{\(\rightarrow\) Estudie la función, la existencia de diffeomorfismos, alguna de las inversas, las regiones que identifican, etc }
@@ -143,21 +144,21 @@
     Sejam \(U\ab = V\times W \subseteq \R^n\times \R^m\), \(G\in C^k(U,\R^m)\) e \((p,q)\in U\). Se \(G(p,q) = 0 \) e \(\det JG_q(p,q)\neq 0\), então \(\exists \mathcal{W}_q\) e \(\exists F\in C^k(\mathcal{V}_p,\R^m)\) tais que \( \forall (\textbf{x},\textbf{y}) \in \mathcal{V}_p\times \mathcal{W}_q\), \(G(\textbf{x},\textbf{y}) =  G(\textbf{x}, F(\textbf{x})) =0.\) 
 %    \textcolor{gray}{\(\rightarrow\) \(G\) es localmente el gráfico de la función \(F\)}
 \end{theorem}
-\demo{\parbox[b]{0.2\linewidth}{ \ } \parbox[a]{0.8\linewidth}{Tome \(\Phi: (\textbf{x}, \textbf{y}) \mapsto (\textbf{x}, G(\textbf{x},\textbf{y}))\), veja que é \(C^k(U, \R^n\times \R^m)\) e \(\det (J\Phi )\neq 0\). Pelo \(\blacksquare\) \hyperlink{thmTFI}{(\emph{Função Inversa})} \( ^k \Phi: \mathcal{V}_p\times \mathcal{W}_q\) e \(\exists \Phi^{-1}: (\textbf{x}, \textbf{y})\mapsto (\textbf{x}, \Psi(\textbf{x}, \textbf{y}))\) diffeomorfismo, o resultado segue tomando \(F(\textbf{x}):= \Psi(\textbf{x}, 0)\).} 
+\demo{\parbox[b]{0.2\linewidth}{ \ } \parbox[a]{0.8\linewidth}{Tome \(\Phi: (\textbf{x}, \textbf{y}) \mapsto (\textbf{x}, G(\textbf{x},\textbf{y}))\), veja que é \(C^k(U, \R^n\times \R^m)\) e \(\det J\Phi \neq 0\). Pelo \(\blacksquare\) \hyperlink{thmTFI}{(\emph{Função Inversa})} \( ^k \Phi: \mathcal{V}_p\times \mathcal{W}_q\) e \(\exists \Phi^{-1}: (\textbf{x}, \textbf{y})\mapsto (\textbf{x}, \Psi(\textbf{x}, \textbf{y}))\) diffeomorfismo, o resultado segue tomando \(F(\textbf{x}):= \Psi(\textbf{x}, 0)\).} 
 }
 \begin{tikzpicture}[scale= 1.25, >=to, shift={(-3.3cm,-3.3cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     \node at (5,6.5) {\small $J\Phi$}; 
     \node at (5,6) {\small \rotatebox{90}{$=$}}; 
   \node at (5,5) {%
     \small$
-    \left(
+    \left[
     \begin{array}{c:c}
     \id_{n} & 0 \rule{0em}{0em}\\
     \hdashline  
     \rule{0pt}{1.2em}
     \frac{\partial G_i}{\partial x_j} & \frac{\partial G_i}{\partial y_j}
     \end{array}
-    \right)
+    \right]
     $
   };
 \end{tikzpicture}

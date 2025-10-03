@@ -160,10 +160,11 @@
   Imersões e submersões são \textbf{localmente} canônicas, salvo mudanças de coordenadas via diffeomorfismo.
 \end{note}
 
+\newcommand{\pt}{\operatorname{pt}}
 \begin{definition}[Posto]
-  Se \(L\in \mathcal{L}(\R^n ;\R^m)\), então \(\operatorname{rank}(L):= \dim [Le_i]\leq \min \{n,m\}\).  
-  \[\operatorname{rank}(L) = \max\{ r: \exists M_r(L)\text{ com } \det (M_r)\neq 0\}.\]
-  \[\operatorname{rank}(L) = \min\{n, m\} \Leftrightarrow \begin{cases}
+  Se \(L\in \mathcal{L}(\R^n ;\R^m)\), então \(\pt L:= \dim [Le_i]\leq \min \{n,m\}\).  
+  \[\pt L = \max\{ r: \exists M_r(L)\text{ com } \det (M_r)\neq 0\}.\]
+  \[\pt L = \min\{n, m\} \Leftrightarrow \begin{cases}
       L \text{ é isomorfismo }, \ n=m \\
       L \text{ é injetiva }, \  n< m \\
       L \text{ é sobrejetiva } ,\ n> m 
@@ -171,7 +172,7 @@
 \end{definition}
 
 \begin{theorem}[\emph{Posto Constante}]
-    Seja \(F \in C^k(\U_p; \R^m)\) tal que \(\forall \x\in \mathcal{U}_p\), \(\operatorname{rank}(DF(\textbf{x})) = r\). Então, \(\exists  ^k G: V\ab \to \mathcal{V}_p\) e \(\exists ^k H : \mathcal{W}_{F(p)} \to W\ab\) tais que 
+    Seja \(F \in C^k(\U_p; \R^m)\) tal que \(\forall \x\in \mathcal{U}_p\), \(\pt DF(\textbf{x}) = r\). Então, \(\exists  ^k G: V\ab \to \mathcal{V}_p\) e \(\exists ^k H : \mathcal{W}_{F(p)} \to W\ab\) tais que 
     \[H\circ F \circ G : \mathcal{V}_p \ni \textbf{x} \mapsto (x_1, \ldots, x_r, 0) \in \R^m. \]   
 \end{theorem}
 
@@ -186,7 +187,7 @@
 \item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt] 
   \centering \(F\circ G: \x^{(n)}\mapsto (\x^{(r)}, y_i(\x)^{(n-r)}) \)
   \tcblower 
-\parbox[a]{0.85\linewidth}{\textcolor{gray}{Note que, sendo \(q = G^{-1}(p)\), \(\exists \mathcal{V}_q= V\) onde \(\operatorname{rank}(J(F\circ G)(\textbf{x}))=r\), ou seja que \(D\equiv 0\). Logo, \(y_i(\textbf{x}) = y_i(\textbf{x}^{(r)}, q^{(n-r)})\). 
+\parbox[a]{0.85\linewidth}{\textcolor{gray}{Note que, sendo \(q = G^{-1}(p)\), \(\exists \mathcal{V}_q= V\) onde \(\pt J(F\circ G)(\textbf{x})=r\), ou seja que \(D\equiv 0\). Logo, \(y_i(\textbf{x}) = y_i(\textbf{x}^{(r)}, q^{(n-r)})\). 
 }\vspace{-0cm}}
 \parbox[b]{0.15\linewidth}{  }
 \end{tcolorbox}
@@ -287,20 +288,20 @@
 \end{figure}
 
 \begin{note}
-    A função \(\operatorname{rank}: U \to \N\) é semi-continua inferiormente.
+    A função \(\pt: U \to \N\) é semi-continua inferiormente.
 \end{note}
 
 \begin{corollary}%[Colorarios]
   Os Teoremas de Função Inversa e Formas Locais (Imersões e Submersões) são diretos. Sejam \(F\in C^1(U;\R^m)\) e \(p\in U\). Então
   \begin{enumerate}[label = \roman*.]
-    \item Se \(\operatorname{rank}(JF(p)) = r=\min \{n,m\}\) então \( \exists \mathcal{V}_p\) onde \(JF_r(\textbf{x}) \in GL_r(\R)\). 
+    \item Se \(\pt JF(p) = r=\min \{n,m\}\) então \( \exists \mathcal{V}_p\) onde \(JF_r(\textbf{x}) \in GL_r(\R)\). 
     \item Se \(F\) é localmente injetiva então é imersão em \(V\ab\subset U\) denso em \(U\). \textcolor{gray}{\(\rightarrow \) Aplique \(\blacksquare\) (Posto Constante), a segunda afirmação segue da semi-continuidade inferior}
     \item Se \(F\) é aberta então é submersão em \(V\ab\subset U\) denso em \(U\). 
   \end{enumerate}
 \end{corollary}
 
 \alerta{
-  \centering É preciso que o posto seja consta em TODA uma vizinhanza
+  \centering O posto deve ser constante em TODA uma vizinhanza
   \tcblower
 \begin{example}
   \(F: \R^2 \ni (t,s)\mapsto (t^2, t^3, s ) \in \R^3\) ¿Existem coordenadas como no Teorema em alguma vizinhanza de origem? \textcolor{gray}{\(\rightarrow \) Não} %\(\operatorname{rank}(JF(0,0))\)}

@@ -47,7 +47,7 @@
 \end{note}
 
 \begin{definition}
-    Uma familia \(\alpha = (v_i)\) é l.i. sse \(\forall j \in I\), \(v_j \notin [\alpha \setminus \{v_j\}]\). Alem disso, se \([\alpha] = V\) então \(\alpha\) é chamada de \emph{base} de \(V\). 
+    Uma familia \(\alpha = (v_i)\) é l.i. sse \(\forall j \in I\), \(v_j \notin [\alpha \setminus \{v_j\}]\). Se além de l.i., \([\alpha] = V\), então \(\alpha\) é chamada de \emph{base} de \(V\). 
 \end{definition}
 
 \theoremnum{5.5.1.}
@@ -86,7 +86,7 @@
 
 \begin{note}
 No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), as quais identificamos comumente,  
-\((x_{i_j}) =: [v]_\alpha \sim  [ x_{i_1}, \cdots,  x_{i_m}]^T \in M_{m\times 1}(\F)\).
+\((x_{i_j}) =: [v]_\alpha \sim  [ x_{i_1}, \cdots,  x_{i_m}]^t \in M_{m\times 1}(\F)\).
 \end{note}
 \- \vspace{-1.4cm}
 \propositionnum{ \hspace{-0.3cm}}
@@ -99,7 +99,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 \end{definition}
 
 \begin{definition}
-    Sejam \(T: V \to W\) linear, \(\alpha = (v_j)\) e \(\beta = (w_i)\) bases de \(V\) e \(W \) respetivamente. Então, se \([T(v_j)]_\beta= (a_{ij})\), a \emph{matriz asociada} \([T]_\beta^\alpha := (a_{ij})\) determina \(T\) no sentido que, \(\forall v \in V\), \([T(v)]_\beta = [T]_\beta^\alpha [v]_\alpha\). 
+    Sejam \(T: V \to W\) linear, \(\alpha = (v_j)\) e \(\beta = (w_i)\) bases de \(V\) e \(W \) respetivamente. Então, se \([T(v_j)]_\beta= (a_{i_j})\), a \emph{matriz asociada} \([T]_\beta^\alpha := (a_{i_j})\) determina \(T\) no sentido que, \(\forall v \in V\), \([T(v)]_\beta = [T]_\beta^\alpha [v]_\alpha\). 
 \end{definition}
 
 \begin{note}
@@ -216,7 +216,7 @@ Não vou aprofundar nos detalhes relaçoados com anels, fica muito longe. Por ta
 \begin{note}
     \(\Pol\) é uma estructura maravilhosa pois, só por mençõar algumas de suas carateristícas que seram de nosso interesse aquí,  
     \begin{itemize}
-        \item É espaço vetorial de dimensão infinita e \(\alpha = \{1, t, t^2, \ldots\}\) é uma base, seguindo a \(\square \) \ref{prop:5.3.7}, \(\Pol \ni p(t) = \sum^m_{k=0}a_{i_k}t^{i_k}\). 
+        \item É espaço vetorial de dimensão infinita e \(\alpha = \{1, t, t^2, \ldots\}\) é uma base, seguindo o {\scriptsize \(\boxtimes\) }\hyperlink{corol5410}{5.4.10.}, \(\Pol \ni p(t) = \sum_{k\leq m}a_{i_k}t^{i_k}\). 
         \item Temos um produto bém definido e comutativo que distribui a soma, o que faz dele um anel e mais geralmente uma álgebra comutativa.  
         \item É PID, ou seja que todo ideal é gerado. 
         \item PID \(\Rightarrow \) UFD, ou seja que temos fatorização única em primos, propie-dades de divisibilidade e algoritmo da divisão.
@@ -250,7 +250,7 @@ Não vou aprofundar nos detalhes relaçoados com anels, fica muito longe. Por ta
 
 \theoremnum{\ \hspace{-0.3cm}}
 \begin{theorem}[\emph{Fatoração em primos}]
-    Seja \(f\in \Pol \setminus \{1\}\) mônico. Então, \(\{p_j \in \dIv(f): p_j \text{ e primo}\}\) é finito e \(\exists !k_j \in \N\) tais que \(f = p_1^{k_1}p_2^{k_2}\cdots p_n^{k_n}\). 
+    Seja \(f\in \Pol \setminus \{1\}\) mônico. Então, \(\{p_j \in \dIv(f): p_j \text{ e primo}\}\) é finito e \(\exists !n_j \in \N\) tais que \(f = p_1^{n_1}p_2^{n_2}\cdots p_m^{n_m}\). 
 \end{theorem}
 
 \propositionnum{0.2.}
@@ -274,7 +274,7 @@ Não vou aprofundar nos detalhes relaçoados com anels, fica muito longe. Por ta
 \begin{theorem}
     Sejam \(n\in \mathbb{Z}_{\geq 2}\) e \(f_1, f_2, \ldots, f_n\) não todos nulos, então \(\exists ! d \in \Pol\) mônico ao que chamamos de \(\mdc(f_j)\) que verifica, 
     \begin{enumerate}[label=\roman*., left = 2cm]
-        \item \(d \in \bigcap^n \dIv(f_j)\) \hspace{2cm} ii. \ Se \(e \in \bigcap^n \dIv(f_j)  \Rightarrow e \ | \ d\). 
+        \item \(d \in \bigcap^n \dIv(f_j)\) \hspace{1.8cm} ii. \ Se \(e \in \bigcap^n \dIv(f_j)  \Rightarrow e \ | \ d\). 
     \end{enumerate}
 \end{theorem}
 

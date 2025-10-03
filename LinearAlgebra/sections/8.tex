@@ -6,7 +6,7 @@ Se \(T\in \ehom(V)\) então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{
 Também, seguindo a notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\}\). De aquí pra frente seja \(T\in \ehom(V)\) fixo. 
 
 \begin{note}
-    Sendo \(p = t-\lambda\), temos uma definição equivalente de autoespaço como sendo \(V_p \neq \{0\}\). 
+    Nessos termos um autoespaço é \(V_{t-\lambda} \neq \{0\}\). 
 \end{note}
 
 \subsection{Polinômio Mínimo e Descomposição Primária}
@@ -28,14 +28,14 @@ Também, seguindo a notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: 
 \end{note}
 
 \begin{definition}
-    Sejam \(\lambda \in F\) e \(V_{\ p}^\infty := \bigcup_{k\geq0} V_{p^k}\). No caso, \(p = (t-\lambda)\) então \(V_{\ p}^\infty \) é chamado de \emph{autoespaço geralizado} associado ao \(\lambda\). 
+    Sejam \(\lambda \in F\) e \(V_{\ p}^\infty := \bigcup_{k>0} V_{p^k}\). No caso, \(p = (t-\lambda)\) então \(V_{\ p}^\infty \) é chamado de \emph{autoespaço geralizado} associado ao \(\lambda\). 
 \end{definition}
 
 \begin{note}
     \(V_{\ p}^\infty \) é \(T\)-inv e se \(\dim V =n < \infty\) então \(V_{\ p}^\infty = V_{p^n}\). 
 \end{note}
 \begin{definition}
-    \centering \(\mathscr{A}_{T}:= \{p \in \Pol: p(T) =0\}\)
+    \centering \(\mathscr{A}_{T}:= \{p \in \Pol: p(T) =0\}\).
 \end{definition}
 
 \propositionnum{8.1.3.}
@@ -158,7 +158,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \begin{itemize}[left=0cm]
     \item[] \vspace{-1cm} 
     \begin{exercise}
-    \(\ C_T(v) = \{q(T)(v): q \in \Pol\}\) \comentario{Prova conjuntista}
+    \(\ C_T(v) = \{q(T)(v): q \in \Pol\}\). \comentario{Prova conjuntista}
     \end{exercise}  
     \vspace{-0.1cm}
     \item[] \demo{
@@ -194,34 +194,34 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     \centering Encontrando a Descomposição Primária
     \tcblower
     \begin{description}
-        \item[Paso 1.] Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
-        \item[Paso 2.] Encontre \(c_T= \det (t\id_{_V} - A)\) e sua fatoração em primos \(c_T = \prod^m p_j^{n_j}\). \comentario{Precisa habilidade na hora das contas do \(\det\)}
-        \item[Paso 3.] Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\).  
+        \item[Passo 1.] Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
+        \item[Passo 2.] Encontre \(c_T= \det (t\id_{_V} - A)\) e sua fatoração em primos \(c_T = \prod^m p_j^{n_j}\). \comentario{Precisa habilidade na hora das contas do \(\det\)}
+        \item[Passo 3.] Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\).  
     \end{description}
 }
 
-\begin{note}
-    Na hora das contas são úteis as propiedades,
-    \begin{enumerate}[label = \roman*.]
-        \item \(\det (a_{ij}) = \sum (-1)^{i+j} a_{ij} M_{ij}\). \comentario{Formula de Laplace}
-        \item  {\small\( \det \begin{bmatrix}
-            A & 0 \\ 
-            C & B
-        \end{bmatrix} = \det \begin{bmatrix}
-            A & C \\ 
-            0 & B
-        \end{bmatrix} = \det A \det B\) }. \comentario{\(A\)  e \(B\) quadradas } 
-        \item {\small \(\det\begin{bmatrix}
-        | &  & | \\ 
-        \mu a_{i1} & \cdots & \mu a_{in}\\
-        | &  & |
-        \end{bmatrix} = \mu \det \begin{bmatrix}
-        | &  & | \\ 
-        a_{i1} & \cdots & a_{in}\\
-        | &  & |
-        \end{bmatrix}\)}. \comentario{Saca múltiplos das filas}
-    \end{enumerate}
-\end{note}
+%\begin{note}
+%    Na hora das contas são úteis as propiedades,
+%    \begin{enumerate}[label = \roman*.]
+%        \item \(\det (a_{ij}) = \sum (-1)^{i+j} a_{ij} M_{ij}\). \comentario{Formula de Laplace}
+%        \item  {\small\( \det \begin{bmatrix}
+%            A & 0 \\ 
+%            C & B
+%        \end{bmatrix} = \det \begin{bmatrix}
+%            A & C \\ 
+%            0 & B
+%        \end{bmatrix} = \det A \det B\) }. \comentario{\(A\)  e \(B\) quadradas } 
+%        \item {\small \(\det\begin{bmatrix}
+%        | &  & | \\ 
+%        \mu a_{i1} & \cdots & \mu a_{in}\\
+%        | &  & |
+%        \end{bmatrix} = \mu \det \begin{bmatrix}
+%        | &  & | \\ 
+%        a_{i1} & \cdots & a_{in}\\
+%        | &  & |
+%        \end{bmatrix}\)}. \comentario{Saca múltiplos das filas}
+%    \end{enumerate}
+%\end{note}
 
 \subsection{Complementos Invariantes e Bases Cíclicas}
 
