@@ -1,8 +1,8 @@
-\subsection{Regla da Cadeia}
+\subsection*{Regla da Cadeia}
 
 \hypertarget{thmRDC}{}
 \begin{theorem}[\emph{Regla da Cadeia}]
-    Sejam \(U\ab \subseteq \R^n\), \(V\ab \subseteq \R^r\), \(F: U\to V\subseteq \R^r\) diff em \(p\) e \(G:V\to \R^m\) diff em \(F(p)\). Então, \(G \circ F\) é diff em \(p\) e \(D(G\circ F)(p) = DG(F(p))\cdot DF(p)\). 
+    Sejam \(U\ab \subseteq \R^n\), \(V\ab \subseteq \R^r\), \(F: U\to V\subseteq \R^r\) diff em \(p \in U\) e \(G:V\to \R^m\) diff em \(F(p) \in V\). Então, \(G \circ F\) é diff em \(p\) e \(D(G\circ F)(p) = DG(F(p))\cdot DF(p)\). 
 \end{theorem}
 
 \demo{\parbox[a]{0.7\linewidth}{Faz \(q = F(p) \), \(L = DF(p)\), \(M = DG(q)\) e \(H = G \circ F\). Expanda os restos e escreva \(\Gamma_H(v)\) em termos de \(\Gamma_F(v)\) e \(\Gamma_G(w)\). Desmonte as expressões e faza análise do erro. } \parbox[b]{0.3\linewidth}{ }}

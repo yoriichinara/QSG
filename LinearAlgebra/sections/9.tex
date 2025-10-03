@@ -91,11 +91,11 @@ Sejam \(\alpha = (v_i)\) base de \(V\) e \(\mathcal{F} (I,\F) \ni (a_i) \sim a: 
 }
 
 \begin{corollary}
-    Segue de \(\square\) \ref{prop:9.2.2} que se \(\dim V = \infty \) então \([\alpha^*] \subset V'\). \comentario{Na demostração \(T([\alpha^*]) = \{(a_i) \in \mathcal{F}(I,\F) : a_i \neq 0 \text{ em finitos }i \} \subset \mathcal{F}(I, \F) \cong V'\)} 
+    Segue de \(\square\) \ref{prop:9.2.2} que se \(\dim V = \infty \) então \([\alpha'] \subset V'\). \comentario{Na demostração \(T([\alpha']) = \{(a_i) \in \mathcal{F}(I,\F) : a_i \neq 0 \text{ em finitos }i \} \subset \mathcal{F}(I, \F) \cong V'\)} 
 \end{corollary}
 
 \begin{note}
-    Isso só mostra que \(\alpha^*\) não é base de \(V'\), afirmar \(\dim V' > \dim V\) mesmo sendo certa, precisa mais coisa (analisé de cardinais).   
+    Isso só mostra que \(\alpha'\) não é base de \(V'\), afirmar \(\dim V' > \dim V\) mesmo sendo certa, precisa mais coisa (analisé de cardinais).   
 \end{note}
 
 \propositionnum{}
@@ -118,11 +118,58 @@ Sejam \(\alpha = (v_i)\) base de \(V\) e \(\mathcal{F} (I,\F) \ni (a_i) \sim a: 
 
 \propositionnum{9.2.3.}
 \begin{proposition}
-    Sejam \(V, \ W\) \(\F\)-espaços vetorias de dimensão finita, \(\alpha\) e \(\beta \) bases pra eles, respetivamente e \(T\in \hom(V,W)\). Então, \([T']^{\beta^*}_{\alpha^*} = ([T]^\alpha_\beta)^t\). 
+    Sejam \(V, W\) \(\F\)-espaços vetorias de dimensão finita, \(\alpha\), \(\beta \) bases pra eles respetivamente e \(T\in \hom(V,W)\). Então, \([T']^{\beta'}_{\alpha'} = ([T]^\alpha_\beta)^t\). 
 \end{proposition}
 
 \demo{
-    Sejam \(\alpha = (v_j)\), \(\beta= w_i\) e  \([T]^\alpha_\beta = (a_{ij})\). Escreva \(T(v_j) = \sum^{m} a_{ij} w_i\), logo note que a entrada \(b_{ji}\) da \([T']^{\beta^*}_{\alpha^*}\) é precisamente \(T'(g_i)(v_j)\). 
+    Sejam \(\alpha = (v_j)\), \(\beta= w_i\) e  \([T]^\alpha_\beta = (a_{ij})\). Escreva \(T(v_j) = \sum^{m} a_{ij} w_i\), logo note que a entrada \(b_{ji}\) da \([T']^{\beta'}_{\alpha'}\) é precisamente \(T'(g_i)(v_j)\). 
 }
 
 \subsection{Pareamientos Bilineares}
+
+Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA719}, que aquí é apenas um exemplo de forma bilinear com \(\F \leq \R\). 
+
+\begin{note}
+    Denote \(B(V,W) := \hom^2(V\times W, \F )\) e \(B(V) = B(V,V)\). 
+\end{note}
+
+\newcommand{\Fi}{_\alpha[\phi]_\beta}
+\begin{definition}
+    Sejam \(V, W \) \(\F\)-espaços de dimensão finita, \(\alpha, \beta\) bases pra eles e \(\phi \in B(V,W)\). A \emph{matriz asociada} \(_\alpha[\phi]_\beta := (\phi(v_i,w_j))_{i,j}\) determina \(\phi\) no sentido, \([v]_\alpha^t\  _\alpha[\phi]_\beta \  [w]_\beta = \phi (v,w)\). \footnote{Em geral, \(\Fi\) pode-se definir pra familias de vetores. } \comentario{Faz a continha}
+\end{definition}
+
+\propositionnum{9.3.1.}
+\begin{proposition}
+    Sejam \(m,n \in \mathbb{Z}_{\geq 0}\) as dimensões de \(V, W\) respetivamente. Então, a função \(\zeta: B(V,W) \ni \phi \ \mapsto\  \Fi \in M_{m\times n}(\F)\) é isomorfismo. Em particular, \(\dim B(V,W) = \dim V \cdot \dim W\). %\comentario{Propiedades das matrices}
+\end{proposition}
+
+\demo{Segue todo de propiedades das matrices, pra a sobrejetividade pega \(A \in M_{m\times n}(\F)\) e mostra que \(\phi(v,w) := [v]_\alpha^t \cdot A \cdot [w]_\beta \in B(V,W)\). }
+
+\begin{example}
+    Se \(f \in V'\) e \(g \in W'\) então \(\phi(v,w):= f(v)g(w) \in B(V,W)\). 
+\end{example}
+
+\begin{definition}
+    Considere as transformações (lineares) \(_\phi D : V \to W'\) e \(D_\phi: W \to V'\) tais que \(_\phi D (w)(v) = D_\phi (v)(w) = \phi(v,w)\). Definimos: 
+    \begin{itemize}
+        \item \emph{Radical} a esquerda \( \rightarrow \mathcal{N}(\textcolor{red}{_\phi} D)  \ni v \leftarrow \) \emph{Vetor degenerado} a esquerda.  
+        \item \(\phi\) \emph{não degenerada} a esquerda sse \(\mathcal{N}(_\phi D) = \{0\}\). 
+    \end{itemize}
+    Com definições análogas pra o caso de \(D_\phi\) (dereita). 
+\end{definition}
+
+\newcommand{\pt}{\operatorname{pt}}
+
+\propositionnum{9.3.3.}
+\begin{proposition}
+    \label{prop:933}
+    Se \(\alpha \) e \(\beta \) são bases de \(V \) e \(W\) respetivamente, então \([ D_\phi]^\beta_{\alpha'} = \ _\alpha[\phi]_\beta\) e \([_\phi D]^\alpha_{\beta'} = ([ D_\phi]^\beta_{\alpha'})^t\). Em particular, \(\pt D_\phi = \pt \hspace{0.01cm} _\phi D \). 
+\end{proposition}
+
+\begin{corollary}
+    \textbf{9.3.4.} No contexto da \(\square\) \ref{prop:933} se \(\phi\) fora não degenerada à esquerda \textcolor{gray}{(dereita)} são equivalentes: 
+    \begin{enumerate}[left = 1.4cm, label = \roman*.]
+        \item \(\mathcal{N}(_\phi D) = \{0\} \). \textcolor{gray}{(ou \(\mathcal{N}(D_\phi)\))} \hspace{1.7cm} ii. \(\dim V = \dim W\).  
+        \item[iii.] \(_\phi D\) é isomorfismo. \hspace{3.7cm} iv. \(D_\phi\) é isomorfismo. 
+    \end{enumerate}
+\end{corollary}

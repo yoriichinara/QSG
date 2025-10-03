@@ -60,12 +60,10 @@
 \end{definition}
 
 \begin{definition}
-    Seja \((V_i)\) familia de subespaços em \(V\), definimos a soma deles somo sendo \(\sum V_i := \left[\bigcup V_i\right]\). A soma é direta se \(\forall j\in I\), \(V_j \cap \sum_{i\neq j} V_i =\{0\}\). 
+    Seja \((V_i)\) familia de subespaços em \(V\), definimos a soma deles somo sendo \(\sum V_i := \left[\bigcup V_i\right]\). A soma é direta se \(\forall j\in I\), \(V_j \cap \sum_{i\neq j} V_i =\{0\}\). \footnote{Acostuma-se denotar uma soma direta como \(\bigoplus V_i\).}
 \end{definition}
 
-\begin{note}
-    Se a soma é direta escrevemos \(\bigoplus V_i\). 
-\end{note}
+     
 
 \propositionnum{5.3.7.}
 \begin{proposition}
@@ -81,13 +79,14 @@
 
 \newcommand{\comentario}[1]{\textcolor{gray}{\(\rightarrow\) #1}}
 
+\hypertarget{corol5410}{}
 \begin{corollary}
-    \(\alpha\) é base \(\leftrightharpoons\) \(\forall i\in I,\ v_i \neq 0\) e \(V = \bigoplus \F v_i\). Logo, da \(\square \) \ref{prop:5.3.7} temos que \(\forall v\in V\), \(\exists m \in \N\) e \(\exists !x_{i_j} \in \F\) tais que \(v = \sum_{j\leq m } x_{i_j}v_{i_j}\). \comentario{\cite[Pág. 178]{MA719}}
+    \textbf{5.4.10.} \(\alpha\) é base \(\leftrightharpoons\) \(\forall i\in I,\ v_i \neq 0\) e \(V = \bigoplus \F v_i\). Segue da \(\square \) \ref{prop:5.3.7} que \(\forall v\in V\), \(\exists m \in \N\) e \(\exists !x_{i_j} \in \F\) tais que \(v = \sum_{j\leq m } x_{i_j}v_{i_j}\). \comentario{\cite[Pág. 178]{MA719}}
 \end{corollary}
 
 \begin{note}
-Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identificamos comumente,  
-\[(x_{i_j}) =: [v]_\alpha \sim  [ x_{i_1}, \cdots,  x_{i_m}]^T \in M_{m\times 1}(\F).\]
+No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), as quais identificamos comumente,  
+\((x_{i_j}) =: [v]_\alpha \sim  [ x_{i_1}, \cdots,  x_{i_m}]^T \in M_{m\times 1}(\F)\).
 \end{note}
 \- \vspace{-1.4cm}
 \propositionnum{ \hspace{-0.3cm}}
@@ -110,7 +109,7 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
 \theoremnum{6.1.6.}
 \begin{theorem}
     \label{thm:6.1.6}
-    Sejam \(\alpha = (v_i)\) base de \(V\) e \(\beta = (w_i)\) familia de vetores em \(W\), então \(\exists ! T:V\to W \) linear tal que \(\forall i \in I,\ T(v_i) = w_i\). 
+    Sejam \(\alpha = (v_i)\) base de \(V\) e \(\beta = (w_i)\) familia de vetores em \(W\), então \(\exists ! T:V\to W \) linear tal que \(\forall i \in I,\ T(v_i) = w_i\). \comentario{\cite[Pág. 189]{MA719}}
 \end{theorem}
     
 \begin{note}
@@ -138,11 +137,11 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
 \end{proposition}
 
 \begin{definition}
-    \(T\in \hom(V,W)\) é um \emph{isomorfismo} se fora sobrejetivo. Dois espaços são \emph{isomorfos}, \(V\cong W\), se \(\exists T\in \hom(V,W)\) isomorfismo.  
+    \(T\in \hom(V,W)\) é \emph{isomorfismo} se fora bijetivo. Dois espaços são \emph{isomorfos}, \(V\cong W\), se \(\exists T\in \hom(V,W)\) isomorfismo.  
 \end{definition}
 
 \begin{note}
-    A transformação \(\zeta\) do ítem (b) é sobrejetiva se \(\#J < \infty\).
+    A transformação \(\zeta\) da \(\square\) \ref{prop:0.1} (b) é sobrejetiva se \(\#J < \infty\).
 \end{note}
 
 \theoremnum{6.1.9.}
@@ -150,10 +149,9 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
     \(V\cong W\) \(\leftrightharpoons\) \(\dim V = \dim W\). \comentario{\cite[Pág. 191]{MA719}}
 \end{theorem}
 
-\propositionnum{\ \hspace{-0.3cm}}
-\begin{proposition}
-    Seja \(T\in \hom(V,W)\). Se \(U \leq V\) e \(U'\leq W\) então também \(T(U)\leq W\) e \(T^{-1}(U')\leq V\). \comentario{\cite[Pág. 199]{MA719}}
-\end{proposition}
+\begin{lemma}
+    \textbf{6.3.1.} Imagem e pre-imagem de subespaços é subespaço. \comentario{\cite[Pág. 199]{MA719}} %Seja \(T\in \hom(V,W)\). Se \(U \leq V\) e \(U'\leq W\) então também \(T(U)\leq W\) e \(T^{-1}(U')\leq V\). 
+\end{lemma}
 
 \begin{definition}
     \centering 
@@ -189,7 +187,7 @@ Os \(x_{i_j}\) são as \emph{coordenadas} de \(v\) na base \(\alpha\), identific
 \begin{note}
     No caso diagonalizavél e tudo perfeito de mais, pois se \(\lambda_j\) são os autovalores dos \(v_j \in \beta \) então, \([T]^\beta_\beta = \operatorname{diag}(\lambda_j)\). Em versão matricial temos,
     \[[T]^\beta_\beta = [\id_{_V}]^\alpha_\beta [T]^\alpha_\alpha [\id_{_V}]^\beta_\alpha \ \ \sim \ \ B = P^{-1} A P.\]
-    É sabido que não todos os operadores são diagonalizavéis. O objetivo do \cite[Cap. 8]{MA719} é ver que, ainda assim, sempre e possivél levar \(T\) a uma matriz quasi-diagonal $B$ (Formas Canônicas). 
+    É sabido que não todos os operadores são diagonalizavéis. O objetivo do \cite[Cap. 8]{MA719} é ver que, mesmo assim, sempre e possivél levar \(T\) a uma matriz quasi-diagonal $B$ (Formas Canônicas). 
 \end{note}
 
 \subsection*{O Anel de Polinômios \(\mathcal{P}(\F)\)}

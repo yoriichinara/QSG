@@ -1,7 +1,7 @@
 \section{Teoria Geral de Operadores Lineares}
 
 \vspace{-0.3cm}
-Se \(T\in \ehom(V)\) então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ veces }} \in \ehom(V)\), por convenção \(T^0 = \id_{_V}\). Seguindo o ítem (a) da \(\square \) \ref{prop:0.1} , \(\forall p \in \mathcal{P}(\F)\) temos,  
+Se \(T\in \ehom(V)\) então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ veces }} \in \ehom(V)\), por convenção \(T^0 = \id_{_V}\). Seguindo \(\square \) \ref{prop:0.1} (a), \(\forall p \in \mathcal{P}(\F)\) temos,  
 \[p(t) = \sum^m a_kt^k \ \ \ \leadsto \ \ \ P(T) = \sum^m a_kT^k \in \ehom(V).\] 
 Também, seguindo a notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\}\). De aquí pra frente seja \(T\in \ehom(V)\) fixo. 
 
@@ -156,9 +156,13 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     \end{enumerate} 
 \end{lemma}
 \begin{itemize}[left=0cm]
-    \item[] \(* \ C_T(v) = \{q(T)(v): q \in \Pol\}\ *\) \comentario{Prova meramente conjuntista} 
+    \item[] \vspace{-1cm} 
+    \begin{exercise}
+    \(\ C_T(v) = \{q(T)(v): q \in \Pol\}\) \comentario{Prova conjuntista}
+    \end{exercise}  
+    \vspace{-0.1cm}
     \item[] \demo{
-    O resultado segue de mostrar \(\forall w \in C_T(v)\), \(C_T(v) = C_T(w)\). Prova as duas contenções usando a igualdade acima e o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}. 
+    O resultado segue de mostrar \(\forall w \in C_T(v)\), \(C_T(v) = C_T(w)\). Prova as duas contenções usando o exercício acima e \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}. 
 }
 \end{itemize}
 
