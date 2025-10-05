@@ -1,7 +1,7 @@
 \section{Variedades Differenciáveis}
 
 \begin{definition}
-    Sejam \(X\subseteq \R^n\) e \(Y\subseteq \R^m\), uma aplicação \(F\in C^k(X;Y)\) sse \(\forall p \in X\), \(\exists \widetilde{F} \in C^k(\U_p; \R^m)\) tal que \( \widetilde{F}|_{_{\U_p \cap X}} = F\).    
+    Sejam \(X\subseteq \R^n\) e \(Y\subseteq \R^m\), uma aplicação \(F\in C^k(X,Y)\) sse \(\forall p \in X\), \(\exists \widetilde{F} \in C^k(\U_p, \R^m)\) tal que \( \widetilde{F}|_{_{\U_p \cap X}} = F\).    
 \end{definition}
 
 %\begin{note}
@@ -9,7 +9,7 @@
 %\end{note}
 
 \begin{definition}
-    \(F: X \to Y\) é \emph{diffeomorfismo} de classe \(C^k\) se \(F\in C^k(X;Y)\) é homeomorfimso e \(F^{-1}\in C^k(Y;X)\). Denotamos \(^k F : X \simeq Y \). 
+    \(F: X \to Y\) é \emph{diffeomorfismo} de classe \(C^k\) se \(F\in C^k(X,Y)\) é homeomorfimso e \(F^{-1}\in C^k(Y,X)\). Denotamos \(^k F : X \simeq Y \). 
 \end{definition}
 \begin{example}
     Sejam \(X= \{(x,y) \in \mathbb{S}^1: y > 0 \}\) e \(Y = (-1,1)\). A aplicação \(\pi: X \ni (x,y) \mapsto x \in Y\) é \(^\infty F: X\simeq Y \). \textcolor{gray}{\(\rightarrow\) Verifique as condições}
@@ -19,37 +19,34 @@
 \end{definition}
 
 \begin{note}
-    Por simplicidade na notação usaremos \(\U_p\) para indicar vizinhanza de \(p\) em \(M\) como subespaço de \(\R^n\). 
+    Em diante entendemos \(\U_p\) vizinhanza de \(p\in M\leq \R^n\). 
 \end{note}
 
 \begin{example}
-    \(^{\infty}_{\hspace{0.15cm}n} U\ab\subseteq \R^n\). \textcolor{gray}{\(\rightarrow \) Tome \(\varphi = \id_n\)}
-\end{example}
-\begin{example}
-    \(^{\hspace{0.3cm}\infty}_{n-1}\E^{n-1} \subseteq \R^n\). \textcolor{gray}{\(\rightarrow\) Construa a projeção estereográfica} 
+    \(^{\infty}_{\hspace{0.15cm}n} U\ab,\ ^{\hspace{0.3cm}\infty}_{n-1}\E^{n-1} \subseteq \R^n\). \textcolor{gray}{\(\rightarrow \) \(\varphi = \id_n\) e projeção estereográfica}
 \end{example}
 
 \begin{lemma}
-    Sejam \(^k_d M \subseteq \R^n \), \(V\ab\subseteq \R^d\) e \(\psi: V \to \R^n\) tal que \(\psi(V)\subseteq M \). Então, \(\psi\) é uma paremetrização local de \(M\) sse \(\psi \) é imersão e homeomorfismo (\(\tau_{_M}\)). 
+    Sejam \(^k_d M \subseteq \R^n \) e \(\psi: V\ab\subseteq \R^d \to M\subseteq \R^n\). Então, \(\psi\) é paremetrização local da \(M\) \(\leftrightharpoons\) \(\psi \) é imersão e homeomorfismo (\(\tau_{_M}\)). 
 \end{lemma}
 
-\demo{(\(\Leftarrow\)) A bijeção é imediata de \(\psi(V)\ab \subseteq M\). Aplique \(\blacksquare\) (FLI) e faça a composição com a projeção. }
+\demo{(\(\Leftarrow\)) A bijeção é imediata de \(\psi(V)\ab \subseteq M\). Aplique \(\blacksquare\) \hyperlink{thmFLI}{(\emph{FLI})} e faça composição com a projeção. }
 
 \alerta{\centering Imersão injetiva \textcolor{red}{\(\not\Rightarrow \)} homeomorfismo}
 
-\begin{example}%[Coordenadas Esféricas]
-    Parametrização local da esfera (coordenadas esféricas). Seja \(\psi: [0,\pi]^{n-2}\times [0, 2\pi) \to  \R^n\) tal que     
-    \[(\theta_i) \mapsto \left(\cos\theta_1, \ldots, \prod^{j<i}\sin\theta_j \cdot \cos\theta_{i},\ldots, \prod\sin\theta_i\right). \] 
+\begin{example}[\emph{Coordenadas Esféricas}]
+    \(\psi: [0,\pi]^{n-2}\times [0, 2\pi) \to  \E^{n-1} \subseteq \R^n: \)      
+    \[\textstyle (\theta_i) \mapsto \left(\cos\theta_1, \ldots, \prod^{j<i}\sin\theta_j \cdot \cos\theta_{i},\ldots, \prod\sin\theta_i\right). \] 
 \end{example}
 \begin{example}%[Gráficos]
-    Se \(F\in C^k(U; \R^m)\) então \(\operatorname{graf}(F):= \{(\textbf{x},F(\textbf{x})) \in U\times\R^m\} = \ ^k_n M \subseteq \R^{n+m}\), com \(\psi: \textbf{x} \mapsto (\textbf{x}, F(\textbf{x}))\) e \(\varphi = \pi : (\textbf{x}, F(\textbf{x})) \mapsto \textbf{x}\).   
+    Se \(F\in C^k(U, \R^m)\) então \(\operatorname{graf}(F):= \{(\textbf{x},F(\textbf{x})) \in U\times\R^m\} = \ ^k_n M \subseteq \R^{n+m}\), com \(\psi: \textbf{x} \mapsto (\textbf{x}, F(\textbf{x}))\) e \(\varphi = \pi : (\textbf{x}, F(\textbf{x})) \mapsto \textbf{x}\).   
 \end{example}
 \begin{example}
     Seja \(^k H\subseteq \R^n\) hipersuperficie, então \(^{\hspace{0.5cm}k}_{n-1} H\subseteq \R^n\). \textcolor{gray}{\(\rightarrow\) \(H\) é localmente o gráfico de uma função} 
 \end{example}
 
 \begin{proposition}
-    Seja \(G\in C^k(U;\R^m) \). Se \(\forall p \in U, \ G\) é submersão em \(p\), então \[\{p \in U : G(p)=0\} =:\ ^{\hspace{0.65cm}k}_{n-m}M \subseteq \R^n.\]     
+    Seja \(G\in C^k(U,\R^m) \). Se \(\forall p \in U, \ G\) é submersão em \(p\), então \[\{p \in U : G(p)=0\} =:\ ^{\hspace{0.65cm}k}_{n-m}M \subseteq \R^n.\]     
 \end{proposition}
 
 %\begin{proposition}
@@ -57,23 +54,14 @@
 %\end{proposition}
 
 \begin{definition}
-    Sejam \(^k_dM\subseteq \R^n\) e \(^k \psi_a: V\ab \simeq \U_p\) uma parametrização local tal que \(\psi_a(a)=p\). O \emph{espaço tangente} a \(p \in M \) é o dado por 
-    \[T_pM := \operatorname{Im}(D\psi_a(a))= \bigoplus \R \frac{\partial \psi_a}{\partial x_i} (a)\leq \R^n. \]
+    Sejam \(^k_dM\subseteq \R^n\) e \(^k \psi_a: V\ab \simeq \U_p\) uma parametrização local tal que \(\psi_a(a)=p\). O \emph{espaço tangente} a \(p \in M \) é dado por,
+    \[ T_pM := \operatorname{Im}(D\psi_a(a))= \bigoplus \R \frac{\partial \psi_a}{\partial x_i} (a)\leq \R^n.\  \footnote{O \emph{espaço afim} \(p + T_pM\) é o "visualmente" tangente a \(M\) em \(p\). }\]
 \end{definition}
 
-\begin{note}
-    O espaço afim \(p + T_pM\) é o "intuitivamente" tangente a \(M\) en \(p\).
-\end{note}
-
 \begin{proposition}
-    Sejam \(^k_d M \subseteq \R^n\) e \(c \in C^k(\V_\epsilon ; M)\) caminho em \(M\), então 
-    \[T_pM = \{c'(0): c(0) =p \}. \] 
+    Sejam \(^k_d M \subseteq \R^n\) e \(c \in C^k(\V_\epsilon , M)\) caminho diff em \(M\), então \(T_pM = \{c'(0): c(0) =p \}. \) \comentario{O espaço tangente não depende da parametrização} 
 \end{proposition}
-
-\begin{note}
-    O espaço tangente não depende da parametrização.
-\end{note}
-
+    
 \begin{example}
     Se \(U\ab\subseteq \R^n\) então \(T_pU= \R^n\). 
 \end{example}
@@ -87,22 +75,22 @@
 %\end{exercise}
 
 \begin{note}
-    Em diante, para refererinos a \(^{\hspace{0.1cm}k}_{d_1}M\subseteq \R^n\) e \(^{\hspace{0.1cm}k}_{d_2}N\subseteq \R^m\) escrevemos simplesmente \(M\) e \(N\). %Dimensão, classe e espaço ambiente serão descritos apenas se fora necessario.
+    De aquí pra frente \(M \sim \ ^{\hspace{0.1cm}k}_{d_1}M\subseteq \R^n\) e \(N \sim \ ^{\hspace{0.1cm}k}_{d_2}N\subseteq \R^m\).
 \end{note}
 
 \begin{proposition}
-    \(F\in C^k(M;N)\) sse \(\forall \psi: V\ab \to \U_p\) parametrização local de \(M\) em \(p\), tem-se que \(F \circ \psi \in C^k(V; N)\). \textcolor{gray}{\(\rightarrow\) Basta ver só um  atlas}  
+    \(F\in C^k(M,N)\) \(\leftrightharpoons\) \(\forall \psi: V\ab \to \U_p\) parametrização local da \(M\) em \(p\), tem-se que \(F \circ \psi \in C^k(V, N)\). \textcolor{gray}{\(\rightarrow\) Basta ver só um  atlas}  
 \end{proposition}
 
 \begin{definition}
-    Seja \(F\in C^k(M;N)\). A derivada de \(F\) em \(p \in M\) é a aplicação linear \(DF(p): T_pM \to T_{F(p)}N \) tal que \( v\mapsto D\widetilde{F}(p) \cdot v\). 
+    Seja \(F\in C^k(M,N)\). A derivada de \(F\) em \(p \in M\) é a aplicação linear \(DF(p): T_pM \to T_{F(p)}N \) tal que \( v\mapsto D\widetilde{F}(p) \cdot v\). 
 \end{definition}
 
 \begin{lemma}
-    Se \(F\in C^k(M;N)\) então derivada \(DF(p)\) não depende da \(\widetilde{F}\).  
+    Se \(F\in C^k(M,N)\) então \(DF(p)\) não depende da \(\widetilde{F}\).  
 \end{lemma}
 
-\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\psi_{b}{'}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\varphi{'} \circ F \circ \psi: V \to V{'}\), pelo \(\blacksquare\) (Regla da Cadeia) temos o diagrama a dereita. Note que \(D\widetilde{F}: \operatorname{Im}(D\psi_a(a))\mapsto \operatorname{Im}(D\psi_{a{'}}(a{'}))\). \vspace{0.3cm}}
+\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\psi_{b}{'}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\varphi{'} \circ F \circ \psi: V \to V{'}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}(D\psi_a(a))\mapsto \operatorname{Im}(D\psi_{a{'}}(a{'}))\). \vspace{0.3cm}}
 }
 
 \begin{tikzpicture}[scale = 1.2, >=to, shift={(11.95cm,1.5cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
@@ -136,13 +124,13 @@
 \begin{note}
     Em geral, tudo o que foi visto para aplicações, vale em variedades: 
     \begin{description}
-        \item[Regla da Cadeia] Se \(F\in C^k(M;N)\) e \(G \in C^k(N;P)\) então \(G \circ F \in C^k(M;P)\) e \(D(G\circ F)(p)  = DG(F(p))\cdot DF(p)\). 
+        \item[Regla da Cadeia] Se \(F\in C^k(M,N)\) e \(G \in C^k(N,P)\) então \(G \circ F \in C^k(M,P)\) e \(D(G\circ F)(p)  = DG(F(p))\cdot DF(p)\). 
         \item[Derivada da Identidade] \(D\id_{M} = \id_{T_pM}: T_pM \to T_pM\).  
-        \item[Teorema da Função Inversa] Seja \(F\in C^k(M;N)\) tal que \(D\widetilde{F}(p)\) é isomorfismo, então \(\exists \ ^k F : \U_p\cap M \simeq \mathcal{V}_{F(p)} \cap N\).  
+        \item[Teorema da Função Inversa] Seja \(F\in C^k(M,N)\) tal que \(D\widetilde{F}(p)\) é isomorfismo, então \(\exists \ ^k F : \U_p \simeq \mathcal{U}_{F(p)}\).  
     \end{description}
 \end{note}
 
-\subsection{Valores Regulares}
+\subsection*{Valores Regulares}
 
 \begin{definition}
     Seja \(F \in C^k(M;N)\). Um ponto \(p\in M\) é \emph{regular} se \(F\) é submersão em \(p\), se não fora regular então é \emph{ponto crítico} de \(F\).  

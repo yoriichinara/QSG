@@ -37,7 +37,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 \end{proposition}
 
 \- \vspace{-2.2cm}
-\begin{itemize}[left = 0cm]
+\begin{itemize}[left = 0.25cm]
     \item[] \begin{exercise}
         Seja \(W\leq V\), então \(\forall f\in W', \exists \widetilde{f} \in V'\) tal que \(\widetilde{f}|_{_W} = f \).
     \item[] \demo{
@@ -47,7 +47,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 \end{itemize}
 
 \alerta{ \centering
-    Se \(\phi\) é degenerada não conclui nada
+    \(\phi\) degenerada não conclui nada
     \tcblower
     \begin{example}
         Sejam \(V = \F^2\), \([\phi]_\alpha = \operatorname{diag}(1,0)\) na base canônica e \(W = [e_2]\). Falhan todas as conclusões da \(\square\) \ref{prop:941}. 
@@ -90,7 +90,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 
 \theoremnum{9.4.4.}
 \begin{theorem}
-    Se \(\phi \in B_a(V)\) então \(\forall W\leq V \) complementar de \( V^\perp\), \(\exists \alpha \) base de \(V\) tal que \([\phi]_\alpha = \operatorname{diag}(0,H_m)\), onde \(m = \pt \phi/2\). \footnote{El posto de una matriz antisimétrica siempre es par :o. }  
+    Se \(\phi \in B_a(V)\) então \(\forall W\leq V \) complementar de \( V^\perp\), \(\exists \alpha \) base de \(V\) tal que \([\phi]_\alpha = \operatorname{diag}(0,H_m)\), onde \(m = \pt \phi/2\). \footnote{O posto de uma matriz antisimétrica sempre é par :o. }  
 \end{theorem}
 
 \demo{
@@ -104,7 +104,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 \theoremnum{9.4.6.}
 \begin{theorem}
     \label{thm:946}
-    Sejam \(\phi \in B_s(V)\) e \(\operatorname{car\ \F \neq 2}\). Então, \(\exists \alpha \) base de \(V\) ortogonal respeito de \(\phi\).  
+    Se \(\phi \in B_s(V)\) e \(\operatorname{car\ \F \neq 2}\), \(\exists \alpha \) base de \(V\) ortogonal respeito de \(\phi\).  
 \end{theorem}
 
 \demo{
@@ -112,9 +112,28 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 }
 
 \begin{corollary}
-    No contexto do \(\blacksquare\) \ref{thm:946} se \(\alpha = (w_j)\) e \(\F = \R\) então \(\exists \alpha_\text{o}\) \emph{base de Sylvester} (subtraida da \(\alpha\)) fazendo \(\alpha_\text{o} = (a_jw_j)\) com \(\forall j, \ a_j^2 = \frac{\pm 1}{\phi(w_j,w_j)}\). Se \(\beta\) é completação da base, \([\phi]_\beta = \operatorname{diag}([-\id_i], [\id_{p-i}], [0])\). \footnote{Em geral existe normalização da \(\alpha\) \(\leftrightharpoons\) \(\forall j, \exists a_j \in \F: a_j^2 = \frac{1}{\phi(w_j,w_j)}\).}
+    No contexto do \(\blacksquare\) \ref{thm:946} se \(\alpha = (w_j)\) e \(\F = \R\) então \(\exists \alpha_\text{o}\) \emph{base de Sylvester} (subtraida da \(\alpha\)) fazendo \(\alpha_\text{o} = (a_jw_j)\) com \(\forall j, \ a_j^2 = \frac{\pm 1}{\phi(w_j,w_j)}\). Se \(\beta\) é uma completação da base, \([\phi]_\beta = \operatorname{diag}([-\id_i], [\id_{p-i}], [0])\). \footnote{Em geral existe normalização da \(\alpha\) \(\leftrightharpoons\) \(\forall j, \exists a_j \in \F: a_j^2 = \frac{1}{\phi(w_j,w_j)}\).}
 \end{corollary}
 
 \begin{definition}
-    Sejam \(\phi \in B_s(V)\) e \(\F\leq \R\), dizemos que \(\phi \) é \textcolor{gray}{(\emph{semi}-)}definida positiva se \(\forall v\in V\), \(\phi(v,v) \underset{\textcolor{gray}{^{\_\_}}}{>} 0 \). Análogamente pra \textcolor{gray}{(\emph{semi}-)}definida negativa. 
+    Sejam \(\phi \in B_s(V)\) e \(\F\leq \R\), dizemos que \(\phi \) é \textcolor{gray}{(\emph{semi}-)}definida positiva se \(\forall v\in V \textcolor{gray}{\setminus \{0\}}\), \(\phi(v,v) \underset{\textcolor{gray}{^{\_\_}}}{>} 0 \). Análogo pra o caso negativo. 
 \end{definition}
+
+\begin{definition}
+    \centering \(\text{i}(\phi):= \max \{ \dim W: W\leq V \text{ e } \phi|_{_W}<0\}\). 
+\end{definition}
+
+\begin{note}
+    i\((\phi)\leq \pt \phi\), \(\phi \geq 0 \ \leftrightharpoons \ \text{i}(\phi)=0\) e \(\phi < 0\ \leftrightharpoons \ \text{i}(\phi) = \dim V\). 
+\end{note}
+
+\begin{definition}
+    \centering \(\operatorname{sign}(\phi):= \pt \phi - 2 \text{i}(\phi)\). 
+\end{definition}
+
+\theoremnum{9.4.7.}
+\begin{theorem}[\emph{Lei de Inercia de Sylvester}]
+    Sejam \(\phi \in B_s(V)\), \(\F\leq \R\) e \(\alpha = (v_j)\) base ortogonal pra \(V\) respeito da \(\phi\). Então, i\((\phi) = \#\{j: \phi(v_j,v_j) <0\}\).  
+\end{theorem}
+
+\comentario{Não suporta resumo, olha se queser \cite[Pág. 316]{MA719}}
