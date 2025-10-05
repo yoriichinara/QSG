@@ -1,0 +1,70 @@
+\setcounter{subsection}{1}
+\subsection{Dualidade}
+
+\begin{definition}
+    Seja \(V\) \(\F\)-espaço vetorial. Então, \(V':= \hom(V,\F)\) é o \emph{espaço dual} de \(V\) e \(f \in V'\) é chamado de \emph{funcional linear} em \(V\).   
+\end{definition}
+
+\begin{definition}
+    Sejam \(W\) e \(V\) \(\F\)-espaços vetoriais. Chamamos de \emph{pareamiento bilinear} os elementos \(\phi \in \hom^2(W\times V,\F)\).  
+\end{definition}
+
+\begin{example}
+    \(\operatorname{av}: V' \times V \ni (f,v) \mapsto f(v) \in \F\). \comentario{Função avaliação, mostre que ta bém definida, ou seja, \(\operatorname{av} \in \hom^2(V'\times V, \F )\) }
+\end{example}   
+ 
+\begin{note}
+    Segue da \(\square\) \ref{prop:9.1.4} que se \(\alpha = (v_i)\) é base de \(V\), então \(\alpha' = (f_i)\), onde \(f_i(v_j) = \delta_{ij}\) é l.i. em \(V'\), base no caso \(\dim V <\infty\). \footnote{Aquí pensamos em \(W=\F = [1]\), espaço vetorial de dimensão um sobre se mesmo. }%\(\square\) \ref{prop:9.1.4} segue que 
+\end{note}
+
+\hypertarget{corol921}{}
+\begin{corollary}
+    \textbf{9.2.1.} Seja \(v\in V\) tal que \(\forall f \in V',\ f(v) = 0 \), então \(v = 0\). \comentario{Se \(v\neq 0\), então \(\exists \alpha \) base de \(V\) tal que \(v = v_{i_0}\in \alpha\), assim \(f_{i_0}(v_{i_0}) = 1 \neq 0\) }
+\end{corollary}
+ 
+\propositionnum{9.2.2.}
+\begin{proposition}
+    \label{prop:9.2.2}
+   Seja \(I\) tal que  \(\# I = \dim V\) então \(V'\cong \mathcal{F}(I, \F)\). 
+\end{proposition}
+
+\demo{
+Sejam \(\alpha = (v_i)\) base de \(V\) e \(\mathcal{F} (I,\F) \ni (a_i) \sim a: i \mapsto a_i \in \F\). Trabalha com \(
+    T: V' \ni f\mapsto (f(v_i)) \in \mathcal{F} (I,\F)\) e \(S: \mathcal{F} (I, \F) \ni (a_i) \mapsto (f: v_j \mapsto a_j)\), mostra que são lineares e inversas a uma da outra. 
+}
+
+\begin{corollary}
+    Segue de \(\square\) \ref{prop:9.2.2} que se \(\dim V = \infty \) então \([\alpha'] \subset V'\). \comentario{Na demostração \(T([\alpha']) = \{(a_i) \in \mathcal{F}(I,\F) : a_i \neq 0 \text{ em finitos }i \} \subset \mathcal{F}(I, \F) \cong V'\)} 
+\end{corollary}
+
+\begin{note}
+    Isso só mostra que \(\alpha'\) não é base de \(V'\), afirmar \(\dim V' > \dim V\) mesmo sendo certa, precisa mais coisa (analisé de cardinais).   
+\end{note}
+
+\propositionnum{}
+\begin{lemma}
+    Sendo \(V\) \(\F\)-espaço vetorial a função \(J_V: V \ni \textcolor{red}{v \mapsto} \overset{\underset{\rotatebox{90}{$\in$}}{V''}}{\textcolor{red}{J_V(v)}}: \overset{\underset{\rotatebox{90}{$\in$}}{V'}}{f}\mapsto f(v) \in \F\) 
+    é bém definida, linear e injetora.  
+\end{lemma}
+
+\demo{
+    Bém definida é ver que \(J_V(v) \in V''\), olha pra \(J_V(v)(f+\lambda g)\). Linearidade é quase-imediata e a última afirmação segue do {\scriptsize\(\boxtimes\)} \hyperlink{corol921}{9.2.1.}.   
+}
+
+\begin{corollary}
+    Se \(\dim V < \infty\) então \(\dim V = \dim V' = \dim V''\) e \(J_V: V \cong V''\). 
+\end{corollary}
+
+\begin{lemma}
+    Sejam \(V, \ W\) \(\F\)-espaços vetoriais e \(T\in \hom(V,W)\). A \emph{adjunta} de \(T\), \(T': W' \to V'\) que leva \( f \mapsto f\circ T \) é uma transformação linear. \comentario{Segue de propiedades da composição} 
+\end{lemma}
+
+\propositionnum{9.2.3.}
+\begin{proposition}
+    \label{prop:9.2.3}
+    Sejam \(V, W\) \(\F\)-espaços vetorias de dimensão finita, \(\alpha\), \(\beta \) bases pra eles respetivamente e \(T\in \hom(V,W)\). Então, \([T']^{\beta'}_{\alpha'} = ([T]^\alpha_\beta)^t\). 
+\end{proposition}
+
+\demo{
+    Sejam \(\alpha = (v_j)\), \(\beta= w_i\) e  \([T]^\alpha_\beta = (a_{ij})\). Escreva \(T(v_j) = \sum^{m} a_{ij} w_i\), logo note que a entrada \(b_{ji}\) da \([T']^{\beta'}_{\alpha'}\) é precisamente \(T'(g_i)(v_j)\). 
+}

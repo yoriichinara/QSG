@@ -1,0 +1,120 @@
+\subsection{Bases Hiperbólicas e Ortogonais}
+
+O objetivo nesta seção é establecer versões simplificadas pra \(\textcolor{gray}{_\alpha}[\phi]_\alpha\) no caso das formas bilineares simétricas e alternadas. 
+
+\begin{definition}
+    \(B_a(V):= \{\phi \in B(V): \phi \text{ é alternada}\}\)\  e \ \(B_s(V):= \{\phi \in B(V): \phi \text{ é simétrica}\}\). \comentario{É obvio quém va ser \(B_{as}(V)\)}
+\end{definition}
+
+\begin{note}
+Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi}\alpha = \alpha^{\perp_\phi}\). De aquí pra frente sejam \(\dim V < \infty\) e \(\phi\) fixos, escrevemos simplesmente \(\alpha^\perp\).
+\end{note}
+
+\begin{definition}
+    \(W \leq V\) é \emph{degenerado} se \(\phi|_{_W}\) é denegerada em \(B_{as}(W)\).  
+\end{definition}
+
+\newcommand{\rad}{\operatorname{rad}}
+\begin{definition}
+    \centering \(\rad W := W \cap W^\perp\). 
+\end{definition}
+
+\begin{lemma}
+    \begin{enumerate}[label = \roman*., left = -0.3cm]
+        \item \(W\) é degenerado \(\leftrightharpoons\) \(\rad W \neq \{0\}\). \comentario{\(\pt \phi|_{_W} = \dim W -\dim (\rad W)\)} 
+        \item[]\hspace{-0.35cm}ii. \ Se \(V = V^\perp \oplus W\) então \(\rad W = \{0\}\). \comentario{\(\rad W \subseteq V^\perp \)}  
+    \end{enumerate}
+\end{lemma}
+
+\propositionnum{9.4.1.}
+\begin{proposition}
+    \label{prop:941}
+    Sejam \(W\leq V\) e \(\phi\) não degenerada. Então, 
+    \begin{enumerate}[label = (\alph*), left = 0.5cm]
+        \item \(\dim V = \dim W + \dim W^\perp\). \hspace{0.5cm}(b) \ \(V = W + W^\perp \ \leftrightharpoons \ W \cap W^\perp = \{0\}\). 
+        \item[(c)] \((W^\perp)^\perp = W\). \hspace{3.64cm} (d) \ \(\rad W = \rad W^\perp\). 
+    \end{enumerate}
+\end{proposition}
+
+\- \vspace{-2.2cm}
+\begin{itemize}[left = 0cm]
+    \item[] \begin{exercise}
+        Seja \(W\leq V\), então \(\forall f\in W', \exists \widetilde{f} \in V'\) tal que \(\widetilde{f}|_{_W} = f \).
+    \item[] \demo{
+   (a) Mostra que \(T: V \ni v \twoheadrightarrow \hspace{0.1cm}_\phi D(v) |_{_W} \in W'\) e \(\mathcal{N}(T) = W^\perp\); (b) é obvia; (c) \(W\subseteq (W^\perp)^\perp\) sempre, a outra contenção segue de fazer \(W = W^\perp\) em (a); (d) segue de (c). 
+}
+    \end{exercise}
+\end{itemize}
+
+\alerta{ \centering
+    Se \(\phi\) é degenerada não conclui nada
+    \tcblower
+    \begin{example}
+        Sejam \(V = \F^2\), \([\phi]_\alpha = \operatorname{diag}(1,0)\) na base canônica e \(W = [e_2]\). Falhan todas as conclusões da \(\square\) \ref{prop:941}. 
+    \end{example}
+}
+
+\propositionnum{9.4.3.}
+\begin{proposition}
+    \label{prop:943}
+    Sejam \(W\leq V\). Então, \(V = W \oplus W^\perp \ \leftrightharpoons \ W\) é não degenerado.
+\end{proposition}
+
+\demo{
+    \((\Rightarrow )\) Imediata. \((\Leftarrow)\) Cola o argumento usado pra \(\square\) \ref{prop:941} (a) e (b) notando que \(_\phi D |_{_W} = \hspace{0.1cm}_\psi D: W \to W'\) é isomorfismo.
+}
+
+\begin{definition}
+    Sejam \(\phi \in B_a(V)\) e \((v,w) \in V \times V\), definimos então,    
+    \begin{itemize}[label = \(\star\), left = 1cm]
+        \item \emph{Par hiperbólico} (ordenado) \(\rightarrow (v,w) : \phi(v,w)=-1\) e seu respetivo \emph{plano hiperbólico} \(\rightarrow [v,w] \leq V\). 
+        \item \(\F\)\emph{-espaço hiperbólico} \(\rightarrow V = \bigoplus^m V_j: \forall j\leq m,\ V_j\) é plano hiperbólico e \(\forall i\neq j, \ V_i \perp V_j\).  
+    \end{itemize}
+\end{definition}
+
+\- \vspace{-0.7cm}
+\tikz[remember picture, overlay]{
+    \node at (16.5, -0.77) {%
+\(H_j = \begin{bmatrix}
+        0 & -1 \\ 
+        1 & 0  \\ 
+    \end{bmatrix}\)
+   };
+}
+
+\parbox[a]{0.77\linewidth}{
+    \begin{note}
+        Se \(V\) fora hiperbólico, então na base (ordenada) \(\alpha = (v_j, w_j)\) temos \([\phi]_\alpha = \operatorname{diag}(H_j)\), \(j\leq m\). Em particular, \(\phi\) é não degenerada.
+    \end{note}
+    } \parbox{0.2\linewidth}{\- }
+
+\theoremnum{9.4.4.}
+\begin{theorem}
+    Se \(\phi \in B_a(V)\) então \(\forall W\leq V \) complementar de \( V^\perp\), \(\exists \alpha \) base de \(V\) tal que \([\phi]_\alpha = \operatorname{diag}(0,H_m)\), onde \(m = \pt \phi/2\). \footnote{El posto de una matriz antisimétrica siempre es par :o. }  
+\end{theorem}
+
+\demo{
+    Da \(\square\) \ref{prop:943}, podemos supor \(\phi\) é não degenerada (vía restrição). Faz por indução em \(\dim V\). Note que \(\exists v, u \in V: \phi (v,u) = a \in \F^\times\Rightarrow \exists (v, w)\) hiperbólico \(\Rightarrow [v,w]\) é não degenerado. Segue de \(\square\) \ref{prop:943} que \(V = [v,w] \oplus [v,w]^\perp\) e de \(\square\) \ref{prop:941} (d) que \([v,w]^\perp\) é não degenerado. 
+}
+%\comentario{A demostração não admite resumo, olha se queser \cite[Pág. 313]{MA719}}
+\begin{note}
+    As bases hiperbólicas são pra as alternadas o que são (seram) as ortogonais pra o produto interno (simétricas).
+\end{note}
+
+\theoremnum{9.4.6.}
+\begin{theorem}
+    \label{thm:946}
+    Sejam \(\phi \in B_s(V)\) e \(\operatorname{car\ \F \neq 2}\). Então, \(\exists \alpha \) base de \(V\) ortogonal respeito de \(\phi\).  
+\end{theorem}
+
+\demo{
+    \(B_a(V) \cap B_s(B) = \{0\} \Rightarrow \exists v_1 \in V : \phi(v_1,v_1) \neq 0 \). Segue da \(\square \) \ref{prop:943} que \(V = [v_1] \oplus [v_1]^\perp \), \(\phi|_{_{[v_1]^\perp}} \) é simétrica. O resultado segue por indução. 
+}
+
+\begin{corollary}
+    No contexto do \(\blacksquare\) \ref{thm:946} se \(\alpha = (w_j)\) e \(\F = \R\) então \(\exists \alpha_\text{o}\) \emph{base de Sylvester} (subtraida da \(\alpha\)) fazendo \(\alpha_\text{o} = (a_jw_j)\) com \(\forall j, \ a_j^2 = \frac{\pm 1}{\phi(w_j,w_j)}\). Se \(\beta\) é completação da base, \([\phi]_\beta = \operatorname{diag}([-\id_i], [\id_{p-i}], [0])\). \footnote{Em geral existe normalização da \(\alpha\) \(\leftrightharpoons\) \(\forall j, \exists a_j \in \F: a_j^2 = \frac{1}{\phi(w_j,w_j)}\).}
+\end{corollary}
+
+\begin{definition}
+    Sejam \(\phi \in B_s(V)\) e \(\F\leq \R\), dizemos que \(\phi \) é \textcolor{gray}{(\emph{semi}-)}definida positiva se \(\forall v\in V\), \(\phi(v,v) \underset{\textcolor{gray}{^{\_\_}}}{>} 0 \). Análogamente pra \textcolor{gray}{(\emph{semi}-)}definida negativa. 
+\end{definition}

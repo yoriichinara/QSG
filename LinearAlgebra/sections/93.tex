@@ -1,0 +1,128 @@
+\subsection{Pareamientos Bilineares}
+
+Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA719}, que aquí é apenas um exemplo de forma bilinear com \(\F \leq \R\). 
+
+\begin{note}
+    Denote \(B(V,W) := \hom^2(V\times W, \F )\) e \(B(V) = B(V,V)\). 
+\end{note}
+
+\newcommand{\Fi}{_\alpha[\phi]_\beta}
+\begin{definition}
+    Sejam \(V, W \) \(\F\)-espaços de dimensão finita, \(\alpha, \beta\) bases pra eles e \(\phi \in B(V,W)\). A \emph{matriz asociada} \(_\alpha[\phi]_\beta := (\phi(v_i,w_j))_{i,j}\) determina \(\phi\) no sentido, \([v]_\alpha^t\  _\alpha[\phi]_\beta \  [w]_\beta = \phi (v,w)\). \footnote{Em geral, \(\Fi\) pode-se definir pra familias de vetores. } 
+\end{definition}
+\begin{note}
+    É importante entender essa continha \(\phi\left(\sum^m a_i v_i, \sum^n b_j w_j\right)\).
+\end{note} 
+\propositionnum{9.3.1.}
+\begin{proposition}
+    Sejam \(m,n \in \mathbb{Z}_{\geq 0}\) as dimensões de \(V, W\) respetivamente. Então, a função \(\zeta: B(V,W) \ni \phi \ \mapsto\  \Fi \in M_{m\times n}(\F)\) é isomorfismo. Em particular, \(\dim B(V,W) = \dim V \cdot \dim W\). %\comentario{Propiedades das matrices}
+\end{proposition}
+
+\demo{Segue todo de propiedades das matrices, pra a sobrejetividade pega \(A \in M_{m\times n}(\F)\) e mostra que \(\phi(v,w) := [v]_\alpha^t \cdot A \cdot [w]_\beta \in B(V,W)\). }
+
+\begin{example}
+    Se \(f \in V'\) e \(g \in W'\) então \(\phi(v,w):= f(v)g(w) \in B(V,W)\). 
+\end{example}
+
+\begin{definition}
+    Considere as transformações (lineares) \(_\phi D : V \to W'\) e \(D_\phi: W \to V'\) tais que \(_\phi D (w)(v) = D_\phi (v)(w) = \phi(v,w)\). Definimos: 
+    \begin{itemize}
+        \item \emph{Radical} a esquerda \( \rightarrow \mathcal{N}(\textcolor{red}{_\phi} D)  \ni v \leftarrow \) \emph{Vetor degenerado} a esquerda.  
+        \item \(\phi\) \emph{não degenerada} a esquerda sse \(\mathcal{N}(_\phi D) = \{0\}\). 
+    \end{itemize}
+    Com definições análogas pra o caso de \(D_\phi\) (direita). 
+\end{definition}
+
+\newcommand{\pt}{\operatorname{pt}}
+
+\propositionnum{9.3.3.}
+\begin{proposition}
+    \label{prop:933}
+    Se \(\alpha \) e \(\beta \) são bases finitas de \(V \) e \(W\) respetivamente, então \([ D_\phi]^\beta_{\alpha'} = \ _\alpha[\phi]_\beta\) e \([_\phi D]^\alpha_{\beta'} = ([ D_\phi]^\beta_{\alpha'})^t\). Em particular, \(\pt \phi := \pt D_\phi = \pt \hspace{0.01cm} _\phi D \). 
+\end{proposition}
+
+\demo{Como na \(\square\) \ref{prop:9.2.3} a gente ganha, de trabalhar com \(\alpha'\) mesma que a entrada \((i,j)\) de \([D_\phi]^\beta_{\alpha'}\) é justamente \(D_\phi(w_j,v_i) = \phi(v_i,w_j)\), a outra igualdade consegue-se num analisé semelhante. }
+
+\begin{corollary}
+    \textbf{9.3.4.} Se \(\dim V\) \textcolor{gray}{(ou \(W\))} é finita e \( \mathcal{N}(_\phi D) = \{0\}\), são equivalentes: %\(\leftrightharpoons\) \(_\phi D, \ D_\phi\) são isomorfismos. Em particular, \(\dim V = \dim W\). 
+    \begin{enumerate}[left = 1.8cm, label = \roman*.]
+        \item \(\{0\} = \mathcal{N}(D_\phi)  \).  \hspace{4cm} ii. \(\dim V = \dim W\).  
+        \item[iii.] \(_\phi D\) é isomorfismo. \hspace{3cm} iv. \(D_\phi\) é isomorfismo. 
+    \end{enumerate}
+\end{corollary}
+
+\comentario{
+    Prova i, iii, iv \(\leftrightharpoons\) ii. Não é díficil, pra as voltas usa \(\square\) \ref{prop:933}. O resultado também vale trocando \(\mathcal{N}(_\phi D) \) por \(\mathcal{N}(D_\phi)\)  
+}
+
+\begin{note}
+    Se \(\phi \in B(V)\) e \(\dim V < \infty \) temos \(\mathcal{N}(_\phi D) = \{0\} \ \leftrightharpoons\ \mathcal{N}(D_\phi) = \{0\}\), então dizemos simplesmente \(\phi\) \emph{não degenerada}. 
+\end{note}
+
+\begin{definition}
+    Uma forma bilinear \(\phi \in B(V)\)  é \ \(\textcolor{gray}{\rotatebox{90}{\Big|}}\star\textcolor{gray}{\rotatebox{90}{\Big|}}\) \ se \(\forall v,w \in V\), 
+    \begin{itemize}[label = \(\star\)]
+        \item \emph{Simétrica} \(\rightarrow \phi(v,w) = \phi(w,v)\). \hspace{1.4cm}{ \(\star\)} \emph{Alternada} \(\rightarrow \phi(v,v) = 0\). \vspace{0.3cm}\\
+        \- \hspace{3cm}\(\star\) \emph{Antisimétrica} \(\rightarrow \phi(v,w) =- \phi(w,v) \). 
+    \end{itemize}
+\end{definition}
+
+\begin{note}
+    Se \(\operatorname{car}\ \F \neq 2\) então \(\phi\) é simétrica \(\leftrightharpoons\) \(\phi\) é  antisimétrica. 
+\end{note}
+
+\propositionnum{9.3.5.}
+\begin{proposition}
+    Sejam \(\phi \in B(V)\) e \(\alpha = (v_i)\) uma base de \(V\). Então, 
+    \begin{enumerate}[label = (\alph*), left = 0.5cm]
+        \item \(\phi \) é \textcolor{gray}{(anti)}simétrica \(\leftrightharpoons\) \(_\alpha [\phi]_\alpha\) é \textcolor{gray}{(anti)}simétrica.
+        \item \(\phi \) é alternada \(\leftrightharpoons\) \(_\alpha [\phi]_\alpha\) é antisimétrica e \(\operatorname{diag}(_\alpha[\phi]_\alpha) = (0, 0, \ldots)\).% \ \leftrightharpoons \ \phi(v_i,v_i)= 0 \).
+    \end{enumerate}
+\end{proposition}
+
+\begin{definition}
+    Sendo \(\phi \in B(V)\) defina a relação binária \(\perp_\phi\) em \(V\) dada por \(v \perp_\phi w\ \leftrightharpoons \ \phi(v,w)=0\). Um vetor vai ser \emph{isotrópico} se \(v\perp_\phi v \). %\footnote{\((V,\perp_\phi)\) naturalmente vai depender das propiedades de a propia \(\phi\).}
+\end{definition}
+
+%\begin{note}
+%    Nessos termos \(\phi \) é alternada \(\leftrightharpoons\) todo vetor é isotrópico.
+%\end{note}
+
+\begin{definition}
+    \centering
+    \(\alpha^{\perp_\phi} := \{w \in V:  \alpha \perp_\phi w\}\) \ e \  \(^{\perp_\phi}\alpha := \{v \in V: v \perp_\phi \alpha\}\). \footnote{Sendo \(\alpha = (v_i)\) entendase \(\alpha \perp_\phi w\) como os \(w \in V : \forall i \in I,\ v_i \perp_\phi w\).}
+\end{definition}
+
+\begin{note}
+    Ambos \(\alpha^{\perp_\phi}\) e \(^{\perp_\phi}\alpha\) são os \emph{subespaços ortogonais} a direita e esquerda, respetivamente. Em particular, \(\mathcal{N}(D_\phi) = V^{\perp_\phi}\) e \(\mathcal{N}(_\phi D) = \hspace{0.1cm}^{\perp_\phi}V\)
+\end{note}
+
+\begin{lemma}
+    \textbf{9.3.6.} Se \(\dim V < \infty \), são equivalentes: 
+    \begin{enumerate}[left = -0.5cm, label= \roman*.]
+        \centering
+        \item \(\phi \) degenerada. \hspace{1cm} ii. \(V^{\perp_\phi}\neq \{0\}\). \hspace{1cm} iii. \(^{\perp_\phi}V\neq \{0\}\).
+    \end{enumerate}
+\end{lemma}
+
+\propositionnum{9.3.7.}
+\begin{proposition}
+    \label{prop:937}
+    A relação \((V,\perp_\phi)\) é simétrica \(\leftrightharpoons\) \(\phi \) é simétrica ou alternada. \comentario{Não admite resumo, olha se queser \cite[Pág. 309]{MA719}}
+\end{proposition}
+
+\begin{note}
+    Se \(W\leq V\) e \(\phi \in B(V)\) então \(\phi |_{_W} \in B(W)\). %e note que esta restrição não respeita a condição de ser degenerada ou não degenerada.  
+\end{note}
+
+\alerta{
+    \centering
+    As restrições não respeitan degeneração
+    \tcblower
+    \begin{example} 
+        Se \(\phi \) é degenerada basta pegar \(W = [w]\), com \(w\in V\) não isotrópico pra ter \(\phi|_{_{W}}\) não degenerada em \(B(W)\).  
+    \end{example}
+    \begin{example}
+        O espaço de Minkowski, \(V= \R^3 \times \R\) equipado com \(_\alpha [\phi]_\alpha = \operatorname{diag}(1,1,1,-1)\) é não degenerado mais qualquer \(w = (\textbf{x},\|\textbf{x}\|) \in V\) é isotrópico e portanto \(\phi|_{_{W}}\) com \(W = [w]\) é degenerada em \(B(W)\).    
+    \end{example}
+}
