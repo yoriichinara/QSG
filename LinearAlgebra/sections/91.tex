@@ -3,12 +3,12 @@
 Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como o espaço vetorial dado pelo produto cartesiano dos \(\F\)-espaços vetorias \(V_j\) com \(j\leq k \in \N\). 
 
 \begin{definition}
-    Sejam \(\Pi V_j\) e \( W\) \(\F\)-espaços vetorias. Denotamos por \( \mathcal{F}\left(\Pi V_j, W\right)\) o conjunto de todas as funções \(\phi : \Pi V_j \to W \).    
+    Sejam \(\Pi V_j\) e \( W\) \(\F\)-espaços vetorias. Denotamos por \( \mathcal{F}\left(\Pi V_j, W\right)\) o conjunto de todas as funções \(f : \Pi V_j \to W \).    
 \end{definition}
 
 \begin{definition}
-    Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j_0\leq k\) fixo, \(\forall(v_{1,j_0}), (v_{2,j_0} ) \in \Pi V_j \) e \( \forall \lambda \in \F\) temos,   
-    \[  \textstyle \phi_{j_0} ((v_{1,j_0})+ \lambda( v_{2,j_0})) = \phi ( (v_{1,j_0})) + \lambda \phi((v_{2,j_0})).\footnote{Entendase \((v_{i,j_0}) \in \Pi V_j: \forall j\neq j_0,\ v_{i,j} \in V_j\) ta fixo.}\]  
+    Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j_0\leq k\) fixo, \(\forall(v_{1,j})_{j_0}, (v_{2,j} )_{j_0} \in \Pi V_j \) e \( \forall \lambda \in \F\) temos,   
+    \[  \textstyle \phi_{j_0} ((v_{1,j_0})_{j_0}+ \lambda( v_{2,j})_{j_0}) = \phi ( (v_{1,j})_{j_0}) + \lambda \phi((v_{2,j})_{j_0}).\footnote{Entendase \((v_{i,j})_{j_0} \in \Pi V_j: \forall j\neq j_0,\ v_{i,j} \in V_j\) ta fixo.}\]  
 \end{definition}
 
 \vspace{-0.5cm}
@@ -36,15 +36,16 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 
 \newcommand{\bi}{\textbf{i}}
 \demo{Pra \((v_{1,j}) \in \hom^k(\Pi V_j, W)\) e \(\forall j \leq k\) sejam \( (a_{i_{j},j}) = [v_{{1,j}}]_{\alpha_{j}}\) com \(i_j \leq m_j \in \mathbb{Z}_{\geq 0} \), supondo \(\phi\) seja $k$-linear e \(I_m:=\prod I_{m_j} \) mostre,    
-\[\textstyle \phi((v_{1,j})) = \sum_{\bi \in I_m} \left(\prod^k a_{\bi,j}\right) \cdot  \phi((v_{\bi,j})).\]
+\[ \phi((v_{1,j})) = \sum_{\bi \in I_m} \left(\prod^k a_{i_j,j}\right) \cdot  \phi((v_{\bi,j})).\]
 Use aquela expressão pra replicar a demostração do \(\blacksquare\) \ref{thm:6.1.6}. 
 }%A unicidade segue da unicidade das coordenadas. Agora, com \(j_0\) fixo olha pra \(\phi((v_{1,j_0}) + \lambda(v_{2,j_0}))\).  } = \sum_{\bi \in I_m} \left(\prod a_{i_j,j}\right) \cdot  w_\bi
 %\demo{A demostração é completamente análoga da feita pra \(\blacksquare\) \ref{thm:6.1.6}, mudando, claro, o não despreciavél negôcio da gestão dos índices}
 
 \propositionnum{9.1.4.}
+%, \(\textbf{v}_\textbf{i}:= (v_{\textbf{i},j})_{\textbf{i} \in I}\)
 \begin{proposition}
     \label{prop:9.1.4}
-    Sejam \(V_j\), \(\alpha_j\) como no \(\blacksquare\) \ref{thm:9.1.3}, \(\beta = (w_s)_{s\in S}\) uma base de \(W\), \(\textbf{v}_\textbf{i}:= (v_{\textbf{i},j})_{\textbf{i} \in I}\) e \(\forall (\textbf{i}, s) \in I \times S\) seja \(\phi_{\textbf{i}, s} \in \hom^k(\Pi V_j, W)\) o único tal que \(\forall \textbf{i}' \in I, \phi_{\textbf{i},s}(v_{\textbf{i}'}) = \delta_{\textbf{i}, \textbf{i}'} w_s\). Então \((\phi_{\textbf{i}, s})\) é l.i., mas ainda, se \(\forall j\leq k, \dim V_j < \infty \) então \((\phi_{\textbf{i}, s})\) é base do \(\hom^k(\Pi V_j, W)\). 
+    Sejam \(V_j\), \(\alpha_j\) como no \(\blacksquare\) \ref{thm:9.1.3}, \(\beta = (w_s)_{s\in S}\) uma base de \(W\) e \(\forall (\textbf{i}, s) \in I \times S\), \(\phi_{\textbf{i}, s} \in \hom^k(\Pi V_j, W)\) o único tal que \(\forall \textbf{i}' \in I, \phi_{\textbf{i},s}((v_{\textbf{i}', j })) = \delta_{\textbf{i}, \textbf{i}'} \ w_s\). Então \((\phi_{\textbf{i}, s})\) é l.i., mas ainda, se \(\forall j\leq k, \dim V_j < \infty \) então \((\phi_{\textbf{i}, s})\) é base do \(\hom^k(\Pi V_j, W)\). 
 \end{proposition}
 
 \comentario{
@@ -52,5 +53,5 @@ Use aquela expressão pra replicar a demostração do \(\blacksquare\) \ref{thm:
 }
 
 \begin{corollary}
-    Sempre temos \(\dim \hom^k(\Pi V_j, W) \geq \dim W \cdot \prod \dim V_j\) com igualdade só no caso em que  \(\forall j \leq k,\ \dim V_j <\infty\). %\footnote{Um abordagem em termos de cardinais pode mostrar que a desigualdade é estrita de fato. }
+    Se \(\forall j\leq k, \ \dim V_j<\infty\) então \(\dim \hom^k(\Pi V_j, W) = \dim W \cdot \prod \dim V_j\). \footnote{Se \(\exists j_0 \leq k: \dim V_j = \infty\) então \(\dim \hom^k(\Pi V_j, W) > \dim W \cdot \prod \dim V_j\). \comentario{Não é um negôcio trivial}}
 \end{corollary}

@@ -15,7 +15,7 @@
     Sejam \(X= \{(x,y) \in \mathbb{S}^1: y > 0 \}\) e \(Y = (-1,1)\). A aplicação \(\pi: X \ni (x,y) \mapsto x \in Y\) é \(^\infty F: X\simeq Y \). \textcolor{gray}{\(\rightarrow\) Verifique as condições}
 \end{example}
 \begin{definition}
-    Um subconjunto \(^k_d M \subseteq \R^n\) é uma \emph{subvariedade} de classe \(C^k\) e dimensão \(d\), se  \(\forall p \in M \), \(\exists\ ^k \varphi: \U_p \cap M \simeq V\ab \subseteq \R^d\) \emph{carta local}, cujas componentes \(\varphi = (\x_1, \ldots, \x_d)\) são \emph{coordenadas locais} de \(M\) em \(p\). A inversa \(\varphi^{-1} = \psi : V \to \U_p \cap M \) é uma \emph{parametrização local} da variedade. 
+    Um subconjunto \(^k_d M \subseteq \R^n\) é uma \emph{subvariedade} de classe \(C^k\) e dimensão \(d\), se  \(\forall p \in M \), \(\exists\ ^k \varphi: \U_p \cap M \simeq V\ab \subseteq \R^d\) \emph{carta local}, cujas componentes \(\varphi = (\x_1, \ldots, \x_d)\) são \emph{coordenadas locais} de \(M\) em \(p\). A inversa \(\psi := \varphi^{-1} : V \to \U_p \cap M \) é uma \emph{parametrização local} da variedade. 
 \end{definition}
 
 \begin{note}
@@ -23,26 +23,28 @@
 \end{note}
 
 \begin{example}
-    \(^{\infty}_{\hspace{0.15cm}n} U\ab,\ ^{\hspace{0.3cm}\infty}_{n-1}\E^{n-1} \subseteq \R^n\). \textcolor{gray}{\(\rightarrow \) \(\varphi = \id_n\) e projeção estereográfica}
+    \(^{\infty}_{\hspace{0.15cm}n} U\ab\). \comentario{ \(\varphi = \psi = \id_n\)}%,\ ^{\hspace{0.3cm}\infty}_{n-1}\E^{n-1} \subseteq \R^n\). \textcolor{gray}{\(\rightarrow \)  e \(\varphi = \pi_{_N}\) projeção estereográfica}
 \end{example}
 
 \begin{lemma}
-    Sejam \(^k_d M \subseteq \R^n \) e \(\psi: V\ab\subseteq \R^d \to M\subseteq \R^n\). Então, \(\psi\) é paremetrização local da \(M\) \(\leftrightharpoons\) \(\psi \) é imersão e homeomorfismo (\(\tau_{_M}\)). 
+    Sejam \(^k_d M \subseteq \R^n \) e \(\psi: V\ab\subseteq \R^d \to M\subseteq \R^n\). Então, \(\psi\) é paremetrização local da \(M\) \(\leftrightharpoons\) \(\psi \) é imersão e homeomorfismo \((M,\tau_{_M})\). 
 \end{lemma}
 
 \demo{(\(\Leftarrow\)) A bijeção é imediata de \(\psi(V)\ab \subseteq M\). Aplique \(\blacksquare\) \hyperlink{thmFLI}{(\emph{FLI})} e faça composição com a projeção. }
 
 \alerta{\centering Imersão injetiva \textcolor{red}{\(\not\Rightarrow \)} homeomorfismo}
 
+
+%\ejemplo{\centering Gráfico de Função \(\textcolor{verdeoscuro}{\Rightarrow}\) Variedade
+%\tcblower
+\begin{example}%[Gráficos]
+    Se \(F\in C^k(U, \R^m)\) então \(\operatorname{graf}(F):= \{(\textbf{x},F(\textbf{x})) \in U\times\R^m\} = \ ^k_n M \subseteq \R^{n+m}\), fazemos \(\psi: \textbf{x} \mapsto (\textbf{x}, F(\textbf{x}))\) e \(\varphi = \pi : (\textbf{x}, F(\textbf{x})) \mapsto \textbf{x}\). Em particular, as hipersuperficies são variedades. \comentario{Segue do {\scriptsize \(\boxtimes\)} \hyperlink{corol84}{8.4.}}
+\end{example}
+%}
+
 \begin{example}[\emph{Coordenadas Esféricas}]
     \(\psi: [0,\pi]^{n-2}\times [0, 2\pi) \to  \E^{n-1} \subseteq \R^n: \)      
-    \[\textstyle (\theta_i) \mapsto \left(\cos\theta_1, \ldots, \prod^{j<i}\sin\theta_j \cdot \cos\theta_{i},\ldots, \prod\sin\theta_i\right). \] 
-\end{example}
-\begin{example}%[Gráficos]
-    Se \(F\in C^k(U, \R^m)\) então \(\operatorname{graf}(F):= \{(\textbf{x},F(\textbf{x})) \in U\times\R^m\} = \ ^k_n M \subseteq \R^{n+m}\), com \(\psi: \textbf{x} \mapsto (\textbf{x}, F(\textbf{x}))\) e \(\varphi = \pi : (\textbf{x}, F(\textbf{x})) \mapsto \textbf{x}\).   
-\end{example}
-\begin{example}
-    Seja \(^k H\subseteq \R^n\) hipersuperficie, então \(^{\hspace{0.5cm}k}_{n-1} H\subseteq \R^n\). \textcolor{gray}{\(\rightarrow\) \(H\) é localmente o gráfico de uma função} 
+    \[\textstyle (\theta_i) \mapsto \left(\cos\theta_1, \ldots, \prod^{i<j}\sin\theta_i \cdot \cos\theta_{j},\ldots, \prod\sin\theta_i\right). \] 
 \end{example}
 
 \begin{proposition}
@@ -55,7 +57,7 @@
 
 \begin{definition}
     Sejam \(^k_dM\subseteq \R^n\) e \(^k \psi_a: V\ab \simeq \U_p\) uma parametrização local tal que \(\psi_a(a)=p\). O \emph{espaço tangente} a \(p \in M \) é dado por,
-    \[ T_pM := \operatorname{Im}(D\psi_a(a))= \bigoplus \R \frac{\partial \psi_a}{\partial x_i} (a)\leq \R^n.\  \footnote{O \emph{espaço afim} \(p + T_pM\) é o "visualmente" tangente a \(M\) em \(p\). }\]
+    \[ T_pM := \operatorname{Im}(D\psi_a(a))= \bigoplus \R \frac{\partial \psi_a}{\partial x_j} (a)\leq \R^n.\  \footnote{O \emph{espaço afim} \(p + T_pM\) é o "visualmente" tangente a \(M\) em \(p\). }\]
 \end{definition}
 
 \begin{proposition}
@@ -63,7 +65,7 @@
 \end{proposition}
     
 \begin{example}
-    Se \(U\ab\subseteq \R^n\) então \(T_pU= \R^n\). 
+    Pra \(^k_nM = U\ab\subseteq \R^n\) temos \(T_pU= \R^n\). 
 \end{example}
 %\begin{example}
 %    Se \(\psi(\alpha_1, \alpha_2)= p \in \E^2\) entonces  
@@ -75,7 +77,7 @@
 %\end{exercise}
 
 \begin{note}
-    De aquí pra frente \(M \sim \ ^{\hspace{0.1cm}k}_{d_1}M\subseteq \R^n\) e \(N \sim \ ^{\hspace{0.1cm}k}_{d_2}N\subseteq \R^m\).
+    De aquí pra frente \(M \sim \ ^{\hspace{0.1cm}k}_{d_1}M\subseteq \R^n\) e \(N \sim \ ^{\hspace{0.1cm}k}_{d_2}N\subseteq \R^m\). Indicaremos dimensão e classe só se fora estritamente necessário. 
 \end{note}
 
 \begin{proposition}
@@ -122,58 +124,61 @@
 %\end{exercise}
 
 \begin{note}
-    Em geral, tudo o que foi visto para aplicações, vale em variedades: 
-    \begin{description}
-        \item[Regla da Cadeia] Se \(F\in C^k(M,N)\) e \(G \in C^k(N,P)\) então \(G \circ F \in C^k(M,P)\) e \(D(G\circ F)(p)  = DG(F(p))\cdot DF(p)\). 
-        \item[Derivada da Identidade] \(D\id_{M} = \id_{T_pM}: T_pM \to T_pM\).  
-        \item[Teorema da Função Inversa] Seja \(F\in C^k(M,N)\) tal que \(D\widetilde{F}(p)\) é isomorfismo, então \(\exists \ ^k F : \U_p \simeq \mathcal{U}_{F(p)}\).  
-    \end{description}
+    Em geral, tudo o visto pra aplicações vale em variedades: 
+    \begin{itemize}[left = 0cm]
+    \item[] \vspace{-1cm}\begin{theorem}[\emph{Regla da Cadeia V2}]
+         Se \(F\in C^k(M,N)\) e \(G \in C^k(N,P)\) então \(G \circ F \in C^k(M,P)\) e \(D(G\circ F)(p)  = DG(F(p))\cdot DF(p)\). 
+    \end{theorem}
+    %\begin{example}[\emph{Derivada da Identidade}] 
+    %    \(D\id_{M} = \id_{T_pM}: T_pM \to T_pM\).  
+    %\end{example}
+    \hypertarget{thmTFIV2}{}
+    \begin{theorem}[\emph{Função Inversa V2}] 
+        Sejam \(F\in C^k(M,N)\) e \(p \in M\). Então, \(\exists \ ^k F : \U_p \simeq \mathcal{U}_{F(p)}\) \(\leftrightharpoons\) \(D\widetilde{F}(p)\) é isomorfismo.  
+    \end{theorem}
+    \end{itemize}
 \end{note}
 
 \subsection*{Valores Regulares}
 
 \begin{definition}
-    Seja \(F \in C^k(M;N)\). Um ponto \(p\in M\) é \emph{regular} se \(F\) é submersão em \(p\), se não fora regular então é \emph{ponto crítico} de \(F\).  
+    Seja \(F \in C^k(M,N)\). Um ponto \(p\in M\) é \emph{regular} se \(F\) é submersão em \(p\), se não fora regular então é \emph{ponto crítico} de \(F\).  
 \end{definition}
 
 \begin{note}
     Se \(\exists p\in M\) ponto regular de \(F\) então \(\dim M \geq \dim N\).
 \end{note}
 
-\ejemplo{ \centering \(\blacksquare\) (Multiplicadores de Lagrange)
+\ejemplo{ \centering \(\blacksquare\) \hyperlink{thmML}{(\emph{Multiplicadores de Lagrange})}
 \tcblower
 \begin{example}
     Seja \(M= \ ^k H\subseteq \R^n\) hipersuperficie definida por \(g(\x)=0\) e \(f: \R^n \to \R\) função escalar, então 
-    \[p \in M \text{ ponto crítico de } f(M) \textcolor{verdeoscuro}{\ \Leftrightarrow\  }df(p): T_pM \not \twoheadrightarrow \R.\]
+    \[p \in M \text{ ponto crítico de } f(M) \textcolor{verdeoscuro}{\ \leftrightharpoons\  }df(p): T_pM \not \twoheadrightarrow \R.\]
 \end{example}
 }
 
 %\{El multiplicador de Lagrange, de nuevo }
 
 \begin{definition}
-    Seja \(F\in C^k(M;N)\). Um valor \(q\in N\) é \emph{valor crítico} se \(\exists p\in M\) tal que \(p \) é ponto crítico de \(F\) e \(F(p)= q\), de outra forma é um \emph{valor regular} de \(F\).  
+    Sejam \(F\in C^k(M,N)\) e \(q\in N\). Dizemos que \(q\) é \emph{valor crítico} se \(\exists p\in M\) tal que \(p \) é ponto crítico e \(F(p)= q\), de outra forma é \emph{valor regular} da \(F\). Conjuntos da forma \(F^{-1}(q)\) são chamados de \emph{fibras}.
 \end{definition}
 
 \alerta{ \centering \(p\in M\) regular \textcolor{red}{\(\nRightarrow\)} \(q = F(p)\) regular}
 
-\begin{note}
-    Um conjunto da forma \(F^{-1}(q)\) é chamado \emph{fibra}.% ou "conjunto de nível". 
-\end{note}
-
 \begin{theorem}[\emph{Fibras Regulares}]
-    Sean \(^{\hspace{0.1cm}k}_{d_1} M\subseteq \R^n\), \(^{\hspace{0.1cm}k}_{d_2}N\), \(F\in C^k(M;N)\). Si \(q \in N\) es un valor regular de \(F\), entonces \(P = F^{-1}(q)\) es \(^{\hspace{0.65cm}k} _{d_1 - d_2}P \subseteq M  \subseteq \R^n\).
+    Sejam \(^{\hspace{0.1cm}k}_{d_1} M\subseteq \R^n\), \(^{\hspace{0.1cm}k}_{d_2}N\), \(F\in C^k(M,N)\). Se \(q \in N\) é valor regular da \(F\), então \(F^{-1}(q) =: \ ^{\hspace{0.85cm}k} _{d_1 - d_2}P \subseteq M  \subseteq \R^n\).
 \end{theorem}
 
-\demo{Sejam \(p = F^{-1}(q)\) e \(d_1 - d_2 = c \). Note que \(\R^c \cong \ker DF(p) \leq \R^n\), defina \(L: \R^n \to \R^c\) tal que \(L\cdot \ker DF(p)\) é isomorfirsmo. Faça \(G:M \to N \times \R^c\) tal que \(\x\mapsto (F(\x), L(\x))\). Aplique \(\blacksquare\) (TFI) e conclua. }
+\demo{Sejam \(p = F^{-1}(q)\) e \(d_1 - d_2 = c \). Note que \(\R^c \cong \ker DF(p) \leq \R^n\), defina \(L: \R^n \to \R^c\) tal que \(L\cdot \ker DF(p)\) é isomorfirsmo. Faça \(G:M \ni \x\mapsto (F(\x), L(\x)) \in  N \times \R^c\), aplique \(\blacksquare\) \hyperlink{thmTFIV2}{(\emph{Função Inversa})} e conclua. }
 
 \begin{example}
-    \(1\) é valor regular de \(g: \R^n \ni \textbf{x}\mapsto  \sum x_i^2 \in \R\) e \(g^{-1}(1)= \E^{n-1}\). 
+    \(1\) é valor regular de \(g: \R^n \ni \textbf{x}\mapsto  \sum^n x_j^2 \in \R\) e \(g^{-1}(1)= \E^{n-1}\). 
 \end{example}
 
 \ejemplo{ \centering Variedades de dimensão \(0\) 
 \tcblower 
 \begin{example}
-    Sejam \(F\in C^k(M;N)\) com \(\dim M = \dim N \) e \(q \in N \) valor regular de \(F\). Então, \(P = F^{-1}(q)\) é um conjunto discreto. Ainda mais, se \(M\) fora compacto \(\Rightarrow |P| < \infty\). \textcolor{gray}{\(\rightarrow \ \R^0 = \{0\} \) }
+    Sejam \(F\in C^k(M,N)\) com \(\dim M = \dim N \) e \(q \in N \) valor regular de \(F\). Então, \(P = F^{-1}(q)\) é um conjunto discreto. Ainda mais, se \(M\) fora compacto \(\Rightarrow \#P < \infty\). \textcolor{gray}{\(\rightarrow \ \R^0 = \{\text{o}\} \) }
 \end{example}
 }
 
@@ -190,32 +195,33 @@
 %\end{note}
 
 \begin{theorem}[\emph{Brown-Sard}]
-    Seja \(F\in C^k(M;N)\). Se \(k \gg 0\) então o subconjunto de valores regulares de \(F\) é denso em \(N\).% \footnote{Se exige \(k\geq \dim M - \dim N + 1\) pero así se ve mas bonito }
+    Seja \(F\in C^k(M,N)\). Se \(k \gg 0\) então o subconjunto de valores regulares de \(F\) é denso em \(N\).% \footnote{Se exige \(k\geq \dim M - \dim N + 1\) pero así se ve mas bonito }
 \end{theorem}
 
 \begin{note}
-    A medida de \(B= (a_i,b_i)^n\subseteq \R^n\) bloque aberto é \(\mu(B):= \prod (b_i-a_i)\).
+    A \emph{medida} de \(B= (a_j,b_j)^n\subseteq \R^n\) bloco aberto é \(\mu(B):= \prod (b_j-a_j)\).
 \end{note}
 
 \begin{definition}
-    Um subconjunto \(S\subseteq \R^n\) tém \emph{medida nula} se \(\forall \epsilon >0\),  \(\exists B_i\) bloques abertos tais que  \(S\subseteq \bigcup B_i\) e \(\sum \mu(B_i)< \epsilon\). .  
+    \(S\subseteq \R^n\) tém \emph{medida nula} sse \(\forall \epsilon >0\),  \(\exists  (B_i)\) familia de blocos abertos tais que  \(S\subseteq \bigcup B_i\) e \(\sum \mu(B_i)< \epsilon\). .  
 \end{definition}
 
+%\begin{example}
+%    Se \(n<m\) então \(\R^n\times \{0\}\subseteq \R^m\) tém medida nula.   
+%\end{example}
 \begin{example}
-    Se \(n<m\) então \(\R^n\times \{0\}\subseteq \R^m\) tém medida nula.   
+    \(S\subseteq \R^n\) enumerável tém medida nula.  \textcolor{gray}{\(\rightarrow\) São pontos isolados} 
 \end{example}
-\begin{example}
-    \(S\subseteq \R^n\) enumerável tém medida nula.  \textcolor{gray}{\(\rightarrow\) Pontos isolados} 
-\end{example}
+\hypertarget{thmSard}{}
 \begin{theorem}[\emph{Sard}]
-    Sejam \(U\ab\subseteq \R^n\) e \(F\in C^k(U; \R^m)\) tal que \(k\geq \{n-m+1, 1\}\). Então, o conjuntos de valores críticos de \(F\) tém medida nula em \(\R^n\). 
+    Sejam \(U\ab\subseteq \R^n\) e \(F\in C^k(U, \R^m)\) tal que \(k\geq \{n-m+1, 1\}\). Então, o conjunto dos valores críticos de \(F\) tém medida nula em \(\R^m\). 
 \end{theorem}
 
-\begin{example}
-    Pelo \(\blacksquare\) (Sard) \  \(^k_d M\subseteq \R^n\) com \(d<n\) tém medida nula. \textcolor{gray}{\(\rightarrow\) Todos os valores da inclusão \(\iota : M \hookrightarrow \R^n\) são críticos}
-\end{example}
+\begin{corollary}
+    %Segue do \(\blacksquare\) \hyperlink{thmSard}{(\emph{Sard})} que  
+    Se \(d<n\), então \(^k_d M\subseteq \R^n\) tém medida nula. \textcolor{gray}{\(\rightarrow\) Todos os valores da inclusão \(\iota : M \hookrightarrow \R^n\) são críticos}
+\end{corollary}
 
 \begin{exercise}
-    Se \(S\subseteq \R^n \) tém medida nula então \(\R^n\setminus S \) é denso. 
+    Se \(S\subseteq \R^n \) tém medida nula então \(\R^n\setminus S \) é denso em \(\R^n\). 
 \end{exercise}
-

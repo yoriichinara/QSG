@@ -2,7 +2,7 @@
 \subsection{Dualidade}
 
 \begin{definition}
-    Seja \(V\) \(\F\)-espaço vetorial. Então, \(V':= \hom(V,\F)\) é o \emph{espaço dual} de \(V\) e \(f \in V'\) é chamado de \emph{funcional linear} em \(V\).   
+    Seja \(V\) \(\F\)-espaço vetorial. Denotamos por \(V':= \hom(V,\F)\), o \emph{espaço dual} de \(V\), \(f \in V'\) é chamado de \emph{funcional linear} em \(V\).   
 \end{definition}
 
 \begin{definition}
@@ -56,7 +56,7 @@ Sejam \(\alpha = (v_i)\) base de \(V\) e \(\mathcal{F} (I,\F) \ni (a_i) \sim a: 
 \end{corollary}
 
 \begin{lemma}
-    Sejam \(V, \ W\) \(\F\)-espaços vetoriais e \(T\in \hom(V,W)\). A \emph{adjunta} de \(T\), \(T': W' \to V'\) que leva \( f \mapsto f\circ T \) é uma transformação linear. \comentario{Segue de propiedades da composição} 
+    Sejam \(V, \ W\) \(\F\)-espaços vetoriais e \(T\in \hom(V,W)\). O \emph{operador adjunto}, \(T': W' \ni f \mapsto f \circ T \in V' \in \hom(W',V')\). \comentario{Propiedades da composição} 
 \end{lemma}
 
 \propositionnum{9.2.3.}
@@ -66,5 +66,5 @@ Sejam \(\alpha = (v_i)\) base de \(V\) e \(\mathcal{F} (I,\F) \ni (a_i) \sim a: 
 \end{proposition}
 
 \demo{
-    Sejam \(\alpha = (v_j)\), \(\beta= w_i\) e  \([T]^\alpha_\beta = (a_{ij})\). Escreva \(T(v_j) = \sum^{m} a_{ij} w_i\), logo note que a entrada \(b_{ji}\) da \([T']^{\beta'}_{\alpha'}\) é precisamente \(T'(g_i)(v_j)\). 
+    Sejam \(\alpha = (v_j)\), \(\beta= (w_i)\) e  \([T]^\alpha_\beta = (a_{ij})\). Escreva \(T(v_j) = \sum^{m} a_{ij} w_i\), logo note que a entrada \(b_{ji}\) da \([T']^{\beta'}_{\alpha'}\) é precisamente \(T'(g_i)(v_j)\). 
 }

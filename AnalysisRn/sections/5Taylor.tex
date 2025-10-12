@@ -5,7 +5,7 @@
     \tcblower
     \begin{example}
         Se \(f\in C^2(U)\) e \(p\in U\), então  
-        \[\textstyle  f(p+v) = \underbrace{f(p) + \sum \frac{\partial f }{\partial x_i}(p)v_i+ \frac{1}{2}\sum \frac{\partial f}{\partial x_i \partial x_j}(p) v_iv_j}_{P_2[v]} + \underbrace{\sigma(\|v\|^2)}_{\Gamma_2[v]}.\]
+        \[\textstyle  f(p+v) = \underbrace{f(p) + \sum \frac{\partial f }{\partial x_j}(p)v_j+ \frac{1}{2}\sum \frac{\partial f}{\partial x_i \partial x_j}(p) v_iv_j}_{P_2[v]} + \underbrace{\sigma(\|v\|^2)}_{\Gamma_2[v]}.\]
     \end{example}
 }
 
@@ -45,7 +45,7 @@
     Seja \(f\) função \(2\)-diff  em \(p\), a \emph{Hessiana} da \(f\) em \(p\), é a matriz   
     \[ Hf(p) = \left(\frac{\partial^2 f}{\partial x_i\partial x_j}(p)\right)_{i,j} =  \begin{bmatrix}
         \frac{\partial^2 f }{\partial x_1^2}(p) & \cdots &  \frac{\partial^2 f }{\partial x_1 \partial x_n}(p) \\
-        \rotatebox{90}{$\cdots$} & \ddots & \rotatebox{90}{$\cdots$} \\
+        \rotatebox{90}{$\cdots$} & \rotatebox{45}{$\cdots$} & \rotatebox{90}{$\cdots$} \\
         \frac{\partial^2 f }{\partial x_n \partial x_1}(p) & \cdots & \frac{\partial^2 f }{\partial x_n^2}(p)
     \end{bmatrix}.\]
 \end{definition}
