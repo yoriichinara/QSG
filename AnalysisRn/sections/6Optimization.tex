@@ -35,7 +35,7 @@
 }
 
 \begin{definition}
-    A forma quadrâtica de \(A \in \operatorname{Sym}_n(\R)\) é \emph{positiva} se \(\forall v\in \R^n \setminus \{0\}\), \(\langle Av, v\rangle > 0\), \emph{negativa} se \(\langle Av, v\rangle<0\) ou \emph{indefinida} se for outro o caso. 
+    \(A \in M_{n }(\R)\) é \emph{positiva} se \(\forall v\in \R^n \setminus \{0\}\), \( \phi (v,v) := [v]^t A [v] =  \langle v, Av\rangle > 0\), \emph{negativa} se \(\phi(v,v)<0\) ou \emph{indefinida} se for outro o caso. 
 \end{definition}
 
 \Ei
@@ -53,20 +53,20 @@
 %\end{theorem}
 
 \begin{lemma}
-    Sejam \(A\in \operatorname{Sym}_{n}(\R)\) e \(\lambda_1, \ldots, \lambda_n\) seus autovalores. Então \(A\) é positiva (ou negativa) \(\leftrightharpoons\) \( \forall j\leq n, \ \lambda_j>0 \) (ou \(\lambda_j <0\)). \textcolor{gray}{\(\rightarrow \) Teorema Espectral}
+    Sejam \(A\in M_n(\R)\) simétrica e \((\lambda_j)\) seus autovalores. Então, \(A\) é positiva (ou negativa) \(\leftrightharpoons\) \( \forall j\leq n, \ \lambda_j>0 \) (ou \(\lambda_j <0\)). \comentario{\(\blacksquare \) (\emph{Teorema Espectral})}
 \end{lemma}
 
 \begin{theorem}
     Seja \(f\) função \(2\)-diff em \(p\in U\) ponto crítico. Se \(Hf(p)\) é positiva (ou negativa) então \(f(p)\) é um mínimo (ou máximo) local. 
 \end{theorem}
-\demo{Use \ \(\mathbb{S}^{n-1} \ni \vec{u}\mapsto \langle Hf(p)u, u \rangle\) para argumentar a existência de uma cota. Interprete essa cota no desenvolvimiento de Taylor de ordem $2$. }
+\demo{Use \ \(\mathbb{S}^{n-1} \ni \vec{u}\mapsto \langle u, Hf(p)\cdot u \rangle\) pra ver que existe uma cota. Interprete essa cota no desenvolvimiento de Taylor de ordem $2$. }
 
 \begin{definition}
-    Seja \(f\) função \(2\)-diff, \(p\) ponto crítico de \(f\) e \(\lambda_1, \ldots, \lambda_n\) os autovalores de \(Hf(p)\). O ponto \(p\) é \emph{ponto de sela} sse \(\exists \ i,j\leq n\) tais que \(\lambda_i\lambda_j <0\). 
+    Sejam \(f\) função \(2\)-diff e \((\lambda_j)\) os autovalores de \(Hf(p)\). Um ponto crítico \(p\) de \(f\) é \emph{ponto de sela} sse \(\exists \ i,j\leq n\) tais que \(\lambda_i\lambda_j <0\). 
 \end{definition}
 \begin{note}
-    Se \(\lambda_i > 0 \) então \(f\) tem mínimo local na direção de \(\vec{v_i}\) (seu autovetor), 
-    \[\langle Hf(p)\cdot v_i, v_i\rangle = \lambda_i \langle v_i, v_i\rangle > 0\]   
+    Se \(\lambda_j > 0 \) então \(f\) tem mínimo local na direção de \(\vec{v_j}\) (seu autovetor), 
+    \[\langle v_j, Hf(p)\cdot v_j\rangle = \lambda_j \langle v_j, v_j\rangle > 0.\]   
 \end{note}
 \begin{example}
     \(f(x,y) = x^2 + 3y^4+ 4y^3 - 12y^2\). \textcolor{gray}{\(\rightarrow\) Estude os pontos \(p\) tais que \(\nabla f(p)=0\) e sua clasificação segum \(Hf(p)\) }

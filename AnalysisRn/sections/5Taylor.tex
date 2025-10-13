@@ -29,7 +29,7 @@
 %\end{note}
 
 \ejemplo{\centering 
-    \(d^2f(p)v = vA(p) v^T \) é forma bilinear quadrâtica de grau 2  
+    \(d^2f(p)v = [v]^tA(p)[v] \in B(\R^n)\)   
     \tcblower
     \begin{example}
     Para \(f\in C^2(\R^2)\), sendo \(v=(h,k)\) temos \[\textstyle d^2f(p)v^{\otimes 2} = \frac{\partial^2 f}{\partial x^2}(p)h^2 + 2 \frac{\partial^2 f }{\partial x\partial y}(p)hk+ \frac{\partial^2 f}{\partial y^2}(p)k^2.\]  
@@ -50,7 +50,7 @@
     \end{bmatrix}.\]
 \end{definition}
 \begin{note}
-    Pelo \(\blacksquare\) \hyperlink{thmSchw}{(\emph{Schwarz})}, \(\exists !Hf(p) \in \operatorname{Sym}_n(\R)\) \(: d^2f(p)v^{\otimes 2} = \langle Hf(p)\cdot v, v\rangle \). 
+    Pelo \(\blacksquare\) \hyperlink{thmSchw}{(\emph{Schwarz})}, \(\exists !Hf(p) \in M_n(\R)\) simétrica tal que  \(d^2f(p)v^{\otimes 2} = [v]^t [Hf(p)] [v] = \langle v, Hf(p)\cdot v\rangle  \in B_s(\R^n)\). 
 \end{note}
 
 \Ei 
