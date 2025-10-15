@@ -27,8 +27,8 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA71
 \begin{definition}
     Considere as transformações (lineares) \(_\phi D : V \to W'\) e \(D_\phi: W \to V'\) tais que \(_\phi D (w)(v) = D_\phi (v)(w) = \phi(v,w)\). Definimos: 
     \begin{itemize}[label = \(\star\)]
-        \item \emph{Radical} a esquerda \( \rightarrow \mathcal{N}(\textcolor{red}{_\phi} D)  \ni v \leftarrow \) \emph{Vetor degenerado} a esquerda.  
-        \item \(\phi\) é \emph{não degenerada} a esquerda sse \(\mathcal{N}(_\phi D) = \{0\}\). 
+        \item \emph{Radical} a esquerda \( \rightarrow \ker \textcolor{red}{_\phi} D  \ni v \leftarrow \) \emph{Vetor degenerado} a esquerda.  
+        \item \(\phi\) é \emph{não degenerada} a esquerda sse \(\ker {_\phi D} = \{0\}\). 
     \end{itemize}
     Com definições análogas pra o caso de \(D_\phi\) (direita). 
 \end{definition}
@@ -44,19 +44,19 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA71
 \demo{Como na \(\square\) \ref{prop:9.2.3} a gente ganha, de trabalhar com \(\alpha'\) mesma que a entrada \((i,j)\) de \([D_\phi]^\beta_{\alpha'}\) é justamente \(D_\phi(w_j,v_i) = \phi(v_i,w_j)\), a outra igualdade consegue-se num analisé semelhante. }
 
 \begin{corollary}
-    \textbf{9.3.4.} Se \(\dim V\) \textcolor{gray}{(ou \(W\))} é finita e \( \mathcal{N}(_\phi D) = \{0\}\), são equivalentes: %\(\leftrightharpoons\) \(_\phi D, \ D_\phi\) são isomorfismos. Em particular, \(\dim V = \dim W\). 
+    \textbf{9.3.4.} Se \(\dim V\) \textcolor{gray}{(ou \(W\))} é finita e \( \ker {_\phi D} = \{0\}\), são equivalentes: %\(\leftrightharpoons\) \(_\phi D, \ D_\phi\) são isomorfismos. Em particular, \(\dim V = \dim W\). 
     \begin{enumerate}[left = 1.8cm, label = \roman*.]
-        \item \(\{0\} = \mathcal{N}(D_\phi)  \).  \hspace{4cm} ii. \(\dim V = \dim W\).  
+        \item \(\{0\} = \ker D_\phi  \).  \hspace{4cm} ii. \(\dim V = \dim W\).  
         \item[iii.] \(_\phi D\) é isomorfismo. \hspace{3cm} iv. \(D_\phi\) é isomorfismo. 
     \end{enumerate}
 \end{corollary}
 
 \demo{
-    Prova i, iii, iv \(\leftrightharpoons\) ii. Não é díficil, pra as voltas usa \(\square\) \ref{prop:933}. O resultado também vale trocando \(\mathcal{N}(_\phi D) \) por \(\mathcal{N}(D_\phi)\)  
+    Prova i, iii, iv \(\leftrightharpoons\) ii. Não é díficil, pra as voltas usa \(\square\) \ref{prop:933}. O resultado também vale trocando \(\ker {_\phi D} \) por \(\ker D_\phi\)  
 }
 
 \begin{note}
-    Se \(\phi \in B(V)\) e \(\dim V < \infty \) temos \(\mathcal{N}(_\phi D) = \{0\} \ \leftrightharpoons\ \mathcal{N}(D_\phi) = \{0\}\), então dizemos simplesmente \(\phi\) \emph{não degenerada}. 
+    Se \(\phi \in B(V)\) e \(\dim V < \infty \) temos \(\ker {_\phi D} = \{0\} \ \leftrightharpoons\ \ker D_\phi = \{0\}\), então dizemos simplesmente \(\phi\) \emph{não degenerada}. 
 \end{note}
 
 \begin{definition}
@@ -94,7 +94,7 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA71
 \end{definition}
 
 \begin{note}
-    Ambos \(\alpha^{\perp_\phi}\) e \(^{\perp_\phi}\alpha\) são os \emph{subespaços ortogonais} a direita e esquerda, respetivamente. Em particular, \(\mathcal{N}(D_\phi) = V^{\perp_\phi}\) e \(\mathcal{N}(_\phi D) = \hspace{0.1cm}^{\perp_\phi}V\).
+    Ambos \(\alpha^{\perp_\phi}\) e \(^{\perp_\phi}\alpha\) são os \emph{subespaços ortogonais} a direita e esquerda, respetivamente. Em particular, \(\ker D_\phi = V^{\perp_\phi}\) e \(\ker  {_\phi D} = \hspace{0.1cm}^{\perp_\phi}V\).
 \end{note}
 
 \begin{lemma}
