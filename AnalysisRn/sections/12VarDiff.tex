@@ -98,7 +98,7 @@
     Se \(F\in C^k(M,N)\) então \(DF(p)\) não depende da \(\widetilde{F}\).  
 \end{lemma}
 
-\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\hat{\psi}_{b}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\hat{\varphi} \circ F \circ \psi: V \to \hat{V}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}(D\psi_a(a))\mapsto \operatorname{Im}(D\hat{\psi}_{b}(b))\). \vspace{0.3cm}}
+\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\check{\psi}_{b}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\check{\varphi} \circ F \circ \psi: V \to \check{V}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}(D\psi_a(a))\mapsto \operatorname{Im}(D\check{\psi}_{b}(b))\). \vspace{0.3cm}}
 }
 
 \begin{tikzpicture}[scale = 1.2, >=to, shift={(11.95cm,1.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
@@ -113,9 +113,9 @@
     %\node (c1) at (3.6,1) {\rotatebox{90}{$\longmapsto$}};
 
     \draw[->] (Up) -- node[above, xshift = -0.45cm, yshift = -0.4cm] {\scriptsize \(\psi\)} (U);
-    \draw[->] (Up) -- node[below] {\scriptsize \(D(\varphi{'}\circ F \circ \psi)\)} (Rn);
+    \draw[->] (Up) -- node[below] {\scriptsize \(D(\check{\varphi}\circ F \circ \psi)\)} (Rn);
     \draw[->] (U) -- node[above] {\scriptsize \(DF\) } (Rn2);
-    \draw[->] (Rn) -- node[right, xshift = 0.05cm, yshift = 0cm] {\scriptsize \(\hat{\psi}\)} (Rn2);
+    \draw[->] (Rn) -- node[right, xshift = 0.05cm, yshift = 0cm] {\scriptsize \(\check{\psi}\)} (Rn2);
     \draw[->, color = gray, >=to] (1.15,0.85) arc (240:-60:0.25);
 
 \end{tikzpicture}

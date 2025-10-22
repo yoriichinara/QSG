@@ -1,30 +1,30 @@
 \section{Integração em Variedades}
 
-Nesta seção \(\mathcal{I} := [0,1]\subset \R\).
+Nesta seção \(\mathcal{I} := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)}'\) únicamente para o pull-back \(\sim\) espaço dual, isso vai continuar assim, não confundir com derivadas.  
 \newcommand{\I}{\mathcal{I}}
 
 \subsection*{Integração em Cadeias}
 
 \begin{definition}
-    Um \(k\)\emph{-bloco singular} em \(M\subseteq \R^n\) é uma aplicação \(\sigma \in C^\infty(\I^k, M)\).
+    Um \(k\)\emph{-bloco} em \(M\subseteq \R^n\) é uma aplicação \(\sigma \in C^\infty(\I^k, M)\).
 \end{definition}
 
 %\ejemplo{ \centering  
 %    \tcblower
 \begin{example}
-    O $n$\emph{-bloco padrão}, \(\id_{\I^n} : \I^n \to \I^n \subset \R^n \). Uma curva suave \(c : \I \to M \) é um \(1\)-bloco singular. 
+    O $n$\emph{-bloco padrão}, \(\id_{\I^n} : \I^n \to \I^n \subset \R^n \). Uma curva suave \(c : \I \to M \) é um \(1\)-bloco. 
 \end{example}
 
 \alerta{
-\centering \(\sigma \  \ k\)-bloco singular \(\textcolor{red}{\neq}  \ \ \operatorname{Im}\sigma\subseteq M\) 
+\centering \(\sigma \  \ k\)-bloco \(\textcolor{red}{\neq}  \ \ \operatorname{Im}\sigma\subseteq M\) 
 \tcblower
 \begin{example}
-    \(\sigma: \I^n \ni \x \mapsto p \in M \) é um $n$-bloco singular.%, chamamos ele em particular de $n$\emph{-cubo singular}. 
+    \(\sigma: \I^n \ni \x \mapsto p \in M \) é um $n$-bloco.%, chamamos ele em particular de $n$\emph{-cubo singular}. 
 \end{example}
 }
 
 \begin{definition}
-    Sejam \(\omega \in \Omega^k(M)\) e \(\sigma \) um $k$-bloco singular. Então,   
+    Sejam \(\omega \in \Omega^k(M)\) e \(\sigma \) um $k$-bloco. Então,   
     \[\int_\sigma \omega := \int_{\I^k} \sigma'(\omega) = \int_{\I^k}f(\x) \ dx_1\wedge \cdots \wedge dx_k =\int_{\I^k} f(\x) \ d\x. \]  
 \end{definition}
 
@@ -38,18 +38,18 @@ Nesta seção \(\mathcal{I} := [0,1]\subset \R\).
 
 %\parbox[l]{0.6\linewidth}{
 \begin{definition}
-    Uma $k$\emph{-cadeia} de blocos singulares em \(M\) é uma expresão da forma 
-    \[ c = \overset{k}{\sum} n_i \sigma_i, \ n_i \in \mathbb{Z} \ \text{e } \sigma_i:I^k\to  M.\] 
+    Uma $m$\emph{-cadeia} de blocos em \(M\) é uma ex-\\ 
+    presão da forma, 
+    \[ c = {\sum^m} n_i \sigma_i, \ n_i \in \mathbb{Z} \ \text{e } \sigma_i:\I^k\to  M.\  \footnote{Mais formalmente, as $k$-cadeias são elementos do grupo abeliano livre gerado pelos $k$-blocos. }\hspace{7.5cm}\] 
     %onde \(n_j \in \mathbb{Z} \) e \(\sigma_j: I^k \to M \) é um $k$-cubo singular.
 \end{definition}
 %}
-\vspace{0.3cm}
-\begin{example}
- \(c = 2c_1 + c_2 \textcolor{red}{-} c_3\).    
-\end{example}
+%\begin{example}
+ %. %
+%end{example}
 
-\- \vspace{-1cm}
-\begin{tikzpicture}[>=to, shift={(8.25cm,-1.1cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\- \vspace{-1.3cm}
+\begin{tikzpicture}[>=to, shift={(11.5cm, 0.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
   % Dibuja la cuadrícula de puntos
 
   % C1
@@ -70,21 +70,17 @@ Nesta seção \(\mathcal{I} := [0,1]\subset \R\).
     \node at (3.12,2.4) {\rotatebox{-39}{$>$}};
 
     \node[red] at (5.35,3.05) {\rotatebox{230}{$>$}};
+    \node at (3.5,1) {$c = 2c_1 + c_2 \textcolor{red}{-} c_3$};
 
 \end{tikzpicture}
 
-\begin{note}
-    Mais formalmente, as $k$-cadeias são elementos do grupo abeliano livre gerado pelos $k$-blocos singulares. 
-\end{note}
-\vspace{-0.3cm}
-%\parbox[l]{0.3\linewidth}{\ }
 \begin{definition}
-    Se \(\omega \in \Omega^k(M)\) e \(c \) é uma $k$-cadeia singular, então \(\displaystyle \int_c \omega =  \sum^k n_i\int_{\sigma_i} \omega .\)  
+    Sejam \(\omega \in \Omega^k(M)\) e \(c \) $k$-cadeia, então \(\displaystyle \int_c \omega :=  \sum^k n_i\int_{\sigma_i} \omega .\)  
 \end{definition}
 
 \vspace{-0.3cm}
 \begin{definition}
-    Seja \(\sigma \) um $k$-bloco singular. O \emph{borde} de \(\sigma\) é a \((k-1)\)-cadeia dada por
+    Seja \(\sigma \) um $k$-bloco. O \emph{borde} de \(\sigma\) é a \((k-1)\)-cadeia dada por
     \- \vspace{-0.2cm}
     \[\hspace{5cm} \partial \sigma = \sum^k (-1)^i (\sigma_{(i,0)}- \sigma_{(i,1)}).\]
 \end{definition}
@@ -149,10 +145,41 @@ Nesta seção \(\mathcal{I} := [0,1]\subset \R\).
 
 \vspace{-1cm}
 \begin{exercise}
-    Se \(c\) é uma $k$-cadeia, então \(\partial (\partial c) = 0 \). \textcolor{gray}{\(\rightarrow\) \(\partial^2 = 0\), olha no Spivak}  
+    Se \(c\) é uma $k$-cadeia, então \(\partial (\partial c) = 0 \). \textcolor{gray}{\(\rightarrow\) Olha no \cite{spivak2018}}  
 \end{exercise}
 
+\hypertarget{thmStokes}{}
 \begin{theorem}[\emph{Stokes}]
-    Seja \(\omega \in \Omega^{k-1}(M)\) e \(c\) $k$-cadeia em \(M\), então
-    \[\int_c d\omega = \int_{\partial c } \omega.\]
+    Sejam \(\omega \in \Omega^{k-1}(M)\) e \(c\) $k$-cadeia em \(M\). Então, \(\displaystyle \int_c d\omega = \int_{\partial c } \omega\).
 \end{theorem}
+
+\demo{
+  \textcolor{black}{\emph{Nota.}} Podemos fazer algumas suposições inicias: \textcolor{black}{
+\begin{enumerate}[label = \roman*., left = -0.5cm]
+    \item \(c = \sigma \) $k$-bloco. \comentario{Se valer \(\blacksquare\) \hyperlink{thmStokes}{(\emph{Stokes})} pra $k$-blocos então, \(\int_c d\omega = \sum n_i \int_{\sigma_i} d \omega = \sum n_i \int_{\partial \sigma_i} \omega = \int_{\sum n_i \partial \sigma_i} w = \int_{\partial c} w \) }
+    \item \(\sigma = \id_{\I^k} \) e \(M\) uma vizinhanza de \( \I^k\). \comentario{\(\textstyle\int_\sigma d\omega = \int_{\id_{\I^k}} \sigma ' (dw) = \int_{\id_{\I^k}} d (\sigma '(w)) = \int_{\partial \id_{\I^k}} \sigma '(w) = \int_{\partial \sigma} w \). }
+    \item \(\omega = f \hat{w}_i \in \Omega^{k-1}(U),\ U\ab\subseteq \R^k : \I^k\subset U\). \comentario{\(\textstyle\int_{\sigma} d\omega = \int_{\sigma} d\left(\sum f_i \hat{\omega}_i\right) = \sum \int_{\sigma} d\left( f_i \hat{\omega}_i\right) = \sum \int_{\partial \sigma}  f_i \hat{\omega}_i = \int_{\partial \sigma} \omega\). }
+\end{enumerate}}
+}
+%
+%\hypertarget{thmFubini}{}
+%\begin{theorem}[\emph{Fubini}]
+%  Sejam \(B_1\ce\subseteq \R^n, \ B_2\ce \subseteq\R^m\) blocos e \(f: B_1 \times B_2 \to \R\) integravél. Então, \(\int_{B_1}\left(\int_{B_2} f(x,y) dy\right) dx = \int_{B_2}\left(\int_{B_1} f(x,y) dx\right) dy \).  
+%\end{theorem}
+
+%\hypertarget{thmTFC}{}
+%\begin{theorem}[\emph{\textbf{T}eorema \textbf{F}undamental del \textbf{C}álculo}]
+%  
+%\end{theorem}
+%
+\demo{
+  Supondo i., ii. e iii. precisamos analizar os dois lados da igualdade:  
+  \vspace{0.4cm}
+  \begin{itemize}[left = 0cm]
+    \item \(\int_{\partial \sigma} \omega = \textstyle \sum (-1)^j\left(\int_{\sigma(j,0)} \omega - \int_{\sigma_{(j,1)}} \omega \right) = \sum (-1)^j(\)\(\int_{\I^{k-1}} \sigma_{(j,0)} ' (\omega) - \int_{\I^{k-1}} \sigma_{(j,1)}'(\omega) ) \). Note que, \(\sigma_{(j,0)}'(\omega)= \sigma_{(j,1)}'(\omega)=0\) se \(i \neq j\), pois  \(x_j\) constante \(\Rightarrow\) \(dx_j= 0 \), assim, 
+    \[\int_{\partial \sigma } \omega = (-1)^i \int_\sigma \left[f(x_1, \ldots, 0, x_k)- f(x_1, \ldots, 1, \ldots, x_k)\right] \hat{w}_i.\]
+    \item Do outro lado temos, \(\textstyle\int_\sigma d\omega = \int_\sigma d(f \hat{\omega}_i) = \int_\sigma (-1)^{i-1} f_{x_i} \left(\cuna dx_j\right) = (-1)^{i-1} \int_{\I^k} f_{x_i} d\x\). Usando \(\blacksquare\) {(\emph{Fubini})} e \(\blacksquare\) {(\emph{TFC})} temos, \(\int_\sigma d\omega = (-1)^{i-1}\int_{\I^{k-1}} \left(\int_0^1 f_{x_i} dx_i \right)\hat{\omega}_i\), finalmente 
+    \[  \int_\sigma d\omega = (-1)^{i-1} \int_\sigma \left[f(x_1, \ldots, 1, x_k)- f(x_1, \ldots, 0, \ldots, x_k)\right] \hat{w}_i.\]
+  \end{itemize}
+%  
+}

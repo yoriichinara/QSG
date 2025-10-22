@@ -120,9 +120,9 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \begin{example}
     \(\pi: (x,y,z) \mapsto (x,y)\) e \(\phi = \det \in \operatorname{Alt}^2_\R(\R^2)\) então, 
 \vspace{-0.3cm}
-    \[\pi'(\phi) ((x,y,z), (\hat{x}, \hat{y}, \hat{z})) = \phi( (x,y), (\hat{x},\hat{y})) = \det \begin{bmatrix}
-        x & \hat{x}\\ 
-        y & \hat{y}
+    \[\pi'(\phi) ((x_1,y_1,z_1), (x_2,y_2,z_2)) = \phi( (x_1,y_1), (x_2,y_2)) = \det \begin{bmatrix}
+        x_1 & x_2\\ 
+        y_1 & y_2
     \end{bmatrix}. \] 
 \end{example}
 }
@@ -285,7 +285,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = 
 \end{example}
      
 \begin{definition}
-    Sejam \(M\) orientavél e \(\omega, \hat{\omega} \in \Omega^d(M)\) formas de orientação.  Dizemos que \(\omega \sim \hat{\omega}\) se \(\exists f>0\) tal que \(\omega = f \hat{\omega}\). Uma \emph{orientação} de \(M\) é \(\overline{\omega} \in \Omega^d(M)/\hspace{-0.1cm}\sim\). 
+    Sejam \(M\) orientavél e \(\omega_1, \omega_2 \in \Omega^d(M)\) formas de orientação.  Dizemos que \(\omega_1 \sim \omega_2\) se \(\exists f>0\) tal que \(\omega_1 = f \omega_2\). Chamamos de \emph{orientações} de \(M\) as classes  \(\overline{\omega} \in \Omega^d(M)/\hspace{-0.1cm}\sim\). 
 \end{definition}
 
 \begin{exercise}
@@ -305,8 +305,8 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = 
 \parbox[a]{0\linewidth}{ \ } 
 \parbox[b]{1\linewidth}{
 \begin{example}
-    \(H := \{\x \in \R^n: g(\x)=0\}\) é orientavél. Sendo \(\vec{n}(p) = \frac{\nabla g(p) }{\|\nabla g(p)\|} \perp  T_pH\), sua forma de volume é
-    \[\omega_\text{vol} = \sum (-1^{i+1}) \vec{n_i} \  dx_1\wedge \cdots \wedge \textcolor{gray}{\cancel{dx_i}} \wedge \cdots \wedge dx_n \Big|_{H}.\hspace{4.5cm}\]     
+    \(H := \{\x \in \R^n: g(\x)=0\}\) é orientavél. Sendo \(\vec{n}(p) = \frac{\nabla g(p) }{\|\nabla g(p)\|} \perp  T_pH\) e \(\hat{\omega}_i := dx_1 \wedge \cdots \wedge \textcolor{gray}{\cancel{dx_i}} \wedge \cdots \wedge dx_n\),
+    \[\hat{\omega} = \omega_{\text{vol}} = \sum (-1^{i+1}) \vec{n_i} \ \hat{\omega}_i \Big|_{H}.\hspace{4.5cm}\]     
 \end{example}
 } 
 }
@@ -326,8 +326,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = 
 \vspace{-1cm}
 
 \begin{example}
-    Em \(H = \E^{n-1}\subseteq \R^n\) temos \(\vec{n}(x) = \frac{\x}{\|\x\|}\), logo, 
-    \[\omega_\text{vol} = \sum (-1)^{i+1} x_i \ dx_1 \wedge \cdots \wedge \textcolor{gray}{\cancel{dx_i}} \wedge \cdots \wedge dx_n\Big|_{\E^{n-1}}.\]
+    Em \(H = \E^{n-1}\subseteq \R^n\), \(\vec{n}(x) = \frac{\x}{\|\x\|}\), então \(\hat{\omega} = \sum (-1)^{i+1} x_i \ \hat{\omega}_i |_{_{\E^{n-1}}}\).
 \end{example}
 
 %\begin{exercise}
@@ -350,9 +349,16 @@ Agora precisamos entender como é que se derivam as formas diferenciais.
     \end{enumerate}
 \end{theorem}
 
-\begin{example}
-    Sendo \(\sum f_\textbf{i} \  d\x_\textbf{i} = \omega \in \Omega^k(M)\), temos \( d\omega = \sum   df_\textbf{i} \wedge d\x_\textbf{i}\). \comentario{Faz a conta, usando as propiedades do \(\blacksquare\) \hyperlink{thm102}{10.2.}}
-\end{example}
+\ejemplo{
+    \centering 
+    \(\sum f_\textbf{i} \  d\x_\textbf{i} = \omega  \mapsto d\omega = \sum   df_\textbf{i} \wedge d\x_\textbf{i}\)
+    \tcblower
+    \begin{example}
+        Sejam \(U\ab\subseteq \R^2\) e  \(f dx + gdy = \omega \in \Omega^1(U)\). Então,  
+        %\[d\omega = \left(\frac{\partial f}{\partial x } dx + \frac{\partial f}{\partial y} dy \right) \wedge dx + \left(\frac{\partial g}{\partial x} dx + \frac{\partial g}{\partial y} \right)\wedge dy.\]
+        \[d\omega = \left(\textcolor{gray}{\cancel{f_x dx \ + \ }}f_y dy \right) \wedge dx + \left( g_x dx \textcolor{gray}{\ + \ \cancel{g_y dy}}\right)\wedge dy = \left(g_x - f_y\right) dx \wedge dy.\]
+    \end{example}
+}
 %\ejemplo{\(\rightarrow\) Desarme usando las propiedades del Teorema previo. Siendo  tenemos,\[d\left(\sum f_I d\x_I\right) = \sum df_I d\x_I\]. En este caso, la condición \(d^2= 0 \) se traduce en \(\operatorname{rot}\circ \nabla = 0 = \operatorname{div}\circ \operatorname{rot}\)}
 %\begin{figure}[!h]
 %    \centering     
@@ -394,7 +400,7 @@ Agora precisamos entender como é que se derivam as formas diferenciais.
     \(\omega \in \Omega^k(M)\) é \emph{exata} se \(\exists \eta \in \Omega^{k-1}(M)\) tal que \(\omega = d\eta\). Por outro lado, se \(d\omega = 0 \) dizemos então que \(\omega\) é \emph{fechada}. 
 \end{definition}
 \begin{note}
-    Ver que \(\omega \) é exata é "resolver" EDPs, ou seja integrar.
+    Ver que \(\omega \) é exata é "resolver" EDPs, ou seja integrar. %, por isso também que escrever \(f_{x_j}= \frac{\partial f}{\partial x_j}\) parece mais conveniente agora. 
 \end{note}
 %\begin{exercise}
 %    Muestre que \(d\theta \in \Omega^1(\R^2\setminus \{0\})\), es cerrada, pero no exacta. \textcolor{gray}{\(\rightarrow\) Es exacta solo en abiertos de la forma \(\R^2\setminus  (-\infty, 0]\)} 

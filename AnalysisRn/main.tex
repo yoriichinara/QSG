@@ -35,11 +35,13 @@
 
 % Configuração da Fonte
 \usepackage{times} % Fonte: Times New Roman
+\usepackage{chngcntr} % Fonte: Times New Roman
 
 % PACOTES ESSENCIAIS
 \usepackage{caption}  
 \usepackage{titlesec}  
 
+%\counterwithin*{footnote}{section}
 \titleformat{\section}
   {\normalfont\Large\bfseries} % formato de la fuente
   {\S \hspace{-0cm} \thesection}              % etiqueta de la sección (con símbolo ♦)
@@ -213,7 +215,7 @@ Elon 4:13 \hfill \href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.b
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{\large \textbf{Notação}} \hfill \text{\rotatebox{45}{\large $\boxdot$}}  Definição \hfill \((-)^{\text{\ding{71}}}\)  Aberto \hfill  \((-)^{\text{\ding{70}}}\) Fechado \\ 
+{\large \textbf{Notação}} \hfill \text{\rotatebox{45}{\large $\boxdot$}}  Definição \hfill \(\textcolor{gray}{(-)}^{\text{\ding{71}}}\)  Aberto \hfill  \(\textcolor{gray}{(-)}^{\text{\ding{70}}}\) Fechado \\ 
 {\scriptsize$\square$} \ Lema \hspace{2.4cm} {\large$\square$} \ Proposição \hspace{1.5cm}  {\large $\blacksquare$}  \ Teorema \hspace{2cm} {\scriptsize $\boxtimes$}  \ Corolário
 %\begin{center}
 %  \setlength{\tabcolsep}{20pt}
@@ -248,6 +250,8 @@ Elon 4:13 \hfill \href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unicamp.b
 \bibitem{lima2004analise}
 Lima, Elon Lages (2004). \textit{An{\'a}lise real Vol. 2}. IMPA, Rio de Janeiro.
 
+\bibitem{spivak2018}
+Spivak, Michael (2018). \textit{Calculus on manifolds: a modern approach to classical theorems of advanced calculus}. CRC Press.
 \end{thebibliography}
 
 %\end{multicols}
