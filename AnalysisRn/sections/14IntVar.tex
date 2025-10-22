@@ -1,44 +1,38 @@
 \section{Integração em Variedades}
 
-\begin{note}
-    Nesta seção \(I = [0,1]\subset \R\). 
-\end{note}
+Nesta seção \(\mathcal{I} := [0,1]\subset \R\).
+\newcommand{\I}{\mathcal{I}}
 
-\subsection{Integração em Cadeias}
+\subsection*{Integração em Cadeias}
 
 \begin{definition}
-    Um \(k\)\emph{-bloco singular} em \(M\) é uma aplicação \(\sigma \in C^\infty(I^k; M)\).
+    Um \(k\)\emph{-bloco singular} em \(M\subseteq \R^n\) é uma aplicação \(\sigma \in C^\infty(\I^k, M)\).
 \end{definition}
 
 %\ejemplo{ \centering  
 %    \tcblower
-\begin{example}[$n$-bloco padrão em \(\R^n\)]
-    \(\id_{I^n} : I^n \to I^n \subset \R^n \). 
-\end{example}
-%}
-\begin{example}%[$n$-bloco padrão em \(\R^n\)]
-    Uma curva suave \(c : I \to M \) é um \(1\)-bloco singular. 
+\begin{example}
+    O $n$\emph{-bloco padrão}, \(\id_{\I^n} : \I^n \to \I^n \subset \R^n \). Uma curva suave \(c : \I \to M \) é um \(1\)-bloco singular. 
 \end{example}
 
 \alerta{
-\centering \(\sigma \  \ k\)-bloco singular \(\textcolor{red}{\neq}  \ \ \operatorname{Im}(\sigma)\subseteq M\) 
+\centering \(\sigma \  \ k\)-bloco singular \(\textcolor{red}{\neq}  \ \ \operatorname{Im}\sigma\subseteq M\) 
 \tcblower
 \begin{example}
-    \(\sigma: I^n \ni \x \mapsto p \in M \) é um $n$-bloco singular.%, chamamos ele em particular de $n$\emph{-cubo singular}. 
+    \(\sigma: \I^n \ni \x \mapsto p \in M \) é um $n$-bloco singular.%, chamamos ele em particular de $n$\emph{-cubo singular}. 
 \end{example}
 }
 
 \begin{definition}
-    Sejam \(\omega \in \Omega^k(M)\) e \(\sigma \) um $k$-bloco singular. Então,  
-    \[\int_\sigma \omega = \int_{I^k} \sigma^*\omega = \int_{I^k}f(\x) \ dx_1\wedge \cdots \wedge dx_k =\int_{I^k} f(\x) \ d\x. \]  
+    Sejam \(\omega \in \Omega^k(M)\) e \(\sigma \) um $k$-bloco singular. Então,   
+    \[\int_\sigma \omega := \int_{\I^k} \sigma'(\omega) = \int_{\I^k}f(\x) \ dx_1\wedge \cdots \wedge dx_k =\int_{\I^k} f(\x) \ d\x. \]  
 \end{definition}
 
 \ejemplo{
 \centering Integral de linha
 \tcblower
 \begin{example}
-    Sejam \(c(t) : [a,b] \to U\ab\subseteq \R^n\) curva suave e \(\overset{n}{\sum} f_i \ dx_i = \omega \in \Omega^k(U) \), então temos
-    \[\oint_c \omega = \int_a^b c^*\omega \ dt = \int_a^b \sum^n (f_i \circ c)(t) c_i{'}(t) \ dt\]
+    Sejam \(c(t) : [a,b] \to U\ab\subseteq \R^n\) curva suave e \(\sum^n f_j \ dx_j = \omega \in \Omega^k(U) \), então \(\oint_c \omega = \int_a^b c'(\omega) \ dt = \int_a^b \sum^n (f_j \circ c)(t) \dot{c_j}(t) \ dt\ .\)
 \end{example}
 }
 

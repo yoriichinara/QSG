@@ -67,7 +67,7 @@
 \end{definition}
 
 \begin{proposition}
-    Sejam \(^k_d M \subseteq \R^n\) e \(c \in C^k(\V_\epsilon , M)\) caminho diff em \(M\), então \(T_pM = \{c'(0): c(0) =p \}. \) \comentario{O espaço tangente não depende da parametrização} 
+    Sejam \(^k_d M \subseteq \R^n\) e \(c \in C^k(\V_\epsilon , M)\) caminho diff em \(M\), então \(T_pM = \{\dot{c}(0): c(0) =p \}. \) \comentario{O espaço tangente não depende da parametrização} 
 \end{proposition}
     
 \begin{example}
@@ -98,10 +98,10 @@
     Se \(F\in C^k(M,N)\) então \(DF(p)\) não depende da \(\widetilde{F}\).  
 \end{lemma}
 
-\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\psi_{b}{'}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\varphi{'} \circ F \circ \psi: V \to V{'}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}(D\psi_a(a))\mapsto \operatorname{Im}(D\psi_{a{'}}(a{'}))\). \vspace{0.3cm}}
+\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\hat{\psi}_{b}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\hat{\varphi} \circ F \circ \psi: V \to \hat{V}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}(D\psi_a(a))\mapsto \operatorname{Im}(D\hat{\psi}_{b}(b))\). \vspace{0.3cm}}
 }
 
-\begin{tikzpicture}[scale = 1.2, >=to, shift={(11.95cm,1.5cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[scale = 1.2, >=to, shift={(11.95cm,1.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     
     \node (Up) at (0,0) { $\R^{d_1}$};
     \node (Rn) at (2.5,0) { $\R^{d_2}$};
@@ -112,10 +112,10 @@
     %\node (d) at (3.6,2) {\footnotesize$L^{-1}$};
     %\node (c1) at (3.6,1) {\rotatebox{90}{$\longmapsto$}};
 
-    \draw[->] (Up) -- node[above, xshift = -0.45cm, yshift = -0.2cm] {\scriptsize \(\psi\)} (U);
+    \draw[->] (Up) -- node[above, xshift = -0.45cm, yshift = -0.4cm] {\scriptsize \(\psi\)} (U);
     \draw[->] (Up) -- node[below] {\scriptsize \(D(\varphi{'}\circ F \circ \psi)\)} (Rn);
     \draw[->] (U) -- node[above] {\scriptsize \(DF\) } (Rn2);
-    \draw[->] (Rn) -- node[right, xshift = 0.05cm, yshift = 0cm] {\scriptsize \(\psi{'}\)} (Rn2);
+    \draw[->] (Rn) -- node[right, xshift = 0.05cm, yshift = 0cm] {\scriptsize \(\hat{\psi}\)} (Rn2);
     \draw[->, color = gray, >=to] (1.15,0.85) arc (240:-60:0.25);
 
 \end{tikzpicture}
@@ -159,7 +159,7 @@
 \tcblower
 \begin{example}
     Seja \(M= \ ^k H\subseteq \R^n\) hipersuperficie definida por \(g(\x)=0\) e \(f: \R^n \to \R\) função escalar, então 
-    \[p \in M \text{ ponto crítico de } f(M) \textcolor{verdeoscuro}{\ \leftrightharpoons\  }df(p): T_pM \not \twoheadrightarrow \R.\]
+    \[p \in M \text{ ponto crítico de } f(M) \ \leftrightharpoons\  df(p): T_pM \not \twoheadrightarrow \R.\]
 \end{example}
 }
 
