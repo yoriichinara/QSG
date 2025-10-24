@@ -73,7 +73,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 
 \- \vspace{-2cm} 
 \begin{note}
-    A função \(\phi\) é tipo um "volume" \(k\)-dimensional com sinal, dada pela "orientação" ou ordem de os \(v_i\). 
+    A função \(\phi\) é tipo um "volume" \(k\)-dimensional com sinal, dada pela "orientação" ou ordem dos \(v_i\). 
 \end{note}
 
 \begin{definition}
@@ -165,13 +165,13 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{proposition}
 
 \begin{theorem}
-    Sejam \(V\) \(\R\)-espaço vetorial e \((f_j)\), \(j\leq n\) uma base pra \(V'\). Então, \(\forall k\leq n \), a familia \(\{(l_{i_1}\wedge \cdots \wedge l_{i_k}): i_j < i_{j+1}, \ \forall j<k\}\) é uma base pra \(\alt^k(V)\). Em particular, \(\dim \alt^k(V) = \binom{n}{k}\).   
+    Sejam \(V\) \(\R\)-espaço vetorial e \((f_j)\), \(j\leq n\) uma base pra \(V'\). Então, \(\forall k\leq n \), a familia \(\{(l_{i_1}\wedge \cdots \wedge l_{i_k}): \forall j<k, \ i_j < i_{j+1}\}\) é uma base pra \(\alt^k(V)\). Em particular, \(\dim \alt^k(V) = \binom{n}{k}\).   
 \end{theorem}
 
 %\ejemplo{\centering Pullback de cambio de base%
 %\tcblower
 \begin{example}
-    Sejam \((\omega_j), \ j\leq n\) uma base pra \(V\) e \(\phi \in \alt^n(V)\), Então, \(\phi((v_j)) = \det((a_{ij}))\cdot  \phi((\omega_j))\), onde \(v_j = \sum a_{ij}\omega_i\). \textcolor{gray}{ \(\rightarrow \ T'(\phi) = \det T \cdot \phi\)}  
+    Sejam \((w_j), \ j\leq n\) uma base pra \(V\) e \(\phi \in \alt^n(V)\), Então, \(\phi((v_j)) = \det((a_{ij}))\cdot  \phi((w_j))\), onde \(v_j = \sum a_{ij}w_i\). \textcolor{gray}{ \(\rightarrow \ T'(\phi) = \det T \cdot \phi\)}  
 \end{example}
 %}
 
@@ -187,7 +187,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \subsection*{Formas Differenciais}
 
 \begin{note}
-    Se \( \varphi = (\x_1, \ldots, \x_d): \U_p \to \R^d\) é uma carta local de \(^r_dM \subseteq \R^n\), lembre-se que \([d\x_1, \ldots, d\x_d]  = (T_pM)' = \alt^1(T_pM)\). %Também, \(A^k(T_pM) = [d\x_{i_1}\wedge \cdots \wedge d\x_{i_k}]\). 
+    Se \( \varphi = (\x_1, \ldots, \x_d): \U_p \to \R^d\) é uma carta local de \(^r_dM \subseteq \R^n\), lembre-se que \((d\x_j)\) é base pra \((T_pM)' = \alt^1(T_pM)\). %Também, \(A^k(T_pM) = [d\x_{i_1}\wedge \cdots \wedge d\x_{i_k}]\). 
 \end{note}
 \- \vspace{-0.8cm}
 \begin{definition}
@@ -257,7 +257,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
     \vspace{0.9cm}
     \tcblower
     \begin{example}
-        Sejam \( \omega = fdx + g dy \in \Omega^1(\R^2)\) e \(c: \mathcal{I}\ab\subset \R \to \R^2\) curva suave, então \(c'(\omega) = (f\circ c)(t)\dot{c_1}(t) + (g\circ c)(t)\dot{c_2}(t) dt\).  
+        Sejam \( \omega = fdx + g dy \in \Omega^1(\R^2)\) e \(c: I\ab\subset \R \to \R^2\) curva suave, então \(c'(\omega) = (f\circ c)(t)\dot{c_1}(t) + (g\circ c)(t)\dot{c_2}(t) dt\).  
     \end{example}   
 }
 
@@ -271,7 +271,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = 
 \end{note}
 
 \begin{example}[\emph{Forma de ángulo}]
-    \(\displaystyle d\theta = \frac{y dx - xdy }{x^2+ y^2} \in \Omega^1(\R^2\setminus\{0\})\). 
+    \(\displaystyle d\theta = \frac{x dy - ydx }{x^2+ y^2} \in \Omega^1(\R^2\setminus\{0\})\). 
 \end{example}
 
 %\ejemplo{\ \(\iota: \E^1 \to \R^2 \setminus \{0\} \Rightarrow d\theta|_{_{\E^1}} \in \Omega^1(\E^1)\)}
@@ -311,7 +311,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = 
 } 
 }
 
-\begin{tikzpicture}[>=to, shift={(15.8cm,2.8cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[>=to, shift={(15cm,2.8cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     \node[black] at (0,0) {\small $\det \begin{bmatrix}
         \textcolor{red}{\Big|} &\Big| &  &\Big| \\ 
         \textcolor{red}{\vec{n}}& v_2 & \cdots &v_n \\ 
@@ -356,7 +356,7 @@ Agora precisamos entender como é que se derivam as formas diferenciais.
     \begin{example}
         Sejam \(U\ab\subseteq \R^2\) e  \(f dx + gdy = \omega \in \Omega^1(U)\). Então,  
         %\[d\omega = \left(\frac{\partial f}{\partial x } dx + \frac{\partial f}{\partial y} dy \right) \wedge dx + \left(\frac{\partial g}{\partial x} dx + \frac{\partial g}{\partial y} \right)\wedge dy.\]
-        \[d\omega = \left(\textcolor{gray}{\cancel{f_x dx \ + \ }}f_y dy \right) \wedge dx + \left( g_x dx \textcolor{gray}{\ + \ \cancel{g_y dy}}\right)\wedge dy = \left(g_x - f_y\right) dx \wedge dy.\]
+        \[d\omega = \left(\textcolor{gray}{\cancel{f_x dx} \ +\ }f_y dy \right) \wedge dx + \left( g_x dx \textcolor{gray}{\ + \ \cancel{g_y dy}}\right)\wedge dy = \left(g_x - f_y\right) dx \wedge dy.\]
     \end{example}
 }
 %\ejemplo{\(\rightarrow\) Desarme usando las propiedades del Teorema previo. Siendo  tenemos,\[d\left(\sum f_I d\x_I\right) = \sum df_I d\x_I\]. En este caso, la condición \(d^2= 0 \) se traduce en \(\operatorname{rot}\circ \nabla = 0 = \operatorname{div}\circ \operatorname{rot}\)}

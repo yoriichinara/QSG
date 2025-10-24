@@ -1,7 +1,6 @@
 \section{Integração em Variedades}
 
-Nesta seção \(\mathcal{I} := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)}'\) únicamente para o pull-back \(\sim\) espaço dual, isso vai continuar assim, não confundir com derivadas.  
-\newcommand{\I}{\mathcal{I}}
+Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)}'\) únicamente para o pull-back \(\sim\) espaço dual, isso vai continuar assim, não confundir com derivadas.  
 
 \subsection*{Integração em Cadeias}
 
@@ -184,16 +183,20 @@ Nesta seção \(\mathcal{I} := [0,1]\subset \R\). Até agora usamos \(\textcolor
 %  
 }
 
-\subsection*{Integração em Variedades com Borde}
+%\begin{corollary}
+%  Se \(\omega \in \Omega^k(M)\) é exata e \(c\) é uma $k$-cadeia fechada então \(\displaystyle \int_c \omega = 0 \).  
+%\end{corollary}
+
+\subsection*{Integração em Variedades com Bordo}
 
 \begin{definition}
   \centering \(\mathbb{H}^n := \{(x_1, \ldots, x_n) \in \R^n : x_n \geq 0\}\). 
 \end{definition}
 
 \begin{definition}
-  Seja \(_dM\subseteq \R^n\) variedade. O subconjunto \(\overline{_dM}\subseteq  \R^n\) é uma \emph{variedade com borde}. Desta vez dizemos que \(\forall p \in \overline{M}, \ \exists ^k\varphi : \U_p \cap \overline{M} \simeq V\ab\subseteq \mathbb{H}^d\) e, 
+  Seja \(_dM\subseteq \R^n\) variedade. O subconjunto \(_d\overline{M}\subseteq  \R^n\) é uma \emph{variedade com bordo}. Desta vez dizemos que \(\forall p \in \overline{M}, \ \exists ^k\varphi : \U_p \cap \overline{M} \simeq V\ab\subseteq \mathbb{H}^d\) e, 
   \begin{itemize}[label = \(\star \)]
-    \item \( \overline{M}\setminus M =:\  _{d-1}\partial M\subseteq \R^n \ \leftarrow \) \emph{Borde} de \(\overline{M}\). 
+    \item \( \overline{M}\setminus M =:\  _{d-1}\partial M\subseteq \R^n \ \leftarrow \) \emph{Bordo} de \(\overline{M}\). 
   \end{itemize}  
 \end{definition}
 
@@ -202,20 +205,21 @@ Nesta seção \(\mathcal{I} := [0,1]\subset \R\). Até agora usamos \(\textcolor
 %\end{note}
 
 \begin{theorem}
-  Sejam \(_dM\subseteq \R^n\) e \(g \in C^\infty(M)\). Se \(0\) é valor regular de \(g\) então \(\overline{N}:= g^{-1}([0,\infty)) \) é \(\overline{_dN} \subseteq \R^n\) e \(\partial N = g^{-1}(0)\). \comentario{Usa \(\blacksquare\) \hyperlink{thmFLS}{(\emph{FLS})} em \( \{0\}\cup (0,\infty)\) }
+  Sejam \(_dM\subseteq \R^n\) e \(g \in C^\infty(M)\). Se \(0\) é valor regular de \(g\) então \(\overline{N}:= g^{-1}([0,\infty)) \) é \(_d\overline{N} \subseteq \R^n\) e \(\partial N = g^{-1}(0)\). \comentario{Usa \(\blacksquare\) \hyperlink{thmFLS}{(\emph{FLS})} em \( \{0\}\cup (0,\infty)\) }
 \end{theorem}
-
+\- \vspace{-0.8cm}
 \begin{figure}[!h]
   \centering
-  \includegraphics[width = 0.6\linewidth]{Imagens/im1.pdf}
+  \includegraphics[width = 0.6\linewidth]{Imagens/im1.pdf} \\ 
+  \vspace{0.6cm}Figura 2: Variedades com bordo
 \end{figure}
 
 \begin{note}
-  \(T_pN = T_p\overline{N}\). Mas agora, \(T_p(\partial N) < T_pN\), portanto \(\exists! \ \nu(p) \in T_pN\) unitario tal que \(\nu(p) \perp T_p(\partial N)\) aponta pra fora de \(N\).  
+  \(T_pN = T_p\overline{N}\). Mas agora, \(\dim T_p(\partial N) = d-1\), portanto \(\exists! \ \nu(p) \in T_pN\) unitario tal que \(\nu(p) \perp T_p(\partial N)\) aponta pra fora de \(N\).  
 \end{note} 
 
 \begin{definition}
-  Sejam \(\overline{_dN}\subseteq \R^n\) e \(\omega \in \Omega^d(\overline{N})\). Chamamos de \emph{orientación inducida} por \(\omega \) à \(\Omega ^d(\partial N) \ni \eta : (v_1, \ldots, v_{d-1}) \mapsto \omega(\nu(p), v_1, \ldots, v_{d-1})\).  
+  Sejam \(_d\overline{N}\subseteq \R^n\) e \(\omega \in \Omega^d(\overline{N})\). Chamamos de \emph{orientación inducida} por \(\omega \) à \(\Omega ^d(\partial N) \ni \eta : (v_1, \ldots, v_{d-1}) \mapsto \omega(\nu(p), v_1, \ldots, v_{d-1})\).  
 \end{definition}
 
 \begin{example}

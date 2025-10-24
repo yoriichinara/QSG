@@ -14,7 +14,7 @@
 
 \begin{enumerate}[left = 0cm]
 \item[] \demo{
-    \parbox[b]{0.66\linewidth}{\textcolor{black}{\emph{Nota}.} Basta ver a volta. Sem perda de generalidade, podemos supor que \(p=0\), \(F(p) = 0 \) e \(DF = \id_{n}\). Remeta-se ao gráfico, nele,  {\small (*) \(= [DF(p)]^{-1 }(\textbf{x}-F(p))\)} e {\small (**) \(= [DF(p)]^{-1 }(F(\textbf{x}+p)- F(p)) \)}. Nestes novos termos \(F(\textbf{x}) = \textbf{x} + R(\textbf{x})\), onde \(R(\textbf{x})= \sigma (\|\textbf{x}\|)\). }\parbox[a]{0.3\linewidth}{\ } 
+    \parbox[b]{0.66\linewidth}{\textcolor{black}{\emph{Nota}.} Basta ver a volta. Sem perda de generalidade, podemos supor que \(p=0\), \(F(p) = 0 \) e \(DF = \id_{n}\). Remeta-se ao gráfico, nele,  {\small (*) \(= [DF(p)]^{-1 }(\textbf{x}-F(p))\)} e {\small (**) \(= [DF(p)]^{-1 }(F(\textbf{x}+p)- F(p)) \)}. Nestes novos termos \(F(\textbf{x}) = \textbf{x} + R(\textbf{x})\), onde \(R(\textbf{x})= \sigma \|\textbf{x}\|\). }\parbox[a]{0.3\linewidth}{\ } 
 }
 
 \begin{tikzpicture}[scale=1.2, >=to, shift={(11.4cm,2.1cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
@@ -204,12 +204,12 @@
 %\end{note}
 
 \begin{example}
-    Para \(H = \mathbb{S}^{n-1}\) temos \(T_p H := \{\vec{v}\in \R^n : \langle p, v\rangle = 0\}\). \textcolor{gray}{\(\rightarrow\) Faça o exercício gráfico, note também que \((\nabla g(p))^t \perp T_pH(p)\)}
+    Para \(H = \mathbb{S}^{n-1}\) temos \(T_p H := \{\vec{v}\in \R^n : \langle p, v\rangle = 0\}\). \textcolor{gray}{\(\rightarrow\) Faça o exercício gráfico, note também que \(\nabla g(p) \perp T_pH(p)\)}
 \end{example}
 
 \hypertarget{lemma86}{}
 \begin{lemma}
-    \textbf{8.6.} Sejam \(V\) espaço vetorial sobre \(\R\) e \(\ell_1, \ell_2 \in V'\). Se \(\ker \ell_1 \subseteq \ker \ell_2\) então \(\exists \lambda \in \R \) tal que \(\ell_2 = \lambda \ell_1 \). 
+    \textbf{8.6.} Sejam \(V\) \(\R\)-espaço vetorial e \(\ell_1, \ell_2 \in V'\). Se \(\ker \ell_1 \subseteq \ker \ell_2\) então \(\exists \lambda \in \R \) tal que \(\ell_2 = \lambda \ell_1 \). 
 \end{lemma}
 \begin{corollary}
     \(\blacksquare\) \hyperlink{thmML}{(\emph{Multiplicadores de Lagrange})}. \textcolor{gray}{\(\rightarrow\) Segue de \(\square\) \hyperlink{prop85}{8.5.} e {\scriptsize \(\square\)} \hyperlink{lemma86}{8.6.} }

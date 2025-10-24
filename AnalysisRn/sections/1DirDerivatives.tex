@@ -5,7 +5,7 @@
   {\begin{equation*}
   \frac{\partial f}{\partial v}(p) := \lim\limits_{h\to 0} \frac{f(p+hv) - f(p)}{h} \hspace{0in} \sim \hspace{0in} f(p+hv) = f(p) + \frac{\partial f }{\partial v}(p)\cdot h + \sigma(h).
   \end{equation*}}
-  Se \(v = e_j\) então \(f_{x_j}(p) = \frac{\partial f}{\partial x_j}(p)\) é a \textit{$j$-ésima derivada parcial} de $f$ em $p$.
+  Se \(v = e_j\) então \(f_{x_j}(p) := \frac{\partial f}{\partial x_j}(p)\) é a \textit{$j$-ésima derivada parcial} de $f$ em $p$.
 \end{definition}
   
 
@@ -21,7 +21,7 @@
 %  \(g :\R^2\backslash\{0\}\to \R\) such that \((x,y) \mapsto \arctan (y/x)\). \textcolor{gray}{\(\rightarrow\) Just calculate} 
 %\end{example}
 \alerta{ \centering
-\(\forall j\leq n, \ \exists  f_{x_j}(p)\) \textcolor{red}{\(\nRightarrow \)} \(\forall \vec{v} \in \R^n, \ \exists \frac{\partial f}{\partial v}(p)\) \textcolor{red}{\(\nRightarrow\)} \(f\) continua em \(p\)
+\(\forall j\leq n, \ \exists  \frac{\partial f}{\partial x_j}(p)\) \textcolor{red}{\(\nRightarrow \)} \(\forall \vec{v} \in \R^n, \ \exists \frac{\partial f}{\partial v}(p)\) \textcolor{red}{\(\nRightarrow\)} \(f\) continua em \(p\)
 \tcblower 
  \begin{example}{ 
    \( (x,y) \mapsto x+y, \text{ \ se }x=0\ \text{or}\ y=0\)}, nula no caso contrario. \textcolor{gray}{\(\rightarrow\) Prove diferentes direções em \(0\)}

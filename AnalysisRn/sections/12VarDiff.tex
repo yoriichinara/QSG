@@ -38,7 +38,7 @@
 
 \demo{(\(\Leftarrow\)) A bijeção é imediata de \(\psi(V)\ab \subseteq M\). Aplique \(\blacksquare\) \hyperlink{thmFLI}{(\emph{FLI})} e faça composição com a projeção. }
 
-\alerta{\centering Imersão injetiva \textcolor{red}{\(\not\Rightarrow \)} homeomorfismo}
+\alerta{\centering Imersão injetiva \textcolor{red}{\(\not\Rightarrow \)} Homeomorfismo}
 
 
 %\ejemplo{\centering Gráfico de Função \(\textcolor{verdeoscuro}{\Rightarrow}\) Variedade
@@ -63,7 +63,7 @@
 
 \begin{definition}
     Sejam \(^k_dM\subseteq \R^n\) e \(^k \psi_a: V\ab \simeq \U_p\) uma parametrização local tal que \(\psi_a(a)=p\). O \emph{espaço tangente} a \(p \in M \) é dado por,
-    \[ T_pM := \operatorname{Im}(D\psi_a(a))= \bigoplus \R \frac{\partial \psi_a}{\partial x_j} (a)\leq \R^n.\  \footnote{O \emph{espaço afim} \(p + T_pM\) é o "visualmente" tangente a \(M\) em \(p\). }\]
+    \[ T_pM := \operatorname{Im}D\psi_a(a)= \bigoplus \R \frac{\partial \psi_a}{\partial x_j} (a)\leq \R^n.\  \footnote{O \emph{espaço afim} \(p + T_pM\) é o "visualmente" tangente a \(M\) em \(p\). }\]
 \end{definition}
 
 \begin{proposition}
@@ -98,7 +98,7 @@
     Se \(F\in C^k(M,N)\) então \(DF(p)\) não depende da \(\widetilde{F}\).  
 \end{lemma}
 
-\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\check{\psi}_{b}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\check{\varphi} \circ F \circ \psi: V \to \check{V}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}(D\psi_a(a))\mapsto \operatorname{Im}(D\check{\psi}_{b}(b))\). \vspace{0.3cm}}
+\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\check{\psi}_{b}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\check{\varphi} \circ F \circ \psi: V \to \check{V}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}D\psi_a(a)\mapsto \operatorname{Im}D\check{\psi}_{b}(b)\). \vspace{0.3cm}}
 }
 
 \begin{tikzpicture}[scale = 1.2, >=to, shift={(11.95cm,1.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
@@ -159,7 +159,7 @@
 \tcblower
 \begin{example}
     Seja \(M= \ ^k H\subseteq \R^n\) hipersuperficie definida por \(g(\x)=0\) e \(f: \R^n \to \R\) função escalar, então 
-    \[p \in M \text{ ponto crítico de } f(M) \ \leftrightharpoons\  df(p): T_pM \not \twoheadrightarrow \R.\]
+    \[p \in M \text{ ponto crítico de } f(M) \ \textcolor{verdeoscuro}{\leftrightharpoons}\  df(p): T_pM \not \twoheadrightarrow \R.\]
 \end{example}
 }
 
@@ -175,10 +175,10 @@
     Sejam \(^{\hspace{0.1cm}k}_{d_1} M\subseteq \R^n\), \(^{\hspace{0.1cm}k}_{d_2}N\), \(F\in C^k(M,N)\). Se \(q \in N\) é valor regular da \(F\), então \(F^{-1}(q) =: \ ^{\hspace{0.85cm}k} _{d_1 - d_2}P \subseteq M  \subseteq \R^n\).
 \end{theorem}
 
-\demo{Sejam \(p = F^{-1}(q)\) e \(d_1 - d_2 = c \). Note que \(\R^c \cong \ker DF(p) \leq \R^n\), defina \(L: \R^n \to \R^c\) tal que \(L\cdot \ker DF(p)\) é isomorfirsmo. Faça \(G:M \ni \x\mapsto (F(\x), L(\x)) \in  N \times \R^c\), aplique \(\blacksquare\) \hyperlink{thmTFIV2}{(\emph{Função Inversa})} e conclua. }
+\demo{Sejam \(p = F^{-1}(q)\) e \(d_1 - d_2 = c \). Note que \(\R^c \cong \ker DF(p) \leq \R^n\), defina \(L: \R^n \to \R^c\) tal que \(L\cdot \ker DF(p)\) é isomorfirsmo. Faça \(G:M \ni \x\mapsto (F(\x), L(\x)) \in  N \times \R^c\), use \(\blacksquare\) \hyperlink{thmTFIV2}{(\emph{Função Inversa V2})} e conclua. }
 
 \begin{example}
-    \(1\) é valor regular de \(g: \R^n \ni \textbf{x}\mapsto  \sum^n x_j^2 \in \R\) e \(g^{-1}(1)= \E^{n-1}\). 
+    \(1\) é valor regular de \(g: \R^n \ni \textbf{x}\mapsto  \| \x \|^2 \in \R\) e \(g^{-1}(1)= \E^{n-1}\). 
 \end{example}
 
 \ejemplo{ \centering Variedades de dimensão \(0\) 

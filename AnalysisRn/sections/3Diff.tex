@@ -2,7 +2,7 @@
 
 \renewcommand{\hom}{\operatorname{Hom}}
 \begin{definition}
-    Sejam \(f:U\ab\subseteq \R \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in (\R^n)'\) tal que \(f(p+v) = f(p) + \ell\cdot v + \sigma\|v\|, \text{ quando} \ v\to 0. \footnote{\((\R^n)' := \hom_\R(\R^n, \R)\), o espaço dual, olha as notas de Álgebra Linear II.}\)
+    Sejam \(f:U\ab\subseteq \R^n \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in (\R^n)'\) tal que \(f(p+v) = f(p) + \ell\cdot v + \sigma\|v\|, \text{ quando} \ v\to 0. \footnote{\((\R^n)' := \hom_\R(\R^n, \R)\), o espaço dual, olha as notas de Álgebra Linear II.}\)
 \end{definition}
 %\vspace{-0.4cm}
 \begin{note}
@@ -14,9 +14,10 @@
 %\end{note}
 \begin{definition}
     Seja \(f\) diff em \(p\). O \emph{diferencial} de \(f\) em \(p\) é a função linear \(df(p):\V_p\to \R\) dada por 
-    \(df(p)\cdot v := \sum^n \frac{\partial f}{\partial x_j}(p)\cdot v_j\).
+    \(df(p)\cdot v := \sum^n f_{x_j}(p)\cdot v_j\).
 \end{definition} %\section*{Aula III}
-\alerta{\centering \(\exists \frac{\partial f}{\partial x_i}(p)\) \textcolor{red}{\(\nRightarrow \)} \(df(p)\) lineal \textcolor{red}{\(\nRightarrow\)} \(f\) diff en \(p\)}
+
+\alerta{\centering \(\forall j\leq n, \ \exists f_{x_j}(p)\) \textcolor{red}{\(\nRightarrow \)} \(df(p)\) lineal \textcolor{red}{\(\nRightarrow\)} \(f\) diff en \(p\)}
 \begin{example}
     \(f: \R^n \ni \textbf{x} \mapsto \|\textbf{x}\|^2 \in \R\). \textcolor{gray}{\(\rightarrow\) Como em nosso primeiro exemplo}
 \end{example}
