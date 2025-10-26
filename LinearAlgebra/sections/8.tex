@@ -35,50 +35,50 @@ Também, seguindo a notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: 
     \(V_{\ p}^\infty \) é \(T\)-inv e se \(\dim V =n < \infty\) então \(V_{\ p}^\infty = V_{p^n}\). 
 \end{note}
 \begin{definition}
-    \centering \(\mathscr{A}_{T}:= \{p \in \Pol: p(T) =0\}\).
+    \centering \(\mathscr{A}_{_T}:= \{p \in \Pol: p(T) =0\}\).
 \end{definition}
 
 \propositionnum{8.1.3.}
 \begin{proposition}
     \label{prop:8.1.3}
-    Se \(\dim V = n < \infty \) então \(\mathscr{A}_{T}\neq \{0\}\).  
+    Se \(\dim V = n < \infty \) então \(\mathscr{A}_{_T}\neq \{0\}\).  
 \end{proposition}
 
 \demo{
-Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \(\{T^j\}_{j=0}^m\) é l.d. Tome \(m \) mínimo e faça \(f(T) := T^m - \sum^{m-1} a_k T^k \in \mathscr{A}_{T}\). 
+Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \(\{T^j\}_{j=0}^m\) é l.d. Tome \(m \) mínimo e faça \(f(T) := T^m - \sum^{m-1} a_k T^k \in \mathscr{A}_{_T}\). 
 }
 
 \propositionnum{8.1.4.}
 \newcommand{\an}{\mathscr{A}}
 \begin{proposition}
-    Se \(\an_{T}\neq \{0\}\) então \(\exists ! m_T\in \Pol\) mônico tal que \( \forall f \in \an_{T}, \ m_T\ | \ f\).  
+    Se \(\an_{_T}\neq \{0\}\) então \(\exists ! m_{_T}\in \Pol\) mônico tal que \( \forall f \in \an_{_T}, \ m_{_T}\ | \ f\).  
 \end{proposition}
 
 \demo{  
-    \(\an_{T} \) é ideal então \( \exists ! m_T\) tal que \(\an_{T} = \langle m_T\rangle\). Se prefer pegue \(m_T\) de menor grau possivél, suponha \(f = m_T q +r\) e conclua que \(r = 0\). Para unicidade suponha outro e usei \(\square\) \ref{prop:0.2} (e). 
+    \(\an_{_T} \) é ideal então \( \exists ! m_{_T}\) tal que \(\an_{_T} = \langle m_{_T}\rangle\). Se prefer pegue \(m_{_T}\) de menor grau possivél, suponha \(f = m_{_T} q +r\) e conclua que \(r = 0\). Para unicidade suponha outro e usei \(\square\) \ref{prop:0.2} (e). 
 }
 \begin{note}
-    No caso que \(\an_{T} = \{0\}\) fazemos \(m_T :=0\) é assim que \(V = V_{m_{T}}\). Se \(S = T|_{V_p}\) então \(p \in \an_{_S}\). Também, pode-se verificar que o polinômio construido na \(\square\) \ref{prop:8.1.3} é de fato \(m_T\). 
+    No caso que \(\an_{_T} = \{0\}\) fazemos \(m_{_T} :=0\) é assim que \(V = V_{m_{_T}}\). Se \(S = T|_{_{V_p}}\) então \(p \in \an_{_S}\). Também, pode-se verificar que o polinômio construido na \(\square\) \ref{prop:8.1.3} é de fato \(m_{_T}\). 
 \end{note}
 
 \hypertarget{lemma816}{}
 \begin{lemma}
-    \textbf{8.1.6.} Se \(f, g \in \Pol\) co-primos então, a restrição de \(f|_{V_g}\) é injetora.  \comentario{Faz usando o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}, lembre-se que \(1 \leadsto \id_{_V}\)}
+    \textbf{8.1.6.} Se \(f, g \in \Pol\) co-primos então, a restrição de \(f|_{_{V_g}}\) é injetora.  \comentario{Faz usando o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}, lembre-se que \(1 \leadsto \id_{_V}\)}
 \end{lemma}
 
 \propositionnum{8.1.7.}
 \begin{proposition}
     \label{prop:8.1.7}
-    Seja \(\an_{T} \neq \{0\}\) e \(p \in \Pol\) primo. Então, \(V_p \neq \{0\}\) \(\leftrightharpoons\) \(p\ | \ m_T\). 
+    Seja \(\an_{_T} \neq \{0\}\) e \(p \in \Pol\) primo. Então, \(V_p \neq \{0\}\) \(\leftrightharpoons\) \(p\ | \ m_{_T}\). 
 \end{proposition}
 
 \demo{
-    \((\Rightarrow )\) Suponha \(p \ \nmid \ m_T\) então são co-primos, aplique {\scriptsize\(\square\)} \hyperlink{lemma816}{ 8.1.6.} e conclua \(V_p = \{0\}\). \((\Leftarrow)\) Suponha \(p\ | \ m_T\) e \(V_p = \{0\}\) e contradiga.
+    \((\Rightarrow )\) Suponha \(p \ \nmid \ m_{_T}\) então são co-primos, aplique {\scriptsize\(\square\)} \hyperlink{lemma816}{ 8.1.6.} e conclua \(V_p = \{0\}\). \((\Leftarrow)\) Suponha \(p\ | \ m_{_T}\) e \(V_p = \{0\}\) e contradiga.
 } 
 
 \begin{corollary}
     \label{coro:8.1.8}
-    \textbf{8.1.8.} Seja \(\an_{T} \neq \{0\}\) e \(p \in \Pol\). Então, \(V_p\neq \{0\}\) \(\leftrightharpoons\) \(\exists f \in \dIv(m_T)\) e \(\exists g \in \Pol\) tais que \(p = gf\). Se \(\nexists q \in \dIv(m_T)\) tal que \(q \ | \ g\) então \(V_p = V_f\). 
+    \textbf{8.1.8.} Seja \(\an_{_T} \neq \{0\}\) e \(p \in \Pol\). Então, \(V_p\neq \{0\}\) \(\leftrightharpoons\) \(\exists f \in \dIv(m_{_T})\) e \(\exists g \in \Pol\) tais que \(p = gf\). Se \(\nexists q \in \dIv(m_{_T})\) tal que \(q \ | \ g\) então \(V_p = V_f\). 
 \end{corollary}
 
 \demo{
@@ -87,11 +87,11 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 }
 
 \begin{definition}
-    Sejam \(v\in V\) e \(\forall k \in \mathbb{Z}_{\geq 0}, \ v_k = T^k(v)\). A familia \(\mathscr{C}^\infty_T(v):= (v_k)\)  é chamada de \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_T(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). 
+    Sejam \(v\in V\) e \(\forall k \in \mathbb{Z}_{\geq 0}, \ v_k = T^k(v)\). A familia \(\mathscr{C}^\infty_{T}(v):= (v_k)\)  é chamada de \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_{_T}(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). 
 \end{definition}
 
 \begin{note}
-    É fácil ver que \(C_T(v)\) é \(T\)-inv. Alternativamente, pode-se definir \(C_T(v) = \mathscr{C}_T^m(v)  \), onde \(m = \dim C_T(v) \in \mathbb{Z}_{\geq 0} \cup \{\infty\}\). 
+    É fácil ver que \(C_{_T}(v)\) é \(T\)-inv. Alternativamente, pode-se definir \(C_{_T}(v) = \mathscr{C}_T^m(v)  \), onde \(m = \dim C_{_T}(v) \in \mathbb{Z}_{\geq 0} \cup \{\infty\}\). 
 \end{note}
 
 %\begin{definition}
@@ -103,7 +103,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 %\end{lemma}
      
 \begin{definition}
-    Para \(\alpha = (v_i)\) familia em \(V\) definimos \(C_T(\alpha):= \sum C_T(v_i)\).  
+    Para \(\alpha = (v_i)\) familia de vetores em \(V\) definimos \(C_{_T}(\alpha):= \sum C_{_T}(v_i)\).  
 \end{definition}
 
 %\begin{note}
@@ -111,17 +111,17 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 %\end{note}
 
 \begin{note}
-    Se \(\dim V = n < \infty\) então num análise analogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{T,v}= m_v\) pensando no mínimo \(m\) tal que \(\mathscr{C}^m_T(v)\) é l.d.. Também, \(C_T(v)\subseteq V_{m_v}\) \(\leftarrow T\)-inv, sendo \(S = T|_{V_{m_v}}\) temos \(m_v = m_S\). 
+    Se \(\dim V = n < \infty\) então num análise analogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) pensando no mínimo \(m\) tal que \(C^m_T(v)\) é l.d.. Também, \(C_{_T}(v)\subseteq V_{m_v}\) \(\leftarrow T\)-inv, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
 \end{note}
 
 \begin{corollary}
-    \textbf{8.1.9.} \(\forall v \in V\) temos \(m_v \ | \ m_T\). \comentario{Segue da observação acima e \(\square\) \ref{prop:8.1.7}}
+    \textbf{8.1.9.} \(\forall v \in V\) temos \(m_v \ | \ m_{_T}\). \comentario{Segue da observação acima e \(\square\) \ref{prop:8.1.7}}
 \end{corollary}
 
 \propositionnum{8.1.11.}
 \begin{proposition}
     \label{prop:8.1.11}
-    Sejam \(m \in \N\) e \(p_1, p_2, \ldots, p_m\in \Pol \) co-primos dois a dois. Então a soma \(\sum^m V_{\ p_j}^\infty\) é direta.
+    Sejam \(m \in \N\) e \(p_1, p_2, \ldots, p_m\in \Pol \) co-primos dois a dois. Então, a soma \(\sum^m V_{\ p_j}^\infty\) é direta.
 \end{proposition}
 
 \demo{
@@ -137,11 +137,11 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \theoremnum{8.1.13.}
 \begin{theorem}[\emph{Decomposição Primária}]
     \label{thm:8.1.13}
-    Sejam \(\an_T\neq \{0\}\) e \(\prod^m p_j^{k_j}\) a fatoração em primos de \(m_T\). Então, \(V= \bigoplus V_{p_j^{k_j}}\). 
+    Sejam \(\an_{_T}\neq \{0\}\) e \(\prod^m p_j^{k_j}\) a fatoração em primos de \(m_{_T}\). Então, \(V= \bigoplus V_{p_j^{k_j}}\). 
 \end{theorem}
 
 \demo{
-   Faça \(p_j^{k_j}= f_j\) na \(\square\) \ref{prop:8.1.12}, o resultado segue do fato de \(V = V_{m_T}\). 
+   Faça \(p_j^{k_j}= f_j\) na \(\square\) \ref{prop:8.1.12}, o resultado segue do fato de \(V = V_{m_{_T}}\). 
 }
 
 \begin{note}
@@ -152,27 +152,27 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \begin{lemma}
     \textbf{8.1.16.} Sejam \(p\in \Pol\) primo e \(u,v\in V\) tais que \(m_u = m_v = p \). Então, ocurre exatamente uma das duas opções a seguir,
     \begin{enumerate}[label = \roman*., left=2cm]
-        \item \(C_T(u) = C_T(v)\). \hspace{2cm} ii. \(C_T(u) \cap C_T(v) = \{0\}\). 
+        \item \(C_{_T}(u) = C_{_T}(v)\). \hspace{2cm} ii. \(C_{_T}(u) \cap C_{_T}(v) = \{0\}\). 
     \end{enumerate} 
 \end{lemma}
 \begin{itemize}[left=0cm]
     \item[] \vspace{-1cm} 
     \begin{exercise}
-    \(\ C_T(v) = \{q(T)(v): q \in \Pol\}\). \comentario{Prova conjuntista}
+    \(\ C_{_T}(v) = \{q(T)(v): q \in \Pol\}\). \comentario{Prova conjuntista}
     \end{exercise}  
     \vspace{-0.1cm}
     \item[] \demo{
-    O resultado segue de mostrar \(\forall w \in C_T(v)\), \(C_T(v) = C_T(w)\). Prova as duas contenções usando o exercício acima e \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}. 
+    O resultado segue de mostrar \(\forall w \in C_{_T}(v)\), \(C_{_T}(v) = C_{_T}(w)\). Prova as duas contenções usando o exercício acima e \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}. 
 }
 \end{itemize}
 
 \propositionnum{8.1.17.}
 \begin{proposition}
-    Seja \(p\in \Pol\) primo tal que \(\dim V_p <\infty \). Então, \(\exists l\in \mathbb{Z}_{\geq 0}\) e \(v_1, v_2, \ldots, v_l \in V_p\) tais que \(V_p = \bigoplus^l C_T(v_k) \). 
+    Seja \(p\in \Pol\) primo tal que \(\dim V_p <\infty \). Então, \(\exists l\in \mathbb{Z}_{\geq 0}\) e \(v_1, v_2, \ldots, v_l \in V_p\) tais que \(V_p = \bigoplus^l C_{_T}(v_k) \). 
 \end{proposition}
 
 \demo{
-    Basta ver que \(\forall v\in V_p\setminus \bigoplus^{l-1} C_T(v_k)\) temos \(C_T(v)\cap \bigoplus^{l-1} C_T(v_k) = \{0\}\). Suponha \(w\neq 0 \) naquela interseção e usa os varios fatos em {\scriptsize\(\square\)} \hyperlink{lemma8116}{8.1.16.} pra contradizer, conseguindo ver que \(v \in \bigoplus^{l-1} C_T(v_k)\).  
+    Basta ver que \(\forall v\in V_p\setminus \bigoplus^{l-1} C_{_T}(v_k)\) temos \(C_{_T}(v)\cap \bigoplus^{l-1} C_{_T}(v_k) = \{0\}\). Suponha \(w\neq 0 \) naquela interseção e usa os varios fatos em {\scriptsize\(\square\)} \hyperlink{lemma8116}{8.1.16.} pra contradizer, conseguindo ver que \(v \in \bigoplus^{l-1} C_{_T}(v_k)\).  
 }
 
 \propositionnum{8.1.18.}
@@ -187,7 +187,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 }
 
 \begin{note}
-    Pode e debe-se verificar que \(\min\{k: V_{\ p }^\infty = V_{p^k}\} = k_j\) do \(\blacksquare\) \ref{thm:8.1.13}, é assim que conseguimos definir o \emph{polinômio carateristico} como sendo \(c_T := \prod^m p_j^{n_j} \in \an_T\), exatamente o mesmo do \(\blacksquare\) (\emph{Caley-Hamilton}). 
+    Pode e debe-se verificar que \(\min\{k: V_{\ p }^\infty = V_{p^k}\} = k_j\) do \(\blacksquare\) \ref{thm:8.1.13}, é assim que conseguimos definir o \emph{polinômio carateristico} como sendo \(c_{_T} := \prod^m p_j^{n_j} \in \an_{_T}\), exatamente o mesmo do \(\blacksquare\) (\emph{Caley-Hamilton}). 
 \end{note}
 
 \ejemplo{
@@ -195,7 +195,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     \tcblower
     \begin{description}
         \item[Passo 1.] Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
-        \item[Passo 2.] Encontre \(c_T= \det (t\id_{_V} - A)\) e sua fatoração em primos \(c_T = \prod^m p_j^{n_j}\). \comentario{Precisa habilidade na hora das contas do \(\det\)}
+        \item[Passo 2.] Encontre \(c_{_T}= \det (t\id_{_V} - A)\) e sua fatoração em primos \(c_{_T} = \prod^m p_j^{n_j}\). \comentario{Precisa habilidade na hora das contas do \(\det\)}
         \item[Passo 3.] Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\).  
     \end{description}
 }

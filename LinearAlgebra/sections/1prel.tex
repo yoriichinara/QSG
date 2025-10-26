@@ -1,6 +1,6 @@
 \section*{\S \ \ Preliminares}
 
-É preciso lembrar algumos resultados do curso de Álgebra Linear I, podem ser aprofundados se queser nos capítulos 5 e 6 de \cite{MA719}. Também, algumas propiedades e detalhes do anel de polinômios.  
+É preciso lembrar alguns resultados do curso de Álgebra Linear I, podem ser aprofundados se queser nos capítulos 5 e 6 de \cite{MA719}. Também, algumas propiedades e detalhes do anel de polinômios.  
 
 %\begin{definition}%[]
 %    Um par \((A, +)\) é chamado de \emph{grupo abeliano} se \(A\neq \emptyset\) e \(+: A\times A \to A\) é uma operação binaria tal que, \(\forall a, b, c \in A\): 
@@ -120,7 +120,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 \newcommand{\ehom}{\operatorname{End}_\F}
 
 \begin{definition}  
-  \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \). Se \(V = W\) então denotamos \(\ehom(V) = \hom(V,V)\).\footnote{"\(\operatorname{Hom}\)" vém de homomorfismo e "\(\operatorname{End}\)" de endomorfismo.}   
+  \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \). Se \(V = W\) então denotamos \(\ehom(V) := \hom(V,V)\).\footnote{"\(\operatorname{Hom}\)" vém de homomorfismo e "\(\operatorname{End}\)" de endomorfismo.}   
 \end{definition}   
 
 \propositionnum{0.1.}
@@ -202,14 +202,14 @@ Não vou aprofundar nos detalhes relaçoados com anels, fica muito longe. Por ta
 %    \end{enumerate}
 %\end{definition}
 \begin{definition}
-    Sejam \(I = \{t^k: k\in \mathbb{Z}_\geq0\}\) conjunto respeitando as leis usuais de potências e \((\F,+,\cdot)\) um corpo.\footnote{Quer dizer que \(t^0 =1\) e \(t^m\cdot t^n=t^{m+n}\).  } Defina, \(\forall i \in I\), o espaço vetorial \(V_i = \{a_it^i: a_i \in \F, \  t^i \in I\}\), com as operações, 
+    Sejam \(\{t^i: i \in \mathbb{Z}_{\geq 0}\}\) conjunto respeitando as leis usuais de potências e \((\F,+,\cdot)\) um corpo.\footnote{Quer dizer que \(t^0 =1\) e \(t^m\cdot t^n=t^{m+n}\).  } Defina, \(\forall i \in \mathbb{Z}_{\geq 0}\), o espaço vetorial \(V_i = \{a_it^i: a_i \in \F, \  t^i \in I\}\), com as operações, 
     \begin{itemize}
         \item \(+: V_i \times V_i \ni (a_it^i , b_it^i) \mapsto (a_i+b_i)t^i \in V_i\). 
         \item \(\cdot: \F \times V_i \ni (\lambda, a_it^i) \mapsto (\lambda\cdot a_i) t^i \in V_i\). 
 %        \item Leis de potências usuais, \(t^0 =1\), \(t^1 = t \) e \(t^k \cdot t^l = t^{k+l}\). 
 %        \item Soma, \(\sum^m a_k t^k + \sum^n b_k t^k = \sum^{\max\{n,m\}} (a_k+b_k) t^k\). 
     \end{itemize} 
-    Assim, o anel de polinômios com coeficientes em \(\F\) é \(\mathcal{P}(\F) := \sum V_i\).  
+    Assim, o anel de polinômios com coeficientes em \(\F\) é \(\mathcal{P}(\F) := \prod V_i = \bigoplus V_i\), sequências-somas de \textbf{soporte finito}.   
 \end{definition}
 
 \newcommand{\Pol}{\mathcal{P}(\F)}
