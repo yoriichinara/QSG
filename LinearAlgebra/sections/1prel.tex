@@ -24,7 +24,7 @@
 \subsection*{Espaços Vetoriais}
 
 \begin{definition}
-   Sejam \(\F\) um corpo, e \(V\neq \emptyset\). Um \(\F\)\emph{-espaço vetorial} é uma tripla \((V,+,\cdot)\) onde, \(+:V\times V \to V\) e \(\cdot : \F \times V \to V\) são operações tais que, \(\forall \lambda, \mu \in \F\), \(\forall v, w \in V\), temos, 
+   Sejam \(\F\) um corpo e \(V\neq \emptyset\). Um \(\F\)\emph{-espaço vetorial} é uma tripla \((V,+,\cdot)\) onde, \(+:V\times V \to V\) e \(\cdot : \F \times V \to V\) são operações tais que, \(\forall \lambda, \mu \in \F\), \(\forall v, w \in V\), temos, 
    \begin{enumerate}[left =1.7cm]
         \item[(V1)] \((V,+)\) é grupo abeliano.  
         \item[(V2)] \((V,\cdot)\) asocia, \(\lambda \cdot(\mu \cdot v) = (\lambda \cdot \mu) \cdot v\).  
@@ -35,19 +35,19 @@
 \end{definition}
 
 \begin{definition}
-    Um subconjunto \(W \subseteq V\) não vacío é dito de \emph{subespaço}, denotamos \(W\leq V\), se \(\forall w_1, w_2 \in W\), \(\forall \lambda \in \F\), temos \( w_1 + \lambda w_2 \in W \).   
+    Um subconjunto \(W \subseteq V\) \textbf{não vacío} é dito de \emph{subespaço}, denotamos \(W\leq V\), se \(\forall w_1, w_2 \in W\), \(\forall \lambda \in \F\), \( w_1 + \lambda w_2 \in W \).   
 \end{definition}
 
 \begin{definition}
-    Sejam \(\alpha = (v_i)\) uma familia de vetores em \(V\) e \(m\in \N\). Uma \emph{combinação linear} de \(\alpha\), é um vetor em \(V\) da forma \(v = \sum_{j\leq m} x_{i_j}v_{i_j}\), onde \(x_{i_j} \in \F\).
+    Sejam \(\alpha = (v_i)\) familia de vetores em \(V\) e \(m\in \N\). Uma \emph{combinação linear} de \(\alpha\), é um vetor em \(V\) da forma \(v = \sum_{j\leq m} x_{i_j}v_{i_j}\), onde \(x_{i_j} \in \F\).
 \end{definition}
 
 \begin{note}
-    Denotamos por \([\alpha]\), ao conjunto de todas as combinações lineares de \(\alpha\), repare que \([\alpha]\leq V\). Também, se \(\alpha = \{v\}\) então \([\alpha] = [v] = \F v\). 
+    Denotamos por \([\alpha]\), ao conjunto de todas as combinações lineares de \(\alpha\), repare que \([\alpha]\leq V\). Se \(\alpha = \{v\}\), então \([\alpha] = [v] = \F v\). 
 \end{note}
 
 \begin{definition}
-    Uma familia \(\alpha = (v_i)\) é l.i. sse \(\forall j \in I\), \(v_j \notin [\alpha \setminus \{v_j\}]\). Se além de l.i., \([\alpha] = V\), então \(\alpha\) é chamada de \emph{base} de \(V\). 
+    Uma familia \(\alpha = (v_i)_{i\in I}\) é l.i. sse \(\forall j \in I\), \(v_j \notin [\alpha \setminus \{v_j\}]\). Se além de l.i., \([\alpha] = V\), então \(\alpha\) é chamada de \emph{base} de \(V\). 
 \end{definition}
 
 \theoremnum{5.5.1.}
@@ -60,7 +60,7 @@
 \end{definition}
 
 \begin{definition}
-    Seja \((V_i)\) familia de subespaços em \(V\), definimos a soma deles somo sendo \(\sum V_i := \left[\bigcup V_i\right]\). A soma é direta se \(\forall j\in I\), \(V_j \cap \sum_{i\neq j} V_i =\{0\}\). \footnote{Acostuma-se denotar uma soma direta como \(\bigoplus V_i\).}
+    Seja \((V_i)_{i\in I}\) familia de subespaços em \(V\), definimos a soma deles como sendo \(\sum V_i := \left[\bigcup V_i\right]\). A soma é direta se \(\forall j\in I\), \(V_j \cap \sum_{i\neq j} V_i =\{0\}\). \footnote{Acostuma-se denotar uma soma direta como \(\bigoplus V_i\).}
 \end{definition}
 
      
@@ -74,7 +74,7 @@
 \propositionnum{5.4.6.}
 \begin{proposition}
     \label{prop:5.4.6}
-    Sejam \(\alpha = (v_i)\) e \(V_i = \F v_i\) então \(\alpha\) é l.i. \(\leftrightharpoons\) \(\sum \F v_i\) é direta. 
+    Sejam \(\alpha = (v_i)\) e \(V_i = \F v_i\). Então, \(\alpha\) é l.i. \(\leftrightharpoons\) \(\sum \F v_i\) é direta. 
 \end{proposition}
 
 \newcommand{\comentario}[1]{\textcolor{gray}{\(\rightarrow\) #1}}
@@ -99,7 +99,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 \end{definition}
 
 \begin{definition}
-    Sejam \(T: V \to W\) linear, \(\alpha = (v_j)\) e \(\beta = (w_i)\) bases de \(V\) e \(W \) respetivamente. Então, se \([T(v_j)]_\beta= (a_{i_j})\), a \emph{matriz asociada} \([T]_\beta^\alpha := (a_{i_j})\) determina \(T\) no sentido que, \(\forall v \in V\), \([T(v)]_\beta = [T]_\beta^\alpha [v]_\alpha\). 
+    Sejam \(T: V \to W\) linear, \(\alpha = (v_j)\) e \(\beta = (w_i)\) bases de \(V\) e \(W \) respetivamente. Então, se \([T(v_j)]_\beta= (a_{i_j})\), a \emph{matriz asociada} \([T]_\beta^\alpha := (a_{i_j})_{i,j}\) determina \(T\) no sentido que, \(\forall v \in V\), \([T(v)]_\beta = [T]_\beta^\alpha [v]_\alpha\). 
 \end{definition}
 
 \begin{note}
@@ -109,7 +109,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 \theoremnum{6.1.6.}
 \begin{theorem}
     \label{thm:6.1.6}
-    Sejam \(\alpha = (v_i)\) base de \(V\) e \(\beta = (w_i)\) familia de vetores em \(W\), então \(\exists ! T:V\to W \) linear tal que \(\forall i \in I,\ T(v_i) = w_i\). \comentario{\cite[Pág. 189]{MA719}}
+    Sejam \(\alpha = (v_i)_{i\in I}\) base de \(V\) e \(\beta = (w_i)\) familia em \(W\), então \(\exists ! T:V\to W \) linear tal que \(\forall i \in I,\ T(v_i) = w_i\). \comentario{\cite[Pág. 189]{MA719}}
 \end{theorem}
     
 \begin{note}
@@ -120,7 +120,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 \newcommand{\ehom}{\operatorname{End}_\F}
 
 \begin{definition}  
-  \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \). Se \(V = W\) então denotamos \(\ehom(V) := \hom(V,V)\).\footnote{"\(\operatorname{Hom}\)" vém de homomorfismo e "\(\operatorname{End}\)" de endomorfismo.}   
+  \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \). Se \(V = W\), então denotamos \(\ehom(V) := \hom(V,V)\).\footnote{"\(\operatorname{Hom}\)" vém de homomorfismo e "\(\operatorname{End}\)" de endomorfismo.}   
 \end{definition}   
 
 \propositionnum{0.1.}
@@ -130,9 +130,9 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
     Algumas propiedades coletadas de \cite[Seç. 6.1]{MA719}. 
     \begin{enumerate}[left = 0.55cm, label = (\alph*)]
         \item \(\hom(V,W) \leq \mathcal{F}(V,W)\). 
-        \item Sejam \(\alpha = (v_j)\) e \(\beta = (w_i) \) bases de \(V\) e \(W\) fixas. A função  \(\zeta : \hom(V,W) \ni T \mapsto [T]^\alpha_\beta \in M_{\#I \times \#J}(\F) \) é linear e injetora. 
-        \item Sejam \(\gamma, \ \alpha\) e \(\beta\) bases de \(U,\ V\) e \(W\), \(S \in \hom(U,V)\) e \(T\in \hom(V,W)\) então \(T\circ S \in \hom(U,W)\) e \([T\circ S]^\gamma_\beta = [T]^\alpha_\beta [S]^\gamma_\alpha\).
-        \item Se \(\alpha \) e \(\beta \) são bases de \(V\) e \(W\), e \(T \in \hom(V,W)\) é invertivél então \(T^{-1} \in \hom(W,V)\) e \([T^{-1}]^\beta_\alpha = ([T]^\alpha_\beta)^{-1}\).
+        \item Sejam \(\alpha = (v_j)\) e \(\beta = (w_i) \) bases de \(V\) e \(W\) fixas. A função  \(\Phi : \hom(V,W) \ni T \mapsto [T]^\alpha_\beta \in M_{\#I \times \#J}(\F) \) é linear e injetora. 
+        \item Sejam \(\gamma, \ \alpha\) e \(\beta\) bases de \(U,\ V\) e \(W\), \(S \in \hom(U,V)\) e \(T\in \hom(V,W)\). Então, \(T\circ S \in \hom(U,W)\) e \([T\circ S]^\gamma_\beta = [T]^\alpha_\beta [S]^\gamma_\alpha\).
+        \item Se \(\alpha \) e \(\beta \) bases de \(V\) e \(W\), e \(T \in \hom(V,W)\) invertivél. Então, \(T^{-1} \in \hom(W,V)\) e \([T^{-1}]^\beta_\alpha = ([T]^\alpha_\beta)^{-1}\).
     \end{enumerate}
 \end{proposition}
 
@@ -141,7 +141,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 \end{definition}
 
 \begin{note}
-    A transformação \(\zeta\) da \(\square\) \ref{prop:0.1} (b) é sobrejetiva se \(\#J < \infty\).
+    A transformação \(\Phi\) da \(\square\) \ref{prop:0.1} (b) é sobrejetiva se \(\#J < \infty\).
 \end{note}
 
 \theoremnum{6.1.9.}
@@ -164,7 +164,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 
 \theoremnum{6.3.6.}
 \begin{theorem}
-    \(\dim V = \dim V_{_T} + \dim V(T)\). \comentario{\cite[Pág. 201]{MA719}}
+    \(\dim V = \dim V_{_T} + \operatorname{pt} T\). \comentario{\cite[Pág. 201]{MA719}}
 \end{theorem}
 
 \propositionnum{6.3.9.}
@@ -202,10 +202,10 @@ Não vou aprofundar nos detalhes relaçoados com anels, fica muito longe. Por ta
 %    \end{enumerate}
 %\end{definition}
 \begin{definition}
-    Sejam \(\{t^i: i \in \mathbb{Z}_{\geq 0}\}\) conjunto respeitando as leis usuais de potências e \((\F,+,\cdot)\) um corpo.\footnote{Quer dizer que \(t^0 =1\) e \(t^m\cdot t^n=t^{m+n}\).  } Defina, \(\forall i \in \mathbb{Z}_{\geq 0}\), o espaço vetorial \(V_i = \{a_it^i: a_i \in \F, \  t^i \in I\}\), com as operações, 
+    Sejam \((\F,+,\cdot)\) um corpo e \(\{t^k: k \in \mathbb{Z}_{\geq 0}\}\) conjunto respeitando as leis usuais de potências. \footnote{Quer dizer que \(t^0 =1\) e \(t^m\cdot t^n=t^{m+n}\).  } Defina, \(\forall k \in \mathbb{Z}_{\geq 0}\), o espaço vetorial \(V_k = \{a_kt^k: a_k \in \F\}\), com as operações, 
     \begin{itemize}
-        \item \(+: V_i \times V_i \ni (a_it^i , b_it^i) \mapsto (a_i+b_i)t^i \in V_i\). 
-        \item \(\cdot: \F \times V_i \ni (\lambda, a_it^i) \mapsto (\lambda\cdot a_i) t^i \in V_i\). 
+        \item \(+: V_k \times V_k \ni (a_kt^k , b_kt^k) \mapsto (a_k+b_k)t^k \in V_k\). 
+        \item \(\cdot: \F \times V_k \ni (\lambda, a_kt^k) \mapsto (\lambda\cdot a_k) t^k \in V_k\). 
 %        \item Leis de potências usuais, \(t^0 =1\), \(t^1 = t \) e \(t^k \cdot t^l = t^{k+l}\). 
 %        \item Soma, \(\sum^m a_k t^k + \sum^n b_k t^k = \sum^{\max\{n,m\}} (a_k+b_k) t^k\). 
     \end{itemize} 
@@ -216,7 +216,7 @@ Não vou aprofundar nos detalhes relaçoados com anels, fica muito longe. Por ta
 \begin{note}
     \(\Pol\) é uma estructura maravilhosa pois, só por mençõar algumas de suas carateristícas que seram de nosso interesse aquí,  
     \begin{itemize}
-        \item É espaço vetorial de dimensão infinita e \(\alpha = \{1, t, t^2, \ldots\}\) é uma base, seguindo o {\scriptsize \(\boxtimes\) }\hyperlink{corol5410}{5.4.10.}, \(\Pol \ni p(t) = \sum_{k\leq m}a_{i_k}t^{i_k}\). 
+        \item É espaço vetorial de dimensão infinita e \(\alpha = \{1, t, t^2, \ldots\}\) é uma base, seguindo o {\scriptsize \(\boxtimes\) }\hyperlink{corol5410}{5.4.10.}, \(\Pol \ni p(t) = \sum_{j\leq m}a_{k_j}t^{k_j}\). 
         \item Temos um produto bém definido e comutativo que distribui a soma, o que faz dele um anel e mais geralmente uma álgebra comutativa.  
         \item É PID, ou seja que todo ideal é gerado. 
         \item PID \(\Rightarrow \) UFD, ou seja que temos fatorização única em primos, propie-dades de divisibilidade e algoritmo da divisão.
@@ -284,5 +284,5 @@ Não vou aprofundar nos detalhes relaçoados com anels, fica muito longe. Por ta
 \end{theorem}
 
 \begin{note}
-    Caso particular \(\mdc(f_1, f_2)=1\), tá dizendo que \(\exists a, b \in \Pol\) tais que \(a(t)f_1(t) + b(t)f_2(t)= 1\), isso sería importante mais pra frente.\footnote{Não falei, mais quando isso acontece diz-se que \(f_1\) e \(f_2\) são coprimos}
+    Caso particular \(\mdc(f_1, f_2)=1\), tá dizendo que \(\exists a, b \in \Pol\) tais que \(a(t)f_1(t) + b(t)f_2(t)= 1\), isso vai ser importante mais pra frente.\footnote{Não falei, mais quando isso acontece diz-se que \(f_1\) e \(f_2\) são coprimos}
 \end{note}

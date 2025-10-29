@@ -1,0 +1,17 @@
+\subsection{Produto Tensorial}
+
+\begin{definition}
+    Seja \((V_j)\) familia de \(\F\)-espaços vetorias, \(j\leq k \in \N\). Um \(\F\)\emph{-produto tensorial} pra \((V_j)\) é um par universal \((\phi, V)\) sobre \(X = \Pi V_j\) onde,   
+    \begin{itemize}[left = 1cm]
+        \item \(V\) é \(\F\)-espaço vetorial e \(\phi \in \hom^k(\Pi V_j, V)\). 
+        \item \(P_1 = \) "ser $k$-linear" e \(P_2 = \) "ser linear".
+    \end{itemize}  
+\end{definition}
+
+\hypertarget{thm1021}{}
+\theoremnum{10.2.1.}
+\begin{theorem}
+    \(\forall (V_j),\ \exists (\phi, V)\) \(\F\)-produto tensorial. Além disso, se \(\forall j\leq k, \ \alpha_j\) fora base de \(V_j\), então \(\phi \circ (\Pi \alpha_j)\) é base de \(V\).  
+\end{theorem}
+
+\demo{Sejam \(\alpha := \Pi \alpha_j\), \(V : \dim V = \# \alpha\) e \(\iota : \alpha \to V\) base pra \(V\) indexada por \(\alpha\). Segue do \(\blacksquare \) \ref{thm:9.1.3} que \(\exists ! \phi \in \hom^k(\Pi V_j, V): \phi|_\alpha = \iota\).   } 
