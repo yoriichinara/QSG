@@ -7,7 +7,6 @@
 %\vspace{-0.4cm}
 \begin{note}
     Se \(f\) é diff em \(p\), então \(\forall \vec{v}\in \R^n\), \( \frac{\partial f }{\partial v}(p) = \ell \cdot v \).% \textcolor{gray}{\(\rightarrow \) Vá de uma definição a outra} %\todo[orange, noline]{La derivada \(v\)-direccional es lineal}%En particular \direccionales son lineales en esa dirección.}. \footnote{Esto también implica que las derivadas direccionales son lineales en esa dirección.}
-
 \end{note}
 %\begin{note}[Colorario]
 %    Si \(f\) es diff en \(p\), entonces \(\forall \vec{v}\in \R^n, \exists \frac{\partial f}{\partial v }(p)\) y son lineales . 
@@ -19,7 +18,7 @@
 
 \alerta{\centering \(\forall j\leq n, \ \exists f_{x_j}(p)\) \textcolor{red}{\(\nRightarrow \)} \(df(p)\) lineal \textcolor{red}{\(\nRightarrow\)} \(f\) diff en \(p\)}
 \begin{example}
-    \(f: \R^n \ni \textbf{x} \mapsto \|\textbf{x}\|^2 \in \R\). \textcolor{gray}{\(\rightarrow\) Como em nosso primeiro exemplo}
+    \(f: \R^n \ni \textbf{x} \mapsto \|\textbf{x}\|^2 \in \R\) e diff em \(\R^n\). \textcolor{gray}{\(\rightarrow\) Como em nosso primeiro exemplo}
 \end{example}
 %\begin{exercise}
 %    El diferencial de una función lineal es él mismo. \textcolor{gray}{\(\rightarrow\) Valgase de la linealidad para separar y acomodar la definición }
@@ -27,7 +26,7 @@
 
 
 \begin{proposition}
-    Se \(f\) é diff em \(p\), então \(f\) é continua em \(p\). \textcolor{gray}{\(\rightarrow \) Faz \(v\to 0\) na definição }
+    Se \(f\) é diff em \(p\) então é continua em \(p\). \textcolor{gray}{\(\rightarrow \) Faz \(v\to 0\) na definição }
 \end{proposition}
 
   
@@ -41,9 +40,9 @@
     \(0\neq (x,y) \mapsto \frac{xy^3}{x^2 + y^4}\), nula em \(0\). \textcolor{gray}{\(\rightarrow \) Proceda como no anterior}  
 \end{example}
 }
-\begin{note} 
-    A mecânica para \textbf{descartar} diff consiste em (i) continuidade no \(p\); (ii) \(\exists \frac{\partial f}{\partial x_j}(p)\) lineares e (iii) \(\exists \frac{\partial f}{\partial v}(p) \) lineares.  
-\end{note}
+%\begin{note} 
+%    A mecânica para \textbf{descartar} diff consiste em (i) continuidade no \(p\); (ii) \(\exists \frac{\partial f}{\partial x_j}(p)\) lineares e (iii) \(\exists \frac{\partial f}{\partial v}(p) \) lineares.  
+%\end{note}
 %\begin{example}
 %    \ \(\displaystyle f(x,y) = \begin{cases}
 %        \frac{g(x,y)}{x^2+y^2}, \ &\text{si}\ (x,y)\neq 0 \\
@@ -62,7 +61,7 @@
 %\end{example}
 \ejemplo{\centering  \(p(\x) \in \R[\x]\) é diff \textcolor{verdeoscuro}{\(\Rightarrow\)} \(\pi_j: \x \mapsto x_j \) é diff
 \tcblower
-    Além disso, \(dx_j(p) (v) = v_j \), então \(dx_j(p)(e_i) = \delta_{ij}\), ou seja que \((dx_j) = (e_j)'\) e o diferencial se escreve de manera única como:  
+    Além disso, \(dx_j(p) (v) = v_j \), então \(dx_j(p)(e_i) = \delta_{ij}\), quer dizer que \((dx_j) = (e_j)'\) e o diferencial se escreve de manera única como:  
     \[ df(p) = \sum^n \frac{\partial f }{\partial x_j}(p) \ dx_j. \]
 }
 

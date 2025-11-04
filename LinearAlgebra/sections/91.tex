@@ -8,7 +8,7 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 
 \begin{definition}
     Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j_0\leq k\) fixo, \(\forall(v_{1,j})_{j_0}, (v_{2,j} )_{j_0} \in \Pi V_j \) e \( \forall \lambda \in \F\) temos,   
-    \[  \textstyle \phi_{j_0} ((v_{1,j})_{j_0}+ \lambda( v_{2,j})_{j_0}) = \phi ( (v_{1,j})_{j_0}) + \lambda \phi((v_{2,j})_{j_0}).\footnote{Entendase \((v_{i,j})_{j_0} \in \Pi V_j: \forall j\neq j_0,\ v_{i,j} \in V_j\) ta fixo.}\]  
+    \[  \textstyle \phi_{j_0} (\cdots, v_{1,j_0} + \lambda v_{2,j_0}, \cdots ) = \phi ( (v_{1,j})_{j_0}) + \lambda \phi((v_{2,j})_{j_0}).\footnote{Entendase \((v_{i,j})_{j_0} \in \Pi V_j: \forall j\neq j_0,\ v_{i,j} \in V_j\) ta fixo.}\]  
 \end{definition}
 
 \vspace{-0.5cm}
@@ -17,7 +17,7 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 \end{definition}
 
 \begin{note}
-    Se \(\forall j\leq k\), \(V_j =V\) então \(\hom^k(\Pi V_j,W) = \hom^k(V,W)\) e se \(W = \F \), chamamos seus elementos de \emph{formas $k$-lineares} em \(V\). 
+    Se \(\forall j\leq k\), \(V_j =V\) então, \(\hom^k(\Pi V_j,W) = \hom^k(V,W)\). Se \(W = \F \), chamamos seus elementos de \emph{formas $k$-lineares} em \(V\). 
 \end{note}
 
 \alerta{
@@ -45,7 +45,7 @@ Use aquela expressão pra replicar a demostração do \(\blacksquare\) \ref{thm:
 %, \(\textbf{v}_\textbf{i}:= (v_{\textbf{i},j})_{\textbf{i} \in I}\)
 \begin{proposition}
     \label{prop:9.1.4}
-    Sejam \(V_j\), \(\alpha_j\) como no \(\blacksquare\) \ref{thm:9.1.3}, \(\beta = (w_s)_{s\in S}\) uma base de \(W\) e \(\forall (\textbf{i}, s) \in I \times S\), \(\phi_{\textbf{i}, s} \in \hom^k(\Pi V_j, W)\) o único tal que \(\forall \textbf{i}' \in I, \phi_{\textbf{i},s}((v_{\textbf{i}', j })) = \delta_{\textbf{i}, \textbf{i}'} \ w_s\). Então \((\phi_{\textbf{i}, s})\) é l.i., mas ainda, se \(\forall j\leq k, \dim V_j < \infty \) então \((\phi_{\textbf{i}, s})\) é base do \(\hom^k(\Pi V_j, W)\). 
+    Sejam \(V_j\) e \(\alpha_j\) como no \(\blacksquare\) \ref{thm:9.1.3}, \(\beta = (w_s)_{s\in S}\) uma base de \(W\) e \(\forall (\textbf{i}, s) \in I \times S\), \(\phi_{\textbf{i}, s} \in \hom^k(\Pi V_j, W)\) o único tal que \(\forall \tilde{\textbf{i}} \in I, \phi_{\textbf{i},s}((v_{\tilde{\textbf{i}}, j })) = \delta_{\textbf{i}, \tilde{\textbf{i}}} \ w_s\). Então, \((\phi_{\textbf{i}, s})\) é l.i., mas ainda, se \(\forall j\leq k, \ \dim V_j < \infty \), a familia é base do \(\hom^k(\Pi V_j, W)\). 
 \end{proposition}
 
 \comentario{
@@ -53,5 +53,5 @@ Use aquela expressão pra replicar a demostração do \(\blacksquare\) \ref{thm:
 }
 
 \begin{corollary}
-    Se \(\forall j\leq k, \ \dim V_j<\infty\) então \(\dim \hom^k(\Pi V_j, W) = \dim W \cdot \prod \dim V_j\). \footnote{Se \(\exists j_0 \leq k: \dim V_j = \infty\) então \(\dim \hom^k(\Pi V_j, W) > \dim W \cdot \prod \dim V_j\). \comentario{Não é um negôcio trivial}}
+    Se \(\forall j\leq k, \dim V_j<\infty\), então \(\dim \hom^k(\Pi V_j, W) = \dim W \cdot \prod \dim V_j\). \footnote{Se \(\exists j_0 \leq k: \dim V_j = \infty\), então \(\dim \hom^k(\Pi V_j, W) > \dim W \cdot \prod \dim V_j\). \comentario{Não é um negôcio trivial}}
 \end{corollary}

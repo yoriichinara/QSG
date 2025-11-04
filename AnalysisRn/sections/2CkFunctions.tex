@@ -1,13 +1,14 @@
 \section{Funções de Classe \(C^k\)}
  
 \begin{definition}
-    Seja \(f: U\ab\subseteq \R^n \to \R\) tal que \(\forall p \in U, \exists f_{x_j}(p)\), então sendo \(f_{x_j}: U \to \R\) função, uma \emph{derivada de segundo ordem} de \(f\) é dada por   
+    Sejam \(j\leq n\) e  \(f: U\ab\subseteq \R^n \to \R\) tal que \(\forall p \in U, \exists f_{x_j}(p)\). Então, sendo \(f_{x_j}: U \to \R\) função, uma \emph{derivada de segundo ordem} de \(f\) é dada por   
 %    sendo  bem definida,
     \[(f_{x_j})_{x_i}(p) = \frac{\partial^2 f}{\partial x_i \partial x_j}(p) := \frac{\partial}{\partial x_i}\left(\frac{\partial f}{\partial x_j}\right)(p).\footnote{O ordem importa em geral. Analogamente são definidas as $k$-ésimas derivadas  de \(f\).}\]
 \end{definition}
 
+
 \begin{definition}
-    Seja \(k\in \Z_{\geq 0} \). Uma função \(f:U\ab\subseteq \R^n\to \R\) é de classe \(C^k(U)\) sse \(\forall |\alpha| \leq k, \exists \partial^\alpha f: U \to \R\) e são continuas. 
+    \vspace{-0.5cm}Seja \(k\in \Z_{\geq 0} \). Uma função \(f:U\ab\subseteq \R^n\to \R\) é de classe \(C^k(U)\) sse \(\forall |\alpha| \leq k, \exists \partial^\alpha f: U \to \R\) e são continuas. 
 \end{definition}
 
 \begin{note}
@@ -38,17 +39,17 @@
 %    \end{cases}\). \textcolor{gray}{\(\rightarrow\) Estudie diff en \(p=0\)}
 %\end{example}
 
-
 \begin{theorem}[\emph{Schwarz}] 
 \hypertarget{thmSchw}{}
     Se \(f \in C^2(U)\), então \(\forall i,j \leq n\), \ \(\displaystyle\frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2 f }{\partial x_j \partial x_i}\). 
 \end{theorem}
 
 \demo{\parbox[a]{0.25\linewidth}{\- }\parbox[b]{0.75\linewidth}{Basta ver \(n=2\). Defina \( S = f(x+h, y+k) - f(x+h,y) - f(x, y+k) + f(x,y)\) e \(\varphi(t) = f(t, y+k) - f(t, y)\), aplique \(\blacksquare\) \hyperlink{thmTVMR}{(\emph{TVM - \(\R\)})}\(\times 2\) e manobre até obter uma igualdade a \(S\). O resultado segue de fazer o mesmo a \(\psi(t)\), fixando a outra coordenada.}}
-\begin{tikzpicture}[scale = 0.8, >=to, shift={(2.1cm,3.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+
+\begin{tikzpicture}[scale = 0.8, >=to, shift={(2.2cm,2.75cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
 
   % Círculo dashed
-  \draw[dashed, color = gray, opacity = 1] (0.35,-1.8) arc[start angle = -60, end angle = 60, radius = 2.4cm];
+  \draw[dashed, color = gray, opacity = 1] (0.6,-1.5) arc[start angle = -50, end angle = 50, radius = 2.4cm];
 
   % Coordenadas del rectángulo
   \coordinate (A) at (-1,1.5);
@@ -71,7 +72,7 @@
   \node[below, color = black]  at (D) {\tiny$(x,y)$};
 
 \end{tikzpicture}
-\- \vspace{-1cm}
+
 \begin{corollary}
     Se \(f\in C^k(U)\) então não importa o ordem em que são tomadas as derivadas de ordem \(|\alpha|\leq k\). \textcolor{gray}{\(\rightarrow\) É questão de trabalhá-las 2 a 2}
 \end{corollary}
