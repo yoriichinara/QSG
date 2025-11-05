@@ -5,9 +5,9 @@
     Sejam \(U\ab \subseteq \R^n\), \(V\ab \subseteq \R^r\), \(F: U\to V\subseteq \R^r\) diff em \(p \in U\) e \(G:V\to \R^m\) diff em \(F(p) \in V\). Então, \(G \circ F\) é diff em \(p\) e \(D(G\circ F)(p) = DG(F(p))\cdot DF(p)\). 
 \end{theorem}
 
-\demo{\parbox[a]{0.7\linewidth}{Faz \(q = F(p) \), \(L = DF(p)\), \(M = DG(q)\) e \(H = G \circ F\). Expanda os restos e escreva \(\Gamma_H(v)\) em termos de \(\Gamma_F(v)\) e \(\Gamma_G(w)\). Desmonte as expressões e faza análise do erro. } \parbox[b]{0.3\linewidth}{ }}
+\demo{\parbox[a]{0.7\linewidth}{\-\vspace{0.2cm}\\ Faz \(q = F(p) \), \(L = DF(p)\), \(M = DG(q)\) e \(H = G \circ F\). Expanda os restos e escreva \(\Gamma_H(v)\) em termos de \(\Gamma_F(v)\) e \(\Gamma_G(w)\). Desmonte as expressões e faza \vspace{0.4cm}análise do erro. } \parbox[b]{0.3\linewidth}{ }}
 
-\begin{tikzpicture}[>=to, shift={(8.5cm,1.5cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[>=to, shift={(7.6cm,1.15cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     
     \node (Rn2) at (5.5,2) {$\mathbb{R}^n$};
     \node (Rk) at (8.5,2) {$\mathbb{R}^m$};
@@ -21,7 +21,7 @@
 \end{tikzpicture}
 
 \begin{corollary}
-    \vspace{-1cm}Se \(F \in C^k(U,\R^r)\) e \(G \in C^k(V,\R^m)\) então \(G\circ F \in C^k(U, \R^m)\). 
+    \vspace{-0.8cm}Se \(F \in C^k(U,\R^r)\) e \(G \in C^k(V,\R^m)\) então \(G\circ F \in C^k(U, \R^m)\). 
 \end{corollary}
 %\- \vspace{-0.5cm}
 

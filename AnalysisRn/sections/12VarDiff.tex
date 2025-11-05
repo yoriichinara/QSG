@@ -1,7 +1,7 @@
 \section{Variedades Differenciáveis}
 
 \begin{definition}
-    Sejam \(X\subseteq \R^n\) e \(Y\subseteq \R^m\), uma aplicação \(F\in C^k(X,Y)\) sse \(\forall p \in X\), \(\exists \widetilde{F} \in C^k(\U_p, \R^m)\) tal que \( \widetilde{F}|_{_{\U_p \cap X}} = F\).    
+    Sejam \(X\subseteq \R^n\) e \(Y\subseteq \R^m\). Uma aplicação \(F\in C^k(X,Y)\) sse \(\forall p \in X\), \(\exists \widetilde{F} \in C^k(\U_p, \R^m)\) tal que \( \widetilde{F}|_{_{\U_p \cap X}} = F\).    
 \end{definition}
 
 %\begin{note}
@@ -9,19 +9,17 @@
 %\end{note}
 
 \begin{definition}
-    \(F: X \to Y\) é \emph{diffeomorfismo} de classe \(C^k\) se \(F\in C^k(X,Y)\) é homeomorfimso e \(F^{-1}\in C^k(Y,X)\). Denotamos \(^k F : X \simeq Y \). 
+    \(F: X \to Y\) é \emph{diffeomorfismo} de classe \(C^k\) se \(F\in C^k(X,Y)\) é homeomorfismo e \(F^{-1}\in C^k(Y,X)\). Denotamos \(^k F : X \simeq Y \). 
 \end{definition}
 \begin{example}
     Sejam \(X= \{(x,y) \in \mathbb{S}^1: y > 0 \}\) e \(Y = (-1,1)\). A aplicação \(\pi: X \ni (x,y) \mapsto x \in Y\) é \(^\infty F: X\simeq Y \). \textcolor{gray}{\(\rightarrow\) Verifique as condições}
 \end{example}
 \begin{definition}
     Um subconjunto \(^k_d M \subseteq \R^n\) é uma \emph{subvariedade} de classe \(C^k\) e dimensão \(d\), se  \(\forall p \in M \), \(\exists\ ^k \varphi: \U_p \cap M \simeq V\ab \subseteq \R^d\) \emph{carta local}. Também, 
-    
     \begin{itemize}[label = \(\star\)]
-        \item \(\varphi = (\x_1, \ldots, \x_d)\) \(\leftarrow \) \emph{Coordenadas locais}.
+        \item \vspace{-0.3cm}\(\varphi = (\x_1, \ldots, \x_d)\) \(\leftarrow \) \emph{Coordenadas locais}.
         \item \(\psi := \varphi^{-1} : V \to \U_p \cap M \) \(\leftarrow\) \emph{Parametrização local}.
     \end{itemize}
-     
 \end{definition}
 
 \begin{note}
@@ -29,14 +27,14 @@
 \end{note}
 
 \begin{example}
-    \(^{\infty}_{\hspace{0.15cm}n} U\ab\). \comentario{ \(\varphi = \psi = \id_n\)}%,\ ^{\hspace{0.3cm}\infty}_{n-1}\E^{n-1} \subseteq \R^n\). \textcolor{gray}{\(\rightarrow \)  e \(\varphi = \pi_{_N}\) projeção estereográfica}
+    \(^{\infty}_{\hspace{0.15cm}n} U\ab\subseteq \R^n\) e \(^{\hspace{0.3cm}\infty}_{n-1}\E^{n-1} \subseteq \R^n\). \comentario{ \(\varphi = \psi = \id_n\) e \(\varphi = \pi_{_N}\), respetivamente }
 \end{example}
 
 \begin{lemma}
     Sejam \(^k_d M \subseteq \R^n \) e \(\psi: V\ab\subseteq \R^d \to M\subseteq \R^n\). Então, \(\psi\) é paremetrização local da \(M\) \(\leftrightharpoons\) \(\psi \) é imersão e homeomorfismo \((M,\tau_{_M})\). 
 \end{lemma}
 
-\demo{(\(\Leftarrow\)) A bijeção é imediata de \(\psi(V)\ab \subseteq M\). Aplique \(\blacksquare\) \hyperlink{thmFLI}{(\emph{FLI})} e faça composição com a projeção. }
+\demo{(\(\Rightarrow\)) Direta da definição. (\(\Leftarrow\)) A bijeção é imediata de \(\psi(V)\ab \subseteq M\). Aplique \(\blacksquare\) \hyperlink{thmFLI}{(\emph{FLI})} e faça composição com a projeção. }
 
 \alerta{\centering Imersão injetiva \textcolor{red}{\(\not\Rightarrow \)} Homeomorfismo}
 
@@ -50,11 +48,11 @@
 
 \begin{example}[\emph{Coordenadas Esféricas}]
     \(\psi: [0,\pi]^{n-2}\times [0, 2\pi) \to  \E^{n-1} \subseteq \R^n: \)      
-    \[\textstyle (\theta_i) \mapsto \left(\cos\theta_1, \ldots, \prod^{i<j}\sin\theta_i \cdot \cos\theta_{j},\ldots, \prod\sin\theta_i\right). \] 
+    \[ (\theta_i) \mapsto \left(\cos\theta_1, \ldots, \prod^{i<j}\sin\theta_i \cdot \cos\theta_{j},\ldots, \prod\sin\theta_i\right). \] 
 \end{example}
 
 \begin{proposition}
-    Seja \(G\in C^k(U,\R^m) \). Se \(\forall p \in U, \ G\) é submersão em \(p\), então \[\{p \in U : G(p)=0\} =:\ ^{\hspace{0.65cm}k}_{n-m}M \subseteq \R^n.\]     
+    Se \(G\in C^k(U,\R^m) \)  é submersão \(U\), então \(\{p \in U : G(p)=0\} =:\ ^{\hspace{0.65cm}k}_{n-m}M \subseteq \R^n\).     
 \end{proposition}
 
 %\begin{proposition}
@@ -98,10 +96,10 @@
     Se \(F\in C^k(M,N)\) então \(DF(p)\) não depende da \(\widetilde{F}\).  
 \end{lemma}
 
-\demo{\parbox[a]{0.28\linewidth}{ }\parbox[b]{0.72\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\check{\psi}_{b}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\check{\varphi} \circ F \circ \psi: V \to \check{V}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}D\psi_a(a)\mapsto \operatorname{Im}D\check{\psi}_{b}(b)\). \vspace{0.3cm}}
+\demo{\parbox[a]{0.3\linewidth}{ }\parbox[b]{0.7\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\check{\psi}_{b}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\check{\varphi} \circ F \circ \psi: V \to \check{V}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}D\psi_a(a)\mapsto \operatorname{Im}D\check{\psi}_{b}(b)\). \vspace{0.3cm}}
 }
 
-\begin{tikzpicture}[scale = 1.2, >=to, shift={(11.95cm,1.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[scale = 1, >=to, shift={(13.5cm,1.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     
     \node (Up) at (0,0) { $\R^{d_1}$};
     \node (Rn) at (2.5,0) { $\R^{d_2}$};
@@ -112,10 +110,10 @@
     %\node (d) at (3.6,2) {\footnotesize$L^{-1}$};
     %\node (c1) at (3.6,1) {\rotatebox{90}{$\longmapsto$}};
 
-    \draw[->] (Up) -- node[above, xshift = -0.45cm, yshift = -0.4cm] {\scriptsize \(\psi\)} (U);
-    \draw[->] (Up) -- node[below] {\scriptsize \(D(\check{\varphi}\circ F \circ \psi)\)} (Rn);
-    \draw[->] (U) -- node[above] {\scriptsize \(DF\) } (Rn2);
-    \draw[->] (Rn) -- node[right, xshift = 0.05cm, yshift = 0cm] {\scriptsize \(\check{\psi}\)} (Rn2);
+    \draw[->] (Up) -- node[above, xshift = -0.45cm, yshift = -0.4cm] { \(\psi\)} (U);
+    \draw[->] (Up) -- node[below, yshift = -0.1cm] { \footnotesize\(D(\check{\varphi}\circ F \circ \psi)\)} (Rn);
+    \draw[->] (U) -- node[above] { \(DF\) } (Rn2);
+    \draw[->] (Rn) -- node[right, xshift = 0.05cm, yshift = 0cm] {\(\check{\psi}\)} (Rn2);
     \draw[->, color = gray, >=to] (1.15,0.85) arc (240:-60:0.25);
 
 \end{tikzpicture}
@@ -158,8 +156,7 @@
 \ejemplo{ \centering \(\blacksquare\) \hyperlink{thmML}{(\emph{Multiplicadores de Lagrange})}
 \tcblower
 \begin{example}
-    Seja \(M= \ ^k H\subseteq \R^n\) hipersuperficie definida por \(g(\x)=0\) e \(f: \R^n \to \R\) função escalar, então 
-    \[p \in M \text{ ponto crítico de } f(M) \ \textcolor{verdeoscuro}{\leftrightharpoons}\  df(p): T_pM \not \twoheadrightarrow \R.\]
+    Sejam \(M= \ ^k H\subseteq \R^n\) hipersuperficie definida por \(g(\x)=0\), \(U\ab\subseteq \R^n: H\subset U\) e \(f: U \to \R\). Então, \(p \in M\) é crítico \(\textcolor{verdeoscuro}{\leftrightharpoons}\  df(p): T_pM \not \twoheadrightarrow \R\).
 \end{example}
 }
 
@@ -184,7 +181,7 @@
 \ejemplo{ \centering Variedades de dimensão \(0\) 
 \tcblower 
 \begin{example}
-    Sejam \(F\in C^k(M,N)\) com \(\dim M = \dim N \) e \(q \in N \) valor regular de \(F\). Então, \(P = F^{-1}(q)\) é um conjunto discreto. Ainda mais, se \(M\) fora compacto, então \( \#P < \infty\). \textcolor{gray}{\(\rightarrow \ \R^0 = \{\text{o}\} \) }
+    Sejam \(F\in C^k(M,N)\) com \(\dim M = \dim N \) e \(q \in N \) valor regular de \(F\). Então, \(P = F^{-1}(q)\) é um conjunto discreto. Mas ainda, se \(M\) fora compacto, então \( |P| < \infty\). \textcolor{gray}{\(\rightarrow \ \R^0 = \{\text{o}\} \) }
 \end{example}
 }
 

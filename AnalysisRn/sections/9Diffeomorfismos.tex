@@ -1,12 +1,12 @@
 \section{Diffeomorfismos, TFI e Derivados} 
 
 \begin{definition}
-    Sejam \(U\ab, V\ab \subseteq \R^n\). Uma aplicação \(F:U \to V\) é \emph{diffeomorfismo} de classe \(C^k\), se é bijetiva, \(F \in C^k(U,\R^n)\)  e \(F^{-1} \in C^k(V,\R^n)\).    
+    Sejam \(U\ab, V\ab \subseteq \R^n\). Uma aplicação \(F:U \to V\) é \emph{diffeomorfismo} de classe \(C^k\), \(^kF: U\simeq V\), se fora bijetiva, \(F \in C^k(U,\R^n)\)  e \(F^{-1} \in C^k(V,\R^n)\).    
 \end{definition}
 
-\begin{note} 
-    Por praticidade na notação escrevemos \(^kF: U\simeq V\).
-\end{note}
+%\begin{note} 
+%    Por praticidade na notação escrevemos .
+%\end{note}
 
 \begin{example}
    \(F:(t,x)\mapsto (x-ct, x+ct ) \) é \(^\infty F: U\simeq V\), onde \(U=V=\R^2\). \textcolor{gray}{\(\rightarrow \) Faza as contas e observe como é a inversa} 
@@ -38,7 +38,7 @@
      
 \hypertarget{corol81}{}
 \begin{corollary}
-    \textbf{8.1.} Do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})}, se \(F\) é diffeomorfismo, então \(\forall p \in U\), \(DF(p)\in \hom(\R^n)\) é invertível, mais ainda, sendo \(F(p)=q\) temos  
+    \textbf{8.1.} Do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})}, se \(F\) fora diffeomorfismo, então \(\forall p \in U\), \(DF(p)\in \operatorname{GL}_n(\R)\), mas ainda, sendo \(F(p)=q\) temos,  
     \[D[F^{-1}](q) = [DF(p)]^{-1}  \ \ \sim \ \   [JF^{-1}](q) = [JF(p)]^{-1}.\]
 %    \textcolor{gray}{\(\rightarrow\) Cálcule \(D ( F \circ F^{-1})\)} 
 \end{corollary}

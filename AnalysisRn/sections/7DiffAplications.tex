@@ -4,22 +4,22 @@
     Uma \emph{aplicação} é uma função vetorial \(F:U\ab \subseteq \R^n \to \R^m\) cujas componentes são funções escalares \(F_i: U \to \R\).  
 \end{definition}
 \begin{example}
-    Um \emph{caminho} em \(\R^m \) é uma aplicação \(c: \mathcal{I}\ab \subset \R \to \R^m\). 
+    Um \emph{caminho} em \(\R^m \) é uma aplicação \(c:I\ab \subset \R \to \R^m\). 
 \end{example}
 \begin{definition}
-    Uma  aplicação \(F:U\ab\subseteq \R^n \to \R^m\) é \emph{diff} em \(p\in U\) sse \(\exists L\in \hom(\R^n,\R^m)\) tal que \(F(p+v) = F(p) + Lv + \sigma \|v\|\). 
+    \(F:U\ab\subseteq \R^n \to \R^m\) é \emph{diff} em \(p\in U\) sse \(\exists L\in \hom(\R^n,\R^m)\) tal que \( F(p+v) = F(p) + Lv + \sigma \|v\|\) quando \(v\to 0\). 
 \end{definition}
 \begin{note}
     \(\sigma(v): \R^n \to \R^m\), logo, \(r(v) = \sigma\|v\|\) \(\leftrightharpoons\) \(\forall i \leq m, \ r_i(v) = \sigma\|v\|\).
 \end{note}    
 \hypertarget{lemma71}{}
 \begin{lemma}
-    \textbf{7.1.} Uma aplicação \(F = (F_1, \ldots, F_m): U\ab\subseteq\R^n \to \R^m\) é diff em \(p\) \(\leftrightharpoons\) \(\forall i\leq m,\ F_i\) é diff em \(p\) e \(L_i = dF_i(p)\).  
+    \textbf{7.1.} \( F = (F_1, \cdots, F_m): U\ab\subseteq\R^n \to \R^m\) é diff em \(p\) \(\leftrightharpoons\) \(\forall i\leq m,\ F_i\) é diff em \(p\).% e \(L_i = dF_i(p)\).  
 \end{lemma}
-\demo{(\(\Rightarrow\)) É direto da definição tomando a  \(L_i\) de \(L\) existente. (\(\Leftarrow\)) Lembre-se que se \(\exists dF_i\), é único, use isso para armar \(L\) e exponer a aproximação de \(F(p+v)\) com erro de ordem \(\sigma \|v\|\).}
+\demo{(\(\Rightarrow\)) Direto tomando a  \(L_i\) de \(L\) existente. (\(\Leftarrow\)) Lembre-se que se \(\exists dF_i\), é único, arme \(L\) e mostre a aproximação de \(F(p+v)\) com erro de ordem \(\sigma \|v\|\).}
 
 \begin{corollary}
-    Se \(F\) é uma aplicação diff em \(p\) então é continua em \(p\). %\textcolor{gray}{ \(\rightarrow\) As componentes são diff}  
+    Se \(F\) é diff em \(p\) então é continua em \(p\). %\textcolor{gray}{ \(\rightarrow\) As componentes são diff}  
 \end{corollary}
 
 \begin{definition}
@@ -77,7 +77,7 @@
 \Ef
 
 \begin{definition}
-    Dizemos que a aplicação \(F:U\ab\subseteq \R^n\to \R^m\) é de classe \(C^k(U, \R^m)\) sse \(\forall i\leq m\), \(F_i\in C^k(U)\). %, denotamos \(F\in C^k(U;\R^m)\). 
+    \(F:U\ab\subseteq \R^n\to \R^m\) é de classe \(C^k(U, \R^m)\) sse \(\forall i\leq m\), \(F_i\in C^k(U)\). %, denotamos \(F\in C^k(U;\R^m)\). 
 \end{definition}
 \begin{corollary}
     Se \(F\in C^1(U,\R^m)\) então \(F\) é diff em \(U\). \textcolor{gray}{\(\rightarrow\) Segue de \(\blacksquare\) \hyperlink{thm31}{3.1.} e {\scriptsize\(\square \)} \hyperlink{lemma71}{7.1.}}
@@ -86,7 +86,7 @@
 \subsection*{Derivadas de Ordem Superior}
 
 \begin{note}
-    Uma aplicação \(F:U\ab\subseteq \R^n \to \R^m\) diff induce uma outra aplicação \(DF: U \to \hom(\R^n,\R^m)\cong M_{m\times n }(\R) \cong \R^{mn}\) tal que \(p \mapsto DF(p)\) y cujas componentes são (sob identificação) as funções \(\frac{\partial F_i}{\partial x_j}\). Nesse sentido,   
+    Uma aplicação \(F:U\ab\subseteq \R^n \to \R^m\) diff induce uma outra aplicação \(DF: U \to \hom(\R^n,\R^m)\cong M_{m\times n }(\R) \cong \R^{mn}\) tal que \(p \mapsto DF(p)\) y cujas componentes são (sob identificação) as funções \((F_i)_{x_j}\). Nesse sentido,   
     \begin{itemize}
         \item \(F \in C^1(U, \R^m)\) \(\leftrightharpoons\) \(F\) é diff e \(DF \in C^0(U,\R^{mn})\).
         \item \(F \in C^2(U, \R^m)\) \(\leftrightharpoons\) \(F \in C^1(U, \R^m)\) e \(D^2F \in C^1(U, \hom(\R^n, \R^m))\), 
@@ -96,10 +96,10 @@
 
 \newcommand{\F}{\mathbb{F}}
 \begin{proposition}
-    Sejam \(V_1, V_2\) e  \(W\) \(\F\)-espaços vetoriais. Então, \(\hom_\F (V_1,\hom_\F(V_2,W)) \cong \hom_\F(V_1\otimes V_2,W)\), o espaço das aplicações bilineares.  
+    Sejam \(V_1, V_2\) e  \(W\) \(\F\)-espaços vetoriais. Então, \(\exists \Phi : \hom_\F (V_1,\hom_\F(V_2,W)) \cong\hom_\F (V_1\otimes V_2,W)\), o espaço das aplicações bilineares.  
 \end{proposition}
 
 \begin{definition}
-    A derivada \(k\)-ésima de uma aplicação \(F:U\ab \subseteq \R^n \to \R^m\), se existir, é uma aplicação $k$-linear \(D^kF(p): \bigotimes^k \R^n \to \R^m\) tal que 
+    A derivada \(k\)-ésima de \(F:U\ab \subseteq \R^n \to \R^m\), se existir, é uma aplicação $k$-linear \(D^kF(p): \bigotimes^k \R^n \to \R^m\) tal que 
     \[v^{(1)}\otimes \cdots \otimes v^{(k)}\mapsto \frac{\partial^k F}{ \partial v^{(1)}\cdots \partial v^{(k)}}(p) = \sum \frac{\partial^k F}{\partial x_{i_1} \cdots \partial x_{i_k}} (p) \ v_{i_1}^{(1)}\cdots v_{i_k}^{(k)}. \]
 \end{definition}

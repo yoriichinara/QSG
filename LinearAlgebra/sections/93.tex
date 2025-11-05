@@ -9,14 +9,14 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA71
 
 \newcommand{\Fi}{_\alpha[\phi]_\beta}
 \begin{definition}
-    Sejam \(V, W \) \(\F\)-espaços de dimensão finita, \(\alpha, \beta\) bases pra eles e \(\phi \in B(V,W)\). A \emph{matriz asociada} \(_\alpha[\phi]_\beta := (\phi(v_i,w_j))_{i,j}\) determina \(\phi\) no sentido, \([v]_\alpha^t\  _\alpha[\phi]_\beta \  [w]_\beta = \phi (v,w)\). \footnote{Em geral, \(\Fi\) pode-se definir pra familias de vetores. } 
+    Sejam \(V, W \) \(\F\)-espaços de dimensão finita, \(\alpha, \beta\) bases e \(\phi \in B(V,W)\). A \emph{matriz asociada} \(_\alpha[\phi]_\beta := (\phi(v_i,w_j))_{i,j}\) determina \(\phi\) no sentido, \([v]_\alpha^t\  _\alpha[\phi]_\beta \  [w]_\beta = \phi (v,w)\). \footnote{Em geral, \(\Fi\) pode-se definir pra familias de vetores. } 
 \end{definition}
 \begin{note}
     É importante entender essa continha \(\phi\left(\sum^m a_i v_i, \sum^n b_j w_j\right)\).
 \end{note} 
 \propositionnum{9.3.1.}
 \begin{proposition}
-    Sejam \(m,n \in \mathbb{Z}_{\geq 0}\) as dimensões de \(V, W\) respetivamente. Então, a função \(\zeta: B(V,W) \ni \phi \ \mapsto\  \Fi \in M_{m\times n}(\F)\) é isomorfismo. Em particular, \(\dim B(V,W) = \dim V \cdot \dim W\). %\comentario{Propiedades das matrices}
+    Sejam \(m,n \in \mathbb{Z}_{\geq 0}: \dim V = n\text{ e }  \dim W = m\). Então, \(\Phi: B(V,W) \ni \phi \ \mapsto\  \Fi \in M_{m\times n}(\F)\) é isomorfismo. Em particular, \(\dim B(V,W) = nm\). %\dim V \cdot \dim W\). %\comentario{Propiedades das matrices}
 \end{proposition}
 
 \demo{Segue de propiedades das matrices, pra a sobrejetividade pega \(A \in M_{m\times n}(\F)\) e mostra que \(\phi(v,w) := [v]_\alpha^t \cdot A \cdot [w]_\beta \in B(V,W)\). }
@@ -69,7 +69,7 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA71
 \end{definition}
 
 \begin{exercise}
-    Seja \(\phi \in B(V)\). Se \(\operatorname{car}\F = 2\), então \(\phi\) simétrica \(\leftrightharpoons\)  \(\phi\) antisimétrica. Caso contrario, \(\operatorname{car}\F \neq 2\),  \(\phi\) antisimétrica \(\leftrightharpoons\) \(\phi\) alternada.   
+    Seja \(\phi \in B(V)\). Se \(\operatorname{car}\F = 2\) então, \(\phi\) simétrica \(\leftrightharpoons\)  \(\phi\) antisimétrica. Caso contrario, \(\phi\) antisimétrica \(\leftrightharpoons\) \(\phi\) alternada.   
 \end{exercise}
 
 \propositionnum{9.3.5.}
@@ -102,7 +102,7 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA71
     \textbf{9.3.6.} Se \(\dim V < \infty \), são equivalentes: 
     \begin{enumerate}[left = -0.5cm, label= \roman*.]
         \centering
-        \item \(\phi \) degenerada. \hspace{1cm} ii. \(V^{\perp_\phi}\neq \{0\}\). \hspace{1cm} iii. \(^{\perp_\phi}V\neq \{0\}\).
+        \item \(\phi \) degenerada. \hspace{2cm} ii. \(V^{\perp_\phi}\neq \{0\}\). \hspace{2cm} iii. \(^{\perp_\phi}V\neq \{0\}\).
     \end{enumerate}
     Além disso, \(\pt\phi = \dim V - \dim V^{\perp_\phi}= \dim V - \dim ^{\perp_\phi}V\).
 \end{lemma}
@@ -114,7 +114,7 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cáp. 7]{MA71
 \end{proposition}
 
 \begin{note}
-    Se \(W\leq V\) e \(\phi \in B(V)\) então \(\phi |_{_W} \in B(W)\). %e note que esta restrição não respeita a condição de ser degenerada ou não degenerada.  
+    Se \(W\leq V\) e \(\phi \in B(V)\), então \(\phi |_{_W} \in B(W)\). %e note que esta restrição não respeita a condição de ser degenerada ou não degenerada.  
 \end{note}
 
 \alerta{

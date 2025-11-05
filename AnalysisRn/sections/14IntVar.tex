@@ -11,7 +11,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 %\ejemplo{ \centering  
 %    \tcblower
 \begin{example}
-    O $n$\emph{-bloco padrão}, \(\id_{\I^n} : \I^n \to \I^n \subset \R^n \). Uma curva suave \(c : \I \to M \) é um \(1\)-bloco. 
+  \(\id_{\I^n} : \I^n \to \I^n \subset \R^n \), $n$\emph{-bloco padrão}. As curvas são  \(1\)-blocos. 
 \end{example}
 
 \alerta{
@@ -37,8 +37,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 
 %\parbox[l]{0.6\linewidth}{
 \begin{definition}
-    Uma $k$\emph{-cadeia} de blocos em \(M\) é uma ex-\\ 
-    presão da forma, 
+    Uma $k$\emph{-cadeia} de blocos em \(M\) é uma expresão,
     \[ c = {\sum^k} n_i \sigma_i, \ n_i \in \mathbb{Z} \ \text{e } \sigma_i:\I^k\to  M.\  \footnote{Mais formalmente, as $k$-cadeias são elementos do grupo abeliano livre gerado pelos $k$-blocos. }\hspace{7.5cm}\] 
     %onde \(n_j \in \mathbb{Z} \) e \(\sigma_j: I^k \to M \) é um $k$-cubo singular.
 \end{definition}
@@ -48,7 +47,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 %end{example}
 
 \- \vspace{-1.3cm}
-\begin{tikzpicture}[>=to, shift={(11.5cm, 0.6cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[scale = 0.9,>=to, shift={(12.5cm, 0.3cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
   % Dibuja la cuadrícula de puntos
 
   % C1
@@ -69,7 +68,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
     \node at (3.12,2.4) {\rotatebox{-39}{$>$}};
 
     \node[red] at (5.35,3.05) {\rotatebox{230}{$>$}};
-    \node at (3.5,1) {$c = 2c_1 + c_2 \textcolor{red}{-} c_3$};
+    \node at (3.5,1) {\footnotesize $c = 2c_1 + c_2 \textcolor{red}{-} c_3$};
 
 \end{tikzpicture}
 
@@ -77,14 +76,12 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
     Sejam \(\omega \in \Omega^k(M)\) e \(c \) $k$-cadeia, então \(\displaystyle \int_c \omega :=  \sum^k n_i\int_{\sigma_i} \omega .\)  
 \end{definition}
 
-\vspace{-0.3cm}
 \begin{definition}
     Seja \(\sigma \) um $k$-bloco. O \emph{borde} de \(\sigma\) é a \((k-1)\)-cadeia dada por
-    \- \vspace{-0.2cm}
     \[\hspace{5cm} \partial \sigma = \sum^k (-1)^i (\sigma_{(i,0)}- \sigma_{(i,1)}).\]
 \end{definition}
 
-\begin{tikzpicture}[scale= 1, >=to, shift={(2.9cm,0.3cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[scale= 0.9, >=to, shift={(2.9cm,0.1cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
 
   % Coordenadas de los vértices del cuadrado
   \coordinate (A) at (-0.5,1);
@@ -131,7 +128,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 % \draw[thick, ->] ($(A) + (-1.75,2)$) to[in=180, out=90] ($(A) + (-1.25,2.5)$);
 %  \draw[thick, ->] ($(A) + (0.5,2)$) to[in=0, out=90] ($(A) + (-0.25,2.5)$);
 
-  \node[thick] at ($(A) + (1.85,0.5)$) {$\sim $};
+  \node[thick] at ($(A) + (2.6,0.5)$) {$\sim $};
   \node[thick] at ($(A) + (0.5,0)$) {\small\rotatebox{0}{$>$}};
   \node[thick] at ($(D) + (0.5,0)$) {\small\rotatebox{180}{$>$}};
   \node[thick] at ($(B) + (0,0.5)$) {\small\rotatebox{90}{$>$}};
@@ -194,10 +191,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 \end{definition}
 
 \begin{definition}
-  Seja \(_dM\subseteq \R^n\) variedade. O subconjunto \(_d\overline{M}\subseteq  \R^n\) é uma \emph{variedade com bordo}. Desta vez dizemos que \(\forall p \in \overline{M}, \ \exists ^k\varphi : \U_p \cap \overline{M} \simeq V\ab\subseteq \mathbb{H}^d\) e, 
-  \begin{itemize}[label = \(\star \)]
-    \item \( \overline{M}\setminus M =:\  _{d-1}\partial M\subseteq \R^n \ \leftarrow \) \emph{Bordo} de \(\overline{M}\). 
-  \end{itemize}  
+  Seja \(_dM\subseteq \R^n\) variedade. O subconjunto \(_d\overline{M}\subseteq  \R^n\) é uma \emph{variedade com bordo} \( \overline{M}\setminus M =:\  _{d-1}\partial M\subseteq \R^n  \). Mas agora temos, \(\forall p \in \overline{M}, \ \exists ^k\varphi : \U_p \cap \overline{M} \simeq V\ab\subseteq \mathbb{H}^d\). 
 \end{definition}
 
 %\begin{note}
@@ -210,12 +204,14 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 \- \vspace{-0.8cm}
 \begin{figure}[!h]
   \centering
-  \includegraphics[width = 0.6\linewidth]{Imagens/im1.pdf} \\ 
+  \small 
+  \includegraphics[width = 0.7\linewidth]{Imagens/im1.pdf} \\ 
   \vspace{0.6cm}Figura 2: Variedades com bordo
 \end{figure}
 
+
 \begin{note}
-  \(T_pN = T_p\overline{N}\). Mas agora, \(\dim T_p(\partial N) = d-1\), portanto \(\exists! \ \nu(p) \in T_pN\) unitario tal que \(\nu(p) \perp T_p(\partial N)\) aponta pra fora de \(N\).  
+  \vspace{-0.3cm}\(T_pN = T_p\overline{N}\). Mas agora, \(\dim T_p(\partial N) = d-1\), portanto \(\exists! \ \nu(p) \in T_pN\) unitario tal que \(\nu(p) \perp T_p(\partial N)\) aponta pra fora de \(N\).  
 \end{note} 
 
 \begin{definition}

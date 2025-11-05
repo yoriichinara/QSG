@@ -1,9 +1,9 @@
 \section{Teoria Geral de Operadores Lineares}
 
 \vspace{-0.3cm}
-Se \(T\in \ehom(V)\) então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ veces }} \in \ehom(V)\), por convenção \(T^0 = \id_{_V}\). Seguindo \(\square \) \ref{prop:0.1} (a), \(\forall p \in \mathcal{P}(\F)\) temos,  
+Se \(T\in \ehom(V)\) e \(m \in \mathbb{Z}_{\geq 0}\), então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ veces }} \in \ehom(V)\), por convenção \(T^0 = \id_{_V}\). Seguindo a \(\square \) \ref{prop:0.1} (a), \(\forall p \in \mathcal{P}(\F)\) temos,  
 \[p(t) = \sum^m a_kt^k \ \ \ \leadsto \ \ \ P(T) = \sum^m a_kT^k \in \ehom(V).\] 
-Também, seguindo a notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\}\). De aquí pra frente seja \(T\in \ehom(V)\) fixo. 
+Também, na notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\}\). De aquí pra frente (nesste capítulo) sejam \(V\) e  \(T\in \ehom(V)\) fixos. 
 
 \begin{note}
     Nessos termos um autoespaço é \(V_{t-\lambda} \neq \{0\}\). 
@@ -28,7 +28,7 @@ Também, seguindo a notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: 
 \end{note}
 
 \begin{definition}
-    Sejam \(\lambda \in F\) e \(V_{\ p}^\infty := \bigcup_{k>0} V_{p^k}\). No caso, \(p = (t-\lambda)\) então \(V_{\ p}^\infty \) é chamado de \emph{autoespaço geralizado} associado ao \(\lambda\). 
+    Sejam \(\lambda \in F\) e \(V_{\ p}^\infty := \bigcup_{k>0} V_{p^k}\). No casso de \(p = (t-\lambda)\) o subespaço \(V_{\ p}^\infty \) é chamado de \emph{autoespaço geralizado} associado ao \(\lambda\). 
 \end{definition}
 
 \begin{note}
@@ -58,7 +58,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     \(\an_{_T} \) é ideal então \( \exists ! m_{_T}\) tal que \(\an_{_T} = \langle m_{_T}\rangle\). Se prefer pegue \(m_{_T}\) de menor grau possivél, suponha \(f = m_{_T} q +r\) e conclua que \(r = 0\). Para unicidade suponha outro e usei \(\square\) \ref{prop:0.2} (e). 
 }
 \begin{note}
-    No caso que \(\an_{_T} = \{0\}\) fazemos \(m_{_T} :=0\) é assim que \(V = V_{m_{_T}}\). Se \(S = T|_{_{V_p}}\) então \(p \in \an_{_S}\). Também, pode-se verificar que o polinômio construido na \(\square\) \ref{prop:8.1.3} é de fato \(m_{_T}\). 
+    Se \(\an_{_T} = \{0\}\) fazemos \(m_{_T} :=0\), é assim que \(V = V_{m_{_T}}\). Se \(S = T|_{_{V_p}}\) então \(p \in \an_{_S}\). Também, pode-se verificar que o polinômio da \(\square\) \ref{prop:8.1.3} é de fato \(m_{_T}\). 
 \end{note}
 
 \hypertarget{lemma816}{}
@@ -73,12 +73,12 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \end{proposition}
 
 \demo{
-    \((\Rightarrow )\) Suponha \(p \ \nmid \ m_{_T}\) então são co-primos, aplique {\scriptsize\(\square\)} \hyperlink{lemma816}{ 8.1.6.} e conclua \(V_p = \{0\}\). \((\Leftarrow)\) Suponha \(p\ | \ m_{_T}\) e \(V_p = \{0\}\) e contradiga.
+    \((\Rightarrow )\) Supõe que \(p \ \nmid \ m_{_T}\), então eles são co-primos, aplique {\scriptsize\(\square\)} \hyperlink{lemma816}{ 8.1.6.} e conclua \(V_p = \{0\}\). \((\Leftarrow)\) Suponha \(p\ | \ m_{_T}\) e \(V_p = \{0\}\) e contradiga.
 } 
 
 \begin{corollary}
     \label{coro:8.1.8}
-    \textbf{8.1.8.} Seja \(\an_{_T} \neq \{0\}\) e \(p \in \Pol\). Então, \(V_p\neq \{0\}\) \(\leftrightharpoons\) \(\exists f \in \dIv(m_{_T})\) e \(\exists g \in \Pol\) tais que \(p = gf\). Se \(\nexists q \in \dIv(m_{_T})\) tal que \(q \ | \ g\) então \(V_p = V_f\). 
+    \textbf{8.1.8.} Seja \(\an_{_T} \neq \{0\}\) e \(p \in \Pol\). Então, \(V_p\neq \{0\}\) \(\leftrightharpoons\) \(\exists f \in \dIv(m_{_T})\) e \(\exists g \in \Pol\) tais que \(p = gf\). Se \(\nexists q \in \dIv(m_{_T})\) tal que \(q \ | \ g\), então \(V_p = V_f\). 
 \end{corollary}
 
 \demo{
@@ -87,7 +87,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 }
 
 \begin{definition}
-    Sejam \(v\in V\) e \(\forall k \in \mathbb{Z}_{\geq 0}, \ v_k = T^k(v)\). A familia \(\mathscr{C}^\infty_{T}(v):= (v_k)\)  é chamada de \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_{_T}(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). 
+    Sejam \(v\in V\), \(\forall k \in \mathbb{Z}_{\geq 0}\) e \(v_k = T^k(v)\). A familia \(\mathscr{C}^\infty_{T}(v):= (v_k)\)  é o \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_{_T}(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). 
 \end{definition}
 
 \begin{note}
@@ -111,7 +111,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 %\end{note}
 
 \begin{note}
-    Se \(\dim V = n < \infty\) então num análise analogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) pensando no mínimo \(m\) tal que \(C^m_T(v)\) é l.d.. Também, \(C_{_T}(v)\subseteq V_{m_v}\) \(\leftarrow T\)-inv, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
+    Se \(\dim V = n < \infty\) então, num análise analogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) com \(m := \min \{k \in \mathbb{Z}_{\geq 0 }: C^k_T(v)\text{ é l.d.}\}\). Também, note que \(C_{_T}(v)\subseteq V_{m_v}\) que é \(T\)-inv, logo, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
 \end{note}
 
 \begin{corollary}
@@ -145,7 +145,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 }
 
 \begin{note}
-    Os termos da soma são chamados de \emph{subespaços} \(T\)\emph{-primarios}.
+    Os termos da soma em \(\blacksquare\) \ref{thm:8.1.13} são chamados de \emph{subespaços} \(T\)\emph{-primarios}.
 \end{note}
 
 \hypertarget{lemma8116}{}

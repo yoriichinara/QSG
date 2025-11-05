@@ -22,7 +22,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 \begin{lemma}
     \begin{enumerate}[label = \roman*., left = -0.3cm]
         \item \(W\) é degenerado \(\leftrightharpoons\) \(\rad W \neq \{0\}\). \comentario{\(\pt \phi|_{_W} = \dim W -\dim (\rad W)\)} 
-        \item[]\hspace{-0.35cm}ii. \ Se \(V = V^\perp \oplus W\) então \(\rad W = \{0\}\). \comentario{\(\rad W \subseteq V^\perp \)}  
+        \item[]\hspace{-0.23cm}ii. \ Se \(V = V^\perp \oplus W\) então \(\rad W = \{0\}\). \comentario{\(\rad W \subseteq V^\perp \)}  
     \end{enumerate}
 \end{lemma}
 
@@ -31,7 +31,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
     \label{prop:941}
     Sejam \(W\leq V\) e \(\phi\) não degenerada. Então, 
     \begin{enumerate}[label = (\alph*), left = 0.5cm]
-        \item \(\dim V = \dim W + \dim W^\perp\). \hspace{0.5cm}(b) \ \(V = W + W^\perp \ \leftrightharpoons \ W \cap W^\perp = \{0\}\). 
+        \item \(\dim V = \dim W + \dim W^\perp\). \hspace{0.72cm}(b) \ \(V = W + W^\perp \ \leftrightharpoons \ W \cap W^\perp = \{0\}\). 
         \item[(c)] \((W^\perp)^\perp = W\). \hspace{3.64cm} (d) \ \(\rad W = \rad W^\perp\). 
     \end{enumerate}
 \end{proposition}
@@ -41,13 +41,13 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
     \item[] \begin{exercise}
         Seja \(W\leq V\), então \(\forall f\in W', \exists \widetilde{f} \in V'\) tal que \(\widetilde{f}|_{_W} = f \).
     \item[] \demo{
-   (a) Mostra que \(T: V \ni v \twoheadrightarrow \hspace{0.1cm}_\phi D(v) |_{_W} \in W'\) e \(\ker T = W^\perp\); (b) é obvia; (c) \(W\subseteq (W^\perp)^\perp\) sempre, a outra contenção segue de fazer \(W = W^\perp\) em (a); (d) segue de (c). 
+   (a) Mostra que \(T: V \ni v \twoheadrightarrow \hspace{0.1cm}_\phi D(v) |_{_W} \in W'\) e \(\ker T = W^\perp\); (b) é obvia; (c) \(W\subseteq (W^\perp)^\perp\) sempre, a outra contenção segue de fazer \(W = W^\perp\) em (a); (d) é conseqüência de (c). 
 }
     \end{exercise}
 \end{itemize}
 
 \alerta{ \centering
-    \(\phi\) degenerada não conclui nada
+    \(\phi\) degenerada não conclui nada em \(\square\) \ref{prop:941}
     \tcblower
     \begin{example}
         Sejam \(V = \F^2\), \([\phi]_\alpha = \operatorname{diag}(1,0)\) na base canônica e \(W = [e_2]\). Falhan todas as conclusões da \(\square\) \ref{prop:941}. 
@@ -74,7 +74,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 
 \- \vspace{-0.7cm}
 \tikz[remember picture, overlay]{
-    \node at (16.5, -0.77) {%
+    \node at (15.5, -0.57) {%
 \(H_j = \begin{bmatrix}
         0 & -1 \\ 
         1 & 0  \\ 
@@ -112,7 +112,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 }
 
 \begin{corollary}
-    No contexto do \(\blacksquare\) \ref{thm:946} se \(\alpha = (w_j)\) e \(\F = \R\) então \(\exists \alpha_\text{o}\) \emph{base de Sylvester} (subtraida da \(\alpha\)) fazendo \(\alpha_\text{o} = (a_jw_j)\) com \(\forall j, \ a_j^2 = \frac{\pm 1}{\phi(w_j,w_j)}\). Se \(\beta\) é uma completação da base, \([\phi]_\beta = \operatorname{diag}([-\id_i], [\id_{p-i}], [0])\). \footnote{Em geral existe normalização da \(\alpha\) \(\leftrightharpoons\) \(\forall j, \exists a_j \in \F: a_j^2 = \frac{1}{\phi(w_j,w_j)}\).}
+    No contexto do \(\blacksquare\) \ref{thm:946} se \(\alpha = (w_j)\) e \(\F = \R\), então \(\exists \alpha_\text{o}\) \emph{base de Sylvester} (subtraida da \(\alpha\)) fazendo \(\alpha_\text{o} = (a_jw_j)\), onde  \(a_j : a_j^2 = \frac{\pm 1}{\phi(w_j,w_j)}\). Se \(\beta\) é uma completação da base, \([\phi]_\beta = \operatorname{diag}([-\id_i], [\id_{p-i}], [0])\). %\footnote{Em geral existe normalização da \(\alpha\) \(\leftrightharpoons\) \(\forall j, \exists a_j \in \F: a_j^2 = \frac{1}{\phi(w_j,w_j)}\).}
 \end{corollary}
 
 \begin{definition}
@@ -120,16 +120,12 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 \end{definition}
 
 \begin{definition}
-    \centering \(\text{i}(\phi):= \max \{ \dim W: W\leq V \text{ e } \phi|_{_W}<0\}\). 
+    \centering \(\text{i}(\phi):= \max \{ \dim W: W\leq V \text{ e } \phi|_{_W}<0\}\) \ e \ \(\operatorname{sign}(\phi):= \pt \phi - 2 \text{i}(\phi)\). 
 \end{definition}
 
 \begin{note}
-    i\((\phi)\leq \pt \phi\), \(\phi \geq 0 \ \leftrightharpoons \ \text{i}(\phi)=0\) e \(\phi < 0\ \leftrightharpoons \ \text{i}(\phi) = \dim V\). 
+    i\((\phi)\leq \pt \phi\), \(\phi \geq 0 \ \leftrightharpoons \ \text{i}(\phi)=0\) e \(\phi < 0\ \leftrightharpoons \ \text{i}(\phi) = \dim V\). Note que a base de Sylvester fornece toda a informação, posto, indice de negatividade e assinatura.
 \end{note}
-
-\begin{definition}
-    \centering \(\operatorname{sign}(\phi):= \pt \phi - 2 \text{i}(\phi)\). 
-\end{definition}
 
 \theoremnum{9.4.7.}
 \begin{theorem}[\emph{Lei de Inercia de Sylvester}]

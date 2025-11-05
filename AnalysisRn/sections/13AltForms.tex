@@ -27,9 +27,8 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
      
 
 \parbox[l]{0.7\linewidth}{
-
 \begin{example}
-    A função \(\det : (\R^2)^2 \to \R\) é \(2\)-forma alternada em \(V= \R^2\), onde 
+    \(\det : (\R^2)^2 \to \R\) é \(2\)-forma alternada em \(V= \R^2\), 
     \[\begin{bmatrix}
         a \\ b
     \end{bmatrix}\times \begin{bmatrix}
@@ -39,9 +38,13 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
         b & d
     \end{bmatrix}.\]  
 \end{example}
+
+\begin{note}
+    A função \(\phi\) é tipo um "volume" \(k\)-dimensional com sinal, dada pela "orientação" ou ordem dos \(v_i\). 
+\end{note}
 }
 
-\begin{tikzpicture}[>=to, shift={(14.4cm,2.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay, scale = 0.75]
+\begin{tikzpicture}[scale = 0.9, >=to, shift={(15cm,2.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay, scale = 0.75]
     % Definimos los vectores v1 y v2
     \coordinate (O) at (0,0);
     \coordinate (v1) at (3.5,0);
@@ -71,10 +74,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
     %\draw[->, gray] (0,-0.5) -- (0,3) node[above] {$y$};
 \end{tikzpicture}
 
-\- \vspace{-2cm} 
-\begin{note}
-    A função \(\phi\) é tipo um "volume" \(k\)-dimensional com sinal, dada pela "orientação" ou ordem dos \(v_i\). 
-\end{note}
+\- \vspace{-1.2cm} 
 
 \begin{definition}
     \centering \(\operatorname{Alt}^k_\R(V):=\{\phi \in \hom_\R^k(V,\R) : \phi \text{ é } \text{alternada}\}\).
@@ -83,6 +83,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 %    \(A^k(V)\) es espacio vectorial.
 %\end{note}% al espacio vectorial de todas las $k$-formas definidas en \(V\).  
 
+\newpage 
 \hypertarget{lemma101}{}
 \begin{lemma}
     \textbf{10.1.} Sejam \(\phi \in \operatorname{Alt}^k_\R(V)\) e \(i<j\). Então,  
@@ -102,12 +103,12 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \ejemplo{\centering Espaços não triviais \( \sim \ \dim V = n\)
 \tcblower 
 \begin{example}
-    \(\operatorname{Alt}^0_\R(V) = \R \), \(\operatorname{Alt}^1_\R(V) = V'\) e \(\operatorname{Alt}^k_\R(V) = \{0\}\) se \(k > n\). \textcolor{gray}{\(\rightarrow \) Segue do {\scriptsize\(\square\)} \hyperlink{lemma101}{10.1.} (ii.)}
+    \(\operatorname{Alt}^0_\R(V) = \R \), \(\operatorname{Alt}^1_\R(V) = V'\) e \(\operatorname{Alt}^k_\R(V) = \{0\}\) se \(k > n\). \textcolor{gray}{\(\rightarrow \) Segue da dependência linear em {\scriptsize\(\square\)} \hyperlink{lemma101}{10.1.} (ii.)}
 \end{example}
 }
 
 \begin{exercise}[\emph{Projetor Alternado}]
-    Se \(f \in \hom_\R^k(V,\R)\) então a função \(Af :  (v_j) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f((v_{\sigma(j)}))\in \operatorname{Alt^k_\R(V)}\).% Em particular, se \(f\) fora alternada ja  então \(Af = f \). 
+    Se \(f \in \hom_\R^k(V,\R)\) então a função \(Af :  (v_j) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f((v_{\sigma(j)}))\in \operatorname{Alt^k_\R(V)}\). Em particular, se \(f\) fora alternada, \(Af = f \). 
 \end{exercise}
 
 \begin{definition}
@@ -137,7 +138,6 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 
 \begin{example}
     Sejam \(\phi, \psi \in \operatorname{Alt}^1_\R(V)\). Então,  \(\phi \wedge \psi \in \operatorname{Alt}^2_\R(V)\) é dada por,
-    \vspace{-0.2cm}
     \[(v_1, v_2) \mapsto \phi(v_1)\psi(v_2) - \phi(v_2)\psi(v_1) =\det  \begin{bmatrix}
         \phi(v_1) & \psi(v_1) \\ 
         \phi(v_2) & \psi(v_2) 
@@ -148,6 +148,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 %    \(\Lambda^0(\R^2) = \R\), \(\Lambda^1(\R^2) = \R e_1^* \oplus \R e_2^*\) e \(\Lambda^2(\R^2) = \R (e_1^* \wedge e_2^*)\).   
 %\end{example}
 
+\newpage
 \newcommand{\alt}{\operatorname{Alt}_\R}
 \begin{proposition}
     Sejam \(\phi \in \alt^p(V),\ \psi \in \alt^q(V)\) e \(\xi \in \alt^r(V)\). Então, o produto \(\wedge\) é:   
@@ -165,13 +166,13 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{proposition}
 
 \begin{theorem}
-    Sejam \(V\) \(\R\)-espaço vetorial e \((f_j)\), \(j\leq n\) uma base pra \(V'\). Então, \(\forall k\leq n \), a familia \(\{(l_{i_1}\wedge \cdots \wedge l_{i_k}): \forall j<k, \ i_j < i_{j+1}\}\) é uma base pra \(\alt^k(V)\). Em particular, \(\dim \alt^k(V) = \binom{n}{k}\).   
+    Sejam \(V\) \(\R\)-espaço vetorial e \((f_j)\) base pra \(V'\). Então, \(\forall k\leq n \), a familia \(\{(l_{i_1}\wedge \cdots \wedge l_{i_k}): \forall j<k, \ i_j < i_{j+1}\}\) é uma base pra \(\alt^k(V)\). Em particular, \(\dim \alt^k(V) = \binom{n}{k}\).   
 \end{theorem}
 
 %\ejemplo{\centering Pullback de cambio de base%
 %\tcblower
 \begin{example}
-    Sejam \((w_j), \ j\leq n\) uma base pra \(V\) e \(\phi \in \alt^n(V)\), Então, \(\phi((v_j)) = \det((a_{ij}))\cdot  \phi((w_j))\), onde \(v_j = \sum a_{ij}w_i\). \textcolor{gray}{ \(\rightarrow \ T'(\phi) = \det T \cdot \phi\)}  
+    Sejam \(\dim V =n\), \((w_j)\) base pra \(V\) e \(\phi \in \alt^n(V)\), Então, \(\phi((v_j)) = \det((a_{ij}))\cdot  \phi((w_j))\), onde \(v_j = \sum a_{ij}w_i\). \textcolor{gray}{ \(\rightarrow \ T'(\phi) = \det T \cdot \phi\)}  
 \end{example}
 %}
 
@@ -216,7 +217,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
         %{\footnotesize \(\bullet\)} Se \(\mathcal{I}\ab\subset \R \), então \(\omega = f(t)\ dt \in \Omega^1(\mathcal{I})\) sse \(f \in C^\infty(\mathcal{I})\).    \\ 
         %\item Si \(M = U\ab \subseteq \R^2\) de coordenadas \((x,y)\) entonces,  
         \begin{example}
-            Se \( U\ab\subseteq \R^2 \) e \(f,g \in C^\infty(U)\) então 
+            Se \( U\ab\subseteq \R^2 \) e \(f,g \in C^\infty(U)\), então 
             \(f \in \Omega^0(U),  \  f(\x)dx + g(\x)dy \in \Omega^1(U) \text{\  e}  \ f(\x) (dx \wedge dy) \in \Omega^2(U)\).
         \end{example} 
 }
@@ -235,15 +236,13 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \centering \((\omega \wedge \eta)(p) = \omega (p) \wedge \eta (p)\) 
 \tcblower
 \begin{example}
-    Em \(M= \R^2\), tém-se \((e^{x+y} dx + x dy )\wedge ydx = -xy (dx \wedge dy)\). 
+    Em \(M= \R^2\),  \((\textcolor{gray}{\cancel{e^{x+y} dx}} + x dy )\wedge ydx = -xy (dx \wedge dy)\). 
 \end{example}
 }
 
 \begin{proposition}
-    Uma aplicação \(F\in C^\infty(M,N)\) induce, \(\forall p \in M\), uma outra aplicação via pullback \(F': \Omega^k(N) \to \Omega^k(M)\)  tal que, 
-    \[  \omega\textcolor{gray}{(p)} \mapsto F'(\omega) \textcolor{gray}{(p)} = DF\textcolor{gray}{(p)}'\omega(F\textcolor{gray}{(p)}).\] 
+    Uma aplicação \(F\in C^\infty(M,N)\) induce, \(\forall p \in M\), uma outra aplicação via pullback \(F': \Omega^k(N) \to \Omega^k(M)\)  tal que \(  \omega\textcolor{gray}{(p)} \mapsto F'(\omega) \textcolor{gray}{(p)} = DF\textcolor{gray}{(p)}'\omega(F\textcolor{gray}{(p)})\).
 \end{proposition}
-\vspace{-0.4cm}
 
 \begin{example}
     Se \(g \in \Omega^0(N)\) então \(F'(g) = g \circ F\) e \(F'(dg) = d(F'(g)) = d (g\circ F)\).   
@@ -261,13 +260,14 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
     \end{example}   
 }
 
-\begin{tikzpicture}[>=to, shift={(7.3cm, 4.5cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[>=to, shift={(5.8cm, 3.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     \draw[thick, red] (5.2,-0.5) -- (8.8,-0.5) -- (8.8,0.7)-- (8.1,0.7)-- (9.5,0.7); 
     \node[red] at (2,-0.5) {$F'(\y_{i_m}) = \sum \frac{\partial F'(\y_{i_{m}})}{\partial \x_j}d\x_j $};
 \end{tikzpicture}
 
+\- \vspace{-1.8cm}
 \begin{note}
-Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = \omega|_{_M}\).
+Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota'(\omega) = \omega|_{_M}\).
 \end{note}
 
 \begin{example}[\emph{Forma de ángulo}]
@@ -281,11 +281,11 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = 
 \end{definition}
 
 \begin{example}
-    \(\R^n\) é orientavél com \(\omega = \cuna dx_j \) e \(\E^1\) com \(\omega = d\theta|_{_{\E^1}}\). A faixa de Möbius não é orientavél.
+    \(\R^n\) e \(\E^1\) são orientaveis com \(\omega = \cuna dx_j \) e \(\omega = d\theta|_{_{\E^1}}\) respetivamente. %A faixa de Möbius não é orientavél.
 \end{example}
      
 \begin{definition}
-    Sejam \(M\) orientavél e \(\omega_1, \omega_2 \in \Omega^d(M)\) formas de orientação.  Dizemos que \(\omega_1 \sim \omega_2\) se \(\exists f>0\) tal que \(\omega_1 = f \omega_2\). Chamamos de \emph{orientações} de \(M\) as classes  \(\overline{\omega} \in \Omega^d(M)/\hspace{-0.1cm}\sim\). 
+    Sejam \(M\) orientavél e \(\omega_1, \omega_2 \in \Omega^d(M)\) formas de orientação.  Dizemos que \(\omega_1 \sim \omega_2\) se \(\exists f>0: \omega_1 = f \omega_2\). Chamamos de \emph{orientações} de \(M\) às classes  \(\overline{\omega} \in \Omega^d(M)/\hspace{-0.1cm}\sim\). 
 \end{definition}
 
 \begin{exercise}
@@ -303,16 +303,16 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = 
 \ejemplo{\centering  \(\omega_\text{vol}\) em \(_{n-1}H\subseteq \R^n\) hipersuperficie
 \tcblower
 \parbox[a]{0\linewidth}{ \ } 
-\parbox[b]{1\linewidth}{
+\parbox[b]{0.72\linewidth}{
 \begin{example}
-    \(H := \{\x \in \R^n: g(\x)=0\}\) é orientavél. Sendo \(\vec{n}(p) = \frac{\nabla g(p) }{\|\nabla g(p)\|} \perp  T_pH\) e \(\hat{\omega}_i := dx_1 \wedge \cdots \wedge \textcolor{gray}{\cancel{dx_i}} \wedge \cdots \wedge dx_n\),
-    \[\hat{\omega} = \omega_{\text{vol}} = \sum (-1^{i+1}) \vec{n_i} \ \hat{\omega}_i \Big|_{H}.\hspace{4.5cm}\]     
+    Sejam \(H := \{\x \in \R^n: g(\x)=0\}\) e \(\vec{n}(p) = \frac{\nabla g(p) }{\|\nabla g(p)\|} \perp  T_pH\) e \(\hat{\omega}_i := dx_1 \wedge \cdots \wedge \textcolor{gray}{\cancel{dx_i}} \wedge \cdots \wedge dx_n\),
+    \[\hat{\omega} = \omega_{\text{vol}} = \sum (-1^{i+1}) \vec{n_i} \ \hat{\omega}_i \Big|_{H}.\hspace{0cm}\]     
 \end{example}
 } 
 }
 
-\begin{tikzpicture}[>=to, shift={(15cm,2.8cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
-    \node[black] at (0,0) {\small $\det \begin{bmatrix}
+\begin{tikzpicture}[>=to, shift={(14.8cm,2.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+    \node[gray] at (0,0) {\small $\det \begin{bmatrix}
         \textcolor{red}{\Big|} &\Big| &  &\Big| \\ 
         \textcolor{red}{\vec{n}}& v_2 & \cdots &v_n \\ 
         \textcolor{red}{\Big|} &\Big| &  &\Big|
@@ -323,7 +323,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\) então \(\iota'(\omega) = 
 %    \draw[thick] (0,0) -- (0,0.25) -- (10.8,0.25); 
 %\end{tikzpicture}
 
-\vspace{-1cm}
+\vspace{-0.8cm}
 
 \begin{example}
     Em \(H = \E^{n-1}\subseteq \R^n\), \(\vec{n}(x) = \frac{\x}{\|\x\|}\), então \(\hat{\omega} = \sum (-1)^{i+1} x_i \ \hat{\omega}_i |_{_{\E^{n-1}}}\).
