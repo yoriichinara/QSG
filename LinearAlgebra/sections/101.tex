@@ -11,7 +11,7 @@
     \begin{example}
     \begin{itemize}[left = 3cm]
     %\item O par \((\alpha, V)\) é universal em \(I\) \(\leftrightharpoons\) \(\alpha \) é base de \(V\).
-        \item[] \hspace{-2.95cm}{\footnotesize \(\bullet\)} \ \( U = V\) \(\F\)-espaço vetorial. 
+        \item[] \hspace{-2.55cm}{\scriptsize \(\bullet\)} \ \( U = V\) \(\F\)-espaço vetorial. 
         \item \(X = I\) e \(\phi = \alpha : I \to V\).
         \item \(P_1 = \) "\(A=W\) é \(\F\)-espaço vetorial".
         \item \(P_2 = \) "ser linear". 
@@ -21,7 +21,7 @@
 \centering \((\alpha, V)\) é universal em \(I\) \textcolor{verdeoscuro}{\(\leftrightharpoons\)} \(\alpha \) é base de \(V\). \comentario{Olha \cite[Pág. 337]{MA719}}
 }
 
-\begin{tikzpicture}[overlay, node distance=1.5cm, shift= {(15cm, 5cm)}]
+\begin{tikzpicture}[scale = 1.1, overlay, node distance=1.5cm, shift= {(12.5cm, 4.5cm)}]
     % Flecha con límite
     \node (X) {$I$};
     
@@ -36,7 +36,7 @@
 
     \draw[->, color = black, dashed] (U) -- node[midway, right, xshift = 0.5cm] {\footnotesize $\widetilde{\psi}$ \textcolor{gray}{$\mid P_2$}} (A); 
 
-    \node at (0.7, -0.7) {\large\rotatebox{180}{$\circlearrowright$}}; 
+    \node at (0.6, -0.6) {\large\rotatebox{180}{$\circlearrowright$}}; 
 \end{tikzpicture}
 
 \- \vspace{-2cm}
@@ -49,24 +49,24 @@
 }
 
 \begin{definition}
-    Uma propiedade funcional \(P\) é \emph{compatível com composições} se \(f \circ g \mid P\) toda vez que \(\exists f \circ g\), \(f \mid P \) e \(g\mid P\). 
+    Uma propiedade funcional \(P\) é \emph{compatível com composições} se \(f \circ g \mid P\) toda vez que \(\exists f \circ g\) e ambas \(f\text{ e } g\) verifiquem \( P \). 
 \end{definition}
 
 \hypertarget{lemma1013}{}
 \begin{lemma}
-    \textbf{10.1.3.} Sejam \((\phi_a, U)\) e \((\phi_b, V)\) universais em \(X\) respeito de \(P_1\) e \(P_2\). Se \(\phi_a, \  \phi_b \mid P_1\); \ \(\id_{_U}, \ \id_{_V} \mid P_2\) e \(P_2\) é compatível com composições, então \(\exists ! f : U\to V\mid P_2\) e \(\phi_b = f \circ \phi_a\). Além disso, aquela \(f\) é bijeção. 
+    \textbf{10.1.3.} Sejam \((\phi_a, U)\) e \((\phi_b, V)\) universais em \(X\) respeito de \(P_1\) e \(P_2\). Se \(\phi_a, \  \phi_b \mid P_1\); \ \(\id_{_U}, \ \id_{_V} \mid P_2\) e \(P_2\) é compatível com composições, então \(\exists ! f : U\to V\mid P_2\) tal que \(\phi_b = f \circ \phi_a\). Além disso, aquela \(f\) é bijeção. 
 \end{lemma}
 
 \demo{
     \parbox{0.21\textwidth}{
         \-
     }
-    \parbox{0.78\textwidth}{
-    Da universalidade \(\exists ! \widetilde{\psi}_a, \ \widetilde{\psi}_b\) como no diagrama. Veja que \(\widetilde{\psi}_a\) e \(\widetilde{\psi}_b\) são inversas a uma da otra mostrando primeiro que \((\widetilde{\psi}_a \circ \widetilde{\psi}_b) \circ \phi_a = \id_{_U} \circ \phi_a \) e \((\widetilde{\psi}_b \circ \widetilde{\psi}_a) \circ \phi_b = \id_{_V} \circ \phi_b \), conclua usando o  {\scriptsize \(\square\)} \hyperlink{lemma1012}{10.1.2.}. 
+    \parbox{0.78\textwidth}{\vspace{0.2cm}
+    Da universalidade \(\exists ! \widetilde{\psi}_a, \ \widetilde{\psi}_b\) como no diagrama. Veja que \(\widetilde{\psi}_a\) e \(\widetilde{\psi}_b\) são inversas a uma da otra. Começe por mostrar primeiro que \((\widetilde{\psi}_a \circ \widetilde{\psi}_b) \circ \phi_a = \id_{_U} \circ \phi_a \) e \((\widetilde{\psi}_b \circ \widetilde{\psi}_a) \circ \phi_b = \id_{_V} \circ \phi_b \), conclua usando o  {\scriptsize \(\square\)} \hyperlink{lemma1012}{10.1.2.}. \vspace{0.3cm}
 }
 }
 
-\begin{tikzpicture}[overlay, node distance=1.5cm, shift= {(1.15cm, 3.8cm)}]
+\begin{tikzpicture}[overlay, node distance=1.5cm, shift= {(1.15cm, 3.4cm)}]
     % Flecha con límite
     \node (X) {$X$};
     
