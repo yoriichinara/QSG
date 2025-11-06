@@ -12,17 +12,17 @@
 \theoremnum{10.2.1.}
 \begin{theorem}
     \label{thm:1021}
-    \(\forall (V_j),\ \exists (\phi, V)\) \(\F\)-produto tensorial. Além disso, se \(\forall j\leq k, \ \alpha_j\) fora base de \(V_j\), então \(\phi \circ (\Pi \alpha_j)\) é base de \(V\).  
+    \(\forall (V_j),\ \exists (\phi, V)\) produto tensorial. Além disso, se \(\forall j\leq k, \ \alpha_j\) fora base de \(V_j\), então \(\phi \circ (\Pi \alpha_j)\) é base de \(V\).  
 \end{theorem}
 
 \demo{Sejam \(\alpha := \Pi \alpha_j\), \(V : \dim V = \# \alpha\) e \(\iota : \alpha \to V\) base pra \(V\) indexada por \(\alpha\). Segue do \(\blacksquare \) \ref{thm:9.1.3} que \(\exists ! \phi \in \hom^k(\Pi V_j, V): \phi|_\alpha = \iota\). Conclui mostrando que o par \((\phi, V)\) é universal.} 
 
 \theoremnum{10.2.2.}
 \begin{theorem}
-    Seja \((\phi, V)\) um produto tensorial pra \((V_j)\). Então, \(\forall W\) \(\F\)-espaço vetorial a função \(\Gamma: \hom^k(\Pi V_j, W) \to \hom(V,W)\) é isomorfismo. 
+    Seja \((\phi, V)\) produto tensorial pra \((V_j)\). Então, \(\forall W\) \(\F\)-espaço vetorial a função \(\Gamma: \hom^k(\Pi V_j, W) \to \hom(V,W)\) é isomorfismo. 
 \end{theorem}
 
-\demo{Injetora por conseqüência do {\scriptsize \(\square\)} \hyperlink{lemma1012}{10.1.2.} e sobrejetiva pois se \(T \in \hom(V,W)\) então, \(\psi = T \circ \phi \in  \hom^k(\Pi V_j, W)\). Pra ver a linearidade mostra que \(\forall \psi, \xi \in \hom^k(\Pi V_j, W)\) e \(\forall \lambda \in \F\), \((\widetilde{\psi}+ \lambda \widetilde{\xi}) \circ \phi = \psi + \lambda \xi\). } 
+\demo{Injetora por conseqüência do {\scriptsize \(\square\)} \hyperlink{lemma1012}{10.1.2.} e sobrejetiva pois se \(T \in \hom(V,W)\), então \(\psi = T \circ \phi \in  \hom^k(\Pi V_j, W)\). Pra ver a linearidade mostra que \(\forall \psi, \xi \in \hom^k(\Pi V_j, W)\) e \(\forall \lambda \in \F\), \((\widetilde{\psi}+ \lambda \widetilde{\xi}) \circ \phi = \psi + \lambda \xi\). } 
 
 \begin{note}
     Notação padrão pra producto tensorial, \(\textstyle (\phi, V) = \left(\otimes, \otimes V_j\right)\). A $k$-linearidade fica,  \( \cdots \otimes v_{1,j_0} + \lambda v_{2,j_0} \otimes \cdots = \otimes ((v_{1,j})_{j_0}) + \lambda \otimes ((v_{2,j})_{j_0})\).
@@ -40,7 +40,7 @@
 
 \propositionnum{10.2.4.}
 \begin{proposition}
-    \(\forall j\leq k\) sejam \(W_j \leq V_j\). Então, \(\exists ! \tilde{\Gamma} : \otimes W_j \to \otimes V_j\) linear injetora tal que \(\forall j\leq k, \ \forall w_j \in W_j, \ \tilde{\Gamma} : \otimes w_j \mapsto \otimes w_j\). 
+    \(\forall j\leq k\) sejam \(W_j \leq V_j\). Então, \(\exists ! \tilde{\Gamma} : \otimes W_j \hookrightarrow \otimes V_j\) linear injetora tal que \(\forall j\leq k, \ \forall w_j \in W_j, \ \tilde{\Gamma} : \otimes w_j \mapsto \otimes w_j\). 
 \end{proposition}
 
 \demo{No contexto da \(\square\) \ref{prop:1023} \(\exists ! \Gamma_{_V} :\otimes V_j \to \otimes (V_j)\) e \(\exists !\Gamma_{_W}: \otimes W_j \to \otimes (W_j)\) isomorfismos. Faça \(\tilde{\Gamma} = \Gamma^{-1}_{_V}\circ \Gamma_{_W} \). }
@@ -58,7 +58,8 @@
 \end{note}
 
 \begin{definition}
-    Se \(\textbf{v} \in \otimes V_j\) então \(\pt(\textbf{v}) := \min\{m \in \mathbb{Z}_{\geq 0} : \textbf{v} = \sum_{i\leq m} \otimes v_{i,j}\}\). 
+    \centering
+    \(\pt(\textbf{v}) := \min\{m \in \mathbb{Z}_{\geq 0} : \textbf{v} = \sum_{i\leq m} \otimes v_{i,j}\}\). 
 \end{definition}
 
 \ejemplo{
@@ -68,3 +69,96 @@
         Sejam \(V = \F^2\) e \(\textbf{v} = e_1 \otimes e_1 \otimes e_1 + e_2 \otimes e_1 \otimes e_2 \in \otimes^3 V_j\). \comentario{Suponha que \(\exists v_{i} = a_{i,1} e_1 + a_{i,2} e_2 : \textbf{v} = v_{1} \otimes v_2 \otimes v_3\) e contradiga }
     \end{example}
 }
+
+
+\begin{note}
+    Passamos a ver o casso \( k=2 \), o único que da pra fazer conta e deducir alguns fatos respeito do posto de um tensor e como calculá-lo. 
+\end{note}
+
+\newcommand{\tu}{\textbf{u}}
+\hypertarget{lemma1026}{}
+\begin{lemma}
+    \textbf{10.2.6.} Seja \(\tu \in V\otimes W : \pt \tu = m\). Se \(\alpha = (v_j)\) e \(\beta = (w_j)\), \(j\leq m\), são familias de vetores em \(V\) e \( W\) tais que \(\tu = \sum^m v_j \otimes w_j\), então \(\alpha\) e \(\beta \) são l.i..
+\end{lemma}
+
+\demo{Faz por contrapositiva, suponha que \(w_m = \sum^{m-1} a_jw_j\) e usa a $k$-linearidade pra ver que \(\tu = \sum^{m-1} (v_j + a_jv_m) \otimes w_j\).}
+
+\begin{corollary}
+    \(\forall \tu \in V\otimes W\), \(\pt \tu \leq \min \{\dim V, \dim W\}\). 
+\end{corollary}
+
+\hypertarget{lemma1027}{}
+\begin{lemma}
+    \small  \textbf{10.2.7.} Sejam \(m, p \in \mathbb{Z}_{\geq 0}\), \(\alpha_1 = (v_{1,j})_{j\leq m}\), \(\alpha_2 = (v_{2,j})_{j\leq p}\), familias em \(V\) e \(\beta_1 = (w_{1,j})_{j\leq m}\), \(\beta_2= (w_{2,j})_{j\leq p}\) familias em \(W\) tais que \(\sum^m v_{1,j} \otimes w_{1,j} = \sum^p v_{2,j} \otimes w_{2,j}\). Se \(\alpha_1, \alpha_2\) e \(\beta_2\) foram l.i., então \([\beta_1 ] \subseteq [\beta_2]\). Em particular, se \(p = 0\), \(\forall j\leq m\), \(w_j = 0 \).    
+\end{lemma}
+
+\comentario{Não suporta resumo, olha se queser \cite[Pág. 344]{MA719}}
+
+\propositionnum{10.2.8.}
+\begin{proposition}
+    Seja \(\tu = \sum^m v_j \otimes w_j \in V\otimes W\). Então, \(\pt \tu = m \ \leftrightharpoons\ (v_j)\) e \((w_j)\) são l.i. em \(V \) e  \(W\), respetivamente. \comentario{Segue dos {\scriptsize \(\square\)} \hyperlink{lemma1026}{10.2.6.} e {\scriptsize \(\square\)} \hyperlink{lemma1027}{10.2.7.}}
+\end{proposition}
+
+\ejemplo{ \centering Na pratica agrupamos usando $k$-linearidade até conseguir familias l.i.. 
+    \tcblower
+    \begin{example} Em \(V = \mathbb{Q}^2\), \(\tu_1 = 5e_1 \otimes e_1 \ \textbf{-}  \ 3e_2 \otimes e_2 \in V\otimes V \ \Rightarrow \ \pt \tu_1 = 2\), mientras, 
+    \begin{align*}
+        \tu_2 &= \underline{(e_1 + e_2)} \otimes (e_1- e_2)  \ \textbf{+} \  \underline{(e_1+2e_2)} \otimes e_2  \ \textbf{+} \  (e_1 - e_2) \otimes (e_1+ e_2) \\
+         &= (e_1 + e_2) \otimes e_1  \ \textbf{+} \ e_2 \otimes \underline{e_2} \ \textbf{+} \  (e_1 - e_2) \otimes \underline{(e_1+ e_2)} \\
+         &= (e_1 + e_2) \otimes \underline{e_1}  \ \textbf{+} \ e_1 \otimes e_2 \ \textbf{+} \  (e_1 - e_2) \otimes \underline{e_1} \\
+         &= 2\underline{e_1} \otimes e_1  \ \textbf{+} \ \underline{e_1} \otimes e_2 = e_1 \otimes (2e_1 + e_2) \ \ \Rightarrow \   \pt \tu_2  = 1  
+    \end{align*}
+    \end{example}    
+}
+
+\propositionnum{10.2.10.}
+\begin{proposition}
+    \label{prop:10210}
+    \(\exists ! \Gamma : V' \otimes W \ni  \textcolor{red}{f \otimes w \mapsto} \ \overset{\underset{\rotatebox{90}{$\in$}}{\hom(V,W)}}{\textcolor{red}{\Gamma(f\otimes w)}}: \overset{\underset{\rotatebox{90}{$\in$}}{V}}{v}\mapsto f(v)w \in W\). \footnote{Propiedade universal no pareamiento bilinear \(\psi : V' \times W \ni (f,w) \mapsto f(v)w\).} Além disso, 
+\end{proposition}
+
+\begin{enumerate}[label = , left = 0.5cm ]
+    \item \vspace{-1.3cm} \begin{exercise}
+        \textbf{9.2.5.} Sejam \(m \in \mathbb{Z}_{>0}\) e \((f_j)_{j\leq m}\) familia l.i. em \(V'\). Então, \(\forall j\leq m, \exists v \in V : \forall i\leq m, f_i(v) = \delta_{ij}\). \comentario{\(T: V \ni v \twoheadrightarrow (f_j(v)) \in \F^m \ \leftrightharpoons \ T' : (\F^m)' \hookrightarrow V'\)}
+    \end{exercise}
+    \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
+        \centering (a) \(\Gamma \) é injetora 
+        \tcblower
+        \textcolor{gray}{
+            Sejam \(\tu \in \ker \Gamma \),  \((f_j)\) e \( (w_j)\) l.i. em \(V'\) e \(W\) tais que \(\tu = \sum^m f_j \otimes w_j\), se \(m>0\), então do exercício acima \(\exists v: 0 = \Gamma (\tu)(v) = \sum^m f_j(v)w_j \ \rightarrow \leftarrow\).
+        }
+    \end{tcolorbox}
+    \item \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
+        \centering (b) \(\forall \tu \in V' \otimes W, \ \pt (\Gamma(\tu)) = \pt \tu\)
+        \tcblower
+        \textcolor{gray}{
+            De novo sejam \(\tu = \sum^m f_j \otimes w_j\), sendo \(\beta = (w_j)\) mostra que \(\operatorname{Im(\Gamma(\tu)) } = [\beta]\), usa de novo o mesmo exercício. 
+        }
+    \end{tcolorbox}
+    \item \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
+        \centering (c) \(T \in \operatorname{Im}\Gamma \ \leftrightharpoons \ \pt T < \infty\)
+        \tcblower
+        \textcolor{gray}{
+            (\(\Rightarrow \)) Segue de (b) lembrando que \(\forall \tu \in V\otimes W, \ \pt \tu < \infty\). (\(\Leftarrow\)) Seja \((w_j)_{j\leq m} \) base pra \(\operatorname{Im}T\) e \((v_i)\) base de \(V\), então \(T(v_i) = \sum^m a_{ij} w_j\), \(\forall j\leq m, \exists !f_j: f_j(v_i) = a_{ij} \), cálcula \(\Gamma\left(\sum^m f_j \otimes w_j\right)\) e conclui.  
+        }
+    \end{tcolorbox}
+    \item \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
+        \centering (d) \(\Gamma \) sobrejetora  \(\leftrightharpoons \)  \(\dim V  < \infty\) ou \(\dim W < \infty \)
+        \tcblower
+        \textcolor{gray}{
+            (\(\Leftarrow \)) Direta de (c). (\(\Rightarrow\)) Faz por contrapositiva, se \(\dim V \) e \(\dim W\) foram ambas infinitas, \(\exists T \in \hom(V,W): \pt T = \infty\), logo usa (c) de novo.   
+        }
+    \end{tcolorbox}
+\end{enumerate}
+
+\begin{note}
+    \(\Gamma: V' \otimes W \cong F := \{T \in \hom(V,W): \pt T < \infty\}\). Se \(\alpha = (v_j)_{j\leq n}\), \(\alpha' = (f_j)\)  e \(\beta = (w_i)_{i\leq m}\), então \([\Gamma(f_j\otimes w_i)]_\beta^\alpha = E_{ij}\). Assim,  
+    \[[T]^\alpha_\beta = (a_{ij}) \ \ \Rightarrow  \ \ T = \Gamma \left(\sum_{i,j} a_{ij} f_j \otimes w_i\right). \]
+\end{note}
+
+\propositionnum{10.2.11.}
+\begin{proposition}
+    \(\exists ! \tau \in (V'\otimes V)' \) tal que \(\tau: V' \otimes V \ni f\otimes v \mapsto f(v)\). Além disso, se \(\dim V < \infty \) e \(\Gamma \) fora como na \(\square\) \ref{prop:10210}, então \(\forall T \in \ehom (V), \ \tau(\Gamma^{-1}(T)) = \operatorname{tr}T\).  
+\end{proposition}
+
+\demo{\(\exists !\tau\) segue da propiedade universal em \(\psi = \operatorname{av}\). Seja \(\alpha = (v_j)\) base pra \(V\), da nota previa \([T]^\alpha_\alpha \Rightarrow \Gamma^{-1}(T) =  \sum_{i,j} a_{ij}f_j \otimes v_i\), faça a continha \(\tau(\Gamma^{-1}(T))\). }

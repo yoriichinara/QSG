@@ -32,7 +32,7 @@ Também, na notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) 
 \end{definition}
 
 \begin{note}
-    \(V_{\ p}^\infty \) é \(T\)-inv e se \(\dim V =n < \infty\) então \(V_{\ p}^\infty = V_{p^n}\). 
+    \(V_{\ p}^\infty \) é \(T\)-inv e se \(\dim V =n < \infty\), então \(V_{\ p}^\infty = V_{p^n}\). 
 \end{note}
 \begin{definition}
     \centering \(\mathscr{A}_{_T}:= \{p \in \Pol: p(T) =0\}\).
@@ -41,7 +41,7 @@ Também, na notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) 
 \propositionnum{8.1.3.}
 \begin{proposition}
     \label{prop:8.1.3}
-    Se \(\dim V = n < \infty \) então \(\mathscr{A}_{_T}\neq \{0\}\).  
+    Se \(\dim V = n < \infty \), então \(\mathscr{A}_{_T}\neq \{0\}\).  
 \end{proposition}
 
 \demo{
@@ -51,19 +51,19 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \propositionnum{8.1.4.}
 \newcommand{\an}{\mathscr{A}}
 \begin{proposition}
-    Se \(\an_{_T}\neq \{0\}\) então \(\exists ! m_{_T}\in \Pol\) mônico tal que \( \forall f \in \an_{_T}, \ m_{_T}\ | \ f\).  
+    Se \(\an_{_T}\neq \{0\}\), então \(\exists ! m_{_T}\in \Pol\) mônico tal que \( \forall f \in \an_{_T}, \ m_{_T}\ | \ f\).  
 \end{proposition}
 
 \demo{  
-    \(\an_{_T} \) é ideal então \( \exists ! m_{_T}\) tal que \(\an_{_T} = \langle m_{_T}\rangle\). Se prefer pegue \(m_{_T}\) de menor grau possivél, suponha \(f = m_{_T} q +r\) e conclua que \(r = 0\). Para unicidade suponha outro e usei \(\square\) \ref{prop:0.2} (e). 
+    \(\an_{_T} \) é ideal, então \( \exists ! m_{_T}\) tal que \(\an_{_T} = \langle m_{_T}\rangle\). Se prefer pegue \(m_{_T}\) de menor grau possivél, suponha \(f = m_{_T} q +r\) e conclua que \(r = 0\). Para unicidade suponha outro e usei \(\square\) \ref{prop:0.2} (e). 
 }
 \begin{note}
-    Se \(\an_{_T} = \{0\}\) fazemos \(m_{_T} :=0\), é assim que \(V = V_{m_{_T}}\). Se \(S = T|_{_{V_p}}\) então \(p \in \an_{_S}\). Também, pode-se verificar que o polinômio da \(\square\) \ref{prop:8.1.3} é de fato \(m_{_T}\). 
+    Se \(\an_{_T} = \{0\}\) fazemos \(m_{_T} :=0\), é assim que \(V = V_{m_{_T}}\). Se \(S = T|_{_{V_p}}\), então \(p \in \an_{_S}\). Também, pode-se verificar que o polinômio da \(\square\) \ref{prop:8.1.3} é de fato \(m_{_T}\). 
 \end{note}
 
 \hypertarget{lemma816}{}
 \begin{lemma}
-    \textbf{8.1.6.} Se \(f, g \in \Pol\) co-primos então, a restrição de \(f|_{_{V_g}}\) é injetora.  \comentario{Faz usando o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}, lembre-se que \(1 \leadsto \id_{_V}\)}
+    \textbf{8.1.6.} Se \(f, g \in \Pol\) co-primos, então a restrição de \(f|_{_{V_g}}\) é injetora.  \comentario{Faz usando o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}, lembre-se que \(1 \leadsto \id_{_V}\)}
 \end{lemma}
 
 \propositionnum{8.1.7.}
@@ -111,7 +111,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 %\end{note}
 
 \begin{note}
-    Se \(\dim V = n < \infty\) então, num análise analogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) com \(m := \min \{k \in \mathbb{Z}_{\geq 0 }: C^k_T(v)\text{ é l.d.}\}\). Também, note que \(C_{_T}(v)\subseteq V_{m_v}\) que é \(T\)-inv, logo, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
+    Se \(\dim V = n < \infty\), então num análise analogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) com \(m := \min \{k \in \mathbb{Z}_{\geq 0 }: C^k_T(v)\text{ é l.d.}\}\). Também, note que \(C_{_T}(v)\subseteq V_{m_v}\) que é \(T\)-inv, logo, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
 \end{note}
 
 \begin{corollary}
@@ -168,7 +168,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 
 \propositionnum{8.1.17.}
 \begin{proposition}
-    Seja \(p\in \Pol\) primo tal que \(\dim V_p <\infty \). Então, \(\exists l\in \mathbb{Z}_{\geq 0}\) e \(v_1, v_2, \ldots, v_l \in V_p\) tais que \(V_p = \bigoplus^l C_{_T}(v_k) \). 
+    Seja \(p\in \Pol\) primo \(: \dim V_p <\infty \). Então, \(\exists l\in \mathbb{Z}_{\geq 0}\) e \(v_1, v_2, \ldots, v_l \in V_p\) tais que \(V_p = \bigoplus^l C_{_T}(v_k) \). 
 \end{proposition}
 
 \demo{

@@ -14,12 +14,12 @@
 \end{theorem}
 
 \- \vspace{-1cm}
-\begin{enumerate}[left = 0cm]
+\begin{enumerate}[left = 0.1cm]
 \item[] \demo{
     \parbox[b]{0.63\linewidth}{\-\vspace{0.3cm}\\ \textcolor{black}{\emph{Nota}.} Basta ver a volta. Sem perda de generalidade, podemos supor que \(p=0\), \(F(p) = 0 \) e \(DF = \id_{n}\). Remeta-se ao gráfico, nele,  {\small (*) \(= [DF(p)]^{-1 }(\textbf{x}-F(p))\)} e {\small (**) \(= [DF(p)]^{-1 }(F(\textbf{x}+p)- F(p)) \)}. Nestes novos termos \(F(\textbf{x}) = \textbf{x} + R(\textbf{x})\), \vspace{0.4cm}onde \(R(\textbf{x})= \sigma \|\textbf{x}\|\). }\parbox[a]{0.35\linewidth}{\ } 
 }
 
-\begin{tikzpicture}[scale=1.2, >=to, shift={(10.6cm,1.9cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[scale=1.2, >=to, shift={(10.5cm,1.9cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     
     \node (Up) at (0,0) {\small $U-p$};
     \node (Rn) at (2,0) {$\mathbb{R}^n$};
@@ -78,17 +78,17 @@
 \item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
     \centering \(F^{-1} \in C^k(F(\V_0), \R^n)\) %é diff em \(F(\V_0)\) e \(D[F^{-1}](q) = [DF(p)]^{-1}\) 
     \tcblower
-    \textcolor{gray}{ \parbox[a]{0.6\linewidth}{{\small \(^\bullet\)} \(\|DF(p)- \id_{n}\| = \|DR(p)\| < \frac{1}{2}\) implica \(DF(p)\) invertível. Sendo \(q = F(p)\), para \(0<\|w\| \ll \epsilon\), \(\exists v\in \R^n\) tal que \(F(p+v) = q+w\). Desenvolva a expressão \(F^{-1}(q+w)\), apontando para a definição de diff.  }
+    \textcolor{gray}{ \parbox[a]{0.63\linewidth}{{\small \(^\bullet\)} \(\|DF(p)- \id_{n}\| = \|DR(p)\| < \frac{1}{2}\) implica \(DF(p)\) invertível. Sendo \(q = F(p)\), para \(0<\|w\| \ll \epsilon\), \(\exists v\in \R^n\) tal que \(F(p+v) = q+w\). Desenvolva a expressão \(F^{-1}(q+w)\), apontando para a definição de diff.  }
     \parbox[b]{0.4\linewidth}{ \- } \\  
     {\small \(^\bullet\)} A afirmação respeito da classe segue do {\scriptsize \(\square\)} \hyperlink{lemma83}{8.3.} no diagrama a direita.
     }
 \end{tcolorbox}
-\begin{tikzpicture}[scale = 1, >=to, shift={(11.7cm,2.2cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[scale = 1, >=to, shift={(11.8cm,2.2cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     
-    \node (Up) at (0,0) {\small $\V_0$};
-    \node (Rn) at (2.5,0) {\small $\operatorname{GL}(\R^n)$};
-    \node (Rn2) at (2.5,2) {\small $\operatorname{GL}(\R^n)$};
-    \node (U) at (0,2) {\small $F(\V_0)$};
+    \node (Up) at (0,0) {\footnotesize $\V_0$};
+    \node (Rn) at (2.5,0) {\footnotesize $\operatorname{GL}(\R^n)$};
+    \node (Rn2) at (2.5,2) {\footnotesize $\operatorname{GL}(\R^n)$};
+    \node (U) at (0,2) {\footnotesize $F(\V_0)$};
     
     \node (c) at (3.6,0) {\footnotesize $L$};
     \node (d) at (3.6,2) {\footnotesize$L^{-1}$};
