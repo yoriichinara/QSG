@@ -19,7 +19,7 @@
 %    \(f: U\ab \subseteq \R^n \to \R\) tem um \emph{extremo local} en \(p\in U\) sii \(\exists \mathcal{V}_p\) tal que \(\forall \textbf{x}\in \mathcal{V}_p\) se tiene \(f(\textbf{x}) \leq f(p)\) (máximo local) o \(f(p) \leq f(\textbf{x})\) (mínimo local).  
 %\end{definition}
 \begin{proposition}
-    Se \(f\) é diff em \(p\) extremo local da \(f\) então \(p\) é ponto crítico. \textcolor{gray}{\(\rightarrow \ 0\) es extremo local de \(\varphi_i(t) = f(p+te_i)\)}
+    Se \(f\) é diff em \(p\) extremo local da \(f\), então \(p\) é ponto crítico. \textcolor{gray}{\(\rightarrow \ 0\) es extremo local de \(\varphi_i(t) = f(p+te_i)\)}
 \end{proposition}
 % \begin{note}
 %     El objetivo ahora es clasificar como máximo o mínimo o ninguno de los dos. 
@@ -57,7 +57,7 @@
 \end{lemma}
 
 \begin{theorem}
-    Seja \(f\) função \(2\)-diff em \(p\in U\) ponto crítico. Se \(Hf(p)\) é positiva (ou negativa) então \(f(p)\) é um mínimo (ou máximo) local. 
+    Seja \(f\) função \(2\)-diff em \(p\in U\) ponto crítico. Se \(Hf(p)\) é positiva (ou negativa), então \(f(p)\) é um mínimo (ou máximo) local. 
 \end{theorem}
 \demo{Use \ \(\mathbb{S}^{n-1} \ni \vec{u}\mapsto \langle u, Hf(p)\cdot u \rangle\) pra ver que existe uma cota. Interprete essa cota no desenvolvimiento de Taylor de ordem $2$. }
 
@@ -65,7 +65,7 @@
     Sejam \(f\) função \(2\)-diff e \((\lambda_j)\) os autovalores de \(Hf(p)\). Um ponto crítico \(p\) de \(f\) é \emph{ponto de sela} sse \(\exists \ i,j\leq n\) tais que \(\lambda_i\lambda_j <0\). 
 \end{definition}
 \begin{note}
-    Se \(\lambda_j > 0 \) então \(f\) tem mínimo local na direção de \(\vec{v_j}\) (seu autovetor), 
+    Se \(\lambda_j > 0 \), então \(f\) tem mínimo local na direção de \(\vec{v_j}\) (seu autovetor), 
     \[\langle v_j, Hf(p)\cdot v_j\rangle = \lambda_j \langle v_j, v_j\rangle > 0.\]   
 \end{note}
 \begin{example}

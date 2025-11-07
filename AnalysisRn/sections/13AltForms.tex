@@ -89,12 +89,12 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
     \begin{enumerate}[label = \roman*.]
         \item \(\phi ((v_{i<j})) = -\phi ((v_{j<i}))\).
         \textcolor{gray}{\(\rightarrow \) Faça a conta \(\phi((v_{i<j}) + v_j \cdot e_i + v_i\cdot e_j)\)}
-        \item Se \(v_1, \ldots, v_k\) foram l.d. então \(\phi ((v_j)) = 0\). \textcolor{gray}{\(\rightarrow\)  \(\exists j_0\leq k : v_{j_0} =  \sum_{j\neq j_0} a_jv_j\), separa usando linearidade em \(j_0\)}
+        \item Se \(v_1, \ldots, v_k\) foram l.d., então \(\phi ((v_j)) = 0\). \textcolor{gray}{\(\rightarrow\)  \(\exists j_0\leq k : v_{j_0} =  \sum_{j\neq j_0} a_jv_j\), separa usando linearidade em \(j_0\)}
     \end{enumerate}
 \end{lemma}
 
 \begin{corollary}
-    As $k$-formas alternadas são antisimétricas. Se \(S_k\) é o grupo de permutações de ordem \(k\) e \(\operatorname{sgn} : S_k  \to \{-1, 1\}\) então, \(\phi((v_{\sigma(j)})) = \operatorname{sgn}(\sigma) \cdot \phi((v_j))\). \footnote{\(S_k \ni \sigma = \prod \tau_m : \tau_m\) é transposição, logo, \(\operatorname{sgn}(\sigma) = (-1)^{\#M}\). }
+    As $k$-formas alternadas são antisimétricas. Se \(S_k\) é o grupo de permutações de ordem \(k\) e \(\operatorname{sgn} : S_k  \to \{-1, 1\}\), então \(\phi((v_{\sigma(j)})) = \operatorname{sgn}(\sigma) \cdot \phi((v_j))\). \footnote{\(S_k \ni \sigma = \prod \tau_m : \tau_m\) é transposição, logo, \(\operatorname{sgn}(\sigma) = (-1)^{\#M}\). }
 \end{corollary}
 
 
@@ -106,8 +106,8 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{example}
 }
 
-\begin{exercise}[\emph{Projetor Alternado}]
-    Se \(f \in \hom_\R^k(V,\R)\) então a função \(Af :  (v_j) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f((v_{\sigma(j)}))\in \operatorname{Alt^k_\R(V)}\). Em particular, se \(f\) fora alternada, \(Af = f \). 
+\begin{exercise}[\emph{Projetor alternado}]
+    Se \(f \in \hom_\R^k(V,\R)\), então a função \(Af :  (v_j) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f((v_{\sigma(j)}))\in \operatorname{Alt^k_\R(V)}\). Em particular, se \(f\) fora alternada, \(Af = f \). 
 \end{exercise}
 
 \begin{definition}
@@ -118,7 +118,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
  \centering   \(\pi' : \operatorname{Alt}^k_\R(\R^2)\to \operatorname{Alt}^k_\R(\R^3)\)
     \tcblower
 \begin{example}
-    \(\pi: (x,y,z) \mapsto (x,y)\) e \(\phi = \det \in \operatorname{Alt}^2_\R(\R^2)\) então, 
+    \(\pi: (x,y,z) \mapsto (x,y)\) e \(\phi = \det \in \operatorname{Alt}^2_\R(\R^2)\), então 
 \vspace{-0.3cm}
     \[\pi'(\phi) ((x_1,y_1,z_1), (x_2,y_2,z_2)) = \phi( (x_1,y_1), (x_2,y_2)) = \det \begin{bmatrix}
         x_1 & x_2\\ 
@@ -221,7 +221,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 }
 
 \begin{note}
-    Em geral, \(\Omega^0(M)=C^\infty(M,\R)\) e se \(f \in C^\infty(M, \R)\) então \(df \in \Omega^1(M)\), pois, \(df(p)\in (T_pM)' = \alt^1(T_pM)\).    
+    Em geral, \(\Omega^0(M)=C^\infty(M,\R)\) e se \(f \in C^\infty(M, \R)\), então \(df \in \Omega^1(M)\), pois, \(df(p)\in (T_pM)' = \alt^1(T_pM)\).    
 \end{note}
 
 \begin{exercise}
@@ -243,7 +243,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{proposition}
 
 \begin{example}
-    Se \(g \in \Omega^0(N)\) então \(F'(g) = g \circ F\) e \(F'(dg) = d(F'(g)) = d (g\circ F)\).   
+    Se \(g \in \Omega^0(N)\), então \(F'(g) = g \circ F\) e \(F'(dg) = d(F'(g)) = d (g\circ F)\).   
 \end{example}
 
 \ejemplo{
@@ -287,7 +287,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota'(\omega) =
 \end{definition}
 
 \begin{exercise}
-    Se \(M\subseteq \R^n\) é conexa e orientavél então tém só dois orientações. %\(\operatorname{card}(\Omega^d(M) /\hspace{-0.1cm} \sim) = 2 \).
+    Se \(M\subseteq \R^n\) é conexa e orientavél, então tém só dois orientações. %\(\operatorname{card}(\Omega^d(M) /\hspace{-0.1cm} \sim) = 2 \).
 \end{exercise}
 
 \begin{definition}
@@ -340,9 +340,9 @@ Agora precisamos entender como é que se derivam as formas diferenciais.
     \textbf{10.2.} \(\forall M\subseteq \R^n, \ \forall k \in \N\), \(\exists !(d_j) \in \hom_\R(\Omega^k(M), \Omega^{k+1}(M))\), familia de operadores tais que \(d_j: \omega \mapsto d\omega\) verifica:  
     \begin{enumerate}[label= \roman*.]
         \item Derivada de uma função, \(\Omega^0(M) = C^\infty(M) \ni f \mapsto df \in \Omega^1(M)\). 
-        \item Regla de Leibniz com sinal, se \(\omega \in \Omega^p(M)\) e \(\eta\in \Omega^q(M)\) então, 
+        \item Regla de Leibniz com sinal, se \(\omega \in \Omega^p(M)\) e \(\eta\in \Omega^q(M)\), então 
         \[ d(\omega \wedge \eta ) = d\omega \wedge \eta + (-1)^p \omega \wedge d \eta. \] \vspace{-1cm}
-        \item \(d^2 =0\), se \(\omega \in \Omega^k(M)\) então \(d (d\omega) = 0\). \textcolor{gray}{\(\rightarrow \) Vem do \(\blacksquare\) \hyperlink{thmSchw}{(\emph{Schwarz})}}
+        \item \(d^2 =0\), se \(\omega \in \Omega^k(M)\), então \(d (d\omega) = 0\). \textcolor{gray}{\(\rightarrow \) Vem do \(\blacksquare\) \hyperlink{thmSchw}{(\emph{Schwarz})}}
         \item Compativél com pullback, se \(F \in C^\infty (M,N)\) e \(\omega \in \Omega^k(N)\), então temos \(d(F'(\omega)) = F'(d\omega)\). 
     \end{enumerate}
 \end{theorem}
@@ -395,7 +395,7 @@ Agora precisamos entender como é que se derivam as formas diferenciais.
 %    \end{figure}
 
 \begin{definition}
-    \(\omega \in \Omega^k(M)\) é \emph{exata} se \(\exists \eta \in \Omega^{k-1}(M)\) tal que \(\omega = d\eta\). Por outro lado, se \(d\omega = 0 \) dizemos então que \(\omega\) é \emph{fechada}. 
+    \(\omega \in \Omega^k(M)\) é \emph{exata} se \(\exists \eta \in \Omega^{k-1}(M)\) tal que \(\omega = d\eta\). Por outro lado, se \(d\omega = 0 \) dizemos que \(\omega\) é \emph{fechada}. 
 \end{definition}
 \begin{note}
     Ver que \(\omega \) é exata é "resolver" EDPs, ou seja integrar. %, por isso também que escrever \(f_{x_j}= \frac{\partial f}{\partial x_j}\) parece mais conveniente agora. 

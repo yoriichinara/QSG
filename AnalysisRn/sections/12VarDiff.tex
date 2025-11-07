@@ -42,7 +42,7 @@
 %\ejemplo{\centering Gráfico de Função \(\textcolor{verdeoscuro}{\Rightarrow}\) Variedade
 %\tcblower
 \begin{example}%[Gráficos]
-    Se \(F\in C^k(U, \R^m)\) então \(\operatorname{graf}(F):= \{(\textbf{x},F(\textbf{x})) \in U\times\R^m\} = \ ^k_n M \subseteq \R^{n+m}\), fazemos \(\psi: \textbf{x} \mapsto (\textbf{x}, F(\textbf{x}))\) e \(\varphi = \pi : (\textbf{x}, F(\textbf{x})) \mapsto \textbf{x}\). Em particular, as hipersuperficies são variedades. \comentario{Segue do {\scriptsize \(\boxtimes\)} \hyperlink{corol84}{8.4.}}
+    Se \(F\in C^k(U, \R^m)\), então \(\operatorname{graf}(F):= \{(\textbf{x},F(\textbf{x})) \in U\times\R^m\} = \ ^k_n M \subseteq \R^{n+m}\), fazemos \(\psi: \textbf{x} \mapsto (\textbf{x}, F(\textbf{x}))\) e \(\varphi = \pi : (\textbf{x}, F(\textbf{x})) \mapsto \textbf{x}\). Em particular, as hipersuperficies são variedades. \comentario{Segue do {\scriptsize \(\boxtimes\)} \hyperlink{corol84}{8.4.}}
 \end{example}
 %}
 
@@ -93,7 +93,7 @@
 \end{definition}
 
 \begin{lemma}
-    Se \(F\in C^k(M,N)\) então \(DF(p)\) não depende da \(\widetilde{F}\).  
+    Se \(F\in C^k(M,N)\), então \(DF(p)\) não depende da \(\widetilde{F}\).  
 \end{lemma}
 
 \demo{\parbox[a]{0.3\linewidth}{ }\parbox[b]{0.7\linewidth}{\vspace{0.3cm}Tome \(\psi_a\) e \(\check{\psi}_{b}\) parametrizações locais de \(p\in M\) e \(F(p) \in N\). Faça \(\check{\varphi} \circ F \circ \psi: V \to \check{V}\), segue do \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} o diagrama a direita. Note que \(D\widetilde{F}: \operatorname{Im}D\psi_a(a)\mapsto \operatorname{Im}D\check{\psi}_{b}(b)\). \vspace{0.3cm}}
@@ -131,7 +131,7 @@
     Em geral, tudo o visto pra aplicações vale em variedades: 
     \begin{itemize}[left = 0cm]
     \item[] \vspace{-1cm}\begin{theorem}[\emph{Regla da Cadeia V2}]
-         Se \(F\in C^k(M,N)\) e \(G \in C^k(N,P)\) então \(G \circ F \in C^k(M,P)\) e \(D(G\circ F)(p)  = DG(F(p))\cdot DF(p)\). 
+         Se \(F\in C^k(M,N)\) e \(G \in C^k(N,P)\), então \(G \circ F \in C^k(M,P)\) e \(D(G\circ F)(p)  = DG(F(p))\cdot DF(p)\). 
     \end{theorem}
     %\begin{example}[\emph{Derivada da Identidade}] 
     %    \(D\id_{M} = \id_{T_pM}: T_pM \to T_pM\).  
@@ -146,11 +146,11 @@
 \subsection*{Valores Regulares}
 
 \begin{definition}
-    Seja \(F \in C^k(M,N)\). Um ponto \(p\in M\) é \emph{regular} se \(F\) é submersão em \(p\), se não fora regular então é \emph{ponto crítico} de \(F\).  
+    Seja \(F \in C^k(M,N)\). Um ponto \(p\in M\) é \emph{regular} se \(F\) é submersão em \(p\), se não fora regular, então é \emph{ponto crítico} de \(F\).  
 \end{definition}
 
 \begin{note}
-    Se \(\exists p\in M\) ponto regular de \(F\) então \(\dim M \geq \dim N\).
+    Se \(\exists p\in M\) ponto regular de \(F\), então \(\dim M \geq \dim N\).
 \end{note}
 
 \ejemplo{ \centering \(\blacksquare\) \hyperlink{thmML}{(\emph{Multiplicadores de Lagrange})}
@@ -198,7 +198,7 @@
 %\end{note}
 
 \begin{theorem}[\emph{Brown-Sard}]
-    Seja \(F\in C^k(M,N)\). Se \(k \gg 0\) então o subconjunto de valores regulares de \(F\) é denso em \(N\).% \footnote{Se exige \(k\geq \dim M - \dim N + 1\) pero así se ve mas bonito }
+    Seja \(F\in C^k(M,N)\). Se \(k \gg 0\), então o subconjunto de valores regulares de \(F\) é denso em \(N\).% \footnote{Se exige \(k\geq \dim M - \dim N + 1\) pero así se ve mas bonito }
 \end{theorem}
 
 \begin{note}
@@ -226,5 +226,5 @@
 \end{corollary}
 
 \begin{exercise}
-    Se \(S\subseteq \R^n \) tém medida nula então \(\R^n\setminus S \) é denso em \(\R^n\). 
+    Se \(S\subseteq \R^n \) tém medida nula, então \(\R^n\setminus S \) é denso em \(\R^n\). 
 \end{exercise}
