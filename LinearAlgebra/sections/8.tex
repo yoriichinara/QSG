@@ -189,49 +189,15 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \begin{note}
     Pode e debe-se verificar que \(\min\{k: V_{\ p }^\infty = V_{p^k}\} = k_j\) do \(\blacksquare\) \ref{thm:8.1.13}, é assim que conseguimos definir o \emph{polinômio carateristico} como sendo \(c_{_T} := \prod^m p_j^{n_j} \in \an_{_T}\), exatamente o mesmo do \(\blacksquare\) (\emph{Caley-Hamilton}). 
 \end{note}
-
+ 
 \ejemplo{
     \centering Encontrando a Descomposição Primária
     \tcblower
     \begin{description}
         \item[Passo 1.] Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
-        \item[Passo 2.] Encontre \(c_{_T}= \det (t\id_{_V} - A)\) e sua fatoração em primos \(c_{_T} = \prod^m p_j^{n_j}\). \comentario{Precisa habilidade na hora das contas do \(\det\)}
-        \item[Passo 3.] Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\).  
-    \end{description}
-}
-
-%\begin{note}
-%    Na hora das contas são úteis as propiedades,
-%    \begin{enumerate}[label = \roman*.]
-%        \item \(\det (a_{ij}) = \sum (-1)^{i+j} a_{ij} M_{ij}\). \comentario{Formula de Laplace}
-%        \item  {\small\( \det \begin{bmatrix}
-%            A & 0 \\ 
-%            C & B
-%        \end{bmatrix} = \det \begin{bmatrix}
-%            A & C \\ 
-%            0 & B
-%        \end{bmatrix} = \det A \det B\) }. \comentario{\(A\)  e \(B\) quadradas } 
-%        \item {\small \(\det\begin{bmatrix}
-%        | &  & | \\ 
-%        \mu a_{i1} & \cdots & \mu a_{in}\\
-%        | &  & |
-%        \end{bmatrix} = \mu \det \begin{bmatrix}
-%        | &  & | \\ 
-%        a_{i1} & \cdots & a_{in}\\
-%        | &  & |
-%        \end{bmatrix}\)}. \comentario{Saca múltiplos das filas}
-%    \end{enumerate}
-%\end{note}
-
-\subsection{Complementos Invariantes e Bases Cíclicas}
-
-\subsection{Formas Canônicas}
-
-\begin{example}
-   Sejam \(\F = \R\) e 
-{\footnotesize  
-\(
-  [T]_\alpha^\alpha = A =  \left[\begin{array}{*6{c}}
+   {\footnotesize  
+\[  \text{\small Sejam \(V\) \(\R\)-espaço e \(A = \)}
+    \left[\begin{array}{*6{c}}
     0 & -1 & -1 & 0 & -1 & -1\\
     2 & 3 & 1 & 0 & 1 & 2\\
     -2 & -2 & 0 & 0 & -1 & -2\\
@@ -239,11 +205,15 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     0 & 0 & 0 & 1 & 0 & -2\\
     0 & 0 & 0 & 0 & 0 & 2\\
   \end{array}\right] 
-\)}.   
+\]}
+        \item[Passo 2.] Encontre \(c_{_T}= \det (t\id_{_V} - A)\) e sua fatoração em primos \(c_{_T} = \prod^m p_j^{n_j}\). \comentario{Precisa habilidade na hora das contas do \(\det\)}
+\end{description}
 
+\vspace{-0.5cm}
 {\footnotesize  
 \begin{align*}
-    \det(t\id - A ) =  
+ \text{\small $_{F_1 \to F_1 - F_4} \ \ \rotatebox{-90}{$\longrightarrow$} \ \ _{F_2 \to F_2 + F_3}$}
+ \hspace{0.8cm}   \longleftarrow  \ \ \  
      \left|\begin{array}{*6{c}}
     t & 1 & 1 & 0 & 1 & 1\\
     -2 & t - 3 & -1 & 0 & -1 & -2\\
@@ -251,7 +221,19 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     1 & 1 & 1 & t - 1 & 1 & 1\\
     0 & 0 & 0 & -1 & t & 2\\
     0 & 0 & 0 & 0 & 0 & t - 2\\
-  \end{array}\right|  \ \  \text{\small $\overset{F_1 \to F_1 - F_4}{\underset{F_2 \to F_2 + F_3}{\longrightarrow}}$} \\   
+  \end{array}\right| = \text{\small \(c_{_T}\)}   \\   
+\end{align*}
+}
+\begin{tikzpicture}[overlay, shift= {(-1cm, -1cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture} 
+}
+
+\ejemplo{
+\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture} 
+    {\footnotesize \vspace{-0.3cm}\begin{align*}
     \left|\begin{array}{*6{c}}
     (t-1) & \textcolor{gray}{0} & \textcolor{gray}{0} & -(t-1) & \textcolor{gray}{0} &  \\ 
     \textcolor{gray}{0} & (t - 1) & (t-1) & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
@@ -259,7 +241,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     1 & 1 & 1 & t - 1 & 1 &\\
     0 & 0 & 0 & -1 & t &\\ 
     \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & (t - 2)\\ 
-  \end{array}\right|    
+  \end{array}\right|^{(*)} \hspace{-0.5cm} 
     =
     (t-2)(t-1)^2 \left|\begin{array}{*5{c}}
     1 & 0 & 0 & -1 & 0   \\
@@ -268,7 +250,15 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     1 & 1 & 1 & t - 1 & 1 \\
     0 & 0 & 0 & -1 & t \\
   \end{array}\right| \\
-\overset{F_4 \to F_4 - F_2 - F_1}{\longrightarrow}
+(t-2)(t-1)^2 \left|\begin{array}{*3{c}}
+    1  & \textcolor{gray}{0} & \textcolor{gray}{0}  \\
+     & 1  & 1  \\
+     & 2 & t  
+  \end{array}\right| 
+   \left|\begin{array}{*2{c}}
+    t  & 1  \\
+    -1 & t  
+  \end{array}\right| = 
 (t-2)(t-1)^2 \left|\begin{array}{*6{c}}
     1  & 0 & 0 &  &  \\
     0 & 1  & 1  &  & \\
@@ -276,17 +266,111 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & t  & 1 \\
     \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & t \\
   \end{array}\right|  
-  = (t-2)(t-1)^2 \left|\begin{array}{*3{c}}
-    1  & \textcolor{gray}{0} & \textcolor{gray}{0}  \\
-     & 1  & 1  \\
-     & 2 & t  
-  \end{array}\right| 
-  \det \left|\begin{array}{*2{c}}
-    t  & 1  \\
-    -1 & t  
-  \end{array}\right| %= 
+\text{\small\(\overset{F_4 \to F_4 - F_2 - F_1}{\longleftarrow}\)}
+   %= 
 \end{align*}
 }
 
 \[c_{_T} = (t-2)^2 (t-1)^2 (t^2+ 1 ) \]
-\end{example}
+
+\begin{description}
+    \item[Passo 3.] Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\).  
+\end{description}
+
+\vspace{-0.5cm}
+{\footnotesize
+\begin{align*}
+V_{t-1} = \ker \left[\begin{array}{*6{c}}
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} &  \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
+    2 & 2 & 1 & \textcolor{gray}{0} & 1 &  \\
+    1 & 1 & 1 & \textcolor{gray}{0} & 1 &  \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & 1 & \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1\\ 
+  \end{array}\right]^{(*)}  
+    \text{\small \hspace{-0.3cm}\(\overset{F_3 \to F_3 - 2F_4}{\longrightarrow}\)}
+  \left[\begin{array}{*6{c}}
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} &  \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & \textcolor{gray}{0} & -1 &  \\
+    1 & 1 & 1 & \textcolor{gray}{0} & 1 &  \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & 1 & \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1\\ 
+  \end{array}\right]
+  \\ 
+    \text{\small \(\overset{F_4 \to F_4 + F_2}{\longrightarrow}\)}
+  \left[\begin{array}{*6{c}}
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} &  \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & \textcolor{gray}{0} & -1 &  \\
+    1 & 1 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} &  \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & 1 & \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1\\ 
+  \end{array}\right] 
+  \left[\begin{array}{c}
+   a \\ 
+    -a \\ 
+    c \\ 
+    -c \\ 
+    -c \\ 
+    0  
+  \end{array}\right] = 
+\left[\begin{array}{c}
+   0 \\ 
+    0 \\ 
+    0 \\ 
+    0 \\ 
+    0 \\ 
+    0  
+  \end{array}\right] \Rightarrow \ \ \dim V_{t-1} = 2 \\ 
+V_{t-2} = \ker \left[\begin{array}{*6{c}}
+    1 & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & \textcolor{gray}{0} &  \textcolor{gray}{0}\\ 
+    \textcolor{gray}{0} & 1 & 1 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0}\\ 
+    2 & 2 & 2 & \textcolor{gray}{0} & 1 & 2 \\
+    1 & 1 & 1 & 1 & 1 & 1\\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & 2 & 2 \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0}\\ 
+  \end{array}\right]^{(*)}  
+    \text{\small \hspace{-0.3cm}\(\overset{F_3 \to F_3 - 2F_4}{\underset{F_4 \to F_4 - F_2 - F_1}{\longrightarrow}}\)}
+  \left[\begin{array}{*6{c}}
+    1 & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & \textcolor{gray}{0} &  \textcolor{gray}{0}\\ 
+    \textcolor{gray}{0} & 1 & 1 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0}\\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -2 & -1 & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & 2 & 1 & 1\\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & 2 & 2 \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0}\\ 
+  \end{array}\right]
+  \\ 
+    \text{\small \(\overset{F_4 \to F_4 + F_3}{\underset{F_3 \to 2F_3 + F_5}{\longrightarrow}}\)}
+  \left[\begin{array}{*6{c}}
+    1 & \textcolor{gray}{0} & \textcolor{gray}{0} &  & \textcolor{gray}{0} &  \\ 
+    \textcolor{gray}{0} & 1 & 1 &  &\textcolor{gray}{0} & \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -5 & \textcolor{gray}{0} &  \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} &  & \textcolor{gray}{0} & 1\\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} &  & 2 &  \\ 
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} &  & \textcolor{gray}{0} & \\ 
+  \end{array}\right] 
+  \left[\begin{array}{c}
+   0 \\ 
+    a \\ 
+    -a \\ 
+    0 \\ 
+    0 \\ 
+    0  
+  \end{array}\right] = 
+\left[\begin{array}{c}
+   0 \\ 
+    0 \\ 
+    0 \\ 
+    0 \\ 
+    0 \\ 
+    0  
+  \end{array}\right]\Rightarrow \ \ \dim V_{t-2} = 1
+\end{align*}
+}
+\[m_{_T} = (t-2)^2(t-1)(t^2+1) \text{ \ e \  } V_{_T} =  V_{(t-2)^2} \oplus V_{t-1} \oplus V_{t^2+1}\]
+}
+ 
+\subsection{Complementos Invariantes e Bases Cíclicas}
+
+\subsection{Formas Canônicas}
