@@ -1,48 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.30">
-<info created="D:20251023164320" modified="D:20251023164320"/>
-<bitmap id="1" width="123" height="102" BitsPerComponent="8" ColorSpace="DeviceGrayAlpha" Filter="FlateDecode" length="286" alphaLength="705" encoding="base64">
-eNrt2kESwyAIBVDuf2m6bIKGgIVv23x3yTh5o4yKGlVokUPZBj+H3tffZ580ltZn0Qw1Q81Q
-M9QMNUOdSIrgtMnGcLIxgfQJgiajxgHSg4KVt9AzBUNPEUPLfUlWvG5fWpZszcupA0FLpL81
-/b1l2X0dWdumUU0YcjcBeINgpIMrY5zWCC1wWpb7u5WWZKjraSXtrh1ldDrU5bSS9tMEDP1+
-2kXLn9J+qKGtduTy2Sze6F5attFjgtmaKkz32Bjafut8stBFjzXU0G252bHd5hjlOoOtotXd
-QmgrPc0Y3OW0kF4+fnguHd9UkibNwUWaNGnSpEmTJk2aNOkfprV5zxWh9XM6fJOrgZvcjFl8
-f10lL/0w8OW07qNfNcuJjXja7ZphtbQgEIaNQAYikIEIZjACHYhABiKQgQhkIAJ3EddlFFzd
-b8RzvsP8u96RR3hhGJgdhqZGGJ+E1Mb5MLYFu/CxtmiekQNtO96jENIksh8esNR3/QSazujp
-CfT4hNTJ1GNSD+4xqUmXukvdpe5Sd6m71N+NSeuDt1NzqUcbtbWvcXasqdQsSqtiJ4kMgTeU
-WoSlsykb9LSZ1DHttWT9cwqmldRRZQcf2DZSxz57kj+ZQpsM3BTOVaGJ1LLUPwOllj4cm11c
-if7i6TMSm5+QwwBOw1dTQKkjG2GolqWJ9xkK8r1BWTihlo2D4d51eruqqVBaz58TnFotqeKM
-VnJ15VJpkzztx3N5oF+eHDJ0+Yi5W9UTXHAxDhlS3HsUbFV/JIFzbH9tICurWoMPMoXxynTM
-3vebuPERcTiWGmYuPG/eHiUaACOLnTa7F2urmoMh8gdBR+TjE1eI2Dj4MoPXAjgD3uEsmu0h
-rHJNU5P6Anr6ghZpdZyWeh45gFa/om0eiE5IjYiu3MhVpcZD06tS46F55UauKjUeerq4qhHR
-aYKL81LjoU8FcCvv6zU7lJqD1pG1JodSKzAqaOixuG3BDNyBT0NDk2KvTf5BFG6LeNHMFaZy
-mt92bUHeg5YgTUuNe5AyWTgL8dB0FzuIC3mKyjbbGh56zrUsJAueodUm4CCiiQcLm/nI9GuT
-dHMUw0TPk8pmIWZc3rLLZJ+G29CJPfuM/n2418mT6N3WgooeqJlPEDFvnvJM1tvCpoaLfl8c
-mfx/RNrXk3G4G33BOvqdVdato/8rtDcVc31xdXRHd3RHd3RHd3RHd3RHI6Hxah83osUdaKQ6
-11VDrO5dNfV7TdP+e6dPVXLnK9BNJffHblMRy9J+U7/WS1VaKblOAB49q/VrpQS/Rr6nan86
-ktzwW4VThvcLjaDJJfIfUlFjaA==
-</bitmap>
-<bitmap id="2" width="72" height="71" BitsPerComponent="8" ColorSpace="DeviceGrayAlpha" Filter="FlateDecode" length="275" alphaLength="677" encoding="base64">
-eNrt2NEOwjAIhWHe/6Xxalm0A/5TmIuJvVzmZ9EWaN2U4eEwdUw5EWVj0sktevxdEFrexVDh
-nI8KaXXCN6acQ9p0GKQ5MQSct6ddp4IecwLom47f4vjf+Snn+XV4yzvNfepFIhOdTj5c8nPb
-sU6e/6xfe3Xn+Ky16qnYCC2O3rlcrPmd/kdwPB3Q8WpUjjPm+nc21qvA/6voDND6kaHMUSKL
-1rM6oXBfiBPKHcMTivepFlmy36XImOMb+zRpeDsOjCzNh0JkIK+iyEh+JlBRL3BkqO6ACbH6
-VUNlPYWRSedBb9f34b5l7hxno+e4Rv9cQNzJIdJjX1fv+r6FtgHs/odcF7l8a2T7g1xg+ZDz
-Aio8DKt42r2Y7RnkEBCAlaAGJahBCWpQgh6UoAYlqEEJakgJuUV2jTAh7p6bXysrb8yM+YDY
-45zLEYM3ilOCijjfSDQc4bDzrbgximvrXChfs1WKttE758Ndcy9w/XSywm2Zjl0jKv1lp4sU
-OApyn7+rHe1nZBv985IFN7GQNMaRadpvFBvq70MxeaaszVPccfI3+igQ7jPSilQ2aV5THHP4
-d1aWZJ2Ra49qzdNvcrLReLVCa0D4tYZjh58y4DeY/4qTrP/bG6rdKK84FnrRjb2/wlHVQOWF
-uMdpfZH2EdviUGDo4jO1xWkf0+GkVY5rRn6PczRvxkHw7HDCyGH/ez0OG/2Vne0/8DsfBsbq
-PqxvGhglrzhdzjz24kvDFajxnNW8AXUcqLXEAdmfBsQVCxxVzUxTyTjoHif+Eo7MhVXs5Xn/
-3YVXJRRkh8Pyy4wwXSrzIcgGh9ur//h2ClhZRjiUcaGMv/dAQaL9RsfB5an/WeUcTpJHWeJI
-SmbScVKXl1wTtZJSsNy2aPKeY7/tHQOdAd3j5FAIIEr9Jqc2YSVMT7nJYUAbgcXmyn7WQBs3
-bNMW4yJWbeiBhuecw4E2EmnCluLUAG081l6uxHus2tBzptkDRwBt1MxnT/kHnjb8xGdPnOwn
-DjSTe5zspwh+P2j2nFcd6DDdY5w9c7JmDPhP73GawOdISV6qOx4sQuPHr3n9AimNBHxbT+sp
-DHyKp6J5XYYpTZ7Dw8USh8GNk7Z43Ow3YODn1fm98ylMacVEdo/DYRrj4+uArhcdBXVzzaCG
-R93uPiEMOG2CNiOQaxzpkdopm52cmyLTxc9x23QjkG/ezI1RYNf9j3X+fv/jygNnrVHd0eC8
-TTuDWLmP6gO/F75wP+Z7zTpRZHpfF2+ZhobBp+gfQP+uQQ==
-</bitmap>
+<info created="D:20251023164320" modified="D:20251112103246"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -354,7 +313,7 @@ h
 <page>
 <layer name="alpha"/>
 <layer name="beta"/>
-<view layers="alpha beta" active="beta"/>
+<view layers="alpha beta" active="alpha"/>
 <path layer="beta" matrix="0.680697 0 0 0.670212 68.6185 275.491" stroke="black" pen="1" opacity="50%" stroke-opacity="opaque">
 383.604 676.524 m
 383.604 676.524 l
@@ -431,8 +390,6 @@ h
 <path matrix="0.680697 0 0 0.670212 250.091 312.692" fill="black">
 2.24168 0 0 2.24168 373.586 534.724 e
 </path>
-<image matrix="0.256192 0 0 0.289067 -30.1608 663.413" rect="251.381 382.755 343.619 459.245" bitmap="1"/>
-<image matrix="0.276389 0 0 0.2829 444.583 702.867" rect="270.503 394.378 324.497 447.622" bitmap="2"/>
 <path matrix="1 0.0006342 -0.0006342 1 0.177467 0.254121" stroke="black" pen="1">
 494.308 673.246 m
 494.349 670.496 l
