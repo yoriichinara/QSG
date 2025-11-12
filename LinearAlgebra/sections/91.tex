@@ -7,8 +7,8 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 \end{definition}
 
 \begin{definition}
-    Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j_0\leq k\) fixo, \(\forall(v_{1,j})_{j_0}, (v_{2,j} )_{j_0} \in \Pi V_j \) e \( \forall \lambda \in \F\) temos,   
-    \[  \textstyle \phi_{j_0} (\cdots, v_{1,j_0} + \lambda v_{2,j_0}, \cdots ) = \phi ( (v_{1,j})_{j_0}) + \lambda \phi((v_{2,j})_{j_0}).\footnote{Entendase \((v_{i,j})_{j_0} \in \Pi V_j: \forall j\neq j_0,\ v_{i,j} \in V_j\) ta fixo.}\]  
+    Uma função \(\phi \in \mathcal{F}( \Pi^k V_j, W)\) é $k$\emph{-linear} se é linear em cada entrada. Ou seja, \(\forall j_0\leq k\), \(\forall (v_j)_{j\neq j_0}\in \Pi V_j \) fixos, \(\forall v_{1,j_0}, v_{2,j_0} \in V_{j_0} \) e \( \forall \lambda \in \F\) temos,   
+    \[  \textstyle \phi_{j_0} (\cdots, v_{1,j_0} + \lambda v_{2,j_0}, \cdots ) = \phi ( \cdots, v_{1,j_0}, \cdots) + \lambda \phi(\cdots, v_{2,j_0}, \cdots ).\]  
 \end{definition}
 
 \vspace{-0.5cm}
@@ -35,8 +35,8 @@ Em diante entendemos \(\Pi V_j = V_1 \times V_2 \times \cdots \times V_k\) como 
 \end{theorem}
 
 \newcommand{\bi}{\textbf{i}}
-\demo{Pra \((v_{1,j}) \in \hom^k(\Pi V_j, W)\) e \(\forall j \leq k\) sejam \( (a_{i_{j},j}) = [v_{{1,j}}]_{\alpha_{j}}\) com \(i_j \leq m_j \in \mathbb{Z}_{\geq 0} \), supondo \(\phi\) seja $k$-linear e \(I_m:=\prod I_{m_j} \) mostre,    
-\[ \phi((v_{1,j})) = \sum_{\bi \in I_m} \left(\prod^k a_{i_j,j}\right) \cdot  \phi((v_{\bi,j})).\]
+\demo{Sejam \((v_{j}) \in \Pi V_j\) e \(\forall j \leq k\), \( (a_{i_{j},j}) = [v_{{j}}]_{\alpha_{j}}\) com \(i_j \leq m_j \in \mathbb{Z}_{\geq 0} \), supondo \(\phi\) seja $k$-linear e \(I_m:=\prod I_{m_j} \) mostra primeiro que,     
+\[ \phi((v_{j})) = \sum_{\bi \in I_m} \left({\prod}^k a_{i_j,j}\right) \cdot  \phi((v_{\bi,j})).\]
 Use aquela expressão pra replicar a demostração do \(\blacksquare\) \ref{thm:6.1.6}. 
 }%A unicidade segue da unicidade das coordenadas. Agora, com \(j_0\) fixo olha pra \(\phi((v_{1,j_0}) + \lambda(v_{2,j_0}))\).  } = \sum_{\bi \in I_m} \left(\prod a_{i_j,j}\right) \cdot  w_\bi
 %\demo{A demostração é completamente análoga da feita pra \(\blacksquare\) \ref{thm:6.1.6}, mudando, claro, o não despreciavél negôcio da gestão dos índices}

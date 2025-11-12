@@ -15,7 +15,7 @@
     \(\forall (V_j),\ \exists (\phi, V)\) produto tensorial. Além disso, se \(\forall j\leq k, \ \alpha_j\) fora base de \(V_j\), então \(\phi \circ (\Pi \alpha_j)\) é base de \(V\).  
 \end{theorem}
 
-\demo{Sejam \(\alpha := \Pi \alpha_j\), \(V : \dim V = \# \alpha\) e \(\iota : \alpha \to V\) base pra \(V\) indexada por \(\alpha\). Segue do \(\blacksquare \) \ref{thm:9.1.3} que \(\exists ! \phi \in \hom^k(\Pi V_j, V): \phi|_\alpha = \iota\). Conclui mostrando que o par \((\phi, V)\) é universal.} 
+\demo{Sejam \(\alpha := \Pi \alpha_j\), \(V : \dim V = \# \alpha\) e \(\iota : \alpha \to V\) base pra \(V\). Segue do \(\blacksquare \) \ref{thm:9.1.3} que \(\exists ! \phi \in \hom^k(\Pi V_j, V): \phi|_\alpha = \iota\). Conclui mostrando que \((\phi, V)\) é universal.} 
 
 \theoremnum{10.2.2.}
 \begin{theorem}
@@ -25,7 +25,7 @@
 \demo{Injetora por conseqüência do {\scriptsize \(\square\)} \hyperlink{lemma1012}{10.1.2.} e sobrejetiva pois se \(T \in \hom(V,W)\), então \(\psi = T \circ \phi \in  \hom^k(\Pi V_j, W)\). Pra ver a linearidade mostra que \(\forall \psi, \xi \in \hom^k(\Pi V_j, W)\) e \(\forall \lambda \in \F\), \((\widetilde{\psi}+ \lambda \widetilde{\xi}) \circ \phi = \psi + \lambda \xi\). } 
 
 \begin{note}
-    Notação padrão pra producto tensorial, \(\textstyle (\phi, V) = \left(\otimes, \otimes V_j\right)\). A $k$-linearidade fica,  \( \cdots \otimes v_{1,j_0} + \lambda v_{2,j_0} \otimes \cdots = \otimes ((v_{1,j})_{j_0}) + \lambda \otimes ((v_{2,j})_{j_0})\).
+    Notação padrão pra producto tensorial, \(\textstyle (\phi, V) = \left(\otimes, \otimes V_j\right)\). A $k$-linearidade fica,  \( \cdots \otimes v_{1,j_0} + \lambda v_{2,j_0} \otimes \cdots = \cdots \otimes v_{1,j_0} \otimes \cdots + \lambda \cdots \otimes v_{2,j_0}\otimes \cdots \).
     %O corpo e \(k\) apareceram só se precisar.
 %    \[\otimes ((v_{1,j})_{j_0} + \lambda(v_{2,j})_{j_0}) = \otimes (v_{1,j})_{j_0} + \lambda \otimes (v_{2,j})_{j_0}.\]
 \end{note}
@@ -59,7 +59,7 @@
 
 \begin{definition}
     \centering
-    \(\pt(\textbf{v}) := \min\{m \in \mathbb{Z}_{\geq 0} : \textbf{v} = \sum_{i\leq m} \otimes v_{i,j}\}\). 
+    \(\pt\textbf{v} := \min\{m \in \mathbb{Z}_{\geq 0} : \textbf{v} = \sum_{i\leq m} \otimes v_{i,j}\}\). 
 \end{definition}
 
 \ejemplo{
@@ -99,7 +99,7 @@
     Seja \(\tu = \sum^m v_j \otimes w_j \in V\otimes W\). Então, \(\pt \tu = m \ \leftrightharpoons\ (v_j)\) e \((w_j)\) são l.i. em \(V \) e  \(W\), respetivamente. \comentario{Segue dos {\scriptsize \(\square\)} \hyperlink{lemma1026}{10.2.6.} e {\scriptsize \(\square\)} \hyperlink{lemma1027}{10.2.7.}}
 \end{proposition}
 
-\ejemplo{ \centering Na pratica agrupamos usando $k$-linearidade até conseguir familias l.i.. 
+\ejemplo{ \centering Na pratica usamos $2$-linearidade até conseguir familias l.i. 
     \tcblower
     \begin{example} Em \(V = \mathbb{Q}^2\), \(\tu_1 = 5e_1 \otimes e_1 \ \textbf{-}  \ 3e_2 \otimes e_2 \in V\otimes V \ \Rightarrow \ \pt \tu_1 = 2\), mientras, 
     \begin{align*}
@@ -162,3 +162,7 @@
 \end{proposition}
 
 \demo{\(\exists !\tau\) segue da propiedade universal em \(\psi = \operatorname{av}\). Seja \(\alpha = (v_j)\) base pra \(V\), da nota previa \([T]^\alpha_\alpha \Rightarrow \Gamma^{-1}(T) =  \sum_{i,j} a_{ij}f_j \otimes v_i\), faça a continha \(\tau(\Gamma^{-1}(T))\). }
+
+\begin{note}
+    O jeito mais popular de mostrar que existe o produto tensorial é usando espaço cociente, tém suas vantagens, se estiver interessado olha \cite[Pág. 347]{MA719}.
+\end{note}
