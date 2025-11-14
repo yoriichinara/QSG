@@ -14,10 +14,11 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
     \end{itemize}
 }
 
-\subsection*{Formas Alternadas}
+\newcommand{\alt}{A}
+\subsection*{Formas Alternadas (em \(\R^n\))}
 
 \begin{definition}
-    Uma $k$-forma \(\phi \in \hom^k_\R(V, \R )\) é \emph{alternada} sse  toda vez que \(\exists i<j\)  tal que \(v_i =v_j\) temos que \(\phi((v_{i<j})):= \phi(v_1, \ldots, v_i, \ldots, v_j, \ldots, v_k) = 0\). 
+    Seja \(k \in \N\). Uma \emph{$k$-forma} \(\phi \in \hom^k(V, \R )\) é \emph{alternada} sse  toda vez que \(\exists i<j\)  tal que \(v_i =v_j\), \(\phi((v_{i<j})):= \phi(v_1, \ldots, v_i, \ldots, v_j, \ldots, v_k) = 0\). 
 \end{definition}
 
 %\begin{example}
@@ -77,7 +78,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \- \vspace{-1.2cm} 
 
 \begin{definition}
-    \centering \(\operatorname{Alt}^k_\R(V):=\{\phi \in \hom_\R^k(V,\R) : \phi \text{ é } \text{alternada}\}\).
+    \centering \(A^k(V):=\{\phi \in \hom^k(V,\R) : \phi \text{ é } \text{alternada}\}\).
 \end{definition} 
 %\begin{note}
 %    \(A^k(V)\) es espacio vectorial.
@@ -85,7 +86,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 
 \hypertarget{lemma101}{}
 \begin{lemma}
-    \textbf{10.1.} Sejam \(\phi \in \operatorname{Alt}^k_\R(V)\) e \(i<j\). Então,  
+    \textbf{10.1.} Sejam \(\phi \in A^k(V)\) e \(i<j\). Então,  
     \begin{enumerate}[label = \roman*.]
         \item \(\phi ((v_{i<j})) = -\phi ((v_{j<i}))\).
         \textcolor{gray}{\(\rightarrow \) Faça a conta \(\phi((v_{i<j}) + v_j \cdot e_i + v_i\cdot e_j)\)}
@@ -94,7 +95,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{lemma}
 
 \begin{corollary}
-    As $k$-formas alternadas são antisimétricas. Se \(S_k\) é o grupo de permutações de ordem \(k\) e \(\operatorname{sgn} : S_k  \to \{-1, 1\}\), então \(\phi((v_{\sigma(j)})) = \operatorname{sgn}(\sigma) \cdot \phi((v_j))\). \footnote{\(S_k \ni \sigma = \prod \tau_m : \tau_m\) é transposição, logo, \(\operatorname{sgn}(\sigma) = (-1)^{\#M}\). }
+    As $k$-formas alternadas são antisimétricas. Se \(S_k\) é o grupo de permutações de ordem \(k\) e \(\operatorname{sgn} : S_k  \to \{-1, 1\}\), então \(\phi((v_{\sigma(j)})) = \operatorname{sgn}(\sigma) \cdot \phi((v_j))\). \footnote{\(S_k \ni \sigma = \prod \tau_m : \tau_m\) é transposição, logo, \(\operatorname{sgn}(\sigma) = (-1)^{|M|}\). }
 \end{corollary}
 
 
@@ -102,23 +103,23 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \ejemplo{\centering Espaços não triviais \( \sim \ \dim V = n\)
 \tcblower 
 \begin{example}
-    \(\operatorname{Alt}^0_\R(V) = \R \), \(\operatorname{Alt}^1_\R(V) = V'\) e \(\operatorname{Alt}^k_\R(V) = \{0\}\) se \(k > n\). \textcolor{gray}{\(\rightarrow \) Segue da dependência linear em {\scriptsize\(\square\)} \hyperlink{lemma101}{10.1.} (ii.)}
+    \(A^0(V) = \R \), \(A^1(V) = V'\) e \(A^k(V) = \{0\}\) se \(k > n\). \textcolor{gray}{\(\rightarrow \) Segue da dependência linear em {\scriptsize\(\square\)} \hyperlink{lemma101}{10.1.} (ii.)}
 \end{example}
 }
 
 \begin{exercise}[\emph{Projetor alternado}]
-    Se \(f \in \hom_\R^k(V,\R)\), então a função \(Af :  (v_j) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f((v_{\sigma(j)}))\in \operatorname{Alt^k_\R(V)}\). Em particular, se \(f\) fora alternada, \(Af = f \). 
+    Se \(f \in \hom^k(V,\R)\), então a função \(Af :  (v_j) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f((v_{\sigma(j)}))\in A^k(V)\). Em particular, se \(f\) fora alternada, \(Af = f \). 
 \end{exercise}
 
 \begin{definition}
-    Sejam \(T \in \hom_\R(V,W)\) e \(\phi \in \operatorname{Alt}^k_\R(W)\). O \emph{pullback} de \(\phi \) por \(T\) é a função \(T'(\phi) \in \operatorname{Alt}^k_\R(V)\) tal que \((v_j) \mapsto \phi ((T (v_j)))\). \footnote{Da uma olhada nas Notas de Algebra Linear II, Seç. 9.2..}
+    Sejam \(T \in \hom_\R(V,W)\) e \(\phi \in A^k(W)\). O \emph{pullback} de \(\phi \) por \(T\) é a função \(T'(\phi) \in A^k(V)\) tal que \((v_j) \mapsto \phi ((T (v_j)))\). \footnote{Da uma olhada nas Notas de Algebra Linear II, Seç. 9.2..}
 \end{definition}
 
 \ejemplo{
- \centering   \(\pi' : \operatorname{Alt}^k_\R(\R^2)\to \operatorname{Alt}^k_\R(\R^3)\)
+ \centering   \(\pi' : A^k(\R^2)\to A^k(\R^3)\)
     \tcblower
 \begin{example}
-    \(\pi: (x,y,z) \mapsto (x,y)\) e \(\phi = \det \in \operatorname{Alt}^2_\R(\R^2)\), então 
+    \(\pi: (x,y,z) \mapsto (x,y)\) e \(\phi = \det \in A^2(\R^2)\), então 
 \vspace{-0.3cm}
     \[\pi'(\phi) ((x_1,y_1,z_1), (x_2,y_2,z_2)) = \phi( (x_1,y_1), (x_2,y_2)) = \det \begin{bmatrix}
         x_1 & x_2\\ 
@@ -128,15 +129,15 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 }
 
 \let\originalwedge\wedge 
-\renewcommand{\wedge}{\mathbin{\scriptstyle\originalwedge}}
+%\renewcommand{\wedge}{\mathbin{\smallstyle\originalwedge}}
 
 \begin{definition}
-    Sejam \(\phi \in \operatorname{Alt}^p_\R(V)\) e \(\psi \in \operatorname{Alt}^q_\R(V)\). O \emph{produto exterior} de \(\phi\) e \(\psi\) é a função \(\phi \wedge \psi \in \operatorname{Alt}^{p+q}_\R (V)\) dada por,  
+    Sejam \(\phi \in A^p(V)\) e \(\psi \in A^q(V)\). O \emph{produto exterior} \(\phi \wedge \psi \in A^{p+q} (V)\) é,  
     {\[(v_1, \ldots, v_{p+q}) \mapsto \frac{1}{p!q!} \sum_\sigma \operatorname{sgn}(\sigma) \phi(v_{\sigma(1)}, \ldots, v_{\sigma(p)}) \psi(v_{\sigma(p+1)},\ldots, v_{\sigma(p+q)}).\]}
 \end{definition}
 
 \begin{example}
-    Sejam \(\phi, \psi \in \operatorname{Alt}^1_\R(V)\). Então,  \(\phi \wedge \psi \in \operatorname{Alt}^2_\R(V)\) é dada por,
+    Se \(\phi, \psi \in A^1(V)\), então \(\phi \wedge \psi \in A^2(V)\) é dada por,
     \[(v_1, v_2) \mapsto \phi(v_1)\psi(v_2) - \phi(v_2)\psi(v_1) =\det  \begin{bmatrix}
         \phi(v_1) & \psi(v_1) \\ 
         \phi(v_2) & \psi(v_2) 
@@ -147,7 +148,6 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 %    \(\Lambda^0(\R^2) = \R\), \(\Lambda^1(\R^2) = \R e_1^* \oplus \R e_2^*\) e \(\Lambda^2(\R^2) = \R (e_1^* \wedge e_2^*)\).   
 %\end{example}
 
-\newcommand{\alt}{\operatorname{Alt}_\R}
 \begin{proposition}
     Sejam \(\phi \in \alt^p(V),\ \psi \in \alt^q(V)\) e \(\xi \in \alt^r(V)\). Então, o produto \(\wedge\) é:   
     \begin{enumerate}[label = \roman*.]
@@ -175,9 +175,9 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 %}
 
 \begin{example}
-    \- \vspace{-1cm}
+    \- \vspace{-0.8cm}
     \[(\R^3)' = [e_1', e_2', e_3'] \leadsto  \begin{cases}
-        \alt^0(\R^3) = \R;\hspace{0.5cm} \alt^1(\R^3) = \R e_1' \oplus \R e_2'\oplus\R e_3';\\ 
+        \alt^0(\R^3) = \R;\hspace{0.3cm} \alt^1(\R^3) = \R e_1' \oplus \R e_2'\oplus\R e_3';\\ 
         \alt^2(\R^3) = \R (e_1' \wedge e_2')\oplus \R (e_1' \wedge e_3')\oplus \R (e_2' \wedge e_3')\\ 
         \alt^3(\R^3) = \R ( e_1' \wedge e_2'\wedge e_3') \sim \det(\R^3) \\ 
     \end{cases}.\]   
@@ -198,7 +198,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 %\ejemplo{Basta probar para un único atlas }
 
 \begin{note}
-    Em deante tudo será \(C^\infty\), variedades, aplicações, formas, etc. Também, pra facilitar a escritura dentotamos \(\textbf{i} = (i_1, \ldots, i_k) \in I\). 
+    Em deante tudo será \(C^\infty\), variedades, aplicações, formas, etc. Também, pra facilitar a escritura denotamos \(\textbf{i} = (i_1, \ldots, i_k) \in I\). 
 \end{note}
 
 \begin{definition}
@@ -210,7 +210,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 %\tcblower
 %\- \vspace{-0.6cm}
     %\[\sum f_{i_1, \ldots, i_k} \ dx_{i_1}\wedge \cdots \wedge dx_{i_k} = \omega  \in \Omega^k(U\ab) \ \textcolor{verdeoscuro}{\leftrightharpoons} \ f_{i_1, \ldots, i_k} \in C^\infty(U)\]
-    \[\sum f_\textbf{i} \ \left(\cuna dx_\textbf{i} \right) = \omega  \in \Omega^k(U\ab) \ \textcolor{verdeoscuro}{\leftrightharpoons} \ \forall \textbf{i} \in I, \ f_\textbf{i} \in C^\infty(U)\]
+    \[\sum f_\textbf{i} \ \left(\wedge d\x_\textbf{i} \right) = \omega  \in \Omega^k(U\ab) \ \textcolor{verdeoscuro}{\leftrightharpoons} \ \forall \textbf{i} \in I, \ f_\textbf{i} \in C^\infty(U)\]
     \tcblower
         %{\footnotesize \(\bullet\)} Se \(\mathcal{I}\ab\subset \R \), então \(\omega = f(t)\ dt \in \Omega^1(\mathcal{I})\) sse \(f \in C^\infty(\mathcal{I})\).    \\ 
         %\item Si \(M = U\ab \subseteq \R^2\) de coordenadas \((x,y)\) entonces,  
@@ -249,7 +249,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \ejemplo{
     Na hora das contas, se \(^M\varphi = (\x_1, \ldots, \x_{d_1})\) e \(^N\varphi(\y_1, \ldots, \y_{d_2})\) são cartas locais de \(p\) e \(F(p)\) respetivamente, tais que \(F(\U_p)\subseteq \mathcal{V}_{F(p)}\), então 
     \[
-        \omega\Big|_{\mathcal{V}_{F(p)}} =  \sum g_\textbf{i} \left(\cuna d\y_\textbf{i} \right) \ \  \Rightarrow \ \  F'(\omega) \Big|_{\U_p} = \sum F' (g_\textbf{i}) \left( \cuna d(\textcolor{red}{F'(\y_\textbf{i}) }) \right).  
+        \omega\Big|_{\mathcal{V}_{F(p)}} =  \sum g_\textbf{i} \left(\wedge d\y_\textbf{i} \right) \ \  \Rightarrow \ \  F'(\omega) \Big|_{\U_p} = \sum F' (g_\textbf{i}) \left( \wedge d(\textcolor{red}{F'(\y_\textbf{i}) }) \right).  
     \]
     \vspace{0.9cm}
     \tcblower
@@ -258,7 +258,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
     \end{example}   
 }
 
-\begin{tikzpicture}[>=to, shift={(5.8cm, 3.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[>=to, shift={(5.35cm, 3.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     \draw[thick, red] (5.2,-0.5) -- (8.8,-0.5) -- (8.8,0.7)-- (8.1,0.7)-- (9.5,0.7); 
     \node[red] at (2,-0.5) {$F'(\y_{i_m}) = \sum \frac{\partial F'(\y_{i_{m}})}{\partial \x_j}d\x_j $};
 \end{tikzpicture}
@@ -279,7 +279,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota'(\omega) =
 \end{definition}
 
 \begin{example}
-    \(\R^n\) e \(\E^1\) são orientaveis com \(\omega = \cuna dx_j \) e \(\omega = d\theta|_{_{\E^1}}\) respetivamente. %A faixa de Möbius não é orientavél.
+    \(\R^n\) e \(\E^1\) são orientaveis com \(\omega = (\wedge dx_j) \) e \(\omega = d\theta|_{_{\E^1}}\) respetivamente. %A faixa de Möbius não é orientavél.
 \end{example}
      
 \begin{definition}
@@ -295,7 +295,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota'(\omega) =
 \end{definition}
 
 \begin{example}
-    \(\omega_\text{vol} = \cuna dx_j \) é à forma de volume de \(\R^n\). 
+    \(\omega_\text{vol} = (\wedge dx_j) \) é à forma de volume de \(\R^n\). 
 \end{example}
 
 \ejemplo{\centering  \(\omega_\text{vol}\) em \(_{n-1}H\subseteq \R^n\) hipersuperficie
@@ -349,7 +349,7 @@ Agora precisamos entender como é que se derivam as formas diferenciais.
 
 \ejemplo{
     \centering 
-    \(\sum f_\textbf{i} \  d\x_\textbf{i} = \omega  \mapsto d\omega = \sum   df_\textbf{i} \wedge d\x_\textbf{i}\)
+    \(\sum f_\textbf{i} \  (\wedge d\x_\textbf{i} ) = \omega  \mapsto d\omega = \sum   df_\textbf{i} \wedge d\x_\textbf{i}\)
     \tcblower
     \begin{example}
         Sejam \(U\ab\subseteq \R^2\) e  \(f dx + gdy = \omega \in \Omega^1(U)\). Então,  
