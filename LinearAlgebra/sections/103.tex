@@ -1,0 +1,30 @@
+\subsection{Produto Tensorial de Transformações Lineares}
+
+\begin{note}
+    Sejam \(\forall j\leq k,\ T_j \in H_j := \hom(V_j, W_j)\). A função \(\psi : \Pi V_j \ni (v_j) \mapsto \otimes T_j(v_j) \in \otimes W_j \in \hom^k(\Pi V_j, \otimes W_j)\), logo \(\exists ! \widetilde{\psi} : \otimes v_j \mapsto \otimes T(v_j)\) linear. %Em geral, 
+\end{note}
+
+\hypertarget{lemma1031}{}
+\begin{lemma}
+   \textbf{10.3.1.} Sejam \(\forall j\leq k\), \(T_j \in H_j\). Então, 
+   \begin{enumerate}[label = (\alph*), left = 0.5cm]
+        \item \(\operatorname{Im}(\otimes T_j) = \otimes \operatorname{Im}T_j\). \comentario{Segue da definição} 
+        \item Sendo \(N_j := \cdots\otimes \ker T_j \otimes \cdots \) temos, \(\ker (\otimes T_j) = \sum N_j\). Em particular, se \(\forall j\leq k\), \(T_j \) fora injetora, então também \(\otimes T_j\) é injetora. \comentario{Não suporta resumo, olha se queser \cite[Pág. 351]{MA719}}
+   \end{enumerate}
+\end{lemma}
+\begin{definition}
+    \centering
+    \(\varphi: \Pi H_j \ni (T_j) \mapsto \varphi((T_j))(\otimes v_j) := \otimes T_j(v_j) \in \hom(\otimes V_j, \otimes W_j)\). 
+\end{definition}
+\propositionnum{10.3.2.}
+\begin{proposition}
+    A função \(\varphi\) é $k$-linear e sua inducida \(\widetilde{\varphi} : \otimes H_j \to \hom(\otimes V_j, \otimes W_j)\) e injetora. Em particular, \((\varphi, [\operatorname{Im}\varphi])\) é produto tensorial.   
+\end{proposition}
+\comentario{Não suporta resumo, olha se queser \cite[Pág. 352]{MA719}}
+\begin{corollary}
+    \textbf{10.3.3.} Se \(\forall j\leq k, \ \dim V_j, \ \dim W_j < \infty\), então \(\widetilde{\varphi}\) é bijetora. \comentario{\(\dim \Pi H_j = \prod \dim V_j \dim W_j = \dim (\otimes H_j)\)}
+\end{corollary}
+\alerta{
+    \centering \(\widetilde{\varphi}\) nem sempre é bijetora
+}
+

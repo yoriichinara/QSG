@@ -56,7 +56,7 @@
 \end{theorem}
 
 \begin{definition}
-    Seja \(\alpha\) uma base de \(V\). Então, \(\dim V := \# \alpha\) é a \emph{dimensão} de \(V\).  
+    Seja \(\alpha\) uma base de \(V\). Então, \(\dim V := |\alpha|\) é a \emph{dimensão} de \(V\).  
 \end{definition}
 
 \begin{definition}
@@ -130,7 +130,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
     Algumas propiedades coletadas de \cite[Seç. 6.1]{MA719}. 
     \begin{enumerate}[left = 0.55cm, label = (\alph*)]
         \item \(\hom(V,W) \leq \mathcal{F}(V,W)\). 
-        \item Sejam \(\alpha = (v_j)\) e \(\beta = (w_i) \) bases de \(V\) e \(W\) fixas. A função  \(\Phi : \hom(V,W) \ni T \mapsto [T]^\alpha_\beta \in M_{\#I \times \#J}(\F) \) é linear e injetora. 
+        \item Sejam \(\alpha = (v_j)\) e \(\beta = (w_i) \) bases de \(V\) e \(W\) fixas. A função  \(\Phi : \hom(V,W) \ni T \mapsto [T]^\alpha_\beta \in M_{|I| \times |J|}(\F) \) é linear e injetora. 
         \item Sejam \(\gamma, \ \alpha\) e \(\beta\) bases de \(U,\ V\) e \(W\), \(S \in \hom(U,V)\) e \(T\in \hom(V,W)\). Então, \(T\circ S \in \hom(U,W)\) e \([T\circ S]^\gamma_\beta = [T]^\alpha_\beta [S]^\gamma_\alpha\).
         \item Se \(\alpha \) e \(\beta \) bases de \(V\) e \(W\), e \(T \in \hom(V,W)\) invertivél. Então, \(T^{-1} \in \hom(W,V)\) e \([T^{-1}]^\beta_\alpha = ([T]^\alpha_\beta)^{-1}\).
     \end{enumerate}
@@ -141,7 +141,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 \end{definition}
 
 \begin{note}
-    A transformação \(\Phi\) da \(\square\) \ref{prop:0.1} (b) é sobrejetiva se \(\#J < \infty\).
+    A transformação \(\Phi\) da \(\square\) \ref{prop:0.1} (b) é sobrejetiva se \(|J| < \infty\).
 \end{note}
 
 \theoremnum{6.1.9.}

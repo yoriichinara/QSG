@@ -15,7 +15,7 @@
     \(\forall (V_j),\ \exists (\phi, V)\) produto tensorial. Além disso, se \(\forall j\leq k, \ \alpha_j\) fora base de \(V_j\), então \(\phi \circ (\Pi \alpha_j)\) é base de \(V\).  
 \end{theorem}
 
-\demo{Sejam \(\alpha := \Pi \alpha_j\), \(V : \dim V = \# \alpha\) e \(\iota : \alpha \to V\) base pra \(V\). Segue do \(\blacksquare \) \ref{thm:9.1.3} que \(\exists ! \phi \in \hom^k(\Pi V_j, V): \phi|_\alpha = \iota\). Conclui mostrando que \((\phi, V)\) é universal.} 
+\demo{Sejam \(\alpha := \Pi \alpha_j\), \(V : \dim V = |\alpha|\) e \(\iota : \alpha \to V\) base pra \(V\). Segue do \(\blacksquare \) \ref{thm:9.1.3} que \(\exists ! \phi \in \hom^k(\Pi V_j, V): \phi|_\alpha = \iota\). Conclui mostrando que \((\phi, V)\) é universal.} 
 
 \theoremnum{10.2.2.}
 \begin{theorem}
@@ -33,17 +33,17 @@
 \propositionnum{10.2.3.}
 \begin{proposition}
     \label{prop:1023}
-    Dado \(1\leq l < k\), \(\exists ! \Gamma : \otimes V_j \to (\otimes^l V_j) \otimes (\otimes_{l+1}^k  V_j)\)  isomorfismo tal que, \(\forall j\leq k\), \(\forall v_j \in V_j\), \(\Gamma:  \otimes v_j \mapsto (\otimes^l v_j) \otimes (\otimes_{l+1}^kv_j)\). 
+    Dado \(1\leq l < k\), \(\exists ! \Upsilon  : \otimes V_j \to (\otimes^l V_j) \otimes (\otimes_{l+1}^k  V_j)\)  isomorfismo tal que, \(\forall j\leq k\), \(\forall v_j \in V_j\), \(\Upsilon:  \otimes v_j \mapsto (\otimes^l v_j) \otimes (\otimes_{l+1}^kv_j)\). 
 \end{proposition}
 
 \demo{Defina \(\phi_b : \Pi V_j \to W =  (\otimes^l V_j) \otimes (\otimes^k_{l+1} V_j)\) e tente mostrar que o par \((\phi_b, W)\) também é universal em \(\Pi V_j\). O resultado segue do {\scriptsize\(\square\) }\hyperlink{lemma1013}{10.1.3.}.}
 
 \propositionnum{10.2.4.}
 \begin{proposition}
-    \(\forall j\leq k\) sejam \(W_j \leq V_j\). Então, \(\exists ! \tilde{\Gamma} : \otimes W_j \hookrightarrow \otimes V_j\) linear injetora tal que \(\forall j\leq k, \ \forall w_j \in W_j, \ \tilde{\Gamma} : \otimes w_j \mapsto \otimes w_j\). 
+    \(\forall j\leq k\) sejam \(W_j \leq V_j\). Então, \(\exists ! \tilde{\Upsilon} : \otimes W_j \hookrightarrow \otimes V_j\) linear injetora tal que \(\forall j\leq k, \ \forall w_j \in W_j, \ \tilde{\Upsilon} : \otimes w_j \mapsto \otimes w_j\). 
 \end{proposition}
 
-\demo{No contexto da \(\square\) \ref{prop:1023} \(\exists ! \Gamma_{_V} :\otimes V_j \to \otimes (V_j)\) e \(\exists !\Gamma_{_W}: \otimes W_j \to \otimes (W_j)\) isomorfismos. Faça \(\tilde{\Gamma} = \Gamma^{-1}_{_V}\circ \Gamma_{_W} \). }
+\demo{No contexto da \(\square\) \ref{prop:1023} \(\exists ! \Upsilon_{_V} :\otimes V_j \to \otimes (V_j)\) e \(\exists !\Upsilon_{_W}: \otimes W_j \to \otimes (W_j)\) isomorfismos. Faça \(\tilde{\Upsilon} = \Upsilon^{-1}_{_V}\circ \Upsilon_{_W} \). }
 
 \begin{corollary}
     \(\otimes v_j = 0 \leftrightharpoons \exists j\leq k : v_j = 0 \). 
