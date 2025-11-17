@@ -19,7 +19,7 @@
 
 \theoremnum{10.2.2.}
 \begin{theorem}
-    Seja \((\phi, V)\) produto tensorial pra \((V_j)\). Então, \(\forall W\) \(\F\)-espaço vetorial a função \(\Gamma: \hom^k(\Pi V_j, W) \to \hom(V,W)\) é isomorfismo. 
+    Seja \((\phi, V)\) produto tensorial pra \((V_j)\). Então, \(\forall W\) \(\F\)-espaço vetorial a função \(\Psi: \hom^k(\Pi V_j, W) \to \hom(V,W)\) é isomorfismo. 
 \end{theorem}
 
 \demo{Injetora por conseqüência do {\scriptsize \(\square\)} \hyperlink{lemma1012}{10.1.2.} e sobrejetiva pois se \(T \in \hom(V,W)\), então \(\psi = T \circ \phi \in  \hom^k(\Pi V_j, W)\). Pra ver a linearidade mostra que \(\forall \psi, \xi \in \hom^k(\Pi V_j, W)\) e \(\forall \lambda \in \F\), \((\widetilde{\psi}+ \lambda \widetilde{\xi}) \circ \phi = \psi + \lambda \xi\). } 
@@ -33,14 +33,14 @@
 \propositionnum{10.2.3.}
 \begin{proposition}
     \label{prop:1023}
-    Dado \(1\leq l < k\), \(\exists ! \Upsilon  : \otimes V_j \to (\otimes^l V_j) \otimes (\otimes_{l+1}^k  V_j)\)  isomorfismo tal que, \(\forall j\leq k\), \(\forall v_j \in V_j\), \(\Upsilon:  \otimes v_j \mapsto (\otimes^l v_j) \otimes (\otimes_{l+1}^kv_j)\). 
+    Dado \(1\leq l < k\), \(\exists ! \Upsilon  : \otimes V_j \to (\otimes^l V_j) \otimes (\otimes_{l+1}^k  V_j)\)  isomorfismo tal que, \(\forall j\leq k\), \(\forall v_j \in V_j\), \(\Upsilon (\otimes v_j )= (\otimes^l v_j) \otimes (\otimes_{l+1}^kv_j)\). 
 \end{proposition}
 
 \demo{Defina \(\phi_b : \Pi V_j \to W =  (\otimes^l V_j) \otimes (\otimes^k_{l+1} V_j)\) e tente mostrar que o par \((\phi_b, W)\) também é universal em \(\Pi V_j\). O resultado segue do {\scriptsize\(\square\) }\hyperlink{lemma1013}{10.1.3.}.}
 
 \propositionnum{10.2.4.}
 \begin{proposition}
-    \(\forall j\leq k\) sejam \(W_j \leq V_j\). Então, \(\exists ! \tilde{\Upsilon} : \otimes W_j \hookrightarrow \otimes V_j\) linear injetora tal que \(\forall j\leq k, \ \forall w_j \in W_j, \ \tilde{\Upsilon} : \otimes w_j \mapsto \otimes w_j\). 
+    \(\forall j\leq k\) sejam \(W_j \leq V_j\). Então, \(\exists ! \tilde{\Upsilon} : \otimes W_j \hookrightarrow \otimes V_j\) linear injetora tal que \(\forall j\leq k, \ \forall w_j \in W_j, \ \tilde{\Upsilon}(\otimes w_j) = \otimes w_j\). 
 \end{proposition}
 
 \demo{No contexto da \(\square\) \ref{prop:1023} \(\exists ! \Upsilon_{_V} :\otimes V_j \to \otimes (V_j)\) e \(\exists !\Upsilon_{_W}: \otimes W_j \to \otimes (W_j)\) isomorfismos. Faça \(\tilde{\Upsilon} = \Upsilon^{-1}_{_V}\circ \Upsilon_{_W} \). }
@@ -75,7 +75,7 @@
     Passamos a ver o caso \( k=2 \), o único que da pra fazer conta e deducir alguns fatos respeito do posto de um tensor e como calculá-lo. 
 \end{note}
 
-\newcommand{\tu}{\textbf{u}}
+\newcommand{\tu}{\textbf{v}}
 \hypertarget{lemma1026}{}
 \begin{lemma}
     \textbf{10.2.6.} Seja \(\tu \in V\otimes W : \pt \tu = m\). Se \(\alpha = (v_j)\) e \(\beta = (w_j)\), \(j\leq m\), são familias de vetores em \(V\) e \( W\) tais que \(\tu = \sum^m v_j \otimes w_j\), então \(\alpha\) e \(\beta \) são l.i..
@@ -99,15 +99,14 @@
     Seja \(\tu = \sum^m v_j \otimes w_j \in V\otimes W\). Então, \(\pt \tu = m \ \leftrightharpoons\ (v_j)\) e \((w_j)\) são l.i. em \(V \) e  \(W\), respetivamente. \comentario{Segue dos {\scriptsize \(\square\)} \hyperlink{lemma1026}{10.2.6.} e {\scriptsize \(\square\)} \hyperlink{lemma1027}{10.2.7.}}
 \end{proposition}
 
-\ejemplo{ \centering Na pratica usamos $2$-linearidade até conseguir familias l.i. 
+\ejemplo{ \centering Usar $2$-linearidade até conseguir familias l.i. 
     \tcblower
-    \begin{example} Em \(V = \mathbb{Q}^2\), \(\tu_1 = 5e_1 \otimes e_1 \ \textbf{-}  \ 3e_2 \otimes e_2 \in V\otimes V \ \Rightarrow \ \pt \tu_1 = 2\), mientras, 
-    \begin{align*}
-        \tu_2 &= \underline{(e_1 + e_2)} \otimes (e_1- e_2)  \ \textbf{+} \  \underline{(e_1+2e_2)} \otimes e_2  \ \textbf{+} \  (e_1 - e_2) \otimes (e_1+ e_2) \\
-         &= (e_1 + e_2) \otimes e_1  \ \textbf{+} \ e_2 \otimes \underline{e_2} \ \textbf{+} \  (e_1 - e_2) \otimes \underline{(e_1+ e_2)} \\
-         &= (e_1 + e_2) \otimes \underline{e_1}  \ \textbf{+} \ e_1 \otimes e_2 \ \textbf{+} \  (e_1 - e_2) \otimes \underline{e_1} \\
-         &= 2\underline{e_1} \otimes e_1  \ \textbf{+} \ \underline{e_1} \otimes e_2 = e_1 \otimes (2e_1 + e_2) \ \ \Rightarrow \   \pt \tu_2  = 1  
-    \end{align*}
+    \begin{example} \(\tu_1 = 5e_1 \otimes e_1 \ \textbf{-}  \ 3e_2 \otimes e_2 \in V\otimes V \) tem \(\pt \tu_1 = 2\). Por outro lado, \(
+        \tu_2 = (e_1 + e_2) \otimes (e_1- e_2)  \ \textbf{+} \  (e_1+2e_2) \otimes e_2  \ \textbf{+} \  (e_1 - e_2) \otimes (e_1+ e_2) 
+    %     &= (e_1 + e_2) \otimes e_1  \ \textbf{+} \ e_2 \otimes \underline{e_2} \ \textbf{+} \  (e_1 - e_2) \otimes \underline{(e_1+ e_2)} \\
+    %     &= (e_1 + e_2) \otimes \underline{e_1}  \ \textbf{+} \ e_1 \otimes e_2 \ \textbf{+} \  (e_1 - e_2) \otimes \underline{e_1} \\
+    %     &= 2\underline{e_1} \otimes e_1  \ \textbf{+} \ \underline{e_1} \otimes e_2 = e_1 \otimes (2e_1 + e_2) \ \ \Rightarrow \   \pt \tu_2  = 1  
+    \) tem \(\pt \tu_2 = 1\). \comentario{Desarme até conseguir \(\tu_2 = e_1 \otimes (2e_1 + e_2)\)}
     \end{example}    
 }
 
@@ -158,7 +157,7 @@
 
 \propositionnum{10.2.11.}
 \begin{proposition}
-    \(\exists ! \tau \in (V'\otimes V)' \) tal que \(\tau: V' \otimes V \ni f\otimes v \mapsto f(v)\). Além disso, se \(\dim V < \infty \) e \(\Gamma \) fora como na \(\square\) \ref{prop:10210}, então \(\forall T \in \ehom (V), \ \tau(\Gamma^{-1}(T)) = \operatorname{tr}T\).  
+    \(\exists ! \tau \in (V'\otimes V)' \) tal que \(\tau (f\otimes v) = f(v)\). Além disso, se \(\dim V < \infty \), segue da \(\square\) \ref{prop:10210} que \(\forall T \in \ehom (V), \ \tau(\Gamma^{-1}(T)) = \operatorname{tr}T\).  
 \end{proposition}
 
 \demo{\(\exists !\tau\) segue da propiedade universal em \(\psi = \operatorname{av}\). Seja \(\alpha = (v_j)\) base pra \(V\), da nota previa \([T]^\alpha_\alpha \Rightarrow \Gamma^{-1}(T) =  \sum_{i,j} a_{ij}f_j \otimes v_i\), faça a continha \(\tau(\Gamma^{-1}(T))\). }
