@@ -1,6 +1,6 @@
 \section{Integração em Variedades}
 
-Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)}'\) únicamente para o pull-back \(\sim\) espaço dual, isso vai continuar assim, não confundir com derivadas.  
+Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)}'\) únicamente para o espaço dual, isso vai continuar assim, não confundir com derivadas.  
 
 \subsection*{Integração em Cadeias}
 
@@ -24,14 +24,14 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 
 \begin{definition}
     Sejam \(\omega \in \Omega^k(M)\) e \(\sigma \) um $k$-bloco. Então,   
-    \[\int_\sigma \omega := \int_{\I^k} \sigma'(\omega) = \int_{\I^k}f(\x) \ dx_1\wedge \cdots \wedge dx_k =\int_{\I^k} f(\x) \ d\x. \]  
+    \[\int_\sigma \omega := \int_{\I^k} \sigma^{\wedge k}(\omega) = \int_{\I^k}f(\x) \ dx_1\wedge \cdots \wedge dx_k =\int_{\I^k} f(\x) \ d\x. \]  
 \end{definition}
 
 \ejemplo{
 \centering Integral de linha
 \tcblower
 \begin{example}
-    Sejam \(c(t) : [a,b] \to U\ab\subseteq \R^n\) curva suave e \(\sum^n f_j \ dx_j = \omega \in \Omega^k(U) \), então \(\oint_c \omega = \int_a^b c'(\omega) \ dt = \int_a^b \sum^n (f_j \circ c)(t) \dot{c_j}(t) \ dt\ .\)
+    Sejam \(c(t) : [a,b] \to U\ab\subseteq \R^n\) curva suave e \(\sum^n f_j \ dx_j = \omega \in \Omega^k(U) \), então \(\oint_c \omega = \int_a^b c^{\wedge k}(\omega) \ dt = \int_a^b \sum^n (f_j \circ c)(t) \dot{c_j}(t) \ dt\ .\)
 \end{example}
 }
 
@@ -153,7 +153,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
   \textcolor{black}{\emph{Nota.}} Podemos fazer algumas suposições inicias: \textcolor{black}{
 \begin{enumerate}[label = \roman*., left = -0.5cm]
     \item \(c = \sigma \) $k$-bloco. \comentario{Se valer \(\blacksquare\) \hyperlink{thmStokes}{(\emph{Stokes})} pra $k$-blocos, então \(\int_c d\omega = \sum n_i \int_{\sigma_i} d \omega = \sum n_i \int_{\partial \sigma_i} \omega = \int_{\sum n_i \partial \sigma_i} w = \int_{\partial c} w \) }
-    \item \(\sigma = \id_{\I^k} \) e \(M\) uma vizinhanza de \( \I^k\). \comentario{\(\textstyle\int_\sigma d\omega = \int_{\id_{\I^k}} \sigma ' (dw) = \int_{\id_{\I^k}} d (\sigma '(w)) = \int_{\partial \id_{\I^k}} \sigma '(w) = \int_{\partial \sigma} w \). }
+    \item \(\sigma = \id_{\I^k} \) e \(M\) uma vizinhanza de \( \I^k\). \comentario{\(\textstyle\int_\sigma d\omega = \int_{\id_{\I^k}} \sigma ^{\wedge k} (dw) = \int_{\id_{\I^k}} d (\sigma ^{\wedge k}(w)) = \int_{\partial \id_{\I^k}} \sigma ^{\wedge k}(w) = \int_{\partial \sigma} w \). }
     \item \(\omega = f \hat{w}_i \in \Omega^{k-1}(U),\ U\ab\subseteq \R^k : \I^k\subset U\). \comentario{\(\textstyle\int_{\sigma} d\omega = \int_{\sigma} d\left(\sum f_i \hat{\omega}_i\right) = \sum \int_{\sigma} d\left( f_i \hat{\omega}_i\right) = \sum \int_{\partial \sigma}  f_i \hat{\omega}_i = \int_{\partial \sigma} \omega\). }
 \end{enumerate}}
 }
@@ -172,7 +172,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
   Supondo i., ii. e iii. precisamos analizar os dois lados da igualdade:  
   \vspace{0.4cm}
   \begin{itemize}[left = 0cm]
-    \item \(\int_{\partial \sigma} \omega = \textstyle \sum (-1)^j\left(\int_{\sigma(j,0)} \omega - \int_{\sigma_{(j,1)}} \omega \right) = \sum (-1)^j(\)\(\int_{\I^{k-1}} \sigma_{(j,0)} ' (\omega) - \int_{\I^{k-1}} \sigma_{(j,1)}'(\omega) ) \). Note que, \(\sigma_{(j,0)}'(\omega)= \sigma_{(j,1)}'(\omega)=0\) se \(i \neq j\), pois  \(x_j\) constante \(\Rightarrow\) \(dx_j= 0 \), assim, 
+    \item \(\int_{\partial \sigma} \omega = \textstyle \sum (-1)^j\left(\int_{\sigma(j,0)} \omega - \int_{\sigma_{(j,1)}} \omega \right) = \sum (-1)^j(\)\(\int_{\I^{k-1}} \sigma_{(j,0)} ^{\wedge k} (\omega) - \int_{\I^{k-1}} \sigma_{(j,1)}^{\wedge k}(\omega) ) \). Note que, \(\sigma_{(j,0)}^{\wedge k}(\omega)= \sigma_{(j,1)}^{\wedge k}(\omega)=0\) se \(i \neq j\), pois  \(x_j\) constante \(\Rightarrow\) \(dx_j= 0 \), assim, 
     \[\int_{\partial \sigma } \omega = (-1)^i \int_\sigma \left[f(x_1, \ldots, 0, x_k)- f(x_1, \ldots, 1, \ldots, x_k)\right] \hat{w}_i.\]
     \item Do outro lado, \(\textstyle\int_\sigma d\omega = \int_\sigma d(f \hat{\omega}_i) = \int_\sigma (-1)^{i-1} f_{x_i} \left(\cuna dx_j\right) = (-1)^{i-1} \int_{\I^k} f_{x_i} d\x\). Usando \(\blacksquare\) {(\emph{Fubini})} e \(\blacksquare\) {(\emph{TFC})} temos, \(\int_\sigma d\omega = (-1)^{i-1}\int_{\I^{k-1}} \left(\int_0^1 f_{x_i} dx_i \right)\hat{\omega}_i\), finalmente 
     \[  \int_\sigma d\omega = (-1)^{i-1} \int_\sigma \left[f(x_1, \ldots, 1, x_k)- f(x_1, \ldots, 0, \ldots, x_k)\right] \hat{w}_i.\]

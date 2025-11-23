@@ -1,0 +1,113 @@
+\subsection{Potências Simétricas e Exteriores}
+
+\begin{note}
+    Aprofundaremos agora o caso em que \(\forall j \leq k,  \ V_j = V \), destacando naturalmente os subcasos alternado e simétrico. Denotamos \(V^{\otimes k} := \otimes^k V\). 
+\end{note}
+
+\begin{definition}
+    \(\phi \in \hom^k(V,W)\) é \(\textcolor{gray}{\rotatebox{90}{\Big|}}\star\textcolor{gray}{\rotatebox{90}{\Big|}}\) se, \(\forall (v_{i<j}) := (\cdots , v_i, \cdots, v_j, \cdots)\in \Pi^k V\),   
+    \begin{itemize}[label = \(\star\)]
+        \item \emph{Alternada } \(\rightarrow \) \(\phi((v_{i<i})) = 0\). \hfill \(\star\) \emph{Simétrica} \(\rightarrow \) \(\phi((v_{i<j})) = \phi((v_{j<i}))\). 
+        \item[] \hspace{3.5cm} \(\star \) \emph{Antisimétrica} \(\rightarrow \) \(\phi((v_{i<j})) = - \phi((v_{j<i}))\). 
+    \end{itemize} 
+\end{definition}
+
+\begin{definition}
+    \centering
+    \(A^k(V,W):= \{\phi \in \hom^k(V, W): \phi \text{ é alternada}\} \leq \hom^k(V,W)\). 
+\end{definition}
+
+\hypertarget{lemma1041}{}
+\begin{lemma}
+    \textbf{10.4.1.} Seja \(\alpha = (v_i)\) base pra \(V\). Então, \(\phi\in A^k(V,W)\) \(\leftrightharpoons\) \(\phi\) é antisimétrica é alternada no produto cartesiano \(\alpha^k := \Pi^k \alpha \). 
+\end{lemma}
+
+\begin{definition}
+    Seja \(V\) \(\F\)-espaço vetorial. Uma $k$\emph{-ésima potência exterior} pra \(V\) é um par universal \((\phi, U)\) sobre \(X = \Pi^k V\) onde,   
+    \begin{itemize}[left = 1cm]
+        \item \(U\) é \(\F\)-espaço vetorial e \(\phi \in A^k(V, U)\). 
+        \item \(P_1 = \) "ser $k$-linear alternada" e \(P_2 = \) "ser linear".
+    \end{itemize}  
+\end{definition}
+
+\theoremnum{10.4.2.}
+\begin{theorem}
+    \(\forall V, \ \exists k\)-ésima potência exterior. Além disso, se \(\alpha = (v_i)_{i\in I}\) fora uma base pra \(V\), \(\leq\) um ordem total em \(I\), \(\alpha^k_< := \{(v_{i_j}) \in \alpha^k: i_j < i_{j+1}\}\) e \((\phi,U)\) uma $k$-potência exterior pra \(V\), \(\phi(\alpha^k_<)\) é uma base pra \(U\).   
+\end{theorem}
+
+\demo{Pega \(U: \dim U = | \alpha^k_< |\), de novo, pelo \(\blacksquare\) \ref{thm:9.1.3} \(\exists! \phi \in \hom^k(V, U)= \iota\) satisfazendo ser antisimétrica e alternada nessa base. Segue do {\scriptsize\(\square\)} \hyperlink{lemma1041}{10.4.1.} que \(\phi \in A^k(V,W)\). Mostra a propiedade universal copiando o argumento do \(\blacksquare\) \ref{thm:1021}, lembrando que cada \((v_{{i_j},1}) \in \alpha^k: \forall j_0< j\leq  k, \ v_{{i_{j_0}},1} \neq v_{{i_j},1}\) é recuperado vía permutação em algúm \((v_{i_j}) \in \alpha^k_<\).}
+
+\theoremnum{10.4.3.}
+\begin{theorem}
+    \label{thm:1043}
+    Seja \((\phi, U)\) $k$-ésima potência exterior pra \(V\). Então, \(\forall W\) \(\F\)-espaço vetorial a função \(\Psi: A^k(V,W) \ni \psi \mapsto \widetilde{\psi} \in \hom(U,W)\) é isomorfismo. \comentario{Cola dos argumentos no seu análogo \(\blacksquare\) \ref{thm:1022}}
+\end{theorem}
+
+\begin{note}
+    Notação padrão pra a $k$-ésima potência exterior, \((\phi, U) = (\wedge, \bigwedge^k V)\). De novo, as propiedades que à definem tem sua versão com este símbolo.  
+\end{note}
+
+\begin{corollary}
+    \(\phi(\alpha^k_<) = \{\wedge v_{i_j} : i_j < i_{j+1}\}\) é base de \(\bigwedge^k V\). Em particular, se \(\dim V = n \), então \(\dim (\bigwedge^k V) = \binom{n}{k}\) e do \(\blacksquare\) \ref{thm:1043} \(\dim (A^k(V,W)) = \binom{n}{k} \dim W \). \comentario{Coisa de contar}
+\end{corollary}
+
+\begin{exercise}
+    Se \((v_j) \in \Pi^k V\) é uma familia de vetores l.d., então \(\wedge v_j = 0\). Em particular, \(\dim A^k(V,W) = 0\) pra \(k >  n = \dim V\).  \comentario{Desarma usando $k$-linearidade} 
+\end{exercise}
+
+\begin{lemma}
+    Sejam \(T \in \hom(V,W)\) e \(T^{\times k}: V^k \ni (v_j) \mapsto (T(v_j)) \in W^k\). A aplicação \emph{(\textcolor{gray}{pullback})} \(T^{\wedge k} : A^k(W) \ni \phi \mapsto  \phi \circ T^{\times k}  \in A^k(V)\) é bém definida e linear. \footnote{\(A^k(V) = A^k(V,\F)\).}
+\end{lemma}
+
+\begin{note}
+    Se \(W = V \) e \(\dim V =n \), então \(\dim (A^k(V)) = 1 \) e dado que \(T^{\wedge k}\) é linear, \(\exists \delta(T) \in \F : T^{\wedge k} = \delta(T) \phi\). Escolhendo base \((v_j)\) pra \(V, \ \exists! \phi \in A^k(V): \phi((v_j)) =1\), pode-se deducir que \(\delta(\id_{_V})=1\) e \(\delta(T\circ S) = \delta(T) \delta(S)\). \comentario{Propiedades do \(\det\)! }
+\end{note}
+
+\ejemplo{\centering \(\delta(T) = \det T \) em \(\dim V = 2\)
+\tcblower
+\begin{example}
+    Sejam \(\alpha = \{v_1, v_2\}\) base, \([T]^\alpha_\alpha = \begin{bmatrix}
+        a & b \\ 
+        c & d
+    \end{bmatrix}\) e \(\phi \in A^2(V) : \phi(v_1,v_2) = 1\), 
+    \[\delta(T) = \phi(T(v_1), T(v_2)) = \phi(av_1+cv_2,bv_1+dv_2) = ad -bc = \det T. \]
+\end{example}
+}
+
+\theoremnum{10.4.5.}
+\begin{theorem}
+    \(\forall T \in \ehom( V)\), \(\delta T = \det T\). \comentario{Não suporta resumo, olha \cite[Pág. 361]{MA719}}
+\end{theorem}
+
+\begin{definition}
+    \centering
+    \(S^k(V,W):= \{\phi \in \hom^k(V, W): \phi \text{ é simétrica}\} \leq \hom^k(V,W)\). 
+\end{definition}
+
+\begin{definition}
+    Seja \(V\) \(\F\)-espaço vetorial. Uma $k$\emph{-ésima potência simétrica} pra \(V\) é um par universal \((\phi, U)\) sobre \(X = \Pi^k V\) onde,   
+    \begin{itemize}[left = 1cm]
+        \item \(U\) é \(\F\)-espaço vetorial e \(\phi \in S^k(V, U)\). 
+        \item \(P_1 = \) "ser $k$-linear simétrica" e \(P_2 = \) "ser linear".
+    \end{itemize}  
+\end{definition}
+
+\theoremnum{10.4.6.}
+\begin{theorem}
+    \(\forall V, \ \exists k\)-ésima potência simétrica. Além disso, se \(\alpha = (v_i)_{i\in I}\) fora uma base pra \(V\), \(\leq\) um ordem total em \(I\), \(\alpha^k_\leq:= \{(v_{i_j}) \in \alpha^k: i_j \leq i_{j+1}\}\) e \((\phi,U)\) uma $k$-potência simétrica pra \(V\), \(\phi(\alpha^k_\leq)\) é uma base pra \(U\).  \comentario{Adaptação dos seus análogos} 
+\end{theorem}
+
+\theoremnum{10.4.7.}
+\begin{theorem}
+    \label{thm:1047}
+    Seja \((\phi, U)\) $k$-ésima potência simétrica pra \(V\). Então, \(\forall W\) \(\F\)-espaço vetorial a função \(\Psi: S^k(V,W) \ni \psi \mapsto \widetilde{\psi} \in \hom(U,W)\) é isomorfismo. \comentario{Adaptação}
+\end{theorem}
+
+\begin{note}
+    Notação não padrão pra a $k$-ésima potência simétrica, \((\phi, U) = (\odot , \odot^k V)\). De novo, as propiedades que à definem tem sua versão com este símbolo.  
+\end{note}
+
+\begin{corollary}
+    \(\phi(\alpha^k_\leq) = \{\odot v_{i_j} : i_j \leq i_{j+1}\}\) é base de \(\bigwedge^k V\). Em particular, se \(\dim V = n \), então \(\dim (\odot ^k V) = \binom{n-1+k}{n-1}\) e do \(\blacksquare\) \ref{thm:1047} \(\dim (S^k(V,W)) = \binom{n-1+k}{n-1} \dim W \). \comentario{Conteo}
+\end{corollary}
+
