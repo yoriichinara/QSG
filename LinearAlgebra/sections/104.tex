@@ -5,7 +5,7 @@
 \end{note}
 
 \begin{definition}
-    \(\phi \in \hom^k(V,W)\) é \(\textcolor{gray}{\rotatebox{90}{\Big|}}\star\textcolor{gray}{\rotatebox{90}{\Big|}}\) se, \(\forall (v_{i<j}) := (\cdots , v_i, \cdots, v_j, \cdots)\in \Pi^k V\),   
+    \(\phi \in \hom^k(V,W)\) é \(\textcolor{gray}{\rotatebox{90}{\Big|}}\star\textcolor{gray}{\rotatebox{90}{\Big|}}\) se, \(\forall (v_{i<j}) := (\cdots , v_i, \cdots, v_j, \cdots)\in V^k\),   
     \begin{itemize}[label = \(\star\)]
         \item \emph{Alternada } \(\rightarrow \) \(\phi((v_{i<i})) = 0\). \hfill \(\star\) \emph{Simétrica} \(\rightarrow \) \(\phi((v_{i<j})) = \phi((v_{j<i}))\). 
         \item[] \hspace{3.5cm} \(\star \) \emph{Antisimétrica} \(\rightarrow \) \(\phi((v_{i<j})) = - \phi((v_{j<i}))\). 
@@ -23,7 +23,7 @@
 \end{lemma}
 
 \begin{definition}
-    Seja \(V\) \(\F\)-espaço vetorial. Uma $k$\emph{-ésima potência exterior} pra \(V\) é um par universal \((\phi, U)\) sobre \(X = \Pi^k V\) onde,   
+    Seja \(V\) \(\F\)-espaço vetorial. Uma $k$\emph{-ésima potência exterior} pra \(V\) é um par universal \((\phi, U)\) sobre \(X =  V^k\) onde,   
     \begin{itemize}[left = 1cm]
         \item \(U\) é \(\F\)-espaço vetorial e \(\phi \in A^k(V, U)\). 
         \item \(P_1 = \) "ser $k$-linear alternada" e \(P_2 = \) "ser linear".
@@ -32,6 +32,7 @@
 
 \theoremnum{10.4.2.}
 \begin{theorem}
+    \label{thm:1042}
     \(\forall V, \ \exists k\)-ésima potência exterior. Além disso, se \(\alpha = (v_i)_{i\in I}\) fora uma base pra \(V\), \(\leq\) um ordem total em \(I\), \(\alpha^k_< := \{(v_{i_j}) \in \alpha^k: i_j < i_{j+1}\}\) e \((\phi,U)\) uma $k$-potência exterior pra \(V\), \(\phi(\alpha^k_<)\) é uma base pra \(U\).   
 \end{theorem}
 
@@ -48,11 +49,12 @@
 \end{note}
 
 \begin{corollary}
-    \(\phi(\alpha^k_<) = \{\wedge v_{i_j} : i_j < i_{j+1}\}\) é base de \(\bigwedge^k V\). Em particular, se \(\dim V = n \), então \(\dim (\bigwedge^k V) = \binom{n}{k}\) e do \(\blacksquare\) \ref{thm:1043} \(\dim (A^k(V,W)) = \binom{n}{k} \dim W \). \comentario{Coisa de contar}
+    %\(\phi(\alpha^k_<) = \{\wedge v_{i_j} : i_j < i_{j+1}\}\) é base de \(\bigwedge^k V\). 
+    Se \(\dim V = n \in \mathbb{Z}_{>0}\), então \(\dim (\bigwedge^k V) = \binom{n}{k}\). Em particular, \(\dim (A^k(V,W)) = \binom{n}{k} \dim W \). \comentario{Problema de conteo e consequências dos \(\blacksquare\) \ref{thm:1042} e \(\blacksquare\) \ref{thm:1043}}
 \end{corollary}
 
 \begin{exercise}
-    Se \((v_j) \in \Pi^k V\) é uma familia de vetores l.d., então \(\wedge v_j = 0\). Em particular, \(\dim A^k(V,W) = 0\) pra \(k >  n = \dim V\).  \comentario{Desarma usando $k$-linearidade} 
+    Se \((v_j) \in  V^k\) é uma familia de vetores l.d., então \(\wedge v_j = 0\). Em particular, \(\dim A^k(V,W) = 0\) pra \(k >  n = \dim V\).  \comentario{Desarma usando $k$-linearidade} 
 \end{exercise}
 
 \begin{lemma}
@@ -76,7 +78,7 @@
 
 \theoremnum{10.4.5.}
 \begin{theorem}
-    \(\forall T \in \ehom( V)\), \(\delta T = \det T\). \comentario{Não suporta resumo, olha \cite[Pág. 361]{MA719}}
+    \(\forall T \in \ehom( V)\), \(\delta (T) = \det T\). \comentario{Não suporta resumo, olha \cite[Pág. 361]{MA719}}
 \end{theorem}
 
 \begin{definition}
@@ -85,7 +87,7 @@
 \end{definition}
 
 \begin{definition}
-    Seja \(V\) \(\F\)-espaço vetorial. Uma $k$\emph{-ésima potência simétrica} pra \(V\) é um par universal \((\phi, U)\) sobre \(X = \Pi^k V\) onde,   
+    Seja \(V\) \(\F\)-espaço vetorial. Uma $k$\emph{-ésima potência simétrica} pra \(V\) é um par universal \((\phi, U)\) sobre \(X =  V^k\) onde,   
     \begin{itemize}[left = 1cm]
         \item \(U\) é \(\F\)-espaço vetorial e \(\phi \in S^k(V, U)\). 
         \item \(P_1 = \) "ser $k$-linear simétrica" e \(P_2 = \) "ser linear".
@@ -94,6 +96,7 @@
 
 \theoremnum{10.4.6.}
 \begin{theorem}
+    \label{thm:1046}
     \(\forall V, \ \exists k\)-ésima potência simétrica. Além disso, se \(\alpha = (v_i)_{i\in I}\) fora uma base pra \(V\), \(\leq\) um ordem total em \(I\), \(\alpha^k_\leq:= \{(v_{i_j}) \in \alpha^k: i_j \leq i_{j+1}\}\) e \((\phi,U)\) uma $k$-potência simétrica pra \(V\), \(\phi(\alpha^k_\leq)\) é uma base pra \(U\).  \comentario{Adaptação dos seus análogos} 
 \end{theorem}
 
@@ -104,10 +107,11 @@
 \end{theorem}
 
 \begin{note}
-    Notação não padrão pra a $k$-ésima potência simétrica, \((\phi, U) = (\odot , \odot^k V)\). De novo, as propiedades que à definem tem sua versão com este símbolo.  
+    Notação não padrão pra a $k$-ésima potência simétrica, \((\phi, U) = (\odot ,  V^{\odot k})\). De novo, as propiedades que à definem tem sua versão com este símbolo.  
 \end{note}
 
 \begin{corollary}
-    \(\phi(\alpha^k_\leq) = \{\odot v_{i_j} : i_j \leq i_{j+1}\}\) é base de \(\bigwedge^k V\). Em particular, se \(\dim V = n \), então \(\dim (\odot ^k V) = \binom{n-1+k}{n-1}\) e do \(\blacksquare\) \ref{thm:1047} \(\dim (S^k(V,W)) = \binom{n-1+k}{n-1} \dim W \). \comentario{Conteo}
+    %\(\phi(\alpha^k_\leq) = \{\odot v_{i_j} : i_j \leq i_{j+1}\}\) é base de \(\odot^k V\). 
+    Se \(\dim V = n \in \mathbb{Z}_{>0}\), então \(\dim (\odot ^k V) = \binom{n-1+k}{n-1}\). Em particular, \(\dim (S^k(V,W))\) é \(\binom{n-1+k}{n-1} \dim W \). \comentario{Problema de conteo, consequências dos \(\blacksquare\) \ref{thm:1046} e \(\blacksquare\) \ref{thm:1047}}
 \end{corollary}
 
