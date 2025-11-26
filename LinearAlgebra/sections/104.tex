@@ -5,10 +5,10 @@
 \end{note}
 
 \begin{definition}
-    \(\phi \in \hom^k(V,W)\) é \(\textcolor{gray}{\rotatebox{90}{\Big|}}\star\textcolor{gray}{\rotatebox{90}{\Big|}}\) se, \(\forall (v_{i<j}) := (\cdots , v_i, \cdots, v_j, \cdots)\in V^k\),   
+    \(\phi \in \hom^k(V,W)\) é \(\textcolor{gray}{\rotatebox{90}{\Big|}}\star\textcolor{gray}{\rotatebox{90}{\Big|}}\) se, \(\forall (v_{r<s}) := (\cdots , v_r, \cdots, v_s, \cdots)\in V^k\),   
     \begin{itemize}[label = \(\star\)]
-        \item \emph{Alternada } \(\rightarrow \) \(\phi((v_{i<i})) = 0\). \hfill \(\star\) \emph{Simétrica} \(\rightarrow \) \(\phi((v_{i<j})) = \phi((v_{j<i}))\). 
-        \item[] \hspace{3.5cm} \(\star \) \emph{Antisimétrica} \(\rightarrow \) \(\phi((v_{i<j})) = - \phi((v_{j<i}))\). 
+        \item \emph{Alternada } \(\rightarrow \) \(\phi((v_{r<r})) = 0\). \hfill \(\star\) \emph{Simétrica} \(\rightarrow \) \(\phi((v_{r<s})) = \phi((v_{s<r}))\). 
+        \item[] \hspace{3.5cm} \(\star \) \emph{Antisimétrica} \(\rightarrow \) \(\phi((v_{r<s})) = - \phi((v_{s<r}))\). 
     \end{itemize} 
 \end{definition}
 
@@ -33,10 +33,10 @@
 \theoremnum{10.4.2.}
 \begin{theorem}
     \label{thm:1042}
-    \(\forall V, \ \exists k\)-ésima potência exterior. Além disso, se \(\alpha = (v_i)_{i\in I}\) fora uma base pra \(V\), \(\leq\) um ordem total em \(I\), \(\alpha^k_< := \{(v_{i_j}) \in \alpha^k: i_j < i_{j+1}\}\) e \((\phi,U)\) uma $k$-potência exterior pra \(V\), \(\phi(\alpha^k_<)\) é uma base pra \(U\).   
+    \(\forall V, \ \exists k\)-ésima potência exterior. Além disso, se \(\alpha = (v_i)_{i\in I}\) fora uma base pra \(V\), \(\leq\) um ordem total em \(I\), \(\alpha^k_< := \{(v_{i_j}) \in \alpha^k: i_j < i_{j+1}\}\) e \((\phi,U)\) uma $k$-potência exterior pra \(V\), \(\phi(\alpha^k_<)\) é base de \(U\).   
 \end{theorem}
 
-\demo{Pega \(U: \dim U = | \alpha^k_< |\), de novo, pelo \(\blacksquare\) \ref{thm:9.1.3} \(\exists! \phi \in \hom^k(V, U)= \iota\) satisfazendo ser antisimétrica e alternada nessa base. Segue do {\scriptsize\(\square\)} \hyperlink{lemma1041}{10.4.1.} que \(\phi \in A^k(V,W)\). Mostra a propiedade universal copiando o argumento do \(\blacksquare\) \ref{thm:1021}, lembrando que cada \((v_{{i_j},1}) \in \alpha^k: \forall j_0< j\leq  k, \ v_{{i_{j_0}},1} \neq v_{{i_j},1}\) é recuperado vía permutação em algúm \((v_{i_j}) \in \alpha^k_<\).}
+\demo{Pega \(U: \dim U = | \alpha^k_< |\), de novo, pelo \(\blacksquare\) \ref{thm:9.1.3} \(\exists! \phi \in \hom^k(V, U)= \iota\) satisfazendo ser antisimétrica e alternada nessa base. Segue do {\scriptsize\(\square\)} \hyperlink{lemma1041}{10.4.1.} que \(\phi \in A^k(V,W)\). Mostra que \((\phi, U)\) é universal, lembrandro que \(\forall (v_{i_j, j}) \in \alpha^k : \forall r<s, v_{i_r,r} \neq v_{i_s, s}\) é recuperado vía permutação em algúm \((v_{i_j}) \in \alpha^k_<\).}
 
 \theoremnum{10.4.3.}
 \begin{theorem}
@@ -45,12 +45,12 @@
 \end{theorem}
 
 \begin{note}
-    Notação padrão pra a $k$-ésima potência exterior, \((\phi, U) = (\wedge, \bigwedge^k V)\). De novo, as propiedades que à definem tem sua versão com este símbolo.  
+    Notação não padrão pra $k$-ésima potência exterior, \((\phi, U) = (\wedge,  V^{\wedge k})\). De novo, as propiedades que à definem tem sua versão com este símbolo.  
 \end{note}
 
 \begin{corollary}
     %\(\phi(\alpha^k_<) = \{\wedge v_{i_j} : i_j < i_{j+1}\}\) é base de \(\bigwedge^k V\). 
-    Se \(\dim V = n \in \mathbb{Z}_{>0}\), então \(\dim (\bigwedge^k V) = \binom{n}{k}\). Em particular, \(\dim (A^k(V,W)) = \binom{n}{k} \dim W \). \comentario{Problema de conteo e consequências dos \(\blacksquare\) \ref{thm:1042} e \(\blacksquare\) \ref{thm:1043}}
+    Se \(\dim V = n \in \mathbb{Z}_{>0}\), então \(\dim (V^{\wedge k}) = \binom{n}{k}\). \comentario{Problema de conteo}%Em particular, \(\dim (A^k(V,W)) = \binom{n}{k} \dim W \). \comentario{Consequências diretas dos \(\blacksquare\) \ref{thm:1042} (coisa de contar) e \(\blacksquare\) \ref{thm:1043}}
 \end{corollary}
 
 \begin{exercise}
@@ -58,11 +58,11 @@
 \end{exercise}
 
 \begin{lemma}
-    Sejam \(T \in \hom(V,W)\) e \(T^{\times k}: V^k \ni (v_j) \mapsto (T(v_j)) \in W^k\). A aplicação \emph{(\textcolor{gray}{pullback})} \(T^{\wedge k} : A^k(W) \ni \phi \mapsto  \phi \circ T^{\times k}  \in A^k(V)\) é bém definida e linear. \footnote{\(A^k(V) = A^k(V,\F)\).}
+    Sejam \(T \in \hom(V,W)\) e \(T^{\times k}: V^k \ni (v_j) \mapsto (T(v_j)) \in W^k\). A aplicação \emph{\textcolor{gray}{(pullback)}} \(T^{\bullet k} : A^k(W) \ni \phi \mapsto  \phi \circ T^{\times k}  \in A^k(V)\) é bém definida e linear. \footnote{\(A^k(V) = A^k(V,\F)\).}
 \end{lemma}
 
 \begin{note}
-    Se \(W = V \) e \(\dim V =n \), então \(\dim (A^k(V)) = 1 \) e dado que \(T^{\wedge k}\) é linear, \(\exists \delta(T) \in \F : T^{\wedge k} = \delta(T) \phi\). Escolhendo base \((v_j)\) pra \(V, \ \exists! \phi \in A^k(V): \phi((v_j)) =1\), pode-se deducir que \(\delta(\id_{_V})=1\) e \(\delta(T\circ S) = \delta(T) \delta(S)\). \comentario{Propiedades do \(\det\)! }
+    Se \(W = V \) e \(\dim V =n \), então \(\dim (A^n(V)) = 1 \). Logo, \(\exists \delta(T) \in \F : T^{\bullet n} = \delta(T) \phi\). Escolhendo base \((v_j)\) pra \(V, \ \exists! \phi \in A^n(V): \phi((v_j)) =1\), pode-se deducir que \(\delta(\id_{_V})=1\) e \(\delta(T\circ S) = \delta(T) \delta(S)\). \comentario{Propiedades do \(\det\)! }
 \end{note}
 
 \ejemplo{\centering \(\delta(T) = \det T \) em \(\dim V = 2\)
@@ -97,7 +97,7 @@
 \theoremnum{10.4.6.}
 \begin{theorem}
     \label{thm:1046}
-    \(\forall V, \ \exists k\)-ésima potência simétrica. Além disso, se \(\alpha = (v_i)_{i\in I}\) fora uma base pra \(V\), \(\leq\) um ordem total em \(I\), \(\alpha^k_\leq:= \{(v_{i_j}) \in \alpha^k: i_j \leq i_{j+1}\}\) e \((\phi,U)\) uma $k$-potência simétrica pra \(V\), \(\phi(\alpha^k_\leq)\) é uma base pra \(U\).  \comentario{Adaptação dos seus análogos} 
+    \(\forall V, \ \exists k\)-ésima potência simétrica. Além disso, se \(\alpha = (v_i)_{i\in I}\) fora uma base pra \(V\), \(\leq\) um ordem total em \(I\), \(\alpha^k_\leq:= \{(v_{i_j}) \in \alpha^k: i_j \leq i_{j+1}\}\) e \((\phi,U)\) uma $k$-potência simétrica pra \(V\), \(\phi(\alpha^k_\leq)\) é base de \(U\).  \comentario{Adaptação dos seus análogos} 
 \end{theorem}
 
 \theoremnum{10.4.7.}
@@ -112,6 +112,6 @@
 
 \begin{corollary}
     %\(\phi(\alpha^k_\leq) = \{\odot v_{i_j} : i_j \leq i_{j+1}\}\) é base de \(\odot^k V\). 
-    Se \(\dim V = n \in \mathbb{Z}_{>0}\), então \(\dim (\odot ^k V) = \binom{n-1+k}{n-1}\). Em particular, \(\dim (S^k(V,W))\) é \(\binom{n-1+k}{n-1} \dim W \). \comentario{Problema de conteo, consequências dos \(\blacksquare\) \ref{thm:1046} e \(\blacksquare\) \ref{thm:1047}}
+    Se \(\dim V = n \in \mathbb{Z}_{>0}\), então \(\dim (V^{\odot k }) = \binom{n-1+k}{n-1}\). \comentario{Problema de conteo}% e \(\dim (S^k(V,W)) = \binom{n-1+k}{n-1} \dim W \). %\comentario{Consequências diretas dos \(\blacksquare\) \ref{thm:1046} (coisa de contar) e \(\blacksquare\) \ref{thm:1047}}
 \end{corollary}
 

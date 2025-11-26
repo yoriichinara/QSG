@@ -18,14 +18,12 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \subsection*{Formas Alternadas (em \(\R^n\))}
 
 \begin{definition}
-    Seja \(k \in \N\). Uma \emph{$k$-forma} \(\phi \in \hom^k(V, \R )\) é \emph{alternada} sse  toda vez que \(\exists i<j\)  tal que \(v_i =v_j\), \(\phi((v_{i<j})):= \phi(v_1, \ldots, v_i, \ldots, v_j, \ldots, v_k) = 0\). 
+    Seja \(k \in \N\). Uma \emph{$k$-forma} \(\phi \in \hom^k(V, \R )\) é \emph{alternada} sse  toda vez que \(\exists r<s\)  tal que \(v_r =v_s\), \(\phi((v_{r<s})):= \phi(v_1, \ldots, v_r, \ldots, v_s, \ldots, v_k) = 0\). 
 \end{definition}
 
 %\begin{example}
 %    \(V^0 = \{\emptyset\}\), logo, o conjunto das \(0\)-formas alternadas é \( \R\). Também, as \(1\)-formas alternadas são as \(\phi \in \hom_\R(V,\R)\). \textcolor{gray}{\(\rightarrow\) Antissimétria trivial}
 %\end{example}
-
-     
 
 \parbox[l]{0.7\linewidth}{
 \begin{example}
@@ -86,10 +84,10 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 
 \hypertarget{lemma101}{}
 \begin{lemma}
-    \textbf{10.1.} Sejam \(\phi \in A^k(V)\) e \(i<j\). Então,  
+    \textbf{10.1.} Sejam \(\phi \in A^k(V)\) e \(r<s\). Então,  
     \begin{enumerate}[label = \roman*.]
-        \item \(\phi ((v_{i<j})) = -\phi ((v_{j<i}))\).
-        \textcolor{gray}{\(\rightarrow \) Faça a conta \(\phi((v_{i<j}) + v_j \cdot e_i + v_i\cdot e_j)\)}
+        \item \(\phi ((v_{r<s})) = -\phi ((v_{r<s}))\).
+        \textcolor{gray}{\(\rightarrow \) Faça a conta \(\phi((v_{r<s}) + v_s \cdot e_r + v_r\cdot e_s)\)}
         \item Se \(v_1, \ldots, v_k\) foram l.d., então \(\phi ((v_j)) = 0\). \textcolor{gray}{\(\rightarrow\)  \(\exists j_0\leq k : v_{j_0} =  \sum_{j\neq j_0} a_jv_j\), separa usando linearidade em \(j_0\)}
     \end{enumerate}
 \end{lemma}
@@ -112,21 +110,21 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{exercise}
 
 \begin{definition}
-    Sejam \(T \in \hom_\R(V,W)\) e \(\phi \in A^k(W)\). O \emph{pullback} de \(\phi \) por \(T\) é a função \(T^{\wedge k}(\phi) \in A^k(V)\) tal que \((v_j) \mapsto \phi ((T (v_j)))\). \footnote{Da uma olhada nas Notas de Algebra Linear II, Seç. 9.2..}
+    Sejam \(T \in \hom_\R(V,W)\) e \(\phi \in A^k(W)\). O \emph{pullback} de \(\phi \) por \(T\) é a função \(T^{\bullet k}(\phi) \in A^k(V)\) tal que \((v_j) \mapsto \phi ((T (v_j)))\). \footnote{Da uma olhada nas Notas de Algebra Linear II, Seç. 9.4..}
 \end{definition}
 
-\ejemplo{
- \centering   \(\pi^{\wedge k} : A^k(\R^2)\to A^k(\R^3)\)
-    \tcblower
+%\ejemplo{
+% \centering   \(\pi^{\bullet k} : A^k(\R^2)\to A^k(\R^3)\)
+%    \tcblower
 \begin{example}
     \(\pi: (x,y,z) \mapsto (x,y)\) e \(\phi = \det \in A^2(\R^2)\), então 
-\vspace{-0.3cm}
-    \[\pi^{\wedge k}(\phi) ((x_1,y_1,z_1), (x_2,y_2,z_2)) = \phi( (x_1,y_1), (x_2,y_2)) = \det \begin{bmatrix}
+\vspace{-0cm}
+    \[\pi^{\bullet}(\phi) ((x_1,y_1,z_1), (x_2,y_2,z_2)) = \phi( (x_1,y_1), (x_2,y_2)) = \det \begin{bmatrix}
         x_1 & x_2\\ 
         y_1 & y_2
     \end{bmatrix}. \] 
 \end{example}
-}
+%}
 
 \let\originalwedge\wedge 
 %\renewcommand{\wedge}{\mathbin{\smallstyle\originalwedge}}
@@ -159,21 +157,18 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{pmatrix}\] }
 \vspace{-0.6cm}
         \item Associativo, \((\phi \wedge \psi) \wedge \xi = \phi \wedge (\psi \wedge \xi)\). \textcolor{gray}{\(\rightarrow \) Use o projetor alternado em \(f(v_i), \ i \in \{n\in \N : n\leq p+q+r\}\) e faça as contas chatas}
-        \item Compativél com pullback, \(T^{\wedge k}(\phi \wedge \psi) = T^{\wedge k}(\phi) \wedge T^{\wedge k}(\psi)\).   
+        \item Compativél com pullback, \(T^{\bullet}(\phi \wedge \psi) = T^{\bullet}(\phi) \wedge T^{\bullet }(\psi)\).   
     \end{enumerate} 
 \end{proposition}
 
 \begin{theorem}
     Sejam \(V\) \(\R\)-espaço vetorial e \((f_j)\) base pra \(V'\). Então, \(\forall k\leq n \), a familia \(\{(l_{i_1}\wedge \cdots \wedge l_{i_k}): \forall j<k, \ i_j < i_{j+1}\}\) é uma base pra \(\alt^k(V)\). Em particular, \(\dim \alt^k(V) = \binom{n}{k}\).   
 \end{theorem}
-
-%\ejemplo{\centering Pullback de cambio de base%
 %\tcblower
-\begin{example}
-    Sejam \(\dim V =n\), \((w_j)\) base pra \(V\) e \(\phi \in \alt^n(V)\), Então, \(\phi((v_j)) = \det((a_{ij}))\cdot  \phi((w_j))\), onde \(v_j = \sum a_{ij}w_i\). \textcolor{gray}{ \(\rightarrow \ T^{\wedge k}(\phi) = \det T \cdot \phi\)}  
-\end{example}
+%\begin{example}
+%    Sejam \(\dim V =n\), \((w_j)\) base pra \(V\) e \(\phi \in \alt^n(V)\), Então, \(\phi((v_j)) = \det((a_{ij}))\cdot  \phi((w_j))\), onde \(v_j = \sum a_{ij}w_i\). \textcolor{gray}{ \(\rightarrow \ T^{\bullet }(\phi) = \det T \cdot \phi\)}  
+%\end{example}
 %}
-
 \begin{example}
     \- \vspace{-0.8cm}
     \[(\R^3)' = [e_1', e_2', e_3'] \leadsto  \begin{cases}
@@ -239,33 +234,33 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 }
 
 \begin{proposition}
-    Uma aplicação \(F\in C^\infty(M,N)\) induce, \(\forall p \in M\), uma outra aplicação via pullback \(F^{\wedge k}: \Omega^k(N) \to \Omega^k(M)\)  tal que \(  \omega\textcolor{gray}{(p)} \mapsto F^{\wedge k}(\omega) \textcolor{gray}{(p)} = DF\textcolor{gray}{(p)}^{\wedge k}\omega(F\textcolor{gray}{(p)})\).
+    Uma aplicação \(F\in C^\infty(M,N)\) induce, \(\forall p \in M\), uma outra aplicação via pullback \(F^{\bullet}: \Omega^k(N) \to \Omega^k(M)\)  tal que \(  \omega\textcolor{gray}{(p)} \mapsto F^{\bullet}(\omega) \textcolor{gray}{(p)} = DF\textcolor{gray}{(p)}^{\bullet}\omega(F\textcolor{gray}{(p)})\).
 \end{proposition}
 
 \begin{example}
-    Se \(g \in \Omega^0(N)\), então \(F^{\wedge k}(g) = g \circ F\) e \(F^{\wedge k}(dg) = d(F^{\wedge k}(g)) = d (g\circ F)\).   
+    Se \(g \in \Omega^0(N)\), então \(F^{\bullet}(g) = g \circ F\) e \(F^{\bullet}(dg) = d(F^{\bullet}(g)) = d (g\circ F)\).   
 \end{example}
 
 \ejemplo{
     Na hora das contas, se \(^M\varphi = (\x_1, \ldots, \x_{d_1})\) e \(^N\varphi(\y_1, \ldots, \y_{d_2})\) são cartas locais de \(p\) e \(F(p)\) respetivamente, tais que \(F(\U_p)\subseteq \mathcal{V}_{F(p)}\), então 
     \[
-        \omega\Big|_{\mathcal{V}_{F(p)}} =  \sum g_\textbf{i} \left(\wedge d\y_\textbf{i} \right) \ \  \Rightarrow \ \  F^{\wedge k}(\omega) \Big|_{\U_p} = \sum F^{\wedge k} (g_\textbf{i}) \left( \wedge d(\textcolor{red}{F^{\wedge k}(\y_\textbf{i}) }) \right).  
+        \omega\Big|_{\mathcal{V}_{F(p)}} =  \sum g_\textbf{i} \left(\wedge d\y_\textbf{i} \right) \ \  \Rightarrow \ \  F^{\bullet }(\omega) \Big|_{\U_p} = \sum F^{\bullet } (g_\textbf{i}) \left( \wedge d(\textcolor{red}{F^{\bullet }(\y_\textbf{i}) }) \right).  
     \]
     \vspace{0.9cm}
     \tcblower
     \begin{example}
-        Sejam \( \omega = fdx + g dy \in \Omega^1(\R^2)\) e \(c: I\ab\subset \R \to \R^2\) curva suave, então \(c^{\wedge k}(\omega) = (f\circ c)(t)\dot{c_1}(t) + (g\circ c)(t)\dot{c_2}(t) dt\).  
+        Sejam \( \omega = fdx + g dy \in \Omega^1(\R^2)\) e \(c: I\ab\subset \R \to \R^2\) curva suave, então \(c^{\bullet }(\omega) = (f\circ c)(t)\dot{c_1}(t) + (g\circ c)(t)\dot{c_2}(t) dt\).  
     \end{example}   
 }
 
-\begin{tikzpicture}[>=to, shift={(5.6cm, 3.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[>=to, shift={(5.4cm, 3.7cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
     \draw[thick, red] (5.2,-0.5) -- (8.8,-0.5) -- (8.8,0.7)-- (8.1,0.7)-- (9.5,0.7); 
-    \node[red] at (2,-0.5) {$F^{\wedge k}(\y_{i_m}) = \sum \frac{\partial F^{\wedge k}(\y_{i_{m}})}{\partial \x_j}d\x_j $};
+    \node[red] at (2,-0.5) {$F^{\bullet }(\y_{i_m}) = \sum \frac{\partial F^{\bullet }(\y_{i_{m}})}{\partial \x_j}d\x_j $};
 \end{tikzpicture}
 
 \- \vspace{-1.8cm}
 \begin{note}
-Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota^{\wedge k}(\omega) = \omega|_{_M}\).
+Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota^{\bullet}(\omega) = \omega|_{_M}\).
 \end{note}
 
 \begin{example}[\emph{Forma de ángulo}]
@@ -343,7 +338,7 @@ Agora precisamos entender como é que se derivam as formas diferenciais.
         \item Regla de Leibniz com sinal, se \(\omega \in \Omega^p(M)\) e \(\eta\in \Omega^q(M)\), então 
         \[ d(\omega \wedge \eta ) = d\omega \wedge \eta + (-1)^p \omega \wedge d \eta. \] \vspace{-1cm}
         \item \(d^2 =0\), se \(\omega \in \Omega^k(M)\), então \(d (d\omega) = 0\). \textcolor{gray}{\(\rightarrow \) Vem do \(\blacksquare\) \hyperlink{thmSchw}{(\emph{Schwarz})}}
-        \item Compativél com pullback, se \(F \in C^\infty (M,N)\) e \(\omega \in \Omega^k(N)\), então temos \(d(F^{\wedge k}(\omega)) = F^{\wedge k}(d\omega)\). 
+        \item Compativél com pullback, se \(F \in C^\infty (M,N)\) e \(\omega \in \Omega^k(N)\), então temos \(d(F^{\bullet}(\omega)) = F^{\bullet}(d\omega)\). 
     \end{enumerate}
 \end{theorem}
 
