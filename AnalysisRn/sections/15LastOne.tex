@@ -1,0 +1,60 @@
+\begin{theorem}
+    Sejam \(X\subseteq \R^n\) e \(\mathscr{C} = (U_i\ab)\) uma cobertura. Então, \(\exists P(\mathscr{C}) = (\varphi_j) \in C^\infty(U\ab, \R)\), \emph{partição da unidade} pra \(X\) subordinada à \(\mathscr{C}\) tal que \( X \subseteq U\) e \(\forall \x \in X, \ \forall j \in J\),     
+    \begin{enumerate}[label = \roman*.]
+        \item \( 0 \leq \varphi_j(\x) \leq 1 \). \hspace{1.75cm} ii. \(\exists \U_\x : \# \{j \in J : \varphi_j|_{_{X\cap \U_\x}} \not\equiv 0 \} < \infty\). 
+        \item[iii.] \(\sum \varphi_j(\x) = 1\). \hspace{2cm} iv. \(\exists i \in I:  \operatorname{supp}\varphi_j  \subseteq  U_i\). 
+    \end{enumerate}
+\end{theorem}
+
+\comentario{Não admite resumo, olha \cite[Theorem 3-11]{spivak2018}}
+
+\begin{definition}
+    Sejam \(_nM\subseteq \R^n\) compacta, \(\mathscr{C} = (U\ab_i)\) cobertura finita  \(:\forall i \in I, \exists \sigma_i\) $n$-bloco singular \(:U_i \subseteq \operatorname{Im}\sigma_i\). Então, sendo \((\varphi_j) = P (\mathscr{C})\), definimos pra \(\omega \in \Omega^n(M)\),  
+    \[\int_M \omega := \sum \int_M \varphi_j \omega = \sum \int_{\sigma_j} \varphi_j \omega . \] 
+\end{definition}
+\begin{note}
+    Em geral, \(\omega \) é \emph{integravél} em \(M\) sse \(\int_{_M} \omega = \sum \int_{I^n} |f_j(\x)| d\x < \infty \), sendo \(f_j(\x) d\x = \sigma_j^\bullet(\varphi_j \omega)\). \comentario{Mesmo que \(M\) não for compacta pode existir}
+\end{note}
+
+\begin{proposition}
+    Sejam \(_dM, \ _dN \subseteq \R^n\), \(F: M\cong N\) preservando orientação e \(\omega \in \Omega^n(N)\) integravél. Então, \(\int_{_N} \omega = \int_{_M} F^\bullet \omega\). \comentario{Direto da definição e \((F\circ G)^\bullet = G^\bullet \circ F^\bullet\)}
+\end{proposition}
+
+\begin{proposition}
+    Sejam \(_dM \subseteq \R^n\) orientada, \(F\ce\subseteq M\) de medida nula e \(\omega \in \Omega^n(M)\) integravél. Então, \(\int_{_M} \omega = \int_{_{M\setminus F}} \omega \). \comentario{Olha no \cite[Seç. 7.6]{lima2004analise}}%Cubre \(F\) com \(U\ab : |\int_{_U} \omega| < \epsilon\) e procura \(P(U, M\setminus F)\)}
+\end{proposition}
+
+\begin{corollary}
+    Se \(\psi : V\ab \to \psi(V) \subseteq M\) é positiva tal que \(M \setminus \psi (V)\) tém medida nula e \(\omega \in \Omega^n(M)\) é integravél, então \(\int_{_M} \omega = \int_{_V} \psi^\bullet (\omega|_{_{\psi(V)}})\).
+\end{corollary}
+
+\begin{example}
+    Sendo \(\psi: [0, 2\pi)  \to \E^{1}\) e \(\omega = d\theta\) temos \(\int_{_{\E^{1}}} \omega = \int_{[0, 2\pi)} d\theta = 2 \pi\).   
+\end{example}
+
+\hypertarget{thmStokesV2}{}
+\begin{theorem}[\emph{Stokes V2}]
+    Sejam \(_n\overline{M}\subseteq \R^n\) compacta, orientada e \(\omega \in \Omega^{n-1}(M)\). Então, tendo \(\partial M\) orientação inducida,  
+    \[\int_{\overline{M}} d\omega = \int_{\partial M} \omega.\]  
+\end{theorem}
+
+\demo{
+    \textcolor{black}{
+        \vspace{-0.5cm}
+    \begin{enumerate}[label = \roman*. , left = -0.5cm]
+        \item \(\operatorname{supp}\omega \subseteq \operatorname{Im}\sigma\subseteq M\),  \(\sigma =\psi|_{I^n}\) positiva.  \comentario{\(\int_{_{\overline{M}}} d \omega  = \int_{\sigma} d\omega  = 0 = \int_{_{\partial M}} \omega\)}  
+        \item \(\sigma :\) i. \(+ \operatorname{Im}\sigma \cap \partial M \neq \emptyset \) só no \(\sigma_{(n,0)}\). \comentario{\(\int_{_{\overline{M}}} d \omega  = \int_{\sigma} d\omega =\int_{\partial \sigma} \omega =  \int_{_{\partial M}} \omega\)} 
+        \item Em geral. \comentario{Sejam \(\mathscr{C} = (U_i)\) cobertura finita, \(\sigma_i:\) i. e ii. e \((\varphi_i) = P(\mathscr{C})\),  
+        \[\hspace{-0.7cm}\int_{\overline{M}} d \omega = \sum \int_{\overline{M}} \varphi_i d\omega = \sum\int_{\overline{M}}\left[ d(\varphi_i \omega ) - d\varphi_i \wedge \omega\right] = \sum \int_{\partial M } \varphi_i \omega = \int_{\partial M} \omega.\] }
+        \vspace{-0.7cm}
+    \end{enumerate}
+    }
+}
+
+\begin{corollary}
+    Sejam \(_dM\subseteq \R^n\) compacta (sem bordo), orientada e \(\omega \in \Omega^n(M)\) exacta. Então, \(\int_{_M} \omega = 0 \). \comentario{\(\int_{_M} \omega = \int_{_M} d\eta = \int_{\emptyset} \eta = 0 \)}
+\end{corollary}
+
+%\begin{theorem}[\emph{Green}]
+%    Sejam \(_2\overline{M} \subseteq \R^2\) compacta e \(\omega = f dx + g dy \in \Omega^1(M)\). Então, \(\int_{_{\partial M}} f dx + g dy  =  \int_{_{\overline{M}}} (f_y - g_x) dx dy\). \comentario{É conseguência direta do \(\blacksquare\) \hyperlink{thmStokesV2}{(\emph{Stokes V2})}}
+%\end{theorem}

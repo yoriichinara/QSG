@@ -145,41 +145,44 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 \end{exercise}
 
 \hypertarget{thmStokes}{}
-\begin{theorem}[\emph{Stokes}]
+\begin{theorem}[\emph{Stokes V1}]
     Sejam \(\omega \in \Omega^{k-1}(M)\) e \(c\) $k$-cadeia em \(M\). Então, \(\displaystyle \int_c d\omega = \int_{\partial c } \omega\).
 \end{theorem}
 
-\demo{
+\vspace{-0.3cm}
+\begin{itemize}[label = , left = 0.45cm]
+\item \demo{
   \textcolor{black}{\emph{Nota.}} Podemos fazer algumas suposições inicias: \textcolor{black}{
 \begin{enumerate}[label = \roman*., left = -0.5cm]
-    \item \(c = \sigma \) $k$-bloco. \comentario{Se valer \(\blacksquare\) \hyperlink{thmStokes}{(\emph{Stokes})} pra $k$-blocos, então \(\int_c d\omega = \sum n_i \int_{\sigma_i} d \omega = \sum n_i \int_{\partial \sigma_i} \omega = \int_{\sum n_i \partial \sigma_i} w = \int_{\partial c} w \) }
-    \item \(\sigma = \id_{\I^k} \) e \(M\) uma vizinhanza de \( \I^k\). \comentario{\(\textstyle\int_\sigma d\omega = \int_{\id_{\I^k}} \sigma ^{\bullet} (dw) = \int_{\id_{\I^k}} d (\sigma ^{\bullet}(w)) = \int_{\partial \id_{\I^k}} \sigma ^{\bullet}(w) = \int_{\partial \sigma} w \). }
-    \item \(\omega = f \hat{w}_i \in \Omega^{k-1}(U),\ U\ab\subseteq \R^k : \I^k\subset U\). \comentario{\(\textstyle\int_{\sigma} d\omega = \int_{\sigma} d\left(\sum f_i \hat{\omega}_i\right) = \sum \int_{\sigma} d\left( f_i \hat{\omega}_i\right) = \sum \int_{\partial \sigma}  f_i \hat{\omega}_i = \int_{\partial \sigma} \omega\). }
+    \item \(c = \sigma \) $k$-bloco. \comentario{Se valer \(\blacksquare\) \hyperlink{thmStokes}{(\emph{Stokes})} pra $k$-blocos, então \(\int_c d\omega = \sum n_i \int_{\sigma_i} d \omega = \sum n_i \int_{\partial \sigma_i} \omega = \int_{\sum n_i \partial \sigma_i} \omega = \int_{\partial c} \omega \) }
+    \item \(\sigma = \id_{\I^k} \) e \(M\) uma vizinhanza de \( \I^k\). \comentario{\(\textstyle\int_\sigma d\omega = \int_{\id_{\I^k}} \sigma ^{\bullet} (d\omega) = \int_{\id_{\I^k}} d (\sigma ^{\bullet}(\omega)) = \int_{\partial \id_{\I^k}} \sigma ^{\bullet}(\omega) = \int_{\partial \sigma} \omega \). }
+    \item \(\omega = f \hat{\omega}_i \in \Omega^{k-1}(U),\ U\ab\subseteq \R^k : \I^k\subset U\). \comentario{\(\textstyle\int_{\sigma} d\omega = \int_{\sigma} d\left(\sum f_i \hat{\omega}_i\right) = \sum \int_{\sigma} d\left( f_i \hat{\omega}_i\right) = \sum \int_{\partial \sigma}  f_i \hat{\omega}_i = \int_{\partial \sigma} \omega\). }
 \end{enumerate}}
 }
+\end{itemize}
 %
 %\hypertarget{thmFubini}{}
 %\begin{theorem}[\emph{Fubini}]
 %  Sejam \(B_1\ce\subseteq \R^n, \ B_2\ce \subseteq\R^m\) blocos e \(f: B_1 \times B_2 \to \R\) integravél. Então, \(\int_{B_1}\left(\int_{B_2} f(x,y) dy\right) dx = \int_{B_2}\left(\int_{B_1} f(x,y) dx\right) dy \).  
 %\end{theorem}
-
 %\hypertarget{thmTFC}{}
 %\begin{theorem}[\emph{\textbf{T}eorema \textbf{F}undamental del \textbf{C}álculo}]
 %  
 %\end{theorem}
 %
-\demo{
+\begin{itemize}[label = , left = 0.45cm]
+\item \demo{
   Supondo i., ii. e iii. precisamos analizar os dois lados da igualdade:  
   \vspace{0.4cm}
-  \begin{itemize}[left = 0cm]
-    \item \(\int_{\partial \sigma} \omega = \textstyle \sum (-1)^j\left(\int_{\sigma(j,0)} \omega - \int_{\sigma_{(j,1)}} \omega \right) = \sum (-1)^j(\)\(\int_{\I^{k-1}} \sigma_{(j,0)} ^{\bullet} (\omega) - \int_{\I^{k-1}} \sigma_{(j,1)}^{\bullet}(\omega) ) \). Note que, \(\sigma_{(j,0)}^{\bullet}(\omega)= \sigma_{(j,1)}^{\bullet}(\omega)=0\) se \(i \neq j\), pois  \(x_j\) constante \(\Rightarrow\) \(dx_j= 0 \), assim, 
-    \[\int_{\partial \sigma } \omega = (-1)^i \int_\sigma \left[f(x_1, \ldots, 0, x_k)- f(x_1, \ldots, 1, \ldots, x_k)\right] \hat{w}_i.\]
-    \item Do outro lado, \(\textstyle\int_\sigma d\omega = \int_\sigma d(f \hat{\omega}_i) = \int_\sigma (-1)^{i-1} f_{x_i} \left(\cuna dx_j\right) = (-1)^{i-1} \int_{\I^k} f_{x_i} d\x\). Usando \(\blacksquare\) {(\emph{Fubini})} e \(\blacksquare\) {(\emph{TFC})} temos, \(\int_\sigma d\omega = (-1)^{i-1}\int_{\I^{k-1}} \left(\int_0^1 f_{x_i} dx_i \right)\hat{\omega}_i\), finalmente 
-    \[  \int_\sigma d\omega = (-1)^{i-1} \int_\sigma \left[f(x_1, \ldots, 1, x_k)- f(x_1, \ldots, 0, \ldots, x_k)\right] \hat{w}_i.\]
+  \begin{itemize}[label = , left = 0.5cm]
+    \item[\(\leftarrow\)]\(\int_{\partial \sigma} \omega = \textstyle \sum (-1)^j\left(\int_{\sigma(j,0)} \omega - \int_{\sigma_{(j,1)}} \omega \right) = \sum (-1)^j(\)\(\int_{\I^{k-1}} \sigma_{(j,0)} ^{\bullet} (\omega) - \int_{\I^{k-1}} \sigma_{(j,1)}^{\bullet}(\omega) ) \). Note que, \(\sigma_{(j,0)}^{\bullet}(\omega)= \sigma_{(j,1)}^{\bullet}(\omega)=0\) se \(i \neq j\), pois  \(x_j\) constante \(\Rightarrow\) \(dx_j= 0 \), assim, 
+    \[\int_{\partial \sigma } \omega = (-1)^i \int_\sigma \left[f(x_1, \ldots, 0, x_k)- f(x_1, \ldots, 1, \ldots, x_k)\right] \hat{\omega}_i.\]
+    \item[\(\rightarrow\)] Do outro lado, \(\textstyle\int_\sigma d\omega = \int_\sigma d(f \hat{\omega}_i) = \int_\sigma (-1)^{i-1} f_{x_i} \left(\wedge dx_j\right) = (-1)^{i-1} \int_{\I^k} f_{x_i} d\x\). Usando \(\blacksquare\) {(\emph{Fubini})} e \(\blacksquare\) {(\emph{TFC})} temos, \(\int_\sigma d\omega = (-1)^{i-1}\int_{\I^{k-1}} \left(\int_0^1 f_{x_i} dx_i \right)\hat{\omega}_i\), finalmente 
+    \[  \int_\sigma d\omega = (-1)^{i-1} \int_\sigma \left[f(x_1, \ldots, 1, x_k)- f(x_1, \ldots, 0, \ldots, x_k)\right] \hat{\omega}_i.\]
   \end{itemize}
 %  
 }
-
+\end{itemize}%[label = , left = 0.45cm]
 %\begin{corollary}
 %  Se \(\omega \in \Omega^k(M)\) é exata e \(c\) é uma $k$-cadeia fechada então \(\displaystyle \int_c \omega = 0 \).  
 %\end{corollary}
@@ -191,7 +194,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 \end{definition}
 
 \begin{definition}
-  Seja \(_dM\subseteq \R^n\) variedade. O subconjunto \(_d\overline{M}\subseteq  \R^n\) é uma \emph{variedade com bordo} \( \overline{M}\setminus M =:\  _{d-1}\partial M\subseteq \R^n  \). Mas agora temos, \(\forall p \in \overline{M}, \ \exists ^k\varphi : \U_p \cap \overline{M} \simeq V\ab\subseteq \R^d_+\). 
+  Um subconjunto \(_d^k\overline{M}\subseteq  \R^n\) é \emph{variedade com bordo} \( \overline{M}\setminus M =:\  _{d-1}\partial M\subseteq \R^n\) se \(\forall p \in \overline{M}, \ \exists ^k\varphi : \U_p \cap \overline{M} \simeq V\ab\subseteq \R^d_+\). 
 \end{definition}
 
 %\begin{note}

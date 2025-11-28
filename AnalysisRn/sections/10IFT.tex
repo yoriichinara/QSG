@@ -125,9 +125,32 @@
 %\end{proof}
 \- \vspace{-2cm}
 
+\hypertarget{cor84}{}
 \begin{corollary}
-    Seja \(F \in C^k(U,\R^n)\) tal que \(\forall p \in U\), \(\det JF(p)\neq 0\), então \(F\) é uma aplicação aberta. Mas ainda, se \(F\) fora injetora, então \(^k F: U \simeq F(U)\). 
+    \textbf{8.4.} Seja \(F \in C^k(U,\R^n)\) tal que \(\forall p \in U\), \(\det JF(p)\neq 0\), então \(F\) é uma aplicação aberta. Mas ainda, se \(F\) fora injetora, então \(^k F: U \simeq F(U)\). 
 \end{corollary}
+
+
+\ejemplo{\centering Perturbação da Identidade
+\tcblower
+\begin{lemma}
+    Sejam \(G\in C^k(\R^n, \R^n)\), \(k\geq 1: \|DG\| < 1\) e \(F(\x) = \x + G(\x)\). Então, \(^kF: \R^n \cong U\ab \subseteq \R^n\). Além disso, se \(\|DG \| \leq \lambda < 1\), \(F\) é sobrejetiva. \comentario{Serie de Neumann + {\scriptsize \(\boxtimes\)} \hyperlink{cor84}{8.4.} + \(\blacksquare\) \hyperlink{thmPFB}{(\emph{Punto Fixo Banach})}}
+\end{lemma}
+\vspace{0.3cm}
+\begin{example}
+    Em \(U = (-1,1)^2 \subset \R^2\), o seguinte sistema tém solução única 
+    \[\begin{cases}
+        x_1 + \frac{1}{40} x_1^4 + \frac{1}{5}\ln(x_2 + e^2) = \frac{2}{5} \\ 
+        x_2 + \frac{1}{7} \sin (x_1) + 1 = 1
+    \end{cases} \hspace{-0.3cm} \sim \hspace{0.1cm} F(x_1,x_2) = (x_1, x_2) + G(x_1, x_2).\]
+\end{example}
+\textcolor{gray}{\[\|DG\|_\infty = \left\| \begin{array}{c c}
+    \frac{1}{10} x_1^3 & \frac{1}{5(x_2+e^2)} \\
+    \frac{1}{7} \cos(x_1) & 0 
+\end{array}\right\|_\infty = \frac{1}{5(e^2 -1)} < 1\] }
+%\demo{Da serie de Neumann, \(\forall \x \in \R^n, \exists DF(\x)^{-1}\), usa desigualdades pra provar que é injetora, a primeira afirmação segue do {\scriptsize \(\boxtimes\)} \hyperlink{cor84}{\textbf{8.4.}}. Usa à cota uniforme e \(\blacksquare\) \hyperlink{thmPFB}{(\emph{Punto Fixo Banach})} pra provar a sobrejetividade}
+}
+
 %\begin{example}
 %    \(F: (x,y) \mapsto (x^2+y^2, 2xy)\). \textcolor{gray}{\(\rightarrow\) Estudie la función, la existencia de diffeomorfismos, alguna de las inversas, las regiones que identifican, etc }
 %\end{example}
@@ -173,29 +196,52 @@
 \vspace{-0.8cm}
 \begin{corollary}
 \hypertarget{corol83}{}
-\textbf{8.3.} Pelo \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} temos \(JG_q(p,q) \cdot JF_p  = - JG_p(p,q)\).   
+\textbf{8.5.} Pelo \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} temos \(JG_q(p,q) \cdot JF_p(p,q)  = - JG_p(p,q)\).   
 \end{corollary}
 
 \ejemplo{
     \centering
-    O \(\blacksquare\) \hyperlink{thmTFIm}{(\emph{Função Implícita})} garante que podemos despejar variáveis
+    O \(\blacksquare\) \hyperlink{thmTFIm}{(\emph{Função Implícita})} garante limpar variáveis
     \tcblower
 \begin{example}
-    \(g: (x,y) \mapsto x^2 + y^2 -1 \), encontre \(y= f(x)\) em \(A= \{(x,y): x>0\}\). \textcolor{gray}{\(\rightarrow \) Clássico de cálculo, relacione com as hipóteses do Teorema } 
+    O seguinte sistema pode ser resolvido em termos de \(w = w(y,z)\) e \(x = x(y,z)\) numa vizinhança do \((x,y,z,w) = (1,2,1,1)\), 
+    \[\begin{cases}
+        G_1(\x) = w^2 + 2x^2 + y^2 - z^2 - 6 = 0 \\ 
+        G_2(\x) = wxy - xyz = 0
+    \end{cases} \hspace{-0.3cm} \sim \hspace{0.1cm} \textcolor{gray}{p = (y,z), \ q = (x,w)}.\] 
+    \vspace{-0.1cm}
+    \textcolor{gray}{\[G(p,q) = G(1,2,1,1) = (0,0), \ \ JG(p,\textcolor{black}{q}) = \begin{bmatrix}
+    \textcolor{black}{4} & 4 & -2 & \textcolor{black}{2} \\ 
+    \textcolor{black}{0} & 0 & -2 & \textcolor{black}{2}    
+    \end{bmatrix}\]
+    \[JF_p(p,q) = \begin{bmatrix}
+        x_y(p,q) & x_z(p,q) \\ 
+        w_y(p,q) & w_z(p,q) 
+    \end{bmatrix} = \begin{bmatrix}
+        4 & 2 \\ 
+        0 & 2 
+    \end{bmatrix}^{-1}\begin{bmatrix}
+        -4 & 2 \\ 
+        0 & 2 
+    \end{bmatrix} = \begin{bmatrix}
+        -1 & 0 \\ 
+        0 & 1 
+    \end{bmatrix}\]
+    }
 \end{example}
 }
 
 \hypertarget{corol84}{}
 \begin{corollary}
-    \textbf{8.4.} \(^kH\subseteq \R^n\) hipersuperficie é localmente o gráfico de uma função.  
+    \textbf{8.6.} \(^kH\subseteq \R^n\) hipersuperficie é localmente o gráfico de uma função.  
 \end{corollary}
 
 \hypertarget{prop85}{}
 \begin{proposition}
-    \textbf{8.5.} Sejam \(^k H\subseteq \R^n\) hipersuperficie definida por \(g(\textbf{x})=0\), \(p\in H\) e \(c\in C^k(\mathcal{V}_\epsilon,H)\) um caminho em \(H\). Então, \(\ker dg(p)= \{\dot{c}(0): c(0) = p \}\).
+    \textbf{8.7.} Sejam \(^k H\subseteq \R^n\) hipersuperficie definida por \(g(\textbf{x})=0\), \(p\in H\) e \(c\in C^k(\mathcal{V}_\epsilon,H)\) um caminho em \(H\). Então, \(\ker dg(p)= \{\dot{c}(0): c(0) = p \}\).
 \end{proposition}
 
-\demo{(\(\supseteq \)) Use \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} na função \((g \circ c)(t)\). (\(\subseteq\)) \(\exists i \leq n \) tal que \(\frac{\partial g}{\partial x_i}(p) \neq 0\), suponha que é a última \(i=n\). Tome \(\vec{v}\in \R^n: dg(p)\cdot v=0\), aplique \(\blacksquare\) \hyperlink{thmTFIm}{(\emph{Função Implícita})}, assim, \(c(t)= (p_j + tv_j, f(p_j+tv_j))\). Finalmente, use nele o {\scriptsize \(\boxtimes\)} \hyperlink{corol83}{8.3.}. }
+\demo{(\(\supseteq \)) Use \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} na função \((g \circ c)(t)\). (\(\subseteq\)) \(\exists i \leq n \) tal que \(\frac{\partial g}{\partial x_i}(p) \neq 0\), suponha que é a última \(i=n\). Tome \(\vec{v}\in \R^n: dg(p)\cdot v=0\), aplique \(\blacksquare\) \hyperlink{thmTFIm}{(\emph{Função Implícita})}, assim, \(c(t)= (p_j + tv_j, f(p_j+tv_j))\). Finalmente, use nele o {\scriptsize \(\boxtimes\)} \hyperlink{corol83}{8.5.}. }
 
 \begin{definition}
     Seja \(p \in \ ^k H\subseteq \R^n\) hipersuperficie. O \emph{espaço tangente} a \(H\) em \(p\) é    
@@ -211,9 +257,9 @@
 
 \hypertarget{lemma86}{}
 \begin{lemma}
-    \textbf{8.6.} Sejam \(V\) \(\R\)-espaço vetorial e \(\ell_1, \ell_2 \in V'\). Se \(\ker \ell_1 \subseteq \ker \ell_2\), então \(\exists \lambda \in \R \) tal que \(\ell_2 = \lambda \ell_1 \). 
+    \textbf{8.8.} Sejam \(V\) \(\R\)-espaço e \(\ell_1, \ell_2 \in V'\). Se \(\ker \ell_1 \subseteq \ker \ell_2\), então \(\exists \lambda \in \R:\ell_2 = \lambda \ell_1 \). 
 \end{lemma}
 \begin{corollary}
-    \(\blacksquare\) \hyperlink{thmML}{(\emph{Multiplicadores de Lagrange})}. \textcolor{gray}{\(\rightarrow\) Segue de \(\square\) \hyperlink{prop85}{8.5.} e {\scriptsize \(\square\)} \hyperlink{lemma86}{8.6.} }
+    \(\blacksquare\) \hyperlink{thmML}{(\emph{Multiplicadores de Lagrange})}. \textcolor{gray}{\(\rightarrow\) Segue de \(\square\) \hyperlink{prop85}{8.7.} e {\scriptsize \(\square\)} \hyperlink{lemma86}{8.8.} }
 \end{corollary}
 
