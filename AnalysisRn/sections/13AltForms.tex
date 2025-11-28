@@ -1,6 +1,6 @@
 \section{Formas Differenciais}
 
-O objetivo nesta seção é geralizar o conceito de integral, reversõando todos os resultados e propiedades que a gente tinha lá em Cálculo I. 
+O objetivo nesta seção é generalizar o conceito de integral, reversionando todos os resultados e propiedades que a gente tinha lá em Cálculo I. 
 
 \ejemplo{
 \centering 
@@ -9,7 +9,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
     \tcblower
     \begin{itemize}[label = \(\star\), left = 0cm]
         \centering
-        \item \(^\infty_{\hspace{0.2cm}1}[a,b] \subseteq \R \ \leftarrow\) Variedade com borde. \hspace{1cm} \(\star \ ^\infty F: [a,b] \simeq [2a, 2b]\).
+        \item \(^\infty_{\hspace{0.2cm}1}[a,b] \subseteq \R \ \leftarrow\) Variedade com borda. \hspace{1cm} \(\star \ ^\infty F: [a,b] \simeq [2a, 2b]\).
         \item \(f(t) \ dt \leftarrow\) Forma differenciável.  
     \end{itemize}
 }
@@ -93,7 +93,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{lemma}
 
 \begin{corollary}
-    As $k$-formas alternadas são antisimétricas. Se \(S_k\) é o grupo de permutações de ordem \(k\) e \(\operatorname{sgn} : S_k  \to \{-1, 1\}\), então \(\phi((v_{\sigma(j)})) = \operatorname{sgn}(\sigma) \cdot \phi((v_j))\). \footnote{\(S_k \ni \sigma = \prod \tau_m : \tau_m\) é transposição, logo, \(\operatorname{sgn}(\sigma) = (-1)^{|M|}\). }
+    As $k$-formas alternadas são antissimétricas. Se \(S_k\) é o grupo de permutações de ordem \(k\) e \(\operatorname{sgn} : S_k  \to \{-1, 1\}\), então \(\phi((v_{\sigma(j)})) = \operatorname{sgn}(\sigma) \cdot \phi((v_j))\). \footnote{\(S_k \ni \sigma = \prod \tau_m : \tau_m\) é transposição, logo, \(\operatorname{sgn}(\sigma) = (-1)^{|M|}\). }
 \end{corollary}
 
 
@@ -106,11 +106,11 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 }
 
 \begin{exercise}[\emph{Projetor alternado}]
-    Se \(f \in \hom^k(V,\R)\), então a função \(Af :  (v_j) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f((v_{\sigma(j)}))\in A^k(V)\). Em particular, se \(f\) fora alternada, \(Af = f \). 
+    Se \(f \in \hom^k(V,\R)\), então a função \(Af :  (v_j) \mapsto \frac{1}{k!} \sum_{\sigma} \operatorname{sgn}(\sigma) f((v_{\sigma(j)}))\in A^k(V)\). Em particular, se \(f\) for alternada, \(Af = f \). 
 \end{exercise}
 
 \begin{definition}
-    Sejam \(T \in \hom_\R(V,W)\) e \(\phi \in A^k(W)\). O \emph{pullback} de \(\phi \) por \(T\) é a função \(T^{\bullet k}(\phi) \in A^k(V)\) tal que \((v_j) \mapsto \phi ((T (v_j)))\). \footnote{Da uma olhada nas Notas de Algebra Linear II, Seç. 9.4..}
+    Sejam \(T \in \hom_\R(V,W)\) e \(\phi \in A^k(W)\). O \emph{pullback} de \(\phi \) por \(T\) é a função \(T^{\bullet k}(\phi) \in A^k(V)\) tal que \((v_j) \mapsto \phi ((T (v_j)))\). \footnote{Dá uma olhada nas Notas de Algebra Linear II, Seç. 9.4..}
 \end{definition}
 
 %\ejemplo{
@@ -149,7 +149,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \begin{proposition}
     Sejam \(\phi \in \alt^p(V),\ \psi \in \alt^q(V)\) e \(\xi \in \alt^r(V)\). Então, o produto \(\wedge\) é:   
     \begin{enumerate}[label = \roman*.]
-        \item Bém definido, \(\wedge:  (\phi, \psi )\mapsto \phi \wedge \psi \in \alt^{p+q}(V)\).   
+        \item Bem definido, \(\wedge:  (\phi, \psi )\mapsto \phi \wedge \psi \in \alt^{p+q}(V)\).   
         \item Bilinear, se \(p = r \Rightarrow (\phi + \lambda \xi) \wedge \psi =  \phi \wedge \psi + \lambda (\xi \wedge \psi)\), na outra coordenada, se \(q = r \Rightarrow \phi  \wedge (\psi+ \lambda \xi) =  \phi \wedge \psi + \lambda (\phi \wedge \xi) \). %\textcolor{gray}{\(\rightarrow \) ii. e v. Directos de la definición} 
         \item Anticonmutativo, \(\phi \wedge \psi =  (-1)^{pq} \psi \wedge \phi\). \textcolor{gray}{\(\rightarrow \) Tome a permutação \[\begin{pmatrix}
     1\ \ \ \cdots \ \ \  p & p+1  \cdots  p+q\\ 
@@ -157,7 +157,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{pmatrix}\] }
 \vspace{-0.6cm}
         \item Associativo, \((\phi \wedge \psi) \wedge \xi = \phi \wedge (\psi \wedge \xi)\). \textcolor{gray}{\(\rightarrow \) Use o projetor alternado em \(f(v_i), \ i \in \{n\in \N : n\leq p+q+r\}\) e faça as contas chatas}
-        \item Compativél com pullback, \(T^{\bullet}(\phi \wedge \psi) = T^{\bullet}(\phi) \wedge T^{\bullet }(\psi)\).   
+        \item Compatível com pullback, \(T^{\bullet}(\phi \wedge \psi) = T^{\bullet}(\phi) \wedge T^{\bullet }(\psi)\).   
     \end{enumerate} 
 \end{proposition}
 
@@ -193,7 +193,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 %\ejemplo{Basta probar para un único atlas }
 
 \begin{note}
-    Em deante tudo será \(C^\infty\), variedades, aplicações, formas, etc. Também, pra facilitar a escritura denotamos \(\textbf{i} = (i_1, \ldots, i_k) \in I\). 
+    Em diante tudo será \(C^\infty\), variedades, aplicações, formas, etc. Também, pra facilitar a escritura denotamos \(\textbf{i} = (i_1, \ldots, i_k) \in I\). 
 \end{note}
 
 \begin{definition}
@@ -234,7 +234,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 }
 
 \begin{proposition}
-    Uma aplicação \(F\in C^\infty(M,N)\) induce, \(\forall p \in M\), uma outra aplicação via pullback \(F^{\bullet}: \Omega^k(N) \to \Omega^k(M)\)  tal que \(  \omega\textcolor{gray}{(p)} \mapsto F^{\bullet}(\omega) \textcolor{gray}{(p)} = DF\textcolor{gray}{(p)}^{\bullet}\omega(F\textcolor{gray}{(p)})\).
+    Uma aplicação \(F\in C^\infty(M,N)\) induz, \(\forall p \in M\), uma outra aplicação via pullback \(F^{\bullet}: \Omega^k(N) \to \Omega^k(M)\)  tal que \(  \omega\textcolor{gray}{(p)} \mapsto F^{\bullet}(\omega) \textcolor{gray}{(p)} = DF\textcolor{gray}{(p)}^{\bullet}\omega(F\textcolor{gray}{(p)})\).
 \end{proposition}
 
 \begin{example}
@@ -242,7 +242,7 @@ O objetivo nesta seção é geralizar o conceito de integral, reversõando todos
 \end{example}
 
 \ejemplo{
-    Na hora das contas, se \(^M\varphi = (\x_1, \ldots, \x_{d_1})\) e \(^N\varphi(\y_1, \ldots, \y_{d_2})\) são cartas locais de \(p\) e \(F(p)\) respetivamente, tais que \(F(\U_p)\subseteq \mathcal{V}_{F(p)}\), então 
+    Na hora das contas, se \(^M\varphi = (\x_1, \ldots, \x_{d_1})\) e \(^N\varphi(\y_1, \ldots, \y_{d_2})\) são cartas locais de \(p\) e \(F(p)\) respectivamente, tais que \(F(\U_p)\subseteq \mathcal{V}_{F(p)}\), então 
     \[
         \omega\Big|_{\mathcal{V}_{F(p)}} =  \sum g_\textbf{i} \left(\wedge d\y_\textbf{i} \right) \ \  \Rightarrow \ \  F^{\bullet }(\omega) \Big|_{\U_p} = \sum F^{\bullet } (g_\textbf{i}) \left( \wedge d(\textcolor{red}{F^{\bullet }(\y_\textbf{i}) }) \right).  
     \]
@@ -274,7 +274,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota^{\bullet}(
 \end{definition}
 
 \begin{example}
-    \(\R^n\) e \(\E^1\) são orientaveis com \(\omega = (\wedge dx_j) \) e \(\omega = d\theta|_{_{\E^1}}\) respetivamente. %A faixa de Möbius não é orientavél.
+    \(\R^n\) e \(\E^1\) são orientaveis com \(\omega = (\wedge dx_j) \) e \(\omega = d\theta|_{_{\E^1}}\) respectivamente. %A faixa de Möbius não é orientavél.
 \end{example}
      
 \begin{definition}
@@ -282,7 +282,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota^{\bullet}(
 \end{definition}
 
 \begin{exercise}
-    Se \(M\subseteq \R^n\) é conexa e orientavél, então tém só dois orientações. %\(\operatorname{card}(\Omega^d(M) /\hspace{-0.1cm} \sim) = 2 \).
+    Se \(M\subseteq \R^n\) é conexa e orientavél, então tem só dois orientações. %\(\operatorname{card}(\Omega^d(M) /\hspace{-0.1cm} \sim) = 2 \).
 \end{exercise}
 
 \begin{definition}
@@ -293,7 +293,7 @@ Em particular, se \(F = \iota: M \hookrightarrow  N\), então \(\iota^{\bullet}(
     \(\omega_\text{vol} = (\wedge dx_j) \) é à forma de volume de \(\R^n\). 
 \end{example}
 
-\ejemplo{\centering  \(\omega_\text{vol}\) em \(_{n-1}H\subseteq \R^n\) hipersuperficie
+\ejemplo{\centering  \(\omega_\text{vol}\) em \(_{n-1}H\subseteq \R^n\) hipersuperfície
 \tcblower
 \parbox[a]{0\linewidth}{ \ } 
 \parbox[b]{0.72\linewidth}{
@@ -335,10 +335,10 @@ Agora precisamos entender como é que se derivam as formas diferenciais.
     \textbf{10.2.} \(\forall M\subseteq \R^n, \ \forall k \in \N\), \(\exists !(d_j) \in \hom_\R(\Omega^k(M), \Omega^{k+1}(M))\), familia de operadores tais que \(d_j: \omega \mapsto d\omega\) verifica:  
     \begin{enumerate}[label= \roman*.]
         \item Derivada de uma função, \(\Omega^0(M) = C^\infty(M) \ni f \mapsto df \in \Omega^1(M)\). 
-        \item Regla de Leibniz com sinal, se \(\omega \in \Omega^p(M)\) e \(\eta\in \Omega^q(M)\), então 
+        \item Regra de Leibniz com sinal, se \(\omega \in \Omega^p(M)\) e \(\eta\in \Omega^q(M)\), então 
         \[ d(\omega \wedge \eta ) = d\omega \wedge \eta + (-1)^p \omega \wedge d \eta. \] \vspace{-1cm}
         \item \(d^2 =0\), se \(\omega \in \Omega^k(M)\), então \(d (d\omega) = 0\). \textcolor{gray}{\(\rightarrow \) Vem do \(\blacksquare\) \hyperlink{thmSchw}{(\emph{Schwarz})}}
-        \item Compativél com pullback, se \(F \in C^\infty (M,N)\) e \(\omega \in \Omega^k(N)\), então temos \(d(F^{\bullet}(\omega)) = F^{\bullet}(d\omega)\). 
+        \item Compatível com pullback, se \(F \in C^\infty (M,N)\) e \(\omega \in \Omega^k(N)\), então temos \(d(F^{\bullet}(\omega)) = F^{\bullet}(d\omega)\). 
     \end{enumerate}
 \end{theorem}
 

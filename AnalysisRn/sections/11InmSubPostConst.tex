@@ -21,14 +21,14 @@
     Seja \(F \in C^k(U, \R^m)\) imersão em \(p\in U\). Então, \(\exists \mathcal{V}_p\subseteq U\) e \(\exists \ ^k G:\mathcal{W}_{F(p)} \simeq W\ab\) tais que \( G \circ F: \mathcal{V}_p \ni \textbf{x} \mapsto (\textbf{x}, 0) \in \R^m. \)
 \end{theorem}
 \demo{\parbox[a]{0.65\linewidth}{\vspace{0.4cm}Considere a base \([DF(p)\cdot e_i, v_j]= \R^m\). Tome \(H: U \times \R^{m-n} \to \R^m\) tal que, 
-\[(\textbf{x}, x_j) \mapsto F(\textbf{x}) + \sum x_jv_j.\] Use \(\blacksquare\) \hyperlink{thmTFI}{(\emph{Função Inversa})} em \(H\) no \((p,0)\). Finalmente, faça \(G = H^{-1}\) e estableça as vizinhanzas.\vspace{0.5cm}} \parbox[b]{0.3\linewidth}{  }
+\[(\textbf{x}, x_j) \mapsto F(\textbf{x}) + \sum x_jv_j.\] Use \(\blacksquare\) \hyperlink{thmTFI}{(\emph{Função Inversa})} em \(H\) no \((p,0)\). Finalmente, faça \(G = H^{-1}\) e estabeleça as vizinhanças.\vspace{0.5cm}} \parbox[b]{0.3\linewidth}{  }
 } 
 \begin{tikzpicture}[scale= 0.9, >=to, shift={(13cm,5.1cm)}, baseline={(current bounding box.center)}, remember picture, overlay]%, shift={(14.85cm,-0.9cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
   % Puntos
     \coordinate (O) at (1, -1.5); 
   % Espacio V
   \draw[<->, thick, color = gray, opacity = 0.5] (O) + (0,-1) -- + (0,1);
-  \draw[thick] (O) + (0,-0.4) -- + (0,0.63);
+  \draw[thick] (O) + (0,-0.45) -- + (0,0.59);
   \node[above, color = gray] at ($(O) + (0,1.2)$) {$\R^n$};
   \node[left] at ($(O) + (-0.1cm,-0cm)$) {\small $\mathcal{V}_p$};
   \fill (O) + (0,0.1) circle (1pt);
@@ -94,7 +94,7 @@
 \begin{theorem}[\emph{\textbf{F}orma \textbf{L}ocal das \textbf{S}ubmersões}]
    Seja \(F\in C^k(U, \R^m)\) submersão em \(p\in U\). Então, \(\exists \mathcal{V}_p\subseteq U\) e \(\exists \ ^kG: V\ab \simeq  \mathcal{V}_p\) tais que \(F\circ G : V \ni (\textbf{x}, x_{m+1}, \ldots, x_n) \mapsto \textbf{x} \in \R^m   \).
 \end{theorem}
-\demo{\parbox[b]{0.35\linewidth}{ \textcolor{white}{dx} }\parbox[a]{0.65\linewidth}{\vspace{0.6cm}Tire uma base l.i. \([DF(p)\cdot e_j]= \R^m\). Tome \(H: U \to \R^m \times \R^{n-m}\) tal que \(\textbf{x}\mapsto (F(\textbf{x}), x_j)\). Estude \([DH(p)\cdot v]\), segue do \(\blacksquare\) \hyperlink{thmTFI}{(\emph{Função Inversa})} que \(H\) é diffeomorfismo. Faça \(G= H^{-1}\), estableça as vizinhanzas e conclua.\vspace{0.6cm}}  
+\demo{\parbox[b]{0.35\linewidth}{ \textcolor{white}{dx} }\parbox[a]{0.65\linewidth}{\vspace{0.6cm}Tire uma base l.i. \([DF(p)\cdot e_j]= \R^m\). Tome \(H: U \to \R^m \times \R^{n-m}\) tal que \(\textbf{x}\mapsto (F(\textbf{x}), x_j)\). Estude \([DH(p)\cdot v]\), segue do \(\blacksquare\) \hyperlink{thmTFI}{(\emph{Função Inversa})} que \(H\) é diffeomorfismo. Faça \(G= H^{-1}\), estabeleça as vizinhanças e conclua.\vspace{0.6cm}}  
 }
 
 \- \vspace{-0.4cm}\begin{tikzpicture}[scale= 0.9, >=to, shift={(0.75cm,4.65cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
@@ -172,7 +172,7 @@
 \end{definition}
 
 \begin{note}
-  \(\pt L = \min\{n,m\}\) \(\leftrightharpoons\) \(L\) é injetiva, sobrejetiva ou isomorfismo. Também, vista como função \(\pt: U \to \N\) é semi-continua inferiormente.
+  \(\pt L = \min\{n,m\}\) \(\leftrightharpoons\) \(L\) é injetiva, sobrejetiva ou isomorfismo. Também, vista como função \(\pt: U \to \N\) é semicontínua inferiormente.
 \end{note}
 
 %\newpage 
@@ -224,7 +224,7 @@
   \tcblower
   \textcolor{gray}{
   Seja \(\iota: \textbf{x}^{(r)} \mapsto (\textbf{x}^{(r)}, q^{(n-r)})\). Use \(\blacksquare\) \hyperlink{thmFLI}{(\emph{FLI})} na função 
-  \(F\circ G\circ \iota : \textbf{x}^{(r)} \mapsto (\textbf{x}^{(r)}, y_i(\textbf{x}^{(r)},q))\). Termine de establecer as vizinhanzas e concluia. }
+  \(F\circ G\circ \iota : \textbf{x}^{(r)} \mapsto (\textbf{x}^{(r)}, y_i(\textbf{x}^{(r)},q))\). Termine de estabelecer as vizinhanças e conclua. }
 \end{tcolorbox}
 \end{enumerate}
 
@@ -300,15 +300,15 @@
   Em geral temos, \(\blacksquare\) \hyperlink{thmTFI}{(\emph{Função Inversa})} \(\leftrightharpoons\) \(\blacksquare\) \hyperlink{thmFLI}{(\emph{FLI})} e \(\blacksquare\) \hyperlink{thmFLS}{(\emph{FLS})} \(\leftrightharpoons\) \(\blacksquare\) \hyperlink{thmPC}{(\emph{Posto Constante})}. Sendo \(F\in C^1(U,\R^m)\) e \(p\in U\) temos: 
   \begin{enumerate}[label = \roman*.]
     \item Se \(\pt JF(p) = r=\min \{n,m\}\), então \( \exists \mathcal{V}_p\) onde \(JF_r(\textbf{x}) \in \operatorname{GL}_r(\R)\). 
-    \item Se \(F\) é localmente injetiva, então é imersão em \(V\ab\subset U\) denso em \(U\). \textcolor{gray}{\(\rightarrow \) Segue do \(\blacksquare\) \hyperlink{thmPC}{(\emph{Posto Constante})} e da semi-continuidade inferior}
+    \item Se \(F\) é localmente injetiva, então é imersão em \(V\ab\subset U\) denso em \(U\). \textcolor{gray}{\(\rightarrow \) Segue do \(\blacksquare\) \hyperlink{thmPC}{(\emph{Posto Constante})} e da semicontinuidade inferior}
     \item Se \(F\) é aberta, então é submersão em \(V\ab\subset U\) denso em \(U\). 
   \end{enumerate}
 \end{corollary}
 
 \alerta{
-  \centering O posto deve ser constante em TODA uma vizinhanza
+  \centering O posto deve ser constante em TODA uma vizinhança
   \tcblower
 \begin{example}
-  \(F: \R^2 \ni (t,s)\mapsto (t^2, t^3, s ) \in \R^3\) ¿Existem coordenadas como no \(\blacksquare\) \hyperlink{thmPC}{(\emph{Posto Constante})} nalguma vizinhança do origem? \textcolor{gray}{\(\rightarrow \) Não} %\(\operatorname{rank}(JF(0,0))\)}
+  \(F: \R^2 \ni (t,s)\mapsto (t^2, t^3, s ) \in \R^3\) ¿Existem coordenadas como no \(\blacksquare\) \hyperlink{thmPC}{(\emph{Posto Constante})} nalguma vizinhança da origem? \textcolor{gray}{\(\rightarrow \) Não} %\(\operatorname{rank}(JF(0,0))\)}
 \end{example}
 }

@@ -1,11 +1,11 @@
-\section{Formula de Taylor}
+\section{Fórmula de Taylor}
 
 \ejemplo{
-    O objetivo é aproximar funções de forma \(f(p+v) = P_k[v] + \Gamma_k[v]\), polinômio homogêneo ordem \(k\) mas erro ordem \(\sigma \|v\|^k\).
+    O objetivo é aproximar funções de forma \(f(p+v) = P_k[v] + \Gamma_k[v]\), polinômio homogêneo ordem \(k\) mas erro ordem \(o\|v\|^k\).
     \tcblower
     \begin{example}
         %Se \(f\in C^2(U)\) e \(p\in U\), então  
-        \(\textstyle  f(p+v) = f(p) + \sum  f _{x_j}(p)v_j+ 1/2\sum f_{x_ix_j}(p) v_iv_j + \sigma\|v\|^2\).
+        \(\textstyle  f(p+v) = f(p) + \sum  f _{x_j}(p)v_j+ 1/2\sum f_{x_ix_j}(p) v_iv_j + o\|v\|^2\).
     \end{example}
 }
 
@@ -62,27 +62,27 @@
 \Ef
 
 \begin{definition}
-    \(f \in C^{k} (\V_p)\) se anula à ordem \(k+1\) em \(p\) se \(\forall \alpha :  |\alpha|\leq k\), \( d^\alpha f (p)=0\). 
+    \(f \in C^{k} (\V_p)\) anula-se até ordem \(k+1\) em \(p\) se \(\forall \alpha :  |\alpha|\leq k\), \( d^\alpha f (p)=0\). 
 \end{definition}
 
 \Ei
 
 \begin{exercise}
-    Se \(f(\textbf{x})= \sum_{|\alpha|\leq k} c_\alpha \textbf{x}^\alpha \) se anula identicamente numa vizinhaza do origem, então \(\forall \alpha, \ c_\alpha = 0\). \textcolor{gray}{\(\rightarrow \) Hmmm }
+    Se \(f(\textbf{x})= \sum_{|\alpha|\leq k} c_\alpha \textbf{x}^\alpha \) anula-se identicamente numa vizinhança da origem, então \(\forall \alpha, \ c_\alpha = 0\). \textcolor{gray}{\(\rightarrow \) Hmmm }
 \end{exercise}
 
 \hypertarget{thm51}{}
 \begin{theorem}
-    \textbf{5.1.} Sejam \(k\geq 1\) e \(f\) uma função \(k\)-diff em \(0\in \R^n\). Se \(f\) se anula à ordem \(k+1 \), então \(f(v)=\sigma\|v\|^k\).
+    \textbf{5.1.} Sejam \(k\geq 1\) e \(f\) uma função \(k\)-diff em \(0\in \R^n\). Se \(f\) anula-se a ordem \(k+1 \), então \(f(v)=o\|v\|^k\).
 \end{theorem}
 \demo{Faz por indução, no paso indutivo use o \(\blacksquare\) \hyperlink{thmTVMRn}{(\emph{TVM - \(\R^n\)})} para representar \(f(v)\) e calcule \(\lim\limits_{v\to 0} \frac{f(v)}{\|v\|^k} \). Considere a função  
 \- \vspace{-0.3cm}\[\textstyle \Gamma_k(v) : v \mapsto f(p+v) - \sum^k \frac{1}{j!} \  d^jf(p) v^{\otimes j}, \]
-observe que ela é \(k\)-diff no \(0\) e se anula à ordem \(k+1\).} 
+observe que ela é \(k\)-diff no \(0\) e anula-se à ordem \(k+1\).} 
 
 \begin{corollary}[]%[Colorario]
 \hypertarget{coro52}{}
-    \textbf{5.2.} (\emph{Fórmula de Taylor Infinitesimal}) Se \(f\) é \(k\)-diff em \(p\) e fazendo \(\textbf{x}=p+v\) no contexto da demostração do \(\blacksquare\) \hyperlink{thm51}{5.1.} temos,
-    \[f(\textbf{x}) = \sum_{|\alpha|\leq k}\frac{\partial^\alpha f (p)}{\alpha !} \ (\textbf{x}-p)^\alpha + \sigma\|\textbf{x}-p\|^k. \]
+    \textbf{5.2.} (\emph{Fórmula de Taylor Infinitesimal}) Se \(f\) é \(k\)-diff em \(p\) e  \(\textbf{x}=p+v\) no contexto da demonstração do \(\blacksquare\) \hyperlink{thm51}{5.1.} temos,
+    \[f(\textbf{x}) = \sum_{|\alpha|\leq k}\frac{\partial^\alpha f (p)}{\alpha !} \ (\textbf{x}-p)^\alpha + o\|\textbf{x}-p\|^k. \]
     %\[f(p+v)= \sum^k \frac{1}{j!} \  d^jf(p) v^{\otimes j}  + \sigma(\|v\|^k).\] 
 \end{corollary}    
 

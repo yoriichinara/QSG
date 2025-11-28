@@ -16,7 +16,7 @@
 \- \vspace{-1cm}
 \begin{enumerate}[left = 0.1cm]
 \item[] \demo{
-    \parbox[b]{0.63\linewidth}{\-\vspace{0.3cm}\\ \textcolor{black}{\emph{Nota}.} Basta ver a volta. Sem perda de generalidade, podemos supor que \(p=0\), \(F(p) = 0 \) e \(DF = \id_{n}\). Remeta-se ao gráfico, nele,  {\small (*) \(= [DF(p)]^{-1 }(\textbf{x}-F(p))\)} e {\small (**) \(= [DF(p)]^{-1 }(F(\textbf{x}+p)- F(p)) \)}. Nestes novos termos \(F(\textbf{x}) = \textbf{x} + R(\textbf{x})\), \vspace{0.4cm}onde \(R(\textbf{x})= \sigma \|\textbf{x}\|\). }\parbox[a]{0.35\linewidth}{\ } 
+    \parbox[b]{0.63\linewidth}{\-\vspace{0.3cm}\\ \textcolor{black}{\emph{Nota}.} Basta ver a volta. Sem perda de generalidade, podemos supor que \(p=0\), \(F(p) = 0 \) e \(DF = \id_{n}\). Remeta-se ao gráfico, nele,  {\small (*) \(= [DF(p)]^{-1 }(\textbf{x}-F(p))\)} e {\small (**) \(= [DF(p)]^{-1 }(F(\textbf{x}+p)- F(p)) \)}. Nestes novos termos \(F(\textbf{x}) = \textbf{x} + R(\textbf{x})\), \vspace{0.4cm}onde \(R(\textbf{x})= o \|\textbf{x}\|\). }\parbox[a]{0.35\linewidth}{\ } 
 }
 
 \begin{tikzpicture}[scale=1.2, >=to, shift={(10.5cm,1.9cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
@@ -51,12 +51,12 @@
 \- \vspace{-1.8cm}
 \item[] \begin{lemma}
     \hypertarget{lemma82}{}
-    \textbf{8.2.} Seja \(F:U\ab\subseteq \R^n \to \R^m\) aplicação diff em \(p\in U\), então \(\forall \epsilon >0\), \( \exists \V_p \) tal que \(\forall\textbf{x} \in \V_p\), \(\|F(\textbf{x})- F(p)\| \leq (\|DF(p)\|+\epsilon )\|\x - p\|\). \textcolor{gray}{\(\rightarrow \) Use a definição de diff com \(v= \x-p\)} 
+    \textbf{8.2.} Seja \(F:U\ab\subseteq \R^n \to \R^m\) aplicação diff em \(p\in U\), então \(\forall \epsilon >0\), \( \exists \V_p \) tal que \(\forall\textbf{x} \in \V_p\), \(\|F(\textbf{x})- F(p)\| \leq (\|DF(p)\|+\epsilon )\|\x - p\|\). \textcolor{gray}{\(\rightarrow \) \(\rotatebox{45}{$\boxdot$}\) diff com \(v= \x-p\)} 
 \end{lemma}
 \item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
     \centering \(\exists \V_0\) tal que \(F: \V_0 \hookrightarrow F(\V_0)\)  
     \tcblower 
-    \textcolor{gray}{\(DR(0)=0\), logo do {\scriptsize \(\square\)} \hyperlink{lemma82}{8.2.}, com \(p=0\) e \(\epsilon = \frac{1}{2}\) sabemos \(\exists\V_0\) tal que \(\forall \textbf{x}_1, \textbf{x}_2 \in \V_0\), \(\|R(\textbf{x}_1) - R(\textbf{x}_2)\|\leq \frac{1}{2}\|\textbf{x}_1-\textbf{x}_2\|\). Leve a expressão a termos de \(F\) e concluia.}  
+    \textcolor{gray}{\(DR(0)=0\), logo do {\scriptsize \(\square\)} \hyperlink{lemma82}{8.2.}, com \(p=0\) e \(\epsilon = \frac{1}{2}, \exists\V_0\) tal que \(\forall \textbf{x}_1, \textbf{x}_2 \in \V_0\), \(\|R(\textbf{x}_1) - R(\textbf{x}_2)\|\leq \frac{1}{2}\|\textbf{x}_1-\textbf{x}_2\|\). Leve a expressão a termos de \(F\) e conclua.}  
 \end{tcolorbox}
 \begin{definition}
     Sejam \(M, \ N\) espaços métricos. Uma aplicação \(T:M\to N\) é uma \emph{contração} se \(\exists c<1\) tal que \(\forall x,y \in M, \ \|T(x)- T(y)\|\leq c\|x-y\|\). 
@@ -73,7 +73,7 @@
 \end{tcolorbox}
 \hypertarget{lemma83}{}
 \begin{lemma}
-    \textbf{8.3.} Seja \(L \in \operatorname{GL}_n(\R)\). A aplicação \(\operatorname{inv}: L \mapsto L^{-1} \) é diff. \textcolor{gray}{\(\rightarrow \) Faz direito \(\text{inv}(L+H)\) e use a serie geométrica de Neumann}    
+    \textbf{8.3.} Seja \(L \in \operatorname{GL}_n(\R)\). A aplicação \(\operatorname{inv}: L \mapsto L^{-1} \) é diff. \textcolor{gray}{\(\rightarrow \) Faz direito \(\text{inv}(L+H)\) e use a série geométrica de Neumann}    
 \end{lemma}
 \item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
     \centering \(F^{-1} \in C^k(F(\V_0), \R^n)\) %é diff em \(F(\V_0)\) e \(D[F^{-1}](q) = [DF(p)]^{-1}\) 
@@ -127,18 +127,18 @@
 
 \hypertarget{cor84}{}
 \begin{corollary}
-    \textbf{8.4.} Seja \(F \in C^k(U,\R^n)\) tal que \(\forall p \in U\), \(\det JF(p)\neq 0\), então \(F\) é uma aplicação aberta. Mas ainda, se \(F\) fora injetora, então \(^k F: U \simeq F(U)\). 
+    \textbf{8.4.} Seja \(F \in C^k(U,\R^n)\) tal que \(\forall p \in U\), \(\det JF(p)\neq 0\), então \(F\) é uma aplicação aberta. Mas ainda, se \(F\) for injetora, então \(^k F: U \simeq F(U)\). 
 \end{corollary}
 
 
 \ejemplo{\centering Perturbação da Identidade
 \tcblower
 \begin{lemma}
-    Sejam \(G\in C^k(\R^n, \R^n)\), \(k\geq 1: \|DG\| < 1\) e \(F(\x) = \x + G(\x)\). Então, \(^kF: \R^n \cong U\ab \subseteq \R^n\). Além disso, se \(\|DG \| \leq \lambda < 1\), \(F\) é sobrejetiva. \comentario{Serie de Neumann + {\scriptsize \(\boxtimes\)} \hyperlink{cor84}{8.4.} + \(\blacksquare\) \hyperlink{thmPFB}{(\emph{Punto Fixo Banach})}}
+    Sejam \(G\in C^k(\R^n, \R^n)\), \(k\geq 1: \|DG\| < 1\) e \(F(\x) = \x + G(\x)\). Então, \(^kF: \R^n \cong U\ab \subseteq \R^n\). Se \(\|DG \| \leq \lambda < 1\), \(F\) é sobrejetiva. \comentario{Série de Neumann + {\scriptsize \(\boxtimes\)} \hyperlink{cor84}{8.4.} + \(\blacksquare\) \hyperlink{thmPFB}{(\emph{Punto Fixo Banach})}}
 \end{lemma}
 \vspace{0.3cm}
 \begin{example}
-    Em \(U = (-1,1)^2 \subset \R^2\), o seguinte sistema tém solução única 
+    Em \(U = (-1,1)^2 \subset \R^2\), o seguinte sistema tem solução única 
     \[\begin{cases}
         x_1 + \frac{1}{40} x_1^4 + \frac{1}{5}\ln(x_2 + e^2) = \frac{2}{5} \\ 
         x_2 + \frac{1}{7} \sin (x_1) + 1 = 1
@@ -196,7 +196,7 @@
 \vspace{-0.8cm}
 \begin{corollary}
 \hypertarget{corol83}{}
-\textbf{8.5.} Pelo \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} temos \(JG_q(p,q) \cdot JF_p(p,q)  = - JG_p(p,q)\).   
+\textbf{8.5.} Pelo \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regra da Cadeia})} temos \(JG_q(p,q) \cdot JF_p(p,q)  = - JG_p(p,q)\).   
 \end{corollary}
 
 \ejemplo{
@@ -233,18 +233,18 @@
 
 \hypertarget{corol84}{}
 \begin{corollary}
-    \textbf{8.6.} \(^kH\subseteq \R^n\) hipersuperficie é localmente o gráfico de uma função.  
+    \textbf{8.6.} \(^kH\subseteq \R^n\) hipersuperfície é localmente o gráfico de uma função.  
 \end{corollary}
 
 \hypertarget{prop85}{}
 \begin{proposition}
-    \textbf{8.7.} Sejam \(^k H\subseteq \R^n\) hipersuperficie definida por \(g(\textbf{x})=0\), \(p\in H\) e \(c\in C^k(\mathcal{V}_\epsilon,H)\) um caminho em \(H\). Então, \(\ker dg(p)= \{\dot{c}(0): c(0) = p \}\).
+    \textbf{8.7.} Sejam \(^k H\subseteq \R^n\) hipersuperfície definida por \(g(\textbf{x})=0\), \(p\in H\) e \(c\in C^k(\mathcal{V}_\epsilon,H)\) um caminho em \(H\). Então, \(\ker dg(p)= \{\dot{c}(0): c(0) = p \}\).
 \end{proposition}
 
-\demo{(\(\supseteq \)) Use \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regla da Cadeia})} na função \((g \circ c)(t)\). (\(\subseteq\)) \(\exists i \leq n \) tal que \(\frac{\partial g}{\partial x_i}(p) \neq 0\), suponha que é a última \(i=n\). Tome \(\vec{v}\in \R^n: dg(p)\cdot v=0\), aplique \(\blacksquare\) \hyperlink{thmTFIm}{(\emph{Função Implícita})}, assim, \(c(t)= (p_j + tv_j, f(p_j+tv_j))\). Finalmente, use nele o {\scriptsize \(\boxtimes\)} \hyperlink{corol83}{8.5.}. }
+\demo{(\(\supseteq \)) Use \(\blacksquare\) \hyperlink{thmRDC}{(\emph{Regra da Cadeia})} na função \((g \circ c)(t)\). (\(\subseteq\)) \(\exists i \leq n \) tal que \(g_{x_i}(p) \neq 0\), suponha que é a última \(i=n\). Tome \(\vec{v}\in \R^n: dg(p)\cdot v=0\), aplique \(\blacksquare\) \hyperlink{thmTFIm}{(\emph{Função Implícita})}, assim, \(c(t)= (p_j + tv_j, f(p_j+tv_j))\). Finalmente, use nele o {\scriptsize \(\boxtimes\)} \hyperlink{corol83}{8.5.}. }
 
 \begin{definition}
-    Seja \(p \in \ ^k H\subseteq \R^n\) hipersuperficie. O \emph{espaço tangente} a \(H\) em \(p\) é    
+    Seja \(p \in \ ^k H\subseteq \R^n\) hipersuperfície. O \emph{espaço tangente} a \(H\) em \(p\) é    
     \[T_pH:= \ker dg(p) = \{\vec{v} \in \R^n: \langle \nabla g(p), v\rangle = 0\}. \footnote{\(T_pH\leq \R^n\) não necessariamente passa por \(p\).}\]
 \end{definition} 
 %\begin{note}

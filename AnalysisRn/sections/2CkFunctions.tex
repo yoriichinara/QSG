@@ -8,18 +8,18 @@
 
 
 \begin{definition}
-    \vspace{-0.5cm}Seja \(k\in \Z_{\geq 0} \). Uma função \(f:U\ab\subseteq \R^n\to \R\) é de classe \(C^k(U)\) sse \(\forall |\alpha| \leq k, \exists \partial^\alpha f: U \to \R\) e são continuas. 
+    \vspace{-0.5cm}Seja \(k\in \Z_{\geq 0} \). Uma função \(f:U\ab\subseteq \R^n\to \R\) é de classe \(C^k(U)\) sse \(\forall |\alpha| \leq k, \exists \partial^\alpha f: U \to \R\) e são contínuas. 
 \end{definition}
 
 \begin{note}
-\(f \in C^0\leftrightharpoons f\) continua; \(f \in C^\infty \leftrightharpoons f\) é \emph{suave}.  
+\(f \in C^0\leftrightharpoons f\) contínua; \(f \in C^\infty \leftrightharpoons f\) é \emph{suave}.  
 \end{note}
 %Note que van a existir varias derivadas de orden \(k\), dependiendo del valor de \(n\)
 \begin{example}
-    O anel de polinômios \(\R[x_1,\ldots,x_n]\subseteq C^\infty(\R^n)\). Portanto também, \(\det \in C^\infty\left(\R^{n^2}\right)\). \textcolor{gray}{\(\rightarrow\) A formúla de Laplace diz que é polinômial}
+    \(\mathcal{P}[x_1,\ldots,x_n]\subseteq C^\infty(\R^n)\). Em particular, \(\det \in C^\infty\left(\R^{n^2}\right)\). \textcolor{gray}{\(\rightarrow\) Pela fórmula de Laplace o determinante é polinomial}
 \end{example}
 \begin{example}
-    Seja \(f: x\mapsto x^{1/3}\), então \(f \in C^0(\R)\setminus C^1(\R)\) pois \(\nexists \dot{f}(0)\). \textcolor{gray}{\(\rightarrow\) Veja o que acontece com o límite nesse punto}
+    Seja \(f: x\mapsto x^{1/3}\), então \(f \in C^0(\R)\setminus C^1(\R)\) pois \(\nexists \dot{f}(0)\). \textcolor{gray}{\(\rightarrow\) Veja o que acontece com o limite nesse ponto}
 \end{example}
 
 %\begin{textblock*}{5cm}(14.75cm, 1cm) % ancho de la caja y posición (x,y)
@@ -44,7 +44,7 @@
     Se \(f \in C^2(U)\), então \(\forall i,j \leq n\), \ \(\displaystyle\frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2 f }{\partial x_j \partial x_i}\). 
 \end{theorem}
 
-\demo{\parbox[a]{0.27\linewidth}{\- }\parbox[b]{0.73\linewidth}{\vspace{0.2cm}Basta ver \(n=2\). Defina \( S = f(x+h, y+k) - f(x+h,y) - f(x, y+k) + f(x,y)\) e \(\varphi(t) = f(t, y+k) - f(t, y)\), aplique \(\blacksquare\) \hyperlink{thmTVMR}{(\emph{TVM - \(\R\)})}\(\times 2\) e manobre até obter uma igualdade a \(S\). O resultado segue de fazer o mesmo a \(\psi(t)\), fixando a outra coordenada.\vspace{0.2cm}}}
+\demo{\parbox[a]{0.27\linewidth}{\- }\parbox[b]{0.73\linewidth}{\vspace{0.2cm}Basta ver \(n=2\). Defina \( S = f(x+h, y+k) - f(x+h,y) - f(x, y+k) + f(x,y)\) e \(\varphi(t) = f(t, y+k) - f(t, y)\), aplique \(\blacksquare\) \hyperlink{thmTVMR}{(\emph{TVM - \(\R\)})}\(\times 2\) e manipule até obter uma igualdade a \(S\). O resultado segue de fazer o mesmo a \(\psi(t)\), fixando a outra coordenada.\vspace{0.2cm}}}
 
 \-\vspace{-1cm}
 \begin{tikzpicture}[scale = 0.9, >=to, shift={(2cm,2.65cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
@@ -75,5 +75,5 @@
 \end{tikzpicture}
 
 \begin{corollary}
-    Se \(f\in C^k(U)\), então não importa o ordem em que são tomadas as derivadas de ordem \(|\alpha|\leq k\). \textcolor{gray}{\(\rightarrow\) É questão de trabalhá-las 2 a 2}
+    Se \(f\in C^k(U)\), então não importa a ordem em que são tomadas as derivadas de ordem \(|\alpha|\leq k\). \textcolor{gray}{\(\rightarrow\) É questão de trabalhá-las 2 a 2}
 \end{corollary}

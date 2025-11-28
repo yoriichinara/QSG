@@ -1,7 +1,7 @@
 \section{Pontos Críticos}
 
 \begin{definition}
-    Seja \(f:U\ab\subseteq \R^n\to \R\). Dizemos que \(p \in U\) é extremo local da \(f\) se \(\exists \delta >0\) tal que se \(\|\x-p\|<\delta\), então \(f(p) \leq f(\x) \) ou \(f(\x) \leq f(p)\). 
+    Seja \(f:U\ab\subseteq \R^n\to \R\). Dizemos que \(p \in U\) é extremo local de \(f\) se \(\exists \delta >0\) tal que se \(\|\x-p\|<\delta\), então \(f(p) \leq f(\x) \) ou \(f(\x) \leq f(p)\). 
 \end{definition}
 %\begin{exercise}
 %    Se \(f\) é diff em \(p\) extremo local da \(f\), então \(\nabla f (p) = 0\). \textcolor{gray}{\(\rightarrow\) Trabalhe o limite em direções opostas}
@@ -19,13 +19,13 @@
 %    \(f: U\ab \subseteq \R^n \to \R\) tem um \emph{extremo local} en \(p\in U\) sii \(\exists \mathcal{V}_p\) tal que \(\forall \textbf{x}\in \mathcal{V}_p\) se tiene \(f(\textbf{x}) \leq f(p)\) (máximo local) o \(f(p) \leq f(\textbf{x})\) (mínimo local).  
 %\end{definition}
 \begin{proposition}
-    Se \(f\) é diff em \(p\) extremo local da \(f\), então \(p\) é ponto crítico. \textcolor{gray}{\(\rightarrow \ 0\) es extremo local de \(\varphi_i(t) = f(p+te_i)\)}
+    Se \(f\) é diff em \(p\) extremo local de \(f\), então \(p\) é ponto crítico. \textcolor{gray}{\(\rightarrow \ 0\) é extremo local de \(\varphi_i(t) = f(p+te_i)\)}
 \end{proposition}
 % \begin{note}
 %     El objetivo ahora es clasificar como máximo o mínimo o ninguno de los dos. 
 % \end{note} \(f(\textbf{x}) - f(p)\)
 \ejemplo{ \centering
-    Em \(p\) crítico, o valor de \(f|_{\U_p}\) é determinado por \(d^2f(p)v^{\otimes 2}\) %= \langle Hf(p)\cdot v, v\rangle\). 
+    Em \(p\) crítico, o valor de \(f|_{{\U_p}}\) é determinado por \(d^2f(p)v^{\otimes 2}\) %= \langle Hf(p)\cdot v, v\rangle\). 
     \tcblower
 \begin{example}
     Se \(Hf(p)= \operatorname{diag}(\lambda_1, \ldots,\lambda_n)\), então 
@@ -35,7 +35,7 @@
 }
 
 \begin{definition}
-    \(A \in M_{n }(\R)\) é \emph{positiva} se \(\forall v\in \R^n \setminus \{0\}\), \( \phi (v,v) := [v]^t A [v] =  \langle v, Av\rangle > 0\), \emph{negativa} se \(\phi(v,v)<0\) ou \emph{indefinida} se for outro o caso. 
+    \(A \in M_{n }(\R)\) é \emph{definida positiva} se \(\forall v\in \R^n \setminus \{0\}\), \( \phi (v,v) := [v]^t A [v] =  \langle v, Av\rangle > 0\), \emph{negativa} se \(\phi(v,v)<0\) ou \emph{indefinida} se for outro o caso. 
 \end{definition}
 
 \Ei
@@ -59,7 +59,7 @@
 \begin{theorem}
     Seja \(f\) função \(2\)-diff em \(p\in U\) ponto crítico. Se \(Hf(p)\) é positiva (ou negativa), então \(f(p)\) é um mínimo (ou máximo) local. 
 \end{theorem}
-\demo{Use \ \(\mathbb{S}^{n-1} \ni \vec{u}\mapsto \langle u, Hf(p)\cdot u \rangle\) pra ver que existe uma cota. Interprete essa cota no desenvolvimiento de Taylor de ordem $2$. }
+\demo{Use \ \(\mathbb{S}^{n-1} \ni \vec{u}\mapsto \langle u, Hf(p)\cdot u \rangle\) pra ver que existe uma cota. Interprete essa cota no desenvolvimento de Taylor de ordem $2$. }
 
 \begin{definition}
     Sejam \(f\) função \(2\)-diff e \((\lambda_j)\) os autovalores de \(Hf(p)\). Um ponto crítico \(p\) de \(f\) é \emph{ponto de sela} sse \(\exists \ i,j\leq n\) tais que \(\lambda_i\lambda_j <0\). 
@@ -82,7 +82,7 @@
 \subsection*{Otimização}
 
 \begin{theorem}[\emph{Bolzano-Weierstrass}]
-    Sejam \(K\subseteq \R^n\) compacto e \(f:K\to \R\) continua. Então, \(f\) tem máximo e mínimo global em \(K\). 
+    Sejam \(K\subseteq \R^n\) compacto e \(f:K\to \R\) contínua. Então, \(f\) tem máximo e mínimo global em \(K\). 
 \end{theorem}
 %\begin{note}
 %     
@@ -95,10 +95,10 @@
 }
 
 \begin{lemma}
-    Sejam \(F\ce\subseteq \R^n\) não limitado e \(f:X\to \R\) continua, então  
+    Sejam \(A\ce\subseteq \R^n\) não limitado e \(f:X\to \R\) contínua, então  
     \begin{enumerate}[label=\roman*.]
-        \item Se \(f(\textbf{x})\to \infty \) quando \(\|\textbf{x}\|\to \infty \), então \(f\) tem mínimo global em \(F\).
-        \item Se \(f(\textbf{x}) \to 0\) quando \(\|\textbf{x}\|\to \infty\), então \(f\) tem máximo global em \(F\).
+        \item Se \(f(\textbf{x})\to \infty \) quando \(\|\textbf{x}\|\to \infty \), então \(f\) tem mínimo global em \(A\).
+        \item Se \(f(\textbf{x}) \to 0\) quando \(\|\textbf{x}\|\to \infty\), então \(f\) tem máximo global em \(A\).
     \end{enumerate}   
 \end{lemma}
 
@@ -108,7 +108,7 @@ ii. Mesmo negócio. }
 \subsection*{Problemas com Condições}
 
 \begin{definition}
-    Seja  \(g\in C^k(U)\) tal que \(\forall p\in U : g(p)=0\), \(dg(p)\neq 0\). O conjunto \(^k H:= \{\textbf{x} \in \R^n : g(\textbf{x}) = 0\}\) é uma \emph{hipersuperficie} de classe \(C^k\). 
+    Seja  \(g\in C^k(U)\) tal que \(\forall p\in U : g(p)=0\), \(dg(p)\neq 0\). O conjunto \(^k H:= \{\textbf{x} \in \R^n : g(\textbf{x}) = 0\}\) é uma \emph{hipersuperfície} de classe \(C^k\). 
 \end{definition}
 
 \begin{example}
@@ -137,6 +137,6 @@ ii. Mesmo negócio. }
 % \end{example}
 
 \begin{theorem}[\emph{Teorema Espectral}]
-    Toda matriz símetrica admite uma base ortonormal de autovetores (é diagonalizável). %\footnote{Apareciendo en este caso como consecuencia de los multiplicadores de Lagrange.} 
+    Toda matriz simétrica admite base ortonormal ortonormal formada por autovetores (é diagonalizável). %\footnote{Apareciendo en este caso como consecuencia de los multiplicadores de Lagrange.} 
 \end{theorem}
-\demo{Tome \(\mathbb{S}^1 \ni u \mapsto \langle Au, u \rangle \), e um vetor \(u_1\) que a máximiza. Do sistema observa-se que \(u_1\) é autovetor com autovalor \(\lambda_1\). Tome o complemento ortogonal de \([u_1]\) e formule o argumento indutivo. }
+\demo{Tome \(\mathbb{S}^1 \ni u \mapsto \langle Au, u \rangle \), e um vetor \(u_1\) que máximiza. Do sistema observa-se que \(u_1\) é autovetor de autovalor \(\lambda_1\). Tome \([u_1]^\perp\) e formule o argumento indutivo. }

@@ -2,7 +2,7 @@
 
 \renewcommand{\hom}{\operatorname{Hom}}
 \begin{definition}
-    Sejam \(f:U\ab\subseteq \R^n \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in (\R^n)'\) tal que \(f(p+v) = f(p) + \ell\cdot v + \sigma\|v\|, \text{ quando} \ v\to 0. \footnote{\((\R^n)' := \hom_\R(\R^n, \R)\), o espaço dual, olha as notas de Álgebra Linear II.}\)
+    Sejam \(f:U\ab\subseteq \R^n \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in (\R^n)'\) tal que \(f(p+v) = f(p) + \ell\cdot v + o\|v\|, \text{ quando} \ v\to 0. \footnote{\((\R^n)' := \hom_\R(\R^n, \R)\), o espaço dual, olha as notas de Álgebra Linear II.}\)
 \end{definition}
 %\vspace{-0.4cm}
 \begin{note}
@@ -16,7 +16,7 @@
     \(df(p)\cdot v := \sum^n f_{x_j}(p)\cdot v_j\).
 \end{definition} %\section*{Aula III}
 
-\alerta{\centering \(\forall j\leq n, \ \exists f_{x_j}(p)\) \textcolor{red}{\(\nRightarrow \)} \(df(p)\) lineal \textcolor{red}{\(\nRightarrow\)} \(f\) diff en \(p\)}
+\alerta{\centering \(\forall j\leq n, \ \exists f_{x_j}(p)\) \textcolor{red}{\(\nRightarrow \)} \(df(p)\) linear \textcolor{red}{\(\nRightarrow\)} \(f\) diff em \(p\)}
 \begin{example}
     \(f: \R^n \ni \textbf{x} \mapsto \|\textbf{x}\|^2 \in \R\) e diff em \(\R^n\). \textcolor{gray}{\(\rightarrow\) Como em nosso primeiro exemplo}
 \end{example}
@@ -26,7 +26,7 @@
 
 
 \begin{proposition}
-    Se \(f\) é diff em \(p\), então é continua em \(p\). \textcolor{gray}{\(\rightarrow \) Faz \(v\to 0\) na definição }
+    Se \(f\) é diff em \(p\), então é contínua em \(p\). \textcolor{gray}{\(\rightarrow \) Faz \(v\to 0\) na definição }
 \end{proposition}
 
   
@@ -34,7 +34,7 @@
 \tcblower
  
 \begin{example}
-    \(0\neq (x,y) \mapsto \frac{xy^2}{\|\textbf{x}\|^2}\), nula em \(0\). \textcolor{gray}{\(\rightarrow f(v) = \sigma\|v\|\)? Estude a linearidade das direcionais no \(0\)}  
+    \(0\neq (x,y) \mapsto \frac{xy^2}{\|\textbf{x}\|^2}\), nula em \(0\). \textcolor{gray}{\(\rightarrow f(v) = o\|v\|\)? Estude a linearidade das direcionais no \(0\)}  
 \end{example}
 \begin{example}
     \(0\neq (x,y) \mapsto \frac{xy^3}{x^2 + y^4}\), nula em \(0\). \textcolor{gray}{\(\rightarrow \) Proceda como no anterior}  
@@ -61,7 +61,7 @@
 %\end{example}
 \ejemplo{\centering  \(p(\x) \in \R[\x]\) é diff \textcolor{verdeoscuro}{\(\Rightarrow\)} \(\pi_j: \x \mapsto x_j \) é diff
 \tcblower
-    Além disso, \(dx_j(p) (v) = v_j \), então \(dx_j(p)(e_i) = \delta_{ij}\), quer dizer que \((dx_j) = (e_j)'\) e o diferencial se escreve de manera única como:  
+    Além disso, \(dx_j(p) (v) = v_j \), então \(dx_j(p)(e_i) = \delta_{ij}\), quer dizer que \((dx_j) = (e_j)'\) e o diferencial se escreve de maneira única como:  
     \[ df(p) = \sum^n \frac{\partial f }{\partial x_j}(p) \ dx_j. \]
 }
 
@@ -76,7 +76,7 @@
 \Ef
 
 \begin{definition}
-    Se \(f\) é diff em \(p\), então chamamos de \emph{gradiente} de \(f\) em \(p\) o vector 
+    Se \(f\) é diff em \(p\), então chamamos de \emph{gradiente} de \(f\) em \(p\) o vetor 
     \[\nabla f(p) := \left(\frac{\partial f}{\partial x_1}(p),\ldots,\frac{\partial f}{\partial x_n}(p)\right)^t. \]
 \end{definition}
 

@@ -1,6 +1,6 @@
 \section{Integração em Variedades}
 
-Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)}'\) únicamente para o espaço dual, isso vai continuar assim, não confundir com derivadas.  
+Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)}'\) unicamente para o espaço dual, isso vai continuar assim, não confundir com derivadas.  
 
 \subsection*{Integração em Cadeias}
 
@@ -37,7 +37,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 
 %\parbox[l]{0.6\linewidth}{
 \begin{definition}
-    Uma $k$\emph{-cadeia} de blocos em \(M\) é uma expresão,
+    Uma $k$\emph{-cadeia} de blocos em \(M\) é uma expressão,
     \[ c = {\sum^k} n_i \sigma_i, \ n_i \in \mathbb{Z} \ \text{e } \sigma_i:\I^k\to  M.\  \footnote{Mais formalmente, as $k$-cadeias são elementos do grupo abeliano livre gerado pelos $k$-blocos. }\hspace{7.5cm}\] 
     %onde \(n_j \in \mathbb{Z} \) e \(\sigma_j: I^k \to M \) é um $k$-cubo singular.
 \end{definition}
@@ -77,7 +77,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 \end{definition}
 
 \begin{definition}
-    Seja \(\sigma \) um $k$-bloco. O \emph{borde} de \(\sigma\) é a \((k-1)\)-cadeia dada por
+    Seja \(\sigma \) um $k$-bloco. O \emph{bordo} de \(\sigma\) é a \((k-1)\)-cadeia dada por
     \[\hspace{5cm} \partial \sigma = \sum^k (-1)^i (\sigma_{(i,0)}- \sigma_{(i,1)}).\]
 \end{definition}
 
@@ -155,7 +155,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
   \textcolor{black}{\emph{Nota.}} Podemos fazer algumas suposições inicias: \textcolor{black}{
 \begin{enumerate}[label = \roman*., left = -0.5cm]
     \item \(c = \sigma \) $k$-bloco. \comentario{Se valer \(\blacksquare\) \hyperlink{thmStokes}{(\emph{Stokes})} pra $k$-blocos, então \(\int_c d\omega = \sum n_i \int_{\sigma_i} d \omega = \sum n_i \int_{\partial \sigma_i} \omega = \int_{\sum n_i \partial \sigma_i} \omega = \int_{\partial c} \omega \) }
-    \item \(\sigma = \id_{\I^k} \) e \(M\) uma vizinhanza de \( \I^k\). \comentario{\(\textstyle\int_\sigma d\omega = \int_{\id_{\I^k}} \sigma ^{\bullet} (d\omega) = \int_{\id_{\I^k}} d (\sigma ^{\bullet}(\omega)) = \int_{\partial \id_{\I^k}} \sigma ^{\bullet}(\omega) = \int_{\partial \sigma} \omega \). }
+    \item \(\sigma = \id_{\I^k} \) e \(M\) uma vizinhança de \( \I^k\). \comentario{\(\textstyle\int_\sigma d\omega = \int_{\id_{\I^k}} \sigma ^{\bullet} (d\omega) = \int_{\id_{\I^k}} d (\sigma ^{\bullet}(\omega)) = \int_{\partial \id_{\I^k}} \sigma ^{\bullet}(\omega) = \int_{\partial \sigma} \omega \). }
     \item \(\omega = f \hat{\omega}_i \in \Omega^{k-1}(U),\ U\ab\subseteq \R^k : \I^k\subset U\). \comentario{\(\textstyle\int_{\sigma} d\omega = \int_{\sigma} d\left(\sum f_i \hat{\omega}_i\right) = \sum \int_{\sigma} d\left( f_i \hat{\omega}_i\right) = \sum \int_{\partial \sigma}  f_i \hat{\omega}_i = \int_{\partial \sigma} \omega\). }
 \end{enumerate}}
 }
@@ -172,7 +172,7 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 %
 \begin{itemize}[label = , left = 0.45cm]
 \item \demo{
-  Supondo i., ii. e iii. precisamos analizar os dois lados da igualdade:  
+  Supondo i., ii. e iii. precisamos analisar os dois lados da igualdade:  
   \vspace{0.4cm}
   \begin{itemize}[label = , left = 0.5cm]
     \item[\(\leftarrow\)]\(\int_{\partial \sigma} \omega = \textstyle \sum (-1)^j\left(\int_{\sigma(j,0)} \omega - \int_{\sigma_{(j,1)}} \omega \right) = \sum (-1)^j(\)\(\int_{\I^{k-1}} \sigma_{(j,0)} ^{\bullet} (\omega) - \int_{\I^{k-1}} \sigma_{(j,1)}^{\bullet}(\omega) ) \). Note que, \(\sigma_{(j,0)}^{\bullet}(\omega)= \sigma_{(j,1)}^{\bullet}(\omega)=0\) se \(i \neq j\), pois  \(x_j\) constante \(\Rightarrow\) \(dx_j= 0 \), assim, 
@@ -187,14 +187,14 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
 %  Se \(\omega \in \Omega^k(M)\) é exata e \(c\) é uma $k$-cadeia fechada então \(\displaystyle \int_c \omega = 0 \).  
 %\end{corollary}
 
-\subsection*{Integração em Variedades com Bordo}
+\subsection*{Integração em Variedades com Borda}
 
 \begin{definition}
   \centering \(\R^n_+ := \{(x_1, \ldots, x_n) \in \R^n : x_n \geq 0\}\). 
 \end{definition}
 
 \begin{definition}
-  Um subconjunto \(_d^k\overline{M}\subseteq  \R^n\) é \emph{variedade com bordo} \( \overline{M}\setminus M =:\  _{d-1}\partial M\subseteq \R^n\) se \(\forall p \in \overline{M}, \ \exists ^k\varphi : \U_p \cap \overline{M} \simeq V\ab\subseteq \R^d_+\). 
+  Um subconjunto \(_d^k\overline{M}\subseteq  \R^n\) é \emph{variedade com borda} \( \overline{M}\setminus M =:\  _{d-1}\partial M\subseteq \R^n\) se \(\forall p \in \overline{M}, \ \exists ^k\varphi : \U_p \cap \overline{M} \simeq V\ab\subseteq \R^d_+\). 
 \end{definition}
 
 %\begin{note}
@@ -205,24 +205,25 @@ Nesta seção \(I := [0,1]\subset \R\). Até agora usamos \(\textcolor{gray}{(-)
   Sejam \(_dM\subseteq \R^n\) e \(g \in C^\infty(M)\). Se \(0\) é valor regular de \(g\), então \(\overline{N}:= g^{-1}([0,\infty)) \) é \(_d\overline{N} \subseteq \R^n\) e \(\partial N = g^{-1}(0)\). \comentario{Usa \(\blacksquare\) \hyperlink{thmFLS}{(\emph{FLS})} em \( \{0\}\cup (0,\infty)\) }
 \end{theorem}
 \- \vspace{-0.6cm}
-\begin{figure}[!h]
+\begin{figure}[!ht]
   \centering
   \small 
   \includegraphics[width = 0.7\linewidth]{Imagens/im1.pdf} \\ 
-  \vspace{0.6cm}Figura 2: Variedades com bordo
+  \vspace{0.6cm}Figura 2: Variedades com borda
 \end{figure}
 
-\begin{tikzpicture}[overlay, shift = {(1cm, 1cm)}]
+\begin{note}
+  \(T_pN = T_p\overline{N}\). Mas agora, \(\dim T_p(\partial N) = d-1\), portanto \(\exists! \ \nu(p) \in T_pN\) unitário tal que \(\nu(p) \perp T_p(\partial N)\) e aponta pra fora de \(N\).  
+\end{note} 
+
+\begin{tikzpicture}[overlay, shift = {(1cm, 2.3cm)}]
   \node at (2,5) {$\R^d_+$}; 
   \node at (13.8,6) {$\R$}; 
 \end{tikzpicture}
 
-\begin{note}
-  \vspace{-1.5cm}\(T_pN = T_p\overline{N}\). Mas agora, \(\dim T_p(\partial N) = d-1\), portanto \(\exists! \ \nu(p) \in T_pN\) unitario tal que \(\nu(p) \perp T_p(\partial N)\) e aponta pra fora de \(N\).  
-\end{note} 
-
+\vspace{-0.8cm}
 \begin{definition}
-  Sejam \(_d\overline{N}\subseteq \R^n\) e \(\omega \in \Omega^d(\overline{N})\). Chamamos de \emph{orientación inducida} por \(\omega \) à \(\Omega ^d(\partial N) \ni \eta : (v_1, \ldots, v_{d-1}) \mapsto \omega(\nu(p), v_1, \ldots, v_{d-1})\).  
+  Sejam \(_d\overline{N}\subseteq \R^n\) e \(\omega \in \Omega^d(\overline{N})\). Chamamos de \emph{orientação induzida} por \(\omega \) à \(\Omega ^d(\partial N) \ni \eta : (v_1, \ldots, v_{d-1}) \mapsto \omega(\nu(p), v_1, \ldots, v_{d-1})\).  
 \end{definition}
 
 \begin{example}
