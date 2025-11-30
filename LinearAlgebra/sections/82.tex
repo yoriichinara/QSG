@@ -1,0 +1,96 @@
+
+\subsection{Complementos Invariantes e Bases Cíclicas}
+
+Nessta seção \(\dim V < \infty\) e \(T \in \ehom(V)\) continua fixo.  O objetivo é conseguir uma decomposição \(V = \bigoplus^l W_j\), onde \(W_j = C_{_{T}}(v_j)\).  
+
+\begin{definition}
+    Sejam \(W\leq V\) \(T\)-inv e \(v \in V\) fixos. O conjunto, \(\mathscr{C}_{{T,v}}(W) := \{p \in \Pol : p(T)(v) \in W\}\) é chamado de \(T\)\emph{-condutor} de \(v\) em \(W\). 
+\end{definition}
+
+\begin{exercise}
+    \(\exists ! c_{_{v,W}} \in \Pol \) mônico tal que \(\forall f \in \mathscr{C}_{{T,v}}(W), \ c_{_{v,W}} \mid f\), chamamos ele de \emph{polinômio condutor}.\comentario{É um ideal no anel \(\Pol\), procede como em \(\square\) \ref{prop:814}}
+\end{exercise}
+
+\begin{note}
+    Se \(W_2 \leq  W\) for \(T\)-inv também, então \(\forall v \in V, \ c_{_{v,W}} \mid c_{_{v,W_2}}\). Em particular, \(c_{_{v,W}} \mid m_v\). Note também que se \(v \in W\), então \(c_{_{v,W}} = 1\).    
+\end{note}
+
+\begin{lemma}
+    \textbf{8.2.1.} \(C_{_T}(v) \cap W = \{0\} \ \leftrightharpoons \ m_v = c_{_{v,W}}\). 
+\end{lemma}
+\demo{(\(\Rightarrow\)) \(c_{_{v,W}} (T)(v) = 0\), logo \(m_v \mid c_{_{v,W}}\). (\(\Leftarrow\)) \(f(T)(v) \in W \ \leftrightharpoons \ f(T)(v) = 0 \).  }
+
+\begin{definition}
+    Seja \(W\leq V\) \(T\)-inv. Dizemos que \(W\) é \(T\)\emph{-admissível} sse \(\forall v \in V, \exists w \in W\) tal que \(c_{_{v,W}}(T)(w) = c_{_{v,W}}(T)(v)\).  
+\end{definition}
+
+\begin{lemma}
+    Se \(W\leq V\) admitir complementar \(\widetilde{W}\) \(T\)-inv, então \(W\) é \(T\)-admissível. 
+\end{lemma}
+
+\demo{Sendo \(v = w + \widetilde{w} \in W \oplus \widetilde{W} = V\) e \(f \in \mathscr{C}_{_{T,v}}(W)\) temos \(f(T)(\widetilde{w}) = f(T)(v) - f(T)(w) \in W \cap \widetilde{W} = \{0\}\). }
+
+\theoremnum{8.2.3.}
+\hypertarget{thmDC}{}
+\begin{theorem}[\emph{\textbf{D}ecomposição \textbf{C}íclica}]
+    \label{thm:823}
+    Se \(W < V\) é \(T\)-admissível, então \(\exists (v_j)_{j\leq m} \in V : \)   
+    \begin{enumerate}[label = (\alph*), left = 1.5cm]
+        \item \(\widetilde{W} = \bigoplus C_{_T}(v_j)\) e \(V = W \oplus \widetilde{W}\). \hspace{1cm} (b) \(\forall j< m, \ m_{v_{j+1}} \mid m_{v_j}\). 
+    \end{enumerate}
+    Além disso, se \((u_i)_{i\leq l} \in V \setminus \{0\}\) satisfazerem os análogos de (a) e (b), então \(l=m\). 
+\end{theorem}
+    \begin{lemma}
+        \textbf{8.2.4.} Sejam \(W \leq V\) $T$-inv e \(u,v \in V: v-u \in W\). Então, \(\mathscr{C}_{{T,v}}(W) = \mathscr{C}_{{T,u}}(W)\). \comentario{\(\forall f \in \Pol, f(T)(v) - f(T)(u) = f(T)(w) \in W\) }
+    \end{lemma}
+    \propositionnum{8.2.5.}\begin{proposition}
+        \label{prop:825}
+        Seja \(W<V\) $T$-admissível. Então, \comentario{\cite[Pág. 270]{MA719}}
+        \begin{enumerate}[label = (\alph*), left = 0.65cm]
+            \item \(\forall v \in V \setminus W, \exists \widetilde{v} \in V : W + C_{_T}(v) = W \oplus C_{_T}(\widetilde{v})\). Além disso, \(m_{\widetilde{v}} = c_{_{v,W}}\). 
+            \item Seja \(v \in V : C_{_T}(v) \cap W = \{0\}\) e \(\gr(m_v) = \max\{\gr(m_u): u \in V \text{ e } C_{_T}(u)\cap W = \{ 0\}\}\). Então, \(W \oplus C_{_T}(v) \) é $T$-admissível.
+        \end{enumerate}
+    \end{proposition}
+    \hypertarget{lemma826}{}
+    \begin{lemma}
+        \textbf{8.2.6.} Seja \(v \in V\) como na \(\square\) \ref{prop:825} (b). Então, \(\forall u \in V : C_{_T}(u) \cap (W \oplus C_{_T}(v)) = \{0\}\) tem-se que \(m_u \mid m_v\). \comentario{\cite[Pág. 271]{MA719}} 
+    \end{lemma}
+\begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
+    \centering \(\exists (v_j) \in V\) do \(\blacksquare\) \hyperlink{thmDC}{8.2.3. (\emph{DC})} 
+    \tcblower 
+\textcolor{gray}{Faz por indução em \(k = \dim V - \dim W\), que começa de fato toda vez que vale \(\square\) \ref{prop:825} (a). Supõe \(v_1\) como em \(\square\) \ref{prop:825} (b) e seja \(U = W \oplus C_{_T}(v_1)\), o resultado segue da hipótese de indução e {\scriptsize\(\square\)} \hyperlink{lemma826}{8.2.6.}. }
+\end{tcolorbox} 
+
+\begin{exercise}
+    \textbf{8.1.7.} Sejam \(v \in V\) e \(\an_{_{T,v}} := \{p \in \Pol : p(T)(v) = 0\}\) o \emph{anulador de \(v\)} respeito de \(T\). Mostre que \(\an_{_{T,v}}= \langle m_{_{T,v}}\rangle \geq \an_{_T}\). \comentario{Parecido do feito em \(\square\) \ref{prop:814}}
+\end{exercise}
+\hypertarget{lemma827}{}
+\begin{lemma}
+    \textbf{8.2.7.} Sejam \(S, T \in \ehom(V)\), supõe que \(S\) for bijetiva e \(S \circ T = T \circ S\). Então, \(\forall v \in V, m_{_{T, S(v)}} = m_{_{T,v}} \). \comentario{Usa composições pra ver que um divide o outro}
+\end{lemma}
+
+\begin{lemma}
+    \textbf{8.2.8.} Sejam \(f \in \Pol, v \in V, u \in f(T)(v) \) e \(p = \mdc (f, m_v)\). Então, \(m_v = pm_u\). \comentario{Não suporta resumo, olha se queser \cite[Pág. 272]{MA719}}  
+\end{lemma}
+
+\begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
+    \centering \(\exists (u_i) \in V : \blacksquare\) \hyperlink{thmDC}{8.2.3. (\emph{DC})} \(\Rightarrow l = m\)
+    \tcblower 
+\textcolor{gray}{Não suporta resumo, olha se queser \cite[Pág. 273]{MA719}. }
+\end{tcolorbox} 
+
+\propositionnum{8.2.11.}
+\begin{proposition}
+    Sejam \(\alpha \) uma base pra \(V\) e \(M_\alpha(t) = t\id_n - [T]^\alpha_\alpha \in M_n(\Pol) \). Então, \(c_{_T} = \det (M_\alpha (t)) \). \comentario{Não suporta resumo, olha se queser  \cite[Pág. 275]{MA719}} 
+\end{proposition}
+
+\propositionnum{8.2.12.}
+\begin{proposition}
+    Sejam \(v \in V: m_v = p^k\) pra algum \(p \in \Pol\) primo com \(\gr (p) = r\) e,   
+    \[v_{sr+l} := T^{l-1}p(T)^s(v), \ 0 \leq  s < k, \ 1 \leq l \leq r. \] 
+    A familia \(\mathscr{J}_{_T}(v) = (v_{sr+ l})\) é uma base do \(C_{_{T}}(v)\). \comentario{\cite[Pág. 277]{MA719}}
+\end{proposition}
+
+\begin{note}
+    Seja \(V = \bigoplus V_{p_j^{k_j}}\) como no \(\blacksquare\) \hyperlink{thmDP}{8.1.13. (\emph{DP})} e \(\forall j\leq k\), \( V_j = \bigoplus C_{_T}(v_{i,l_i})\) sua decomposição como no \(\blacksquare\) \hyperlink{thmDC}{8.2.3. (\emph{DC})} 
+\end{note}
