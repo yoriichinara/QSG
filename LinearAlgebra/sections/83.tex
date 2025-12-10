@@ -1,0 +1,56 @@
+\subsection{Formas Canônicas}
+
+\begin{definition}
+    Sejam \(\dim V < \infty\), \(T \in \ehom ( V)\) e \(\beta = \mathscr{J}_{_T}(v_{i,j})\) uma base racional respeito de \(T\). Pra \(m_{v_{i,j}} =  a_0  + a_1 t + \cdots + a_r{t}^r\) definimos sua \emph{matriz de Frobenius} e seguidamente a \emph{\textbf{F}orma \textbf{C}anônica \textbf{R}acional}  como sendo:   
+    \[B_{i,j} = \left[\begin{array}{c c c c c}
+        0 & \textcolor{gray}{0} & \textcolor{gray}{\cdots} & \textcolor{gray}{0} & -a_0 \\ 
+        1 & 0 &  \textcolor{gray}{\rotatebox{0}{$\cdots$}} & \textcolor{gray}{0}  & -a_1 \\ 
+        \textcolor{gray}{0} & 1  & \rotatebox{135}{$\ldots$}  & \textcolor{gray}{\rotatebox{90}{$\ldots$}} & \rotatebox{90}{$\ldots$} \\ 
+        \textcolor{gray}{\rotatebox{90}{$\cdots$}} & \textcolor{gray}{\rotatebox{135}{$\ldots$}}  & \rotatebox{135}{$\ldots$} & 0 & -a_{r-2} \\   
+        \textcolor{gray}{0} & \textcolor{gray}{\cdots}  & \textcolor{gray}{0} & 1 & -a_{r-1}  
+    \end{array}\right], \hspace{0.5cm} [T]_\beta^\beta= FCR = \left[\begin{array}{c |  c |  c}
+        B_{1,j} & \textcolor{gray}{0}& \textcolor{gray}{0}\vspace{0.1cm}\\ \hline 
+        \textcolor{gray}{0} & \rotatebox{145}{$ \ldots$} & \textcolor{gray}{0}\\ \hline
+        \textcolor{gray}{0} & \textcolor{gray}{0} & B_{m,j}\\ 
+    \end{array}\right].\]
+\end{definition}
+
+\begin{note}
+    Se \(\beta\) for base de Jordan, melhoramos a coisa pois temos \emph{blocos de Jordan}, asociados ao cada $T$-ciclo, seja lá \(p = (t - \lambda)^s\), então 
+    \[ J_s(\lambda) := \left[\begin{array}{c c c c c}
+        \lambda & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{\cdots} & \textcolor{gray}{0} \\ 
+        1 & \lambda & \textcolor{gray}{0} & \textcolor{gray}{\cdots} &\textcolor{gray}{0}  \\ 
+        \textcolor{gray}{0} & 1 & \lambda & \textcolor{gray}{\cdots} &\textcolor{gray}{0}  \\ 
+        \textcolor{gray}{\rotatebox{90}{$\ldots$} }& \textcolor{gray}{\rotatebox{135}{$\ldots$}} & \rotatebox{135}{$\ldots$}& \rotatebox{135}{$\ldots$}& \textcolor{gray}{\rotatebox{90}{$\ldots$}}  \\ 
+        \textcolor{gray}{0} & \textcolor{gray}{\cdots} & \textcolor{gray}{0} & 1& \lambda  \\ 
+    \end{array}\right].\]
+    A matriz \([T]_\beta^\beta = \operatorname{diag}(J_{s_i}(\lambda_j))\) é chamada de \emph{\textbf{F}orma \textbf{C}anônica de \textbf{J}ordan}. Note que FCJ existe \(\leftrightharpoons\) \(m_{_T} = \prod (t - \lambda_j)^{k_j}\), ou seja, fatora em irredutíveis de grau 1. 
+\end{note}
+
+\begin{definition}
+    Seja \(V\) \(\F\)-espaço \(: \dim V =n <\infty\). Dois operadores \(T,S \in \ehom(V)\) são semelhantes, \(T \sim S\),  sse \(\exists P \in \operatorname{GL}_n(\F) :  [T]^\beta_\beta = P^{-1} [S]_\alpha^\alpha P\).  \comentario{ \(P = [\id_{_V}]^\beta_\alpha\)}
+\end{definition}
+
+\theoremnum{8.3.1.}
+\hypertarget{thm831}{}
+\begin{theorem}
+    \(T\sim S\) \(\leftrightharpoons\) FCR(\(T\)) = FCR(\(S\)). Em particular, se algúm deles admitir FCJ, então \(T \sim S\) \(\leftrightharpoons\) FCJ(\(T\)) = FCJ(\(S\)). 
+\end{theorem}
+
+\ejemplo{
+\centering Encontrando FCR e FCJ
+\tcblower
+Contínuando o exemplo da seção \hyperlink{ex82}{8.2.}, sendo \(\beta = \mathscr{J}_{_T} w_{i,2} \cup w_{1,0}\) e \(\gamma = \mathscr{J}_{_T}(w) = \mathscr{C}(w)\), lembrando que \(m_{_T} = t (t-2)^3 = t^4 - 6t^3 +12t^2 -8t\) temos... 
+{\footnotesize \[\text{\small $[T]^\beta_\beta =$} \begin{bmatrix}
+    2 & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
+    1 & 2 & \textcolor{gray}{0} &  \\ 
+    \textcolor{gray}{0} & 1 & 2 &  \\
+     &  &  &  0
+\end{bmatrix}, \ \  \text{\small $[T]^\gamma_\gamma =$} \begin{bmatrix}
+    0 & \textcolor{gray}{0} & \textcolor{gray}{0} & 0\\ 
+    1 & 0 & \textcolor{gray}{0}&  8\\ 
+    \textcolor{gray}{0} & 1 & 0 & -12\\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & 1 &  6
+\end{bmatrix}\]}
+As matriez \(P\) das congruências no \(\blacksquare\) \hyperlink{thm831}{8.3.1.} são as formadas pelos vetores das respetívas bases, ao final não são mas do que isso, cambios de base.   
+}

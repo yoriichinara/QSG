@@ -70,7 +70,7 @@ Nessta seção \(\dim V < \infty\) e \(T \in \ehom(V)\) continua fixo.  O objeti
 \end{lemma}
 
 \begin{lemma}
-    \textbf{8.2.8.} Sejam \(f \in \Pol, v \in V, u \in f(T)(v) \) e \(p = \mdc (f, m_v)\). Então, \(m_v = pm_u\). \comentario{Não suporta resumo, olha se queser \cite[Pág. 272]{MA719}}  
+    \textbf{8.2.8.} Sejam \(f \in \Pol, v \in V, u = f(T)(v) \) e \(p = \mdc (f, m_v)\). Então, \(m_v = pm_u\). \comentario{Não suporta resumo, olha se queser \cite[Pág. 272]{MA719}}  
 \end{lemma}
 
 \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
@@ -91,6 +91,211 @@ Nessta seção \(\dim V < \infty\) e \(T \in \ehom(V)\) continua fixo.  O objeti
     A familia \(\mathscr{J}_{_T}(v) = (v_{sr+ l})\) é uma base do \(C_{_{T}}(v)\). \comentario{\cite[Pág. 277]{MA719}}
 \end{proposition}
 
+\begin{definition}
+    Sejam \(V =  \cdots \oplus V_{p_j^{k_j}} \oplus \cdots \) como no \(\blacksquare\) \hyperlink{thmDP}{8.1.13. (\emph{DP})} e \(\forall j\leq m\), \( V_{p_j^{k_j}} = \cdots \oplus C_{_T}(v_{l_i,j} )\oplus \cdots \) como no \(\blacksquare\) \hyperlink{thmDC}{8.2.3. (\emph{DC})}. Chamamos de, 
+    \begin{itemize}[label = \(\star\)]
+        \item \(m_{v_{i,j} }= p_i^{k_{i,j}} \ \leftarrow\) \emph{Fatores invariantes primários}. 
+        \item \( \displaystyle V = \bigoplus_{i,j} C_{_T} (v_{i,j}) \ \leftarrow\) \emph{Decomposição racional primária}.
+        \item \(\displaystyle \mathscr{J}_{_T} = \bigcup_{i,j} \mathscr{J}_{_T}(v_{i,j}) \ \leftarrow\) \emph{Base racional primária}.  
+    \end{itemize}
+
+\end{definition}
+
 \begin{note}
-    Seja \(V = \bigoplus V_{p_j^{k_j}}\) como no \(\blacksquare\) \hyperlink{thmDP}{8.1.13. (\emph{DP})} e \(\forall j\leq k\), \( V_j = \bigoplus C_{_T}(v_{i,l_i})\) sua decomposição como no \(\blacksquare\) \hyperlink{thmDC}{8.2.3. (\emph{DC})} 
+    Em particular, se \(\gr (p_j) = 1\), então \(v_{sr+l} = v_s = (T - \lambda\id_{_V})^s(v_{i,j}), \ 1\leq s \leq k_{i,j}\), logo \(\mathscr{J}_{_T}(v) = \mathscr{C}_{p(T)}(v)\). Nesse chamamos tudo \textcolor{gray}{\rotatebox{90}{$\Big|$} \(\star\) \rotatebox{90}{$\Big|$}} \emph{de Jordan}.     
 \end{note}
+
+
+\ejemplo{\centering Encontrando bases Jordan e Racional
+\tcblower \hypertarget{ex82}{}
+\textbf{Passo 1.} Encontre \(m_T\). Seja \(T: \R^4 \ni (x_j) \mapsto (3x_3 + x_4, 2x_1 + 2x_2 -4x_3 + 2x_4, x_3 + x_4, 3x_4 - x_3)\). Assim, sendo \(\alpha\) à base canônica, 
+{\footnotesize \[\text{\small $[T]^\alpha_\alpha$ } = \begin{bmatrix}
+    0 & 0 & 3 & 1 \\
+    2 & 2 & -4 & 2 \\
+    0 & 0 & 1 & 1 \\
+    0 & 0 & -1 & 3 
+\end{bmatrix} \longrightarrow \text{\small $c_{_T} =  $ }\left|\begin{array}{c c c c}
+    t & 0 &  &  \\
+    -2 & t-2 &  &  \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & t-1 & -1 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & 1 & t-3 
+\end{array}\right| \text{\small $ = t(t-2)^3$. }\]}
+Portanto, \(V\) admíte base de Jordan, vamos estudar o fator \(V_{t-2}\),  
+{\footnotesize \[ \ker\begin{bmatrix}
+    -2 & 0 & 3 & 1 \\
+    2 & 0 & -4 & 2 \\
+    0 & 0 & -1 & 1 \\
+    0 & 0 & -1 & 1 
+\end{bmatrix}
+\text{\small $ \underset{F_2 \to F_2 + F_1}{\overset{F_4 \to F_4 - F_3}{\longrightarrow }} $} 
+\begin{bmatrix}
+    -2 & \textcolor{gray}{0} & 3 & 1 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & 3 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & 1 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
+\end{bmatrix} 
+\text{\small $ \overset{F_3 \to F_3 - F_2}{\longrightarrow }$} 
+\begin{bmatrix}
+    -2 & \textcolor{gray}{0} & 3 & 1 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & 3 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -2 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
+\end{bmatrix}\]
+\[(-2)\begin{bmatrix}
+    1 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & 1 & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & 1 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
+\end{bmatrix} 
+\text{\small $ \longleftarrow$}
+\begin{bmatrix}
+    -2 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & -2 & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -2 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
+\end{bmatrix} 
+\text{\small $\underset{F_2 \to 2F_2 + 3F_3}{\overset{F_1 \to F_1 + 3F_2 + 5F_3}{\longleftarrow}}$}\]}
+Agora, \(V_{t-2} = [e_2]\), \(\dim V_{t-2} = 1\), temos que seguir até conseguir \(\dim V_{(t-2)^{k}} = 3\), é conveniente façer conta da forma \((T-2\id)(w_{s}) = w_{s+1}\), então \vspace{1.8cm}
+}
+\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture}
+%\text{\small $ \underset{F_2 \to F_2 + F_1}{\overset{F_4 \to F_4 - F_3}{\longrightarrow }} $} 
+%\text{\small $ \overset{F_3 \to F_3 - F_2}{\longrightarrow }$} 
+%\text{\small $\underset{F_2 \to 2F_2 + 3F_3}{\overset{F_1 \to F_1 + 3F_2 + 5F_3}{\longrightarrow}}$}
+%\text{\small $ \overset{F_j \to -F_j}{\longleftarrow}$}
+%\[\left[\begin{bmatrix}{c c c c}
+%    2 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} \\
+%    \textcolor{gray}{0} & \textcolor{gray}{0} & 2 & \textcolor{gray}{0} \\
+%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & 2 \\
+%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
+%\end{bmatrix}\right] 
+\newpage 
+\-\vspace{-1.2cm}
+\ejemplo{
+\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture}
+    {\footnotesize\[ \begin{bmatrix}
+    0 \\ 
+    a \\ 
+    0 \\
+    0
+    \end{bmatrix} 
+    \text{\small $ \underset{F_2 \to F_2 + F_1}{\overset{F_4 \to F_4 - F_3}{\longrightarrow }} $}
+    \begin{bmatrix}
+    0 \\ 
+    a \\ 
+    0 \\
+    0
+    \end{bmatrix} 
+    \text{\small $ \overset{F_3 \to F_3 - F_2}{\longrightarrow }$}
+    \begin{bmatrix}
+    0 \\ 
+    a \\ 
+    -a \\
+    0
+    \end{bmatrix}
+    \text{\small $\underset{F_2 \to 2F_2 + 3F_3}{\overset{F_1 \to F_1 + 3F_2 + 5F_3}{\longrightarrow}}$}
+    \begin{bmatrix}
+    -2a \\ 
+    -a \\ 
+    -a \\
+    0
+    \end{bmatrix}
+    \] 
+\[\begin{bmatrix}
+    1 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & 1 & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & 1 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
+\end{bmatrix}\begin{bmatrix}
+    v_1 \\ v_2 \\ v_3 \\ v_4
+\end{bmatrix}= \begin{bmatrix}
+    -2a \\ -a \\ -a \\ 0
+\end{bmatrix} \ \leftrightharpoons \ 
+\begin{bmatrix}
+    v_1 \\ v_2 \\ v_3 \\ v_4
+\end{bmatrix} = \begin{bmatrix}
+    -2a \\ b \\ -a\\ -a \end{bmatrix}   \sim \begin{bmatrix}
+    2a \\ b \\ a\\ a \end{bmatrix}  
+\] 
+\text{\small Visto que não completamos a dimensão, contínuamos na siguente pôtencia, }
+\[ \begin{bmatrix}
+    2a \\ 
+    b \\ 
+    a \\
+    a
+    \end{bmatrix} 
+    \text{\small $ \underset{F_2 \to F_2 + F_1}{\overset{F_4 \to F_4 - F_3}{\longrightarrow }} $}
+    \begin{bmatrix}
+    2a \\ 
+    2a+b \\ 
+    a \\
+    0
+    \end{bmatrix} 
+    \text{\small $ \overset{F_3 \to F_3 - F_2}{\longrightarrow }$}
+    \begin{bmatrix}
+    2a \\ 
+    2a+b \\ 
+    -a-b \\
+    0
+    \end{bmatrix}
+    \text{\small $\underset{F_2 \to 2F_2 + 3F_3}{\overset{F_1 \to F_1 + 3F_2 + 5F_3}{\longrightarrow}}$}
+    \begin{bmatrix}
+    3a -2b \\ 
+    a-b\\ 
+    -a-b \\
+    0
+    \end{bmatrix}  
+    \] 
+\[\begin{bmatrix}
+    1 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & 1 & \textcolor{gray}{0} \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & 1 \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
+\end{bmatrix} \begin{bmatrix}
+    v_1 \\ v_2 \\ v_3 \\ v_4
+\end{bmatrix} = \begin{bmatrix}
+    3a - 2b \\ a -b \\ -a-b \\ 0
+\end{bmatrix} \ \leftrightharpoons \ 
+\begin{bmatrix}
+    v_1 \\ v_2 \\ v_3 \\ v_4
+\end{bmatrix} = \begin{bmatrix}
+    3a - 2b \\ c \\  a -b \\ -a-b  
+\end{bmatrix} \sim \begin{bmatrix}
+    3a + 2b \\ c \\  a +b \\ -a+b  
+\end{bmatrix}
+\]
+\- \hrule \vspace{0.2cm}
+{\footnotesize \[ \text{\small$ V_t = $}\ker\begin{bmatrix}
+    0 & 0 & 3 & 1 \\
+    2 & 2 & -4 & 2 \\
+    0 & 0 & 1 & 1 \\
+    0 & 0 & -1 & 3 
+\end{bmatrix}
+\text{\small $ \underset{F_4 \to F_4 + F_3}{\overset{F_4 \to F_4 - F_3}{\longrightarrow }} $} 
+\begin{bmatrix}
+    \textcolor{gray}{0} & \textcolor{gray}{0} &  & \\
+    2 & 2 &  &  \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & 1 &  \\
+    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & 3 
+\end{bmatrix} \begin{bmatrix}
+    v_1 \\ v_2 \\ v_3 \\ v_4 
+\end{bmatrix} = \vec{0} \ \leftrightharpoons \ \begin{bmatrix}
+    v_1 \\ v_2 \\ v_3 \\ v_4 
+\end{bmatrix} =  \begin{bmatrix}
+    a \\ -a \\ 0 \\ 0
+\end{bmatrix} 
+\]
+}
+}
+\textbf{Passo 2.} Pra à base de Jordan precisamos \(w_{1,2} \in V_{(t-2)^3} \setminus V_{(t-2)^2}\), calcular o ciclo do jeito \(w_{s+1, 2} = (T-2\id)(w_{s,2})\) e completar pegando \(w_{1,0} \in V_t\). 
+{\footnotesize \[\text{\small $w_{1,2}$} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ -2\end{bmatrix}, \ \text{\small $w_{2,2}$}  = \begin{bmatrix} -4 \\ -2 \\ -2 \\ -2\end{bmatrix}, \ \text{\small $w_{3,2}$} = \begin{bmatrix} 0 \\ -4 \\ 0 \\ 0  \end{bmatrix} , \ \text{\small $w_{1,0}$} = \begin{bmatrix} -1 \\ 1 \\ 0 \\ 0  \end{bmatrix}. \]}
+Por outro lado, visto que só temos \(1\) fator \(T\)-inv, \(V\) é \(T\)-cíclico, bastará tomar \(w = w_{1,2} + w_{1,0}\) e à base obvia do \(\mathscr{J}_{_T}(w) = \mathscr{C}_{T}(w) \), nesste casso da,
+{\footnotesize \[\text{\small $w$} = \begin{bmatrix} 0 \\ 1 \\ 0 \\ -2\end{bmatrix}, \ \text{\small $T(w)$}  = (-2)\begin{bmatrix} 1 \\ 1 \\ 1\\ 3\end{bmatrix}, \ \text{\small $T^2(w)$} = (-4)\begin{bmatrix} 3 \\ 3 \\ 2 \\ 4  \end{bmatrix} , \ \text{\small $T^3(w)$} = (-8)\begin{bmatrix} 5 \\ 6 \\ 3 \\ 5  \end{bmatrix}. \]}
+Assim \(\mathscr{J}_{_T}(w_{i,2}) \cup w_{1,0}\) é base de Jordan e \(\mathscr{J}_{_T}(w) = \mathscr{C}_{T}(w)\) é base racional. 
+}
+
+
+
