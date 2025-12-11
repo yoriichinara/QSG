@@ -1,9 +1,39 @@
 \subsection{Adjunção}
 
 \begin{definition}
-    Sejam \(\phi \in B(V)\), \(\psi \in B(W)\) e \(T \in \hom (V,W)\). Uma função \(S: W \to V\) é \emph{andjunta} de \(T\) respeito de \((\phi, \psi)\) sse \(\forall v\in V, \forall w \in W, \ \phi(v, S(w)) = \psi(T(v), w)\).  
+    Sejam \(\phi \in B(V)\), \(\psi \in B(W)\) e \(T \in \hom (V,W)\). Uma função \(S: W \to V\) é \emph{adjunta direita} de \(T\) respeito de \((\phi, \psi)\) sse \(\forall v\in V, \forall w \in W\), 
+    \[ \phi(v, S(w)) = \psi(T(v), w).\]  
 \end{definition}
 
+\hypertarget{lemma962}{}
 \begin{lemma}
-    \textbf{9.6.2.}   
+    \textbf{9.6.2.} Sejam \(\phi \in B(V)\) não degenerada à direita, \(\psi \in B(W)\) e \(T \in \hom(V,W)\). Então, se \(\exists S\) adjunta dirieta de \(T\) respeito de \((\phi, \psi)\), é linear e única.    
+\end{lemma}
+
+\demo{Mostra que \(S(w_1 + \lambda w_2) - S(w_1) - \lambda S(w_2) \in \ker D_\phi\). Mesma coisa pra unicidade, olha que \(S_1(w) - S_2(w) \in \ker D_\phi\). }
+
+\begin{note}
+    Denotamos por \(T^\phi_\psi\) à adjunta direita, no casso das hipótese do {\scriptsize \(\square\)} \ \hyperlink{lemma962}{9.6.2.}. Veja que, em termos matriciais \([T^\phi_\psi]^\beta_\alpha = [\phi]^{-1}_\alpha ([T]^\alpha_\beta)^t[\psi]_\beta\). 
+\end{note}
+
+\propositionnum{9.6.3.}
+\begin{proposition}
+    Sejam \(\dim V < \infty\), \(\phi \in B(V)\) não degenerada à direita, \(\psi \in B(W)\) e \(T\in \hom(V,W)\). Então, \(\exists ! T^\phi_\psi\) adjunta direita de \(T\) respeito de \((\phi, \psi)\). 
+\end{proposition}
+\demo{\(D_\phi\) é isomorfismo, defina \(S = D_\phi^{-1} \circ T' \circ D_\psi\) e mostra que \(S = T^\phi_\psi\). }
+
+\begin{lemma}
+    \textbf{9.6.4.} Sejam \(\dim V, \dim W \in \N\), \(\phi \in B(V)\) e \(\psi \in B(W)\) não degeneradas, \(\xi \in B(U)\), \(T \in \hom(V,W)\), \(R, \ S  \in \hom (W,U)\) e \(\lambda \in \F\). Então, 
+    \begin{enumerate}[label = (\alph*)]
+        \item \((R+\lambda S)^\psi_\xi = R^\psi_\xi + \lambda S^\psi_\xi\). \hspace{2.35cm} (b) \((S\circ T)^\phi_\xi = T^\phi_\psi \circ S^\psi_\xi\). 
+        \item[(c)] Se \(\exists T^{-1}\), então \((T^{-1})^\psi_\phi = (T^\phi_\psi)^{-1}\). \hspace{0.8cm}(d) Se \(\phi, \psi \in B_{as}(-)\), então \((T^\phi_\psi)^\psi_\phi = T\). 
+    \end{enumerate}
+\end{lemma}
+
+\begin{lemma}
+    \textbf{8.6.5.} Se \(T\in \hom(V,W )\) e \(\psi \in B_{as}(W)\), então 
+    \begin{enumerate}[label = (\alph*)]
+        \item Se \(\psi \) for também não degenerada, \(\ker T = \operatorname{Im}(T^\phi_\psi)^{\perp_\phi}\). Em particular, \(T \) é injetora \(\leftrightharpoons\) \(T^\phi_\psi\) for sobrejetora. Além disso, se \(\ker T\) for não degenerado, \(V = \ker T \oplus \operatorname{Im}T^\phi_\psi\).  \comentario{É apenas desenvolver as definições, não tém magia nenhum}
+        \item \(\ker T^\phi_\psi = \operatorname{Im}(T)^{\perp_\psi} \). Em particular, se \(\psi \) for não degenerada, \(T^\phi_\psi\) é injetora \(\leftrightharpoons\) \(T\) for sobrejetora. Além disso, se \(\dim W < \infty\) e ambos \(W\) e \(\ker T^\phi_\psi \) forem não degenerados, \(W = \ker T^\phi_\psi \oplus \operatorname{Im}T\). \comentario{Mesmo negôcio acima}
+    \end{enumerate}
 \end{lemma}
