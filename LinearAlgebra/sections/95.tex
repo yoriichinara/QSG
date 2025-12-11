@@ -1,1 +1,78 @@
 \subsection{Transformações Ortogonais e Simpléticas}
+
+\begin{definition}
+    Sejam \(V,W\) \(\F\)-espaços, \(\phi \in B(V), \ \psi \in B(W)\) e \(T\in \hom(V,W)\). Diz-se que \(T\) é \emph{compatível} com o par (\(\phi, \psi\)) sse \(\forall u,v \in V, \ \phi(u,v) = \psi(T(u), T(v))\). Se ambas \(\phi \) é \(\psi\) forem não degeneradas, então 
+    \[ \star \ \phi, \ \psi \ \text{simétricas} \ \rightarrow \ T \text{ \emph{ortogonal}} \hspace{1cm} \star \ \phi, \ \psi \ \text{alternadas} \ \rightarrow \ T \text{ \emph{simplética.}}\]
+\end{definition}
+
+\propositionnum{9.5.1.}
+\begin{proposition}
+    \(T\) é compatível com \((\phi, \psi)\ \leftrightharpoons \ \forall \alpha\) base de \(V\), \([\phi]_\alpha = [\psi]_{T(\alpha)} \ \leftrightharpoons \ \exists \alpha\) base de \(V\) tal que \( [\phi]_\alpha = [\psi]_{T(\alpha)}\). \comentario{Idêntica da \(\square\) \textcolor{blue}{7.4.2.}, olha se queser \cite[Pág. 243]{MA719}}
+\end{proposition}
+
+%\begin{note}
+%    A definição permite-nós supor \(T\) sobrejetora. Além disso, \(v \in V^{\perp_\phi} \Rightarrow T(v) \in W^{\perp_\psi}\), portanto podemos supor \(\phi\) não degenerada, cujo casso \(\det[\phi]_\alpha = \det [\psi]_{T(\alpha)} \neq 0\). 
+%\end{note}
+
+\propositionnum{9.5.2.}
+\begin{proposition}
+    \label{prop:952}
+    Sejam \(\phi \in B(V)\) não degenerada e \(\psi \in B(W)\). Então, \(\exists T \in \hom(V,W)\) sobrejetora e compatível com \((\phi, \psi) \ \leftrightharpoons \ \exists \alpha, \beta \) bases tais que \([\phi]_\alpha = [\psi]_\beta\).   
+\end{proposition}
+\demo{
+    \((\Rightarrow)\) \(\exists \alpha\) base de \(V: \det[\phi]_\alpha = \det[\psi]_{T(\alpha)} \neq 0\), assim \((T(\alpha))\) é l.i.. \((\Leftarrow)\) Escolhe \(T: \alpha \mapsto \beta\). Note que \(T\) é necessariamente isomorfismo.   
+}
+
+\begin{note}
+    Supõe daquí pra frente \(V = W: \dim V = n < \infty\) e \(\phi = \psi\) não degenerada. O objetivo  é descrever os operadores compatíveis com \(\phi\) nos casos alternado e simétrico. 
+\end{note}
+
+\begin{definition}
+    \centering \(\ehom^\phi(V) := \{T \in \ehom(V) : T \text{ compatível com \((\phi,\phi)\)}\}\).
+\end{definition}
+
+\begin{lemma}
+    \(\ehom^\phi(V) \cong \operatorname{SL}_n(\F) \leq \operatorname{GL}_n(\F)\). \comentario{Da \(\square\) \ref{prop:952} segue que \(T\) é invertivel. O conjunto é fechado por composições. Além disso, \(\exists \alpha : [\phi]_\alpha = [\phi]_\beta\), logo \([\phi]_\alpha = ([\id]^\beta_\alpha)^t[\phi]_\alpha[\id]^\beta_\alpha\), lembrando que nesste casso \([\id]^\beta_\alpha = [T]^\alpha_\alpha\) temos que \(\det T = \pm 1\)}
+\end{lemma}
+
+\begin{lemma}
+    \textbf{9.5.3.} Sejam \(\phi \in B_{as}(V), \ T \in \ehom^\phi(V)\) e \(W\leq V\) não degenerado e \(T\)-inv, então \(W^\perp\) também é \(T\)-inv. \comentario{Pending... } 
+\end{lemma}
+
+\begin{definition}
+    \(T \in \ehom^\phi(V)\) é \emph{rotação} se \(\det T = 1\), caso contrario diz-se que \(T\) é \emph{reflexão}. 
+\end{definition}
+
+\begin{definition}
+    Seja \(w \in V\) não isotrópico  e \(W = [w]\). Chamamos de \emph{reflexão simples} à função, 
+    \[R_W^\phi : V \ni v \mapsto v - 2\frac{\phi(v,w)}{\phi(w,w)} w \in V. \]
+\end{definition}
+
+\begin{note}
+    No texto, vôce pode encontrar todos os detalhes e as verificações que sustentan a definição previa. Olha se queser \cite[Pág. 323]{MA719}. 
+\end{note}
+
+\begin{lemma}
+    \textbf{9.5.6.} Sejam \(\operatorname{car} \F \neq 2\), \(\phi \in B_s(V)\) não degenerada e \(u,\ v\in V\) tais que \(\phi(u,u)= \phi(v,v) \neq 0 \). Então, \(\exists R^\phi_W: R(v) = \pm u\). \comentario{Tente mostrar que pelo menos um dos vetores \(w_{\pm} = v\pm u\) é não isotrópico e faz analisé das reflexões \(R_{[w_\pm]}^\phi\). }
+\end{lemma}
+
+\theoremnum{9.5.7.}
+\begin{theorem}
+    \label{thm:957}
+    Sejam \(\operatorname{car}\F \neq 2\), \(\dim V \in \N \), \(\phi \) não degenerada e \(T \in \ehom(V)\). Então, \(T\) é ortogonal \(\leftrightharpoons\) \(T\) for composição de reflexões simples. \comentario{Olha \cite[Pág. 325]{MA719} }
+\end{theorem}
+
+
+\begin{note}
+    A prova do \(\blacksquare\) \ref{thm:957} fornece um método pra encontrar uma decomposição. De fato, vôce começa pegando \(w_j\) não isotrópico e calcula \(R_j = R_{[w_j]}^\phi\), logo olha pra o inducido em \(S_j = R_j \circ T\) no subespaço ortogonal e repite (com \(T =S_j\)).   
+\end{note}
+
+\begin{definition}
+    Sejam \(w \in V\), \( a \in \F \) e \(\phi \in B_a(V)\). Chamamos de \emph{transvecção simplética} à função, \(T_{w,a} : V \ni v \mapsto v + a\phi(v,w) w \in V \). \comentario{Olha se queser \cite[Pág. 327]{MA719} }
+\end{definition}
+
+
+\theoremnum{9.5.11.}
+\begin{theorem}
+    Sejam \(\dim V \in \N \), \(\phi \in B_a(V)\) não degenerada e \(T \in \ehom(V)\). Então, \(T\) é simplética \(\leftrightharpoons\) \(T \) for composição de transvecções simpléticas. \comentario{\cite[Pág. 328]{MA719}}
+\end{theorem}

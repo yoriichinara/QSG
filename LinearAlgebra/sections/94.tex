@@ -90,15 +90,80 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 
 \theoremnum{9.4.4.}
 \begin{theorem}
-    Se \(\phi \in B_a(V)\), então \(\forall W\leq V \) complementar de \( V^\perp\), \(\exists \alpha \) base de \(V\) tal que \([\phi]_\alpha = \operatorname{diag}(H_m,0)\), onde \(m = \pt \phi/2\). \footnote{O posto de uma matriz antisimétrica sempre é par :o. }  
+    Se \(\phi \in B_a(V)\), então \(\forall W\leq V \) complementar de \( V^\perp\), \(\exists \alpha \) base de \(V\) tal que \([\phi]_\alpha = \operatorname{diag}(H_m,0)\), onde \(m = \pt \phi/2\). %\footnote{O posto de uma matriz antisimétrica sempre é par :o. }  
 \end{theorem}
 
 \demo{
     Da \(\square\) \ref{prop:943}, podemos supor \(\phi\) é não degenerada (vía restrição). Faz por indução em \(\dim V\). Note que \(\exists v, u \in V: \phi (v,u) = a \in \F^\times\Rightarrow \exists (v, w)\) hiperbólico \(\Rightarrow [v,w]\) é não degenerado. Segue de \(\square\) \ref{prop:943} que \(V = [v,w] \oplus [v,w]^\perp\) e de \(\square\) \ref{prop:941} (d) que \([v,w]^\perp\) é não degenerado. 
 }
 %\comentario{A demostração não admite resumo, olha se queser \cite[Pág. 313]{MA719}}
+
+%\ejemplo{Calculando bases hiperbólicas \centering 
+%\tcblower
+%\textbf{Passo 1.} Escolher um par hiperbólico. Seja \(\alpha \) base canônica do \(\R^4\) e, 
+%{\footnotesize \[\text{\small $[\phi]_\alpha =$} \begin{bmatrix}
+%0 & 3 & 1 & 1 \\ 
+%-3 & 0 & 1 & 0 \\ 
+%-1 & -1 & 0 & -2 \\ 
+%-1 & 0 & 2 & 0  
+%\end{bmatrix} \  \text{\small $\textstyle \sim \ \ \phi(e_3,e_1)=-1 \Rightarrow (e_3,e_1)$ hiperbólico.}\]}
+%
+%\textbf{Passo 2.} Olha pra o complemento ortogonal \([e_3, e_1]^{\perp} \).
+%{\footnotesize \[ \begin{bmatrix}
+%0 & 3 & 1 & 1 \\ 
+%-1 & -1 & 0 & -2 
+%\end{bmatrix} \begin{bmatrix}
+%x_1 \\
+% x_2 \\
+%  x_3 \\
+%   x_4  
+%\end{bmatrix} = \begin{bmatrix}
+%0 \\ 0
+%\end{bmatrix} \ \leftrightharpoons \ \begin{bmatrix}
+%x_1 \\
+% x_2 \\
+%  x_3 \\
+%   x_4  
+%\end{bmatrix} = \begin{bmatrix}
+%a\\
+%-a-2b\\
+%3a + 5b\\
+%b    
+%\end{bmatrix}.\]} 
+%
+%\textbf{Passo 3.} Escolher base pra \([e_3, e_1]^\perp\) e calcular \(\phi|_{[e_3,e_1]^\perp}\). 
+%{\footnotesize \[\text{\small $ [w_1]^t [\phi]_\alpha [w_2]$} = \begin{bmatrix}
+%1 & -1 & 3 & 0 
+%\end{bmatrix}\text{ \small $[\phi]_\alpha$} \begin{bmatrix}
+%0 \\ 
+%-2 \\ 
+%5 \\
+%1
+%\end{bmatrix} = -5 \Rightarrow \text{\small $[\phi]_\beta $} = \begin{bmatrix}
+%0 & -5 \\ 
+%5 & 0
+%\end{bmatrix}\]}
+%Neste casso acabou pois basta normalizar o siguente par hiperbólico \(\beta\). Assim, 
+%{ \footnotesize \[\text{\small $[\phi]_\gamma$} = \begin{bmatrix}
+%0& -1& 0& 0 \\ 
+%1& 0& 0& 0 \\ 
+%0& 0& 0& -1 \\
+%0& 0& 1& 0 
+%\end{bmatrix}, \ \ \text{\small $\gamma$} = \left\{\text{\small $e_3, \ e_1$}, \ \begin{bmatrix}
+%1 \\
+%-1\\
+%3 \\
+%0
+%\end{bmatrix}, \ \frac{1}{5}\begin{bmatrix}
+%0 \\
+%-2\\
+%5 \\
+%1
+%\end{bmatrix}\right\}\]}
+%}
+
 \begin{note}
-    As bases hiperbólicas são pra as alternadas o que são (seram) as ortogonais pra o produto interno (simétricas).
+    As bases hiperbólicas são pra as alternadas o que são (seram) as ortogonais pra o produto interno (simétricas). O algoritmo é claro, não vou por exemplo de conta. 
 \end{note}
 
 \theoremnum{9.4.6.}
@@ -124,8 +189,54 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 \end{definition}
 
 \begin{note}
-    i\((\phi)\leq \pt \phi\), \(\phi \geq 0 \ \leftrightharpoons \ \text{i}(\phi)=0\) e \(\phi < 0\ \leftrightharpoons \ \text{i}(\phi) = \dim V\). Note que a base de Sylvester fornece toda a informação, posto, indice de negatividade e assinatura.
+    i\((\phi)\leq \pt \phi\), \(\phi \geq 0 \ \leftrightharpoons \ \text{i}(\phi)=0\) e \(\phi < 0\ \leftrightharpoons \ \text{i}(\phi) = \dim V\). Note que, numa base de Sylvester, \(\pt\phi = p\), \(\text{i}(\phi) = i\) e \(\operatorname{sign}(\phi) = \operatorname{tr}[\phi]_{\alpha_o} = p -i\).
 \end{note}
+
+\ejemplo{\centering Encontrando bases ortogonais
+\tcblower
+\begin{example}
+    Seja \(q(x,y,z) = -4x^2 - y^2 - 4z^2 - 2xy + 4xz - 2yz\) forma quadrática em \(\R^3\). Encontre uma base de Sylvester pra \(q \sim \phi \in B_s(\R^3) \).  
+    { \[\text{\small$ [\phi]_\alpha$} = \begin{bmatrix}
+        -4 & -1 & 2 \\ 
+        -1 & -1 & -1 \\ 
+        2 & -1 & -4 \\ 
+    \end{bmatrix} \Rightarrow \text{\small pega \(e_2\) pois \(\phi(e_2, e_2) = -1 \neq 0\)}\]}
+    { \[\begin{bmatrix}
+    x & y & z
+    \end{bmatrix}\text{ \small $[\phi]_\alpha$} [e_2] = \begin{bmatrix}
+    x& y & z
+    \end{bmatrix}\begin{bmatrix}
+    -1 \\ 
+    -1 \\
+    -1
+    \end{bmatrix} = 0 \ \leftrightharpoons \  \begin{bmatrix}
+    x \\ 
+    y \\
+    z
+    \end{bmatrix} = \begin{bmatrix}
+    a \\ 
+    b \\
+    -a -b
+    \end{bmatrix} = \text{\small $[e_2]^\perp$}\]}
+    \par\noindent Seja \(w_2 = \text{\footnotesize $\begin{bmatrix} 1 & 0 & -1 \end{bmatrix}$}^t\), \(\phi(w_2, w_2) = -12\), ou seja, não isotrópico. Olhamos pra seu ortogonal (em \([e_2]^\perp\)) direto, na pratica \(a= 1\) e \(b=-2\) funçõa, ou seja \(w_3 = \text{\footnotesize $\begin{bmatrix} 1 &-2& 1 \end{bmatrix}$}^t\), \(\phi(w_3,w_3)  = 0\). Finalmente,     
+\end{example}
+\-\vspace{-0.2cm}
+}
+\begin{tikzpicture}[overlay, shift= {(-1cm, -1.5cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture} \newpage
+\- \vspace{-1.2cm}
+\ejemplo{
+\-\begin{tikzpicture}[overlay, shift= {(-1cm, 0.2cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture}
+    { \[\text{ \small $[\phi]_{\alpha_o}$} = \begin{bmatrix}
+    -1 & 0 & 0 \\
+    0 & -1 & 0 \\
+    0 & 0 & 0 
+    \end{bmatrix}, \ \ \text{\small $\alpha_o = \left\{ e_2, \frac{1}{\sqrt{12}}w_2, w_3\right\}$.}\]}
+    \noindent Por último \(\pt\phi = 2, \ \text{i}(\phi) = 2,\ \operatorname{sign}(\phi) = -2\). 
+}
 
 \theoremnum{9.4.7.}
 \begin{theorem}[\emph{Lei de Inercia de Sylvester}]

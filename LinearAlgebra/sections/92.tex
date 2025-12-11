@@ -17,6 +17,38 @@
     Segue da \(\square\) \ref{prop:9.1.4} que se \(\alpha = (v_i)\) é base de \(V\), então \(\alpha' = (f_i)\), onde \(f_i(v_j) = \delta_{ij}\) é l.i. em \(V'\), base no caso \(\dim V <\infty\). \footnote{Aquí pensamos em \(W=\F = [1]\), espaço vetorial de dimensão um sobre se mesmo. }%\(\square\) \ref{prop:9.1.4} segue que 
 \end{note}
 
+\ejemplo{Conta con duais \centering
+\tcblower
+No casso finito é fazer conta com matrices. De fato, se \(\dim V = n < \infty\) e \(\alpha =(v_j)\), \(\beta = (f_j)\) bases pra \(V\) e \(V'\), então  
+\[\beta = \alpha ' \ \leftrightharpoons \ \begin{bmatrix}
+   \rotatebox{90}{$|$} & f_1 & \rotatebox{90}{$|$} \\ 
+    & \rotatebox{90}{$\ldots$}& \\ 
+   \rotatebox{90}{$|$} & f_n & \rotatebox{90}{$|$}  
+\end{bmatrix} \begin{bmatrix}
+   \rotatebox{0}{$|$} &  & \rotatebox{0}{$|$} \\ 
+   v_1 & \rotatebox{0}{$\cdots$}& v_n\\ 
+   \rotatebox{0}{$|$} &  & \rotatebox{0}{$|$}  
+\end{bmatrix} = \id_n.\]
+Note também que \(\alpha \) e \(\beta \) são bases \(\leftrightharpoons\) as matrices acima são invertíveis.
+\newline \vspace{-0.4cm}
+\begin{example}
+    Sejam \(V = \mathcal{P}_2(\R)\) e \(\beta = f_1, f_2, f_3\) dadas por, 
+    \[\textstyle f_1(p) = p(1), \hspace{1cm} f_2(p) = \dot{p}(0),\hspace{1cm} f_3(p) = \int_0^{\sqrt{2}} \dot{p}(t)t^3 \ dt. \]
+    Sendo \(p(t) = a + bt + ct^2 \in \mathcal{P}_2(\R)\) qualquer, temos \(\textstyle f_1(p) = a+b+c,\  f_2(p) = b,\ f_3(p) = b + \frac{8\sqrt{2}}{5} c= b+\lambda c\). Assim, em termos matriciais, 
+    \[\begin{bmatrix}
+        1 & 1 & 1\\ 
+        0 & 1 & 0\\ 
+        0 & 1 & \lambda\\ 
+    \end{bmatrix}\begin{bmatrix}
+        1 & \frac{1}{\lambda} -1 & -\frac{1}{\lambda}\\
+        0 & 1 & 0\\
+        0 & -\frac{1}{\lambda}  & \frac{1}{\lambda}\\
+    \end{bmatrix} = \id_3.\]
+    Visto que tudo esta pensado em termos da base canônica (\(1, t, t^2\)), temos 
+    \[\textstyle\alpha = \left\{1, (\frac{1}{\lambda}-1) + t- \frac{1}{\lambda}t^2, -\frac{1}{\lambda} + \frac{1}{\lambda}t^2\right\} : \alpha' = \beta. \]
+\end{example}
+}
+
 \hypertarget{corol921}{}
 \begin{corollary}
     \textbf{9.2.1.} Seja \(v\in V\) tal que \(\forall f \in V',\ f(v) = 0 \), então \(v = 0\). \comentario{Se \(v\neq 0\), então \(\exists \alpha \) base de \(V\) tal que \(v = v_{i_0}\in \alpha\), assim \(f_{i_0}(v_{i_0}) = 1 \neq 0\) }
@@ -69,3 +101,5 @@ Sejam \(\alpha = (v_i)\) base de \(V\) e \(\mathcal{F} (I,\F) \ni (a_i) \sim a: 
 \demo{
     Sejam \(\alpha = (v_j)\), \(\beta= (w_i)\) e  \([T]^\alpha_\beta = (a_{ij})\). Escreva \(T(v_j) = \sum^{m} a_{ij} w_i\), logo note que a entrada \(b_{ji}\) da \([T']^{\beta'}_{\alpha'}\) é precisamente \(T'(g_i)(v_j)\). 
 }
+
+
