@@ -1,34 +1,34 @@
 \section{Teoria Geral de Operadores Lineares}
 
 \vspace{-0.3cm}
-Se \(T\in \ehom(V)\) e \(m \in \mathbb{Z}_{\geq 0}\), então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ veces }} \in \ehom(V)\), por convenção \(T^0 = \id_{_V}\). Seguindo a \(\square \) \ref{prop:0.1} (a), \(\forall p \in \mathcal{P}(\F)\) temos,  
+Se \(T\in \ehom(V)\) e \(m \in \mathbb{Z}_{\geq 0}\), então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ vezes }} \in \ehom(V)\), por convenção \(T^0 = \id\). Seguindo a \(\square \) \ref{prop:0.1} (a), \(\forall p \in \mathcal{P}(\F)\) temos,  
 \[p(t) = \sum^m a_kt^k \ \ \ \leadsto \ \ \ P(T) = \sum^m a_kT^k \in \ehom(V).\] 
-Também, na notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\}\). De aquí pra frente (nesste capítulo) sejam \(V\) e  \(T\in \ehom(V)\) fixos. 
+Também, na notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\}\). Daqui pra frente (neste capítulo) sejam \(V\) e  \(T\in \ehom(V)\) fixos. 
 
 \begin{note}
-    Nessos termos um autoespaço é \(V_{t-\lambda} \neq \{0\}\). 
+    Nesses termos um autoespaço é \(V_{t-\lambda} \neq \{0\}\). 
 \end{note}
 
-\subsection{Polinômio Mínimo e Descomposição Primária}
+\subsection{Polinômio Mínimo e Decomposição Primária}
 
 \begin{definition}
     Sejam \(\lambda \in \F\), \(m\in \N\) e \(p(t) = (t-\lambda)^m\). Se \(\exists v\in V_p\setminus \{0\}\) é chamado de \emph{autovetor geralizado} associado ao autovalor \(\lambda\).  
 \end{definition}
 
 \begin{definition}
-    \(W\leq V\) é \emph{\(T\)-invariante} se \(T(W) \subseteq W\), e a restrição de \(T|_{_W}\) e chamada de o \emph{operador inducido} em \(W\). 
+    \(W\leq V\) é \emph{\(T\)-invariante} se \(T(W) \subseteq W\), e a restrição de \(T|_{_W}\) e chamada de \emph{operador induzido} por \(T\) em \(W\). 
 \end{definition}
 
 \begin{lemma}
-    \textbf{8.1.1.} Se \(S, T \in \ehom(V)\) são tais que \(S\circ T = T \circ S\), então \(V_{_S}\) é \(T\)-inv. \comentario{ Se \(w \in V_{_S} \Rightarrow S(T(w)) = T(S(w)) = 0 \Rightarrow T(w)\in V_{_S}\)}%ariante.  
+    \textbf{8.1.1.} Sejam \(S, T \in \ehom(V)\)  \(: S\circ T = T \circ S\), então \(V_{_S}\) é \(T\)-inv. \comentario{ Se \(w \in V_{_S} \Rightarrow S(T(w)) = T(S(w)) = 0 \Rightarrow T(w)\in V_{_S}\)}%ariante.  
 \end{lemma}
 
 \begin{note}
-    Dado que \(p(T) \circ T = T\circ p(T)\) os subespaçõs \(V_p \) são \(T\)-inv, e também, \(\forall p, f \in \Pol \), \(V_p \subseteq V_{fp}\). Em particular, \(\forall k \in \mathbb{Z}_{\geq 0}, \ V_{p^k} \subseteq V_{p^{k+1}}\). 
+    Dado que \(p(T) \circ T = T\circ p(T)\) os subespaços \(V_p \) são \(T\)-inv, e também, \(\forall p, f \in \Pol \), \(V_p \subseteq V_{fp}\). Em particular, \(\forall k \in \mathbb{Z}_{\geq 0}, \ V_{p^k} \subseteq V_{p^{k+1}}\). 
 \end{note}
 
 \begin{definition}
-    Sejam \(\lambda \in F\) e \(V_{\ p}^\infty := \bigcup_{k>0} V_{p^k}\). No caso de \(p = (t-\lambda)\) o subespaço \(V_{\ p}^\infty \) é chamado de \emph{autoespaço geralizado} associado ao \(\lambda\). 
+    Sejam \(\lambda \in \F\) e \(V_{\ p}^\infty := \bigcup_{k>0} V_{p^k}\). No caso \(p = t-\lambda\), o subespaço \(V_{\ p}^\infty \) é chamado de \emph{autoespaço geralizado} associado ao \(\lambda\). 
 \end{definition}
 
 \begin{note}
@@ -56,7 +56,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \end{proposition}
 
 \demo{  
-    \(\an_{_T} \) é ideal, então \( \exists ! m_{_T}\) tal que \(\an_{_T} = \langle m_{_T}\rangle\). Se prefer pegue \(m_{_T}\) de menor grau possivél, suponha \(f = m_{_T} q +r\) e conclua que \(r = 0\). Para unicidade suponha outro e usei \(\square\) \ref{prop:0.2} (e). 
+    \(\an_{_T} \) é ideal, então \( \exists ! m_{_T} : \an_{_T} = \langle m_{_T}\rangle\). Se preferir pegue \(m_{_T}\) de menor grau possível, supõe \(f = m_{_T} q +r\) e conclua \(r = 0\), a unicidade segue da \(\square\) \ref{prop:0.2} (e). 
 }
 \begin{note}
     Se \(\an_{_T} = \{0\}\) fazemos \(m_{_T} :=0\), é assim que \(V = V_{m_{_T}}\). Se \(S = T|_{_{V_p}}\), então \(p \in \an_{_S}\). Também, pode-se verificar que o polinômio da \(\square\) \ref{prop:8.1.3} é de fato \(m_{_T}\). 
@@ -64,7 +64,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 
 \hypertarget{lemma816}{}
 \begin{lemma}
-    \textbf{8.1.6.} Se \(f, g \in \Pol\) co-primos, então a restrição de \(f|_{_{V_g}}\) é injetora.  \comentario{Faz usando o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}, lembre-se que \(1 \leadsto \id_{_V}\)}
+    \textbf{8.1.6.} Se \(f, g \in \Pol\) coprimos, então a restrição de \(f|_{_{V_g}}\) é injetora.  \comentario{Faz usando o \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}, lembre-se que \(1 \leadsto \id_{_V}\)}
 \end{lemma}
 
 \propositionnum{8.1.7.}
@@ -74,7 +74,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \end{proposition}
 
 \demo{
-    \((\Rightarrow )\) Supõe que \(p \ \nmid \ m_{_T}\), então eles são co-primos, aplique {\scriptsize\(\square\)} \hyperlink{lemma816}{ 8.1.6.} e conclua \(V_p = \{0\}\). \((\Leftarrow)\) Suponha \(p\ | \ m_{_T}\) e \(V_p = \{0\}\) e contradiga.
+    \((\Rightarrow )\) Supõe que \(p \ \nmid \ m_{_T}\), então eles são coprimos, aplique {\scriptsize\(\square\)} \hyperlink{lemma816}{ 8.1.6.} e conclua \(V_p = \{0\}\). \((\Leftarrow)\) Suponha \(p\ | \ m_{_T}\), \(V_p = \{0\}\) e contradiga.
 } 
 
 \begin{corollary}
@@ -83,16 +83,16 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \end{corollary}
 
 \demo{
-    É coisa de fatorar em primos, ter presentes as propiedades \(\square\) \ref{prop:0.2} (a), \(V_{p}\subseteq V_{fp}\) e conseguir as hipótese da \(\square \) \ref{prop:8.1.7}. 
-    %\((\Rightarrow)\) Fatore em primos, \(p = \prod^m p_i^{k_i}\), para \( v \in V_p\setminus \{0\}\), pelo menos um \(p_j^{k_j} \in \an_{_T}\) o anula. Note que \(\{0\} \neq V_{p_j^{k_j}}\supseteq V_{p_j}\) e aplique a \(\square\) \ref{prop:8.1.7}, defina \(f = p_j\). \((\Leftarrow) \) De novo fatore \(f = \prod^m p_i^{k_i}\) pela propiedade \( \square\) \ref{prop:0.2} (a) \(p_j\ | \ m_T\), logo, de novo por \(\square\) \ref{prop:8.1.7} temos \(\{0\}\neq V_{p_j} \subseteq V_f \subseteq V_p\).  
+    É questão de fatorar em primos, ter presentes as propriedades \(\square\) \ref{prop:0.2} (a), \(V_{p}\subseteq V_{fp}\) e conseguir as hipótese da \(\square \) \ref{prop:8.1.7}. 
+    %\((\Rightarrow)\) Fatore em primos, \(p = \prod^m p_i^{k_i}\), para \( v \in V_p\setminus \{0\}\), pelo menos um \(p_j^{k_j} \in \an_{_T}\) o anula. Note que \(\{0\} \neq V_{p_j^{k_j}}\supseteq V_{p_j}\) e aplique a \(\square\) \ref{prop:8.1.7}, defina \(f = p_j\). \((\Leftarrow) \) De novo fatore \(f = \prod^m p_i^{k_i}\) pela propriedade \( \square\) \ref{prop:0.2} (a) \(p_j\ | \ m_T\), logo, de novo por \(\square\) \ref{prop:8.1.7} temos \(\{0\}\neq V_{p_j} \subseteq V_f \subseteq V_p\).  
 }
 
 \begin{definition}
-    Sejam \(v\in V\), \(\forall k \in \mathbb{Z}_{\geq 0}\) e \(v_k = T^k(v)\). A familia \(\mathscr{C}^\infty_{T}(v):= (v_k)\)  é o \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_{_T}(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). 
+    Sejam \(v\in V\) e \(\forall k \in \mathbb{Z}_{\geq 0}, \ v_k = T^k(v)\). A família \(\mathscr{C}^\infty_{T}(v):= (v_k)\)  é o \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_{_T}(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). 
 \end{definition}
 
 \begin{note}
-    É fácil ver que \(C_{_T}(v)\) é \(T\)-inv. Alternativamente, pode-se definir \(C_{_T}(v) = \mathscr{C}_T^m(v)  \), onde \(m = \dim C_{_T}(v) \in \mathbb{Z}_{\geq 0} \cup \{\infty\}\). 
+    É fácil ver que \(C_{_T}(v)\) é \(T\)-inv. Alternativamente, pode-se definir \(C_{_T}(v) = [\mathscr{C}_T^m(v)] \), onde \(m = \dim (C_{_T}(v)) \in \mathbb{Z}_{\geq 0} \cup \{\infty\}\). 
 \end{note}
 
 %\begin{definition}
@@ -104,7 +104,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 %\end{lemma}
      
 \begin{definition}
-    Para \(\alpha = (v_i)\) familia de vetores em \(V\) definimos \(C_{_T}(\alpha):= \sum C_{_T}(v_i)\).  
+    Para \(\alpha = (v_i)\) família de vetores em \(V\) definimos \(C_{_T}(\alpha):= \sum C_{_T}(v_i)\).  
 \end{definition}
 
 %\begin{note}
@@ -112,7 +112,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 %\end{note}
 
 \begin{note}
-    Se \(\dim V = n < \infty\), então num análise analogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) com \(m := \min \{k \in \mathbb{Z}_{\geq 0 }: \mathscr{C}^k_{T}(v)\text{ é l.d.}\}\). Também, note que \(C_{_T}(v)\subseteq V_{m_v}\) que é \(T\)-inv, logo, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
+    Se \(\dim V = n < \infty\), então num análise análogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) com \(m := \min \{k \in \mathbb{Z}_{\geq 0 }: \mathscr{C}^k_{T}(v)\text{ é l.d.}\}\). Também, note que \(C_{_T}(v)\subseteq V_{m_v}\) que é \(T\)-inv, logo, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
 \end{note}
 
 \begin{corollary}
@@ -122,17 +122,17 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \propositionnum{8.1.11.}
 \begin{proposition}
     \label{prop:8.1.11}
-    Sejam \(m \in \N\) e \(p_1, p_2, \ldots, p_m\in \Pol \) co-primos dois a dois. Então, a soma \(\sum^m V_{\ p_j}^\infty\) é direta.
+    Sejam \(m \in \N\) e \(p_1, p_2, \ldots, p_m\in \Pol \) coprimos dois a dois. Então, a soma \(\sum_{j\leq m} V_{\ p_j}^\infty\) é direta.
 \end{proposition}
 
 \demo{
-    Seguendo \(\square\) \ref{prop:5.4.6}, pega \(v_j \in V^\infty_{\ p_j}\setminus \{0\}\) e mostra que \(\alpha = (v_j)\) é l.i.. Faz por indução, no paso indutivo suponha \(\sum^{m} a_j v_j = 0 \) e \(g = \prod_{j< m} p_j\). Usa o {\scriptsize\( \square\)} \hyperlink{lemma816}{8.1.6.} com cada \(g_j = p_j\) e \(f = p_m\) pra concluir \(a_m =0\).    
+    Seguindo a \(\square\) \ref{prop:5.4.6}, pega \(v_j \in V^\infty_{\ p_j}\setminus \{0\}\) e mostra que \(\alpha = (v_j)\) é l.i.. Faz por indução, no passo indutivo suponha \(\sum^{m} a_j v_j = 0 \) e \(g = \prod_{j< m} p_j\). Usa o {\scriptsize\( \square\)} \hyperlink{lemma816}{8.1.6.} com cada \(g_j = p_j\) e \(f = p_m\) pra concluir \(a_m =0\).    
 }
 
 \propositionnum{8.1.12.}
 \begin{proposition}
     \label{prop:8.1.12}
-    Sejam \(m \in \N\) e \(f_1, f_2, \ldots, f_m \in \Pol\) co-primos dois a dois e \(f = \prod^m f_j\). Então, \(V_f = \bigoplus V_{f_j}\). \comentario{Não suporta resumo, olha \cite[Pág. 261]{MA719}}
+    Sejam \(m \in \N\) e \(f_1, f_2, \ldots, f_m \in \Pol\) coprimos dois a dois e \(f = \prod^m f_j\). Então, \(V_f = \bigoplus V_{f_j}\). \comentario{Não suporta resumo, olha \cite[Pág. 261]{MA719}}
 \end{proposition}
 
 \theoremnum{8.1.13.}
@@ -150,6 +150,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     Os termos da soma em \(\blacksquare\) \hyperlink{thmDP}{8.1.13. (\emph{DP})} são chamados \emph{subespaços} \(T\)\emph{-primarios}.
 \end{note}
 
+
 \hypertarget{lemma8116}{}
 \begin{lemma}
     \textbf{8.1.16.} Sejam \(p\in \Pol\) primo e \(u,v\in V\) tais que \(m_u = m_v = p \). Então, ocurre exatamente uma das duas opções a seguir,
@@ -157,16 +158,11 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
         \item \(C_{_T}(u) = C_{_T}(v)\). \hspace{2cm} ii. \(C_{_T}(u) \cap C_{_T}(v) = \{0\}\). 
     \end{enumerate} 
 \end{lemma}
-\begin{itemize}[left=0cm]
-    \item[] \vspace{-1cm} 
-    \begin{exercise}
-    \textbf{8.1.10.} \(\ C_{_T}(v) = \{q(T)(v): q \in \Pol\}\). \comentario{Prova conjuntista}
-    \end{exercise}  
-    \vspace{-0.1cm}
-    \item[] \demo{
-    O resultado segue de mostrar \(\forall w \in C_{_T}(v)\), \(C_{_T}(v) = C_{_T}(w)\). Prova as duas contenções usando o exercício acima e \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}. 
+
+
+\demo{
+    \(C_{_T}(v) = \{q(T)(v): q \in \Pol\}\). Mostra que \(\forall w \in C_{_T}(v)\), \(C_{_T}(v) = C_{_T}(w)\) usando a aquela primeira igualdade e \(\blacksquare\) \hyperref[thm:bezout]{\hspace{0cm}(\emph{Bézout})}. 
 }
-\end{itemize}
 
 \propositionnum{8.1.17.}
 \begin{proposition}
@@ -184,14 +180,13 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \end{proposition}
 
 \begin{note}
-    Pode e debe-se verificar que \(\min\{k: V_{\ p }^\infty = V_{p^k}\} = k_j\) do \(\blacksquare\) \hyperlink{thmDP}{8.1.13. (\emph{DP})}, é assim que conseguimos definir o \emph{polinômio carateristico} como sendo \(c_{_T} := \prod^m p_j^{n_j} \in \an_{_T}\), exatamente o mesmo do \(\blacksquare\) (\emph{Caley-Hamilton}). 
+    Pode e deve-se verificar que \(\min\{k: V_{\ p }^\infty = V_{p^k}\} = k_j\) do \(\blacksquare\) \hyperlink{thmDP}{8.1.13. (\emph{DP})}, é assim que conseguimos definir o \emph{polinômio característico} como sendo \(c_{_T} := \prod^m p_j^{n_j} \in \an_{_T}\), exatamente o mesmo do \(\blacksquare\) (\emph{Cayley-Hamilton}). 
 \end{note}
  
 \ejemplo{
-    \centering Encontrando a Descomposição Primária
+    \centering Encontrando a Decomposição Primária
     \tcblower
-    \begin{description}
-        \item[Passo 1.] Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
+    \textbf{Passo 1.} Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
    {\footnotesize  
 \[  \text{\small Sejam \(V\) \(\R\)-espaço e \(A = \)}
     \begin{bmatrix}
@@ -203,10 +198,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     0 & 0 & 0 & 0 & 0 & 2\\
   \end{bmatrix} 
 \]}
-        \item[Passo 2.] Encontre \(c_{_T}= \det (t\id_{_V} - A)\) e sua fatoração em primos \(c_{_T} = \prod^m p_j^{n_j}\). \comentario{Precisa habilidade na hora das contas do \(\det\)}
-\end{description}
-
-\vspace{-0.5cm}
+    \noindent\textbf{Passo 2.} Encontre \(c_{_T}= \det (t\id - A)\) e sua fatoração em primos \(c_{_T} = \prod^m p_j^{n_j}\). \comentario{Precisa de habilidade na hora das contas do \(\det\)}
 {\footnotesize  
 \begin{align*}
  \text{\small $_{F_1 \to F_1 - F_4} \ \ \rotatebox{-90}{$\longrightarrow$} \ \ _{F_2 \to F_2 + F_3}$}
@@ -219,18 +211,6 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     0 & 0 & 0 & -1 & t & 2\\
     0 & 0 & 0 & 0 & 0 & t - 2\\
   \end{array}\right| = \text{\small \(c_{_T}\)}   \\   
-\end{align*}
-}
-\begin{tikzpicture}[overlay, shift= {(-1cm, -1cm)}]
-    \fill[white] (0,0) rectangle (20,2.5);
-\end{tikzpicture} 
-}
-
-\ejemplo{
-\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
-    \fill[white] (0,0) rectangle (20,2.5);
-\end{tikzpicture} 
-    {\footnotesize \vspace{-0.3cm}\begin{align*}
     \left|\begin{array}{*6{c}}
     (t-1) & \textcolor{gray}{0} & \textcolor{gray}{0} & -(t-1) & \textcolor{gray}{0} &  \\ 
     \textcolor{gray}{0} & (t - 1) & (t-1) & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
@@ -246,8 +226,8 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     2 & 2 & t & 0 & 1   \\
     1 & 1 & 1 & t - 1 & 1 \\
     0 & 0 & 0 & -1 & t \\
-  \end{array}\right| \\
-(t-2)(t-1)^2 \left|\begin{array}{*3{c}}
+  \end{array}\right| \\ 
+    (t-2)(t-1)^2 \left|\begin{array}{*3{c}}
     1  & \textcolor{gray}{0} & \textcolor{gray}{0}  \\
      & 1  & 1  \\
      & 2 & t  
@@ -264,15 +244,24 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & t \\
   \end{array}\right|  
 \text{\small\(\overset{F_4 \to F_4 - F_2 - F_1}{\longleftarrow}\)}
-   %= 
 \end{align*}
 }
-
 \[c_{_T} = (t-2)^2 (t-1)^2 (t^2+ 1 ) \]
-
-\begin{description}
-    \item[Passo 3.] Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\). Neste casso, não vou por as contas, mais de fato, 
-\end{description}
+\textbf{Passo 3.} Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\). Neste caso, não vou por as contas, mas de fato, 
+\[m_{_T} = (t-2)^2(t-1)(t^2+1) \ \Rightarrow \  V =  V_{(t-2)^2} \oplus V_{t-1} \oplus V_{t^2+1}.\]
+%\begin{tikzpicture}[overlay, shift= {(-1cm, -2.5cm)}]
+%    \fill[white] (0,0) rectangle (20,2.5);
+%\end{tikzpicture} 
+}
+%\ejemplo{
+%\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
+%    \fill[white] (0,0) rectangle (20,2.5);
+%\end{tikzpicture} 
+%   {\footnotesize \vspace{-0.3cm}%\begin{align*}
+%  %= 
+%j\end{align*}
+%}
+%
 %\vspace{-0.5cm}
 %{\footnotesize
 %\begin{align*}
@@ -364,6 +353,5 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 %  \end{array}\right]\Rightarrow \ \ \dim V_{t-2} = 1
 %\end{align*}
 %}
-\[m_{_T} = (t-2)^2(t-1)(t^2+1) \ \Rightarrow \  V =  V_{(t-2)^2} \oplus V_{t-1} \oplus V_{t^2+1}.\]
-}
+%}
  

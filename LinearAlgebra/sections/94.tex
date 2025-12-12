@@ -3,11 +3,11 @@
 O objetivo nesta seção é establecer versões simplificadas pra \(\textcolor{gray}{_\alpha}[\phi]_\alpha\) no caso das formas bilineares simétricas e alternadas. 
 
 \begin{definition}
-    \(B_a(V):= \{\phi \in B(V): \phi \text{ é alternada}\}\)\  e \ \(B_s(V):= \{\phi \in B(V): \phi \text{ é simétrica}\}\). \comentario{É obvio quém va ser \(B_{as}(V)\)}
+    \(B_a(V):= \{\phi \in B(V): \phi \text{ é alternada}\}\)\  e \ \(B_s(V):= \{\phi \in B(V): \phi \text{ é simétrica}\}\). \comentario{É óbvio quem vai ser \(B_{as}(V)\)}
 \end{definition}
 
 \begin{note}
-Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi}\alpha = \alpha^{\perp_\phi}\). De aquí pra frente sejam \(\dim V < \infty\) e \(\phi\) fixos, escrevemos simplesmente \(\alpha^\perp\).
+Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi}\alpha = \alpha^{\perp_\phi}\). Daqui pra frente sejam \(\dim V < \infty\) e \(\phi\) fixos, escrevemos simplesmente \(\alpha^\perp\).
 \end{note}
 
 \begin{definition}
@@ -26,6 +26,10 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
     \end{enumerate}
 \end{lemma}
 
+\begin{exercise}
+    Seja \(W\leq V\), então \(\forall f\in W', \exists \widetilde{f} \in V'\) tal que \(\widetilde{f}|_{_W} = f \).
+\end{exercise}
+
 \propositionnum{9.4.1.}
 \begin{proposition}
     \label{prop:941}
@@ -36,21 +40,15 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
     \end{enumerate}
 \end{proposition}
 
-\- \vspace{-2.2cm}
-\begin{itemize}[left = 0.25cm]
-    \item[] \begin{exercise}
-        Seja \(W\leq V\), então \(\forall f\in W', \exists \widetilde{f} \in V'\) tal que \(\widetilde{f}|_{_W} = f \).
-    \item[] \demo{
-   (a) Mostra que \(T: V \ni v \twoheadrightarrow \hspace{0.1cm}_\phi D(v) |_{_W} \in W'\) e \(\ker T = W^\perp\); (b) é obvia; (c) \(W\subseteq (W^\perp)^\perp\) sempre, a outra contenção segue de fazer \(W = W^\perp\) em (a); (d) é conseqüência de (c). 
+\demo{
+   (a) Mostra que \(T: V \ni v \twoheadrightarrow \hspace{0.1cm}_\phi D(v) |_{_W} \in W'\) e \(\ker T = W^\perp\); (b) é óbvia; (c) \(W\subseteq (W^\perp)^\perp\) sempre, a outra contenção segue de fazer \(W = W^\perp\) em (a); (d) é conseqüência direta de (c). 
 }
-    \end{exercise}
-\end{itemize}
 
 \alerta{ \centering
     \(\phi\) degenerada não conclui nada em \(\square\) \ref{prop:941}
     \tcblower
     \begin{example}
-        Sejam \(V = \F^2\), \([\phi]_\alpha = \operatorname{diag}(1,0)\) na base canônica e \(W = [e_j]\). Todas as conclusões na \(\square\) \ref{prop:941} dam erradas. 
+        Sejam \(V = \F^2\), \([\phi]_\alpha = \operatorname{diag}(1,0)\) na base canônica e \(W = [e_j]\). Todas as conclusões na \(\square\) \ref{prop:941} dão erradas. 
     \end{example}
 }
 
@@ -67,7 +65,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 \begin{definition}
     Sejam \(\phi \in B_a(V)\) e \((v,w) \in V \times V\), definimos:    
     \begin{itemize}[label = \(\star\), left = 1cm]
-        \item \emph{Par hiperbólico} (ordenado) \(\rightarrow (v,w) : \phi(v,w)=-1\) e seu respetivo \emph{plano hiperbólico} \(\rightarrow [v,w] \leq V\). 
+        \item \emph{Par hiperbólico} (ordenado) \(\rightarrow (v,w) : \phi(v,w)=-1\) e seu respectivo \emph{plano hiperbólico} \(\rightarrow [v,w] \leq V\). 
         \item \(\F\)\emph{-espaço hiperbólico} \(\rightarrow V = \bigoplus^m V_j: \forall j\leq m,\ V_j\) é plano hiperbólico e \(\forall i\neq j, \ V_i \perp V_j\).  
     \end{itemize}
 \end{definition}
@@ -94,7 +92,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 \end{theorem}
 
 \demo{
-    Da \(\square\) \ref{prop:943}, podemos supor \(\phi\) é não degenerada (vía restrição). Faz por indução em \(\dim V\). Note que \(\exists v, u \in V: \phi (v,u) = a \in \F^\times\Rightarrow \exists (v, w)\) hiperbólico \(\Rightarrow [v,w]\) é não degenerado. Segue de \(\square\) \ref{prop:943} que \(V = [v,w] \oplus [v,w]^\perp\) e de \(\square\) \ref{prop:941} (d) que \([v,w]^\perp\) é não degenerado. 
+    Da \(\square\) \ref{prop:943}, podemos supor \(\phi\) é não degenerada (via restrição). Faz por indução em \(\dim V\). Note que \(\exists v, u \in V: \phi (v,u) = a \in \F^\times\Rightarrow \exists (v, w)\) hiperbólico \(\Rightarrow [v,w]\) é não degenerado. Segue de \(\square\) \ref{prop:943} que \(V = [v,w] \oplus [v,w]^\perp\) e de \(\square\) \ref{prop:941} (d) que \([v,w]^\perp\) é não degenerado. 
 }
 %\comentario{A demostração não admite resumo, olha se queser \cite[Pág. 313]{MA719}}
 
@@ -163,7 +161,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 %}
 
 \begin{note}
-    As bases hiperbólicas são pra as alternadas o que são (seram) as ortogonais pra o produto interno (simétricas). O algoritmo é claro, não vou por exemplo de conta. 
+    As bases hiperbólicas são pra as alternadas o que são (serão) as ortogonais pra o produto interno (simétricas). O algoritmo é claro, não vou pôr exemplo de conta. 
 \end{note}
 
 \theoremnum{9.4.6.}
@@ -177,7 +175,7 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 }
 
 \begin{corollary}
-    No contexto do \(\blacksquare\) \ref{thm:946} se \(\alpha = (w_j)\) e \(\F = \R\), então \(\exists \alpha_\text{o}\) \emph{base de Sylvester} (subtraida da \(\alpha\)) fazendo \(\alpha_\text{o} = (a_jw_j)\), onde  \(a_j : a_j^2 = \frac{\pm 1}{\phi(w_j,w_j)}\). Se \(\beta\) é uma completação da base, \([\phi]_\beta = \operatorname{diag}([-\id_i], [\id_{p-i}], [0])\). %\footnote{Em geral existe normalização da \(\alpha\) \(\leftrightharpoons\) \(\forall j, \exists a_j \in \F: a_j^2 = \frac{1}{\phi(w_j,w_j)}\).}
+    No contexto do \(\blacksquare\) \ref{thm:946} se \(\alpha = (w_j)\) e \(\F = \R\), então \(\exists \alpha_\text{o}\) \emph{base de Sylvester} (subtraída da \(\alpha\)) fazendo \(\alpha_\text{o} = (a_jw_j)\), onde  \(a_j : a_j^2 = \frac{\pm 1}{\phi(w_j,w_j)}\). Se \(\beta\) é uma completação da base, \([\phi]_\beta = \operatorname{diag}([-\id_i], [\id_{p-i}], [0])\). %\footnote{Em geral existe normalização da \(\alpha\) \(\leftrightharpoons\) \(\forall j, \exists a_j \in \F: a_j^2 = \frac{1}{\phi(w_j,w_j)}\).}
 \end{corollary}
 
 \begin{definition}
@@ -218,18 +216,8 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
     b \\
     -a -b
     \end{bmatrix} = \text{\small $[e_2]^\perp$}\]}
-    \par\noindent Seja \(w_2 = \text{\footnotesize $\begin{bmatrix} 1 & 0 & -1 \end{bmatrix}$}^t\), \(\phi(w_2, w_2) = -12\), ou seja, não isotrópico. Olhamos pra seu ortogonal (em \([e_2]^\perp\)) direto, na pratica \(a= 1\) e \(b=-2\) funçõa, ou seja \(w_3 = \text{\footnotesize $\begin{bmatrix} 1 &-2& 1 \end{bmatrix}$}^t\), \(\phi(w_3,w_3)  = 0\). Finalmente,     
+    \par\noindent Seja \(w_2 = \text{\footnotesize $\begin{bmatrix} 1 & 0 & -1 \end{bmatrix}$}^t\), \(\phi(w_2, w_2) = -12\), ou seja, não isotrópico. Olhamos pra seu ortogonal (em \([e_2]^\perp\)) direto, na prática \(a= 1\) e \(b=-2\) funciona, ou seja \(w_3 = \text{\footnotesize $\begin{bmatrix} 1 &-2& 1 \end{bmatrix}$}^t\), \(\phi(w_3,w_3)  = 0\). Finalmente,     
 \end{example}
-\-\vspace{-0.2cm}
-}
-\begin{tikzpicture}[overlay, shift= {(-1cm, -1.5cm)}]
-    \fill[white] (0,0) rectangle (20,2.5);
-\end{tikzpicture} \newpage
-\- \vspace{-1.2cm}
-\ejemplo{
-\-\begin{tikzpicture}[overlay, shift= {(-1cm, 0.2cm)}]
-    \fill[white] (0,0) rectangle (20,2.5);
-\end{tikzpicture}
     { \[\text{ \small $[\phi]_{\alpha_o}$} = \begin{bmatrix}
     -1 & 0 & 0 \\
     0 & -1 & 0 \\
@@ -239,8 +227,8 @@ Se \(\phi \in B_{as}(V)\) segue da \(\square\) \ref{prop:937} que \(^{\perp_\phi
 }
 
 \theoremnum{9.4.7.}
-\begin{theorem}[\emph{Lei de Inercia de Sylvester}]
-    Sejam \(\phi \in B_s(V)\), \(\F\leq \R\) e \(\alpha = (v_j)\) base ortogonal pra \(V\) respeito da \(\phi\). Então, i\((\phi) = \#\{j: \phi(v_j,v_j) <0\}\).  
+\begin{theorem}[\emph{Lei de Inércia de Sylvester}]
+    Sejam \(\phi \in B_s(V)\), \(\F\leq \R\) e \(\alpha = (v_j)\) base ortogonal pra \(V\) respeito de \(\phi\). Então, i\((\phi) = \#\{j: \phi(v_j,v_j) <0\}\).  
 \end{theorem}
 
-\comentario{Não suporta resumo, olha se queser \cite[Pág. 316]{MA719}}
+\comentario{Não suporta resumo, olha se quiser \cite[Pág. 316]{MA719}}

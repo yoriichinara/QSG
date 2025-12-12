@@ -13,7 +13,7 @@
 \demo{Mostra que \(S(w_1 + \lambda w_2) - S(w_1) - \lambda S(w_2) \in \ker D_\phi\). Mesma coisa pra unicidade, olha que \(S_1(w) - S_2(w) \in \ker D_\phi\). }
 
 \begin{note}
-    Denotamos por \(T^\phi_\psi\) à adjunta direita, no casso das hipótese do {\scriptsize \(\square\)} \ \hyperlink{lemma962}{9.6.2.}. Veja que, em termos matriciais \([T^\phi_\psi]^\beta_\alpha = [\phi]^{-1}_\alpha ([T]^\alpha_\beta)^t[\psi]_\beta\). 
+    Denotamos por \(T^\phi_\psi\) à adjunta direita, no caso das hipótese do {\scriptsize \(\square\)} \ \hyperlink{lemma962}{9.6.2.}. Veja que, em termos matriciais \([T^\phi_\psi]^\beta_\alpha = [\phi]^{-1}_\alpha ([T]^\alpha_\beta)^t[\psi]_\beta\). 
 \end{note}
 
 \propositionnum{9.6.3.}
@@ -34,6 +34,22 @@
     \textbf{8.6.5.} Se \(T\in \hom(V,W )\) e \(\psi \in B_{as}(W)\), então 
     \begin{enumerate}[label = (\alph*)]
         \item Se \(\psi \) for também não degenerada, \(\ker T = \operatorname{Im}(T^\phi_\psi)^{\perp_\phi}\). Em particular, \(T \) é injetora \(\leftrightharpoons\) \(T^\phi_\psi\) for sobrejetora. Além disso, se \(\ker T\) for não degenerado, \(V = \ker T \oplus \operatorname{Im}T^\phi_\psi\).  \comentario{É apenas desenvolver as definições, não tém magia nenhum}
-        \item \(\ker T^\phi_\psi = \operatorname{Im}(T)^{\perp_\psi} \). Em particular, se \(\psi \) for não degenerada, \(T^\phi_\psi\) é injetora \(\leftrightharpoons\) \(T\) for sobrejetora. Além disso, se \(\dim W < \infty\) e ambos \(W\) e \(\ker T^\phi_\psi \) forem não degenerados, \(W = \ker T^\phi_\psi \oplus \operatorname{Im}T\). \comentario{Mesmo negôcio acima}
+        \item \(\ker T^\phi_\psi = \operatorname{Im}(T)^{\perp_\psi} \). Em particular, se \(\psi \) for não degenerada, \(T^\phi_\psi\) é injetora \(\leftrightharpoons\) \(T\) for sobrejetora. Além disso, se \(\dim W < \infty\) e ambos \(W\) e \(\ker T^\phi_\psi \) forem não degenerados, \(W = \ker T^\phi_\psi \oplus \operatorname{Im}T\). \comentario{Mesmo negócio acima}
     \end{enumerate}
 \end{lemma}
+
+\begin{note}
+    O objetivo final é obter uma versão dos teoremas espectrais. Supondo então, \(T \in \ehom(V)\) e \(\phi \in B_s(V)\), de convenções anteriores é claro que se \(\exists T^\phi_\phi = T^\phi\), então \(T^\phi = T\), ou seja que \(T\) é necessariamente \emph{autoadjunto}. 
+\end{note}
+
+\hypertarget{lemma966}{}
+\begin{lemma}
+    \textbf{9.6.6.} Se \(T\) é autoadjunto com respeito de \(\phi\), então autoespaços são mutuamente ortogonais e se \(\exists v \in V_\lambda\setminus\{0\}\) então \(\{v\}^{\perp_\phi}\) é \(T\)-inv.  \comentario{Quase direto da definição}
+\end{lemma}
+
+\theoremnum{9.6.7.}
+\begin{theorem}
+    Sejam \(\F\) algebraicamente fechado, \(\operatorname{car}\F \neq 2\) e \(V\) anisotrópico respeito de \(\phi \in B_s(V)\). Então, \(\exists \beta\) base ortogonal respeito de \(\phi\) \(\leftrightharpoons\) \(T^\phi = T\). 
+\end{theorem}
+
+\demo{\((\Rightarrow)\) Última nota. \((\Leftarrow)\) \(\exists \lambda \in \F : \exists w \in V_\lambda\setminus\{0\}\), seja \(W = [w]\), dado que \(V\) é anisotrópico, \(W\) é não degenerado e \(V = W \oplus W^{\perp_\phi}\). Do {\scriptsize\(\square\)} \hyperlink{lemma966}{9.6.6.} que \(W^{\perp_\phi}\) é \(T\)-inv. O resultado segue pôr indução na dimensão de \(V\).}

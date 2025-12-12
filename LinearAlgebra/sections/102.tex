@@ -1,7 +1,7 @@
 \subsection{Produto Tensorial}
 
 \begin{definition}
-    Seja \((V_j)\) familia de \(\F\)-espaços vetorias, \(j\leq k \in \N\). Um \(\F\)\emph{-produto tensorial} pra \((V_j)\) é um par universal \((\phi, V)\) sobre \(X = \Pi V_j\) onde,   
+    Seja \((V_j)\) família de \(\F\)-espaços vetoriais, \(j\leq k \in \N\). Um \(\F\)\emph{-produto tensorial} pra \((V_j)\) é um par universal \((\phi, V)\) sobre \(X = \Pi V_j\) onde,   
     \begin{itemize}[left = 1cm]
         \item \(V\) é \(\F\)-espaço vetorial e \(\phi \in \hom^k(\Pi V_j, V)\). 
         \item \(P_1 = \) "ser $k$-linear" e \(P_2 = \) "ser linear".
@@ -79,7 +79,7 @@
 \newcommand{\tu}{\textbf{v}}
 \hypertarget{lemma1026}{}
 \begin{lemma}
-    \textbf{10.2.6.} Seja \(\tu \in V\otimes W : \pt \tu = m\). Se \(\alpha = (v_j)\) e \(\beta = (w_j)\), \(j\leq m\), são familias de vetores em \(V\) e \( W\) tais que \(\tu = \sum^m v_j \otimes w_j\), então \(\alpha\) e \(\beta \) são l.i..
+    \textbf{10.2.6.} Seja \(\tu \in V\otimes W : \pt \tu = m\). Se \(\alpha = (v_j)\) e \(\beta = (w_j)\), \(j\leq m\), são famílias de vetores em \(V\) e \( W\) tais que \(\tu = \sum^m v_j \otimes w_j\), então \(\alpha\) e \(\beta \) são l.i..
 \end{lemma}
 
 \demo{Faz por contrapositiva, suponha que \(w_m = \sum^{m-1} a_jw_j\) e usa a $k$-linearidade pra ver que \(\tu = \sum^{m-1} (v_j + a_jv_m) \otimes w_j\).}
@@ -90,36 +90,36 @@
 
 \hypertarget{lemma1027}{}
 \begin{lemma}
-    \small  \textbf{10.2.7.} Sejam \(m, p \in \mathbb{Z}_{\geq 0}\), \(\alpha_1 = (v_{1,j})_{j\leq m}\), \(\alpha_2 = (v_{2,j})_{j\leq p}\), familias em \(V\) e \(\beta_1 = (w_{1,j})_{j\leq m}\), \(\beta_2= (w_{2,j})_{j\leq p}\) familias em \(W\) tais que \(\sum^m v_{1,j} \otimes w_{1,j} = \sum^p v_{2,j} \otimes w_{2,j}\). Se \(\alpha_1, \alpha_2\) e \(\beta_2\) foram l.i., então \([\beta_1 ] \subseteq [\beta_2]\). Em particular, se \(p = 0\), \(\forall j\leq m\), \(w_j = 0 \).    
+    \small  \textbf{10.2.7.} Sejam \(m, p \in \mathbb{Z}_{\geq 0}\), \(\alpha_1 = (v_{1,j})_{j\leq m}\), \(\alpha_2 = (v_{2,j})_{j\leq p}\), famílias em \(V\) e \(\beta_1 = (w_{1,j})_{j\leq m}\), \(\beta_2= (w_{2,j})_{j\leq p}\) famílias em \(W\) tais que \(\sum^m v_{1,j} \otimes w_{1,j} = \sum^p v_{2,j} \otimes w_{2,j}\). Se \(\alpha_1, \alpha_2\) e \(\beta_2\) foram l.i., então \([\beta_1 ] \subseteq [\beta_2]\). Em particular, se \(p = 0\), \(\forall j\leq m\), \(w_j = 0 \).    
 \end{lemma}
 
-\comentario{Não suporta resumo, olha se queser \cite[Pág. 344]{MA719}}
+\comentario{Não suporta resumo, olha se quiser \cite[Pág. 344]{MA719}}
 
 \propositionnum{10.2.8.}
 \begin{proposition}
-    Seja \(\tu = \sum^m v_j \otimes w_j \in V\otimes W\). Então, \(\pt \tu = m \ \leftrightharpoons\ (v_j)\) e \((w_j)\) são l.i. em \(V \) e  \(W\), respetivamente. \comentario{Segue dos {\scriptsize \(\square\)} \hyperlink{lemma1026}{10.2.6.} e {\scriptsize \(\square\)} \hyperlink{lemma1027}{10.2.7.}}
+    Seja \(\tu = \sum^m v_j \otimes w_j \in V\otimes W\). Então, \(\pt \tu = m \ \leftrightharpoons\ (v_j)\) e \((w_j)\) são l.i. em \(V \) e  \(W\), respectivamente. \comentario{Segue dos {\scriptsize \(\square\)} \hyperlink{lemma1026}{10.2.6.} e {\scriptsize \(\square\)} \hyperlink{lemma1027}{10.2.7.}}
 \end{proposition}
 
-\ejemplo{ \centering Usar $2$-linearidade até conseguir familias l.i. 
+\ejemplo{ \centering Usar $2$-linearidade até obter famílias l.i. 
     \tcblower
     \begin{example} \(\tu_1 = 5e_1 \otimes e_1 \ \textbf{-}  \ 3e_2 \otimes e_2 \in V\otimes V \) tem \(\pt \tu_1 = 2\). Por outro lado, \(
         \tu_2 = (e_1 + e_2) \otimes (e_1- e_2)  \ \textbf{+} \  (e_1+2e_2) \otimes e_2  \ \textbf{+} \  (e_1 - e_2) \otimes (e_1+ e_2) 
     %     &= (e_1 + e_2) \otimes e_1  \ \textbf{+} \ e_2 \otimes \underline{e_2} \ \textbf{+} \  (e_1 - e_2) \otimes \underline{(e_1+ e_2)} \\
     %     &= (e_1 + e_2) \otimes \underline{e_1}  \ \textbf{+} \ e_1 \otimes e_2 \ \textbf{+} \  (e_1 - e_2) \otimes \underline{e_1} \\
     %     &= 2\underline{e_1} \otimes e_1  \ \textbf{+} \ \underline{e_1} \otimes e_2 = e_1 \otimes (2e_1 + e_2) \ \ \Rightarrow \   \pt \tu_2  = 1  
-    \) tem \(\pt \tu_2 = 1\). \comentario{Desarme até conseguir \(\tu_2 = e_1 \otimes (2e_1 + e_2)\)}
+    \) tem \(\pt \tu_2 = 1\). \comentario{Desarme até obter \(\tu_2 = e_1 \otimes (2e_1 + e_2)\)}
     \end{example}    
 }
 
 \propositionnum{10.2.10.}
 \begin{proposition}
     \label{prop:10210}
-    \(\exists ! \Gamma : V' \otimes W \ni  \textcolor{red}{f \otimes w \mapsto} \ \overset{\underset{\rotatebox{90}{$\in$}}{\hom(V,W)}}{\textcolor{red}{\Gamma(f\otimes w)}}: \overset{\underset{\rotatebox{90}{$\in$}}{V}}{v}\mapsto f(v)w \in W\). \footnote{Propiedade universal no pareamiento bilinear \(\psi : V' \times W \ni (f,w) \mapsto f(v)w\).} Além disso, 
+    \(\exists ! \Gamma : V' \otimes W \ni  \textcolor{red}{f \otimes w \mapsto} \ \overset{\underset{\rotatebox{90}{$\in$}}{\hom(V,W)}}{\textcolor{red}{\Gamma(f\otimes w)}}: \overset{\underset{\rotatebox{90}{$\in$}}{V}}{v}\mapsto f(v)w \in W\). \footnote{Propriedade universal no pareamento bilinear \(\psi : V' \times W \ni (f,w) \mapsto f(v)w\).} Além disso, 
 \end{proposition}
 
 \begin{enumerate}[label = , left = 0.5cm ]
     \item \vspace{-1.3cm} \begin{exercise}
-        \textbf{9.2.5.} Sejam \(m \in \mathbb{Z}_{>0}\) e \((f_j)_{j\leq m}\) familia l.i. em \(V'\). Então, \(\forall j\leq m, \exists v \in V : \forall i\leq m, f_i(v) = \delta_{ij}\). \comentario{\(T: V \ni v \twoheadrightarrow (f_j(v)) \in \F^m \ \leftrightharpoons \ T' : (\F^m)' \hookrightarrow V'\)}
+        \textbf{9.2.5.} Sejam \(m \in \mathbb{Z}_{>0}\) e \((f_j)_{j\leq m}\) família l.i. em \(V'\). Então, \(\forall j\leq m, \exists v \in V : \forall i\leq m, f_i(v) = \delta_{ij}\). \comentario{\(T: V \ni v \twoheadrightarrow (f_j(v)) \in \F^m \ \leftrightharpoons \ T' : (\F^m)' \hookrightarrow V'\)}
     \end{exercise}
     \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
         \centering (a) \(\Gamma \) é injetora 
@@ -161,7 +161,7 @@
     \(\exists ! \tau \in (V'\otimes V)' \) tal que \(\tau (f\otimes v) = f(v)\). Além disso, se \(\dim V < \infty \), segue da \(\square\) \ref{prop:10210} que \(\forall T \in \ehom (V), \ \tau(\Gamma^{-1}(T)) = \operatorname{tr}T\).  
 \end{proposition}
 
-\demo{\(\exists !\tau\) segue da propiedade universal em \(\psi = \operatorname{av}\). Seja \(\alpha = (v_j)\) base pra \(V\), da nota previa \([T]^\alpha_\alpha \Rightarrow \Gamma^{-1}(T) =  \sum_{i,j} a_{ij}f_j \otimes v_i\), faça a continha \(\tau(\Gamma^{-1}(T))\). }
+\demo{\(\exists !\tau\) segue da propriedade universal em \(\psi = \operatorname{av}\). Seja \(\alpha = (v_j)\) base pra \(V\), da nota prévia \([T]^\alpha_\alpha \Rightarrow \Gamma^{-1}(T) =  \sum_{i,j} a_{ij}f_j \otimes v_i\), faça a continha \(\tau(\Gamma^{-1}(T))\). }
 
 \begin{note}
     O jeito mais popular de mostrar que existe o produto tensorial é usando espaço cociente, tém suas vantagens, se estiver interessado olha \cite[Pág. 347]{MA719}.

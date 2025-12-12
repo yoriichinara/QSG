@@ -1,6 +1,6 @@
-\subsection{Pareamientos Bilineares}
+\subsection{Pareamentos Bilineares}
 
-Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719}, que aquí é apenas um exemplo de forma bilinear com \(\F \leq \R\). 
+Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719}, que aqui é apenas um exemplo de forma bilinear com \(\F \leq \R\). 
 
 \begin{definition}
     \centering
@@ -9,7 +9,7 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 
 \newcommand{\Fi}{_\alpha[\phi]_\beta}
 \begin{definition}
-    Sejam \(V, W \) \(\F\)-espaços de dimensão finita, \(\alpha, \beta\) bases e \(\phi \in B(V,W)\). A \emph{matriz asociada} \(_\alpha[\phi]_\beta := (\phi(v_i,w_j))_{i,j}\) determina \(\phi\) no sentido, \([v]_\alpha^t\  _\alpha[\phi]_\beta \  [w]_\beta = \phi (v,w)\). \footnote{Em geral, \(\Fi\) pode-se definir pra familias de vetores. } 
+    Sejam \(V, W \) \(\F\)-espaços de dimensão finita, \(\alpha, \beta\) bases e \(\phi \in B(V,W)\). A \emph{matriz associada} \(_\alpha[\phi]_\beta := (\phi(v_i,w_j))_{i,j}\) determina \(\phi\) no sentido, \([v]_\alpha^t\  _\alpha[\phi]_\beta \  [w]_\beta = \phi (v,w)\). \footnote{Em geral, \(\Fi\) pode-se definir pra famílias de vetores. } 
 \end{definition}
 \begin{note}
     É importante entender essa continha \(\phi\left(\sum^m a_i v_i, \sum^n b_j w_j\right)\).
@@ -19,7 +19,7 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
     Sejam \(m,n \in \mathbb{Z}_{\geq 0}: \dim V = n\text{ e }  \dim W = m\). Então, \(\Phi: B(V,W) \ni \phi \ \mapsto\  \Fi \in M_{m\times n}(\F)\) é isomorfismo. Em particular, \(\dim B(V,W) = nm\). %\dim V \cdot \dim W\). %\comentario{Propiedades das matrices}
 \end{proposition}
 
-\demo{Segue de propiedades das matrices, pra a sobrejetividade pega \(A \in M_{m\times n}(\F)\) e mostra que \(\phi(v,w) := [v]_\alpha^t \cdot A \cdot [w]_\beta \in B(V,W)\). }
+\demo{Segue de propriedades das matrizes, pra a sobrejetividade pega \(A \in M_{m\times n}(\F)\) e mostra que \(\phi(v,w) := [v]_\alpha^t \cdot A \cdot [w]_\beta \in B(V,W)\). }
 
 \begin{example}
     Se \(f \in V'\) e \(g \in W'\), então \(\phi(v,w):= f(v)g(w) \in B(V,W)\). 
@@ -39,10 +39,10 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 \propositionnum{9.3.3.}
 \begin{proposition}
     \label{prop:933}
-    Se \(\alpha \) e \(\beta \) são bases finitas de \(V \) e \(W\) respetivamente, então \([ D_\phi]^\beta_{\alpha'} = \ _\alpha[\phi]_\beta\) e \([_\phi D]^\alpha_{\beta'} = ([ D_\phi]^\beta_{\alpha'})^t\). Em particular, \(\pt \phi := \pt D_\phi = \pt \hspace{0.01cm} _\phi D \). 
+    Se \(\alpha \) e \(\beta \) são bases finitas de \(V \) e \(W\) respectivamente, então \([ D_\phi]^\beta_{\alpha'} = \ _\alpha[\phi]_\beta\) e \([_\phi D]^\alpha_{\beta'} = ([ D_\phi]^\beta_{\alpha'})^t\). Em particular, \(\pt \phi := \pt D_\phi = \pt \hspace{0.01cm} _\phi D \). 
 \end{proposition}
 
-\demo{Como na \(\square\) \ref{prop:9.2.3} a gente ganha, de trabalhar com \(\alpha'\) mesma que a entrada \((i,j)\) de \([D_\phi]^\beta_{\alpha'}\) é justamente \(D_\phi(w_j,v_i) = \phi(v_i,w_j)\), a outra igualdade consegue-se num analisé semelhante. }
+\demo{Como na \(\square\) \ref{prop:9.2.3} a gente ganha, de trabalhar com \(\alpha'\) mesma que a entrada \((i,j)\) de \([D_\phi]^\beta_{\alpha'}\) é justamente \(D_\phi(w_j,v_i) = \phi(v_i,w_j)\), a outra igualdade consegue-se num análise semelhante. }
 
 \begin{corollary}
     \textbf{9.3.4.} Se \(\dim V\) \textcolor{gray}{(ou \(W\))} é finita e \( \ker {_\phi D} = \{0\}\), são equivalentes: %\(\leftrightharpoons\) \(_\phi D, \ D_\phi\) são isomorfismos. Em particular, \(\dim V = \dim W\). 
@@ -64,20 +64,20 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
     Uma forma bilinear \(\phi \in B(V)\)  é \ \(\textcolor{gray}{\rotatebox{90}{\Big|}}\star\textcolor{gray}{\rotatebox{90}{\Big|}}\) \ se \(\forall v,w \in V\), 
     \begin{itemize}[label = \(\star\)]
         \item \emph{Simétrica} \(\rightarrow \phi(v,w) = \phi(w,v)\). \hspace{1.4cm}{ \(\star\)} \emph{Alternada} \(\rightarrow \phi(v,v) = 0\). \vspace{0.3cm}\\
-        \- \hspace{3cm}\(\star\) \emph{Antisimétrica} \(\rightarrow \phi(v,w) =- \phi(w,v) \). 
+        \- \hspace{3cm}\(\star\) \emph{Antissimétrica} \(\rightarrow \phi(v,w) =- \phi(w,v) \). 
     \end{itemize}
 \end{definition}
 
-\begin{exercise}
-    Seja \(\phi \in B(V)\). Se \(\operatorname{car}\F = 2\), então \(\phi\) simétrica \(\leftrightharpoons\)  \(\phi\) antisimétrica. Caso contrario, \(\phi\) antisimétrica \(\leftrightharpoons\) \(\phi\) alternada.   
-\end{exercise}
+%\begin{exercise}
+%    Seja \(\phi \in B(V)\). Se \(\operatorname{car}\F = 2\), então \(\phi\) simétrica \(\leftrightharpoons\)  \(\phi\) antisimétrica. Caso contrario, \(\phi\) antisimétrica \(\leftrightharpoons\) \(\phi\) alternada.   
+%\end{exercise}
 
 \propositionnum{9.3.5.}
 \begin{proposition}
     Sejam \(\phi \in B(V)\) e \(\alpha = (v_i)\) uma base de \(V\). Então, 
     \begin{enumerate}[label = (\alph*), left = 0.5cm]
-        \item \(\phi \) é \textcolor{gray}{(anti)}simétrica \(\leftrightharpoons\) \(_\alpha [\phi]_\alpha\) é \textcolor{gray}{(anti)}simétrica.
-        \item \(\phi \) é alternada \(\leftrightharpoons\) \(_\alpha [\phi]_\alpha\) é antisimétrica e \(\operatorname{diag}(_\alpha[\phi]_\alpha) = (0, 0, \ldots)\).% \ \leftrightharpoons \ \phi(v_i,v_i)= 0 \).
+        \item \(\phi \) é \textcolor{gray}{(antis)}simétrica \(\leftrightharpoons\) \(_\alpha [\phi]_\alpha\) é \textcolor{gray}{(anti)}simétrica.
+        \item \(\phi \) é alternada \(\leftrightharpoons\) \(_\alpha [\phi]_\alpha\) é antissimétrica e \(\operatorname{diag}(_\alpha[\phi]_\alpha) = (0, 0, \ldots)\).% \ \leftrightharpoons \ \phi(v_i,v_i)= 0 \).
     \end{enumerate}
 \end{proposition}
 
@@ -91,11 +91,11 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 
 \begin{definition}
     \centering
-    \(\alpha^{\perp_\phi} := \{w \in V:  \alpha \perp_\phi w\}\) \ e \  \(^{\perp_\phi}\alpha := \{v \in V: v \perp_\phi \alpha\}\). \footnote{Sendo \(\alpha = (v_i)\) entendase \(\alpha \perp_\phi w\) como os \(w \in V : \forall i \in I,\ v_i \perp_\phi w\).}
+    \(\alpha^{\perp_\phi} := \{w \in V:  \alpha \perp_\phi w\}\) \ e \  \(^{\perp_\phi}\alpha := \{v \in V: v \perp_\phi \alpha\}\). \footnote{Sendo \(\alpha = (v_i)\) entenda-se \(\alpha \perp_\phi w\) como os \(w \in V : \forall i \in I,\ v_i \perp_\phi w\).}
 \end{definition}
 
 \begin{note}
-    Ambos \(\alpha^{\perp_\phi}\) e \(^{\perp_\phi}\alpha\) são os \emph{subespaços ortogonais} a direita e esquerda, respetivamente. Em particular, \(\ker D_\phi = V^{\perp_\phi}\) e \(\ker  {_\phi D} = \hspace{0.1cm}^{\perp_\phi}V\).
+    Ambos \(\alpha^{\perp_\phi}\) e \(^{\perp_\phi}\alpha\) são os \emph{subespaços ortogonais} a direita e esquerda, respectivamente. Em particular, \(\ker D_\phi = V^{\perp_\phi}\) e \(\ker  {_\phi D} = \hspace{0.1cm}^{\perp_\phi}V\).
 \end{note}
 
 \begin{lemma}
@@ -110,7 +110,7 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 \propositionnum{9.3.7.}
 \begin{proposition}
     \label{prop:937}
-    A relação \((V,\perp_\phi)\) é simétrica \(\leftrightharpoons\) \(\phi \) é simétrica ou alternada. \comentario{Não admite resumo, olha se queser \cite[Pág. 309]{MA719}}
+    A relação \((V,\perp_\phi)\) é simétrica \(\leftrightharpoons\) \(\phi \) é simétrica ou alternada. \comentario{Não admite resumo, olha se quiser \cite[Pág. 309]{MA719}}
 \end{proposition}
 
 \begin{note}
@@ -119,12 +119,12 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 
 \alerta{
     \centering
-    As restrições não respeitan degeneração
+    As restrições não respeitam degeneração
     \tcblower
     \begin{example} 
         Se \(\phi \) é degenerada basta pegar \(W = [w]\), com \(w\in V\) não isotrópico pra ter \(\phi|_{_{W}}\) não degenerada em \(B(W)\).  
     \end{example}
     \begin{example}
-        O espaço de Minkowski, \(V= \R^3 \times \R\) equipado com \(_\alpha [\phi]_\alpha = \operatorname{diag}(1,1,1,-1)\) é não degenerado mais qualquer \(w = (\textbf{x},\|\textbf{x}\|) \in V\) é isotrópico e portanto \(\phi|_{_{W}}\) com \(W = [w]\) é degenerada em \(B(W)\).    
+        O espaço de Minkowski, \(V= \R^3 \times \R\) equipado com \(_\alpha [\phi]_\alpha = \operatorname{diag}(1,1,1,-1)\) é não degenerado mas qualquer \(w = (\textbf{x},\|\textbf{x}\|) \in V\) é isotrópico e, portanto \(\phi|_{_{W}}\) com \(W = [w]\) é degenerada em \(B(W)\).    
     \end{example}
 }

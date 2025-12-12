@@ -1,7 +1,7 @@
 
 \subsection{Complementos Invariantes e Bases Cíclicas}
 
-Nessta seção \(\dim V < \infty\) e \(T \in \ehom(V)\) continua fixo.  O objetivo é conseguir uma decomposição \(V = \bigoplus^l W_j\), onde \(W_j = C_{_{T}}(v_j)\).  
+Nesta seção \(\dim V < \infty\) e \(T \in \ehom(V)\) continua fixo.  O objetivo é obter uma decomposição \(V = \bigoplus^l W_j\), onde \(W_j = C_{_{T}}(v_j)\).  
 
 \begin{definition}
     Sejam \(W\leq V\) \(T\)-inv e \(v \in V\) fixos. O conjunto, \(\mathscr{C}_{{T,v}}(W) := \{p \in \Pol : p(T)(v) \in W\}\) é chamado de \(T\)\emph{-condutor} de \(v\) em \(W\). 
@@ -70,25 +70,25 @@ Nessta seção \(\dim V < \infty\) e \(T \in \ehom(V)\) continua fixo.  O objeti
 \end{lemma}
 
 \begin{lemma}
-    \textbf{8.2.8.} Sejam \(f \in \Pol, v \in V, u = f(T)(v) \) e \(p = \mdc (f, m_v)\). Então, \(m_v = pm_u\). \comentario{Não suporta resumo, olha se queser \cite[Pág. 272]{MA719}}  
+    \textbf{8.2.8.} Sejam \(f \in \Pol, v \in V, u = f(T)(v) \) e \(p = \mdc (f, m_v)\). Então, \(m_v = pm_u\). \comentario{Não suporta resumo, olha se quiser \cite[Pág. 272]{MA719}}  
 \end{lemma}
 
 \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
     \centering \(\exists (u_i) \in V : \blacksquare\) \hyperlink{thmDC}{8.2.3. (\emph{DC})} \(\Rightarrow l = m\)
     \tcblower 
-\textcolor{gray}{Não suporta resumo, olha se queser \cite[Pág. 273]{MA719}. }
+\textcolor{gray}{Não suporta resumo, olha se quiser \cite[Pág. 273]{MA719}. }
 \end{tcolorbox} 
 
 \propositionnum{8.2.11.}
 \begin{proposition}
-    Sejam \(\alpha \) uma base pra \(V\) e \(M_\alpha(t) = t\id_n - [T]^\alpha_\alpha \in M_n(\Pol) \). Então, \(c_{_T} = \det (M_\alpha (t)) \). \comentario{Não suporta resumo, olha se queser  \cite[Pág. 275]{MA719}} 
+    Sejam \(\dim V = < \infty\), \(\alpha\) uma base e \(M_\alpha(t) = t\id_n - [T]^\alpha_\alpha \in M_n(\Pol) \). Então, \(c_{_T} = \det (M_\alpha (t)) \). \comentario{Não suporta resumo, olha se quiser  \cite[Pág. 275]{MA719}} 
 \end{proposition}
 
 \propositionnum{8.2.12.}
 \begin{proposition}
     Sejam \(v \in V: m_v = p^k\) pra algum \(p \in \Pol\) primo com \(\gr (p) = r\) e,   
     \[v_{sr+l} := T^{l-1}p(T)^s(v), \ 0 \leq  s < k, \ 1 \leq l \leq r. \] 
-    A familia \(\mathscr{J}_{_T}(v) = (v_{sr+ l})\) é uma base do \(C_{_{T}}(v)\). \comentario{\cite[Pág. 277]{MA719}}
+    A família \(\mathscr{J}_{_T}(v) = (v_{sr+ l})\) é uma base do \(C_{_{T}}(v)\). \comentario{\cite[Pág. 277]{MA719}}
 \end{proposition}
 
 \begin{definition}
@@ -102,7 +102,7 @@ Nessta seção \(\dim V < \infty\) e \(T \in \ehom(V)\) continua fixo.  O objeti
 \end{definition}
 
 \begin{note}
-    Em particular, se \(\gr (p_j) = 1\), então \(v_{sr+l} = v_s = (T - \lambda\id_{_V})^s(v_{i,j}), \ 1\leq s \leq k_{i,j}\), logo \(\mathscr{J}_{_T}(v) = \mathscr{C}_{p(T)}(v)\). Nesse chamamos tudo \textcolor{gray}{\rotatebox{90}{$\Big|$} \(\star\) \rotatebox{90}{$\Big|$}} \emph{de Jordan}.     
+    Em particular, se \(\gr (p_j) = 1\), então \(v_{sr+l} = v_s = (T - \lambda\id_{_V})^s(v_{i,j}), \ 1\leq s \leq k_{i,j}\), logo \(\mathscr{J}_{_T}(v) = \mathscr{C}_{p(T)}(v)\). Nesse caso chamamos tudo \textcolor{gray}{\rotatebox{90}{$\Big|$} \(\star\) \rotatebox{90}{$\Big|$}} \emph{de Jordan}.     
 \end{note}
 
 
@@ -120,7 +120,7 @@ Nessta seção \(\dim V < \infty\) e \(T \in \ehom(V)\) continua fixo.  O objeti
     \textcolor{gray}{0} & \textcolor{gray}{0} & t-1 & -1 \\
     \textcolor{gray}{0} & \textcolor{gray}{0} & 1 & t-3 
 \end{array}\right| \text{\small $ = t(t-2)^3$. }\]}
-Portanto, \(V\) admíte base de Jordan, vamos estudar o fator \(V_{t-2}\),  
+Portanto, \(V\) admite base de Jordan, vamos estudar o fator \(V_{t-2}\),  
 {\footnotesize \[ \ker\begin{bmatrix}
     -2 & 0 & 3 & 1 \\
     2 & 0 & -4 & 2 \\
@@ -155,28 +155,8 @@ Portanto, \(V\) admíte base de Jordan, vamos estudar o fator \(V_{t-2}\),
     \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
 \end{bmatrix} 
 \text{\small $\underset{F_2 \to 2F_2 + 3F_3}{\overset{F_1 \to F_1 + 3F_2 + 5F_3}{\longleftarrow}}$}\]}
-Agora, \(V_{t-2} = [e_2]\), \(\dim V_{t-2} = 1\), temos que seguir até conseguir \(\dim V_{(t-2)^{k}} = 3\), é conveniente façer conta da forma \((T-2\id)(w_{s}) = w_{s+1}\), então \vspace{1.8cm}
-}
-\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
-    \fill[white] (0,0) rectangle (20,2.5);
-\end{tikzpicture}
-%\text{\small $ \underset{F_2 \to F_2 + F_1}{\overset{F_4 \to F_4 - F_3}{\longrightarrow }} $} 
-%\text{\small $ \overset{F_3 \to F_3 - F_2}{\longrightarrow }$} 
-%\text{\small $\underset{F_2 \to 2F_2 + 3F_3}{\overset{F_1 \to F_1 + 3F_2 + 5F_3}{\longrightarrow}}$}
-%\text{\small $ \overset{F_j \to -F_j}{\longleftarrow}$}
-%\[\left[\begin{bmatrix}{c c c c}
-%    2 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} \\
-%    \textcolor{gray}{0} & \textcolor{gray}{0} & 2 & \textcolor{gray}{0} \\
-%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & 2 \\
-%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
-%\end{bmatrix}\right] 
-\newpage 
-\-\vspace{-1.2cm}
-\ejemplo{
-\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
-    \fill[white] (0,0) rectangle (20,2.5);
-\end{tikzpicture}
-    {\footnotesize\[ \begin{bmatrix}
+Agora, \(V_{t-2} = [e_2]\), \(\dim V_{t-2} = 1\), temos que seguir até obter \(\dim V_{(t-2)^{k}} = 3\), é conveniente fazer conta da forma \((T-2\id)(w_{s}) = w_{s+1}\), então 
+{\footnotesize\[ \begin{bmatrix}
     0 \\ 
     a \\ 
     0 \\
@@ -220,7 +200,7 @@ Agora, \(V_{t-2} = [e_2]\), \(\dim V_{t-2} = 1\), temos que seguir até consegui
     -2a \\ b \\ -a\\ -a \end{bmatrix}   \sim \begin{bmatrix}
     2a \\ b \\ a\\ a \end{bmatrix}  
 \] 
-\text{\small Visto que não completamos a dimensão, contínuamos na siguente pôtencia, }
+\text{\small Visto que não completamos a dimensão, continuamos na seguinte potência, }
 \[ \begin{bmatrix}
     2a \\ 
     b \\ 
@@ -289,10 +269,33 @@ Agora, \(V_{t-2} = [e_2]\), \(\dim V_{t-2} = 1\), temos que seguir até consegui
 \end{bmatrix} 
 \]
 }
+\vspace{0.3cm}
+\begin{tikzpicture}[overlay, shift= {(-1cm, -2.8cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture}
 }
+}
+
+%\text{\small $ \underset{F_2 \to F_2 + F_1}{\overset{F_4 \to F_4 - F_3}{\longrightarrow }} $} 
+%\text{\small $ \overset{F_3 \to F_3 - F_2}{\longrightarrow }$} 
+%\text{\small $\underset{F_2 \to 2F_2 + 3F_3}{\overset{F_1 \to F_1 + 3F_2 + 5F_3}{\longrightarrow}}$}
+%\text{\small $ \overset{F_j \to -F_j}{\longleftarrow}$}
+%\[\left[\begin{bmatrix}{c c c c}
+%    2 & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} \\
+%    \textcolor{gray}{0} & \textcolor{gray}{0} & 2 & \textcolor{gray}{0} \\
+%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & 2 \\
+%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} 
+%\end{bmatrix}\right] 
+\-\vspace{-1.3cm}
+\ejemplo{
+\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture}
+\- \vspace{0.3cm} 
+
 \textbf{Passo 2.} Pra à base de Jordan precisamos \(w_{1,2} \in V_{(t-2)^3} \setminus V_{(t-2)^2}\), calcular o ciclo do jeito \(w_{s+1, 2} = (T-2\id)(w_{s,2})\) e completar pegando \(w_{1,0} \in V_t\). 
 {\footnotesize \[\text{\small $w_{1,2}$} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ -2\end{bmatrix}, \ \text{\small $w_{2,2}$}  = \begin{bmatrix} -4 \\ -2 \\ -2 \\ -2\end{bmatrix}, \ \text{\small $w_{3,2}$} = \begin{bmatrix} 0 \\ -4 \\ 0 \\ 0  \end{bmatrix} , \ \text{\small $w_{1,0}$} = \begin{bmatrix} -1 \\ 1 \\ 0 \\ 0  \end{bmatrix}. \]}
-Por outro lado, visto que só temos \(1\) fator \(T\)-inv, \(V\) é \(T\)-cíclico, bastará tomar \(w = w_{1,2} + w_{1,0}\) e à base obvia do \(\mathscr{J}_{_T}(w) = \mathscr{C}_{T}(w) \), nesste casso da,
+Por outro lado, visto que só temos \(1\) fator \(T\)-inv, \(V\) é \(T\)-cíclico, bastará tomar \(w = w_{1,2} + w_{1,0}\) e à base óbvia do \(\mathscr{J}_{_T}(w) = \mathscr{C}_{T}(w) \), neste caso da,
 {\footnotesize \[\text{\small $w$} = \begin{bmatrix} 0 \\ 1 \\ 0 \\ -2\end{bmatrix}, \ \text{\small $T(w)$}  = (-2)\begin{bmatrix} 1 \\ 1 \\ 1\\ 3\end{bmatrix}, \ \text{\small $T^2(w)$} = (-4)\begin{bmatrix} 3 \\ 3 \\ 2 \\ 4  \end{bmatrix} , \ \text{\small $T^3(w)$} = (-8)\begin{bmatrix} 5 \\ 6 \\ 3 \\ 5  \end{bmatrix}. \]}
 Assim \(\mathscr{J}_{_T}(w_{i,2}) \cup w_{1,0}\) é base de Jordan e \(\mathscr{J}_{_T}(w) = \mathscr{C}_{T}(w)\) é base racional. 
 }

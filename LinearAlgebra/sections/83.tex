@@ -16,7 +16,7 @@
 \end{definition}
 
 \begin{note}
-    Se \(\beta\) for base de Jordan, melhoramos a coisa pois temos \emph{blocos de Jordan}, asociados ao cada $T$-ciclo, seja lá \(p = (t - \lambda)^s\), então 
+    Se \(\beta\) for base de Jordan, melhoramos a coisa pois temos \emph{blocos de Jordan}, associados a cada $T$-ciclo, seja lá \(p = (t - \lambda)^s\), então 
     \[ J_s(\lambda) := \left[\begin{array}{c c c c c}
         \lambda & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{\cdots} & \textcolor{gray}{0} \\ 
         1 & \lambda & \textcolor{gray}{0} & \textcolor{gray}{\cdots} &\textcolor{gray}{0}  \\ 
@@ -28,19 +28,19 @@
 \end{note}
 
 \begin{definition}
-    Seja \(V\) \(\F\)-espaço \(: \dim V =n <\infty\). Dois operadores \(T,S \in \ehom(V)\) são semelhantes, \(T \sim S\),  sse \(\exists P \in \operatorname{GL}_n(\F) :  [T]^\beta_\beta = P^{-1} [S]_\alpha^\alpha P\).  \comentario{ \(P = [\id_{_V}]^\beta_\alpha\)}
+    Seja \(V\) \(\F\)-espaço \(: \dim V =n <\infty\). Dois operadores \(T,S \in \ehom(V)\) são semelhantes, \(T \sim S\),  sse \(\exists P \in \operatorname{GL}_n(\F) :  [T]^\beta_\beta = P^{-1} [S]_\alpha^\alpha P\).  \comentario{ \(P = [\id]^\beta_\alpha\)}
 \end{definition}
 
 \theoremnum{8.3.1.}
 \hypertarget{thm831}{}
 \begin{theorem}
-    \(T\sim S\) \(\leftrightharpoons\) FCR(\(T\)) = FCR(\(S\)). Em particular, se algúm deles admitir FCJ, então \(T \sim S\) \(\leftrightharpoons\) FCJ(\(T\)) = FCJ(\(S\)). 
+    \(T\sim S\) \(\leftrightharpoons\) FCR(\(T\)) = FCR(\(S\)). Em particular, se algum deles admitir FCJ, então \(T \sim S\) \(\leftrightharpoons\) FCJ(\(T\)) = FCJ(\(S\)). 
 \end{theorem}
 
 \ejemplo{
 \centering Encontrando FCR e FCJ
 \tcblower
-Contínuando o exemplo da seção \hyperlink{ex82}{8.2.}, sendo \(\beta = \mathscr{J}_{_T} w_{i,2} \cup w_{1,0}\) e \(\gamma = \mathscr{J}_{_T}(w) = \mathscr{C}(w)\), lembrando que \(m_{_T} = t (t-2)^3 = t^4 - 6t^3 +12t^2 -8t\) temos... 
+Continuando o exemplo da seção \hyperlink{ex82}{8.2.}, sendo \(\beta = \mathscr{J}_{_T} w_{i,2} \cup w_{1,0}\) e \(\gamma = \mathscr{J}_{_T}(w) = \mathscr{C}(w)\), lembrando que \(m_{_T} = t (t-2)^3 = t^4 - 6t^3 +12t^2 -8t\) temos... 
 { \[\text{\small $[T]^\beta_\beta =$} \begin{bmatrix}
     2 & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
     1 & 2 & \textcolor{gray}{0} &  \\ 
@@ -52,5 +52,5 @@ Contínuando o exemplo da seção \hyperlink{ex82}{8.2.}, sendo \(\beta = \maths
     \textcolor{gray}{0} & 1 & 0 & -12\\
     \textcolor{gray}{0} & \textcolor{gray}{0} & 1 &  6
 \end{bmatrix}\]}
-As matriez \(P\) das congruências no \(\blacksquare\) \hyperlink{thm831}{8.3.1.} são as formadas pelos vetores das respetívas bases, ao final não são mas do que isso, cambios de base.   
+As matrizes \(P\) das congruências no \(\blacksquare\) \hyperlink{thm831}{8.3.1.} são as formadas pelos vetores das respectivas bases, ao final não são mais do que isso, mudanças de base.   
 }

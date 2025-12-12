@@ -7,11 +7,11 @@
 
 \propositionnum{9.5.1.}
 \begin{proposition}
-    \(T\) é compatível com \((\phi, \psi)\ \leftrightharpoons \ \forall \alpha\) base de \(V\), \([\phi]_\alpha = [\psi]_{T(\alpha)} \ \leftrightharpoons \ \exists \alpha\) base de \(V\) tal que \( [\phi]_\alpha = [\psi]_{T(\alpha)}\). \comentario{Idêntica da \(\square\) \textcolor{blue}{7.4.2.}, olha se queser \cite[Pág. 243]{MA719}}
+    \(T\) é compatível com \((\phi, \psi)\ \leftrightharpoons \ \forall \alpha\) base de \(V\), \([\phi]_\alpha = [\psi]_{T(\alpha)} \ \leftrightharpoons \ \exists \alpha\) base de \(V\) tal que \( [\phi]_\alpha = [\psi]_{T(\alpha)}\). \comentario{Idêntica à \(\square\) \textcolor{blue}{7.4.2.}, olha se quiser \cite[Pág. 243]{MA719}}
 \end{proposition}
 
 %\begin{note}
-%    A definição permite-nós supor \(T\) sobrejetora. Além disso, \(v \in V^{\perp_\phi} \Rightarrow T(v) \in W^{\perp_\psi}\), portanto podemos supor \(\phi\) não degenerada, cujo casso \(\det[\phi]_\alpha = \det [\psi]_{T(\alpha)} \neq 0\). 
+%    A definição permite-nós supor \(T\) sobrejetora. Além disso, \(v \in V^{\perp_\phi} \Rightarrow T(v) \in W^{\perp_\psi}\), portanto podemos supor \(\phi\) não degenerada, cujo caso \(\det[\phi]_\alpha = \det [\psi]_{T(\alpha)} \neq 0\). 
 %\end{note}
 
 \propositionnum{9.5.2.}
@@ -20,11 +20,11 @@
     Sejam \(\phi \in B(V)\) não degenerada e \(\psi \in B(W)\). Então, \(\exists T \in \hom(V,W)\) sobrejetora e compatível com \((\phi, \psi) \ \leftrightharpoons \ \exists \alpha, \beta \) bases tais que \([\phi]_\alpha = [\psi]_\beta\).   
 \end{proposition}
 \demo{
-    \((\Rightarrow)\) \(\exists \alpha\) base de \(V: \det[\phi]_\alpha = \det[\psi]_{T(\alpha)} \neq 0\), assim \((T(\alpha))\) é l.i.. \((\Leftarrow)\) Escolhe \(T: \alpha \mapsto \beta\). Note que \(T\) é necessariamente isomorfismo.   
+    \((\Rightarrow)\) \(\exists \alpha\) base de \(V: \det[\phi]_\alpha = \det[\psi]_{T(\alpha)} \neq 0\), assim \((T(\alpha))\) é l.i.. \((\Leftarrow)\) Escolha \(T: \alpha \mapsto \beta\). Note que \(T\) é necessariamente isomorfismo.   
 }
 
 \begin{note}
-    Supõe daquí pra frente \(V = W: \dim V = n < \infty\) e \(\phi = \psi\) não degenerada. O objetivo  é descrever os operadores compatíveis com \(\phi\) nos casos alternado e simétrico. 
+    Supõe daqui pra frente \(V = W: \dim V = n < \infty\) e \(\phi = \psi\) não degenerada. O objetivo  é descrever os operadores compatíveis com \(\phi\) nos casos alternado e simétrico. 
 \end{note}
 
 \begin{definition}
@@ -32,7 +32,7 @@
 \end{definition}
 
 \begin{lemma}
-    \(\ehom^\phi(V) \cong \operatorname{SL}_n(\F) \leq \operatorname{GL}_n(\F)\). \comentario{Da \(\square\) \ref{prop:952} segue que \(T\) é invertível. O conjunto é fechado por composições. Além disso, \(\exists \alpha : [\phi]_\alpha = [\phi]_\beta\), logo \([\phi]_\alpha = ([\id]^\beta_\alpha)^t[\phi]_\alpha[\id]^\beta_\alpha\), lembrando que nesste casso \([\id]^\beta_\alpha = [T]^\alpha_\alpha\) temos que \(\det T = \pm 1\)}
+    \(\ehom^\phi(V) \cong \operatorname{SL}_n(\F) \leq \operatorname{GL}_n(\F)\). \comentario{Da \(\square\) \ref{prop:952} segue que \(T\) é invertível. O conjunto é fechado por composições. Além disso, \(\exists \alpha : [\phi]_\alpha = [\phi]_\beta\), logo \([\phi]_\alpha = ([\id]^\beta_\alpha)^t[\phi]_\alpha[\id]^\beta_\alpha\), lembrando que neste caso \([\id]^\beta_\alpha = [T]^\alpha_\alpha\) temos que \(\det T = \pm 1\)}
 \end{lemma}
 
 \begin{lemma}
@@ -40,7 +40,7 @@
 \end{lemma}
 
 \begin{definition}
-    \(T \in \ehom^\phi(V)\) é \emph{rotação} se \(\det T = 1\), caso contrario diz-se que \(T\) é \emph{reflexão}. 
+    \(T \in \ehom^\phi(V)\) é \emph{rotação} se \(\det T = 1\), caso contrário diz-se que \(T\) é \emph{reflexão}. 
 \end{definition}
 
 \begin{definition}
@@ -49,11 +49,11 @@
 \end{definition}
 
 \begin{note}
-    No texto, vôce pode encontrar todos os detalhes e as verificações que sustentan a definição previa. Olha se queser \cite[Pág. 323]{MA719}. 
+    No texto, você pode encontrar todos os detalhes e as verificações que sustentam a definição prévia. Olha se quiser \cite[Pág. 323]{MA719}. 
 \end{note}
 
 \begin{lemma}
-    \textbf{9.5.6.} Sejam \(\operatorname{car} \F \neq 2\), \(\phi \in B_s(V)\) não degenerada e \(u,\ v\in V\) tais que \(\phi(u,u)= \phi(v,v) \neq 0 \). Então, \(\exists R^\phi_W: R(v) = \pm u\). \comentario{Tente mostrar que pelo menos um dos vetores \(w_{\pm} = v\pm u\) é não isotrópico e faz analisé das reflexões \(R_{[w_\pm]}^\phi\). }
+    \textbf{9.5.6.} Sejam \(\operatorname{car} \F \neq 2\), \(\phi \in B_s(V)\) não degenerada e \(u,\ v\in V\) tais que \(\phi(u,u)= \phi(v,v) \neq 0 \). Então, \(\exists R^\phi_W: R(v) = \pm u\). \comentario{Tente mostrar que pelo menos um dos vetores \(w_{\pm} = v\pm u\) é não isotrópico e faz análise das reflexões \(R_{[w_\pm]}^\phi\). }
 \end{lemma}
 
 \theoremnum{9.5.7.}
@@ -64,11 +64,11 @@
 
 
 \begin{note}
-    A prova do \(\blacksquare\) \ref{thm:957} fornece um método pra encontrar uma decomposição. De fato, vôce começa pegando \(w_j\) não isotrópico e calcula \(R_j = R_{[w_j]}^\phi\), logo olha pra o inducido em \(S_j = R_j \circ T\) no subespaço ortogonal e repite (com \(T =S_j\)).   
+    A prova do \(\blacksquare\) \ref{thm:957} fornece um método pra encontrar uma decomposição. De fato, você começa pegando \(w_j\) não isotrópico e calcula \(R_j = R_{[w_j]}^\phi\), logo olha pra o induzido em \(S_j = R_j \circ T\) no subespaço ortogonal e repete (com \(T =S_j\)).   
 \end{note}
 
 \begin{definition}
-    Sejam \(w \in V\), \( a \in \F \) e \(\phi \in B_a(V)\). Chamamos de \emph{transvecção simplética} à função, \(T_{w,a} : V \ni v \mapsto v + a\phi(v,w) w \in V \). \comentario{Olha se queser \cite[Pág. 327]{MA719} }
+    Sejam \(w \in V\), \( a \in \F \) e \(\phi \in B_a(V)\). Chamamos de \emph{transvecção simplética} à função, \(T_{w,a} : V \ni v \mapsto v + a\phi(v,w) w \in V \). \comentario{Olha se quiser \cite[Pág. 327]{MA719} }
 \end{definition}
 
 
