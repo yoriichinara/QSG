@@ -39,7 +39,7 @@
 \end{lemma}
 
 \begin{note}
-    O objetivo final é obter uma versão dos teoremas espectrais. Supondo então, \(T \in \ehom(V)\) e \(\phi \in B_s(V)\), de convenções anteriores é claro que se \(\exists T^\phi_\phi = T^\phi\), então \(T^\phi = T\), ou seja que \(T\) é necessariamente \emph{autoadjunto}. 
+    O objetivo final é obter uma versão dos teoremas espectrais. Supondo então, \(T \in \ehom(V)\) e \(\phi \in B_s(V)\), de convenções anteriores é claro que se \(\exists T^\phi_\phi = T^*\), então \(T^* = T\), ou seja que \(T\) é necessariamente \emph{autoadjunto}. 
 \end{note}
 
 \hypertarget{lemma966}{}
@@ -49,7 +49,136 @@
 
 \theoremnum{9.6.7.}
 \begin{theorem}
-    Sejam \(\F\) algebraicamente fechado, \(\operatorname{car}\F \neq 2\) e \(V\) anisotrópico respeito de \(\phi \in B_s(V)\). Então, \(\exists \beta\) base ortogonal respeito de \(\phi\) \(\leftrightharpoons\) \(T^\phi = T\). 
+    \label{thm:967}
+    Sejam \(\F\) algebraicamente fechado, \(\operatorname{car}\F \neq 2\) e \(V\) anisotrópico respeito de \(\phi \in B_s(V)\). Então, \(\exists \beta\) base ortogonal respeito de \(\phi\) \(\leftrightharpoons\) \(T^* = T\). 
 \end{theorem}
 
 \demo{\((\Rightarrow)\) Última nota. \((\Leftarrow)\) \(\exists \lambda \in \F : \exists w \in V_\lambda\setminus\{0\}\), seja \(W = [w]\), dado que \(V\) é anisotrópico, \(W\) é não degenerado e \(V = W \oplus W^{\perp_\phi}\). Do {\scriptsize\(\square\)} \hyperlink{lemma966}{9.6.6.} que \(W^{\perp_\phi}\) é \(T\)-inv. O resultado segue pôr indução na dimensão de \(V\).}
+
+\ejemplo{ \centering Encontrando bases ortogonais simultâneas 
+   \tcblower 
+\par\noindent Retomando o exemplo da seção \hyperlink{ex94sim}{9.4.}, supõe que quermos uma base que seja ortogonal respeito de \(\phi\) e ortonormal respeito de \(\psi = \langle \cdot\  , \cdot \rangle_\text{usual} \) ao mesmo tempo. \\
+\- \vspace{-0.3cm}
+\par\noindent \textbf{Passo 1.} Interpretamos \([T]^\alpha_\alpha = [\phi]_\alpha \), sendo \(\alpha \) à base canônica. Note que, 
+\[[T^\psi]^\alpha_\alpha = \id^{-1} \cdot ([T]^\alpha_\alpha)^t \cdot \id = [T]^\alpha_\alpha \ \leftrightharpoons \ T \text{ autoadjunto respeito de } \psi.\] 
+\- \vspace{-0.3cm}
+\begin{tikzpicture}[overlay, shift= {(-1cm, -2cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture}
+} 
+\newpage 
+
+\- \vspace{-1.7cm}
+\ejemplo{
+    \- \vspace{0.5cm} \\ 
+\begin{tikzpicture}[overlay, shift= {(-1cm, 0.7cm)}]
+    \fill[white] (0,0) rectangle (20,2.5);
+\end{tikzpicture}
+\hspace{-0.1cm}Veja que, mesmo que \(\R\) não é algebraicamente fechado como pide o \(\blacksquare\) \ref{thm:967}, o \(\blacksquare\) (\emph{Teorema Espectral}) garante que \(\exists \beta \) ortonormal respeito de \(\psi\). \\ 
+\-\vspace{-0.2cm}
+\par\noindent \textbf{Passo 2.} Encontrar \(\beta\) do jeito tradicional, 
+{\footnotesize \[\text{ \small $c_{_T}$} = \left|\begin{array}{c c c}
+t+4 & 1 & -2 \\
+1 & t+1 & 1 \\
+-2 & 1 & t+4 
+\end{array} \right| \text{\small $\overset{F_1 \to F_1 - F_3}{\longrightarrow}$} \left|\begin{array}{c c c}
+(t+6) & 0 & -(t+6) \\
+1 & t+1 & 1 \\
+-2 & 1 & t+4 
+\end{array} \right|^{(*)} = \text{ \small $(t+6)(t+3)t$.}\]}
+\hrule 
+{\footnotesize \vspace{-0.1cm}\[\text{\small $V_{t+6}$} = \ker \begin{bmatrix}
+\textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} \\
+1 & -5 & 1 \\
+-2 & 1 & -2 
+\end{bmatrix}^{(*)} \text{\small $\overset{F_3 \to F_3 + 2F_2 }{\longrightarrow }$} \begin{bmatrix}
+\textcolor{gray}{0} & & \textcolor{gray}{0} \\
+1 &  & 1 \\
+\textcolor{gray}{0} & -9 & \textcolor{gray}{0}
+\end{bmatrix}\begin{bmatrix}
+v_1 \\ 
+v_2 \\ 
+v_3
+\end{bmatrix} = \begin{bmatrix}
+0 \\
+0 \\
+0
+\end{bmatrix} \ \leftrightharpoons \ \begin{bmatrix}
+v_1 \\ 
+v_2 \\ 
+v_3
+\end{bmatrix} = \begin{bmatrix}
+a \\ 
+0 \\ 
+-a
+\end{bmatrix}\]}
+\hrule 
+{\footnotesize \vspace{0.2cm}\[\text{\small $V_{t+3}$} = \ker \begin{bmatrix}
+3 & \textcolor{gray}{0} & -3 \\
+1 & -2 & 1 \\
+-2 & 1 & 1 
+\end{bmatrix}^{(*)} \begin{bmatrix}
+v_1 \\ 
+v_2 \\ 
+v_3
+\end{bmatrix} = \begin{bmatrix}
+0 \\
+0 \\
+0
+\end{bmatrix} \ \leftrightharpoons \ \begin{bmatrix}
+v_1 \\ 
+v_2 \\ 
+v_3
+\end{bmatrix} = \begin{bmatrix}
+b \\ 
+b \\ 
+b
+\end{bmatrix}\]
+}
+\hrule 
+{\footnotesize \vspace{0.2cm}\[\text{\small $V_{t}$} = \ker \begin{bmatrix}
+6 & \textcolor{gray}{0} & -6 \\
+1 & 1 & 1 \\
+-2 & 1 & 4 
+\end{bmatrix}^{(*)} \begin{bmatrix}
+v_1 \\ 
+v_2 \\ 
+v_3
+\end{bmatrix} = \begin{bmatrix}
+0 \\
+0 \\
+0
+\end{bmatrix} \ \leftrightharpoons \ \begin{bmatrix}
+v_1 \\ 
+v_2 \\ 
+v_3
+\end{bmatrix} = \begin{bmatrix}
+c \\ 
+-2c \\ 
+c
+\end{bmatrix}\]
+}
+\hrule
+{\small \vspace{0.3cm}\[
+\text{\small $[T]_\beta^\beta $} = \begin{bmatrix}
+    -3 & \textcolor{gray}{0}& \textcolor{gray}{0} \\ 
+    \textcolor{gray}{0}& -6 &  \textcolor{gray}{0} \\ 
+    \textcolor{gray}{0}& \textcolor{gray}{0} & 0
+\end{bmatrix}, \hspace{0.5cm}
+\text{\small $\beta$} = \left\{\frac{1}{\sqrt{2}}\begin{bmatrix}
+1 \\ 
+0\\ 
+-1
+\end{bmatrix}, \ \frac{1}{\sqrt{3}}\begin{bmatrix}
+1 \\ 
+1\\ 
+1
+\end{bmatrix}, \ \frac{1}{2}\begin{bmatrix}
+1 \\ 
+2\\ 
+1
+\end{bmatrix}\right\}\]}
+\par\noindent \textbf{Passo 3.} Finalmente, sendo \(P = \begin{bmatrix} 
+    \beta_1 & \beta_2 & \beta_3
+\end{bmatrix}\), note que  \([T]_\beta^\beta  = P^{-1} \cdot [T]_\alpha^\alpha \cdot P = P^t \cdot [\phi]_\alpha \cdot P = [\phi]_\beta\). Perceba as diferenças com à \(\alpha_\text{o}\) achada na seção \hyperlink{ex94sim}{9.4.}. 
+}
