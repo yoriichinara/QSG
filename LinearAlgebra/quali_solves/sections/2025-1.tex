@@ -1,0 +1,86 @@
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\an}{\mathscr{A}} 
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\hom}{\operatorname{Hom}_\F}
+\newcommand{\ehom}{\operatorname{End}_\F}
+\colorlet{gris}{black!70}
+
+1. Sejam \(V\) e \(W\) \(\F\)-espaços de dimensão finita. Mostre que \(V' \otimes W\) é canônicamente isomorfo a \(\hom(V,W)\). \newline
+    \textcolor{gris}{Considere a aplicação \(\varphi: V' \times W \to \hom(V,W)\)  tal que, 
+     \[   (f,w) \mapsto [v\mapsto f(v) w].\]
+    \(\rightarrow \ \varphi\) está \underline{bem definida}. De fato, sendo \(f \in V', w \in W\) fixos, \(v_1, v_2 \in V\) e \(\lambda \in \F\) quaisquer,    
+    \begin{align*}
+        [\varphi(f,w)](v_1 + \lambda v_2) &= f(v_1+\lambda v_2) w \\ 
+         &= f(v_1) w +\lambda f(v_2) w \\ 
+        &=[\varphi(f,w)](v_1) + \lambda [\varphi(f,w)](v_2)  
+    \end{align*}
+    \(\rightarrow \ \varphi\) é \underline{bilinear}. Sejam \(f_1, f_2 \in V'\), \(w_1, w_2 \in W\) e \(\lambda \in \F \) arbitrarios, então temos 
+    \begin{align*}
+    \star \ \      \varphi(f_1 + \lambda f_2, w) &= [f_1 + \lambda f_2](v) w \\ 
+        &= f_1(v) w + \lambda f_2(v) w\\ 
+        &= \varphi(f_1,  w) + \lambda \varphi (f_2, w)  
+    \end{align*}
+    \begin{align*}
+    \star \ \      \varphi(f, w_1 + \lambda w_2) &= f(v)[w_1 + \lambda w_2] \\ 
+        &= f(v) w_1+ \lambda f(v) w_2 \\ 
+        &= \varphi(f,  w_1) + \lambda \varphi (f, w_2) 
+    \end{align*}
+    Pela PUPT \(\exists ! \widetilde{\varphi}: V'\otimes W \to \hom(V,W)\) linear tal que \(\varphi = \widetilde{\varphi}\circ \otimes\). Além disso, \(\widetilde{\varphi}\) é \underline{injetora}, isso pois \(\widetilde{\varphi}(f\otimes w) = f(v) w = 0 \ \leftrightharpoons \ \) \(w=0\) ou \(f \equiv 0 \ \leftrightharpoons \ f\otimes w = 0 \). Note que, 
+    \[\dim (V'\otimes W) = \dim V \cdot \dim W = \dim (\hom(V,W)), \]
+    assim, \(\widetilde{\varphi}\) é linear injetora entre \(\F\)-espaços de mesma dimensão \(\leftrightharpoons\) \(\widetilde{\varphi}\) é isomorfismo. 
+    } \\ 
+2. Seja \(A \in M_n(\R)\subseteq M_n(\C)\). Sabemos \(\exists S \in \operatorname{GL}_n ( \C): S^{-1} A S = J =\) FCJ\((A)\). Mostre que os \(\lambda\)-blocos coincidem em longitude e comprimento com os \(\overline{\lambda}\)-blocos. \\ 
+    \textcolor{gris}{\hrule 
+        \- \hfill \(\rotatebox{45}{$\boxdot$}\) \ \(M_n(\C) \ni X = (z_{ij}) \Rightarrow \overline{X} := (\overline{z}_{ij})\) \\
+        \- \vspace{0.3cm}\hfill {\scriptsize $\square$} \ \(\overline{X \cdot Y} = \overline{X} \cdot \overline{Y}\) 
+    \hrule
+    Note que \(\overline{S^{-1} A S} = \overline{S^{-1}}\cdot A \cdot \overline{S} = \overline{J}\), logo, tanto \(J\) quanto \(\overline{J}\) são FCJ\((A)\), isso pois 
+    {\small \[ \overline{J_{k}(\lambda)} = \begin{bmatrix}
+        \overline{\lambda} &  & & \\ 
+        1& \overline{\lambda} & &  \\ 
+         & \ddots & \ddots&  \\ 
+         &  &1 & \overline{\lambda} \\ 
+    \end{bmatrix} = J_k(\overline{\lambda}).\]}
+    \hspace{-0.1cm}Como consequência do \(\blacksquare\) \emph{(DC)} sabemos que baixo existência a FCJ é única salvo permutações dos blocos. Sejam \(J_{k_1}(\lambda), \ldots, J_{k_m}(\lambda)\) os \(\lambda\)-blocos de \(A\) e  
+    \[\zeta : J \ni J_{k_j}(\lambda) \mapsto J_{k_j} (\overline{\lambda}) \in J. \]
+    \(\zeta \) está \underline{bem definida} toda vez que \(J\) e \(\overline{J}\) tem os mesmos blocos. Além disso, \(\zeta \) é \underline{bijeção}, pelo mesmo motivo. Assim, os \(\lambda\)-blocos coincidem como os \(\overline{\lambda}\)-blocos tanto em quantidade quanto comprimento. 
+    } \vspace{0.1cm}\\
+3. Sejam \(V \), \(W \) \(\Q\)-espaços e \(\{v_1, \ldots, v_k\}, \ \{w_1, \ldots, w_k\}\) bases pra eles (respectivamente). Mostre que \(V= W \ \leftrightharpoons \ \) \(\exists c \in \Q^\times : c(v_1 \wedge \cdots \wedge v_k) = w_1 \wedge \cdots \wedge w_k\).   \\
+    \textcolor{gris}{
+    \((\Rightarrow)\) Tanto \(v_1 \wedge \cdots \wedge v_k\) quanto \(w_1\wedge \cdots \wedge w_k\) são bases pra \(V^{\wedge k} = W^{\wedge k}\) que tem dimensão \( \binom{k}{k} = 1\), em particular são não nulos e \(\exists c\in \Q^\times : c(v_1 \wedge \cdots \wedge v_k)= w_1 \wedge \cdots \wedge w_k\). \\ 
+    \((\Leftarrow )\) Seja \(U\) \(\F\)-espaço \(: V,W \leq U\), supõe por contradição \(V \neq W\), logo \(\exists w_j : w_j \in W \setminus V\) (ou vice-versa), teriamos 
+    \[(cv_1 \wedge \cdots \wedge v_k )\wedge w_j \neq 0 = (w_1 \wedge \cdots \wedge w_k) \wedge w_j = 0.\ \lightning\]
+    }
+\hspace{-0.1cm}4. Enuncie e demostre o \(\blacksquare\) (\emph{Teorema Espectral}) para operadores hermitianos em \(\C\)-espaços de dimensão finita. \\ 
+    \textcolor{gris}{
+        \(\blacksquare\) (\emph{\(\C\)-Teorema Espectral}) Sejam \(V\) \(\C\)-espaço de dimensão finita com produto interno \(\langle\cdot \ ,  \cdot\rangle\) e \(T \in \ehom(V) : \langle v, T(w)\rangle = \langle T(v), w \rangle \). Então,
+        \begin{enumerate}[label = (\alph*) ]
+            \item Todos os autovalores de \(T\) são reais. 
+            \item Os autoespaços de \(T\) são mutuamente ortogonais. 
+            \item \(\exists \beta\) base ortonormal de \(V\) formada por autovetores. 
+        \end{enumerate}
+        \emph{Demonstração.} (a) Sejam \(\lambda \in \C\) e \(v \in V_\lambda\neq \{0\}\). Então, 
+        \begin{align*}
+        \langle v, T(v)\rangle &=  \langle v, \lambda v\rangle =\overline{\lambda}\langle v, v\rangle \\ 
+        &=  \langle T(v), v\rangle = \langle  \lambda v,v\rangle = \lambda\langle v,v\rangle  
+        \end{align*}
+        \(\leftrightharpoons \ \lambda = \overline{\lambda} \ \leftrightharpoons \ \lambda \in \R\) (b) Sejam \(\lambda, \mu \in \C\), \(\lambda \neq \mu\), \(v\in V_\lambda \neq \{0\} \) e \(w \in V_\mu \neq \{0\}\). Note que,  
+        \[\langle v, T(w)\rangle = \mu \langle v, w\rangle = \lambda \langle v , w\rangle  = \langle T(v), w\rangle, \]
+        \(\leftrightharpoons\ \langle v, w \rangle = 0 \ \leftrightharpoons \ v \perp w\). (c) Dado que \(\dim V =n <\infty\), \(\an_{_T} \neq \{0\}\) e visto que \(\C\) é algebraícamente fechado \(\exists \lambda \in \C : V_{t-\lambda} \neq \{0\}\). Sejam \(v_1 \in V_{t-\lambda}\setminus \{0\}\), \(e_1 := \frac{v_1}{\|v_1\|}\) e \(W := [e_1]^\perp\). Veja que \(W\) é \underline{\(T\)-inv}, de fato, se \(w\in W\), 
+        \[\langle T(w), e_1 \rangle = \langle w, T(e_1)\rangle = \lambda \langle w, e_1 \rangle = 0 \Rightarrow T(w) \in W. \] 
+        O resultado segue por indução (que de fato começa) em \(\dim V\), pois, \(T|_{_W}\) é hermitiano e \(\dim W = n-1\). 
+    }\\ 
+5. Sejam \(\F\leq \R\) subcorpo contendo raízes de todos seus elementos positivos, \(V\) \(\F\)-espaço e \(\phi \in B_s(V)\). Diz-se que \(V\) é \(\phi\)-\emph{anisotrópico} sse \(0\) for o único vetor isotrópico. Mostre que \(V\) é \(\phi\)-anisotrópico \( \ \leftrightharpoons \ \) \(\phi > 0 \) ou \(\phi < 0 \). \\
+\textcolor{gris}{
+(\(\Rightarrow\)) Segue do \(\blacksquare\) 9.4.6. que \(\exists \alpha = (v_j)\) base ortogonal tal que \([\phi]_{\alpha} = \operatorname{diag}(\lambda_j), \ \lambda_j \neq 0\). Melhor ainda, fazendo 
+\[\beta = (w_j) = (|\lambda_j|^{-1  /2}v_j). \]   
+temos \([\phi]_{\alpha_\text{o}} = \operatorname{diag}([-\id_i], [\id_{p-i}])\). Supõe por contradição que \(\exists i \neq j: \phi(w_i, w_i) =1\) e \(\phi(w_j, w_j) = -1\), então \(w_i + w_j \neq 0 \) e, 
+\[
+    \phi(w_i + w_j ,  w_i + w_j) = \phi(w_i, w_i) + \phi(w_j, w_j) = 0. \ \lightning 
+\]
+\((\Leftarrow)\) Direta da definição pois se \(\phi> 0\) ou \( \phi <0 \), em particular, \(\phi(v,v) = 0 \ \leftrightharpoons \ v = 0\).   
+}
+
+\vspace{2in}\-\newline\lipsum
+

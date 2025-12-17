@@ -1,0 +1,42 @@
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\an}{\mathscr{A}} 
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\ehom}{\operatorname{End}}
+\colorlet{gris}{black!70}
+
+1. Defina ou enuncie em detalhe cada um dos ítens em baixo: \\
+(a) Aplicação diff num ponto \(\x\). \textcolor{gris}{\(F: U\ab \subseteq \R^n \to \R^m\) é \emph{diff} em \(p \in \R^n\) sse \(\exists L \in \hom(\R^n, \R^m): F(p+v) = F(p) + Lv + o\|v\|\), quando \(v\to 0\). }\\ 
+(b) \(\blacksquare\) (\emph{TVM\(-\R^n\)}) \textcolor{gris}{Sejam \(f: U\ab \subseteq \R^n \to \R\) continua em \([p, p+v]\) e diff em \((p,p+tv)\), então \(\exists \theta \in (0,1)\) tal que \( f(p+v) - f(p) = df(p + \theta v) \cdot v \).   }\\ 
+(c) \(\blacksquare\) (\emph{Função Inversa}) \textcolor{gris}{Sejam \(U\ab \subseteq \R^n\), \(F \in C^k(U,\R^n)\) e \(p\in U\). Então, \(^kF: \V_p \ \leftrightharpoons \ DF(p)\) é isomorfismo.  }\\ 
+(d) Submersão. \textcolor{gris}{Uma aplicação \(F\) diff em \(p\) é submersão (em \(p\)) sse \(DF(p): \R^n \twoheadrightarrow \R^m\). }\\
+(e) \(\blacksquare\) (\emph{FLS}) \textcolor{gris}{Seja \(F\in C^k(U,\R^m)\) submersão em \(p\in U\). Então, \(\exists \V_p \subseteq U\) e \(G:V\ab \simeq \V_p\) tais que \(F\circ G: V \ni (\x, x_{m+1}, \ldots, x_n) \mapsto \x \in \R^m\). }\\
+(f) \(\blacksquare\) (\emph{Função Implícita}) \textcolor{gris}{Sejam \(U\ab = V\times W \subseteq \R^n \times \R^m\), \(G \in C^k(U,\R^m)\) e \((p,q) \in U\). Se \(G(p,q)=0\) e \(\det JG_q(p,q) \neq 0\), então \(\exists \mathcal{W}_q\) e \(\exists F \in C^k(\V_p, \R^m)\) tais que \(\forall (\x,\y) \in \V_p\times \mathcal{W}_q, \ G(\x,\y) = G(\x, F(\x)) = 0\). }\\ 
+2. Sejam \(F,G: U\ab \subseteq \R^n \to \R^n\) diff em \(p \in U\), tais que \(F(p) = G(p)\). Mostre que,
+\[DF(p) = DG(p) \ \leftrightharpoons \ \lim_{v\to 0} \frac{F(p+v) - G(p+v)}{\|v\|} = 0. \]
+\textcolor{gris}{
+    Segue essencialmente da definição, pois 
+    \[DF(p) - DG(p) = \lim_{v\to 0} \frac{F(p+v) -DG(p+v)}{\|v\|}\] 
+}
+\hspace{-0.1cm}3. Sejam \(U:= \{(x,y) \in \R^2 : x,y >0 \}\), \(p,q >1\) tais que \(p^{-1} + q^{-1} = 1\) e \(f: U \to \R\) tal que, 
+\[f(x,y) := \frac{x^p}{p} + \frac{y^q}{q}.\] 
+(a) Explique por qué \(\forall t>0\), a restrição de \(f\) à hipérbole \(xy = t\) possui um ponto mínimo global \((x_t, y_t)\). \\ 
+\textcolor{gris}{O conjunto \(\{(x,y) \in \R^2 : xy=t\}=: H_t\ce\subseteq \R^2 \) e ilimitado, mas \(f\) é contínua e \(f(x,y) \to \infty\) quando \(\|(x,y)\| \to \infty\), por tanto \(f\) tem mínimo global \((x_t, y_t) \in U\). } \\
+(b) Utilizando Mult. de Lagrange, mostre que \(x_t^p = y_t^q\). \\ 
+\textcolor{gris}{Seja \(g(x,y) = xy - t\), então \(\exists \lambda \in \R \) tal que,  %: df(x_t, y_t) = \lambda dg(x_t, y_t)\) e \(g(x_t,y_t) = 0\). 
+\begin{align*} 
+    &\begin{cases}
+        x_t^{p-1}dx + y_t^{q-1}dy = \lambda (y_t dx + x_tdy) \\ 
+        x_ty_t  - t = 0
+    \end{cases} \\ 
+    &\leftrightharpoons \ 
+    \begin{cases}
+        x_t^p = \lambda y_tx_t   \\ 
+        y_t^q = \lambda x_ty_t   
+    \end{cases} \ \leftrightharpoons \ x_t^p = y_t^q. 
+\end{align*}
+}
+
+\-\vspace{2cm}\\ 
+ \lipsum
