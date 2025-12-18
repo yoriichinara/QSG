@@ -6,6 +6,11 @@
 \newcommand{\ehom}{\operatorname{End}_\F}
 \colorlet{gris}{black!70}
 
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering 2025-II \vspace{0.1cm}
+  \hrule}
+
 1. Sejam \(V\) e \(W\) \(\F\)-espaços de dimensão finita. Mostre que \(V' \otimes W\) é canônicamente isomorfo a \(\hom(V,W)\). \newline
     \textcolor{gris}{Considere a aplicação \(\varphi: V' \times W \to \hom(V,W)\)  tal que, 
      \[   (f,w) \mapsto [v\mapsto f(v) w].\]
@@ -44,8 +49,8 @@
     \end{bmatrix} = J_k(\overline{\lambda}).\]}
     \hspace{-0.1cm}Como consequência do \(\blacksquare\) \emph{(DC)} sabemos que baixo existência a FCJ é única salvo permutações dos blocos. Sejam \(J_{k_1}(\lambda), \ldots, J_{k_m}(\lambda)\) os \(\lambda\)-blocos de \(A\) e  
     \[\zeta : J \ni J_{k_j}(\lambda) \mapsto J_{k_j} (\overline{\lambda}) \in J. \]
-    \(\zeta \) está \underline{bem definida} toda vez que \(J\) e \(\overline{J}\) tem os mesmos blocos. Além disso, \(\zeta \) é \underline{bijeção}, pelo mesmo motivo. Assim, os \(\lambda\)-blocos coincidem como os \(\overline{\lambda}\)-blocos tanto em quantidade quanto comprimento. 
-    } \vspace{0.1cm}\\
+    \(\zeta \) está \underline{bem definida} toda vez que \(J\) e \(\overline{J}\) tem os mesmos blocos. Além disso, \(\zeta \) é \underline{bijeção}, pelo mesmo motivo. Assim, os \(\lambda\)-blocos são iguais aos \(\overline{\lambda}\)-blocos tanto em quantidade quanto comprimento. 
+    }\\ 
 3. Sejam \(V \), \(W \) \(\Q\)-espaços e \(\{v_1, \ldots, v_k\}, \ \{w_1, \ldots, w_k\}\) bases pra eles (respectivamente). Mostre que \(V= W \ \leftrightharpoons \ \) \(\exists c \in \Q^\times : c(v_1 \wedge \cdots \wedge v_k) = w_1 \wedge \cdots \wedge w_k\).   \\
     \textcolor{gris}{
     \((\Rightarrow)\) Tanto \(v_1 \wedge \cdots \wedge v_k\) quanto \(w_1\wedge \cdots \wedge w_k\) são bases pra \(V^{\wedge k} = W^{\wedge k}\) que tem dimensão \( \binom{k}{k} = 1\), em particular são não nulos e \(\exists c\in \Q^\times : c(v_1 \wedge \cdots \wedge v_k)= w_1 \wedge \cdots \wedge w_k\). \\ 
@@ -54,7 +59,7 @@
     }
 \hspace{-0.1cm}4. Enuncie e demostre o \(\blacksquare\) (\emph{Teorema Espectral}) para operadores hermitianos em \(\C\)-espaços de dimensão finita. \\ 
     \textcolor{gris}{
-        \(\blacksquare\) (\emph{\(\C\)-Teorema Espectral}) Sejam \(V\) \(\C\)-espaço de dimensão finita com produto interno \(\langle\cdot \ ,  \cdot\rangle\) e \(T \in \ehom(V) : \langle v, T(w)\rangle = \langle T(v), w \rangle \). Então,
+        \(\blacksquare\) (\emph{\(\C\)-Teorema Espectral}) Sejam \(V\) \(\C\)-espaço de dimensão finita com produto interno \(\langle\cdot \ ,  \cdot\rangle\) e \(T \in \ehom(V) : \forall v, w \in V, \ \langle v, T(w)\rangle = \langle T(v), w \rangle \). Então,
         \begin{enumerate}[label = (\alph*) ]
             \item Todos os autovalores de \(T\) são reais. 
             \item Os autoespaços de \(T\) são mutuamente ortogonais. 
@@ -75,12 +80,11 @@
 \textcolor{gris}{
 (\(\Rightarrow\)) Segue do \(\blacksquare\) 9.4.6. que \(\exists \alpha = (v_j)\) base ortogonal tal que \([\phi]_{\alpha} = \operatorname{diag}(\lambda_j), \ \lambda_j \neq 0\). Melhor ainda, fazendo 
 \[\beta = (w_j) = (|\lambda_j|^{-1  /2}v_j). \]   
-temos \([\phi]_{\alpha_\text{o}} = \operatorname{diag}([-\id_i], [\id_{p-i}])\). Supõe por contradição que \(\exists i \neq j: \phi(w_i, w_i) =1\) e \(\phi(w_j, w_j) = -1\), então \(w_i + w_j \neq 0 \) e, 
+temos \([\phi]_{\beta} = \operatorname{diag}([-\id_i], [\id_{p-i}])\). Supõe por contradição que \(\exists i \neq j\) tal que \(\phi(w_i, w_i) =1\) e \(\phi(w_j, w_j) = -1\), então \(w_i + w_j \neq 0 \) e, 
 \[
     \phi(w_i + w_j ,  w_i + w_j) = \phi(w_i, w_i) + \phi(w_j, w_j) = 0. \ \lightning 
 \]
 \((\Leftarrow)\) Direta da definição pois se \(\phi> 0\) ou \( \phi <0 \), em particular, \(\phi(v,v) = 0 \ \leftrightharpoons \ v = 0\).   
 }
 
-\vspace{2in}\-\newline\lipsum
 

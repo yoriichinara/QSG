@@ -6,6 +6,11 @@
 \newcommand{\ehom}{\operatorname{End}}
 \colorlet{gris}{black!70}
 
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering 2025-II \vspace{0.1cm}
+  \hrule}
+
 1. Defina ou enuncie em detalhe cada um dos ítens em baixo: \\
 (a) Aplicação diff num ponto \(\x\). \textcolor{gris}{\(F: U\ab \subseteq \R^n \to \R^m\) é \emph{diff} em \(p \in \R^n\) sse \(\exists L \in \hom(\R^n, \R^m): F(p+v) = F(p) + Lv + o\|v\|\), quando \(v\to 0\). }\\ 
 (b) \(\blacksquare\) (\emph{TVM\(-\R^n\)}) \textcolor{gris}{Sejam \(f: U\ab \subseteq \R^n \to \R\) continua em \([p, p+v]\) e diff em \((p,p+tv)\), então \(\exists \theta \in (0,1)\) tal que \( f(p+v) - f(p) = df(p + \theta v) \cdot v \).   }\\ 
@@ -19,24 +24,72 @@
     Segue essencialmente da definição, pois 
     \[DF(p) - DG(p) = \lim_{v\to 0} \frac{F(p+v) -DG(p+v)}{\|v\|}\] 
 }
-\hspace{-0.1cm}3. Sejam \(U:= \{(x,y) \in \R^2 : x,y >0 \}\), \(p,q >1\) tais que \(p^{-1} + q^{-1} = 1\) e \(f: U \to \R\) tal que, 
+\hspace{-0.1cm}3. Sejam \(U:= \{(x,y) \in \R^2 : x,y >0 \}\), \(p,q >1\) tais que \(\frac{1}{p} + \frac{1}{q} = 1\) e \(f: U \to \R\) tal que, 
 \[f(x,y) := \frac{x^p}{p} + \frac{y^q}{q}.\] 
 (a) Explique por qué \(\forall t>0\), a restrição de \(f\) à hipérbole \(xy = t\) possui um ponto mínimo global \((x_t, y_t)\). \\ 
 \textcolor{gris}{O conjunto \(\{(x,y) \in \R^2 : xy=t\}=: H_t\ce\subseteq \R^2 \) e ilimitado, mas \(f\) é contínua e \(f(x,y) \to \infty\) quando \(\|(x,y)\| \to \infty\), por tanto \(f\) tem mínimo global \((x_t, y_t) \in U\). } \\
 (b) Utilizando Mult. de Lagrange, mostre que \(x_t^p = y_t^q\). \\ 
 \textcolor{gris}{Seja \(g(x,y) = xy - t\), então \(\exists \lambda \in \R \) tal que,  %: df(x_t, y_t) = \lambda dg(x_t, y_t)\) e \(g(x_t,y_t) = 0\). 
-\begin{align*} 
-    &\begin{cases}
+\[ \begin{cases}
         x_t^{p-1}dx + y_t^{q-1}dy = \lambda (y_t dx + x_tdy) \\ 
         x_ty_t  - t = 0
-    \end{cases} \\ 
-    &\leftrightharpoons \ 
-    \begin{cases}
-        x_t^p = \lambda y_tx_t   \\ 
-        y_t^q = \lambda x_ty_t   
-    \end{cases} \ \leftrightharpoons \ x_t^p = y_t^q. 
-\end{align*}
+    \end{cases}  \]
+Isso \(\leftrightharpoons \ x_t^p = \lambda y_tx_t = \lambda x_ty_t = y_t^q = \lambda t  \).
 }
 
-\-\vspace{2cm}\\ 
- \lipsum
+(c) Mostre que \(f(x_t, y_t) = t \) e conclua que \(\forall x,y > 0\), 
+\[ xy \leq \frac{x^p}{p} + \frac{y^q}{q}.  \]
+\- \vspace{-0.5cm}
+\textcolor{gris}{
+\begin{align*}
+f(x_t, y_t) &=  \frac{x_t^p}{p} + \frac{y_t^q}{q} = x_t^p \left(\frac{1}{p} + \frac{1}{q}\right) = x_t^p\\ 
+&= (x_t^p)^{\frac{1}{p} + \frac{1}{q}} = x_t (x_t^{p})^{\frac{1}{q}} = x_ty_t = t 
+\end{align*}
+Dados \(x,y > 0\), \(xy = t = f(x_t, y_t) \leq f(x,y) = \frac{x^p}{p} + \frac{y^q}{q}\). 
+}\\ 
+4. Utilize \(\blacksquare\) (\emph{Função Implícita}) para mostrar que o sistema, 
+\[\begin{cases}
+    \textcolor{gray}{G_1(\x) = } \  w^2 + 2x^2+y^2 - z^2 - 6 = 0 \\ 
+    \textcolor{gray}{G_1(\x) = } \  wxy - xyz = 0 
+\end{cases}, \]
+pode ser resolvido em termos de \(w = w(y,z)\) e \(x = x(y,z)\) numa vizinhança do ponto \((p,q) = ((y,z),(x,w)) = ((2,1),(1,1))\). Calcule as derivadas parciais de \(w\) e \(x\) em \(p\). \\
+\textcolor{gris}{
+    Sejam \(G(\x,\y) = (G_1(\x,\y), G_2(\x,\y)): \R^4 \to \R^2\). Note que \(G \in C^\infty (\R^4, \R^2) \), \(G(p,q) = (0,0)\) e,
+    \[\det (JG_q(p,q)) = \det \begin{bmatrix}
+        4 & 2 \\ 
+        0 & 2
+    \end{bmatrix} = 8 \neq 0.\]  
+    Pelo \(\blacksquare\) (\emph{Função Implícita}) \(\exists \mathcal{W}_q\) e \(F\in C^\infty(\V_p, \R^2)\) onde \(\forall (\x, \y) \in \V_p \times \mathcal{W}_q, \ G(\x,\y ) = G(\x, F(\x))\), seja lá
+    \[F(y,z) = (x(y,z), w(y,z)).\]  
+    Pelo {\scriptsize \(\boxtimes\)} 8.5. \(JG_q(p,q)\cdot JF_p(p,q) = - JG_p(p,q)\), ou seja,
+    \[ \begin{bmatrix}
+        x_y(p,q) & x_z(p,q) \\
+        w_y(p,q) & w_z(p,q) 
+    \end{bmatrix}  = \begin{bmatrix}
+        4 & 2 \\ 
+        0 & 2
+    \end{bmatrix}^{-1} \begin{bmatrix}
+        -4 & 2 \\ 
+        0 & 2
+    \end{bmatrix} = \begin{bmatrix}
+        -1 & 0 \\ 
+        0& 1
+    \end{bmatrix}.\]
+}
+5. Mostre que \(\omega \in \Omega^1(\R^2\setminus \{0\}) \) é fechada mas não exata,  
+\[\omega := -\frac{y}{x^2 + y^2}dx + \frac{x}{x^2+y^2} dy \textcolor{gray}{ \ = fdx + gdy}.\] 
+\textcolor{gris}{
+    Lembre-se que \(\omega \) é \underline{fechada} \(\leftrightharpoons\ d\omega = 0 \), 
+    \[ d\omega = (g_x - f_y) dx \wedge dy = \frac{2[x^2+y^2] - 2x^2 - 2y^2}{[x^2+y^2]^2}dx \wedge dy = 0. \] 
+    Seja \(\E^1 \subseteq \R^2\), variedade compacta, orientada, sem borda, suponha por contradição que \(\omega \) for \underline{exata}, usando \(\psi: [0,2\pi) \ni t \mapsto (\cos(t), \sin(t)) \in \E^1\) temos,% então \(\int_{\E^1} \omega =0\), pelo {\scriptsize \(\boxtimes\)} (\emph{Stokes}) mas,  
+    \[\int_{\E^1}w = \int_0^{2\pi} \sin^2(t) + \cos^2(t)  dt = \int_0^{2\pi}  dt = 2\pi \neq 0. \ \lightning\]
+}
+\hspace{-0.15cm}De um exemplo de \(_d\overline{M}\subseteq \R^n\) compacta que possui uma forma de volume exata. \\ 
+\textcolor{gris}{
+    Seja \(_2\overline{M} = \overline{\B^2} := \{\x \in \R^2: \|\x\|\leq 1\}\). Note que \(\omega_\text{vol} = dx \wedge dy\) e \(w = d(-\frac{y}{2}dx+\frac{x}{2}dy)\). 
+}\\
+Porém, se \(M\) for compacta e \(\partial M = \emptyset \), então nenhuma forma de volume é exata. \\
+\textcolor{gris}{
+    Supõe por contradição que \(\omega_\text{vol} = d\eta \), então do \(\blacksquare\) (\emph{Stokes}), 
+    \[0< \int_M\omega_\text{vol} = \int_{\partial M} \eta = 0. \ \lightning\] 
+}

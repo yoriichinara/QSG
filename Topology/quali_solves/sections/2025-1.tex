@@ -1,0 +1,38 @@
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\an}{\mathscr{A}} 
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\ehom}{\operatorname{End}}
+\colorlet{gris}{black!70}
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering 2025-II \vspace{0.1cm}
+  \hrule}
+
+1. Sejam \((X, \tau)\) Hausdorff e \(K, \ L \subset \mathcal{M}\) compactos e disjuntos. Mostre que \(\exists U\ab, V\ab \subset X\) disjuntos \(: K\subset U\) e \(L\subset V\). \\
+\textcolor{gris}{
+  \(\forall (x,y) \in K \times  L, \ \exists U_{x,y}\ab, V_{x,y}\ab\) disjuntos \(: x \in U_{x,y}\) e \(y\in V_{x,y}\). Sejam \(x_0 \in K\) fixo e \(\{V_{x_0, y} : y \in L\}\) recobrimento aberto pra \(L\). Pela compacidade, \(\exists \{V_{x_0, y_1}, \ldots, V_{x_0, y_n} \}\) subrecobrimento finito, defina
+  \[V_{x_0} := \bigcup^n V_{x_0,y_j} \text{\ \ e \ \ } U_{x_0} := \bigcap^n U_{x_0,y_j}. \]
+  Assim, \(x_0 \in U_{x_0}\), \(L \subset V_{x_0}\) e \(V_{x_0} \cap U_{x_0} = \emptyset \). Agora, a familia \(\{U_x : x \in K\}\) é recobrimento pra \(K\), portanto \(\exists \{U_{x_1}, \ldots U_{x_m}\}\) subrecobrimento finito. Finalmente, 
+  \[U := \bigcup^m U_{x_j} \text{ \ \ e \ \ } V := \bigcap^m V_{x_j},\]
+  temos \(L\subset V\), \(K\subset U\) e \(V\cap U \subseteq \bigcup U_{x_j}\cap V_{x_j} = \emptyset\). 
+} \\
+2. Sejam \((X, \tau)\) normal e \(A\ce,B\ce\subset X\) disjuntos. Mostre que \(\exists U\ab, V\ab \subset X : A \subset U, B\subset V\) e \(\overline{U} \cap \overline{V} = \emptyset\). \\ 
+\textcolor{gris}{
+  \(\exists U\ab, W\ab\) disjuntos \(: A \subset U\) e \(B\subset W\). Note que, \(\overline{U} \cap B = \emptyset\) pois \(\overline{U} \subset (X\setminus W)\ce\), logo \(\exists U_0\ab,  V\ab\) disjuntos \(: \overline{U}\subset U_0\) e \(B\subset V\). Finalmente, \(A \subset U \subset \overline{U} \subset U_0 \) e \(\overline{U} \cap \overline{V} = \emptyset \)  pois \(\overline{V}\subset (X\setminus U_0)\ce\).   
+}\\ 
+3. Seja \(f: X\to Y\) uma função entre espaços topológicos. \\ 
+(a) Defina \(\operatorname{graf}(f)\) \textcolor{gris}{\(:= \{(x,f(x)) : x \in X\}\subseteq X\times Y \). }  \\
+(b) Mostre que se \(f\) é contínua e \(K\subset X\) é compacto, então \(f(K)\subset Y\) é compacto. \\ 
+\textcolor{gris}{Seja \((V_i\ab): f(K) \subset \bigcup V_i\). Pela continuidade, \(U_i\ab := f^{-1}(V_i)\) e \(K \subset f^{-1}(f(K)) \subset f^{-1}\left(\bigcup V_i\right) = \bigcup U_i \). Logo, \(\exists \{U_1, \ldots, U_n\}\) recobrimento finito de \(K\) e, 
+\[f(K) \subset f\left(\bigcup^n U_j\right) \subset \bigcup^n f (f^{-1}(V_j)) \subset \bigcup^n V_j.\] }\\
+(c) Assuma \(Y\) Hausdorff e compacto. Mostre que se \(f\) é contínua, então \(\operatorname{graf}(f)\ce \subset X\times Y\). Vale a recíproca? \\ 
+\textcolor{gris}{
+  Seja \((x,y) \in X \times Y \setminus \operatorname{graf}(f)\ \leftrightharpoons \ f(x) \neq y\). Dado que \(Y\) é Hausdorff, \(\exists U\ab, V\ab \subset Y\) disjuntos \(: f(x)\in U, y \in V\). Seja \(W\ab := f^{-1}(U)\). Note que, se \(W\times V \cap \operatorname{graf}(f) = \emptyset\), então \((X\times Y \setminus \operatorname{graf}(f))\ab \ \leftrightharpoons \ \operatorname{graf}(f)\ce\). De fato, pois se \((x,f(x)) \in W \times V\), então \(f(x) \in U \cap V\). \ \(\lightning\)
+} \\ 
+4. Seja \((X, \tau_\text{prod}):= \prod (X_i,\tau_i)\). Mostre que \(x_n\to x \in X \ \leftrightharpoons \ \forall i \in I, \ \pi_i(x_n) \to \pi_i(x) \in X_i\).\\ 
+\textcolor{gris}{
+  \((\Rightarrow)\) As projeções são contínuas, logo se \(x_n \to x \in X \), então \(\forall i \in I, \ \pi_i(x_n) \to \pi_i(x)\). 
+} 
