@@ -1,0 +1,44 @@
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\an}{\mathscr{A}} 
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\ehom}{\operatorname{End}}
+\colorlet{gris}{black!70}
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{2025-II} \vspace{0.1cm}
+  \hrule}
+
+1. Sejam \((X, \tau)\) Hausdorff e \(K, \ L \subset X\) compactos disjuntos. Mostre que \(\exists U\ab, V\ab \subset X\) disjuntos \(: K\subset U\) e \(L\subset V\). \\ 
+\textcolor{gris}{ \hspace{-0cm}\(\forall (k,l) \in K \times  L, \ \exists U_{k,l}\ab, V_{k,l}\ab\subset X\) disjuntos \(: k \in U_{k,l}\) e \(l\in V_{k,l}\). Sejam \(k_0 \in K\) fixo e \(\{V_{k_0, l} : l \in L\}\) cobertura aberta pra \(L\). Pela compacidade, \(\exists \{V_{k_0, l_1}, \ldots, V_{k_0, l_n} \}\) subcobertura finita, defina
+  \[V_{k_0} := \bigcup^{n} V_{k_0,l_j} \text{\ \ e \ \ } U_{k_0} := \bigcap^{n} U_{k_0,l_j}. \]
+  Assim, \(k_0 \in U_{k_0}\), \(L \subset V_{k_0}\) e \(V_{k_0} \cap U_{k_0} = \bigcup V_{k_0,l_j} \cap U_{k_0} \subseteq \bigcup V_{k_0,l_j} \cap U_{k_0, l_j} = \emptyset \). Agora, a familia \(\{U_k : k \in K\}\) é cobertura pra \(K\), portanto \(\exists \{U_{k_1}, \ldots U_{k_m}\}\) subcobertura finita. Finalmente, sendo: 
+  \[U := \bigcup^m U_{k_j} \text{ \ \ e \ \ } V := \bigcap^m V_{k_j},\]
+  temos \(L\subset V\), \(K\subset U\) e \(V\cap U = \bigcup U_{k_j}\cap V \subseteq \bigcup U_{k_j} \cap V_{k_j}  = \emptyset\) como desejado. }
+ \\
+2. Sejam \((X, \tau)\) normal e \(A\ce,B\ce\subset X\) disjuntos. Mostre que \(\exists U\ab, V\ab \subset X : A \subset U, B\subset V\) e \(\overline{U} \cap \overline{V} = \emptyset\). \\ 
+\textcolor{gris}{
+  \(\exists U_0\ab, V_0\ab\subset X\) disjuntos \(: A \subset U_0\) e \(B\subset V_0\). Pela \(\square \ \) 18.3. \(\exists U\ab \subset U_0 : A \subset U \subset \overline{U} \subset U_0\), analogamente \(\exists V\ab \subset V_0 : B \subset V \subset \overline{V} \subset V_0\), segue que \(\overline{U}\cap \overline{V}\subset U_0\cap V_0 = \emptyset\).  
+}\\ 
+3. Seja \(f: X\to Y\) uma função entre espaços topológicos. \\ 
+(a) Defina \(\operatorname{graf}(f)\) \textcolor{gris}{\(:= \{(x,f(x)) : x \in X\}\subset X\times Y \). }  \\
+(b) Mostre que se \(f\) é contínua e \(K\subset X\) é compacto, então \(f(K)\subset Y\) é compacto. \\ 
+\textcolor{gris}{Sejam \((V_i\ab\subset Y): f(K) \subset \bigcup V_i\), então \(K \subset f^{-1}(f(K)) \subset f^{-1}\left(\bigcup V_i\right) = \bigcup f^{-1}(V_i) \), assim, pela continuidade \((f^{-1}(V_i)\ab \subset X)\) é uma cobertura aberta de \(K\) e \(\exists \{f^{-1}(V_1), \ldots, f^{-1}(V_n)\}\) subcobertura finita, segue que  
+\[f(K) \subset f\left(\bigcup^n f^{-1}(V_j)\right) = \bigcup^n f(f^{-1}(V_j))\subset \bigcup^n V_j.\] }\\
+(c) Assuma \(Y\) Hausdorff e compacto. Mostre que se \(f\) é contínua, então \(\operatorname{graf}(f)\ce \subset X\times Y\). Vale a recíproca? \\ 
+\textcolor{gris}{
+  \((x,y) \in \overline{\operatorname{graf}(f)}\ \leftrightharpoons \ \exists (x_\lambda, f(x_\lambda))\to  (x,y) \ \leftrightharpoons \ x_\lambda \to x\) e \(f(x_\lambda) \to y\). Pela continuidade da \(f\) temos que \(f(x_\lambda) \to f(x)\), no entanto \(Y\) é Hausdorff, pelo que os límites são únicos, segue que \((x,y) = (x,f(x)) \in \operatorname{graf}(f)\ce \subset X \times Y \). \\ 
+  ? A recíproca vale se \(Y\) for compacto (não precisa ser \(T_2\)). 
+} \\ 
+4. Seja \((X, \tau_\text{prod}):= \prod (X_i,\tau_i)\). Mostre que \(\x_n\to \x \in X \ \leftrightharpoons \ \forall i \in I, \ \pi_i(\x_n) \to \pi_i(\x) \in X_i\).\\ 
+\textcolor{gris}{
+  \((\Rightarrow)\) As projeções são contínuas, logo se \(\x_n \to \x \in X \), então \(\forall i \in I, \ \pi_i(\x_n) \to \pi_i(\x)\). \((\Leftarrow)\) Seja \(V\ab \in \U_\x\), então \(\exists U \in \mathcal{B}: U\subset V \) é da forma,
+  \[U = \bigcap^n \pi_j^{-1}(U_j) : j \in J \text{ finito e } U_j\ab\subset X_j.\]
+  \(\pi_j(\x) = x_j \in U_j \in \U_{x_j}\) logo, \(\exists N_j \in \N : \forall n\geq N_j, (\pi_j(\x_n)) \subset U_j \). Sendo \(N:= \max {N_j}\), finalmente temos que \(\forall n\geq N, (\x_n)\subset U  \subset V \), portanto \(\x_n \to \x\).
+} \\ 
+5. Sejam \((x_\lambda) \subset X\) e \(\mathcal{B} := \{B_\lambda : \lambda \in \Lambda \}\) onde \(B_\lambda := \{x_\mu : \mu \geq \lambda\}\). Mostre que \(x_\lambda \to x \ \leftrightharpoons \ \mathcal{B} \to x\).\footnote{É claro que \(\mathcal{B}\) define à base de um filtro.} \\
+\textcolor{gris}{(\(\Rightarrow\)) Seja \(U \in \U_x\), então \(\exists \lambda_0 \in \Lambda: \forall \lambda \geq \lambda_0, (x_\lambda) \subset U\), em particular \(B_{\lambda_0} \subset U\), logo \(\mathcal{B} \to x\). (\(\Leftarrow\)) Seja \(U \in \U_x\), então \(\exists B_{\lambda_0} \in \mathcal{B} : B_{\lambda_0} \subset U\), ou seja que \(\forall \lambda \geq \lambda_0, (x_\lambda) \subset U\), portanto tambem \(x_\lambda \to x\).   } \\ 
+6. (a) Mostre que se \(X\) é conexo por caminhos, então o grupo fundamental de X, não depende do ponto base. \\ 
+(b) Para \(n\geq 1\) determine \(\pi_1(\R^n)\). 
