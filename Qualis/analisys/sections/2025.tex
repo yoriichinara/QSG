@@ -8,7 +8,7 @@
 
 \-\vspace{-0.3cm}
   {\hrule \vspace{-0.15cm}
-  \centering 2025-II \vspace{0.1cm}
+  \centering \textbf{2025-II} \vspace{0.1cm}
   \hrule}
 
 1. Defina ou enuncie em detalhe cada um dos ítens em baixo: \\
@@ -28,7 +28,7 @@
 \[f(x,y) := \frac{x^p}{p} + \frac{y^q}{q}.\] 
 (a) Explique por qué \(\forall t>0\), a restrição de \(f\) à hipérbole \(xy = t\) possui um ponto mínimo global \((x_t, y_t)\). \\ 
 \textcolor{gris}{O conjunto \(\{(x,y) \in \R^2 : xy=t\}=: H_t\ce\subseteq \R^2 \) e ilimitado, mas \(f\) é contínua e \(f(x,y) \to \infty\) quando \(\|(x,y)\| \to \infty\), por tanto \(f\) tem mínimo global \((x_t, y_t) \in U\). } \\
-(b) Utilizando Mult. de Lagrange, mostre que \(x_t^p = y_t^q\). \\ 
+(b) Utilizando \(\blacksquare\) (\emph{Mult. de Lagrange}), mostre que \(x_t^p = y_t^q\). \\ 
 \textcolor{gris}{Seja \(g(x,y) = xy - t\), então \(\exists \lambda \in \R \) tal que,  %: df(x_t, y_t) = \lambda dg(x_t, y_t)\) e \(g(x_t,y_t) = 0\). 
 \[ \begin{cases}
         x_t^{p-1}dx + y_t^{q-1}dy = \lambda (y_t dx + x_tdy) \\ 
@@ -86,10 +86,77 @@ pode ser resolvido em termos de \(w = w(y,z)\) e \(x = x(y,z)\) numa vizinhança
 }
 \hspace{-0.15cm}De um exemplo de \(_d\overline{M}\subseteq \R^n\) compacta que possui uma forma de volume exata. \\ 
 \textcolor{gris}{
-    Seja \(_2\overline{M} = \overline{\B^2} := \{\x \in \R^2: \|\x\|\leq 1\}\). Note que \(\omega_\text{vol} = dx \wedge dy\) e \(w = d(-\frac{y}{2}dx+\frac{x}{2}dy)\). 
+    Seja \(_2\overline{M} = \overline{\B^2} := \{\x \in \R^2: \|\x\|\leq 1\}\). Note que \(\omega_\text{vol} = dx \wedge dy\) e \(\omega = d(-\frac{y}{2}dx+\frac{x}{2}dy)\). 
 }\\
 Porém, se \(M\) for compacta e \(\partial M = \emptyset \), então nenhuma forma de volume é exata. \\
 \textcolor{gris}{
     Supõe por contradição que \(\omega_\text{vol} = d\eta \), então do \(\blacksquare\) (\emph{Stokes}), 
     \[0< \int_M\omega_\text{vol} = \int_{\partial M} \eta = 0. \ \lightning\] 
-}
+} 
+\newpage
+
+\-\vspace{-0.3cm} 
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{2025-I} \vspace{0.1cm}
+  \hrule}
+
+1. Sejam \(^\infty\gamma, F, G, H : \R^2 \simeq \R^2\) tais que \(\gamma = H \circ G \circ F\), \(F(0,0)= (1,1), \ G(1,1) = (2,2)\), e \(H(2,2) = (0,0)\). Determine \(DH^{-1}(0,0)\), sabendo que: 
+{\small\[D\gamma(\textbf{0}) = \begin{bmatrix}
+    2 & 1 \\ 
+    1 &1 
+\end{bmatrix}; \ DF(\textbf{0}) = \begin{bmatrix}
+    3 & 3 \\ 
+    2 &1 
+\end{bmatrix}; \ DG(1,1) = \begin{bmatrix}
+    \nicefrac{1}{2} & 0 \\ 
+    0 & 2 
+\end{bmatrix}\]  }
+\par\noindent 
+\textcolor{gris}{Temos inversas bem definidas, portanto,%lembrando que se \(F(p) = q\), então \([DF^{-1}(q)] = [DF(p)]^{-1}\), temos 
+\[\gamma \circ F^{-1} \circ G^{-1} = H \ \leftrightharpoons\ H^{-1} = G \circ F\circ \gamma^{-1}.\]
+Pelo \(\blacksquare\) (\emph{RC}) \(DH^{-1}(\textbf{0})= DG(F(\gamma^{-1}(\textbf{0}))) \cdot DF(\gamma^{-1}(\textbf{0})) \cdot D\gamma^{-1}(\textbf{0}) = DG(1,1)\cdot DF(\textbf{0}) \cdot [D\gamma(\textbf{0})]^{-1}\), 
+{\small\[DH^{-1}(\textbf{0}) = \begin{bmatrix}
+    \nicefrac{1}{2} & 0 \\ 
+    0 & 2
+\end{bmatrix}\begin{bmatrix}
+    3 & 3 \\ 
+    2 &1 
+\end{bmatrix}\begin{bmatrix}
+     2 & 1 \\ 
+    1 &1 
+\end{bmatrix}^{-1} = \begin{bmatrix}
+0 & \nicefrac{3}{2} \\
+2 & 0 
+\end{bmatrix}.\]  }
+} \\ 
+2. Seja \(F\in C^1(\R^3, \R^3) \) tal que \(\forall \x \in \R^3,\ DF(\x)\in \operatorname{GL}_3(\R)\) e \(F^{-1}(K)\) é compacto sempre \(K\subset \R^3 \) for compacto. Mostre que \(^1F: \R^3 \simeq \R^3\).  \\ 
+\textcolor{gris}{
+Segue do \(\blacksquare\) (\emph{TFI}) que \(F\) é uma aplicação aberta, em particular, \((\operatorname{Im}F)\ab \subset \R^3\). Seja \(\y \in \overline{\operatorname{Im}F}\), então \(\exists (F(\x_n)) \subset \operatorname{Im}F : F(\x_n) \to \y \). Considere,
+\[K := \{F(\x_n): n \in \N\} \cup \{\y\}\subset \R^3.\] \(K\) é compacto pois pra qualquer \((\textbf{k}_n)\subset K\), temos \(\textbf{k}_n \to \textbf{k} \in K\) e seqüência convegente é limitada. Agora, \((\x_n) \subset F^{-1}(K)\) compacto por hipotese, logo \(\exists \x_{\phi(k)} \to \x \in F^{-1}(K)\ce\). Por continuidade \(F(\x_{\phi(k)}) \to F(\x) = \y\) (toda subseqüência converge ao mesmo límite). Finalmente, \(\operatorname{Im}F\) é tanto aberto quanto fechado em \(\R^3\) conexo \(\leftrightharpoons\) \(\operatorname{Im}F = \R^3\). \\ } 
+\hspace{-0.2cm}3. (a) Seja \(F: U\ab \subset \R^n \to \R^m\) uma aplicação. Defina a derivada de \(F\) no punto \(\x\in U\).  \\ 
+\textcolor{gris}{\(F \) é diff em \(\x\) sse \(\exists L \in \hom(\R^n, \R^m) : F(\x+v) = F(\x) + Lv + o\|v\|\), quando \(v\to 0\), cujo caso \(DF(\x) = L = JF(\x)\). \\} 
+\hspace{-0.1cm}(b) Seja \(B :\R^n \times \R^m \to \R^p\) bilinear. Mostre que \(B\) é diff e exiba a derivada de \(B\).  \\ 
+\textcolor{gris}{Note que \(B((\x,\y) +(h,k))= B(\x + h, \y +k) = B(\x,\y) + B(\x, k) + B(h, \y) + B(h,k)\),
+\begin{align*}
+\lim_{\|(h,k)\| \to 0} \frac{B(h,k)}{\|(h,k)\|} &\leq \lim_{\|(h,k)\| \to 0} \frac{C\|h\|_1\|k\|_1}{\|(h,k)\|}\\ 
+&\leq \lim_{\|(h,k)\| \to 0} C\|k\|_1 = 0.  
+\end{align*} 
+Logo, \(B\) é diff e \(DB(\x,\y)(h,k) = B(\x, k) + B(h,\y)\), linear em \((h,k)\) de fato. }  \\ 
+(c) Seja \(F : \R^{n^2}\cong M_n(\R) \ni X \mapsto XX^t \in \operatorname{Sym}_n(\R) \cong \R^{\nicefrac{n(n+1)}{2}}\). Mostre que \(\id_n\) é valor regular de \(F\). 
+\textcolor{gris}{
+\begin{align*}
+ F = \mu \circ G: M_n(\R)  &\overset{G}{\longrightarrow} M_n(\R) \times M_n(\R) \overset{\mu}{\longrightarrow} M_n(\R) \\ 
+ X\hspace{0.5cm} &\mapsto \hspace{1cm}(X,X^t) \hspace{0.8cm}\mapsto \hspace{0.3cm}XX^t 
+\end{align*}
+Note que \(G\) é linear quanto \(\mu\) é bilinear, do \(\blacksquare\) (\emph{RC}) e ítem (b), 
+\(DF(X)(H) = D\mu(G(X))DG(X)(H) = D\mu(X,X^t)(H,H^t) = XH^t + HX^t\). Sejam \(X \in M_n(\R) : F(X) = XX^t = \id_n\) e \(S \in \operatorname{Sym}_n(\R)\) e \(H:= \nicefrac{1}{2}SX\),   
+\[DF(X)(H) = \nicefrac{1}{2}X(SX)^t + \nicefrac{1}{2}(SX)X^t = S. \]
+Portanto \(DF\) é sobrejetiva e \(\id_n\) valor regular. 
+}  \\
+(d) Ainda nas notações anteriores, mostre que \(\{X \in \R^{n^2}: XX^t = \id_n\}=:\ ^\infty_{\ d}\mathcal{O}(n)\subset \R^{n^2}\) e calcule \(d\). \\ 
+\textcolor{gris}{Segue do \(\blacksquare\) (\emph{Fibras Regulares}) que \(F^{-1}(\id_n) = \mathcal{O}(n) \) é variadade de clase \(C^\infty\) (\(F\) é \(C^\infty\)) e dimensão 
+\[ d = n^2 - \frac{n(n+1)}{2} = \frac{n(n-1)}{2}.\] }\\ 
+4. (a) Enunce o \(\blacksquare\) (\emph{Stokes}) \textcolor{gris}{Sejam \(_n\overline{M}\subset \R^n\) compacta, orientada e \(\omega \in \Omega^{n-1}(M)\). Então, tendo \(\partial M\) orientação induzida, 
+\[\int_{\overline{M}} d\omega = \int_{\partial M} \omega.\]}\\
+(b) Se \(M\) é uma variedade com bordo e \(M \) é orientável, explique o que significa \(M\) ser orientável e como é definida a orientação em \(\partial M\). 
+

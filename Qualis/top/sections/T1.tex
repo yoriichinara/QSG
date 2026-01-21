@@ -1,0 +1,50 @@
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\an}{\mathscr{A}} 
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\ehom}{\operatorname{End}}
+\colorlet{gris}{black!70}
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{T1} \vspace{0.1cm}
+  \hrule}
+
+1. \(\bullet \) Sejam \(X\) um espaço topológico, \(S\leq X\) e \(\mathcal{B}\) uma base para \(X\). Mostre que \(\mathcal{B}_{_S} := \{S \cap V : V \in \mathcal{B}\}\) é uma base para \(S\). \\ 
+\textcolor{gris}{É claro que \(\mathcal{B}_{_S} \subset \tau_{_S}\). Sejam \(x \in U\ab\subset S\), então \(\exists U_1\ab \subset X: U = U_1 \cap S\), em particular, \(x\in U_1\), logo \(\exists V_1 \in \mathcal{B} : x\in V_1 \subset U_1\). Finalmente, \(x \in V := V_1 \cap S \subset U_1 \cap S = U\), como \(V \in \mathcal{B}_{_S}\) segue que \(\mathcal{B}_{_S}\) é base para \(S\). }
+ \\ 
+\(\bullet\) Mostre que a função caraterística \(\chi_{_S}:X \to \R\) é contínua \(\leftrightharpoons\) \(S\) é aberto e fechado em \(X\). \\ 
+\textcolor{gris}{(\(\Rightarrow\)) \(S = \chi_{_S}^{-1}(\{1\}\ce)  = \chi_{_S}^{-1} ((\nicefrac{1}{2}, \infty)\ab) \subset X\), como \(f\) é contínua segue que \(S\) é aberto e fechado em \(X\). \\
+(\(\Leftarrow\)) Seja \(U\ab \subset \R\), então temos:
+\[\chi_{_S}^{-1}(U) = \begin{cases}
+\varnothing\ab, \ \ \text{se } 0,1 \notin U \\ 
+X\setminus S\ce, \ \ \text{se } 0 \in U, \ 1 \notin U \\ 
+S\ab, \ \ \text{se } 0\notin U, \ 1 \in U \\ 
+X\ab, \ \ \text{se } 0,1 \in U \\ 
+\end{cases}.\]
+Qualquer caso \(\chi_{_S}^{-1}(U)\ab \subset X\), portanto \(\chi_{_S}\) é contínua. }  \\ 
+2. Sejam \((X_i)_{i\in I}\) espaços topológicos não vazíos, \(X := \prod X_i\) com a topologia produto e \((A_i\ce\subset X_i)\). Mostre que \(\prod A_i =: A\ce \subset X\).  \\ 
+\textcolor{gris}{ 
+As projeções \(\pi_i : X \to X_i\) são contínuas e, 
+\[\bigcap \pi_i^{-1}(A_i)\ce = A \subset X, \]
+segue que \(A\ce\subset X\) pois é interseção arbitraria de fechados.}\\ 
+3. Verdadeiro ou falso? Para todo topologia \(\tau\) em \(\R\), \(f : (\R, \tau) \ni x \mapsto -x \in (\R, \tau)\) é contínua.  \\ 
+\textcolor{gris}{É falso, considere \(\tau = \{\varnothing , \R\} \cup \{(a,\infty) : a \in \R\}\), ahí \(f^{-1}((1,\infty)\ab) = (-\infty, -1)\) que não é aberto em \(\tau\). } \\
+4. \(\bullet \) Uma rede \((x_\lambda)_{\lambda \in \Lambda} \subset X\) é dita \emph{universal} se dado \( A\subset X, \ \exists \lambda_0 \in \Lambda\) tal que,  
+\[\{x_\lambda : \lambda \geq \lambda_0\} =: B_{\lambda_0} \subset A \text{ \ ou \ } B_{\lambda_0} \subset X \setminus A .\] 
+\(\square\) 13.12. Mostre que se \(x\) é ponto de acumulação de \((x_\lambda)\) universal, então \(x_\lambda \to x \). \\
+\textcolor{gris}{Seja \(U \in \U_x\), então \(\exists \lambda_0 \in \Lambda : B_{\lambda_0} \subset U\) ou \(B_{\lambda_0} \subset X \setminus U \), mas \(x\) é ponto de acumulação logo \(\exists \lambda \geq \lambda_0: x_\lambda \in U\), segue que \(B_{\lambda_0} \subset U\) e por tanto \(x_\lambda \to x\). }\\ 
+\(\bullet\) Considere \(\tau = \{\varnothing, \R, \mathbb{I}, \mathbb{Q}\}\). Mostre que \(\tau\) é uma topologia em \(\R\). A seqüência \((\nicefrac{1}{n})_{n \in \N}\) converge nessa topologia? \\ 
+\textcolor{gris}{(T1) é explicíto; (T2) \(\Q \cup \mathbb{I} = \R \in \tau\); (T3) \(\Q \cap \mathbb{I} = \varnothing \in \tau\); outras combinações de uniões e interseções são triviais, segue que \((\R, \tau)\) é espaço um topológico. Seja \(x \in \R\), então 
+\[\U_x = \begin{cases}
+\{\Q, \R\}, \ \ \text{se \ } x \in \Q \\ 
+\{\mathbb{I}, \R\}, \ \ \text{se \ } x \in \mathbb{I} \\ 
+\end{cases}.\]  
+Como \((\nicefrac{1}{n}) \subset \Q\), então de fato \(\nicefrac{1}{n} \to q, \  \forall q \in \Q\). Por outro lado, \(\forall n \in \N, \ \nicefrac{1}{n} \notin \mathbb{I}\), portanto \(\nicefrac{1}{n} \not\to x\), se \(x \in \mathbb{I}\).} \\ 
+5. Verdadeiro ou falso? Suponha que \(f_i : Y \to X_i\) seja contínua \(\forall i \in I\). Então a aplicação,   
+\[f: Y \ni y \mapsto (f_i(y)) \in X := \prod X_i,\]
+é contínua, tendo \(X\) topologia das caixas. \\ 
+\textcolor{gris}{É falso em geral, segue do fato da preimagem de abertos ser interseção arbitraria (\(I\) infinito) de abertos. Sejam \(X := \R^\N\), \(f_n(x) = x\) e \(\underset{n\in \N}{\prod} (-\nicefrac{1}{n}, \nicefrac{1}{n})\ab =: U\ab \subset X\), note que, 
+\[f^{-1}(U) = \bigcap_{n \in \N}\left(-\frac{1}{n}, \frac{1}{n}\right) = \{0\} \notin (\R, \tau_\text{usual}). \]}
+ 
