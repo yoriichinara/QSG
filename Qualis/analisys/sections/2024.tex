@@ -1,0 +1,38 @@
+\newpage 
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{2024-II} \vspace{0.1cm}
+  \hrule}
+
+1. Sejam \(U\ab \subset \R^n\), \(f \in C^0(U)\) e \(g: U \to \R\) dada por, 
+\[g(\x):= \int_0^{f(\x)} (t^{50} + 1) \ dt. \]
+Mostre que se \(g \in C^\infty(U)\), então tambem \(f \in C^\infty(U)\).
+\textcolor{gris}{
+    \[g(\x) = \frac{[f(\x)]^{51}}{51} + f(\x). \]
+Seja \(p(t) = \nicefrac{t^{51}}{51} + t\), temos \(p \in C^\infty(\R)\) e \(g = p \circ f \). Além disso, \(\dot{p}(t) = t^{50} + 1 > 0\), pontanto \(p\) é creciente (injetiva), pelo \(\blacksquare\) (\emph{Função Inversa}) \(^\infty p:\R\simeq \R\), segue que \( p^{-1} \circ g  = f \in C^\infty (U)\).  
+}\hspace{-0.1cm}\\ 
+2. Enuncie (a) \(\square\) (\emph{DVM (aplicações)}); (b) \(\blacksquare\) (\emph{Função Inversa}). \vspace{0.3cm}\\   
+(c) Seja \(f \in C^1(\R) : |\dot{f}(t)| \leq k < 1\). Considere \(\Phi: \R^2 \ni (x,y) \mapsto (x + f(y), y + f(x)) \in \R^2\). Mostre que \(^1f: \R^2 \simeq \R^2\). \\ 
+\textcolor{gris}{Seja \(G : \R^2 \to \R^2 \) tal que \((x,y) \mapsto (f(y), f(x))\). Note que \(\Phi(\x) = \x + G(\x) \), tambem 
+\[\|DG(\x)\|_\infty = \left\| \begin{bmatrix} 0 & \dot{f}(y) \\ \dot{f}(x) & 0\end{bmatrix}\right\|_\infty \leq k <1.\]
+Segue que \(\Phi\) é uma perturbação da identidade (uniforme) e portanto \(^1\Phi:\R^2\simeq \R^2\).   } \vspace{0.3cm}\\     
+3. Seja \(f\in C^1(\R^n, \R^n)\) tal que \(\langle Df(\x)\cdot v , v\rangle \geq \alpha \|v\|^2\) onde \( \alpha\in \R^+ \) e \( \x, \vec{v} \in \R^n\). \vspace{0.3cm}\\ 
+(a) Mostre que \(\forall \x,\y \in \R^n, \ \|f(\x) - f(\y)\| \geq \alpha \|\x-\y\|\). Em particular, conclua que \(f: \R^n \simeq \operatorname{Im}f\) e bi-Lipschitz.  \\ 
+\textcolor{gris}{Sejam \(\gamma : [0,1] \ni t \mapsto \y + t(\x-\y) \in \R^n\) e \(\varphi = f \circ \gamma\). Pelo \(\blacksquare \) (\emph{TFC}) temos, 
+\begin{align*} 
+    \varphi(1) - \varphi(0) &= \int_0^1 Df(\gamma(t))(\x-\y) \ dt\\
+    \langle f(\x) - f(\y), \x-\y\rangle  &=  \int_0^1 \langle Df(\gamma(t)) (\x-\y), \x-\y \rangle \ dt \\ 
+    & \geq \alpha \|\x-\y\|^2
+\end{align*}
+Segue de Cauchy-Schwarz que \(\|f(\x) - f(\y)\| \geq \alpha \|\x-\y\|\). É claro que \(f(\x) -f(\y) = 0 \ \leftrightharpoons \ \x=\y\), portanto \(f: \R^n \simeq \operatorname{Im}f\). Pela \(\square\) (\emph{DVM - (em aplicações)}), 
+\[\alpha \|\x-\y\| \leq \|f(\x) - f(\y)\| \leq M \|\x - \y\|.\]
+    }   
+(b) Prove que \(^1 f: \R^n \simeq \operatorname{Im}f\). \\ 
+\textcolor{gris}{\(Df(\x) \cdot v = 0 \ \leftrightharpoons \ v=0\), logo \(Df(\x)\) é injetora, e portanto isomorfismo, além disso, vimos no ítem (a) que a propia \(f\) é injetora, segue do \(\blacksquare\) (\emph{Função Inversa}) que \(^1f:\R^n\simeq \operatorname{Im}f\).  }\vspace{0.3cm}\\ 
+(c) Finalmente, mostre que \((\operatorname{Im}f)\ce \subset \R^n\) e \(^1f:\R^n \simeq \R^n\). \vspace{0.3cm}\\ 
+\textcolor{gris}{Seja \(f(\x_n) \to \y \in \R^n\). Note que, pra \(n, m \gg 1\) temos 
+\[\|\x_n - \x_m\| \leq \frac{1}{\alpha}\|f(\x_n) - f(\x_m)\| \to 0.\] 
+Portanto \((\x_n) \subset \R^n\) é Cauchy e \(\x_n \to \x \in \R^n\), por continuidade \(f(\x_n) \to f(\x) =\y \in \operatorname{Im}f\), pois os límites em Hausdorff são unicos. Assim, \(\operatorname{Im}f\) é tanto aberto quanto fechado em \(\R^n\) conexo \(\leftrightharpoons\) \(\operatorname{Im}f = \R^n\). 
+}
+
+

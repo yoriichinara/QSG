@@ -8,7 +8,7 @@
 
 \-\vspace{-0.3cm}
   {\hrule \vspace{-0.15cm}
-  \centering 2025-II \vspace{0.1cm}
+  \centering \textbf{2025-II} \vspace{0.1cm}
   \hrule}
 
 1. Sejam \(V\) e \(W\) \(\F\)-espaços de dimensão finita. Mostre que \(V' \otimes W\) é canônicamente isomorfo a \(\hom(V,W)\). \newline
@@ -87,4 +87,96 @@ temos \([\phi]_{\beta} = \operatorname{diag}([-\id_i], [\id_{p-i}])\). Supõe po
 \((\Leftarrow)\) Direta da definição pois se \(\phi> 0\) ou \( \phi <0 \), em particular, \(\phi(v,v) = 0 \ \leftrightharpoons \ v = 0\).   
 }
 
+\newpage
 
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{2025-I} \vspace{0.1cm}
+  \hrule}
+
+1. Seja \(T: \R^4 \to \R^4\) dada por 
+\begin{align*}
+    T: \x \mapsto (x_2, -4x_1 &+ 4 x_2 + 2 x_4, \\ 
+    &-2x_1 +x_2 + 2x_3 - x_4, x_4)
+\end{align*}
+(a) Encontre uma base de Jordan e a correspondente FCJ. \\ 
+\textcolor{gris}{Seja \(\alpha = (e_j)\) a base canônica, mudando a termos matricias calculamos o pólinomio característico,
+{\small \[[T]_\alpha^\alpha = \begin{bmatrix}
+0 & 1 & 0 & 0 \\ 
+-4 & 4 & 0 & 2 \\ 
+-2 & 1 & 2 & -1 \\ 
+0 & 0 & 0 & 1  
+\end{bmatrix}\]  }
+{\small \[
+\text{\normalsize $c_{_T}$} = \left|\begin{array}{c c c c}
+t & -1 & 0 &  \\ 
+4 &t-4 & 0 &  \\ 
+ &  &t-2 &  \\ 
+0 & 0 & 0 & t-1  
+\end{array}\right|= (t-1)(t-2)^3 .
+\]}
+Olhando agora os subespaços \(T\)-primarios, 
+{\small \begin{align*}\text{\normalsize $V_{t-2}$} = \ker\begin{bmatrix}
+-2 & 1 & 0 & 0 \\ 
+-4 & 2 & 0 & 2 \\ 
+-2 & 1 & 0 & -1 \\ 
+0 & 0 & 0 & -1   
+\end{bmatrix} \overset{F_2 \to F_2 + 2F_4}{\underset{F_3 \to F_3-F_4}{\longrightarrow}} \begin{bmatrix}
+-2 & 1 & 0 & 0 \\ 
+-4 & 2 & 0 & 0 \\ 
+-2 & 1 & 0 & 0 \\ 
+0 & 0 & 0 & -1   
+\end{bmatrix} \\ 
+\overset{F_3 \to F_3 - F_1}{\underset{F_2 \to F_2 - 2F_1}{\longrightarrow}}
+\begin{bmatrix}
+-2 & 1 & 0 & 0 \\ 
+0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & -1
+\end{bmatrix}\begin{bmatrix}
+    a \\ 2a \\ b \\ 0
+\end{bmatrix} = \begin{bmatrix}
+    0 \\ 0 \\ 0 \\ 0
+\end{bmatrix}.\hspace{1.5cm} 
+\end{align*}} 
+Temos \(\dim V_{t-2} = 2\), continuamos mais uma vez, 
+{\small \begin{align*}\begin{bmatrix}
+    a \\ 2a \\ b \\ 0
+\end{bmatrix} \overset{F_2 \to F_2 + 2F_4}{\underset{F_3 \to F_3-F_4}{\longrightarrow}} \begin{bmatrix}
+    a \\ 2a \\ b \\ 0
+\end{bmatrix}\overset{F_3 \to F_3 - F_1}{\underset{F_2 \to F_2 - 2F_1}{\longrightarrow}} \begin{bmatrix}
+    a \\ 0 \\ b-a \\ 0
+\end{bmatrix} \hspace{1cm}\\ 
+\begin{bmatrix}
+-2 & 1 & 0 & 0 \\ 
+0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & -1
+\end{bmatrix}\begin{bmatrix}
+    v_1 \\ v_2 \\ v_3 \\ v_4
+\end{bmatrix} = \begin{bmatrix}
+    a \\ 0 \\ b-a \\ 0
+\end{bmatrix} \underset{a=b}{\leftrightharpoons} \begin{bmatrix}
+    v_1 \\ v_2 \\ v_3 \\ v_4
+\end{bmatrix} = \begin{bmatrix}
+    b \\ 2b + a \\ c \\ 0
+\end{bmatrix}
+\end{align*}}
+{\small \[\text{\normalsize $w_{1,2} = e_2, \ w_{2,2} = (T- 2 \id ) e_2 =$} \begin{bmatrix} 
+   1 \\ 2 \\ 1 \\ 0
+\end{bmatrix}, \ \text{\normalsize $w_{3,2} = e_3$}. \] }
+Por últimos olhamos para o autoespaço de \(\lambda = 1\), 
+{\small \begin{align*}\text{\normalsize $V_{t-1}$} = \ker\begin{bmatrix}
+-1 & 1 & 0 & 0 \\ 
+-4 & 3 & 0 & 2 \\ 
+-2 & 1 & 1 & -1 \\ 
+0 & 0 & 0 & 0   
+\end{bmatrix}\begin{bmatrix}
+    2a \\ 2a \\ 3a \\ a
+\end{bmatrix} = \begin{bmatrix}
+    0 \\ 0 \\ 0 \\ 0
+\end{bmatrix}, \ \text{\normalsize $w_{1,1} = $} \begin{bmatrix}
+    2 \\ 2 \\ 3 \\ 1 
+\end{bmatrix}. 
+\end{align*}}
+}

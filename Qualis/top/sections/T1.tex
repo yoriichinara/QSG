@@ -4,7 +4,7 @@
 \newcommand{\Q}{\mathbb{Q}}
 \renewcommand{\hom}{\operatorname{Hom}}
 \newcommand{\ehom}{\operatorname{End}}
-\colorlet{gris}{black!70}
+\colorlet{gris}{black!60}
 
 \-\vspace{-0.3cm}
   {\hrule \vspace{-0.15cm}
@@ -24,7 +24,7 @@ S\ab, \ \ \text{se } 0\notin U, \ 1 \in U \\
 X\ab, \ \ \text{se } 0,1 \in U \\ 
 \end{cases}.\]
 Qualquer caso \(\chi_{_S}^{-1}(U)\ab \subset X\), portanto \(\chi_{_S}\) é contínua. }  \\ 
-2. Sejam \((X_i)_{i\in I}\) espaços topológicos não vazíos, \(X := \prod X_i\) com a topologia produto e \((A_i\ce\subset X_i)\). Mostre que \(\prod A_i =: A\ce \subset X\).  \\ 
+2. Sejam \((X_i)_{i\in I}\) espaços topológicos não vazios, \(X := \prod X_i\) com a topologia produto e \((A_i\ce\subset X_i)\). Mostre que \(\prod A_i =: A\ce \subset X\).  \\ 
 \textcolor{gris}{ 
 As projeções \(\pi_i : X \to X_i\) são contínuas e, 
 \[\bigcap \pi_i^{-1}(A_i)\ce = A \subset X, \]
@@ -48,3 +48,97 @@ Como \((\nicefrac{1}{n}) \subset \Q\), então de fato \(\nicefrac{1}{n} \to q, \
 \textcolor{gris}{É falso em geral, segue do fato da preimagem de abertos ser interseção arbitraria (\(I\) infinito) de abertos. Sejam \(X := \R^\N\), \(f_n(x) = x\) e \(\underset{n\in \N}{\prod} (-\nicefrac{1}{n}, \nicefrac{1}{n})\ab =: U\ab \subset X\), note que, 
 \[f^{-1}(U) = \bigcap_{n \in \N}\left(-\frac{1}{n}, \frac{1}{n}\right) = \{0\} \notin (\R, \tau_\text{usual}). \]}
  
+\-\vspace{-0.7cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{P1} \vspace{0.1cm}
+  \hrule}
+
+1. \(\bullet \) Sejam \(Z \subset Y \subset X\). Mostre que a topologia de \((Z,\tau_Z^Y)\leq Y\) é igual a topologia de \((Z,\tau_Z^X) \leq X\). \\ 
+\textcolor{gris}{\((\subseteq)\) Seja \(U\ab \subset \tau_Z^Y\), então \(\exists V\ab \subset Y : U = V\cap Z\). Como \(Y\leq X\), \(\exists W\ab\subset X : V = W \cap Y\), segue que 
+\[V\cap Z = W \cap Y \cap Z = W \cap Z = U\ab \subset \tau_Z^X. \]
+\((\supseteq )\) Seja \(U\ab \subset \tau_Z^X\), então \(\exists W\ab \subset X: U = W \cap Z\). Defina \(W\cap Y =: V\ab \subset Y \). Segue que,  
+\[W \cap Z = W \cap Y \cap Z = V \cap Z = U\ab \subset \tau_Z^Y. \]
+}  
+\(\bullet \) Mostre que \(\R_\ell\) (topologia de Sorgenfrey) não possui base \(\mathcal{B}\) enumeravél. Dica: construa \(f : \R \hookrightarrow \mathcal{B}\). \\ 
+\textcolor{gris}{Seja \(\mathcal{B}\) uma base qualquer e \(([x, x+1)\ab) \subset \R  : x \in \R\) familia  em \(\R\). Como \(\mathcal{B}\) é base, \( \forall x \in \R,  \ \exists V_x \in \mathcal{B}  : x \in V_x \subset [x, x+1)\), seguido defina, 
+\[f : \R \ni x \mapsto V_x \in \mathcal{B}. \]
+\(f \) é injetora, de fato, se \(f(x) = V_x = V_y = f(y)\), então \(y \in V_x \ \leftrightharpoons \ x \leq y\) e \(x \in V_y \ \leftrightharpoons \ y \leq x\), logo \(x=y\). Segue que \(\mathcal{B}\) não é enumeravél e \(\R_\ell\) não verifica o segundo axioma de enumerabilidade.   
+}\\
+2. \(\bullet\) Seja \(S \leq X\). Prove que \((S, \tau_S) = (S, \tau_\pi)\), onde \(\pi = \iota : S \hookrightarrow X\) e \(\tau_\pi\) é a topologia fraca definida por \(\pi\).  \\ 
+\textcolor{gris}{Note que, se \(U\ab \subset X\), então \(\pi^{-1}(U) = U\cap S\), logo, \(\tau_\pi := \{\pi^{-1}(U) : U\ab \subset X\} = \{U \cap S : U\ab \subset X\} =: \tau_S\).
+} \\ 
+\(\bullet\) Seja \(f : X \to Y\) contínua. Mostre que \(X \simeq \operatorname{graf}f:= \{(x,f(x)) : x \in X\}\leq X \times Y\).  \\ 
+\textcolor{gris}{\[h: X \ni x \mapsto (x,f(x)) \in X\times Y \] 
+Note que \(h\) é contínua pois \(\pi_X \circ h = \id_X\) e \(\pi_{Y} \circ h = f\), ambas contínuas. É injetora, de fato, \(h(x) =  (x,f(x))= (y,f(y)) = h(y) \ \leftrightharpoons \ x= y \). Tambem, \(h^{-1} = \pi_X |_{\operatorname{graf}f}:  (x , f(x))\mapsto x\) é contínua, segue que
+\[h: X \simeq \operatorname{graf}f \leq X\times Y. \]
+}
+3. \( \bullet\) Mostre que se \( f, g \in C(X,\R)\), então \(\{x \in X : f(x) \leq g(x)\} =: F\ce \subset X\).  \\ 
+\textcolor{gris}{Seja \(h:= g-f \), contínua pois é soma de contínuas, segue que \(h^{-1}([0, \infty)\ce)= F \ce \subset X \).  } \\ 
+\(\bullet \) Sejam \((X_i)_{i \in I}\) familia de espaços topologicos não vazios e \(X := \prod X_i\) com topologia de caixas. Mostre que \(\forall j \in I, \ \exists S \leq X : X_j \simeq S\). Isso tambem ocurre na topologia produto?\\ 
+\textcolor{gris}{Sejam \(j \in I\) fixo e \(\forall i \in I\setminus\{j\}, \ a_i \in X_i\) fixos tambem, e 
+\[S := \{\x = X : x_i = a_i, \ i \neq j\}\leq X. \]
+Defina \(h = \pi_j |_S : S\to X_j\), claramente \(h \) é bijetiva e contínua. Veja que tambem é aberta, de fato, sendo \(\mathcal{B}_S := \{U \cap S : U\in \mathcal{B}\}\) temos, 
+\[U_1\ab \cap S = \prod U_i\ab \cap S = \prod_{i\neq j} \{a_i\} \times U_j  =: U\ab \subset S,\]
+assim, \(h(U) = U_j\ab \subset X_j\) ou \(h(U) = \varnothing\ab\subset X_j\) se \(\exists i\neq j : a_i \notin U_i\), qualquer caso aberto. Segue que \(h:S \simeq X_j\). O mesmo vale pra topologia produto, precisamos apenas da continuidade e abertura das projeções que funçõa nas duas topologias (o último argumento é que muda um poquinho). %, com alguma modificação na hora de plantejar o aberto basico \(U\ab\subset S\). 
+} \\ 
+4. \(\bullet \) Se \(x_\lambda \to x \in X\), então pra qualquer subrede \((x_{\phi(\mu)})\subset (x_\lambda)_{\lambda \in \Lambda}\) tambem \(x_{\phi(\mu)} \to x\).  \\
+\textcolor{gris}{Sejam \((x_{\phi(\mu)})\) subrede e \(U \in \U_x\), então \(\exists \lambda_0 \in \Lambda : (x_\lambda) \subset U\) se \( \lambda \geq \lambda_0 \). Como \(\phi \) é cofinal, \(\exists \mu_0: \phi(\mu_0) \geq \lambda_0\) e como é creciente \(\phi(\mu) \geq \phi(\mu_0) \geq \lambda_0\) se \(\mu \geq \mu_0\). Segue que \((x_{\phi(\mu)}) \subset U\) se \(\mu \geq \mu_0\) e portanto  \(x_{\phi(\mu)} \to x\).   }\\ 
+\(\bullet\) Se cada subrede de \((x_\lambda)_{\lambda \in \Lambda} \subset X\) admite subrede que converge a \(x\), então \(x_\lambda \to x\). Dica: contrapositiva.\\ 
+\textcolor{gris}{Suponha que \(x_\lambda \not\to x \), então \(\exists U \in \U_x : \forall \lambda_0 \in \Lambda, \exists \lambda \geq \lambda_0 : x_\lambda \notin U\). Defina, \(M:= \{\mu \in \Lambda : x_\mu \notin U\}\) e \(\phi := \iota : M \hookrightarrow \Lambda\). Claramente, \(\phi \) é cofinal e creciente, logo \((x_{\phi(\mu)})\) é uma subrede tal que \((x_{\phi(\mu)})\subset X\setminus U\) e portando não tem subrede convergendo a \(x\) pois qualquer subrede está contida em \(X\setminus U\).   
+}  \\ 
+5. \(\bullet \) Sejam \(X := [0,1]\leq \R \), \(Y := \{0,1\}\) e \(\pi = \chi_{[\nicefrac{1}{2}, 1]} : X \to Y\). Mostre que a \(\tau_\pi = \{\varnothing, \{0\}, Y \}\).\\ 
+\textcolor{gris}{Claramente \(\pi\) é sobrejetiva, \(\pi(0) = 0\) e \(\pi(1)=1\). Note que, \(\pi^{-1}(\varnothing) = \varnothing\ab \subset X; \ \pi^{-1}(\{0\}) = [0,\nicefrac{1}{2})\ab \subset X; \ \pi^{-1}(\{1\}) = [\nicefrac{1}{2}, 1]\notin \tau_X; \ \pi^{-1}(Y) = X\ab \subset X  \). Logo, 
+\[\tau_\pi = \{\varnothing, \{0\}, Y\} \text{ (Sierpinsky)}.\]
+} 
+\(\bullet \) Mostre que \(\pi\) não é aberta nem fechada.  \\ 
+\textcolor{gris}{\(\pi(\{0\}\ce) = \{0\} \notin \overline{\tau}_\pi\) e \(\pi((\nicefrac{1}{2}, 1]\ab) = \{1\}\ce\notin \tau_\pi\). Portanto \(\pi\) não é aberta nem fechada.}\\ 
+6. \(\bullet \) Seja \((X_i)_{i\in I }\) familia de espaços topologicos não vazios e \(X := \prod X_i\) com topologia de caixas. Mostre que as projeções \(\pi_i: X \to X_i\) são abertas.  \\ 
+\textcolor{gris}{Seja \(j\in I \) fixo, basta-nós verificar numa base. Seja \( U\ab \in \mathcal{B}\), então \(U= \prod U_i : U_i\ab \subset X_i\). Segue que \(\pi_j(U) = U_j\ab \subset X_j\).  }\vspace{-0.4cm}\\ 
+\(\bullet \) Sejam \(X:= \R^\N\) e \(A:= \{(x_n) \in X : x_n = 0, \ \forall n \in \N\setminus J \ |\  J\subset \N \text{ finito}\}\). Determine \(\overline{A}\) na topologia produto.\\ 
+\textcolor{gris}{Sejam \(\x \in X\) e \(U \in \U_\x\) quaisquer, \(\exists V \in \mathcal{B}: \x \in V \subset U\)  e, 
+\[V = \bigcap_{j\in J} \pi^{-1}_j(U_j): U_j\ab \subset \R. \]
+Defina \(\y := (y_n) \) tal que \(y_n = \delta_{jn}\cdot x_j, \ j\in J\). Segue que \(\y \in A \cap V\subset A\cap U\neq \varnothing\), valendo pra \(\x\) e \( U\) arbitrarios concluimos que \(\overline{A} = X \). 
+} 
+\- \vspace{0.5cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{T2} \vspace{0.1cm}
+  \hrule}
+
+1. \(\bullet\) Defina espaço de Tychonoff e enuncie \(\blacksquare\) (\emph{Tychonoff}).  \\ 
+\(\bullet\) Prove que imagem continua e aberta de um espaço que satisfaz o segundo axioma de enumerabilidade tambem satisfaz o mesmo axioma.  \\ 
+\textcolor{gris}{Sem perdida de generalidade suponha que \(f : X \twoheadrightarrow Y\). Seja \(\mathcal{B}= (V_n)_{n\in\N}\) base enumeravél para \(X\). Defina, 
+\[f(\mathcal{B}) := \{f(V_n) : V_n \in \mathcal{B}\}. \]
+Como \(f \) é aberta, \(f(V_n)\ab\subset Y\), logo \(f(\mathcal{B}) \subset \tau_Y\). Sejam \(y \in U\ab \subset Y\), então \(\exists x : f(x) = y\), tambem \(x \in f^{-1} (U)\ab \subset X\). Segue que \(\exists V_n \in \mathcal{B} : x \in V_n \subset f^{-1}(U)\). Finalmente, 
+\[y \in f(V_n) \subset f(f^{-1}(U)) = U, \]  
+portanto \(f(\mathcal{B})\) de fato é uma base enumeravél pra \(Y\). 
+}\\ 
+2. \(\bullet\) Mostre que o produto \(X := \underset{i\in I}{\prod} X_i\) é \(T_0\) se cada \(X_i\) for. \\
+\textcolor{gris}{Sejam \(\textbf{a}, \textbf{b} \in X : \textbf{a} \neq \textbf{b}\), então \(\exists j\in I : a_j \neq b_j \)  em \( X_j\) que é \(T_0\), portanto \(\exists U_j\ab \in \U_{a_j} : b_j \notin U_j\). Segue que \(\pi_j^{-1} (U_j) =: U\ab \in \U_\textbf{a} : \textbf{b} \notin U\), logo \(X\) é \(T_0\). }\\ 
+\(\bullet\) Sejam \(P:= \R_\ell \times \R_\ell\) e \(\{(x,-x) : x \in \R\} =: D \leq P\). Mostre que \(D\) não separavél e portanto subespaço de separavél não é separavél em geral. \\ 
+\textcolor{gris}{Seja \(\epsilon > 0\), considere vizinhanças dadas por,  
+\[[x, x+\epsilon) \times [-x, -x + \epsilon) =: U_\epsilon\ab \subset \R_\ell \times \R_\ell .\]
+Note que \( D \cap U_\epsilon = \{(y,-y) : y \in [x, x+\epsilon) \cap (x-\epsilon, x]\} = (x, -x) \). Portanto \(D\) tem topologia discreta e o único subconjunto denso é o propio \(P\) que não é enumeravél. Segue que \(D\) é não separavél, quanto \(P\) se é por ser produto finito de Hausdorff separavéis.  
+}  \\ 
+3. \(\bullet\) Suponha que cada familia de fechados em \(X\) com a propriedade da interseção finita tem interseção não vazia. Mostre que cada filtro em \(X\) tem ponto de acumulação. \\ 
+\textcolor{gris}{Seja \(\mathcal{F}\subset \tau\) filtro em \(X\). Então, \(\{\overline{A} : A \in \mathcal{F}\} \) é familia de fechados com a propriedade da interseção finita. Segue que \(\exists x \in \bigcap \{\overline{A}: A \in \mathcal{F}\}\), ponto de acumulação de \(\mathcal{F}\). } \\ 
+\(\bullet\) Sejam \(Y\) compacto e \(f:X\to Y\). Mostre que se \((\operatorname{graf}f)\ce \subset X\times Y\), então \(f \) é contínua. \\ 
+\textcolor{gris}{Sejam \((x_\lambda)_{\lambda \in\Lambda} \subset X: x_\lambda \to x \) e \((f(x_\lambda)) \subset Y\). Como \(Y\) é compacto, \(\exists f(x_{\phi(\mu)}) \to y \in Y\). Agora note que, 
+\[(x_{\phi(\mu)}, f(x_{\phi(\mu)})) \to (x,y) \in X \times Y, \]
+Como \( (\operatorname{graf}f)\ce \subset X \times Y\), segue que \(y= f(x)\). Em particular, pra qualquer subrede de \((f(x_\lambda ))\) convergente temos \(f(x_{\phi(\mu)}) \to f(x)\), segue que \(f(x_\lambda) \to f(x)\) e \(f\) é contínua. 
+}\\ 
+4. Uma função \(p : X \to Y \) contínua, fechada, sobrejetiva \(: \forall y \in Y, \ p^{-1}(\{y\})\subset X \) é compacto é chamada de \emph{perfeita}. Mostre que se \(p\) é perfeita e \(X\) regular, então \(Y \) é regular.    \\ 
+\textcolor{gris}{Sejam \(F\ce \subset Y\) não vazio e \(y\in Y : y \notin F \). Considere, 
+\[p^{-1}(\{y\})=:K \subset X \text{ \ e \ } p^{-1}(F)=: A\ce \subset X. \]  
+Como \(p\) é sobrejetiva \(K\) é não vazio. Tambem, \(K \cap A = p^{-1}(\{y\} \cap F) = \varnothing\). Note que, \(\forall k \in K, \ \exists U_k\ab, V_k\ab \subset X \) disjuntos \(: k \in U_k\) e \(A \subset V_k\). A familia \((U_k)\) é um cobrimento aberto de \(K\), logo \(\exists (U_j)\) subrecobrimento finito, defina, 
+\[\bigcup U_j =: U\ab \subset X \text{ \ e \ } \bigcap V_j=: V\ab \subset X. \]
+Assim, \(K\subset U\) e \(A \subset V\). Finalmente, considere, 
+\begin{align*}
+Y\setminus p(X\setminus U)\ce =: W_1\ab \subset Y; \hspace{2cm}\\
+Y\setminus p(X\setminus V)\ce =: W_2\ab \subset Y.
+\end{align*}
+Temos, \(y \in W_1\), \(p(A) = p(p^{-1}(F)) = F \subset W_2\) e \(W_1 \cap W_2 = Y\setminus (p(X\setminus U \cup X\setminus V)) = Y \setminus p(X\setminus U \cap V ) = Y \setminus p(X) = \varnothing \), portanto \(Y\) é regular.  
+}
+\-\vspace{0.5cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{P2} \vspace{0.1cm}
+  \hrule}
