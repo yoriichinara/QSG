@@ -1,11 +1,3 @@
-\newcommand{\F}{\mathbb{F}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\an}{\mathscr{A}} 
-\newcommand{\Q}{\mathbb{Q}}
-\renewcommand{\hom}{\operatorname{Hom}}
-\newcommand{\ehom}{\operatorname{End}}
-\colorlet{gris}{black!60}
-
 \-\vspace{-0.3cm}
   {\hrule \vspace{-0.15cm}
   \centering \textbf{T1} \vspace{0.1cm}
@@ -129,7 +121,7 @@ Como \( (\operatorname{graf}f)\ce \subset X \times Y\), segue que \(y= f(x)\). E
 4. Uma função \(p : X \to Y \) contínua, fechada, sobrejetiva \(: \forall y \in Y, \ p^{-1}(\{y\})\subset X \) é compacto é chamada de \emph{perfeita}. Mostre que se \(p\) é perfeita e \(X\) regular, então \(Y \) é regular.    \\ 
 \textcolor{gris}{Sejam \(F\ce \subset Y\) não vazio e \(y\in Y : y \notin F \). Considere, 
 \[p^{-1}(\{y\})=:K \subset X \text{ \ e \ } p^{-1}(F)=: A\ce \subset X. \]  
-Como \(p\) é sobrejetiva \(K\) é não vazio. Tambem, \(K \cap A = p^{-1}(\{y\} \cap F) = \varnothing\). Note que, \(\forall k \in K, \ \exists U_k\ab, V_k\ab \subset X \) disjuntos \(: k \in U_k\) e \(A \subset V_k\). A familia \((U_k)\) é um cobrimento aberto de \(K\), logo \(\exists (U_j)\) subrecobrimento finito, defina, 
+Como \(p\) é sobrejetiva \(K\) é não vazio. Tambem, \(K \cap A = p^{-1}(\{y\} \cap F) = \varnothing\). Note que, \(\forall k \in K, \ \exists U_k\ab, V_k\ab \subset X \) disjuntos \(: k \in U_k\) e \(A \subset V_k\). A familia \((U_k)\) é um cobrimento aberto de \(K\), logo \(\exists (U_j)\) subcobertura finita, defina, 
 \[\bigcup U_j =: U\ab \subset X \text{ \ e \ } \bigcap V_j=: V\ab \subset X. \]
 Assim, \(K\subset U\) e \(A \subset V\). Finalmente, considere, 
 \begin{align*}
@@ -142,3 +134,64 @@ Temos, \(y \in W_1\), \(p(A) = p(p^{-1}(F)) = F \subset W_2\) e \(W_1 \cap W_2 =
   {\hrule \vspace{-0.15cm}
   \centering \textbf{P2} \vspace{0.1cm}
   \hrule}
+
+1. \(\bullet \ \square \ 16.9\) (c) \(\Rightarrow\) (a) Mostre que se cada filtro convergente em \(X\) tem límite único, então \(X\) é Hausdorff. \\ 
+\textcolor{gris}{Suponha que \(X \) não for Hausdorff, então \(\exists x, y \in X : x\neq y\) e \(\forall U \in \U_x, \ \forall V\in \U_y, \ U\cap V \neq \varnothing\). Defina, 
+\[\mathcal{B} : = \{U \cap V : U \in \U_x \text{ e } V \in \U_y\}. \]
+Assim \(\mathcal{F} := [\mathcal{B}]\) é um filtro em \(X\) tal que \( \U_x, \U_y \subset \mathcal{F}\), segue que \(\mathcal{F} \to x\) e \(\mathcal{F} \to y\). 
+} \\ 
+\(\bullet \) Prove que \(X\) é \(T_2  \ \leftrightharpoons \ \forall a \in X, \ \bigcap\{\overline{U}: U \in \U_a\} = \{a\}\). \\
+\textcolor{gris}{(\(\Rightarrow\)) (\(\supseteq\)) É claro. \((\subseteq)\) Dados \(a,b \in X : a \neq b, \ \exists U\ab\in \U_a, \ \exists V\ab\in \U_b : U\cap V = \varnothing\). Note que \(b\notin \overline{U} \subset (X\setminus V)\ce\subset X\), logo \(b \notin \bigcap\{\overline{U} : U \in \U_a\}\). \\ 
+(\(\Leftarrow\)) Sejam \(a,b \in X : a \neq b\), então \(\exists U\ab\in \U_a: b\notin \overline{U}\), segue que \(a \in U\) e \(b \in (X\setminus \overline{U})\ab \subset X\). }\\ 
+2. \(\bullet\) Seja \((\R \times \{0\}) \cup (\R\times \{1\}) =: X \leq \R^2\). Considere \(Y := X  / \sim \), onde \((x,0) \sim (x,1)\) se \(x\neq 0\) (\emph{reta com duas origens}). Mostre que \(Y\) não é Hausdorff. \\ 
+\textcolor{gris}{Sejam \(\pi: X \ni x\mapsto [x] \in Y\) a projeção canônica e, 
+\[0_0 := [(0,0)] = \pi(0,0) \text{ e }0_1 := [(0,1)] = \pi(0,1).\] 
+É claro que \(0_0 \neq 0_1\), suponha por contradição que \(\exists U\ab, V\ab \subset Y\) disjuntos tais que \(0_0 \in U, \ 0_1 \in V\). Assim, 
+\[(0,0) \in \pi^{-1}(U)\ab\subset X \text{ e } (0,1) \in \pi^{-1}(V)\ab \subset X.\]
+Isso pois \(\pi \) é contínua, como são abertos \(\exists \epsilon_1, \epsilon_2 > 0  :\) 
+\begin{align*}
+(-\epsilon_1, \epsilon_1) \times \{0\} \subset \pi^{-1}(U) \hspace{2cm}\\ 
+(-\epsilon_2, \epsilon_2) \times \{1\} \subset \pi^{-1}(V)  .
+\end{align*}
+Sejam \(\delta:= \min \{\epsilon_1, \epsilon_2\}>0\) e \(x\in \R : 0< x< \delta\), segue que \(\pi(x,0) = \pi(x,1)  = [x] \in U\cap V. \ \lightning \)  
+}   \\
+\(\bullet \) Mostre que se cada subespaço aberto de \(X\) é Lindelöf, então todo subespaço de \(X\) é Lindelöf. \\ 
+\textcolor{gris}{Sejam \(S \leq X\) e \((U_i)_{i\in I}\ab\) cobertura de \(S\). Note que,  \(\forall i \in I, \exists V_i\ab \subset X : U_i = V_i \cap S\). Em particular, 
+\[S \subset \bigcup V_i =: U\ab \leq X. \]
+Segue que \(\exists J\subset I \) enumeravél \(: U = \bigcup V_j\). Agora,   
+\[S = U \cap S = \bigcup V_j \cap S = \bigcup U_j, \]
+portanto \(S\) tambem é Lindelöf. 
+} \\ 
+3. \(\bullet\) Mostre que \(\blacksquare \text{ (\emph{Tietze}) }\Rightarrow \)\ \  {\scriptsize $\square$} (\emph{Urysohn}). \\ 
+\textcolor{gris}{(\(\Rightarrow\)) Sejam \(A\ce, B\ce\subset X\) disjuntos, \(A \cup B = : C\ce \subset X\) e \(\chi_{B} : C  \to [0,1] \). Note que \(B = B\ce\cap C = (X\setminus A)\ab \cap C \), logo \(B\) é tanto aberto quanto fechado em \(C\), segue que \(\chi_B\) é contínua. Pelo \(\blacksquare\) (\emph{Tietze}) \(\exists f: X\to [0,1]\) contínua \(:f|_C = \chi_B(C) \). Finalmente, 
+\[f(A) = \chi_B(A) \subset \{0\} \text{ \ e \ } f(B) = \chi_B(B) \subset\{1\}.\] 
+(\(\Leftarrow\)) Sejam \(A\ce, B\ce\subset X\) disjuntos, então 
+\begin{align*}
+A \subset f^{-1}([0,\nicefrac{1}{2})\ab)=:U\ab \subset X \hspace{2cm}\\
+B \subset f^{-1}((\nicefrac{1}{2}, 1]\ab)=:V\ab \subset X,
+\end{align*}
+e claramente \(U\cap V = f^{-1}(\varnothing) = \varnothing\), logo, \(X\) é normal. 
+} \\ 
+\(\bullet \ \square\) 18.4.  Cada subespaço fechado de um espaço normal é normal. \\ 
+\textcolor{gris}{Sejam  \(S\ce \leq X\) e \(A\ce, B\ce\subset S\) disjuntos, \(\exists F\ce, G\ce \subset X : F\cap S = A\) e \(G\cap S = B\). Em particular, \(A\ce,B\ce \subset X\), logo \(\exists U_1\ab, V_1\ab \subset X \) disjuntos \(: A \subset U_1\) e \(B\subset V_1\). Defina, 
+\[U_1 \cap S =: U\ab\subset S \text{ \ e \ } V_1 \cap S =: V\ab \subset S. \]
+Assim, \(A \subset U, \ B\subset V\) e \(U \cap V = U_1 \cap V_1 \cap S =\varnothing\).
+} \\ 
+4. Sejam \(X\) Lindelöf e \(Y\) compacto. Mostre que \(X\times Y \) é Lindelöf. \\ 
+\textcolor{gris}{Seja \((U_i\ab)_{i\in I}\) cobertura de \(X\times Y\). Note que \(\forall x \in X, \ \{x\} \times Y \simeq Y\) é compacto, portanto \(\exists (U_{x,j})_{j\in J}\) subcobertura finita de \(\{x\}\times Y\). Agora, \(\forall j\in J, \exists V_{x,j}\ab \subset X, \ \exists W_{x,j}\ab\subset Y : x \in V_{x,j}\) e \(V_{x,j} \times W_{x,j} \subset U_{x,j}\). Defina,  
+\[\bigcap V_{x,j}=: V_x\ab \subset X . \]
+Assim, \(V_x \times Y \subset \bigcup U_j\) e a familia \((V_x)_{x\in X}\) é um cobertura aberta de \(X\), segue que \(\exists (V_n)_{n \in \N}\) subcobertura enumeravél. Al fim, a familia \((U_{n,j})\) é subcobertura enumeravél de \(X\times Y\), concluindo então que este último é Lindelöf.     
+} \\ 
+\(\bullet\) Seja \(p: X \to Y\) perfeita. Mostre que se \(X \) é Hausdorff, então \(Y \) é Hausdorff. \\ 
+\textcolor{gris}{Sejam \(k, l \in Y : k \neq l\), então \(K := p^{-1}(\{k\})\) e \(L := p^{-1}(\{l\})\) são dois compactos não vazios disjuntos em \(X\). Portanto \(\exists U\ab, V\ab\subset X\) disjuntos \(: K\subset U\) e \(L\subset V\) (Ex. 21.H.). Seguido defina, 
+\begin{align*}
+Y\setminus p(X\setminus U)\ce =: W_1\ab \subset Y; \hspace{2cm}\\
+Y\setminus p(X\setminus V)\ce =: W_2\ab \subset Y.
+\end{align*}
+Nesso termos \(k \in W_1\), \(l \in W_2\), e \(W_1 \cap W_2 = \varnothing\). 
+} \\ 
+5. Seja \(X \) completamente regular e \(K\subset X \) compacto e \(A\ce\subset X: K \cap A = \varnothing\). Mostre que \(\exists f: X \to [0,1]\) contínua \(: f(K) = \{0\}\) e \(f(A) = \{1\}\). \\ 
+\textcolor{gris}{\(\forall k \in K, \ \exists g_k : X \to [0,1] \) contínua \(: f(k )= 0 \) e \(f(A) \subset\{1\}\). Sejam \(g_k^{-1}([0, \nicefrac{1}{2})\ab) =: U_k\ab \subset X\). A familia \((U_k)\) é uma cobertura de \(K\), segue que \(\exists (U_j)_{j\in J}\) subcobertura finita. Considere \(f = g \circ h : X \to [0,1]\) tal que,   
+\[g(x):= \min_{j\in J} \{g_j(x)\} \text{ \ e \ } h := \max_{t \in [0,1]}\{0, 2t - 1\}. \]  
+Asimm, \(f\) é contínua (composição de contínuas), \(f(K) = \{0\}\) e \(f(A)= \{1\}\), isso pois \(g(K ) \subset [0, \nicefrac{1}{2})\). 
+} 

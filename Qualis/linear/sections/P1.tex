@@ -1,0 +1,90 @@
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\an}{\mathscr{A}} 
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\hom}{\operatorname{Hom}_\F}
+\newcommand{\ehom}{\operatorname{End}_\F}
+\colorlet{gris}{black!60}
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{P1} \vspace{0.1cm}
+  \hrule}
+
+1. Sejam \(V \ \F\)-espaço \(:\dim V <\infty \), \(T \in \ehom(V)\) cujos fatores invariantes são: 
+\begin{align*}
+    f_1(t) = t^2 (t-1)^4 (t-3)^2; \ \ \ f_2(t)= t^2(t-1);  \\ 
+    f_3(t)=t^2.\hspace{2.3cm} 
+\end{align*}
+
+(a) Encontres \(m_{_T}\) e \(c_{_T}\). \\ 
+\textcolor{gris}{\(m_{_T} = f_1\), fator invariante de maior grau, \(c_{_T} = f_1 \cdot f_2 \cdot f_3\), produto dos fatores invariantes.  }\\ 
+(b) Encontre a forma canônica de \(T\). \\ 
+\textcolor{gris}{Sendo \(J_k(\lambda)\) \(\lambda\)-bloco de Jordan de tamanho \(k\). {\small \[\begin{bmatrix}
+ [J_2(0)]&  &  &  &  &   \\  
+ & [J_2(0)] &  &  &  &    \\  
+ &  & [J_2(0)] &  &  &    \\  
+ &  &  & [J_4(1)] &  &  \\  
+ &  &  &  & [J_1(1)] &   \\  
+ &  &  &  &  & [J_2(3)]  \\  
+\end{bmatrix}\]}}
+2. Sejam \(V = \R^4\), \(\alpha = (e_j)\) e \([T]^\alpha_\alpha = \) {\small \(\begin{bmatrix}
+0 & 0 & 3 & 1 \\ 
+2 & 2 & -4 & 2 \\ 
+0 & 0 & 1 & 1 \\ 
+0 & 0 & -1 & 3  
+\end{bmatrix}\)}\vspace{0.3cm}\\ 
+(a) Encontre uma base de Jordan de \(V\) respeito de \(T\). \\
+\textcolor{gris}{\[c_{_T} = t(t-2) \cdot \left| \begin{array}{c c }t-1 & -1\\ 1 & t-3 \end{array}\right|= t(t-2)^3.\]
+\({V_{t-2}}\)   
+{\small \vspace{-0.5cm}\begin{align*}
+  \ker \begin{bmatrix}
+ -2 & 0 & 3 & 1 \\ 
+2 & 0 & -4 & 2 \\ 
+0 & 0 & -1 & 1 \\ 
+0 & 0 & -1 & 1    
+  \end{bmatrix} \underset{F_4 \to F_4 - F_3}{\overset{F_2 \to F_2 + F_1- F_3}{\longrightarrow}}
+\begin{bmatrix}
+ -2 & 0 & 3 & 1 \\ 
+0 & 0 & 0 & 2 \\ 
+0 & 0 & -1 & 1 \\ 
+0 & 0 & 0 & 0    
+  \end{bmatrix} \\ 
+  (T-2\id)\overset{|}{\underset{|}{v_j}} = \overset{|}{\underset{|}{0}} \ \leftrightharpoons \ \overset{|}{\underset{|}{v_j}} = \begin{bmatrix}
+    0 \\ a \\ 0 \\ 0
+  \end{bmatrix}\underset{F_4 \to F_4 - F_3}{\overset{F_2 \to F_2 + F_1- F_3}{\longrightarrow}} = \begin{bmatrix}
+   0 \\ a \\ 0 \\0 
+  \end{bmatrix} \\ 
+  (T-2\id)\overset{|}{\underset{|}{v_j}} = \begin{bmatrix}
+    0 \\ a \\ 0 \\ 0
+  \end{bmatrix} \ \leftrightharpoons \ \begin{bmatrix}
+   a \\ b \\ \nicefrac{a}{2} \\ \nicefrac{a}{2} 
+  \end{bmatrix} \sim \begin{bmatrix}
+   2a \\ b \\ a \\ a 
+  \end{bmatrix}\underset{F_4 \to F_4 - F_3}{\overset{F_2 \to F_2 + F_1- F_3}{\longrightarrow}} = \begin{bmatrix}
+   2a \\ b+a \\ a \\0 
+  \end{bmatrix} \\
+  (T-2\id)\overset{|}{\underset{|}{v_j}} = \begin{bmatrix}
+   2a \\ b+a \\ a \\0 
+  \end{bmatrix} \ \leftrightharpoons \ \begin{bmatrix}
+  \nicefrac{(2b-3a)}{2} \\ c \\ \nicefrac{(b-a)}{2} \\ \nicefrac{(b+a)}{2} 
+  \end{bmatrix} \sim \begin{bmatrix}
+   2b + 3a \\ c \\ b + a  \\ b-  a 
+  \end{bmatrix}
+\end{align*} }
+{\small\[w_{1,2} = \begin{bmatrix}
+  1 \\ 0 \\ 0 \\ -2
+\end{bmatrix}; \  w_{2,2} = \begin{bmatrix}
+-4 \\ -2 \\ -2 \\ -2 
+\end{bmatrix}; \ w_{3,2}= \begin{bmatrix}0 \\ -4 \\ 0 \\ 0\end{bmatrix}\]}
+\(V_t\) 
+{\small \vspace{-0.5cm}\begin{align*}
+  \ker \begin{bmatrix}
+0 & 0 & 3 & 1 \\ 
+2 & 2 & -4 & 2 \\ 
+0 & 0 & 1 & 1 \\ 
+0 & 0 & -1 & 3    
+  \end{bmatrix} \underset{F_4 \to F_4 - F_3}{\overset{F_2 \to F_2 + F_1- F_3}{\longrightarrow}}
+\end{align*}}
+}
+
