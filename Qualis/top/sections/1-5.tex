@@ -11,12 +11,13 @@
   \centering \textbf{3} \vspace{0.1cm}
   \hrule}
 
-A. As métricas \( d_2, d_1, d_\infty\) definem a mesma topologia em \(\R^n\).  \\ 
+A. As métricas \( d_2, d_1, d_\infty\) definem a mesma topologia em \(\R^n\).   
+
 \textcolor{gris}{\(\bullet \ \ (\tau_2 = \tau_\infty)\). Seja \(|x_j| := \sup_{i\leq n} |x_i|\). 
 \[\|\x\|_2^2 = \sum x_i^2 \leq n x_j^2 = n \|\x\|_\infty^2\ \leftrightharpoons \ \|\x\|_2 \leq \sqrt{n}\|\x\|_\infty, \]
 logo \(B_\infty(\x; \epsilon)\subset B_2(\x; \sqrt{n}\epsilon)\) e \(\tau_2 \subset \tau_\infty\). Por outro lado, 
 \[\|\x\|_\infty^2 = x_j^2 \leq \sum x_i^2 = \|\x\|_2^2 \ \leftrightharpoons \ \|\x\|_\infty \leq \|\x\|_2,  \]
-portanto tambem \(B_2(\x; \epsilon ) \subset B_\infty(\x; \epsilon )\) e \(\tau_\infty \subset \tau_2\). \\
+portanto tambem \(B_2(\x; \epsilon ) \subset B_\infty(\x; \epsilon )\) e \(\tau_\infty \subset \tau_2\). \\ 
 \(\bullet \ \ (\tau_\infty = \tau_1)\). Observe que, 
 \[\|\x\|_\infty = |x_j| \leq \sum |x_i| = \|\x\|_1, \] 
 logo \(B_1(\x;\epsilon) \subset B_\infty(\x;\epsilon)\) e \(\tau_\infty \subset \tau_1\). Por outro lado, 
@@ -50,7 +51,8 @@ A\setminus \partial A &= A \cap [X \setminus (\overline{A} \cap \overline{X\setm
 
 C. Dados \(f \in C[a,b], \ A \subset [a,b]\) finito e \(r>0\), defina, 
 \[V(f, A, r):= \{ g \in C[a,b] : |g(x) - f(x)| < r, \ \ \forall x \in A\}.\]
-Mostre que os conjuntos \(V(f, A, r)\) formam uma base de vizinhanças de \(f\) pra uma certa topologia em \(C[a,b]\). \\ 
+Mostre que os conjuntos \(V(f, A, r)\) formam uma base de vizinhanças de \(f\) pra uma certa topologia em \(C[a,b]\). 
+
 \textcolor{gris}{Seguindo a \(\square \ 5.7.\) vamos mostrar que a familia verifica as propriedades. (a) Claramente \(\forall U \in \U_f, \ f \in U := V(f,A,r)\) pois \(|f(x) - f(x)| = 0 < r\); (b) Sejam \(U:= V(f, A_1, r_1), \ V := V(f, A_2, r_2) \in \U_f\). Defina \(A:= A_1 \cup A_2, \ r := \min \{r_1, r_2\}\) e \(W:= V(f, A, r) \in \U_f\). Se \(g \in W\), então \(|g(x) - f(x)|< r_1, r_2, \ \forall x \in A_1 \cup A_2\), segue que \(g \in U \cap V\); (c) Sejam \(U = V(f,A,r)\) e \(g \in V:= U\). Defina \(\delta := r - \max_A |g(x)-f(x)| > 0\) e \(W := V(g,A,\delta)\), assim, se \(h \in W\) e \(x\in A\) temos 
 \begin{align*}
   |h(x) - f(x) | &\leq |h(x)- g(x)| + |g(x)-f(x)|\\ 
@@ -59,7 +61,8 @@ Mostre que os conjuntos \(V(f, A, r)\) formam uma base de vizinhanças de \(f\) 
 portanto \(h \in U \) e \(W \subset U\).   
 }
 
-D. Dado \(A \subset X\), defina o conjunto dos puntos de acumulação \(A' := \{x \in X \ | \  \forall U \in \U_x, \ \exists a \in U\cap A  : a \neq x\}\). Mostre que \(\overline{A} = A \cup A'\). \\ 
+D. Dado \(A \subset X\), defina o conjunto dos puntos de acumulação \(A' := \{x \in X \ | \  \forall U \in \U_x, \ \exists a \in U\cap A  : a \neq x\}\). Mostre que \(\overline{A} = A \cup A'\).  
+
 \textcolor{gris}{(\(\subseteq \)) Seja \(x \in \overline{A}: x \notin A\), então \(\forall U \in \U_x, \ U\cap A \neq \varnothing \), mas \(x \notin A\), portanto \(\forall U \in \U_x, \ \exists a \neq x : a \in U\cap A \ \leftrightharpoons \ x \in A'\). (\(\supseteq \)) Seja \(x \in A' \setminus A\), então  \(\forall U \in \U_x, \ \exists a \in U \cap A : a \neq x\), em particular \(\forall U \in \U_x, \ U \cap A \neq \varnothing \ \leftrightharpoons \ x \in \overline{A}\).  }
 
 E. De um exemplo de \(A \subset \R : \) todos os seguintes conjuntos sejam diferentes entre si: 
@@ -76,7 +79,8 @@ E. De um exemplo de \(A \subset \R : \) todos os seguintes conjuntos sejam difer
   \centering \textbf{6} \vspace{0.1cm}
   \hrule}
 
-A. Prove que o segundo axioma de enumerabilidad implica o primeiro. \\ 
+A. Prove que o segundo axioma de enumerabilidad implica o primeiro.  
+
 \textcolor{gris}{Sendo \(\mathcal{B}\) uma base enumeravél pra \(X\) defina \(\mathcal{B}_x := \{V \in \mathcal{B} : x \in V\}\). Dada \(U \in \U_x\), temos que \(x \in \operatorname{int}U=: U_0\ab\subset X\), logo \(\exists \mathcal{C} \subset \mathcal{B} : U_0 = \bigcup \{V : V \in \mathcal{C}\}\). Em particular, \(\exists V \in \mathcal{B} : x \in V \subset U_0 \subset U\). Assim,  \(V \in \mathcal{B}_x\) é tal que \(V \subset U\), concluindo que \(\mathcal{B}_x\) é base de vizinhanças, enumeravél pois \(|\mathcal{B}_x| \leq |\mathcal{B}|\).   } 
 
 C. Prove que os intervalos \([a,b) \) com \(a<b\) formam uma base pra uma topologia \(\tau_\ell \) em \(\R\) mais fina que \(\tau_2\). 
@@ -90,7 +94,8 @@ logo, \(x\in W := [e,f) \subset [a,b) \cap [c,d)\), onde \(W \in \mathcal{B}\). 
   \centering \textbf{8} \vspace{0.1cm}
   \hrule}
 
-B. Prove que uma função \(f : X \to Y \) é contínua \(\leftrightharpoons\) \(f(\overline{A}) \subset \overline{f(A)}\), pra cada \(A \subset X\). \\ 
+B. Prove que uma função \(f : X \to Y \) é contínua \(\leftrightharpoons\) \(f(\overline{A}) \subset \overline{f(A)}\), pra cada \(A \subset X\).  
+
 \textcolor{gris}{(\(\Rightarrow\)) Sejam \( f(x) = y \in f(\overline{A}): x \in \overline{A}\) e \(V\in \U_y\), pela continuidade \(x \in f^{-1}(V) \in \U_x\). Como \(x \in \overline{A}\), \(f^{-1}(V) \cap A \neq \varnothing\), segue que, 
 \[f(f^{-1}(V) \cap A) = f(f^{-1}(V)) \cap f(A) \subset V \cap f(A) \neq \varnothing, \]
 isso \(\forall V \in \U_y\), logo \(y \in \overline{f(A)}\). \\ 
@@ -99,7 +104,8 @@ isso \(\forall V \in \U_y\), logo \(y \in \overline{f(A)}\). \\
 assim, \(\overline{A} \subset f^{-1}(f(\overline{A})) \subset f^{-1}(F) = A\ce \subset X\). 
 }
 
-D. Prove que se \(f,g : X \to \R\) são contínuas em \(a \in X\), então as funções \(f+g\) e \(fg\) são tambem contínuas em \(a\). \\ 
+D. Prove que se \(f,g : X \to \R\) são contínuas em \(a \in X\), então as funções \(f+g\) e \(fg\) são tambem contínuas em \(a\).  
+
 \textcolor{gris}{(\(+\)) Sejam \(\epsilon > 0\) e \( U_1, U_2  \in \U_a\) tais que: 
 \[f(U_1)\subset B(f(a), \nicefrac{\epsilon}{2}) \text{ \ \ e \ \ }g(U_2)\subset B(g(a), \nicefrac{\epsilon}{2}).\]
 Dado \(x \in U:= U_1 \cap U_2 \in \U_a\) temos, 
@@ -133,6 +139,7 @@ Assim, \(fg(U) \subset B((fg)(a);\epsilon)\) e \(fg\) é contínua em \(a\).
   \centering \textbf{12+} \vspace{0.1cm}
   \hrule}
 
+\vspace{0.4cm}
 %\vspace{0.3cm}
 %  {\hrule \vspace{-0.15cm}
 %  \centering \textbf{13} \vspace{0.1cm}
@@ -150,5 +157,3 @@ Assim, \(fg(U) \subset B((fg)(a);\epsilon)\) e \(fg\) é contínua em \(a\).
 
 %B. Se \(x \) é ponto de acumulação de uma subrede de \((x_\lambda)_{\lambda \in \Lambda}\), então \(x\) tambem é ponto de acumulação da propia \((x_\lambda)\). \\ 
 %\textcolor{gris}{Dados \(U\in \U_x\) e \(\lambda_0 \in \Lambda\), \(\exists \mu_0 : \phi(\mu_0) \geq \lambda_0\), seguido  \(\exists \mu \geq \mu_0: x_{\phi(\mu)} \in U\). Em particular, \(\lambda :=\phi(\mu)\geq \phi(\mu_0) \geq \lambda_0 \) é tal que \( x_\lambda \in U\), segue que \(x\) é ponto de acumulação da \((x_\lambda)\). }
-
-\newpage 

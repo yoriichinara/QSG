@@ -11,19 +11,263 @@
   \centering \textbf{P1} \vspace{0.1cm}
   \hrule}
 
-3. Determine se cada uma das afirmações é abaixo é verdadeira ou falsa. \\
+3. Determine se cada uma das afirmações é abaixo é V ou F. 
+
 (a) Se existem \(u,v \in V \) l.i \(: m_u = m_v= t^3\), então \(t^4 \ |\ c_{_T}\). \\ 
-\textcolor{gris}{FALSO. 
-} \\ 
-(b) Se \(V_1, \ldots, V_m\) são os subespaços \(T\)-primários de \(V\) e \(W\leq V\) é \(T\)-inv, então \(W = \bigoplus^m (W\cap V_j)\). \\ 
-\textcolor{gris}{VERDADEIRO. 
-} \\ 
-(c) Se \(T \in \ehom(V)\) é injetor, então \(T\) tambem é sobrejetor. \\ 
-\textcolor{gris}{FALSO. 
-}\\ 
+\textcolor{gris}{FALSO. Sejam \([T]^\alpha_\alpha = \hspace{-0cm}\begin{bmatrix}
+    0 & 0 & 0 \\ 
+    1 &0 & 0 \\
+    0 &1 & 0 
+\end{bmatrix} \). Sendo \( e_1, \ e_1+e_3\) l.i., temos \(m_{e_1} = m_{e_1+e_3} = t^3 =c_{_T}\), com certeza \(t^4 \nmid t^3\).  
+}  
+
+(b) Se \(V_1, \ldots, V_m\) são os subespaços \(T\)-primários de \(V\) e \(W\leq V\) é \(T\)-inv, então \(W = \bigoplus^m (W\cap V_j)\).  
+
+\textcolor{gris}{VERDADEIRO. Note que \(W\cap V_j \subset V_j\), logo a soma \(\sum W\cap V_j\) é sempre direta, basta verificar as contenenções. (\(\subseteq\)) Dado \(w \in W \leq V\) pelo \(\blacksquare\) (\emph{DP}) \(\exists ! v_j \in V_j : w = \sum v_j\), vamos ver que \(v_i \in W, \ \forall i \leq m\). Sejam, 
+\[m_{_T} = \prod p_j^{k_j}; \ \ f := \prod_{j\neq i} p_j^{k_j}; \ \ g:= p_i^{k_i}. \]  
+Claramente \(\operatorname{mdc}\{f,g\} = 1\), logo pelo \(\blacksquare\) (\emph{Bézout}) \(\exists a, b \in \mathcal{P}(\F) : a(T)f(T) + b(T)g(T) = \id_{_V} \). Em particular, 
+\[a(T)f(T) (w) = a(T)f(T)(v_i) = v_i \in W,\] 
+pois \(W \) é \(T\)-inv. Portanto, \(\forall i \leq m, \ v_i \in W \cap V_i\) e \(w = \sum v_j \in \bigoplus (W\cap V_j)\).  (\(\supseteq \)) É claro pois \(\bigoplus (W\cap V_j) \leq W\). 
+}  
+
+(c) Se \(T \in \ehom(V)\) é injetor, então \(T\) tambem é sobrejetor.  
+
+\textcolor{gris}{FALSO. Em dimensão infinita, seja \(V:= \mathcal{P}(\F)\), defina \(T\in \ehom(V) \) tal que \(p \mapsto tp\). Injetor pois, leva base \(\{1, t, t^2, \ldots\} \mapsto \{t, t^2, \ldots\}\) que é l.i., noentanto \(\lambda \in \F^\times \subset V\) não tem preimagem por \(T\).  
+} 
+
 4. De um exemplo de operador linear num \(\F\)-espaço \(V\) com \(3\) fatores invariantes pra o qual existam vetores \(v_1, v_2, v_3 \in V\) satisfazendo: 
 \begin{enumerate}[label = \roman*.]
 \item \(V = C_T(v_1) \oplus C_T(v_2) \oplus C_T(v_3)\).
 \item \(m_{v_1} \) não divide \(m_{v_2}\) nem \(m_{v_3}\). 
 \item \(m_{v_2}\) não divide \(m_{v_1}\). 
 \end{enumerate}
+Qual é a menor dimensão que tal exemplo existe?  
+
+\textcolor{gris}{\[\begin{array}{c| c| c}
+  f_1 \ & \ f_2 \ &\  f_3 \\ \hline  
+  t^2 \ & \ t \ &\  t \\ 
+  (t-1)^2 \ & \ (t-1) \ &\  \hspace{1cm} \\ 
+\end{array}\]
+\begin{align*}
+  V = V_{t} \oplus V_{t-1} = C_T(w_1^0) &\oplus C_T(w_2^0) \oplus C_T(w_3^0)\\ 
+  &\oplus C_T(w_1^1) \oplus C_T(w_2^1), 
+\end{align*}
+onde \(m_{w_1^0} = t^2\) e \(m_{w_1^1} = (t-1)^2\). Sendo, 
+\[v_1 := w_1^0 + w_2^1; \ \ v_2 := w_2^0 + w_1^1; \ \ v_3 := w_3^0, \]
+temos \(m_{v_1} = t^2 (t-1), \ m_{v_2} = t (t-1)^2\) e \(m_{v_3} = t\), a dimensão mínima então \(\dim V = 7\).   \\ 
+}
+ 
+{\hrule \vspace{-0.15cm}
+  \centering \textbf{P2} \vspace{0.1cm}
+  \hrule}
+
+2. Determine se cada uma das afirmações abaixo é V ou F.  
+
+(a) \(T \in \hom(V,W): T'\) é injetora, então \(T\) é sobrejetora.  
+
+\textcolor{gris}{VERDADEIRO. Por contrarrecíproca suponha que \(T\) não for sobrejetora. Sejam \(\beta\) uma base de \(\operatorname{Im}T < W\) e \(\alpha \) uma completação dela pra o \(W\) todo. Seja \( w \in \alpha \setminus \beta \) e considere \(f \in W': w\mapsto 1\) e \(\alpha \setminus\{w\} \mapsto 0\), assim, 
+\[T'(f)(v) = (f  \circ T) (v) = 0, \ \forall v \in V, \] 
+pois \(\operatorname{Im}T \leq [\alpha \setminus \{w\}]\). Segue que \(0 \not\equiv f \in \ker T'\), portanto \(T'\) não é injetora.    
+} 
+
+(b) Se \(\phi \in B_s(V)\) e \(0 < W \leq V\) é não degenerado respeito de \(\phi\), então \((W^\perp)^\perp = W \).  
+
+\textcolor{gris}{
+FALSO. A \(\phi \) precisa ser não degenerada, sejam:  
+\[[\phi]_\alpha = \begin{bmatrix}
+  1 & 0 \\ 
+  0 & 0 
+\end{bmatrix}; \ \ W = [e_1], \]
+temos \((W^\perp)^\perp = [e_2]^\perp = [e_1,e_2] \neq W\).  
+}
+
+3. Sejam \(\dim V, \dim W < \infty\), \(\psi \in B(W)\) e  \(\phi \in B(V)\)  não degenerada. Mostre que \(T\in \hom(V,W)\) é compatível com \((\phi, \psi)\ \leftrightharpoons \ T^\phi_\psi \circ T = \id_{_V}\).  
+
+\textcolor{gris}{
+  Como \(\phi\) é não degenerada, segue da \(\square\) 9.6.3. que \(\exists !T^\phi_\psi\). Note que,  sendo \( u, v \in V\) diretamente das definições temos, 
+  \begin{align*}
+    \phi(u, v) = \psi(Tu, Tv ) \ &\leftrightharpoons \ \phi(u,v) = \phi(u, T^\phi_\psi( Tv))\\ 
+    & \leftrightharpoons \ \forall u \in V, \ \phi(u, T^\phi_\psi (Tv) -v ) = 0 \\ 
+    & \leftrightharpoons \ \forall v \in V, \ T^\phi_\psi (Tv) = v \\ 
+    & \leftrightharpoons \ T^\phi_\psi \circ T = \id_{_V}. 
+  \end{align*}
+} 
+4. Seja \(\phi \in B(W)\) e considere a aplicação 
+\begin{align*}
+  \Omega: \hom(V,W) &\to \hspace{0.8cm}B(V,W) \\ 
+T \hspace{1cm} &\mapsto [(v,w) \mapsto \phi(Tv, w )] 
+\end{align*} 
+(a) Mostre que \(\Omega\) está bem definida e é linear.  
+
+\textcolor{gris}{Note que para \(T\) fixo e \(\lambda \in \F\) temos, 
+\begin{align*}
+  \Omega(T)(v_1 + \lambda v_2,w) &= \phi(T(v_1+\lambda v_2), w) \\ 
+  &= \phi(Tv_1 + \lambda Tv_2, w )\\ 
+  &= \phi(Tv_1, w ) + \lambda\phi(Tv_2, w)\\ 
+  &= \Omega(T)(v_1,w) + \lambda \Omega(T)(v_2, w );
+\end{align*}
+\vspace{-0.8cm}
+\begin{align*}
+  \Omega(T)(v, w_1 + \lambda w_2) &= \phi(Tv, w_1+\lambda w_2) \\ 
+  &= \phi(Tv,w_1) + \lambda \phi(Tv, w_2)\\ 
+  &= \Omega(T)(v,w_1) + \lambda \Omega(T)(v, w_2 ).
+\end{align*}
+Portanto de fato \(\Omega(T) \in B(V,W)\). Agora veja que, 
+\begin{align*}
+  \Omega(T+ \lambda S)(v,w) &= \phi((T+\lambda S)v, w) \\ 
+   &= \phi(Tv+\lambda Sv, w) \\ 
+   &= \phi(Tv,w)+\lambda \phi(Sv, w) \\ 
+   &= \Omega(T)(v,w)+\lambda \Omega(S)(v, w).  
+\end{align*}
+}
+(b) Mostre que se \(\ker\hspace{0.01cm} _\phi D = \{0\}\), então \(\Omega\) é injetora. 
+\textcolor{gris}{
+\begin{align*}
+  \Omega(T)(v,w) \equiv 0 \ &\leftrightharpoons \ \forall v \in V, \ \forall w \in W, \ \phi(Tv, w) = 0\\ 
+  &\leftrightharpoons \forall v\in V, \ Tv = 0 \ \leftrightharpoons \ T\equiv 0. 
+\end{align*}
+}
+(c) Se \(\dim V, \dim W < \infty\) e \(\phi\) for não degenerada à esquerda, então \(\Omega\) é isomorfismo. \\
+\textcolor{gris}{
+\[\dim \hom(V,W) = \dim V \cdot \dim W = \dim B(V,W).\]  
+Segue de (b) que \(\Omega\) é injetora entre \(\F\)-espaços da mesma dimensão \(\leftrightharpoons\) \ \(\Omega\) é isomorfismo.\\ }
+
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{P3} \vspace{0.1cm}
+  \hrule}
+
+1. Mostre que se \(\dim V = n < \infty\), então \(A^{n-1}(V)\) e \(\ehom(V)\) são isomorfos. \\ 
+\textcolor{gris}{
+  \[\dim (A^{n-1}(V)) = \binom{n}{n-1} \cdot n = n^2 = \dim (\ehom(V)),\]
+  como \(\F\)-espaços de mesma dimensão são isomorfos.  \\ 
+}
+
+3. Determine se cada uma das afirmações é abaixo é V ou F. 
+
+(a) Se \(T\) e \(S\) são operadores lineares que possuem FCJ, então \(T\otimes S\) tambem possui FCJ.  
+
+\textcolor{gris}{VERDADEIRO. Existem bases \(\alpha\) e \(\beta\) dos respectivos espaços tais que ambas, \( [T]_\alpha^\alpha\) e \([S]_\beta^\beta\) são diagonais inferiores. Assim, \([T\otimes S]_{\alpha\otimes \beta}^{\alpha\otimes \beta}\) dada  pelo produto de Kronecker é diagonal inferior, segue que \(c_{_{T\otimes S}}\) fatora em polinômios de grau 1 e \(T\otimes S\) admite FCJ. Melhor do que isso se \(c_{_T} = \prod^m (t-\lambda_j)^{k_j}\) e \(c_{_S} = \prod^n (t-\mu_i)^{l_i}\) então \(c_{_{T\otimes S}} = \prod^{mn} (t-\lambda_j\mu_i)^{k_j+l_i}\).     
+}
+
+(b) Se \(T\) e \(S\) são com no ítem (a), então \(T\otimes S\) possui base de Jordan formada por tensores puros.  
+
+\textcolor{gris}{FALSO. Sejam \(V=\R^2\otimes \R^2\), \(\alpha \) a base canônica (de \(\R^2\)) e, 
+\[[T]^\alpha_\alpha = \begin{bmatrix}
+1 & 0 \\ 
+1 & 1 
+\end{bmatrix}; \ \ [T\otimes T]^{\alpha \otimes \alpha}_{\alpha \otimes \alpha} = \begin{bmatrix}
+ 1 & 0 & 0 & 0 \\ 
+ 1 & 1 & 0 & 0 \\ 
+ 1 & 0 & 1 & 0 \\ 
+ 1 & 1 & 1 & 1  
+\end{bmatrix}.\]
+\(\dim V_{t-1} = 2 \) e \(\beta = \{e_4, e_2-e_3\} \sim \{e_2 \otimes e_2, e_1 \otimes e_2 - e_2 \otimes e_1\}\) é uma base pra ele, logo,  
+\begin{align*}
+  V_{t-1} &= [ae_2\otimes e_2 + b e_1\otimes  e_2 - be_2 \otimes e_1] \\ 
+   &= [e_2\otimes (ae_2 - be_1) +  e_1\otimes b e_2 ]  
+\end{align*} 
+Se \(b \neq 0\) as familias \(\{e_2, e_1\}\) e \( \{ae_2 -be_1, be_2\}\) são l.i. y o tensor em quetão tem posto 2. Logo, os únicos tensores puros em \(V_{t-1}\) são da forma \(a e_2 \otimes e_2\). Portanto não existe base de tensores puros para \(V_{t-1}\) como não existe para o \(V\) todo.  
+}
+
+4. (a) Dados \(v_1, v_2 \in V\), mostre que \(\exists ! \Psi_{v_1, v_2} \in \hom(V^{\wedge 2}, V^{\wedge 4})  : \Psi_{v_1, v_2}(v_3\wedge v_4) = v_1 \wedge v_2\wedge v_3 \wedge v_4\).  
+\textcolor{gris}{
+  \-\vspace{-0.3cm}
+  \begin{align*}
+    \psi_{v_1,v_2} : \hspace{0.6cm}V^2\hspace{0.3cm} &\to \hspace{1cm}V^{\wedge 4}\\ 
+    (v_3, v_4) &\mapsto v_1\wedge v_2 \wedge v_3\wedge v_4.
+  \end{align*}
+  Note que \(\psi_{v_1, v_2}\) é bilinear, de fato, 
+  \begin{align*}
+    \psi_{v_1,v_2}(v_{3}^1 + \lambda v_{3}^2, v_4) &= v_1 \wedge v_2 \wedge (v_{3}^1 + \lambda v_{3}^2) \wedge v_4 \\ 
+    &= v_1 \wedge v_2 \wedge v_{3}^1 \wedge v_4 \\
+    & \hspace{1.3cm}+\lambda v_1 \wedge v_2 \wedge v_{3}^2 \wedge v_4\\ 
+    &= \psi_{v_1,v_2}(v_{3}^1, v_4) + \lambda\psi_{v_1,v_2}(v_{3}^2, v_4)
+  \end{align*}
+  %\begin{align*}
+  %  \psi_{v_1,v_2}(v_3, v_{4}^1 + \lambda v_{4}^2) &= v_1 \wedge v_2 \wedge v_3 \wedge (v_{4}^1 + \lambda v_{4}^2) \\ 
+  %  &= v_1 \wedge v_2 \wedge v_3 \wedge v_{4}^1  \\
+  %  & \hspace{1.3cm}+\lambda v_1 \wedge v_2 \wedge v_3 \wedge v_{4}^2 \\ 
+  %  &= \psi_{v_1,v_2}(v_3, v_{4}^1) + \lambda\psi_{v_1,v_2}(v_3, v_{4}^2).
+  %\end{align*}
+  %\[\psi_{v_1,v_2}(v_3, v_{4}^1 + \lambda v_{4}^2)= \psi_{v_1,v_2}(v_3, v_{4}^1) + \lambda\psi_{v_1,v_2}(v_3, v_{4}^2).\] 
+  Analogamente consegue-se mostrar linearidade na outra coordenada. Pela PUPT \(\exists ! \Psi_{v_1,v_2}: v_3 \wedge v_4 \mapsto v_1 \wedge v_2 \wedge v_3 \wedge v_4\) linear como enunciado.   
+}
+
+(b) Dada \(\eta \in V^{\wedge 2 }\), mostre que \(\exists ! \Phi_\eta \in \hom (V^{\wedge 2},V^{\wedge 4}) : \Phi_\eta(v_1 \wedge v_2) = \Psi_{v_1,v_2}(\eta)\), sendo \(v_1, v_2 \in V\) quaisquer.  \\
+\textcolor{gris}{ 
+  \-\vspace{-0.3cm}
+  \begin{align*}
+    \phi_\eta : \hspace{0.6cm}V^2\hspace{0.3cm} &\to \hspace{0.35cm}V^{\wedge 4}\\ 
+    (v_1, v_2) &\mapsto \Psi_{v_1, v_2}(\eta).
+  \end{align*}
+  Note que \(\phi\) é bilinear, de fato, 
+  \begin{align*}
+    \phi_\eta(v_1^1+\lambda v_1^2, v_2) &= \Psi_{v_1^1+\lambda v_1^2, v_2}(\eta)\\ 
+    &= v_1^1+\lambda v_1^2 \wedge v_2 \wedge \eta \\
+    &= (v_1^1\wedge v_2 \wedge \eta) +\lambda( v_1^2 \wedge v_2 \wedge \eta) \\
+    & = \Psi_{v_1^1, v_2}(\eta) +\lambda \Psi_{v_1^2, v_2}(\eta)\\
+    &= \phi_\eta(v_{1}^1, v_2) + \lambda\phi_\eta(v_{1}^2, v_2)
+  \end{align*}
+Analogamente consegue-se mostrar linearidade na outra coordenada. Mais uma vez, pela PUPT \(\exists ! \Phi_\eta: v_1 \wedge v_2 \mapsto \Psi_{v_1,v_2} (\eta)\) linear como enunciado.   
+}
+
+(c) Mostre que \(\exists ! \mu : V^{\wedge 2} \times V^{\wedge 2} \to V^{\wedge 4}\) bilinear, satisfazendo \(\mu(v_1 \wedge v_2, v_3 \wedge v_4) = v_1 \wedge v_2 \wedge v_3 \wedge v_4\), sendo \(v_1, v_2, v_3, v_4 \in V\) quaisquer.   
+\textcolor{gris}{ 
+  \-\vspace{-0cm}
+  \begin{align*}
+    \mu : \hspace{0cm}V^{\wedge 2} \times V^{\wedge 2} &\to\hspace{0.15cm} V^{\wedge 4}\\ 
+    (\omega, \eta)\hspace{0.4cm} &\mapsto \Phi_{\eta}(\omega).
+  \end{align*}
+  Vamos ver que de fato é bilinear, na primeira entrada, 
+  \begin{align*}
+    \mu(\omega_1 + \lambda\omega_2, \eta) &= \Phi_{\eta}(\omega_1+\lambda \omega_2)\\ 
+    &= \Phi_{\eta}(\omega_1) +\lambda\Phi_\eta(\omega_2)\\ 
+    &= \mu(\omega_1, \eta)+ \lambda \mu(\omega_2, \eta). 
+  \end{align*}
+  Quanto a segunda entrada, sendo \(\omega = v_1 \wedge v_2\) temos, 
+  \begin{align*}
+    \mu(\omega, \eta_1 + \lambda\eta_2) &= \Phi_{\eta_1 + \lambda\eta_2}(v_1 \wedge v_2)\\ 
+    &= \Psi_{v_1, v_2}(\eta_1 + \lambda \eta_2)\\ 
+    &= \Psi_{v_1, v_2}(\eta_1) + \lambda \Psi_{v_1, v_2}(\eta_2)\\ 
+    &= \Phi_{\eta_1}(\omega) + \lambda \Phi_{\eta_2}(\omega) \\ 
+    &= \mu(\omega, \eta_1) + \lambda \mu(\omega, \eta_2). 
+  \end{align*}
+  Finalmente, \(\mu\) satisfaz a propriedade no enunciado,
+  \begin{align*}
+  \mu(v_1\wedge v_2, v_3\wedge v_4) &= \Phi_{v_3\wedge v_4}(v_1\wedge v_2) \\
+  &= \Psi_{v_1,v_2} (v_3\wedge v_4)\\ 
+  &= v_1 \wedge v_2 \wedge v_3 \wedge v_4.
+  \end{align*} 
+}
+(d) A função \(\mu\) do ítem (c) é alternada? 
+
+\textcolor{gris}{Não é alternada em geral, seja \(\dim V = 4\), então,  
+\begin{align*}
+  \mu(e_3 \wedge e_4, e_1\wedge e_2 ) &= e_3 \wedge e_4 \wedge e_1 \wedge e_2 \\ 
+  &= (-1)^4 e_1 \wedge e_2 \wedge e_3 \wedge e_4 \\   
+  &= \mu(e_1 \wedge e_2, e_3\wedge e_4)\\ 
+  &\neq -\mu(e_1 \wedge e_2, e_3\wedge e_4) 
+\end{align*}
+}
+
+5. Sejam \(N:= \{\otimes v_j \in V^{\otimes k} : \exists s < t \leq k : v_s = v_t\} \leq V^{\otimes k}\), \(U := V^{\otimes k} / N \) e \(\pi : V^{\otimes k} \to U\) a projeção canônica. Mostre que \((\phi\circ \otimes, U)\) é uma \(k\)-ésima potência exterior de \(V\).  
+
+\textcolor{gris}{
+ Primeiro note que \((\pi \circ \otimes) ((v_{s<s})) = \pi((\otimes v_{s<s})) = 0\), portando \(\pi\circ \otimes \) é alternada. Seja \(\psi \in \hom^k(V,W)\) alternada, em particular, \(\psi\) é \(k\)-linear, pela PUPT \(\exists ! \widetilde{\psi}_1 \in \hom(V^{\otimes k} , W): \widetilde{\psi}_1 \circ \otimes = \psi\). Além disso, note que se \( \otimes v_{s<s} \in N \), então \(\widetilde{\psi}_1(\otimes v_{s<s}) = \psi((v_{s<s})) = 0\), logo \(N \subset \ker \widetilde{\psi}_1 \). Pela PUEC \(\exists ! \widetilde{\psi} \in \hom(U, W): \widetilde{\psi}_1 = \widetilde{\psi} \circ \pi \). Finalmente, concluimos que \(\exists ! \widetilde{\psi} \in \hom(U,W)\) tal que, 
+ \[ \widetilde{\psi} \circ (\pi \circ \otimes ) = \widetilde{\psi}_1 \circ  \otimes = \psi. \]  
+}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{EF} \vspace{0.1cm}
+  \hrule}
+
+2. Determine se cada uma das afirmações é abaixo é V ou F. 
+
+(a) Se \(T \in \hom(V,W)\), então \(\ker T' = \{f\in W' : \forall w \in \operatorname{Im}T, \ f(w) = 0\}\). 
+
+(b) Se \(\dim V> 2 \), \(\exists T: V^{\wedge 2} \twoheadrightarrow V^{\odot 2}\) linear.
+
+(c) A imagem de uma função multilinear é um subespaço de seu contradomínio. 
+
+(d) Se \(\dim V < \infty\) e \( T\in \ehom(V)\) é diagonalizavél, \(\exists \phi \in B_s(V)\) produto interno \(: T= T^\phi_\phi\). 
+
+(e) Se \(T\) e \(S\) são operadores lineares, \(v \) gera um \(T\)-ciclo de Jordan de comprimento \(m\) e \(w\) gera um \(S\)-ciclo de Jordan de comprimento \(n\), então \(v\otimes w\) gera um \(T\otimes S\)-ciclo de Jordan de comprimento \(m+n-1\). 

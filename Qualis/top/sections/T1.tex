@@ -3,10 +3,12 @@
   \centering \textbf{T1} \vspace{0.1cm}
   \hrule}
 
-1. \(\bullet \) Sejam \(X\) um espaço topológico, \(S\leq X\) e \(\mathcal{B}\) uma base para \(X\). Mostre que \(\mathcal{B}_{_S} := \{S \cap V : V \in \mathcal{B}\}\) é uma base para \(S\). \\ 
+1. \(\bullet \) Sejam \(X\) um espaço topológico, \(S\leq X\) e \(\mathcal{B}\) uma base para \(X\). Mostre que \(\mathcal{B}_{_S} := \{S \cap V : V \in \mathcal{B}\}\) é uma base para \(S\).  
+
 \textcolor{gris}{É claro que \(\mathcal{B}_{_S} \subset \tau_{_S}\). Sejam \(x \in U\ab\subset S\), então \(\exists U_1\ab \subset X: U = U_1 \cap S\), em particular, \(x\in U_1\), logo \(\exists V_1 \in \mathcal{B} : x\in V_1 \subset U_1\). Finalmente, \(x \in V := V_1 \cap S \subset U_1 \cap S = U\), como \(V \in \mathcal{B}_{_S}\) segue que \(\mathcal{B}_{_S}\) é base para \(S\). }
- \\ 
-\(\bullet\) Mostre que a função caraterística \(\chi_{_S}:X \to \R\) é contínua \(\leftrightharpoons\) \(S\) é aberto e fechado em \(X\). \\ 
+ 
+\(\bullet\) Mostre que a função caraterística \(\chi_{_S}:X \to \R\) é contínua \(\leftrightharpoons\) \(S\) é aberto e fechado em \(X\).  
+
 \textcolor{gris}{(\(\Rightarrow\)) \(S = \chi_{_S}^{-1}(\{1\}\ce)  = \chi_{_S}^{-1} ((\nicefrac{1}{2}, \infty)\ab) \subset X\), como \(f\) é contínua segue que \(S\) é aberto e fechado em \(X\). \\
 (\(\Leftarrow\)) Seja \(U\ab \subset \R\), então temos:
 \[\chi_{_S}^{-1}(U) = \begin{cases}
@@ -15,78 +17,107 @@ X\setminus S\ce, \ \ \text{se } 0 \in U, \ 1 \notin U \\
 S\ab, \ \ \text{se } 0\notin U, \ 1 \in U \\ 
 X\ab, \ \ \text{se } 0,1 \in U \\ 
 \end{cases}.\]
-Qualquer caso \(\chi_{_S}^{-1}(U)\ab \subset X\), portanto \(\chi_{_S}\) é contínua. }  \\ 
-2. Sejam \((X_i)_{i\in I}\) espaços topológicos não vazios, \(X := \prod X_i\) com a topologia produto e \((A_i\ce\subset X_i)\). Mostre que \(\prod A_i =: A\ce \subset X\).  \\ 
+Qualquer caso \(\chi_{_S}^{-1}(U)\ab \subset X\), portanto \(\chi_{_S}\) é contínua. }   
+
+2. Sejam \((X_i)_{i\in I}\) espaços topológicos não vazios, \(X := \prod X_i\) com a topologia produto e \((A_i\ce\subset X_i)\). Mostre que \(\prod A_i =: A\ce \subset X\).   
+
 \textcolor{gris}{ 
 As projeções \(\pi_i : X \to X_i\) são contínuas e, 
 \[\bigcap \pi_i^{-1}(A_i)\ce = A \subset X, \]
-segue que \(A\ce\subset X\) pois é interseção arbitraria de fechados.}\\ 
-3. Verdadeiro ou falso? Para todo topologia \(\tau\) em \(\R\), \(f : (\R, \tau) \ni x \mapsto -x \in (\R, \tau)\) é contínua.  \\ 
-\textcolor{gris}{É falso, considere \(\tau = \{\varnothing , \R\} \cup \{(a,\infty) : a \in \R\}\), ahí \(f^{-1}((1,\infty)\ab) = (-\infty, -1)\) que não é aberto em \(\tau\). } \\
+segue que \(A\ce\subset X\) pois é interseção arbitraria de fechados.} 
+
+3. Verdadeiro ou falso? Para todo topologia \(\tau\) em \(\R\), \(f : (\R, \tau) \ni x \mapsto -x \in (\R, \tau)\) é contínua.   
+
+\textcolor{gris}{É falso, considere \(\tau = \{\varnothing , \R\} \cup \{(a,\infty) : a \in \R\}\), ahí \(f^{-1}((1,\infty)\ab) = (-\infty, -1)\) que não é aberto em \(\tau\). }
+
 4. \(\bullet \) Uma rede \((x_\lambda)_{\lambda \in \Lambda} \subset X\) é dita \emph{universal} se dado \( A\subset X, \ \exists \lambda_0 \in \Lambda\) tal que,  
 \[\{x_\lambda : \lambda \geq \lambda_0\} =: B_{\lambda_0} \subset A \text{ \ ou \ } B_{\lambda_0} \subset X \setminus A .\] 
-\(\square\) 13.12. Mostre que se \(x\) é ponto de acumulação de \((x_\lambda)\) universal, então \(x_\lambda \to x \). \\
-\textcolor{gris}{Seja \(U \in \U_x\), então \(\exists \lambda_0 \in \Lambda : B_{\lambda_0} \subset U\) ou \(B_{\lambda_0} \subset X \setminus U \), mas \(x\) é ponto de acumulação logo \(\exists \lambda \geq \lambda_0: x_\lambda \in U\), segue que \(B_{\lambda_0} \subset U\) e por tanto \(x_\lambda \to x\). }\\ 
-\(\bullet\) Considere \(\tau = \{\varnothing, \R, \mathbb{I}, \mathbb{Q}\}\). Mostre que \(\tau\) é uma topologia em \(\R\). A seqüência \((\nicefrac{1}{n})_{n \in \N}\) converge nessa topologia? \\ 
+\(\square\) 13.12. Mostre que se \(x\) é ponto de acumulação de \((x_\lambda)\) universal, então \(x_\lambda \to x \). 
+
+\textcolor{gris}{Seja \(U \in \U_x\), então \(\exists \lambda_0 \in \Lambda : B_{\lambda_0} \subset U\) ou \(B_{\lambda_0} \subset X \setminus U \), mas \(x\) é ponto de acumulação logo \(\exists \lambda \geq \lambda_0: x_\lambda \in U\), segue que \(B_{\lambda_0} \subset U\) e por tanto \(x_\lambda \to x\). } 
+
+\(\bullet\) Considere \(\tau = \{\varnothing, \R, \mathbb{I}, \mathbb{Q}\}\). Mostre que \(\tau\) é uma topologia em \(\R\). A seqüência \((\nicefrac{1}{n})_{n \in \N}\) converge nessa topologia?  
+
 \textcolor{gris}{(T1) é explicíto; (T2) \(\Q \cup \mathbb{I} = \R \in \tau\); (T3) \(\Q \cap \mathbb{I} = \varnothing \in \tau\); outras combinações de uniões e interseções são triviais, segue que \((\R, \tau)\) é espaço um topológico. Seja \(x \in \R\), então 
 \[\U_x = \begin{cases}
 \{\Q, \R\}, \ \ \text{se \ } x \in \Q \\ 
 \{\mathbb{I}, \R\}, \ \ \text{se \ } x \in \mathbb{I} \\ 
 \end{cases}.\]  
-Como \((\nicefrac{1}{n}) \subset \Q\), então de fato \(\nicefrac{1}{n} \to q, \  \forall q \in \Q\). Por outro lado, \(\forall n \in \N, \ \nicefrac{1}{n} \notin \mathbb{I}\), portanto \(\nicefrac{1}{n} \not\to x\), se \(x \in \mathbb{I}\).} \\ 
+Como \((\nicefrac{1}{n}) \subset \Q\), então de fato \(\nicefrac{1}{n} \to q, \  \forall q \in \Q\). Por outro lado, \(\forall n \in \N, \ \nicefrac{1}{n} \notin \mathbb{I}\), portanto \(\nicefrac{1}{n} \not\to x\), se \(x \in \mathbb{I}\).}  
+
 5. Verdadeiro ou falso? Suponha que \(f_i : Y \to X_i\) seja contínua \(\forall i \in I\). Então a aplicação,   
 \[f: Y \ni y \mapsto (f_i(y)) \in X := \prod X_i,\]
-é contínua, tendo \(X\) topologia das caixas. \\ 
+é contínua, tendo \(X\) topologia das caixas.  
+
 \textcolor{gris}{É falso em geral, segue do fato da preimagem de abertos ser interseção arbitraria (\(I\) infinito) de abertos. Sejam \(X := \R^\N\), \(f_n(x) = x\) e \(\underset{n\in \N}{\prod} (-\nicefrac{1}{n}, \nicefrac{1}{n})\ab =: U\ab \subset X\), note que, 
-\[f^{-1}(U) = \bigcap_{n \in \N}\left(-\frac{1}{n}, \frac{1}{n}\right) = \{0\} \notin (\R, \tau_\text{usual}). \]}
+\[f^{-1}(U) = \bigcap_{n \in \N}\left(-\frac{1}{n}, \frac{1}{n}\right) = \{0\} \notin (\R, \tau_2). \]}
  
 \-\vspace{-0.7cm}
   {\hrule \vspace{-0.15cm}
   \centering \textbf{P1} \vspace{0.1cm}
   \hrule}
 
-1. \(\bullet \) Sejam \(Z \subset Y \subset X\). Mostre que a topologia de \((Z,\tau_Z^Y)\leq Y\) é igual a topologia de \((Z,\tau_Z^X) \leq X\). \\ 
+1. \(\bullet \) Sejam \(Z \subset Y \subset X\). Mostre que a topologia de \((Z,\tau_Z^Y)\leq Y\) é igual a topologia de \((Z,\tau_Z^X) \leq X\).  
+
 \textcolor{gris}{\((\subseteq)\) Seja \(U\ab \subset \tau_Z^Y\), então \(\exists V\ab \subset Y : U = V\cap Z\). Como \(Y\leq X\), \(\exists W\ab\subset X : V = W \cap Y\), segue que 
 \[V\cap Z = W \cap Y \cap Z = W \cap Z = U\ab \subset \tau_Z^X. \]
 \((\supseteq )\) Seja \(U\ab \subset \tau_Z^X\), então \(\exists W\ab \subset X: U = W \cap Z\). Defina \(W\cap Y =: V\ab \subset Y \). Segue que,  
 \[W \cap Z = W \cap Y \cap Z = V \cap Z = U\ab \subset \tau_Z^Y. \]
-}  
-\(\bullet \) Mostre que \(\R_\ell\) (topologia de Sorgenfrey) não possui base \(\mathcal{B}\) enumeravél. Dica: construa \(f : \R \hookrightarrow \mathcal{B}\). \\ 
+}
+\(\bullet \) Mostre que \(\R_\ell\) (topologia de Sorgenfrey) não possui base \(\mathcal{B}\) enumeravél. Dica: construa \(f : \R \hookrightarrow \mathcal{B}\).  
+
 \textcolor{gris}{Seja \(\mathcal{B}\) uma base qualquer e \(([x, x+1)\ab) \subset \R  : x \in \R\) familia  em \(\R\). Como \(\mathcal{B}\) é base, \( \forall x \in \R,  \ \exists V_x \in \mathcal{B}  : x \in V_x \subset [x, x+1)\), seguido defina, 
 \[f : \R \ni x \mapsto V_x \in \mathcal{B}. \]
 \(f \) é injetora, de fato, se \(f(x) = V_x = V_y = f(y)\), então \(y \in V_x \ \leftrightharpoons \ x \leq y\) e \(x \in V_y \ \leftrightharpoons \ y \leq x\), logo \(x=y\). Segue que \(\mathcal{B}\) não é enumeravél e \(\R_\ell\) não verifica o segundo axioma de enumerabilidade.   
-}\\
-2. \(\bullet\) Seja \(S \leq X\). Prove que \((S, \tau_S) = (S, \tau_\pi)\), onde \(\pi = \iota : S \hookrightarrow X\) e \(\tau_\pi\) é a topologia fraca definida por \(\pi\).  \\ 
+}
+
+2. \(\bullet\) Seja \(S \leq X\). Prove que \((S, \tau_S) = (S, \tau_\pi)\), onde \(\pi = \iota : S \hookrightarrow X\) e \(\tau_\pi\) é a topologia fraca definida por \(\pi\).   
+
 \textcolor{gris}{Note que, se \(U\ab \subset X\), então \(\pi^{-1}(U) = U\cap S\), logo, \(\tau_\pi := \{\pi^{-1}(U) : U\ab \subset X\} = \{U \cap S : U\ab \subset X\} =: \tau_S\).
-} \\ 
-\(\bullet\) Seja \(f : X \to Y\) contínua. Mostre que \(X \simeq \operatorname{graf}f:= \{(x,f(x)) : x \in X\}\leq X \times Y\).  \\ 
+}  
+
+\(\bullet\) Seja \(f : X \to Y\) contínua. Mostre que \(X \simeq \operatorname{graf}f:= \{(x,f(x)) : x \in X\}\leq X \times Y\).   
+
 \textcolor{gris}{\[h: X \ni x \mapsto (x,f(x)) \in X\times Y \] 
 Note que \(h\) é contínua pois \(\pi_X \circ h = \id_X\) e \(\pi_{Y} \circ h = f\), ambas contínuas. É injetora, de fato, \(h(x) =  (x,f(x))= (y,f(y)) = h(y) \ \leftrightharpoons \ x= y \). Tambem, \(h^{-1} = \pi_X |_{\operatorname{graf}f}:  (x , f(x))\mapsto x\) é contínua, segue que
 \[h: X \simeq \operatorname{graf}f \leq X\times Y. \]
 }
-3. \( \bullet\) Mostre que se \( f, g \in C(X,\R)\), então \(\{x \in X : f(x) \leq g(x)\} =: F\ce \subset X\).  \\ 
-\textcolor{gris}{Seja \(h:= g-f \), contínua pois é soma de contínuas, segue que \(h^{-1}([0, \infty)\ce)= F \ce \subset X \).  } \\ 
-\(\bullet \) Sejam \((X_i)_{i \in I}\) familia de espaços topologicos não vazios e \(X := \prod X_i\) com topologia de caixas. Mostre que \(\forall j \in I, \ \exists S \leq X : X_j \simeq S\). Isso tambem ocurre na topologia produto?\\ 
+3. \( \bullet\) Mostre que se \( f, g \in C(X,\R)\), então \(\{x \in X : f(x) \leq g(x)\} =: F\ce \subset X\).   
+
+\textcolor{gris}{Seja \(h:= g-f \), contínua pois é soma de contínuas, segue que \(h^{-1}([0, \infty)\ce)= F \ce \subset X \).  }  
+
+\(\bullet \) Sejam \((X_i)_{i \in I}\) familia de espaços topologicos não vazios e \(X := \prod X_i\) com topologia de caixas. Mostre que \(\forall j \in I, \ \exists S \leq X : X_j \simeq S\). Isso tambem ocurre na topologia produto? 
+
 \textcolor{gris}{Sejam \(j \in I\) fixo e \(\forall i \in I\setminus\{j\}, \ a_i \in X_i\) fixos tambem, e 
 \[S := \{\x = X : x_i = a_i, \ i \neq j\}\leq X. \]
 Defina \(h = \pi_j |_S : S\to X_j\), claramente \(h \) é bijetiva e contínua. Veja que tambem é aberta, de fato, sendo \(\mathcal{B}_S := \{U \cap S : U\in \mathcal{B}\}\) temos, 
 \[U_1\ab \cap S = \prod U_i\ab \cap S = \prod_{i\neq j} \{a_i\} \times U_j  =: U\ab \subset S,\]
 assim, \(h(U) = U_j\ab \subset X_j\) ou \(h(U) = \varnothing\ab\subset X_j\) se \(\exists i\neq j : a_i \notin U_i\), qualquer caso aberto. Segue que \(h:S \simeq X_j\). O mesmo vale pra topologia produto, precisamos apenas da continuidade e abertura das projeções que funçõa nas duas topologias (o último argumento é que muda um poquinho). %, com alguma modificação na hora de plantejar o aberto basico \(U\ab\subset S\). 
-} \\ 
-4. \(\bullet \) Se \(x_\lambda \to x \in X\), então pra qualquer subrede \((x_{\phi(\mu)})\subset (x_\lambda)_{\lambda \in \Lambda}\) tambem \(x_{\phi(\mu)} \to x\).  \\
-\textcolor{gris}{Sejam \((x_{\phi(\mu)})\) subrede e \(U \in \U_x\), então \(\exists \lambda_0 \in \Lambda : (x_\lambda) \subset U\) se \( \lambda \geq \lambda_0 \). Como \(\phi \) é cofinal, \(\exists \mu_0: \phi(\mu_0) \geq \lambda_0\) e como é creciente \(\phi(\mu) \geq \phi(\mu_0) \geq \lambda_0\) se \(\mu \geq \mu_0\). Segue que \((x_{\phi(\mu)}) \subset U\) se \(\mu \geq \mu_0\) e portanto  \(x_{\phi(\mu)} \to x\).   }\\ 
-\(\bullet\) Se cada subrede de \((x_\lambda)_{\lambda \in \Lambda} \subset X\) admite subrede que converge a \(x\), então \(x_\lambda \to x\). Dica: contrapositiva.\\ 
+}  
+
+4. \(\bullet \) Se \(x_\lambda \to x \in X\), então pra qualquer subrede \((x_{\phi(\mu)})\subset (x_\lambda)_{\lambda \in \Lambda}\) tambem \(x_{\phi(\mu)} \to x\). 
+
+\textcolor{gris}{Sejam \((x_{\phi(\mu)})\) subrede e \(U \in \U_x\), então \(\exists \lambda_0 \in \Lambda : (x_\lambda) \subset U\) se \( \lambda \geq \lambda_0 \). Como \(\phi \) é cofinal, \(\exists \mu_0: \phi(\mu_0) \geq \lambda_0\) e como é creciente \(\phi(\mu) \geq \phi(\mu_0) \geq \lambda_0\) se \(\mu \geq \mu_0\). Segue que \((x_{\phi(\mu)}) \subset U\) se \(\mu \geq \mu_0\) e portanto  \(x_{\phi(\mu)} \to x\).   } 
+
+\(\bullet\) Se cada subrede de \((x_\lambda)_{\lambda \in \Lambda} \subset X\) admite subrede que converge a \(x\), então \(x_\lambda \to x\). Dica: contrapositiva. 
+
 \textcolor{gris}{Suponha que \(x_\lambda \not\to x \), então \(\exists U \in \U_x : \forall \lambda_0 \in \Lambda, \exists \lambda \geq \lambda_0 : x_\lambda \notin U\). Defina, \(M:= \{\mu \in \Lambda : x_\mu \notin U\}\) e \(\phi := \iota : M \hookrightarrow \Lambda\). Claramente, \(\phi \) é cofinal e creciente, logo \((x_{\phi(\mu)})\) é uma subrede tal que \((x_{\phi(\mu)})\subset X\setminus U\) e portando não tem subrede convergendo a \(x\) pois qualquer subrede está contida em \(X\setminus U\).   
-}  \\ 
-5. \(\bullet \) Sejam \(X := [0,1]\leq \R \), \(Y := \{0,1\}\) e \(\pi = \chi_{[\nicefrac{1}{2}, 1]} : X \to Y\). Mostre que a \(\tau_\pi = \{\varnothing, \{0\}, Y \}\).\\ 
+}   
+
+5. \(\bullet \) Sejam \(X := [0,1]\leq \R \), \(Y := \{0,1\}\) e \(\pi = \chi_{[\nicefrac{1}{2}, 1]} : X \to Y\). Mostre que a \(\tau_\pi = \{\varnothing, \{0\}, Y \}\). 
+
 \textcolor{gris}{Claramente \(\pi\) é sobrejetiva, \(\pi(0) = 0\) e \(\pi(1)=1\). Note que, \(\pi^{-1}(\varnothing) = \varnothing\ab \subset X; \ \pi^{-1}(\{0\}) = [0,\nicefrac{1}{2})\ab \subset X; \ \pi^{-1}(\{1\}) = [\nicefrac{1}{2}, 1]\notin \tau_X; \ \pi^{-1}(Y) = X\ab \subset X  \). Logo, 
 \[\tau_\pi = \{\varnothing, \{0\}, Y\} \text{ (Sierpinsky)}.\]
 } 
-\(\bullet \) Mostre que \(\pi\) não é aberta nem fechada.  \\ 
-\textcolor{gris}{\(\pi(\{0\}\ce) = \{0\} \notin \overline{\tau}_\pi\) e \(\pi((\nicefrac{1}{2}, 1]\ab) = \{1\}\ce\notin \tau_\pi\). Portanto \(\pi\) não é aberta nem fechada.}\\ 
-6. \(\bullet \) Seja \((X_i)_{i\in I }\) familia de espaços topologicos não vazios e \(X := \prod X_i\) com topologia de caixas. Mostre que as projeções \(\pi_i: X \to X_i\) são abertas.  \\ 
-\textcolor{gris}{Seja \(j\in I \) fixo, basta-nós verificar numa base. Seja \( U\ab \in \mathcal{B}\), então \(U= \prod U_i : U_i\ab \subset X_i\). Segue que \(\pi_j(U) = U_j\ab \subset X_j\).  }\vspace{-0.4cm}\\ 
-\(\bullet \) Sejam \(X:= \R^\N\) e \(A:= \{(x_n) \in X : x_n = 0, \ \forall n \in \N\setminus J \ |\  J\subset \N \text{ finito}\}\). Determine \(\overline{A}\) na topologia produto.\\ 
+\(\bullet \) Mostre que \(\pi\) não é aberta nem fechada.   
+
+\textcolor{gris}{\(\pi(\{0\}\ce) = \{0\} \notin \overline{\tau}_\pi\) e \(\pi((\nicefrac{1}{2}, 1]\ab) = \{1\}\ce\notin \tau_\pi\). Portanto \(\pi\) não é aberta nem fechada.} 
+
+6. \(\bullet \) Seja \((X_i)_{i\in I }\) familia de espaços topologicos não vazios e \(X := \prod X_i\) com topologia de caixas. Mostre que as projeções \(\pi_i: X \to X_i\) são abertas.   
+
+\textcolor{gris}{Seja \(j\in I \) fixo, basta-nós verificar numa base. Seja \( U\ab \in \mathcal{B}\), então \(U= \prod U_i : U_i\ab \subset X_i\). Segue que \(\pi_j(U) = U_j\ab \subset X_j\).  }\vspace{-0.2cm}\\ 
+\(\bullet \) Sejam \(X:= \R^\N\) e \(A:= \{(x_n) \in X : x_n = 0, \ \forall n \in \N\setminus J \ |\  J\subset \N \text{ finito}\}\). Determine \(\overline{A}\) na topologia produto. 
+
 \textcolor{gris}{Sejam \(\x \in X\) e \(U \in \U_\x\) quaisquer, \(\exists V \in \mathcal{B}: \x \in V \subset U\)  e, 
 \[V = \bigcap_{j\in J} \pi^{-1}_j(U_j): U_j\ab \subset \R. \]
 Defina \(\y := (y_n) \) tal que \(y_n = \delta_{jn}\cdot x_j, \ j\in J\). Segue que \(\y \in A \cap V\subset A\cap U\neq \varnothing\), valendo pra \(\x\) e \( U\) arbitrarios concluimos que \(\overline{A} = X \). 
@@ -96,29 +127,41 @@ Defina \(\y := (y_n) \) tal que \(y_n = \delta_{jn}\cdot x_j, \ j\in J\). Segue 
   \centering \textbf{T2} \vspace{0.1cm}
   \hrule}
 
-1. \(\bullet\) Defina espaço de Tychonoff e enuncie \(\blacksquare\) (\emph{Tychonoff}).  \\ 
-\(\bullet\) Prove que imagem continua e aberta de um espaço que satisfaz o segundo axioma de enumerabilidade tambem satisfaz o mesmo axioma.  \\ 
+1. \(\bullet\) Defina espaço de Tychonoff e enuncie \(\blacksquare\) (\emph{Tychonoff}).   
+
+\(\bullet\) Prove que imagem continua e aberta de um espaço que satisfaz o segundo axioma de enumerabilidade tambem satisfaz o mesmo axioma.   
+
 \textcolor{gris}{Sem perdida de generalidade suponha que \(f : X \twoheadrightarrow Y\). Seja \(\mathcal{B}= (V_n)_{n\in\N}\) base enumeravél para \(X\). Defina, 
 \[f(\mathcal{B}) := \{f(V_n) : V_n \in \mathcal{B}\}. \]
 Como \(f \) é aberta, \(f(V_n)\ab\subset Y\), logo \(f(\mathcal{B}) \subset \tau_Y\). Sejam \(y \in U\ab \subset Y\), então \(\exists x : f(x) = y\), tambem \(x \in f^{-1} (U)\ab \subset X\). Segue que \(\exists V_n \in \mathcal{B} : x \in V_n \subset f^{-1}(U)\). Finalmente, 
 \[y \in f(V_n) \subset f(f^{-1}(U)) = U, \]  
 portanto \(f(\mathcal{B})\) de fato é uma base enumeravél pra \(Y\). 
-}\\ 
-2. \(\bullet\) Mostre que o produto \(X := \underset{i\in I}{\prod} X_i\) é \(T_0\) se cada \(X_i\) for. \\
-\textcolor{gris}{Sejam \(\textbf{a}, \textbf{b} \in X : \textbf{a} \neq \textbf{b}\), então \(\exists j\in I : a_j \neq b_j \)  em \( X_j\) que é \(T_0\), portanto \(\exists U_j\ab \in \U_{a_j} : b_j \notin U_j\). Segue que \(\pi_j^{-1} (U_j) =: U\ab \in \U_\textbf{a} : \textbf{b} \notin U\), logo \(X\) é \(T_0\). }\\ 
-\(\bullet\) Sejam \(P:= \R_\ell \times \R_\ell\) e \(\{(x,-x) : x \in \R\} =: D \leq P\). Mostre que \(D\) não separavél e portanto subespaço de separavél não é separavél em geral. \\ 
+} 
+
+2. \(\bullet\) Mostre que o produto \(X := \underset{i\in I}{\prod} X_i\) é \(T_0\) se cada \(X_i\) for. 
+
+\textcolor{gris}{Sejam \(\textbf{a}, \textbf{b} \in X : \textbf{a} \neq \textbf{b}\), então \(\exists j\in I : a_j \neq b_j \)  em \( X_j\) que é \(T_0\), portanto \(\exists U_j\ab \in \U_{a_j} : b_j \notin U_j\). Segue que \(\pi_j^{-1} (U_j) =: U\ab \in \U_\textbf{a} : \textbf{b} \notin U\), logo \(X\) é \(T_0\). } 
+
+\(\bullet\) Sejam \(P:= \R_\ell \times \R_\ell\) e \(\{(x,-x) : x \in \R\} =: D \leq P\). Mostre que \(D\) não separavél e portanto subespaço de separavél não é separavél em geral.  
+
 \textcolor{gris}{Seja \(\epsilon > 0\), considere vizinhanças dadas por,  
 \[[x, x+\epsilon) \times [-x, -x + \epsilon) =: U_\epsilon\ab \subset \R_\ell \times \R_\ell .\]
 Note que \( D \cap U_\epsilon = \{(y,-y) : y \in [x, x+\epsilon) \cap (x-\epsilon, x]\} = (x, -x) \). Portanto \(D\) tem topologia discreta e o único subconjunto denso é o propio \(P\) que não é enumeravél. Segue que \(D\) é não separavél, quanto \(P\) se é por ser produto finito de Hausdorff separavéis.  
-}  \\ 
-3. \(\bullet\) Suponha que cada familia de fechados em \(X\) com a propriedade da interseção finita tem interseção não vazia. Mostre que cada filtro em \(X\) tem ponto de acumulação. \\ 
-\textcolor{gris}{Seja \(\mathcal{F}\subset \tau\) filtro em \(X\). Então, \(\{\overline{A} : A \in \mathcal{F}\} \) é familia de fechados com a propriedade da interseção finita. Segue que \(\exists x \in \bigcap \{\overline{A}: A \in \mathcal{F}\}\), ponto de acumulação de \(\mathcal{F}\). } \\ 
-\(\bullet\) Sejam \(Y\) compacto e \(f:X\to Y\). Mostre que se \((\operatorname{graf}f)\ce \subset X\times Y\), então \(f \) é contínua. \\ 
+}   
+
+3. \(\bullet\) Suponha que cada familia de fechados em \(X\) com a propriedade da interseção finita tem interseção não vazia. Mostre que cada filtro em \(X\) tem ponto de acumulação.  
+
+\textcolor{gris}{Seja \(\mathcal{F}\subset \tau\) filtro em \(X\). Então, \(\{\overline{A} : A \in \mathcal{F}\} \) é familia de fechados com a propriedade da interseção finita. Segue que \(\exists x \in \bigcap \{\overline{A}: A \in \mathcal{F}\}\), ponto de acumulação de \(\mathcal{F}\). }  
+
+\(\bullet\) Sejam \(Y\) compacto e \(f:X\to Y\). Mostre que se \((\operatorname{graf}f)\ce \subset X\times Y\), então \(f \) é contínua.  
+
 \textcolor{gris}{Sejam \((x_\lambda)_{\lambda \in\Lambda} \subset X: x_\lambda \to x \) e \((f(x_\lambda)) \subset Y\). Como \(Y\) é compacto, \(\exists f(x_{\phi(\mu)}) \to y \in Y\). Agora note que, 
 \[(x_{\phi(\mu)}, f(x_{\phi(\mu)})) \to (x,y) \in X \times Y, \]
 Como \( (\operatorname{graf}f)\ce \subset X \times Y\), segue que \(y= f(x)\). Em particular, pra qualquer subrede de \((f(x_\lambda ))\) convergente temos \(f(x_{\phi(\mu)}) \to f(x)\), segue que \(f(x_\lambda) \to f(x)\) e \(f\) é contínua. 
-}\\ 
-4. Uma função \(p : X \to Y \) contínua, fechada, sobrejetiva \(: \forall y \in Y, \ p^{-1}(\{y\})\subset X \) é compacto é chamada de \emph{perfeita}. Mostre que se \(p\) é perfeita e \(X\) regular, então \(Y \) é regular.    \\ 
+} 
+
+4. Uma função \(p : X \to Y \) contínua, fechada, sobrejetiva \(: \forall y \in Y, \ p^{-1}(\{y\})\subset X \) é compacto é chamada de \emph{perfeita}. Mostre que se \(p\) é perfeita e \(X\) regular, então \(Y \) é regular.     
+
 \textcolor{gris}{Sejam \(F\ce \subset Y\) não vazio e \(y\in Y : y \notin F \). Considere, 
 \[p^{-1}(\{y\})=:K \subset X \text{ \ e \ } p^{-1}(F)=: A\ce \subset X. \]  
 Como \(p\) é sobrejetiva \(K\) é não vazio. Tambem, \(K \cap A = p^{-1}(\{y\} \cap F) = \varnothing\). Note que, \(\forall k \in K, \ \exists U_k\ab, V_k\ab \subset X \) disjuntos \(: k \in U_k\) e \(A \subset V_k\). A familia \((U_k)\) é um cobrimento aberto de \(K\), logo \(\exists (U_j)\) subcobertura finita, defina, 
@@ -130,20 +173,25 @@ Y\setminus p(X\setminus V)\ce =: W_2\ab \subset Y.
 \end{align*}
 Temos, \(y \in W_1\), \(p(A) = p(p^{-1}(F)) = F \subset W_2\) e \(W_1 \cap W_2 = Y\setminus (p(X\setminus U \cup X\setminus V)) = Y \setminus p(X\setminus U \cap V ) = Y \setminus p(X) = \varnothing \), portanto \(Y\) é regular.  
 }
-\-\vspace{0.5cm}
+\-\vspace{0.1cm}
   {\hrule \vspace{-0.15cm}
   \centering \textbf{P2} \vspace{0.1cm}
   \hrule}
 
-1. \(\bullet \ \square \ 16.9\) (c) \(\Rightarrow\) (a) Mostre que se cada filtro convergente em \(X\) tem límite único, então \(X\) é Hausdorff. \\ 
+1. \(\bullet \ \square \ 16.9\) (c) \(\Rightarrow\) (a) Mostre que se cada filtro convergente em \(X\) tem límite único, então \(X\) é Hausdorff.  
+
 \textcolor{gris}{Suponha que \(X \) não for Hausdorff, então \(\exists x, y \in X : x\neq y\) e \(\forall U \in \U_x, \ \forall V\in \U_y, \ U\cap V \neq \varnothing\). Defina, 
 \[\mathcal{B} : = \{U \cap V : U \in \U_x \text{ e } V \in \U_y\}. \]
 Assim \(\mathcal{F} := [\mathcal{B}]\) é um filtro em \(X\) tal que \( \U_x, \U_y \subset \mathcal{F}\), segue que \(\mathcal{F} \to x\) e \(\mathcal{F} \to y\). 
-} \\ 
-\(\bullet \) Prove que \(X\) é \(T_2  \ \leftrightharpoons \ \forall a \in X, \ \bigcap\{\overline{U}: U \in \U_a\} = \{a\}\). \\
+}  
+
+\(\bullet \) Prove que \(X\) é \(T_2  \ \leftrightharpoons \ \forall a \in X, \ \bigcap\{\overline{U}: U \in \U_a\} = \{a\}\). 
+
 \textcolor{gris}{(\(\Rightarrow\)) (\(\supseteq\)) É claro. \((\subseteq)\) Dados \(a,b \in X : a \neq b, \ \exists U\ab\in \U_a, \ \exists V\ab\in \U_b : U\cap V = \varnothing\). Note que \(b\notin \overline{U} \subset (X\setminus V)\ce\subset X\), logo \(b \notin \bigcap\{\overline{U} : U \in \U_a\}\). \\ 
-(\(\Leftarrow\)) Sejam \(a,b \in X : a \neq b\), então \(\exists U\ab\in \U_a: b\notin \overline{U}\), segue que \(a \in U\) e \(b \in (X\setminus \overline{U})\ab \subset X\). }\\ 
-2. \(\bullet\) Seja \((\R \times \{0\}) \cup (\R\times \{1\}) =: X \leq \R^2\). Considere \(Y := X  / \sim \), onde \((x,0) \sim (x,1)\) se \(x\neq 0\) (\emph{reta com duas origens}). Mostre que \(Y\) não é Hausdorff. \\ 
+(\(\Leftarrow\)) Sejam \(a,b \in X : a \neq b\), então \(\exists U\ab\in \U_a: b\notin \overline{U}\), segue que \(a \in U\) e \(b \in (X\setminus \overline{U})\ab \subset X\). } 
+
+2. \(\bullet\) Seja \((\R \times \{0\}) \cup (\R\times \{1\}) =: X \leq \R^2\). Considere \(Y := X  / \sim \), onde \((x,0) \sim (x,1)\) se \(x\neq 0\) (\emph{reta com duas origens}). Mostre que \(Y\) não é Hausdorff.  
+
 \textcolor{gris}{Sejam \(\pi: X \ni x\mapsto [x] \in Y\) a projeção canônica e, 
 \[0_0 := [(0,0)] = \pi(0,0) \text{ e }0_1 := [(0,1)] = \pi(0,1).\] 
 É claro que \(0_0 \neq 0_1\), suponha por contradição que \(\exists U\ab, V\ab \subset Y\) disjuntos tais que \(0_0 \in U, \ 0_1 \in V\). Assim, 
@@ -154,15 +202,19 @@ Isso pois \(\pi \) é contínua, como são abertos \(\exists \epsilon_1, \epsilo
 (-\epsilon_2, \epsilon_2) \times \{1\} \subset \pi^{-1}(V)  .
 \end{align*}
 Sejam \(\delta:= \min \{\epsilon_1, \epsilon_2\}>0\) e \(x\in \R : 0< x< \delta\), segue que \(\pi(x,0) = \pi(x,1)  = [x] \in U\cap V. \ \lightning \)  
-}   \\
-\(\bullet \) Mostre que se cada subespaço aberto de \(X\) é Lindelöf, então todo subespaço de \(X\) é Lindelöf. \\ 
+}   
+
+\(\bullet \) Mostre que se cada subespaço aberto de \(X\) é Lindelöf, então todo subespaço de \(X\) é Lindelöf.  
+
 \textcolor{gris}{Sejam \(S \leq X\) e \((U_i)_{i\in I}\ab\) cobertura de \(S\). Note que,  \(\forall i \in I, \exists V_i\ab \subset X : U_i = V_i \cap S\). Em particular, 
 \[S \subset \bigcup V_i =: U\ab \leq X. \]
 Segue que \(\exists J\subset I \) enumeravél \(: U = \bigcup V_j\). Agora,   
 \[S = U \cap S = \bigcup V_j \cap S = \bigcup U_j, \]
 portanto \(S\) tambem é Lindelöf. 
-} \\ 
-3. \(\bullet\) Mostre que \(\blacksquare \text{ (\emph{Tietze}) }\Rightarrow \)\ \  {\scriptsize $\square$} (\emph{Urysohn}). \\ 
+} 
+
+3. \(\bullet\) Mostre que \(\blacksquare \text{ (\emph{Tietze}) }\Rightarrow \)\ \  {\scriptsize $\square$} (\emph{Urysohn}).  
+
 \textcolor{gris}{(\(\Rightarrow\)) Sejam \(A\ce, B\ce\subset X\) disjuntos, \(A \cup B = : C\ce \subset X\) e \(\chi_{B} : C  \to [0,1] \). Note que \(B = B\ce\cap C = (X\setminus A)\ab \cap C \), logo \(B\) é tanto aberto quanto fechado em \(C\), segue que \(\chi_B\) é contínua. Pelo \(\blacksquare\) (\emph{Tietze}) \(\exists f: X\to [0,1]\) contínua \(:f|_C = \chi_B(C) \). Finalmente, 
 \[f(A) = \chi_B(A) \subset \{0\} \text{ \ e \ } f(B) = \chi_B(B) \subset\{1\}.\] 
 (\(\Leftarrow\)) Sejam \(A\ce, B\ce\subset X\) disjuntos, então 
@@ -171,27 +223,87 @@ A \subset f^{-1}([0,\nicefrac{1}{2})\ab)=:U\ab \subset X \hspace{2cm}\\
 B \subset f^{-1}((\nicefrac{1}{2}, 1]\ab)=:V\ab \subset X,
 \end{align*}
 e claramente \(U\cap V = f^{-1}(\varnothing) = \varnothing\), logo, \(X\) é normal. 
-} \\ 
-\(\bullet \ \square\) 18.4.  Cada subespaço fechado de um espaço normal é normal. \\ 
+}  
+
+\(\bullet \ \square\) 18.4.  Subespaço fechado de espaço normal é normal.  
+
 \textcolor{gris}{Sejam  \(S\ce \leq X\) e \(A\ce, B\ce\subset S\) disjuntos, \(\exists F\ce, G\ce \subset X : F\cap S = A\) e \(G\cap S = B\). Em particular, \(A\ce,B\ce \subset X\), logo \(\exists U_1\ab, V_1\ab \subset X \) disjuntos \(: A \subset U_1\) e \(B\subset V_1\). Defina, 
 \[U_1 \cap S =: U\ab\subset S \text{ \ e \ } V_1 \cap S =: V\ab \subset S. \]
 Assim, \(A \subset U, \ B\subset V\) e \(U \cap V = U_1 \cap V_1 \cap S =\varnothing\).
-} \\ 
-4. Sejam \(X\) Lindelöf e \(Y\) compacto. Mostre que \(X\times Y \) é Lindelöf. \\ 
+}  
+
+4. Sejam \(X\) Lindelöf e \(Y\) compacto. Mostre que \(X\times Y \) é Lindelöf.  
+
 \textcolor{gris}{Seja \((U_i\ab)_{i\in I}\) cobertura de \(X\times Y\). Note que \(\forall x \in X, \ \{x\} \times Y \simeq Y\) é compacto, portanto \(\exists (U_{x,j})_{j\in J}\) subcobertura finita de \(\{x\}\times Y\). Agora, \(\forall j\in J, \exists V_{x,j}\ab \subset X, \ \exists W_{x,j}\ab\subset Y : x \in V_{x,j}\) e \(V_{x,j} \times W_{x,j} \subset U_{x,j}\). Defina,  
 \[\bigcap V_{x,j}=: V_x\ab \subset X . \]
 Assim, \(V_x \times Y \subset \bigcup U_j\) e a familia \((V_x)_{x\in X}\) é um cobertura aberta de \(X\), segue que \(\exists (V_n)_{n \in \N}\) subcobertura enumeravél. Al fim, a familia \((U_{n,j})\) é subcobertura enumeravél de \(X\times Y\), concluindo então que este último é Lindelöf.     
-} \\ 
-\(\bullet\) Seja \(p: X \to Y\) perfeita. Mostre que se \(X \) é Hausdorff, então \(Y \) é Hausdorff. \\ 
+}  
+
+\(\bullet\) Seja \(p: X \to Y\) perfeita. Mostre que se \(X \) é Hausdorff, então \(Y \) é Hausdorff.  
+
 \textcolor{gris}{Sejam \(k, l \in Y : k \neq l\), então \(K := p^{-1}(\{k\})\) e \(L := p^{-1}(\{l\})\) são dois compactos não vazios disjuntos em \(X\). Portanto \(\exists U\ab, V\ab\subset X\) disjuntos \(: K\subset U\) e \(L\subset V\) (Ex. 21.H.). Seguido defina, 
 \begin{align*}
 Y\setminus p(X\setminus U)\ce =: W_1\ab \subset Y; \hspace{2cm}\\
 Y\setminus p(X\setminus V)\ce =: W_2\ab \subset Y.
 \end{align*}
 Nesso termos \(k \in W_1\), \(l \in W_2\), e \(W_1 \cap W_2 = \varnothing\). 
-} \\ 
-5. Seja \(X \) completamente regular e \(K\subset X \) compacto e \(A\ce\subset X: K \cap A = \varnothing\). Mostre que \(\exists f: X \to [0,1]\) contínua \(: f(K) = \{0\}\) e \(f(A) = \{1\}\). \\ 
+}  
+
+5. Seja \(X \) completamente regular e \(K\subset X \) compacto e \(A\ce\subset X: K \cap A = \varnothing\). Mostre que \(\exists f: X \to [0,1]\) contínua \(: f(K) = \{0\}\) e \(f(A) = \{1\}\).  
+
 \textcolor{gris}{\(\forall k \in K, \ \exists g_k : X \to [0,1] \) contínua \(: f(k )= 0 \) e \(f(A) \subset\{1\}\). Sejam \(g_k^{-1}([0, \nicefrac{1}{2})\ab) =: U_k\ab \subset X\). A familia \((U_k)\) é uma cobertura de \(K\), segue que \(\exists (U_j)_{j\in J}\) subcobertura finita. Considere \(f = g \circ h : X \to [0,1]\) tal que,   
 \[g(x):= \min_{j\in J} \{g_j(x)\} \text{ \ e \ } h := \max_{t \in [0,1]}\{0, 2t - 1\}. \]  
 Asimm, \(f\) é contínua (composição de contínuas), \(f(K) = \{0\}\) e \(f(A)= \{1\}\), isso pois \(g(K ) \subset [0, \nicefrac{1}{2})\). 
 } 
+
+\vspace{0.5cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{T3} \vspace{0.1cm}
+  \hrule}
+
+1. Verdadeiro ou Falso?
+
+\(\bullet \) \  Cada componente conexa por caminhos de um espaço topologico \(X\) está contida numa componente conexa. 
+
+\textcolor{gris}{VERDADEIRO. Sejam \(x\in  X\) e \(P_x\)  a sua componente conexa por caminhos. Em particular, \(P_x\) é conexa tal que \(x\in P_x\), segue que \(P_x \subset C_x\).    
+}
+
+\(\bullet \) \ Se \(X\) é localmente conexo por caminhos, então as componentes conexas e conexas por caminhos são iguais. 
+
+\textcolor{gris}{VERDADEIRO. Dado \(x\in X\), vimos que \(P_x \subset C_x\). Se \(X\) é localmente conexo por caminhos, vamos ver que \(P_x\) é tanto aberta quanto fechada em \(X\). De fato, dado \(y \in P_x, \ \exists U \in \U_y: U \) é conexo por caminhos, segue que \( y\in \operatorname{int}{U} \subset P_x\ab\subset X\). Por outro lado, \(X\setminus\left( \bigcup\{P_y : y \notin P_x \}\ab\right) = P_x\ce\subset X\). Finalmente \(P_x\) é tanto aberto quanto fechado em \(C_x\) conexo \(\leftrightharpoons\) \(P_x = \emptyset\) ou \(P_x = C_x\), mas \(x \in P_x\), logo \(P_x = C_x\).     }
+
+\(\bullet\) \ Se \(X\) é localmente compacto e \(f:X\to Y\) é contínua, então \(\operatorname{Im} f \) é localmente compacto. 
+
+\textcolor{gris}{FALSO. Sejam \(X = \N\) com topologia discreta e \(f: \N \to (\R, \tau_2)\) tal que \(n\mapsto q_n\) (enumeración de \(\Q\)). Note que \(\N\) é localmente compacto, de fato \(\{\{n \}: n \in \N\}\) é base de vizinhaças compactas,  \(f \) é claramente contínua e \(\operatorname{Im}f = \Q\) que não é localmente compacto. Dados \(q \in \Q \leq \R,\ U \in \U_q\), \(\exists (q_n)_{n\in \N}\subset U : q_n\to \alpha \in \R\setminus \Q\), seqüência que não possui subseqüência convergente a \(p \in \Q\) pois o límite tá no complemento. }
+
+\( \bullet \) \ Fecho de conexo por caminhos é conexo por caminhos. 
+
+\textcolor{gris}{
+  FALSO. Sejam \(f: (0,1] \ni x \mapsto \sin( \nicefrac{1}{x}) \) e \(S := \operatorname{graf}f \leq \R^2\). É conexo por caminhos, de fato, dados \(0< a \leq b \leq 1 \in \R\) defina \(\ell: [0,1] \ni t \mapsto (1-t)a + tb \in  \R\), é claro que \(\gamma(t):= (\ell(t), f(\ell(t)))\subset S\) é caminho contínuo \(: \gamma(0) = (a, f(a)) \) e \(\gamma(1) = (b, f(b))\). 
+  \[\overline{S} = S \cup \{(0,y): |y|\leq 1\}. \]
+  Suponha por contradição que \(\exists \gamma(t) = (\gamma_1(t), \gamma_2(t))\) contínuo \(: \gamma(0) = (0,0)\) e \(\gamma(1) = (\nicefrac{1}{\pi}, 0)\). Note que \([0,\nicefrac{1}{\pi}]\subset \operatorname{Im}\gamma_1\), em particular, \(\forall n \in \N, \ \nicefrac{1}{n\pi}\in \operatorname{Im}\gamma_1\). Dado \(\epsilon > 0\) seja \([0,\epsilon) \in \U_0, \ \exists n \in \N  \) tal que,
+  \[\frac{1}{n+\nicefrac{3\pi}{2}}< \frac{1}{n+\nicefrac{\pi}{2}} < \frac{1}{n\pi}< \epsilon,\]  
+  todos em \(\gamma_1[0,\epsilon)\). Portanto, \(\sin(n+\nicefrac{3\pi}{2}), \ \sin(n + \nicefrac{\pi}{2}) \in \operatorname{Im}\gamma_2\), ou seja, \(\{-1,1 \}\subset \gamma_2[0,\epsilon)\). Finalmente, note que \(\not\exists \delta>0 : \gamma_2[0, \delta) \subset B(0;\nicefrac{1}{2}) \cap S\), fato que contradiz a continuidade no 0. \(\lightning\)  
+}
+
+\(\bullet \) \ Componentes conexas são mapeadas em componentes conexas vía homeomorfismos. 
+
+\textcolor{gris}{VERDADEIRO. Sejam \(f:X\simeq Y\), \(x\in X\), \(C_x\) sua componente conexa e \(f(x)= y \in Y\). Note que \(y \in f(C_x)\) conexo por ser imagem contínua de conexo, logo \(f(C_x)\subset C_y\). Note que \(x \in f^{-1}(C_y)\) mais uma vez conexo, mas \(C_x \) é maximal, logo \(C_x = f^{-1}(C_y)\) e \(f(C_x) = f(f^{-1}(C_y)) = C_y\). }
+
+\(\bullet\) \ Sejam \(\tau, \ \tau'\) duas topologias em \(X  : \tau < \tau'\). Se \((X,\tau')\) é conexo, então \((X,\tau)\) tambem é conexo.  
+
+\textcolor{gris}{VERDADEIRO. Por contrapositiva, suponha que \((X, \tau)\) não for conexo, então \(\exists U\ab, V\ab \in \tau\) disjuntos \(: X = U \cup V\). Como \(\tau \subset \tau'\), em particular \(U\ab, V\ab \in \tau'\), ainda são disjuntos e \(X = U \cup V\), segue que \((X, \tau')\) não é conexo.}
+
+\(\bullet\) \ A esfera \(\E^{n-1}:= \{\x \in \R^n : \|\x\| =1\} \) é conexa se \(n\geq 1\). 
+
+\textcolor{gris}{VERDADEIRO. Se \(n=1\), então \(\E^0= \{-1,1\}\) que não é conexa. Por outro lado, se \(n>1\), sabemos que,  
+\[\pi_N : \E^{n-1}\setminus \{N\} \simeq \R^n.\] 
+Em particular, \(\E^{n-1}\setminus \{N\}\) é imagem contínua de conexo, segue que \(\overline{\E^{n-1}\setminus \{N\}} = \E^{n-1}\) é conexa. }
+
+2. \(\bullet\) \ Mostre que espaços cocientes de espaços localmente conexos por caminhos são localmente conexos por caminhos. 
+
+\textcolor{gris}{Sejam \(\pi : X\to Y\) aplicação cociente, \(y\in Y \), \(x \in X : \pi(x)=y\) e \(V\ab \in \U_y\). Como \(X\) é localmente conexo por caminhos \(P_x\ab \subset X\). Note que, \(P_x \subset \pi^{-1}(\pi(P_x)) \subset \pi(\pi^{-1}(V)) = V \) é imag }
+
+\(\bullet\) \ Se \(X\) possui um subespaço \(D \leq X\) denso e conexos, então \(X\) é conexo. 
+
+\textcolor{gris}{Se \(D\) é conexo, então segue da \(\square\) 26.6. que \(\overline{D} = X\) é conexo. }
