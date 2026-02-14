@@ -264,10 +264,71 @@ Analogamente consegue-se mostrar linearidade na outra coordenada. Mais uma vez, 
 
 (a) Se \(T \in \hom(V,W)\), então \(\ker T' = \{f\in W' : \forall w \in \operatorname{Im}T, \ f(w) = 0\}\). 
 
+\textcolor{gris}{VERDADEIRO. \(\ker T' = \{f \in W' : (f \circ T)(v) \equiv  0, \ \forall v \in V\} = \{f \in W' : f(w) \equiv 0, \ \forall w \in \operatorname{Im}T\}\).}
+
 (b) Se \(\dim V> 2 \), \(\exists T: V^{\wedge 2} \twoheadrightarrow V^{\odot 2}\) linear.
+
+\textcolor{gris}{FALSO. Em dimensão finita, \(\dim V = n >2\) temos, 
+\begin{align*}
+  \dim V^{\wedge 2} = \binom{n}{2} &= \frac{n(n-1)}{2} \\ 
+  &\hspace{0.5cm}< \frac{n(n+1)}{2} = \binom{n +1}{2} = \dim V^{\odot 2}
+\end{align*}. 
+}
 
 (c) A imagem de uma função multilinear é um subespaço de seu contradomínio. 
 
+\textcolor{gris}{FALSO. Sejam \(V = \R^2\) e considere \(\phi : V \times V \to M_2(\R)\) tal que \((v,w)\mapsto [v][w]^t\). Está bem definida e é bilinear,  
+\begin{align*}
+  \phi(v_1 + \lambda v_2,w) &= [v_1+\lambda v_2][w]^t \\ 
+   &= [v_1][w]^t +\lambda [v_2][w]^t  \\
+   &= \phi(v_1, w) + \lambda \phi(v_2,w),
+\end{align*}
+mesmo na outra coordenada. Temos \(\operatorname{Im}\phi = \{A \in M_2(\R): \operatorname{pt}A=1\}\), que não é subespaço, \(E_{11}, E_{22}\in \operatorname{Im} \phi\), mas \(E_{11} + E_{22} = \id_2\) que tem posto 2.  
+}
+
 (d) Se \(\dim V < \infty\) e \( T\in \ehom(V)\) é diagonalizavél, \(\exists \phi \in B_s(V)\) produto interno \(: T= T^\phi_\phi\). 
 
+\textcolor{gris}{VERDADEIRO. Seja \(\alpha = (v_j)\) base formada por autovetores, seja \(\phi(v_i,v_j) := \delta_{ij}\), assim definida \([\phi]_\alpha = \id_V\). Visto que \(T\) é diagonal nessa base, 
+\[[\phi]_\alpha [T]_\alpha^\alpha = ([T]_\alpha^\alpha)^t [\phi]_\alpha \ \leftrightharpoons \ T = T^*.\] 
+}
 (e) Se \(T\) e \(S\) são operadores lineares, \(v \) gera um \(T\)-ciclo de Jordan de comprimento \(m\) e \(w\) gera um \(S\)-ciclo de Jordan de comprimento \(n\), então \(v\otimes w\) gera um \(T\otimes S\)-ciclo de Jordan de comprimento \(m+n-1\). 
+
+\textcolor{gris}{FALSO. O problema surge quando algum autovalor é 0. Sejam \(\alpha, \ \beta \) bases canônicas de \(\R^2, \ \R\) respectivamente e, 
+\[[T]_\alpha^\alpha = \begin{bmatrix}
+  1 & 0 \\ 
+  1 & 1
+\end{bmatrix}, \  S_\beta^\beta = \begin{bmatrix}
+  0
+\end{bmatrix} \text{ \ \ e \ \ } [T\otimes S]^{\alpha\otimes \beta}_{\alpha\otimes \beta}\equiv \textbf{0}.\]
+Note que \(e_1\) gera um \(T\)-ciclo de Jordan de comprimento 2, quanto \(1\) gera um \(S\)-ciclo de Jordan de comprimento 1. No entanto, \((T\otimes S)(e_1 \otimes 1) = 0\), logo \(e_1 \otimes 1\) gera um \(T\otimes S\)-ciclo de Jordan de comprimento \(1 \neq 2 + 1 -1 =2\).  
+}
+
+3. (a) Mostre que \(\exists !\Gamma : V\otimes W \to \hom(V,W)\) linear \(:\Gamma(v\otimes w)(f) = f(v) w \), quaisquer \( v\in V, \ w \in W, \ f \in V'\). 
+\textcolor{gris}{
+  \begin{align*}
+    \psi :  V \times W &\to \hom(V', W) \\ 
+(v,w) \hspace{0.15cm}&\mapsto \hspace{0.1cm}[f \mapsto f(v) w ]
+  \end{align*}
+  Note que \(\psi\) é bilinear, de fato, 
+  \begin{align*}
+    \psi(v_1+\lambda v_2, w)(f) &= f(v_1 + \lambda v_2) w \\ 
+    &= f(v_1)w + \lambda f(v_2) w \\ 
+    &= \psi(v_1,w)(f)+ \lambda \psi(v_2, w )(f), 
+  \end{align*}
+  toda vez que coincidem em cada vetor são iguais como funções. Analogamente, na segunda coordenada temos,  
+  \begin{align*}
+    \psi(v, w_1+\lambda w_2)(f) &= f(v) [w_1 + \lambda w_2] \\ 
+    &= f(v)w_1 + \lambda f(v) w_2 \\ 
+    &= \psi(v,w_1)(f)+ \lambda \psi(v, w_2)(f). 
+  \end{align*}
+  Pela PUPT, \(\exists ! \Gamma : V\otimes W \to \hom(V',W) \) linear \(:  \Gamma (v \otimes w) =\psi(v,w) = [f \mapsto f(v)w]\) como enunciado. 
+}
+
+(b) Mostre que, se \(\dim V < \infty\), \(\Gamma \) é isomorfismo. 
+
+\textcolor{gris}{Vamos notar primeiro que \(\Gamma \) é injetora em geral. Seja \(\textbf{v}\in V\otimes W\) e escolhe uma representação dele \(: \textbf{v} = \sum^r v_j\otimes w_j \), com \((v_j)\) l.i. em \(V\). Suponha que, 
+\[\Gamma(\textbf{v}) = \left[f \mapsto \sum f(v_j)w_j\right] \equiv 0.\]
+Em particular, considerando os funcionais \(f_i(v_j) = \delta_{ij}\), temos que \(\Gamma(\textbf{v})(f_i) = \sum \delta_{ij}w_j = w_j = 0\), isso \(\forall j \leq r\), segue que \(\textbf{v}= 0\) e \(\Gamma \) é injetora. Finalmente,  
+\[\dim( V' \otimes W) = \dim V \dim W = \dim (\hom(V', W)), \]
+assim, \(\Gamma \) é isomorfismo como enunciado. 
+}

@@ -302,8 +302,67 @@ Em particular, \(\E^{n-1}\setminus \{N\}\) é imagem contínua de conexo, segue 
 
 2. \(\bullet\) \ Mostre que espaços cocientes de espaços localmente conexos por caminhos são localmente conexos por caminhos. 
 
-\textcolor{gris}{Sejam \(\pi : X\to Y\) aplicação cociente, \(y\in Y \), \(x \in X : \pi(x)=y\) e \(V\ab \in \U_y\). Como \(X\) é localmente conexo por caminhos \(P_x\ab \subset X\). Note que, \(P_x \subset \pi^{-1}(\pi(P_x)) \subset \pi(\pi^{-1}(V)) = V \) é imag }
+\textcolor{gris}{Sejam \(\pi: X \to Y \) a aplicação cociente, \(y\in V\ab \in \U_y\) e \(P_y\) sua componente conexa por caminhos (em \(V\)), vamos mostrar que \(P_y \ab \subset Y \ \leftrightharpoons \ \pi^{-1}(P_y)\ab \subset X \). Pra isso seja \(x \in \pi^{-1}(P_y) \subset \pi^{-1}(V)\ab \subset X\), segue que \(\exists U\ab \in \U_x : U \subset \pi^{-1}(V)\) conexa por caminhos. Vamos ver que \(U \subset \pi^{-1}(P_y)\). Dado \(z\in U, \ \exists \gamma : [0,1] \to U\) contínuo ligando \(x \) e \(z\), segue que \((\pi \circ \gamma) (t)\subset V\) é caminho contínuo ligando \(\pi(x) \in P_y\) e \(\pi(z)\), portanto \(\operatorname{Im} \pi \circ \gamma \subset P_y\), em particular, \(\pi(z) \in P_y\) e \(\gamma (1) = z \in \pi^{-1}(P_y)\). }
 
 \(\bullet\) \ Se \(X\) possui um subespaço \(D \leq X\) denso e conexos, então \(X\) é conexo. 
 
-\textcolor{gris}{Se \(D\) é conexo, então segue da \(\square\) 26.6. que \(\overline{D} = X\) é conexo. }
+\textcolor{gris}{Se \(D\) é conexo, então \(\overline{D} = X\) é conexo. }
+
+3. Seja \(p: E \to B\) uma aplicação de recobrimento. Suponha que \(E\) for compacto e \(B\) conexo. Mostre que \(\forall b \in B\), temos \(p^{-1}(\{b\})\) finito cuja quantidade não depende de \(b\). 
+
+\textcolor{gris}{Sabemos que \(p^{-1}(b)\) é discreto em \(E\) compacto \(\leftrightharpoons \ p^{-1}(b) \) é finito. Agora, seja \(f : B \to \N\) tal que \(b \mapsto |p^{-1}(b)| \), vamos ver que é localmente constante. Sejam  \(b \in B\) e \(U \in \U_b : p^{-1}(U) = \bigsqcup^n V_j\ab \) e \(\forall j \leq n, \ p|_{V_j}: V_j \simeq U\). Dado \(b' \in U, \ \exists ! x_j \in V_j : \pi(x_j) = b' \), em particular, \(|p^{-1}(b')| =n = |p^{-1}(b)| \) e \(f\) é contínua. Finalmente, dado que \(B\) é conexo, concluimos \(f(E) =n \).   \\  }
+
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{P3} \vspace{0.1cm}
+  \hrule}
+
+1. Seja \(p : E \to B \) uma aplicação de recobrimento. Suponha que \(B\) for compacto e, \(\forall b\in B\), \(p^{-1}(\{b\})\) seja finito. Mostre que \(E\) é compacto. 
+
+\textcolor{gris}{Seja \((U_i\ab)_{i \in I}\) cobertura aberta de \(E\). Dado \(b \in B, \ \pi^{-1}(b) = \{x_1, x_2, \ldots, x_n\}\), portanto \(\exists (U_{j,b})_{j\leq n} : x_j \in U_{j,b}\). Como temos homeomorfismos locais \(\exists W_{j,b}\ab \subset U_{j,b} \) tais que \(\pi|_{W_{j,b}}: W_{j,b} \simeq V_{j,b}\), onde \(V_{j,b}\ab \in \U_b\). Seja, 
+\[\bigcap^n V_{j,b} := V_b\ab \in \U_b, \]
+A familia \((V_b)_{b\in B}\) é uma cobertura aberta de \(B\), logo, \(\exists (V_k)_{k\leq m}\) subcobertura finita, segue que,  
+\begin{align*}
+X = \pi^{-1}(B) &= \bigcup^m\pi^{-1}(V_k)  \\ 
+&\hspace{1cm}\subset \bigcup^m\bigcup^n W_{b_j,k} \subset \bigcup^m\bigcup^n U_{b_j,k},
+\end{align*}
+mostrando que existe subcobertura finita e \(E\) é compacto. 
+}
+
+2. Seja \(p : E \to B\) uma aplicação de recobrimento, com \(E\) conexo por caminhos. Mostre que se \(B\) é simplesmente conexo, \(p\) é um homeomorfismo.  
+
+\textcolor{gris}{Basta ver que \(p\) é injetiva. pois já é sobrejetiva, contínua e aberta. Sejam \(x, y\in E: p(x) = p(y) = b\) e \(f : [0,1] \to E\) caminho contínuo \(: f(0) =x\) e \(f(1)= y\). Segue que \(p \circ f=:g \) é um laço com base em \(b\). Como \(B\) é simplesmente conexo \(\exists H:  g \simeq b\), onde 
+\[H(s,0) = g(s); \ \ H(s,1) = b; \ \ H(0,t) = H(1,t) = b.\]
+Existe portanto, uma homotopia \(\widetilde{H}:f \simeq x \) tal que, 
+\[\widetilde{H}(s,0) = f(s); \ \  \widetilde{H}(0,t) = x.\]
+Note que, \(\pi(\widetilde{H}(s,1))= b\) é constante em \(s\), 
+\[\widetilde{H}(0,1) = x =  \widetilde{H}(s,1), \ \forall s \in [0,1].\]
+Tambem, \(\pi(\widetilde{H}(1,t))= b\) é constante em \( t\), 
+\[\widetilde{H}(1,0) = f(1) = y= \widetilde{H}(1,t), \  \forall t \in [0,1]\]
+Finalmente,  \(x =\widetilde{H}(1,1) = y \) e \(p : X \simeq Y\)  como desejado.  
+}
+
+3. Sejam \(A\subset X\) e \(B\subset Y\), onde \(X\) e \(Y\) são conexos. Mostre que \(Z:= (X\times Y) \setminus (A\times B)\) é conexo.  
+
+\textcolor{gris}{
+É preciso que \(A\subsetneq X\), e \(B\subsetneq Y\), um contraexemplo \(X = Y = \R = A , \ B= \{0\}\), \[ Z  = \R \times \R\setminus \{0\} \rightarrow  \ \text{disconexo}.\]
+Com essa salvedade, sejam \(x_0 \in X\setminus A, \ y_0 \in Y\setminus B\). Pra todos \(x \in X\setminus A\), \(y \in Y\setminus B\) considere, 
+\[L_x := \{x\} \times Y\simeq Y; \ \ H_y := X \times \{y\}\simeq X.\]   
+Sejam \(U_x := L_x \cup H_{y_0}\) e  \(V_y := L_{x_0} \cup H_y \), note que, \((x,y_0) \in U_x\neq \varnothing\) e \((x_0,y) \in V_y \neq \varnothing\), como união de conexos de interseção não vazío são conexos. Finalmente, considere \(S_i := U_x \cup V_y\), temos,  
+\[\bigcup S_i =  Z \text{ \ \ e \ \ } (x_0,y_0) \in \bigcap S_i \neq \varnothing, \] 
+mais uma vez pela \(\square \) 26.12. \(Z\) é conexo como enunciado, Isso pois, \(\bigcup S_i = X\setminus A\times Y\setminus B = Z\). 
+}
+
+4. \(\square \) 27.8. Mostre que espaços cocientes de espaços localmente conexos são localmente conexos. 
+
+\textcolor{gris}{Seja \(\pi: X\to Y\) uma aplicação cociente, seguindo a \(\square \) 27.6., vamos ver que \(C_y\ab \subset Y \ \leftrightharpoons \ \pi^{-1}(C_y) \ab \subset X\). Sendo \(x\in \pi^{-1}(C_y)\), note que \(\pi(C_x)\) é conexa \(: y \in \pi(C_x)\), portanto \(\pi(C_x) \subset C_y\)  e 
+\(C_x\ab  \subset \pi^{-1} (\pi(C_x)) \subset \pi^{-1}(C_y)\). 
+}
+
+5. Mostre que \(G := \Pi_1 (X\times Y, (x_0,y_0)) \cong \Pi_1(X, x_0) \times \Pi_1(Y,y_0):= G_1 \times G_2\). 
+
+\textcolor{gris}{As projeções são contínuas, portanto existem, 
+\begin{align*}
+  \pi_{X_{*}} :G \cong G_1; \ \ \pi_{Y_{*}} : G \cong G_2.  
+\end{align*}
+Seja \(g_{*}: [f] \mapsto  (\pi_{X_*}([f]), \pi_{Y_*}([f]))\). 
+}
