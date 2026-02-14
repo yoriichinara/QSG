@@ -28,7 +28,7 @@ segue que \(A\ce\subset X\) pois é interseção arbitraria de fechados.}
 
 3. Verdadeiro ou falso? Para todo topologia \(\tau\) em \(\R\), \(f : (\R, \tau) \ni x \mapsto -x \in (\R, \tau)\) é contínua.   
 
-\textcolor{gris}{É falso, considere \(\tau = \{\varnothing , \R\} \cup \{(a,\infty) : a \in \R\}\), ahí \(f^{-1}((1,\infty)\ab) = (-\infty, -1)\) que não é aberto em \(\tau\). }
+\textcolor{gris}{FALSO. Considere \(\tau = \{\varnothing , \R\} \cup \{(a,\infty) : a \in \R\}\), ahí \(f^{-1}((1,\infty)\ab) = (-\infty, -1)\) que não é aberto em \(\tau\). }
 
 4. \(\bullet \) Uma rede \((x_\lambda)_{\lambda \in \Lambda} \subset X\) é dita \emph{universal} se dado \( A\subset X, \ \exists \lambda_0 \in \Lambda\) tal que,  
 \[\{x_\lambda : \lambda \geq \lambda_0\} =: B_{\lambda_0} \subset A \text{ \ ou \ } B_{\lambda_0} \subset X \setminus A .\] 
@@ -49,7 +49,7 @@ Como \((\nicefrac{1}{n}) \subset \Q\), então de fato \(\nicefrac{1}{n} \to q, \
 \[f: Y \ni y \mapsto (f_i(y)) \in X := \prod X_i,\]
 é contínua, tendo \(X\) topologia das caixas.  
 
-\textcolor{gris}{É falso em geral, segue do fato da preimagem de abertos ser interseção arbitraria (\(I\) infinito) de abertos. Sejam \(X := \R^\N\), \(f_n(x) = x\) e \(\underset{n\in \N}{\prod} (-\nicefrac{1}{n}, \nicefrac{1}{n})\ab =: U\ab \subset X\), note que, 
+\textcolor{gris}{FALSO. Segue do fato da preimagem de abertos ser interseção arbitraria (\(I\) infinito) de abertos. Sejam \(X := \R^\N\), \(f_n(x) = x\) e \(\underset{n\in \N}{\prod} (-\nicefrac{1}{n}, \nicefrac{1}{n})\ab =: U\ab \subset X\), note que, 
 \[f^{-1}(U) = \bigcap_{n \in \N}\left(-\frac{1}{n}, \frac{1}{n}\right) = \{0\} \notin (\R, \tau_2). \]}
  
 \-\vspace{-0.7cm}
@@ -334,11 +334,10 @@ mostrando que existe subcobertura finita e \(E\) é compacto.
 \[H(s,0) = g(s); \ \ H(s,1) = b; \ \ H(0,t) = H(1,t) = b.\]
 Existe portanto, uma homotopia \(\widetilde{H}:f \simeq x \) tal que, 
 \[\widetilde{H}(s,0) = f(s); \ \  \widetilde{H}(0,t) = x.\]
-Note que, \(\pi(\widetilde{H}(s,1))= b\) é constante em \(s\), 
+Note que, \(\pi(\widetilde{H}(s,1))= b = \pi(\widetilde{H}(1,t))\), portanto constantes em \( s\) e \( t\) respectivamente,    
 \[\widetilde{H}(0,1) = x =  \widetilde{H}(s,1), \ \forall s \in [0,1].\]
-Tambem, \(\pi(\widetilde{H}(1,t))= b\) é constante em \( t\), 
 \[\widetilde{H}(1,0) = f(1) = y= \widetilde{H}(1,t), \  \forall t \in [0,1]\]
-Finalmente,  \(x =\widetilde{H}(1,1) = y \) e \(p : X \simeq Y\)  como desejado.  
+Em particular,  \(x =\widetilde{H}(1,1) = y \), \(p \) é injetora e \(p : X \simeq Y\).  
 }
 
 3. Sejam \(A\subset X\) e \(B\subset Y\), onde \(X\) e \(Y\) são conexos. Mostre que \(Z:= (X\times Y) \setminus (A\times B)\) é conexo.  
@@ -347,7 +346,7 @@ Finalmente,  \(x =\widetilde{H}(1,1) = y \) e \(p : X \simeq Y\)  como desejado.
 É preciso que \(A\subsetneq X\), e \(B\subsetneq Y\), um contraexemplo \(X = Y = \R = A , \ B= \{0\}\), \[ Z  = \R \times \R\setminus \{0\} \rightarrow  \ \text{disconexo}.\]
 Com essa salvedade, sejam \(x_0 \in X\setminus A, \ y_0 \in Y\setminus B\). Pra todos \(x \in X\setminus A\), \(y \in Y\setminus B\) considere, 
 \[L_x := \{x\} \times Y\simeq Y; \ \ H_y := X \times \{y\}\simeq X.\]   
-Sejam \(U_x := L_x \cup H_{y_0}\) e  \(V_y := L_{x_0} \cup H_y \), note que, \((x,y_0) \in U_x\neq \varnothing\) e \((x_0,y) \in V_y \neq \varnothing\), como união de conexos de interseção não vazío são conexos. Finalmente, considere \(S_i := U_x \cup V_y\), temos,  
+Sejam \(U_x := L_x \cup H_{y_0}\) e  \(V_y := L_{x_0} \cup H_y \), note que, \((x,y_0) \in U_x\neq \varnothing\) e \((x_0,y) \in V_y \neq \varnothing\), como união de conexos de interseção não vazia são conexos. Finalmente, considere \(S_i := U_x \cup V_y\), temos,  
 \[\bigcup S_i =  Z \text{ \ \ e \ \ } (x_0,y_0) \in \bigcap S_i \neq \varnothing, \] 
 mais uma vez pela \(\square \) 26.12. \(Z\) é conexo como enunciado, Isso pois, \(\bigcup S_i = X\setminus A\times Y\setminus B = Z\). 
 }
@@ -362,7 +361,24 @@ mais uma vez pela \(\square \) 26.12. \(Z\) é conexo como enunciado, Isso pois,
 
 \textcolor{gris}{As projeções são contínuas, portanto existem, 
 \begin{align*}
-  \pi_{X_{*}} :G \cong G_1; \ \ \pi_{Y_{*}} : G \cong G_2.  
+  (\pi_X)_{*} :G \cong G_1; \ \ (\pi_{Y})_{*} : G \cong G_2.  
 \end{align*}
-Seja \(g_{*}: [f] \mapsto  (\pi_{X_*}([f]), \pi_{Y_*}([f]))\). 
+Seja \(\Phi: [f] \mapsto  (\pi_{X_*}([f]), \pi_{Y_*}([f]))\), é claro que \(\Phi\) é homomorfismo de grupos (operações por coordenadas). Suponha que, \(\Phi([f]) = ([x_0], [y_0])\), segue que,    
+\[[\pi_X \circ f] = [x_0] \text{ \ \ e \ \ }[\pi_X \circ f] = [y_0], \]
+e existem homotopias, \(H_X: \pi_X \circ f \simeq x_0 \) e \(H_Y: \pi_Y \circ f \simeq y_0\). Seguido disso, defina a homotopia em \(X \times Y\) tal que,  
+\begin{align*}
+  H : [0,1]\times [0,1] &\to\hspace{1cm} X\times Y  \\ 
+ (s,t) \hspace{0.6cm}&\mapsto (H_X(s,t), H_Y(s,t)) .
+\end{align*}
+É claro que \(H(s,0) = f(s), \ H(s,1) = (x_0,y_0)\) e \(H(0,t) =  H(1,t) = (x_0,y_0)\), pra \(s, t \in [0,1] \) quaisquer. Assim, \(H: f \simeq (x_0,y_0)\) e \(\Phi\) é injetora. Pra sobrejetividade, dado \(([\alpha], [\beta]) \in G_1 \times G_2\), onde \(\alpha\) e \(\beta\) são laços com bases em \(x_0\) e \(y_0\) respectivamente, defina \(f : [0,1] \to X\times Y\) dada por \(s \mapsto (\alpha(s), \beta(s))\), temos \(f\) contínuo e \(f(0) = (\alpha(0), \beta(0)) = (\alpha(1), \beta(1)) = f(1) =  (x_0,y_0) \), ou seja \( f \in G : \Phi ([f]) = ([\pi_X \circ \alpha], [\pi_Y \circ \beta]) = ([\alpha], [\beta])\). Portanto \(\Phi\) é sobrejetiva e isomorfismo de grupos.   
+}
+
+6. Qual é o grupo fundamental de \(X := \R^3 \setminus \{(0,0,z) : z\leq 0\}\)? Justifique. 
+
+\textcolor{gris}{\(X\) é contráctil, de fato, dado \((x,y,z)\in X\), considere, 
+\begin{align*}
+  H: [0,1] &\to \hspace{1.2cm}X \\ 
+   t \hspace{0.3cm}&\mapsto (x,y,(1-t)z + t). 
+\end{align*}
+Note que \(H\) está bem definida, de fato \((1-t)z + t> 0\) para \(z>0\). Além disso, \(H\) fixa \(\{(x,y,z) : z=1\} \simeq \R^2\), portanto \(\Pi_1(X) = \Pi_1(\R^2) = \{0\}\).  
 }
