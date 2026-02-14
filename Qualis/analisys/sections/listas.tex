@@ -1,0 +1,45 @@
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\an}{\mathscr{A}} 
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\hom}{\operatorname{Hom}}
+\newcommand{\ehom}{\operatorname{End}}
+\colorlet{gris}{black!70}
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{1} \vspace{0.1cm}
+  \hrule}
+
+5. Sejam \(U\ab \subset \R^n\) convexo e \(f: U \to \R : f_{x_j}\equiv 0\) em \(U\). Mostre que \(f \) não depende da variavél \(x_j\). A hipotése de convexidade é precisa?
+
+\textcolor{gris}{Sejam \(p,q \in U: \forall i\neq j, \ p_i =q_i\) e \(p_j < q_j\), pela convexidade a reta \([p,q] \subset U\). Considere a função \(\varphi: [0, q_j - p_j] \to  \R\) tal que  \( t \mapsto f(p + te_j)\). Observe que, 
+\begin{align*}
+    \frac{d\varphi}{dt}(t) &= \lim_{h\to 0} \frac{f((p+te_j)+ he_j) - f(p+te_j) }{h} \\ 
+     &= \frac{\partial f}{\partial x_j}(p + te_j) = 0.  
+\end{align*}
+Segue que \(\varphi\) é constante, em particular, \(\varphi (p) = \varphi(q)\) e \(f\) não depende da variavél \(x_j\) como enunciado. 
+}
+
+7. Existe uma função \(f:\R^2 \to \R\) contínua que admite derivadas parcias na origem, mas não todas as  direcionais? 
+
+\textcolor{gris}{
+    Existe, seja \(f: (x,y) \mapsto \sqrt{|xy|}\), temos então, 
+    \[\frac{\partial f}{\partial x}(\textbf{0}) = \lim_{h\to 0} \frac{\sqrt{|h|\cdot| 0|}}{h} = 0 = \lim_{k\to 0} \frac{\sqrt{|0|\cdot| k|}}{k} = \frac{\partial f}{\partial y} (\textbf{0}). \]
+    No entanto, pra vetores \( v : v \notin [e_j] \), o límite não existe, de fato, os laterais não concidem,     
+    \[\frac{\partial f}{\partial v}(\textbf{0}) = \lim_{h\to 0} \frac{\sqrt{h^2|v_1v_2|}}{h} = |v_1v_2| \lim_{h\to 0 } \frac{|h|}{h} = \pm 1. \]
+}
+10. Sejam \(U\ab \subset \R^n\) e \(f: U \to \R  \) tal que \(\forall j \leq n, \ \exists f_{x_j} \) limitada em \(U\). Mostre que \(f \) é contínua. 
+
+\textcolor{gris}{Sejam \(p \in U, \ |h| \ll 1 : f(p+h) \in U \) e \(\Gamma = [p_0 = p, \ldots, p_i = p_{i-1} + h_ie_i, \ldots, p_n = p+h]\) caminho polígonal em \(U\) colinear aos eixos canônicos. Note que,  
+\begin{align*}
+    |f(p+h ) - f(p)| &= \left|\sum f(p_i) - f(p_{i-1})\right| \\
+     &\leq |h| \sum \left|\frac{f(p_{i-1} + h_ie_i) - f(p_{i-1})}{h}\right|. 
+\end{align*}
+Logo, olhando pra o límite temos, 
+\begin{align*}
+    \lim_{h\to 0 } |f(p+h) - f(p)| &\leq \lim_{h\to 0} |h| \sum \left|\frac{\partial f}{\partial x_i} (p_{i-1})\right| \\ 
+    &\leq M \lim_{h\to 0} |h| = 0.  
+\end{align*}
+Portanto \(f\) é contínua em \(U\) como enunciado. 
+}
