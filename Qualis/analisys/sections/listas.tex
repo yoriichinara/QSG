@@ -15,15 +15,18 @@
 4. Estude continuidade e existência de derivadas parcias da função \(f: \R^2 \to \R \) tal que, 
 \[f: \textbf{0}\mapsto 0 \text{ \ \ e \ \ } f(\x) :=  \frac{x^3}{\|\x\|^2}, \ \ \x \neq \textbf{0}.\] 
 \textcolor{gris}{
-A função é contínua na origem, de fato, 
-\[\lim_{\|\x\| \to 0} f(\x) = \lim_{r\to 0} \frac{r^3 \cos^3 \theta}{r^2} = \cos^3 \theta\lim_{r\to 0} r = 0 = f(\textbf{0}).\]
-Agora, pra as derivadas direcionais temos, 
-\[
-    \frac{\partial f}{\partial v}(\0) = \lim_{h \to 0} \frac{f(hv) - f(\0)}{h} =  \lim_{h\to 0 } \frac{h^3v_1^3}{h^3 \|v\|^2} = f(v). 
-\]
-Logo, \(\forall \vec{v} \in \R^n \setminus\{\0\}, \   \exists f_v(\0) = f(v)\) (não linear). 
+    Exemplo de contínua + \(\exists f_v(\0) = f(v)\) (não lineares). 
 }
 
+%A função é contínua na origem, de fato, 
+%\[\lim_{\|\x\| \to 0} f(\x) = \lim_{r\to 0} \frac{r^3 \cos^3 \theta}{r^2} = \cos^3 \theta\lim_{r\to 0} r = 0 = f(\textbf{0}).\]
+%Agora, pra as derivadas direcionais temos, 
+%%\[
+%    \frac{\partial f}{\partial v}(\0) = \lim_{h \to 0} \frac{f(hv) - f(\0)}{h} =  \lim_{h\to 0 } \frac{h^3v_1^3}{h^3 \|v\|^2} = f(v). 
+%\]
+%Logo, \(\forall \vec{v} \in \R^n \setminus\{\0\}, \   \exists f_v(\0) = f(v)\) (não linear). 
+%}
+%
 5. Sejam \(U\ab \subset \R^n\) convexo e \(f: U \to \R : f_{x_j}\equiv 0\) em \(U\). Mostre que \(f \) não depende da variavél \(x_j\). A hipotése de convexidade é precisa?
 
 \textcolor{gris}{Sejam \(p,q \in U: q = p + \alpha e_j\), \(\alpha>0\), pela convexidade a reta \([p,q] \subset U\). Considere a função \(\varphi: [0, \alpha] \to  \R\) tal que  \( t \mapsto f(p + te_j)\). Observe que, 
@@ -35,24 +38,24 @@ Segue que \(\varphi\) é constante, em particular, \(f(p) = f(p +te_j)\), \(f\) 
 }
 
 7. Existe uma função \(f:\R^2 \to \R\) contínua que admite derivadas parcias na origem, mas não todas as  direcionais? 
-
 \textcolor{gris}{
-    Existe, seja \(f: (x,y) \mapsto \sqrt{|xy|}\), temos então, 
-    \[\frac{\partial f}{\partial x}(\textbf{0}) = \lim_{h\to 0} \frac{\sqrt{|h|\cdot| 0|}}{h} = 0 = \lim_{k\to 0} \frac{\sqrt{|0|\cdot| k|}}{k} = \frac{\partial f}{\partial y} (\textbf{0}). \]
-    No entanto, pra vetores \( v : v \notin [e_j] \), o límite não existe, de fato, os laterais não concidem,     
-    \[\frac{\partial f}{\partial v}(\textbf{0}) = \lim_{h\to 0} \frac{\sqrt{h^2|v_1v_2|}}{h} = |v_1v_2| \lim_{h\to 0 } \frac{|h|}{h} = \pm 1. \]
+\[f: (x,y) \mapsto \sqrt{|xy|}.\]
+%    Existe, seja \(f: (x,y) \mapsto \sqrt{|xy|}\), temos então, 
+%    \[\frac{\partial f}{\partial x}(\textbf{0}) = \lim_{h\to 0} \frac{\sqrt{|h|\cdot| 0|}}{h} = 0 = \lim_{k\to 0} \frac{\sqrt{|0|\cdot| k|}}{k} = \frac{\partial f}{\partial y} (\textbf{0}). \]
+%    No entanto, pra vetores \( v : v \notin [e_j] \), o límite não existe, de fato, os laterais não concidem,     
+%    \[\frac{\partial f}{\partial v}(\textbf{0}) = \lim_{h\to 0} \frac{\sqrt{h^2|v_1v_2|}}{h} = |v_1v_2| \lim_{h\to 0 } \frac{|h|}{h} = \pm 1. \]
 }
 10. Sejam \(U\ab \subset \R^n\) e \(f: U \to \R  \) tal que \(\forall j \leq n, \ \exists f_{x_j} \) limitada em \(U\). Mostre que \(f \) é contínua. 
 
-\textcolor{gris}{Sejam \(p \in U, \ \epsilon >0, \ 0 < h \ll 1 : f(p+hv) \in B(p;\epsilon) \subset  U \) e \(\Gamma = [p_0 = p, \ldots, p_i = p_{i-1} + he_i, \ldots, p_n = p+hv]\) caminho polígonal em \(U\) colinear aos \(e_j\). Note que,  
+\textcolor{gris}{Sejam \(p \in U, \ \epsilon >0, \ 0 < h \ll 1 : f(p+hv) \in B(p;\epsilon) \subset  U \) com \(v= \sum h_ie_i\) e \(\Gamma = [p_0 = p, \ldots, p_i = p_{i-1} + h_ie_i, \ldots, p_n = p+hv]\) caminho polígonal em \(U\) colinear aos \(e_j\). Note que,  
 \begin{align*}
     |f(p+hv ) - f(p)| &= \left|\sum f(p_i) - f(p_{i-1})\right| \\
-     &\leq |h| \sum \left|\frac{f(p_{i-1} + he_i) - f(p_{i-1})}{h}\right|. 
+     &\leq |h| \sum \left|\frac{f(p_{i-1} + h_ie_i) - f(p_{i-1})}{h}\right|. 
 \end{align*}
 Logo, olhando pra o límite temos, 
 \begin{align*}
     \lim_{h\to 0 } |f(p+hv) - f(p)| &\leq \lim_{h\to 0} |h| \sum \left|\frac{\partial f}{\partial x_i} (p_{i-1})\right| \\ 
-    &\leq M \lim_{h\to 0} |h| = 0.  
+    &\leq M \lim_{h\to 0} |h| \to 0.  
 \end{align*}
 Portanto \(f\) é contínua em \(U\) como enunciado. 
 }
@@ -60,37 +63,226 @@ Portanto \(f\) é contínua em \(U\) como enunciado.
 14. Considere a função \(f: \R^2 \to \R \) tal que, 
 \[f: \textbf{0}\mapsto 0 \text{ \ \ e \ \ } f(\x) :=  \frac{xy(x^2 - y^2)}{\|\x\|^2}, \ \ \x \neq \textbf{0}.\] 
 Mostre que \(f \in C^1(\R^2)\), admite derivadas parcias de segundo ordem na origem, mas \(f_{xy}(\textbf{0}) \neq f_{yx}(\textbf{0})\). 
+
 \textcolor{gris}{
-    \begin{align*}
-        \frac{\partial f}{\partial x} (\0) = \lim_{h\to 0} \frac{h \cdot 0\cdot (h^2)}{h^2 \cdot h} = 0 = \lim_{h\to 0} \frac{0 \cdot k\cdot (k^2)}{k^2 \cdot k} = \frac{\partial f}{\partial y} (\0). 
-    \end{align*}    
-    Vamos ver as parcias são contínuas na origem, pra isso primeiro calculamos elas fora da origem,   
-    \begin{align*}
-        \frac{\partial f }{\partial x} (\x) &= \frac{y (3x^2 - y^2)\|\x\|^2 - 2x^2y(x^2-y^2)}{\|\x\|^4}; \\ 
-        \frac{\partial f }{\partial y} (\x) &= \frac{x (x^2 - 3y^2)\|\x\|^2 - 2y^2x(x^2-y^2)}{\|\x\|^4}.  
-    \end{align*}
-    Mais uma vez usando coordenadas radiais temos, 
-    \begin{align*}
-        \lim_{\|\x\|\to 0} \frac{\partial f}{\partial x}(\x) &= \lim_{r \to 0} \frac{r^5\phi(\theta) }{r^4} \leq |\phi(\theta)|\lim_{r \to 0} r = 0 = \frac{\partial f}{\partial x}(\0); \\
-        \lim_{\|\x\|\to 0} \frac{\partial f}{\partial y}(\x) &= \lim_{r \to 0} \frac{r^5\psi(\theta) }{r^4} \leq |\psi(\theta)|\lim_{r \to 0} r = 0= \frac{\partial f}{\partial y}(\0).
-    \end{align*}
-    Finalmente, note que, 
-    \begin{align*}
-        \frac{\partial f}{\partial y \partial x} (\0) &=\lim_{k\to 0} \frac{f_x(0,k)}{k} =  \lim_{k\to 0} \frac{k (- k^2)k^2 }{k^4 \cdot k} = -1; \\ 
-        \frac{\partial f}{\partial x \partial y} (\0) &=\lim_{h\to 0} \frac{f_y(h,0)}{h}= \lim_{h\to 0}  
-        \frac{h (h^2)h^2 }{h^4\cdot h} = 1.  
-    \end{align*}
-    Diferentes como enunciado, a função não é \(C^2 (\R^2)\). 
+    Exemplo de \(C^1\) + \(\exists f_{x_ix_j}\) não contínuas (na origem).
+}
+%    \begin{align*}
+%        \frac{\partial f}{\partial x} (\0) = \lim_{h\to 0} \frac{h \cdot 0\cdot (h^2)}{h^2 \cdot h} = 0 = \lim_{h\to 0} \frac{0 \cdot k\cdot (k^2)}{k^2 \cdot k} = \frac{\partial f}{\partial y} (\0). 
+%    \end{align*}    
+%    Vamos ver as parcias são contínuas na origem, pra isso primeiro calculamos elas fora da origem,   
+%    \begin{align*}
+%        \frac{\partial f }{\partial x} (\x) &= \frac{y (3x^2 - y^2)\|\x\|^2 - 2x^2y(x^2-y^2)}{\|\x\|^4}; \\ 
+%        \frac{\partial f }{\partial y} (\x) &= \frac{x (x^2 - 3y^2)\|\x\|^2 - 2y^2x(x^2-y^2)}{\|\x\|^4}.  
+%    \end{align*}
+%    Mais uma vez usando coordenadas radiais temos, 
+%    \begin{align*}
+%        \lim_{\|\x\|\to 0} \frac{\partial f}{\partial x}(\x) &= \lim_{r \to 0} \frac{r^5\phi(\theta) }{r^4} \leq |\phi(\theta)|\lim_{r \to 0} r = 0 = \frac{\partial f}{\partial x}(\0); \\
+%        \lim_{\|\x\|\to 0} \frac{\partial f}{\partial y}(\x) &= \lim_{r \to 0} \frac{r^5\psi(\theta) }{r^4} \leq |\psi(\theta)|\lim_{r \to 0} r = 0= \frac{\partial f}{\partial y}(\0).
+%    \end{align*}
+%%    Finalmente, note que, 
+%    \begin{align*}
+%        \frac{\partial f}{\partial y \partial x} (\0) &=\lim_{k\to 0} \frac{f_x(0,k)}{k} =  \lim_{k\to 0} \frac{k (- k^2)k^2 }{k^4 \cdot k} = -1; \\ 
+%        \frac{\partial f}{\partial x \partial y} (\0) &=\lim_{h\to 0} \frac{f_y(h,0)}{h}= \lim_{h\to 0}  
+%        \frac{h (h^2)h^2 }{h^4\cdot h} = 1.  
+%    \end{align*}
+%    Diferentes como enunciado, a função não é \(C^2 (\R^2)\). 
+%}
+
+%15. Sejam \(n\geq 3\) e \(h: \R^n\setminus \{\0\} \to \R\) tal que,  
+%\[h : \x \mapsto \frac{1}{\|\x\|^{n-2}}.\]
+%Mostre que \(h \in C^\infty(\R^n\setminus\{\0\})\) e \(\Delta h = 0\). O que acontece com \(n=1, \ n=2\)? Existem funções suaves harmônicas tais que \(\lim_{\|\x\| \to 0} h(\x) = \infty\)?
+%
+%\textcolor{gris}{Note que a familia descrita é \(\nicefrac{1}{\|\x\| }, \ \nicefrac{1}{\|\x\|^2}, \ldots\), como \(C^\infty\) é \(\R\)-álgebra conmutativa basta nos verificar \(n=3\), 
+%\begin{align*}
+%    \lim_{h\to 0} \left(\frac{1}{\|\x + he_j\|} - \frac{1}{\|\x\|}\right) \cdot \frac{1}{h} &= \lim_{h\to 0} \frac{\|\x\| - \|\x + he_j\|}{h \|\x+he_j\|\|\x\|} \\ 
+%    &\hspace{-2.8cm}= \lim_{h\to 0}\frac{\|\x\|^2 - \|\x + he_j\|^2}{h \|\x+he_j\|\|\x\|(\|\x\| + \|\x + he_j\|)}   \\ 
+%    &\hspace{-4cm}= \lim_{h\to 0}\frac{ - 2 h\langle \x , e_j\rangle - h^2 \langle e_j, e_j \rangle}{h \|\x+he_j\|\|\x\|(\|\x\| + \|\x + he_j\|)} = \frac{ - x_j}{\|\x\|^3}  . 
+%\end{align*}
+%Assim, as parciais existem e são contínuas em \(\R^3\setminus\{\0\}\). Além disso, \(h_{x_j}\) é produto de funções pelo menos \(C^{1}\) nesse dominio, portanto de um argumento iterativo e regla de Leibniz podemos concluir que \(h \in C^\infty(\R^{3}\setminus\{\0\})\). Pra ver a armônicidade, denotemos \(r= \|\x\|\) e \(h(r) = r^{2-n}\), assim,   
+%\begin{align*}
+%    \frac{\partial h}{\partial x_j} &= (2-n) r^{1-n} \cdot \frac{x_j}{r} = (2-n) x_j r^{-n} \\ 
+%    \ &\hspace{0.3cm}\frac{\partial ^2 h}{\partial x_j^2} = (2-n)(-n)x_j r^{-(n+1)} \cdot \frac{x_j}{r}+ (2-n)r^{-n}\\ 
+%    \ &\hspace{1.5cm} = (2-n)r^{-n} [(-n) x_j^2 r^{-2} + 1].
+%\end{align*}
+%Finalmente, olhando pra a soma temos, 
+%\begin{align*}
+%\Delta h &=  (2-n)r^{-n} \left[(-n)r^{-2}\sum x_j^2  + \sum 1\right]\\ 
+%&=  (2-n)r^{-n} \left[(-n) + n\right] = 0. 
+%\end{align*}
+%O casso \(n=1\) na tem jeito pois, \(h_{xx} = 0 \ \leftrightharpoons \ h(x) = ax + b\), logo \(\lim_{x\to 0 } h(x) = b \neq \infty\). Contrário do casso \(n=2\) pra o qual serve a função \(h(\x) = - \log \|\x\|\). 
+%%\[\frac{\partial^2h}{\partial x} = -\frac{1}{\|\x\| }\cdot \frac{x}{\|\x\|}; \ \ \frac{\partial^2h}{\partial x^2} = - \frac{\|\x\|^2 - x \cdot 2x }{\|\x\|^4}\end{align}
+%}
+17. Sejam \(U\ab \subset \R^n\), \(f,g \in C^k(U)\) e \(\alpha = (\alpha_j) \in \N^n\) multi-índice de comprimento \(|\alpha|\leq k\). Demonstre a seguinte fórmula de Leibniz, 
+\[\partial^\alpha(fg) = \sum_{\beta \leq \alpha} \binom{\alpha}{\beta} \partial^\beta f \cdot \partial^{\alpha - \beta} g.\] 
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{2} \vspace{0.1cm}
+  \hrule}
+
+4. Estude a diferenciabilidade da função \(f: \R^2 \to \R \) tal que, 
+\[f: \textbf{0}\mapsto 0 \text{ \ \ e \ \ } f(\x) :=  \frac{xy^3}{x^2 + y^4}, \ \ \x \neq \textbf{0}.\] 
+\textcolor{gris}{
+    Exemplo de contínua + \(\exists f_v(\0)\) lineares, mas não é diff (na origem) pois a função não é de \(o\|v\|\). 
 }
 
-15. Sejam \(n\geq 3\) e \(h: \R^n\setminus \{\0\} \to \R\) tal que,  
-\[h : \x \mapsto \frac{1}{\|\x\|^{n-2}}.\]
-Mostre que \(h \in C^\infty(\R^n\setminus\{\0\})\) e \(\Delta h = 0\). O que acontece com \(n=1, \ n=2\)? Existem funções suaves harmônicas tais que \(\lim_{\|\x\| \to 0} h(\x) = \infty\)?
+14. Mostre que a norma \(f : \x \mapsto \|\x\|\) é diff em \(\R^n \setminus \{\0\}\) e calcule seu diferencial \(\nabla f (p)\). 
 
-\textcolor{gris}{Note que a familia descrita é \(\nicefrac{1}{\|\x\| }, \ \nicefrac{1}{\|\x\|^2}, \ldots\), como \(C^\infty\) é \(\R\)-álgebra conmutativa basta nos verificar \(n=3\). 
+\textcolor{gris}{
+    Faz calculando \(f(p+v) - f(p)\), simplificando com diferença de quadrâdos, \(\nabla f(p)(v) = \nicefrac{1}{\|p\|}\cdot \langle p , v\rangle\).
+%    \begin{align*}
+%       \|p+ v \| - \|p\| = \frac{\|p+ v \|^2 - \|p\|^2}{\|p+ v \| + \|p\|}
+%   \end{align*}
+}
+
+16. Seja \((V_j)_{j\leq k} \) \(\R\)-espaços vetoriais \(: \dim V_j < \infty\) e \(f \in \hom^k(\Pi V_j, \R)\). Mostre que, 
+
+(a) Pra normas apropiadas \(\exists C > 0 : |f(\textbf{v})| \leq C \prod \|v_j\|_j\)
+
+\newcommand{\ve}{\textbf{v}}
+\textcolor{gris}{
+Pra cada \(\forall j\leq k\), sejam \(\alpha_j = (e_{i,j})_{i \in I_j}\) bases dos \(V_j\) e \(\|v_j\|_j := \|[v_j]_{\alpha_j}\|_1\) (taxista). Sendo \(I := \prod I_j\), note que, 
 \begin{align*}
-    \lim_{h\to 0} \left(\frac{1}{\|\x + he_j\|} - \frac{1}{\|\x\|}\right) \cdot \frac{1}{h} &= \lim_{h\to 0} \frac{\|\x\| - \|\x + he_j\|}{h \|\x+he_j\|\|\x\|} \\ 
-    &\hspace{-2.8cm}= \lim_{h\to 0}\frac{\|\x\|^2 - \|\x + he_j\|^2}{h \|\x+he_j\|\|\x\|(\|\x\| + \|\x + he_j\|)}   \\ 
-    &\hspace{-4cm}= \lim_{h\to 0}\frac{ - 2 h\langle \x , e_j\rangle - h^2 \langle e_j, e_j \rangle}{h \|\x+he_j\|\|\x\|(\|\x\| + \|\x + he_j\|)} = \frac{ - x_j}{\|\x\|^3}   \\ 
+    |f(\ve)| &= \left|\sum_{\textbf{i}\in I} \prod_{i_j \in \textbf{i}}^k a_{i_j,j} f(e_{\textbf{i}})\right|\\
+     &= C \sum_{\textbf{i}\in I} \left|\prod_{i_j \in \textbf{i}}^k a_{i_j,j}\right| = C \prod \|v_j\|_j.
 \end{align*}
+Onde \(C:= \max |f(e_{\textbf{i}})| = |f(e_{i_1}, \ldots e_{i_k})|, \ i_j \in I_j\). 
+}
+
+(b) \(f\) \(k\)-linear é diff, calcule seu diferencial.  
+
+\textcolor{gris}{Dado \(\ve \in \Pi V_j\), seja \(\|\ve\|:= \sup \|v_j\|_j\). Note que, 
+\begin{align*}
+    f(p+v) - f(p) &= f(p) + \sum f(\ve_j) \\ 
+    &\hspace{2cm}+ \sum f(\ve_{i<j}) - f(p). 
+\end{align*}
+Onde \(\ve_j := (p_1, \ldots , v_j, \ldots, p_k)\) e \(\ve_{i<j} := (p_1, \ldots, v_i, \ldots,\) \( v_j, \ldots, p_k)\). Finalmente, perciba que \(df(p)(\ve) = \sum f(\ve_j)\) é linear (em \(\ve\)). Além disso,  
+\begin{align*}
+    \lim_{\|\ve\|\to 0} \frac{\sum f(\ve_{i<j})}{\|\ve\|} \leq C \lim_{\|\ve\|\to 0} \frac{\|v_i\|_i \|v_j\|_j}{\|\ve\|} \ (\ \cdots) \to 0.
+\end{align*}
+Portanto, \(f \) de fato é diff como enunciado.
+}
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{3} \vspace{0.1cm}
+  \hrule}
+
+2. Sejam \(U\ab \subset \R^n\) e \(f \in C^1(U)\). Mostre que, se \(K\subset U\) é compacto e convexo, então \(f|_K\) é Lipschitz.  
+
+\textcolor{gris}{
+    Sejam \(\x, \y \in K : \x \neq \y\) (outro caso é trivial), seguido defina, \(p := \y\) e \(\vec{v}:= \x - \y\). Note que, \(f \) é continua em \([p , p +v]\) e diff em \((p, p+v)\). Do \(\blacksquare\) (\emph{TVM - \(\R^n\)}), \(\exists \theta \in (0,1) \) tal que,  
+    \begin{align*}
+        f(p+v) - f(p) &= df(p + \theta v) (v) \\ 
+        |f(\x) - f(\y)| &= |\langle df(\zeta) , \x - \y\rangle| \\ 
+        &\hspace{0.5cm}\leq  |df(\zeta)|\| \x - \y\| \\ 
+        & \hspace{1cm}\leq  L \|\x - \y\|  
+    \end{align*}   
+Isso pela desigualdade de Cauchy-Schwarz e da continuidade de \(df\) em \(K\) compacto.
+}
+
+3. Sejam \(U\ab\subset \R^n\) e \(f: U \to \R\) diff e Lipschitz em \(U\). Mostre que \(df : \x \to df(\x)\) é limitada.  
+
+\textcolor{gris}{
+    Sejam \(\x \in U\), \(\vec{v} \in \E^{n-1}\) e \(\epsilon > 0 : \x + tv \in B(\x;\epsilon)\subset U\) se \(|t|< \epsilon\). Então, \(|f(\x + tv) - f(\x) | \leq L \|tv\|\), logo, 
+    \[
+        \lim_{t\to 0}\left|\frac{f(\x + tv) - f(\x) }{t}\right| = |df(\x)(v)| \leq L \|v\| .  
+    \]
+    Finalmente, \(\|df(\x)\| := \displaystyle\sup_{\|v\| = 1 } |df(\x)(v)| \leq L < \infty\). 
+}
+
+14. (a) Considere a função \(f: \R \to \R \) tal que, 
+\[f(t) :=  \begin{cases}
+ 0, \ t \leq 0 \\ 
+ \exp(-\nicefrac{1}{t}), \ t>0
+\end{cases}.\] 
+Mostre que \(f \in C^\infty (\R)\setminus C^\omega(\R)\). 
+
+\textcolor{gris}{Exemplo padrão de função suave mas não analítica. }
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{4} \vspace{0.1cm}
+  \hrule}
+
+14. Determine os extremos locais da função \(f: \R^n \times \R^n \to \R\) dada por \((\x,\y)\mapsto \langle \x, \y\rangle\) restrita à esfera unitária. Deduza a desigualdade de Cauchy-Schwarz. 
+
+\textcolor{gris}{
+    Lembre-se da esfera como hipersuperficie dada pelos \(0\)'s da função \(g(\x,\y) = \|\x\|^2 + \|\y\|^2 -1\). Pelo \(\blacksquare\) (\emph{Mult. de Lagrange}) \(p \in \R^n \times \R^n\) é extremo local \(\leftrightharpoons\) \(\exists \lambda \in \R : df(p) = \lambda dg(p)\), ou seja,  
+    \[\nabla f = \begin{bmatrix}
+        \nabla_\x f \\ 
+        \nabla_\y f 
+    \end{bmatrix} = \begin{bmatrix}
+        \y \\ 
+        \x
+    \end{bmatrix} = 2\lambda \begin{bmatrix}
+        \x \\ 
+        \y
+    \end{bmatrix}. \] 
+    Isso \(\leftrightharpoons\) \(4\lambda^2\y - \y  = \0 = [(2\lambda)^2 - 1]\y\). Se \(\y = \0\), então \(\x = \0\) e \((\x,\y) = \0 \) que não tá na esfera, portanto \((2\lambda)^2 - 1 = (2\lambda +1)(2\lambda-1) = 0 \ \leftrightharpoons \ |\lambda| = \nicefrac{1}{2}\), ou seja quando \(\x= \y\) ou \(\x = -\y\),  
+    \[-1 =- \|\x\|^2 \leq  f(\x,\y) \leq \|\x\|^2 =1 .\] 
+    Dados \(\vec{u}, \vec{v} \in \R^n\setminus\{\0\}\), sejam \(\x = \nicefrac{u}{\|u\|}\) e \(\y = \nicefrac{v}{\|v\|}\), 
+    \begin{align*}
+        |\langle u, v\rangle| =  \|u\|\|v\| |\langle \x, \y\rangle | \leq \|u\|\|v\|.
+    \end{align*}
+}
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{5} \vspace{0.1cm}
+  \hrule}
+
+6. \(\blacksquare\)  (\emph{DVM (em aplicações)}) Sejam \(U\ab\subset \R^n\), \(K \subset U\) convexo e \(C\geq 0 : \forall \x \in K, \ \|DF(\x)\|\leq C\). Então, 
+\[\|F(\x) = F(\y)\| \leq C \|\x-\y\|, \ \forall \x, \y \in K.\]
+\textcolor{gris}{Suponha que \(F(\x) \neq F(\y)\) (outro casso é trivial), seguido defina, \( \vec{u} \in \E^{n-1}  \) e \(\phi: [0,1] \to \R^n\)  como sendo, 
+\[u := \frac{F(\x) - F(\y)}{\|F(\x) - F(\y)\|} \text{\ \ e \ \ } \phi(t):= (\x-\y)t + t\y.\] 
+A função \(\varphi(t) := \langle u, F(\phi (t)) \rangle\) é \(C^1([0,1])\), pois todas as funções envolvidas são. Pelo \(\blacksquare\) (\emph{TVM = \(\R\)}) \(\exists \theta \in (0,1) : \varphi(1) - \varphi(0) = \dot{\varphi}(\theta)\), nossos termos,  
+\[\langle u, F(\x) - F(\y)\rangle = \langle u, DF(\phi(\theta))(\x-\y)\rangle,\]
+simplificando y aplicando Cauchy-Schwarz, 
+\begin{align*}
+    \|F(\x) - F(\y)\| &\leq \|u\|\|DF(\zeta)\|\|\x-\y\|\\
+     &\hspace{0.5cm} \leq C\|\x-\y\|.
+\end{align*}
+}
+12. Calcule a diferencial do producto de matrices \(\mu :(A,B) \mapsto AB\) (pra dimensões adecuadas). 
+
+\textcolor{gris}{É uma aplicação bilinear, lembra do Exercicio 2.16.. }
+
+\-\vspace{-0.3cm}
+  {\hrule \vspace{-0.15cm}
+  \centering \textbf{6} \vspace{0.1cm}
+  \hrule}
+
+3.  (a) Seja \(G \in C^k(\R^n, \R^n): \|DG\|< 1\). Mostre que \(F(\x) := \x + G(\x)\) é \(^kF: \R^n\simeq \operatorname{Im} F\ab\).  
+
+\textcolor{gris}{
+    Perceba que \(DF(\x)(v) = [\id_n + DG(\x)](v)\), logo, 
+    \[\|DF(\x)(v)\| \geq \|v\| - \|DG(\x)(v)\| \geq (1 - \|DG\|) \|v\|,\]
+    portanto, \(DF(\x)(v) = 0 \ \leftrightharpoons \ v= 0\), ou seja que \(DF(\x)\) é injetora \(\leftrightharpoons\) \(DF(\x)\) é isomorfismo. Além disso, a propia \(F\) é injetora, de fato,   
+    \begin{align*}
+        \|F(\x) -F(\y) \| &= \|\x - \y + G(\x) - G(\y)\| \\
+        &\hspace{0.5cm}\geq \|\x-\y\| - \|G(\x) - G(\y)\| \\ 
+        &\hspace{1cm}\geq \|\x-\y\|\left(1 - \|DG\| \right), 
+    \end{align*}
+    logo, \(F(\x) = F(\y) \ \leftrightharpoons \ \x=\y\). Segue do \(\blacksquare\) (\emph{Função Inversa}) que \(^kF: \R^n \simeq \operatorname{Im}F\ab\). 
+}
+
+(b) Se \(\exists \lambda > 0: \|DG\| \leq \lambda < 1 \), então \(^kF:\R^n \simeq \R^n\). 
+
+\textcolor{gris}{
+    Resta ver que é sobrejetiva. Dado \(\y \in \R^n\), defina \(T_\y : \R^n \to \R^n\) tal que \(\x \mapsto \y - G(\x) \), claramente \(T_\y \in C^k(\R^n)\) e, 
+    \begin{align*}
+        \|T_\y(\x_1) - T_\y(\x_2)\| &= \|G(\x_1) - G(\x_2)\| \\ 
+        &\hspace{0.5cm}\leq \|DG\|\|\x_1 - \x_2\| \leq \lambda\|\x_1 - \x_2\|.
+    \end{align*} 
+    Segue que \(T_\y\) é uma contração uniforme em \(\R^n\) (Banach), portanto \(\exists!\x^* : T_\y (\x^*) = \x^* \), ou seja \(\x^*:   \y = \x^* + G(\x^*) = F(\x^*)\), concluindo a demonstração.  
+}
+
+(c) Exhiba um contra-exemplo pra ver que não basta que suponer \(\|DG\|\leq 1\) pra ter sobrejetividade. 
+
+\textcolor{gris}{
+    Sejam \(  n=1  \), \(G(x) = -x + \arctan (x)\), assim temos,  
+    \[|dg| = \left|-1 + \frac{1}{1+x^2}\right| < 1.\]
+    No entanto \(f(x) = \arctan(x) \) e \(\operatorname{Im}f = (-\nicefrac{\pi}{2}, \nicefrac{\pi}{2}) \subsetneq \R\). 
 }
