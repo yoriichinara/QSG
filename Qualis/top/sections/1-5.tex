@@ -20,9 +20,9 @@ logo \(B_\infty(\x; \epsilon)\subset B_2(\x; \sqrt{n}\epsilon)\) e \(\tau_2 \sub
 portanto tambem \(B_2(\x; \epsilon ) \subset B_\infty(\x; \epsilon )\) e \(\tau_\infty \subset \tau_2\). \\ 
 \(\bullet \ \ (\tau_\infty = \tau_1)\). Observe que, 
 \[\|\x\|_\infty = |x_j| \leq \sum |x_i| = \|\x\|_1, \] 
-logo \(B_1(\x;\epsilon) \subset B_\infty(\x;\epsilon)\) e \(\tau_\infty \subset \tau_1\). Por outro lado, 
+logo \(B_\infty(\x;\epsilon) \subset B_1(\x;\epsilon)\) e \(\tau_1 \subset \tau_\infty\). Por outro lado, 
 \[\|\x\|_1 = \sum |x_i| \leq n |x_j| = n \|\x\|_\infty, \]
-portanto tambem \(B_\infty(\x;\epsilon) \subset B_1(\x;\epsilon)\) e \(\tau_1 \subset \tau_\infty\). 
+portanto tambem \(B_1(\x;\epsilon) \subset B_\infty(\x;n\epsilon)\) e \(\tau_\infty \subset \tau_1\). 
 }
 
 \-\vspace{-0.3cm}
@@ -114,7 +114,10 @@ Dado \(x \in U:= U_1 \cap U_2 \in \U_a\) temos,
   |(f+g)(x) - (f+g)(a)| &\leq  |f(x) -f(a)| + |g(x)-g(a)| \\ 
 & < \nicefrac{\epsilon }{2} + \nicefrac{\epsilon }{2} = \epsilon, 
 \end{align*}
-logo \((f+g)(U) \subset B((f+g)(a), \epsilon)\), \(f+g\) é contínua em \(a\).   \\ 
+logo \((f+g)(U) \subset B((f+g)(a), \epsilon)\).    
+}
+
+\textcolor{gris}{
 (\(\cdot\)) Primeiro note que, 
 \begin{align*}
   |(fg)(x) - (fg)(a)| &= |(fg)(x) + f(x)g(a) \\ 
@@ -132,8 +135,14 @@ Assim, \(fg(U) \subset B((fg)(a);\epsilon)\) e \(fg\) é contínua em \(a\).
 
 \vspace{0.3cm}
   {\hrule \vspace{-0.15cm}
-  \centering \textbf{9} \vspace{0.1cm}
+  \centering \textbf{10} \vspace{0.1cm}
   \hrule}
+
+B. Prove que as projeções canônicas em \(\R^2\) não são fechadas. 
+
+\textcolor{gris}{Considere a função \(g: \R^2 \to \R \) tal que \(\x \mapsto xy\), está função é contínua, portanto, \[\{\x \in \R^2 : xy = 1\} = g^{-1}(\{1\}) =: H\ce \subset \R^2.\]  
+Note que, \(\pi_x (H) = \pi_y(H) = (\R \setminus\{0\}) \ab \subset \R\).
+}
 
 \vspace{0.3cm}
   {\hrule \vspace{-0.15cm}

@@ -147,7 +147,7 @@ Pra cada \(\forall j\leq k\), sejam \(\alpha_j = (e_{i,j})_{i \in I_j}\) bases d
     |f(\ve)| &= \left|\sum_{\textbf{i}\in I} \prod_{i_j \in \textbf{i}}^k a_{i_j,j} f(e_{\textbf{i}})\right|\\
      &= C \sum_{\textbf{i}\in I} \left|\prod_{i_j \in \textbf{i}}^k a_{i_j,j}\right| = C \prod \|v_j\|_j.
 \end{align*}
-Onde \(C:= \max |f(e_{\textbf{i}})| = |f(e_{i_1}, \ldots e_{i_k})|, \ i_j \in I_j\). 
+Onde \(C:= \sup |f(e_{\textbf{i}})| = \sup |f(e_{i_1}, \ldots e_{i_k})|, \ i_j \in I_j\). 
 }
 
 (b) \(f\) \(k\)-linear é diff, calcule seu diferencial.  
@@ -159,7 +159,7 @@ Onde \(C:= \max |f(e_{\textbf{i}})| = |f(e_{i_1}, \ldots e_{i_k})|, \ i_j \in I_
 \end{align*}
 Onde \(\ve_j := (p_1, \ldots , v_j, \ldots, p_k)\) e \(\ve_{i<j} := (p_1, \ldots, v_i, \ldots,\) \( v_j, \ldots, p_k)\). Finalmente, perciba que \(df(p)(\ve) = \sum f(\ve_j)\) é linear (em \(\ve\)). Além disso,  
 \begin{align*}
-    \lim_{\|\ve\|\to 0} \frac{\sum f(\ve_{i<j})}{\|\ve\|} \leq C \lim_{\|\ve\|\to 0} \frac{\|v_i\|_i \|v_j\|_j}{\|\ve\|} \ (\ \cdots) \to 0.
+    \lim_{\|\ve\|\to 0} \frac{\sum f(\ve_{i<j})}{\|\ve\|_\infty} \leq C \lim_{\|\ve\|\to 0} \frac{\|v_i\|_i \|v_j\|_j}{\|\ve\|_\infty} \ (\ \cdots) \to 0.
 \end{align*}
 Portanto, \(f \) de fato é diff como enunciado.
 }
@@ -221,11 +221,13 @@ Mostre que \(f \in C^\infty (\R)\setminus C^\omega(\R)\).
         \y
     \end{bmatrix}. \] 
     Isso \(\leftrightharpoons\) \(4\lambda^2\y - \y  = \0 = [(2\lambda)^2 - 1]\y\). Se \(\y = \0\), então \(\x = \0\) e \((\x,\y) = \0 \) que não tá na esfera, portanto \((2\lambda)^2 - 1 = (2\lambda +1)(2\lambda-1) = 0 \ \leftrightharpoons \ |\lambda| = \nicefrac{1}{2}\), ou seja quando \(\x= \y\) ou \(\x = -\y\),  
-    \[-1 =- \|\x\|^2 \leq  f(\x,\y) \leq \|\x\|^2 =1 .\] 
-    Dados \(\vec{u}, \vec{v} \in \R^n\setminus\{\0\}\), sejam \(\x = \nicefrac{u}{\|u\|}\) e \(\y = \nicefrac{v}{\|v\|}\), 
+    \[-\frac{1}{2} =- \|\x\|^2 \leq  f(\x,\y) \leq \|\x\|^2 = \frac{1}{2} .\] 
+    Dados \((\x,\y) \in \R^n \times \R^n \setminus \{\0\}\), sejam \((\overline{\x}, \overline{\y}) =  \nicefrac{(t^2\x,\nicefrac{1}{t^2}\y)}{\|(t^2\x,\nicefrac{1}{t^2}\y)\|}\), siendo \(t > 0 \) arbitrário, 
     \begin{align*}
-        |\langle u, v\rangle| =  \|u\|\|v\| |\langle \x, \y\rangle | \leq \|u\|\|v\|.
+        |\langle \overline{\x}, \overline{\y}\rangle| &=   \frac{|\langle t^2\x,\nicefrac{1}{t^2} \y\rangle |}{\|(t^2\x, \nicefrac{1}{t^2}\y)\|^2} \leq \frac{1}{2} \\
+        &\hspace{1cm}\Rightarrow  |\langle \x, \y\rangle|\leq 2|\langle \x, \y\rangle| \leq t^2\|\x\|^2 + \frac{1}{t^2}\|\y\|^2.
     \end{align*}
+    O valor ótimo dessa função é \(t^2 = \nicefrac{\|\y\|}{\|\x\|}\), de onde segue que \(|\langle \x, \y\rangle| \leq 2\|\x\|\|\y\|\) (\emph{Desig. de Cauchy-Schwarz}).  
 }
 
 \-\vspace{-0.3cm}
@@ -234,7 +236,7 @@ Mostre que \(f \in C^\infty (\R)\setminus C^\omega(\R)\).
   \hrule}
 
 6. \(\blacksquare\)  (\emph{DVM (em aplicações)}) Sejam \(U\ab\subset \R^n\), \(K \subset U\) convexo e \(C\geq 0 : \forall \x \in K, \ \|DF(\x)\|\leq C\). Então, 
-\[\|F(\x) = F(\y)\| \leq C \|\x-\y\|, \ \forall \x, \y \in K.\]
+\[\|F(\x) - F(\y)\| \leq C \|\x-\y\|, \ \forall \x, \y \in K.\]
 \textcolor{gris}{Suponha que \(F(\x) \neq F(\y)\) (outro casso é trivial), seguido defina, \( \vec{u} \in \E^{n-1}  \) e \(\phi: [0,1] \to \R^n\)  como sendo, 
 \[u := \frac{F(\x) - F(\y)}{\|F(\x) - F(\y)\|} \text{\ \ e \ \ } \phi(t):= (\x-\y)t + t\y.\] 
 A função \(\varphi(t) := \langle u, F(\phi (t)) \rangle\) é \(C^1([0,1])\), pois todas as funções envolvidas são. Pelo \(\blacksquare\) (\emph{TVM = \(\R\)}) \(\exists \theta \in (0,1) : \varphi(1) - \varphi(0) = \dot{\varphi}(\theta)\), nossos termos,  
