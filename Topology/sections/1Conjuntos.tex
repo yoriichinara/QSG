@@ -1,15 +1,185 @@
-\section{Conjuntos}
+\section{Preliminares}
+%%
+%
+\subsection*{Teoria de conjuntos}
+Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \(X\), \(Y \) conjuntos e \(f:X \to Y\) função:
 
-\begin{lemma}[Leis de De Morgan]
-    Se \(A_i \subset X\) então, 
+\begin{enumerate}[label = 1.\Alph*.]
+\hypertarget{demorgan}{}
+    \item (\emph{Leis de De Morgan}) Sejam \((A_i)_{i\in I} : A_i \subset X\), então, 
     \[(a)\ X\setminus \bigcup A_i = \bigcap (X \setminus A_i) \ \ \text{ e } \ \ (b) \ X\setminus \bigcap A_i = \bigcup (X\setminus A_i). \]
-    \textcolor{gray}{\(\rightarrow\) Faz \((a)\) por double contenção e use ele para concluir \((b)\)}
-\end{lemma}
-
-\begin{lemma}[Pre-imagen bém portada]
-    Sejam \(f:X\to Y\) função e \(B_i \subset Y\). Então,
+    \item (\emph{Pre-imagem}) Sejam \((B_i)_{i\in I} : B_i \subset Y\). Então,
     \[(a)\ f^{-1}\left(\bigcup B_i\right) = \bigcup f^{-1}(B_i); \ \ \ (b)\ f^{-1}\left(\bigcap B_i\right) = \bigcap f^{-1}(B_i)\]
-    \[(c)\ f^{-1}\left(Y \setminus B_i\right) = X \setminus f^{-1}(B_i)\]
-\end{lemma}
+    \[(c)\ f^{-1}\left(Y \setminus B_j\right) = X \setminus f^{-1}(B_j).\]
+    \item (\emph{Imagem}) Sejam \((A_i)_{i\in I}  : A_i \subset X\). Então,
+    \[(a)\ f\left(\bigcup A_i\right) = \bigcup f(A_i) \ \text{ \ e \ } \ (b)\ f\left(\bigcap A_i\right) \subset \bigcap f(A_i),\]
+    com igualdade em (b) se \(f\) for injetora. 
+    \item[1.E.] Dados \(A\subset X\) e \(B \subset Y\) temos:  
+    \begin{enumerate}[label = (\alph*), left = -0.15cm]
+        \item \( A \subset f^{-1}(f(A))\), igualdade se \(f\) injetora (\(\hookrightarrow\)). 
+        \item \( f(f^{-1}(B)) \subset B \), igualdade se \(f\) sobrejetora (\(\twoheadrightarrow\)). 
+    \end{enumerate}
+    \item[1.G.] Se \(\exists g : Y \to X \mid g \circ f = \id_X\), então \(f\) é injetora e \(g\) sobrejetora. 
+\end{enumerate}
+%
+%\begin{lemma}
+%\end{lemma}
+\subsection*{Espaços métricos}
 
+\begin{definition}
+    Dados \((X,d)\) espaço métrico, \(a \in X\) e \(r>0\), denotamos as  \emph{bolas aberta} e \emph{fechada} com centro em \(a\) e raio \(r\) como sendo:
+    \[B(a;r) := \{x \in X : d(x,a)< r\} \text{ \ \ e \ \ }B[a;r]:= \{x\in X : d(x,a) \leq r\}.\]  
+\end{definition}
+\vspace{-0.5cm}
+\begin{definition}
+    \(U\ab \subset X \ \leftrightharpoons \ \forall a \in U, \ \exists r>0 : B(a;r)\subset U\) e \(F\ce\subset X \ \leftrightharpoons \ (X \setminus F)\ab \subset X\).
+\end{definition}
+
+\begin{proposition}
+    \textbf{2.6.} (a) \(\varnothing\) e \(X\) são abertos; \ (b) União arbitrária de abertos é aberto; \ (c) Interseção finita de abertos é aberto. 
+\end{proposition}
+
+\newcommand{\comentario}[1]{\textcolor{gray}{\(\rightarrow\) #1}}
+\hypertarget{coro27}{}
+\begin{corollary}
+    \textbf{2.7.} (a) \(\varnothing\) e \(X\) são fechados; \ (b) Interseção arbitrária de fechados é fechado; \ (c) União finita de fechados é fechado. \comentario{Ex. \hyperlink{demorgan}{1.A.}} 
+\end{corollary}
+
+\begin{definition}
+    Uma função \(f: (X,d_X) \to (Y,d_Y)\) é \emph{contínua} em \(a \in X \) se dado \(\epsilon > 0, \ \exists \delta > 0 : f(B_X(a;\delta)) \subset B_Y(f(a); \epsilon)\). 
+\end{definition}
+
+\begin{note}
+    \(f\) é contínua em geral se for contínua em cada ponto. Denotamos \(C(X,Y)\) o conjunto de todas as funções contínuas  e \(C(X)\) se \(Y = \R\).
+\end{note}
+
+\begin{proposition}
+    \textbf{2.10.} As seguintes condições são equivalentes:
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item \(f \in C(X,Y)\). \hspace{3.8cm} (b)\ \(\forall V\ab \subset Y, \ \exists U\ab \subset X : f(U) \subset V\).  
+        \item[(c)] \(f^{-1}(V)\ab \subset X, \ \forall V\ab \subset Y\).  \hspace{1.2cm} (d) \ \(f^{-1}(B)\ce \subset X, \ \forall B\ce \subset Y\).
+    \end{enumerate}
+\end{proposition}
+
+\begin{example}
+    As métricas estándar em \(\R^n\), \(d_1, \ d_2\) e \( d_\infty\).  
+\end{example}
+
+\section{Espaços topologicos}
+
+\begin{definition}
+    Chamamos de \emph{topologia} em \(X\) uma familia \(\tau \subset \wp(X) :\) (T1) \(\varnothing, X \in \tau\); (T2) \(\forall \mathcal{C} \subset \tau, \ \bigcup \{U : U \in \mathcal{C}\} \in \tau\) e (T3) \ \(\forall U, \ V \in \tau, \ U\cap V \in \tau \). 
+\end{definition}
+
+\begin{note}
+    Um subconjunto \(F\ce\subset X \ \leftrightharpoons \ (X \setminus F)\ab \subset X\), como no {\scriptsize \(\boxtimes\)} \hyperlink{coro27}{2.7.}, existe uma versão equivalente da definição topologia em termos de fechados.
+\end{note}
+
+\begin{definition}
+    Dadas duas topologias \(\tau_1, \ \tau_2 \) em \(X\) tais que \(\tau_1\subset \tau_2\). Então, dizemos que \(\tau_1\) é mais \emph{fraca} ou \(\tau_2\) mais \emph{forte}  que a outra.  
+\end{definition}
+
+\ejemplo{\centering Exemplos importantes
+\tcblower
+\((X, d)\) com \(\tau = \tau_d \) \hfill \(\mid\) \hfill \(\tau = \{\varnothing, X\}\) (top. trivial) \hfill \(\mid\) \hfill \(\tau = \wp(X)\) (top. discreta) \\ 
+\(\tau = \{\varnothing, \{a\}, \{a,b\}\}\) (top. Sierpinski) \hfill \(\mid\) \hfill \(\overline{\tau} = \{F \subset X : F \text{ finito}\}\) (top. cofinita)% \comentario{Definida por fechados} 
+}
+
+\subsection*{Aderência e interior}
+
+\begin{definition}
+    Dados \((X,\tau)\) e \(A\subset X\), definimos \emph{aderência} e \emph{interior} de \(A\), respectivamente, 
+    \[\overline{A}:= \bigcap \{F\ce \subset X : A \subset F \} \text{ \ \ e \ \ } A^\circ := \bigcup \{U\ab \subset X : U \subset A\}.\]  
+\end{definition}
+\vspace{-0.2cm}
+\hypertarget{prop4x}{}
+\begin{proposition}
+    \textbf{4.*.} As aplicações \(\operatorname{f}:  A \mapsto \overline{A}   \) e \(\operatorname{i} : A \mapsto A^\circ\) verificam: 
+    \vspace{-0.2cm}
+    \begin{enumerate}[label = (\(\operatorname{f}\)\arabic*), left = 0.75cm]
+        \item \(A\subset \overline{A}\). \hfill (\(\operatorname{f}\)2) \ \(\overline{A\cup B} = \overline{A} \cup \overline{B}\).\hfill (\(\operatorname{f}\)3) \ \(A\ce\subset X \ \leftrightharpoons \ A = \overline{A}\)\hspace{0.1cm}.
+        \item[(\(\operatorname{i}\)1)] \(A^\circ \subset A\). \hspace{1.65cm} (\(\operatorname{i}\)2) \ \((A \cap B)^\circ = A^\circ \cap B^\circ\).\hspace{1.1cm} (\(\operatorname{i}\)3) \ \(A\ab \subset X \ \leftrightharpoons \ A = A^\circ\).
+    \end{enumerate}
+\end{proposition}
+\begin{note}
+    Tem versões mais completas da \(\square\) \hyperlink{prop4x}{4.*.}, até da pra definir topologia a partir de aplicações verificando aquelas propriedades, olha se queser \cite[Pág. 9]{mujica2005}.  
+\end{note}
+\begin{proposition}
+    \textbf{4.5.} \(X\setminus \overline{A} = (X \setminus A)^\circ\) e \( X\setminus A^\circ = \overline{X\setminus A}\). \comentario{Mais uma vez Ex. \hyperlink{demorgan}{1.A.}}
+\end{proposition}
+
+\subsection*{Sistemas de vizinhanças}
+
+\begin{definition}
+    \(U\subset X\) é \emph{vizinhança} de \(x \in X\) se \(x \in U^\circ\), cujo casso \( U \in \U_x\). 
+\end{definition}
+
+\hypertarget{prop52}{}
+\begin{proposition}
+    \textbf{5.2.} As \emph{vizinhanças} \(U \in \U_x\) verificam as seguintes propriedades: 
+\vspace{-0.2cm}
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item \(x \in U\). \hfill  (b) \ \( V \in \U_x \Rightarrow U\cap V \in \U_x\). \hfill (d) \ \(U \subset V\subset X \Rightarrow V \in \U_x\).
+        \item[(c)] \(\exists V \in \U_x : V\subset U\) e \(\forall y \in V, \ U \in \U_y\). \hfill (e) \  \(U\ab\subset X \ \leftrightharpoons \ \forall x \in U, \  U \in \U_x\). 
+    \end{enumerate}
+\end{proposition}
+\begin{note}
+    Mais uma vez, é possível definir a topologia \(\tau = \{U \subset X : U \in \U_x, \ \forall x \in U\}\) a partir de uma familia verificando tais propriedades, \cite[Pág. 12]{mujica2005}.
+\end{note}
+
+\begin{definition}
+    Uma familia \(\mathcal{B}_x\subset \U_x\) é \emph{base de vizinhanças} se \(\forall U \in \U_x, \ \exists V \in \mathcal{B}_x : V \subset U\). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{5.7.} Pra cada \(x \in X \) seja \(\mathcal{B}_x\) familia verificando: 
+    \vspace{-0.2cm}
+    \begin{enumerate}[label = (\alph*), left = 0.6cm ]
+        \item \(\forall U \in \B_x, \ x \in U\). \hfill (b) Dados \(U,V \in \B_x, \ \exists W \in \B_x : W \subset U \cap V\). 
+        \item[(c)] Dada \(U \in \B_x, \ \exists V \in \B_x, \ V\subset U : \forall y \in V, \ \exists W \in \B_y \) tal que \( W \subset U\). 
+    \end{enumerate}
+    Então, \(\tau := \{U \subset X : \forall x \in U, \ \exists V \in \B_x \mid V \subset U\}\) é uma topologia em \(X\) e \(\B_x\) uma base de vizinhanças pra \(\tau\). \comentario{Considere \(\U_x := \{U\subset X : \exists V \in \B_x \mid V \subset U\}\), a afirmação segue da recíproca da \(\square\) \hyperlink{prop52}{5.2.} no texto guía. }
+\end{proposition}
+
+\begin{proposition}
+    \textbf{5.8.} Sejam \(A \subset X\) e \(\B_x\) base de vizinhanças. Então, \(\overline{A} = \{x \in X : \forall V \in \B_x, \ V\cap A \neq \varnothing\}\) \ e \ \(A^\circ = \{x \in X : \exists  V \in \B_x : V\subset A\}\).
+\end{proposition}
+
+\begin{example}
+    Em \((X, d)\), as bolas (abertas u fechadas) são base de vizinhanças. 
+\end{example}
+\begin{definition}
+    \((X, \tau)\) satisfaz o \emph{primeiro axioma de enumerabilidade} se cada \( x \in X\) admite base de vizinhaças \(\B_x\) enumerável.  
+\end{definition}
+
+\subsection*{Bases para os abertos}
+
+\begin{definition}
+    Diz-se que \(\B \subset \tau\) é \emph{base} de \(\tau \) se \(\forall U \ab \subset X, \ \exists \mathcal{C} \subset \B : U = \bigcup \{V : V \in \mathcal{C}\}\). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{6.3.} \(\B \subset \tau\) é base \(\leftrightharpoons \ \forall x \in U\ab\subset X, \  \exists V \in \B : x \in V \subset U\), pra cada \( U \in \tau \). 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{6.6.} Seja \(\B \subset \wp(X)\) verificando: (a) \(X = \bigcup\{V : V \in \B\}\) e (b) Dados \(U, V \in \B \text{ e } x \in U \cap V, \ \exists W \in \B : x \in W \subset U \cap V \). Então, os conjuntos da forma:  
+    \[U = \bigcup \{V : V \in \mathcal{C}\} \text{ \ \ com \ \ } \mathcal{C} \subset \B,\]
+    definem uma topologia \(\tau\) em \( X\), pra a qual \(\B\) é base. 
+\end{proposition}
+
+\begin{definition}
+    \((X, \tau)\) satisfaz o \emph{segundo axioma de enumerabilidade} se \(\exists \B\subset \tau\) base enumerável.  
+\end{definition}
+
+\begin{example}
+    Em \((\R, \tau_2)\), a familia \(\B := \{(a,b) : a < b\}\) é base de \(\tau_2\), enumerável se tomarmos só \(a,b \in \mathbb{Q}\).  
+\end{example}
+
+\ejemplo{\centering \(+\) Exemplos importantes (em \(X = \R\))
+\tcblower
+\centering \(\B = \{(a, \infty) : a \in \R\}\) \hspace{0.5cm} \(\mid \) \hspace{0.5cm} \(\B :=\{[a,b): a <b\}\) (top. Sorgenfrey) 
+}
+
+\subsection*{Subespaços}
 

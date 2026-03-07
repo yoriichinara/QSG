@@ -56,7 +56,7 @@
 \item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
     \centering \(\exists \V_0\) tal que \(F: \V_0 \hookrightarrow F(\V_0)\)  
     \tcblower 
-    \textcolor{gray}{\(DR(0)=0\), logo do {\scriptsize \(\square\)} \hyperlink{lemma82}{8.2.}, com \(p=0\) e \(\epsilon = \frac{1}{2}, \exists\V_0\) tal que \(\forall \textbf{x}_1, \textbf{x}_2 \in \V_0\), \(\|R(\textbf{x}_1) - R(\textbf{x}_2)\|\leq \frac{1}{2}\|\textbf{x}_1-\textbf{x}_2\|\). Leve a expressão a termos de \(F\) e conclua.}  
+    \textcolor{gray}{\(DR(0)=0\), logo do {\scriptsize \(\square\)} \hyperlink{lemma82}{8.2.}, com \(p=0\) e \(\epsilon = \nicefrac{1}{2}, \exists\V_0\) tal que \(\forall \textbf{x}_1, \textbf{x}_2 \in \V_0\), \(\|R(\textbf{x}_1) - R(\textbf{x}_2)\|\leq \nicefrac{1}{2}\|\textbf{x}_1-\textbf{x}_2\|\). Leve a expressão a termos de \(F\) e conclua.}  
 \end{tcolorbox}
 \begin{definition}
     Sejam \(M, \ N\) espaços métricos. Uma aplicação \(T:M\to N\) é uma \emph{contração} se \(\exists c<1\) tal que \(\forall x,y \in M, \ \|T(x)- T(y)\|\leq c\|x-y\|\). 
@@ -69,7 +69,7 @@
 \item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
     \centering \(F(\V_0)\ab \subseteq \R^n\) 
     \tcblower 
-    \textcolor{gray}{Sejam \(p \in \V_0\), \(q = F(p) \in F(\V_0)\). Defina \(\forall \textbf{y} \in \V_0 \), \(T_{\textbf{y}}: \textbf{x} \mapsto  \textbf{y} - R(\textbf{x})\) e tome \(r>0 : B[p,r] \subset \V_0\). Suponha \(\|\textbf{y}- q\|<\frac{r}{2} = \epsilon\) e \(\textbf{x} \in B[p,r]\). Desenvolva \(\|T_{\textbf{y}}(\textbf{x}) - p\|\) e aplique \(\blacksquare\) \hyperlink{thmPFB}{(\emph{Ponto Fixo Banach})}. }%\textbf{x} - (F(\textbf{x})- \textbf{y})
+    \textcolor{gray}{Sejam \(p \in \V_0\), \(q = F(p) \in F(\V_0)\). Defina \(\forall \textbf{y} \in \V_0 \), \(T_{\textbf{y}}: \textbf{x} \mapsto  \textbf{y} - R(\textbf{x})\) e tome \(r>0 : B[p,r] \subset \V_0\). Suponha \(\|\textbf{y}- q\|<\nicefrac{r}{2} = \epsilon\) e \(\textbf{x} \in B[p,r]\). Desenvolva \(\|T_{\textbf{y}}(\textbf{x}) - p\|\) e aplique \(\blacksquare\) \hyperlink{thmPFB}{(\emph{Ponto Fixo Banach})}. }%\textbf{x} - (F(\textbf{x})- \textbf{y})
 \end{tcolorbox}
 \hypertarget{lemma83}{}
 \begin{lemma}
@@ -78,7 +78,7 @@
 \item[] \begin{tcolorbox}[colframe=gray, colback=white, boxrule = 0.8pt]
     \centering \(F^{-1} \in C^k(F(\V_0), \R^n)\) %é diff em \(F(\V_0)\) e \(D[F^{-1}](q) = [DF(p)]^{-1}\) 
     \tcblower
-    \textcolor{gray}{ \parbox[a]{0.63\linewidth}{{\small \(^\bullet\)} \(\|DF(p)- \id_{n}\| = \|DR(p)\| < \frac{1}{2}\) implica \(DF(p)\) invertível. Sendo \(q = F(p)\), para \(0<\|w\| \ll \epsilon\), \(\exists v\in \R^n\) tal que \(F(p+v) = q+w\). Desenvolva a expressão \(F^{-1}(q+w)\), apontando para a definição de diff.  }
+    \textcolor{gray}{ \parbox[a]{0.63\linewidth}{{\small \(^\bullet\)} \(\|DF(p)- \id_{n}\| = \|DR(p)\| < \nicefrac{1}{2}\) implica \(DF(p)\) invertível. Sendo \(q = F(p)\), para \(0<\|w\| \ll \epsilon\), \(\exists v\in \R^n\) tal que \(F(p+v) = q+w\). Desenvolva a expressão \(F^{-1}(q+w)\), apontando para a definição de diff.  }
     \parbox[b]{0.4\linewidth}{ \- } \\  
     {\small \(^\bullet\)} A afirmação respeito da classe segue do {\scriptsize \(\square\)} \hyperlink{lemma83}{8.3.} no diagrama a direita.
     }
@@ -257,7 +257,7 @@
 
 \hypertarget{lemma86}{}
 \begin{lemma}
-    \textbf{8.8.} Sejam \(V\) \(\R\)-espaço e \(\ell_1, \ell_2 \in V'\). Se \(\ker \ell_1 \subseteq \ker \ell_2\), então \(\exists \lambda \in \R:\ell_2 = \lambda \ell_1 \). 
+    \textbf{8.8.} Sejam \(V\) \(\R\)-espaço e \(\ell_1, \ell_2 \in \hom(V)\). Se \(\ker \ell_1 \subseteq \ker \ell_2\), então \(\exists \lambda \in \R:\ell_2 = \lambda \ell_1 \). 
 \end{lemma}
 \begin{corollary}
     \(\blacksquare\) \hyperlink{thmML}{(\emph{Multiplicadores de Lagrange})}. \textcolor{gray}{\(\rightarrow\) Segue de \(\square\) \hyperlink{prop85}{8.7.} e {\scriptsize \(\square\)} \hyperlink{lemma86}{8.8.} }

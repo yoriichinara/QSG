@@ -44,22 +44,22 @@
     Se \(f \in C^2(U)\), então \(\forall i,j \leq n\), \ \(\displaystyle\frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2 f }{\partial x_j \partial x_i}\). 
 \end{theorem}
 
-\demo{\parbox[a]{0.27\linewidth}{\- }\parbox[b]{0.73\linewidth}{\vspace{0.2cm}Basta ver \(n=2\). Defina \( S = f(x+h, y+k) - f(x+h,y) - f(x, y+k) + f(x,y)\) e \(\varphi(t) = f(t, y+k) - f(t, y)\), aplique \(\blacksquare\) \hyperlink{thmTVMR}{(\emph{TVM - \(\R\)})}\(\times 2\) e manipule até obter uma igualdade a \(S\). O resultado segue de fazer o mesmo a \(\psi(t)\), fixando a outra coordenada.\vspace{0.2cm}}}
+\demo{\parbox[a]{0.27\linewidth}{\- }\parbox[b]{0.73\linewidth}{\vspace{0.2cm}Basta ver \(n=2\). Defina \( \varphi (t) = f(a+t, b+t) - f(a+t,b) - f(a, b+t) + f(a,b)\) e \(\zeta(x) = f(x, b+t) - f(x, b)\), aplique \(\blacksquare\) \hyperlink{thmTVMR}{(\emph{TVM - \(\R\)})}\(\times 2\) e manipule até obter uma igualdade a \(\varphi(t)\). O resultado segue de fazer o mesmo a \(\eta(y)\), fixando a outra coordenada, se for preciso olha \cite[Pág. 151]{lima2004analise}.\vspace{0.2cm}}}
 
 \-\vspace{-1cm}
-\begin{tikzpicture}[scale = 0.9, >=to, shift={(2cm,2.65cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
+\begin{tikzpicture}[scale = 0.9, >=to, shift={(2cm,2.3cm)}, baseline={(current bounding box.center)}, remember picture, overlay]
 
   % Círculo dashed
-  \draw[dashed, color = gray, opacity = 1] (0.6,-1.5) arc[start angle = -50, end angle = 50, radius = 2.4cm];
+  \draw[dashed, color = gray, opacity = 1] (0.6,-1.2) arc[start angle = -50, end angle = 50, radius = 2.4cm];
 
   % Coordenadas del rectángulo
   \coordinate (A) at (-1,1.5);
   \fill[black] (A)  circle (2pt);
   \coordinate (B) at (0.7,1.5);
   \fill[black] (B)  circle (2pt);
-  \coordinate (C) at (0.7,-0.8);
+  \coordinate (C) at (0.7,-0.3);
   \fill[black] (C)  circle (2pt);
-  \coordinate (D) at (-1,-0.8);
+  \coordinate (D) at (-1,-0.3);
   \fill[black] (D)  circle (2pt);
 
   % Dibujo del rectángulo
@@ -67,10 +67,10 @@
   \draw[thick, gray] (A) -- (B) -- (C) -- (D) -- cycle;
 
   % Etiquetas de los vértices
-  \node[above, color = black]  at (A) {\tiny$(x,y+k)$};
-  \node[above right, color = black] at (B) {\tiny$(x+h,y+k)$};
-  \node[below right, color = black] at (C) {\tiny$(x+h,y)$};
-  \node[below, color = black]  at (D) {\tiny$(x,y)$};
+  \node[above, color = black]  at (A) {\tiny$(a-\epsilon,b+\epsilon)$};
+  \node[above right, color = black] at (B) {\tiny$(a+\epsilon,b+\epsilon)$};
+  \node[below right, color = black] at (C) {\tiny$(a+\epsilon,b-\epsilon)$};
+  \node[below, color = black]  at (D) {\tiny$(a-\epsilon,b-\epsilon)$};
 
 \end{tikzpicture}
 

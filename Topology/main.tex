@@ -7,7 +7,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%% PACOTES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-\usepackage[margin = 0.5in, bottom = 2in]{geometry}
+\usepackage[margin = 0.7in, bottom = 2in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -127,7 +127,7 @@
 \makeatother
 
 \theoremstyle{definition}
-\newtheorem*{definition}{\rotatebox{45}{\large \(\square\)}}
+\newtheorem*{definition}{\rotatebox{45}{\large \(\boxdot\)}}
 
 \theoremstyle{plain}
 \newtheorem*{lemma}{{\scriptsize \(\square\)}}
@@ -164,11 +164,11 @@
 \newtheorem*{example}{\textcolor{verdeoscuro}{\underline{{Exemplo}}}}
 \newtheorem*{exercise}{\textcolor{rojoscuro}{\underline{{Exercise}}}}\theoremstyle{remark}
 \newtheorem*{note}{\textnormal{\emph{Nota. }}}
-\newtheorem*{corollary}{\textnormal{\emph{Corolário. }}}
+\newtheorem*{corollary}{{\scriptsize \(\boxtimes\)}}
 
 \newcommand{\id}{\mathds{1}}
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\B}{\mathbb{B}}
+\newcommand{\B}{\mathcal{B}}
 \newcommand{\Ei}{}
 \newcommand{\Ef}{}
 \newcommand{\N}{\mathbb{N}}
@@ -208,22 +208,26 @@ Dono da frase \hfill \href{mailto:n267452@dac.unicamp.br}{\url{n267452@dac.unica
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{\large \textbf{Notação}} \hfill \text{\rotatebox{45}{\large $\square$}}  Definição \hfill \((-)^{\text{\ding{71}}}\)  Aberto \hfill  \((-)^{\text{\ding{70}}}\) Fechado \\ 
-\- \hspace{4.7cm}{\scriptsize$\square$} \ Lema \hspace{2.9cm} {\large$\square$} \ Proposição \hspace{1.3cm}  {\large $\blacksquare$}  \ Teorema
+{\textbf{Notação}} {\small \hfill \text{\rotatebox{45}{\large $\boxdot$}}  Definição \hfill \(\textcolor{gray}{(-)}^{\text{\ding{71}}}\)  Aberto \hfill  \(\textcolor{gray}{(-)}^{\text{\ding{70}}}\) Fechado  \\ 
+\- \hspace{0.6cm}{\scriptsize$\square$} \ Lema \hfill {\large$\square$} Proposição \hfill  {\large $\blacksquare$}  \ Teorema \ \  \hfill {\scriptsize $\boxtimes$}  \ Corolário \ }
 
+{\small
 \input{sections/1Conjuntos.tex}  
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% REFERÊNCIAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+{\small
 \begin{thebibliography}{9}
 
 %\bibitem{martin1966complex}
 %Martin, D. y Ahlfors, L.V. (1966). \textit{Complex Analysis}. New York: McGraw-Hill.
 
-\bibitem{lima2004analise}
-Lima, Elon Lages (2004). \textit{An{\'a}lise real Vol. 2}. IMPA, Rio de Janeiro.
+\bibitem{mujica2005}
+Mujica, Jorge (2005). \textit{Notas de Topologia Geral}, IMECC-UNICAMP.
 
 \end{thebibliography}
+}
 
 %\end{multicols}
 

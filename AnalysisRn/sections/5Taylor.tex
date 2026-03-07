@@ -71,13 +71,14 @@
     Se \(f(\textbf{x})= \sum_{|\alpha|\leq k} c_\alpha \textbf{x}^\alpha \) anula-se identicamente numa vizinhança da origem, então \(\forall \alpha, \ c_\alpha = 0\). \textcolor{gray}{\(\rightarrow \) Hmmm }
 \end{exercise}
 
+\newcommand{\0}{\textbf{0}}
 \hypertarget{thm51}{}
 \begin{theorem}
-    \textbf{5.1.} Sejam \(k\geq 1\) e \(f\) uma função \(k\)-diff em \(0\in \R^n\). Se \(f\) anula-se a ordem \(k+1 \), então \(f(v)=o\|v\|^k\).
+    \textbf{5.1.} Sejam \(k\geq 1\) e \(f\) uma função \(k\)-diff em \(\0\in \R^n\). Se \(f\) anula-se a ordem \(k+1 \), então \(f(v)=o\|v\|^k\).
 \end{theorem}
 \demo{Faz por indução, no paso indutivo use o \(\blacksquare\) \hyperlink{thmTVMRn}{(\emph{TVM - \(\R^n\)})} para representar \(f(v)\) e calcule \(\lim\limits_{v\to 0} \frac{f(v)}{\|v\|^k} \). Considere a função  
 \- \vspace{-0.3cm}\[\textstyle \Gamma_k(v) : v \mapsto f(p+v) - \sum^k \frac{1}{j!} \  d^jf(p) v^{\otimes j}, \]
-observe que ela é \(k\)-diff no \(0\) e anula-se à ordem \(k+1\).} 
+observe que ela é \(k\)-diff no \(\0\) e anula-se à ordem \(k+1\).} 
 
 \begin{corollary}[]%[Colorario]
 \hypertarget{coro52}{}

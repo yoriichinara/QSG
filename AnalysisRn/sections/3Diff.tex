@@ -1,8 +1,8 @@
 \section{O Diferencial} 
 
-\renewcommand{\hom}{\operatorname{Hom}}
+\renewcommand{\hom}{\mathcal{L}}
 \begin{definition}
-    Sejam \(f:U\ab\subseteq \R^n \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in (\R^n)'\) tal que \(f(p+v) = f(p) + \ell\cdot v + o\|v\|, \text{ quando} \ v\to 0. \footnote{\((\R^n)' := \hom_\R(\R^n, \R)\), o espaço dual, olha as notas de Álgebra Linear II.}\)
+    Sejam \(f:U\ab\subseteq \R^n \to \R\) e \(p\in U\). Dizemos que \(f \) é \emph{diff} em \(p\) sse \(\exists \ell \in \hom(\R^n)\) tal que \(f(p+v) = f(p) + \ell\cdot v + o\|v\|, \text{ quando} \ v\to 0. \footnote{\(\hom(\R^n)\) é o espaço dual, olha as notas de Álgebra Linear II.}\)
 \end{definition}
 %\vspace{-0.4cm}
 \begin{note}
