@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.13)  6 MAR 2026 21:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.1.13)  7 MAR 2026 09:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -955,7 +955,7 @@ Package hyperref Info: Link coloring ON on input line 114.
 Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 114.
 
 \c@lstlisting=\count411
-<Imagens/Header.png, id=51, 4986.63pt x 611.886pt>
+<Imagens/Header.png, id=55, 4986.63pt x 611.886pt>
 File: Imagens/Header.png Graphic file (type png)
 <use Imagens/Header.png>
 Package pdftex.def Info: Imagens/Header.png  used on input line 190.
@@ -1006,7 +1006,9 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 
 [3])
 
-[4] (./main.aux)
+[4]
+
+[5] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1017,21 +1019,21 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.98pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 459CAAABF84DD1ECE4E1FEB2BDC19F71;247.
+(rerunfilecheck)             Checksum: 44F8463AB9C6E3704CACCDBE77723353;391.
  ) 
 Here is how much of TeX's memory you used:
- 33523 strings out of 475171
- 680711 string characters out of 5767095
+ 33526 strings out of 475171
+ 680737 string characters out of 5767095
  1185768 words of memory out of 5000000
- 55902 multiletter control sequences out of 15000+600000
+ 55903 multiletter control sequences out of 15000+600000
  604239 words of font info for 111 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,6n,101p,1257b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (4 pages, 454655 bytes).
+Output written on main.pdf (5 pages, 456445 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 178 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 188 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

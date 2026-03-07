@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1772843958.4833 "/home/yoriichinara/Documents/QSG/Topology/main.tex" "main.pdf" "main" 1772843960.21901 0
+["pdflatex"] 1772884930.33422 "/home/yoriichinara/Documents/QSG/Topology/main.tex" "main.pdf" "main" 1772884932.04218 0
   "/home/yoriichinara/Documents/QSG/Topology/main.tex" 1772839255.79875 7711 3a32bc480447acdb9f1c6b4ed44eccde ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1767555874 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1767555874 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -248,10 +248,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1768348347 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1768348256 2008245 cf6d013e65dcc0544d4dcba326776e42 ""
   "Imagens/Header.png" 1752097914 363895 6890a9cd210a4932f77549a60c1a103c ""
-  "main.aux" 1772843960.10423 456 41a8f4f7db9941ffb148a37de612f186 "pdflatex"
-  "main.out" 1772843960.10423 247 459caaabf84dd1ece4e1feb2bdc19f71 "pdflatex"
+  "main.aux" 1772884931.93596 573 23240bea7a976dcef1a9719b48d6d31d "pdflatex"
+  "main.out" 1772884931.93596 391 44f8463ab9c6e3704caccdbe77723353 "pdflatex"
   "main.tex" 1772839255.79875 7711 3a32bc480447acdb9f1c6b4ed44eccde ""
-  "sections/1Conjuntos.tex" 1772843958.19755 10368 bd4e9c40c7ea4989efd2814621d08d60 ""
+  "sections/1Conjuntos.tex" 1772884928.32925 11192 7a2df307d90e83ac569fc5fab4fdb128 ""
   (generated)
   "main.aux"
   "main.log"
