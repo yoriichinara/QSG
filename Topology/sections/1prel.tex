@@ -1,0 +1,68 @@
+\section{Preliminares}
+%%
+%
+\subsection*{Teoria de conjuntos}
+Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \(X\), \(Y \) conjuntos e \(f:X \to Y\) função:
+
+\begin{enumerate}[label = 1.\Alph*.]
+\hypertarget{demorgan}{}
+    \item (\emph{Leis de De Morgan}) Sejam \((A_i)_{i\in I} : A_i \subset X\), então, 
+    \[(a)\ X\setminus \bigcup A_i = \bigcap (X \setminus A_i) \ \ \text{ e } \ \ (b) \ X\setminus \bigcap A_i = \bigcup (X\setminus A_i). \]
+    \item (\emph{Pre-imagem}) Sejam \((B_i)_{i\in I} : B_i \subset Y\). Então,
+    \[(a)\ f^{-1}\left(\bigcup B_i\right) = \bigcup f^{-1}(B_i); \ \ \ (b)\ f^{-1}\left(\bigcap B_i\right) = \bigcap f^{-1}(B_i)\]
+    \[(c)\ f^{-1}\left(Y \setminus B_j\right) = X \setminus f^{-1}(B_j).\]
+    \item (\emph{Imagem}) Sejam \((A_i)_{i\in I}  : A_i \subset X\). Então,
+    \[(a)\ f\left(\bigcup A_i\right) = \bigcup f(A_i) \ \text{ \ e \ } \ (b)\ f\left(\bigcap A_i\right) \subset \bigcap f(A_i),\]
+    com igualdade em (b) se \(f\) for injetora. 
+    \item[1.E.] Dados \(A\subset X\) e \(B \subset Y\) temos:  
+    \begin{enumerate}[label = (\alph*), left = -0.15cm]
+        \item \( A \subset f^{-1}(f(A))\), igualdade se \(f\) injetora (\(\hookrightarrow\)). 
+        \item \( f(f^{-1}(B)) \subset B \), igualdade se \(f\) sobrejetora (\(\twoheadrightarrow\)). 
+    \end{enumerate}
+    \item[1.G.] Se \(\exists g : Y \to X \mid g \circ f = \id_X\), então \(f\) é injetora e \(g\) sobrejetora. 
+\end{enumerate}
+%
+%\begin{lemma}
+%\end{lemma}
+\subsection*{Espaços métricos}
+
+\begin{definition}
+    Dados \((X,d)\) espaço métrico, \(a \in X\) e \(r>0\), denotamos as  \emph{bolas aberta} e \emph{fechada} com centro em \(a\) e raio \(r\) como sendo:
+    \[B(a;r) := \{x \in X : d(x,a)< r\} \text{ \ \ e \ \ }B[a;r]:= \{x\in X : d(x,a) \leq r\}.\]  
+\end{definition}
+\vspace{-0.5cm}
+\begin{definition}
+    \(U\ab \subset X \ \leftrightharpoons \ \forall a \in U, \ \exists r>0 : B(a;r)\subset U\) e \(F\ce\subset X \ \leftrightharpoons \ (X \setminus F)\ab \subset X\).
+\end{definition}
+
+\begin{note} 
+    Denotamos as métricas estándar em \(\R^n\) por \(d_1, \ d_2\) e \( d_\infty\).  
+\end{note}
+
+\begin{proposition}
+    \textbf{2.6.} (a) \(\varnothing\) e \(X\) são abertos; \ (b) União arbitrária de abertos é aberto; \ (c) Interseção finita de abertos é aberto. 
+\end{proposition}
+
+\newcommand{\comentario}[1]{\textcolor{gray}{\(\rightarrow\) #1}}
+\hypertarget{coro27}{}
+\begin{corollary}
+    \textbf{2.7.} (a) \(\varnothing\) e \(X\) são fechados; \ (b) Interseção arbitrária de fechados é fechado; \ (c) União finita de fechados é fechado. \comentario{Ex. \hyperlink{demorgan}{1.A.}} 
+\end{corollary}
+
+\begin{definition}
+    Uma função \(f: (X,d_X) \to (Y,d_Y)\) é \emph{contínua} em \(a \in X \) se dado \(\epsilon > 0, \ \exists \delta > 0 : f(B_X(a;\delta)) \subset B_Y(f(a); \epsilon)\). 
+\end{definition}
+
+\begin{note}
+    \(f\) é contínua em geral se for contínua em cada ponto. Denotamos \(C(X,Y)\) o conjunto de todas as funções contínuas  e \(C(X)\) se \(Y = \R\).
+\end{note}
+
+\begin{proposition}
+    \textbf{2.10.} As seguintes condições são equivalentes:
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item \(f \in C(X,Y)\). \hspace{3.8cm} (b)\ \(\forall V\ab \subset Y, \ \exists U\ab \subset X : f(U) \subset V\).  
+        \item[(c)] \(f^{-1}(V)\ab \subset X, \ \forall V\ab \subset Y\).  \hspace{1.2cm} (d) \ \(f^{-1}(B)\ce \subset X, \ \forall B\ce \subset Y\).
+    \end{enumerate}
+\end{proposition}
+
+

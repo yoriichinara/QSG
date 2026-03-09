@@ -1,74 +1,7 @@
-\section{Preliminares}
-%%
-%
-\subsection*{Teoria de conjuntos}
-Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \(X\), \(Y \) conjuntos e \(f:X \to Y\) função:
-
-\begin{enumerate}[label = 1.\Alph*.]
-\hypertarget{demorgan}{}
-    \item (\emph{Leis de De Morgan}) Sejam \((A_i)_{i\in I} : A_i \subset X\), então, 
-    \[(a)\ X\setminus \bigcup A_i = \bigcap (X \setminus A_i) \ \ \text{ e } \ \ (b) \ X\setminus \bigcap A_i = \bigcup (X\setminus A_i). \]
-    \item (\emph{Pre-imagem}) Sejam \((B_i)_{i\in I} : B_i \subset Y\). Então,
-    \[(a)\ f^{-1}\left(\bigcup B_i\right) = \bigcup f^{-1}(B_i); \ \ \ (b)\ f^{-1}\left(\bigcap B_i\right) = \bigcap f^{-1}(B_i)\]
-    \[(c)\ f^{-1}\left(Y \setminus B_j\right) = X \setminus f^{-1}(B_j).\]
-    \item (\emph{Imagem}) Sejam \((A_i)_{i\in I}  : A_i \subset X\). Então,
-    \[(a)\ f\left(\bigcup A_i\right) = \bigcup f(A_i) \ \text{ \ e \ } \ (b)\ f\left(\bigcap A_i\right) \subset \bigcap f(A_i),\]
-    com igualdade em (b) se \(f\) for injetora. 
-    \item[1.E.] Dados \(A\subset X\) e \(B \subset Y\) temos:  
-    \begin{enumerate}[label = (\alph*), left = -0.15cm]
-        \item \( A \subset f^{-1}(f(A))\), igualdade se \(f\) injetora (\(\hookrightarrow\)). 
-        \item \( f(f^{-1}(B)) \subset B \), igualdade se \(f\) sobrejetora (\(\twoheadrightarrow\)). 
-    \end{enumerate}
-    \item[1.G.] Se \(\exists g : Y \to X \mid g \circ f = \id_X\), então \(f\) é injetora e \(g\) sobrejetora. 
-\end{enumerate}
-%
-%\begin{lemma}
-%\end{lemma}
-\subsection*{Espaços métricos}
-
-\begin{definition}
-    Dados \((X,d)\) espaço métrico, \(a \in X\) e \(r>0\), denotamos as  \emph{bolas aberta} e \emph{fechada} com centro em \(a\) e raio \(r\) como sendo:
-    \[B(a;r) := \{x \in X : d(x,a)< r\} \text{ \ \ e \ \ }B[a;r]:= \{x\in X : d(x,a) \leq r\}.\]  
-\end{definition}
-\vspace{-0.5cm}
-\begin{definition}
-    \(U\ab \subset X \ \leftrightharpoons \ \forall a \in U, \ \exists r>0 : B(a;r)\subset U\) e \(F\ce\subset X \ \leftrightharpoons \ (X \setminus F)\ab \subset X\).
-\end{definition}
-
-\begin{proposition}
-    \textbf{2.6.} (a) \(\varnothing\) e \(X\) são abertos; \ (b) União arbitrária de abertos é aberto; \ (c) Interseção finita de abertos é aberto. 
-\end{proposition}
-
-\newcommand{\comentario}[1]{\textcolor{gray}{\(\rightarrow\) #1}}
-\hypertarget{coro27}{}
-\begin{corollary}
-    \textbf{2.7.} (a) \(\varnothing\) e \(X\) são fechados; \ (b) Interseção arbitrária de fechados é fechado; \ (c) União finita de fechados é fechado. \comentario{Ex. \hyperlink{demorgan}{1.A.}} 
-\end{corollary}
-
-\begin{definition}
-    Uma função \(f: (X,d_X) \to (Y,d_Y)\) é \emph{contínua} em \(a \in X \) se dado \(\epsilon > 0, \ \exists \delta > 0 : f(B_X(a;\delta)) \subset B_Y(f(a); \epsilon)\). 
-\end{definition}
-
-\begin{note}
-    \(f\) é contínua em geral se for contínua em cada ponto. Denotamos \(C(X,Y)\) o conjunto de todas as funções contínuas  e \(C(X)\) se \(Y = \R\).
-\end{note}
-
-\begin{proposition}
-    \textbf{2.10.} As seguintes condições são equivalentes:
-    \begin{enumerate}[label = (\alph*), left = 0.6cm]
-        \item \(f \in C(X,Y)\). \hspace{3.8cm} (b)\ \(\forall V\ab \subset Y, \ \exists U\ab \subset X : f(U) \subset V\).  
-        \item[(c)] \(f^{-1}(V)\ab \subset X, \ \forall V\ab \subset Y\).  \hspace{1.2cm} (d) \ \(f^{-1}(B)\ce \subset X, \ \forall B\ce \subset Y\).
-    \end{enumerate}
-\end{proposition}
-
-\begin{example}
-    As métricas estándar em \(\R^n\), \(d_1, \ d_2\) e \( d_\infty\).  
-\end{example}
-
 \section{Espaços topologicos}
 
 \begin{definition}
-    Chamamos de \emph{topologia} em \(X\) uma familia \(\tau \subset \wp(X) :\) (T1) \(\varnothing, X \in \tau\); (T2) \(\forall \mathcal{C} \subset \tau, \ \bigcup \{U : U \in \mathcal{C}\} \in \tau\) e (T3) \ \(\forall U, \ V \in \tau, \ U\cap V \in \tau \). 
+    Chamamos de \emph{topologia} em \(X\) uma familia \(\tau \subset \wp(X) :\) (T1) \(\varnothing, X \in \tau\); (T2) \(\mathcal{C} \subset \tau \Rightarrow  \bigcup \{U : U \in \mathcal{C}\} \in \tau\) e (T3) \ \( U,  V \in \tau\Rightarrow  U\cap V \in \tau \). 
 \end{definition}
 
 \begin{note}
@@ -79,10 +12,12 @@ Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \
     Dadas duas topologias \(\tau_1, \ \tau_2 \) em \(X\) tais que \(\tau_1\subset \tau_2\). Então, dizemos que \(\tau_1\) é mais \emph{fraca} ou \(\tau_2\) mais \emph{forte}  que a outra.  
 \end{definition}
 
-\ejemplo{\centering Exemplos importantes
-\tcblower
-\((X, d)\) com \(\tau = \tau_d \) \hfill \(\mid\) \hfill \(\tau = \{\varnothing, X\}\) (top. trivial) \hfill \(\mid\) \hfill \(\tau = \wp(X)\) (top. discreta) \\ 
-\(\tau = \{\varnothing, \{a\}, \{a,b\}\}\) (top. Sierpinski) \hfill \(\mid\) \hfill \(\overline{\tau} = \{F \subset X : F \text{ finito}\}\) (top. cofinita)% \comentario{Definida por fechados} 
+\ejemplo{
+    \begin{itemize}[left =0cm, label = {\tiny\(\bullet \)}]
+    \item[] \- \hspace{-0.6cm}\textcolor{verdeoscuro}{\underline{\textbf{Exemplos}}} \hspace{1cm}{\tiny\(\bullet \)} \ \((X, d)\) com \(\tau = \tau_d \) (esp. métricos). \hfill \-  
+    \item \(\tau = \{\varnothing, X\}\) (top. trivial) \hfill \(\mid\) \hfill {\tiny\(\bullet \)} \ \(\tau = \{\varnothing, \{a\}, \{a,b\}\}\) (top. de Sierpinski).
+    \item \(\overline{\tau} = \{F \subset X : F \text{ finito}\}\) (top. cofinita).\hfill \(\mid\) \hfill {\tiny\(\bullet \)} \ \(\tau = \wp(X)\) (top. discreta).  
+\end{itemize}
 }
 
 \subsection*{Aderência e interior}
@@ -138,7 +73,7 @@ Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \
         \item \(\forall U \in \B_x, \ x \in U\). \hfill (b) Dados \(U,V \in \B_x, \ \exists W \in \B_x : W \subset U \cap V\). 
         \item[(c)] Dada \(U \in \B_x, \ \exists V \in \B_x, \ V\subset U : \forall y \in V, \ \exists W \in \B_y \) tal que \( W \subset U\). 
     \end{enumerate}
-    Então, \(\tau := \{U \subset X : \forall x \in U, \ \exists V \in \B_x \mid V \subset U\}\) é uma topologia em \(X\) e \(\B_x\) uma base de vizinhanças pra \(\tau\). \comentario{Considere \(\U_x := \{U\subset X : \exists V \in \B_x \mid V \subset U\}\), a afirmação segue da recíproca da \(\square\) \hyperlink{prop52}{5.2.} no texto guía. }
+    Então, \(\tau := \{U \subset X : \forall x \in U, \ \exists V \in \B_x \mid V \subset U\}\) é uma topologia em \(X\) e \(\B_x\) uma base de vizinhanças pra \(\tau\). \comentario{Considere \(\U_x := \{U\subset X : \exists V \in \B_x \mid V \subset U\}\), a afirmação segue da recíproca da \(\square\) \hyperlink{prop52}{5.2.} comentada previamente}
 \end{proposition}
 
 \begin{proposition}
@@ -146,7 +81,7 @@ Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \
 \end{proposition}
 
 \begin{example}
-    Em \((X, d)\), as bolas (abertas u fechadas) são base de vizinhanças. 
+    Em \((X, d)\), as bolas (abertas ou fechadas) são bases de vizinhanças. 
 \end{example}
 \begin{definition}
     \((X, \tau)\) satisfaz o \emph{primeiro axioma de enumerabilidade} se cada \( x \in X\) admite base de vizinhaças \(\B_x\) enumerável.  
@@ -168,6 +103,12 @@ Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \
     definem uma topologia \(\tau\) em \( X\), pra a qual \(\B\) é base. 
 \end{proposition}
 
+\ejemplo{%\centering \(+\) Exemplos importantes (em \(X = \R\))
+\begin{example}
+    \(\B = \{(a, \infty) : a \in \R\}\). \hfill \(\mid \) \hfill \(\B :=\{[a,b): a <b\}\) (top. Sorgenfrey). 
+\end{example}
+}
+
 \begin{definition}
     \((X, \tau)\) satisfaz o \emph{segundo axioma de enumerabilidade} se \(\exists \B\subset \tau\) base enumerável.  
 \end{definition}
@@ -176,10 +117,7 @@ Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \
     Em \((\R, \tau_2)\), a familia \(\B := \{(a,b) : a < b\}\) é base de \(\tau_2\), enumerável se tomarmos só \(a,b \in \mathbb{Q}\).  
 \end{example}
 
-\ejemplo{\centering \(+\) Exemplos importantes (em \(X = \R\))
-\tcblower
-\centering \(\B = \{(a, \infty) : a \in \R\}\) \hspace{0.5cm} \(\mid \) \hspace{0.5cm} \(\B :=\{[a,b): a <b\}\) (top. Sorgenfrey) 
-}
+
 
 \subsection*{Subespaços}
 
@@ -189,12 +127,10 @@ Propriedades de conjuntos e funções que a gente vai usar o tempo tudo. Dados \
 
 \begin{proposition}
     \textbf{7.3.} (a) \ \(U\ab\subset X \ \leftrightharpoons \ \exists U_1\ab \subset X : U = U_1 \cap S\). 
-    \vspace{-0.2cm}
+    \vspace{-0.3cm}
     \begin{enumerate}[label = (\alph*), left = 0.6cm]
         \item[(b)] \(F\ce \subset S \ \leftrightharpoons \ \exists F_1\ce \subset X : F = F_1 \cap S\). 
         \item[(c)] Se \(A \subset S\), então \(\overline{A}^S = S \cap \overline{A}^X\). 
         \item[(d)] \(U \in \U_x\) (em \(S\)) \(\leftrightharpoons\) \(\exists U_1 \in \U_x\) (em \(X\)) \( : U = U_1 \cap S\). 
     \end{enumerate}
 \end{proposition}
-
-\section{Funciones contínuas}
