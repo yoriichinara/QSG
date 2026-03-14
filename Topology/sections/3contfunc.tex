@@ -1,1 +1,118 @@
 \section{Funções contínuas}
+
+\begin{definition}
+    Uma função \(f: X \to Y \) é contínua num ponto \(a \in X\) se \(\forall V\ab \subset Y : f(a) \in V\), \(\exists U\ab\subset X : a \in U\) e \(f(U)\subset V\).
+\end{definition}
+
+\begin{note}
+    \(f\) é contínua em geral se for contínua em cada ponto. Denotamos \(C(X,Y)\) o conjunto de todas as funções contínuas  e \(C(X)\) se \(Y = \R\).
+\end{note}
+
+\begin{proposition}
+    \textbf{8.3.} Dada \(f : X \to Y\) são equivalentes:
+    \vspace{-0.3cm}
+    \begin{enumerate}[label =(\alph*), left = 0.6cm]
+        \item \(f\) é contínua em \(a\). \hspace{3cm} (b) \ \(\forall V \in \U_{f(a)}, \ \exists U \in \U_a : f(U) \subset V\). 
+        \item[(c)] \(f^{-1}(V)\ab \subset X, \ \forall V\ab\subset Y \). \hspace{1.3cm} (d) \ \(f^{-1}(B)\ce \subset X, \ \forall B\ce\subset Y \).
+    \end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{8.4.} Seja \(g \circ f: X \overset{f}{\longrightarrow} Y \overset{g}{\longrightarrow} Z\). Se \(f\) é contínua em \(a\) e \(g\) é contínua em \(f(a)\), então \(g \circ f\) é contínua em \(a\). 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{8.6.} Se \(f \in C(X,Y)\) e \(S \leq X\), então \(f|_S \in C(S, Y)\). 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{8.7.} Sejam \(X = S_1 \cup S_2\), ambos abertos ou ambos fechados e \(f:X \to Y\) tal que \( f|_{S_j}\in C(S_j,Y)\), então \(f \in C(X,Y)\). 
+\end{proposition}
+
+\demo{
+    \-\hfill  \(f^{-1}(V\ab) = (S_1 \cap f^{-1}(V)) \cup (S_2 \cap f^{-1}(V)) = (S_1 \cap U_1\ab) \cup (S_2\cap U_2\ab)\) \-\hfill
+}
+
+\begin{definition}
+    \(f: X \to Y\) é um \emph{homeomorfismo} se \(f\) for bijetora, contínua e \(f^{-1}\) tambem for contínua, denotamos \(f: X \simeq Y\); \emph{mergulho} se \(f: X \simeq \operatorname{Im}f\leq Y\).    
+\end{definition}
+
+\begin{definition}
+    \(f\) é \emph{aberta} se \(f(U)\ab\subset Y, \ \forall U\ab\subset X\); \emph{fechada} se \(f(B)\ce\subset Y, \ \forall B\ce\subset X\). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{8.9.} Dada \(f: X \to Y\) bijetiva, são equivalentes: 
+    \vspace{-0.3cm}
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item \(f:X \simeq Y\). \hfill (b) \ \(f\) é contínua e aberta. \hfill (c) \ \(f\) é contínua e fechada. 
+    \end{enumerate}
+\end{proposition}
+
+\subsection*{Produtos infinitos e axioma de escolha}
+
+\begin{definition}
+    Sejam \((X_i)_{i\in I}\) familia não vazia de conjuntos, o seu \emph{produto cartesiano} é 
+    \[\prod_{i\in I}X_i := \left\{\x : I \to \bigcup_{i\in I} X_i \mid \forall i \in I, \ \x(i) = x_i \in X_i\right\}.\]
+    Podemos escrever a conveniência \(\x = (x_i)_{i\in I} \in \prod X_i\). Dado \(j \in I\) a \emph{projeção} \(j\)\emph{-ésima} é a função tal que \(\pi_j : \prod X_i \ni (x_i) \mapsto x_j \in X_j\). 
+\end{definition}
+
+\begin{note}
+    Mesmo que \(\forall i \in I, \ X_i\neq \varnothing\) não tem como garantir que \(\prod X_i \neq \varnothing\).
+\end{note}
+
+\begin{definition}[\emph{Axioma da escolha}]
+    Sejam \((X_i)_{i\in I}\) familia não vazia de conjuntos disjuntos não vazios. Então, \(\exists f: I \to \bigcup X_i\) tal que \(\forall i \in I, \ f(i) \in X_i\) (\emph{função de escolha}).
+\end{definition}
+
+\begin{proposition}
+    \textbf{9.3.} Se \((X_i)_{i \in I}\) é familia não vazia de conjuntos não vazios, então \(\prod X_i \neq \varnothing\). \comentario{Se os \(X_i\) não fossem disjuntos, considera \(Y_i := X_i \times \{i\}\) e usa o axioma } 
+\end{proposition}
+
+\subsection*{O espaço produto}
+
+\begin{note}
+    Daquí pra frente, \((X_i)_{i\in I}\) é familia não vazia de conjuntos não vazios. 
+\end{note}
+
+\begin{proposition}
+    \textbf{10.1.} A familia \(\B := \left\{\prod U_i : \forall i \in I, \  U_i\ab \subset X_i\right\}\) é base pra uma certa topologia em \(\prod X_i\), que chamamos de \emph{topologia das caixas}.\footnote{Mesmo sendo fácil de definir, essa topología não é muito conveniente.} \comentario{Usa \(\square \) \hyperlink{prop66}{6.6.}}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{10.2.} Seja \(\B\) a familia de todos os \(\prod U_i  \) tais que:
+    \vspace{-0.3cm}
+    \begin{itemize}[left = 1.8cm]
+        \item[(TP1)] \ \(\forall i \in I, \ U_i\ab \subset X_i\). \hfill  (TP2) \ \( \forall i \in I\setminus J, \ U_i = X_i,  \ J\subset I \text{ finito}\). 
+    \end{itemize}
+    \vspace{-0.3cm}
+    Então, \(\B\) é base de uma certa topologia em \(\prod X_i\), que chamamos de \emph{topologia produto}.
+\end{proposition}
+
+\demo{
+    Mais uma vez usa \(\square\) \hyperlink{prop66}{6.6.}, é conveniente escrever \(U\ab \in \B \) como sendo, 
+    \[U = \prod_{j \in J} U_j\ab \times \prod_{i \in I\setminus J} X_i = \bigcap_{j\in J} \pi^{-1}_j(U_j)\ab.\]
+    \-\vspace{-0.3cm}
+}
+
+\begin{note}
+    A menos de aclaração, consideramos sempre \( \prod X_i\) com a topologia produto. 
+\end{note}
+\begin{proposition}
+    \textbf{10.3.} A topologia producto é a topologia mais fraca que faz das projeções \(\pi_j : \prod X_i \to X_j\) funções contínuas. \comentario{Suponha outra \(\tau\) e mostra que \(\tau_{\operatorname{prod}} \subset \tau\)}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{10.4.}  \(g : Y \to \prod X_i\) é contínua \(\leftrightharpoons \ \forall j \in I, \ \pi_j\circ g : Y \to X_j\) é contínua. \comentario{Pra a volta trabalha a expressão como interseções} 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{10.5.} Sejam \(X\) um conjunto e \((f_i : X \to X_i)_{i\in I}\) uma familia de funções e 
+    \[\B := \left\{\bigcap_{j\in J} f_j^{-1}(U_j) : J \subset I \ \text{ é finito e } \forall j \in J, \  U_j\ab \subset X_j\right\}.\] 
+    \vspace{-0.8cm}
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item \( \B\) é base pra uma topologia \(\tau_w\) em \(X\), que chamamos de \emph{topologia fraca}.
+        \item \(\tau_w\) (\emph{weak topology}) é a topologia mais fraca que faz as \((f_i)\) contínuas.
+        \item \(g:Y \to X\) é contínua \(\leftrightharpoons \ \forall j \in I, \ f_j \circ g\) é contínua. 
+    \end{enumerate}
+\end{proposition}
