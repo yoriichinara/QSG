@@ -1,13 +1,13 @@
 \section{Teoria Geral de Operadores Lineares}
 
 \vspace{-0.3cm}
-Se \(T\in \ehom(V)\) e \(m \in \mathbb{Z}_{\geq 0}\), então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ vezes }} \in \ehom(V)\), por convenção \(T^0 = \id\). Seguindo a \(\square \) \ref{prop:0.1} (a), \(\forall p \in \mathcal{P}(\F)\) temos,  
+Se \(T\in \ehom(V)\) e \(m \in \mathbb{Z}_{\geq 0}\), então \(T^m := \overbrace{T\circ T \circ \cdots \circ T}^{m\text{ vezes }} \in \ehom(V)\), por convenção \(T^0 = \id\). Como \(\ehom(V) \leq \mathcal{F}(V,V)\), \(\forall p \in \mathcal{P}(\F)\) temos,  
 \[p(t) = \sum^m a_kt^k \ \ \ \leadsto \ \ \ P(T) = \sum^m a_kT^k \in \ehom(V).\] 
 Também, na notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) = 0\}\). Daqui pra frente (neste capítulo) sejam \(V\) e  \(T\in \ehom(V)\) fixos. 
 
-\begin{note}
-    Nesses termos um autoespaço é \(V_{t-\lambda} \neq \{0\}\). 
-\end{note}
+%\begin{note}
+%    Nesses termos um autoespaço é \(V_{t-\lambda} \neq \{0\}\). 
+%\end{note}
 
 \subsection{Polinômio Mínimo e Decomposição Primária}
 
@@ -16,7 +16,7 @@ Também, na notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) 
 \end{definition}
 
 \begin{definition}
-    \(W\leq V\) é \emph{\(T\)-invariante} se \(T(W) \subseteq W\), e a restrição de \(T|_{_W}\) e chamada de \emph{operador induzido} por \(T\) em \(W\). 
+    \(W\leq V\) é \emph{\(T\)-invariante} se \(T(W) \subset W\). A restrição de \(T|_{_W}\) e chamada de \emph{operador induzido} por \(T\) em \(W\). 
 \end{definition}
 
 \begin{lemma}
@@ -24,7 +24,7 @@ Também, na notação dos preliminares \( V_{p}= V_{{p(T)}} = \{v\in V: p(T)(v) 
 \end{lemma}
 
 \begin{note}
-    Dado que \(p(T) \circ T = T\circ p(T)\) os subespaços \(V_p \) são \(T\)-inv, e também, \(\forall p, f \in \Pol \), \(V_p \subseteq V_{fp}\). Em particular, \(\forall k \in \mathbb{Z}_{\geq 0}, \ V_{p^k} \subseteq V_{p^{k+1}}\). 
+    \(p(T) \circ T = T\circ p(T)\), logo \(V_p \) é \(T\)-inv. Por outro lado, \(\forall p, f \in \Pol, \ V_p \subset V_{fp}\). Em particular, \(\forall k \in \mathbb{Z}_{\geq 0}, \ V_{p^k} \subset V_{p^{k+1}}\). 
 \end{note}
 
 \begin{definition}
@@ -79,7 +79,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 
 \begin{corollary}
     \label{coro:8.1.8}
-    \textbf{8.1.8.} Seja \(\an_{_T} \neq \{0\}\) e \(p \in \Pol\). Então, \(V_p\neq \{0\}\) \(\leftrightharpoons\) \(\exists f \in \dIv(m_{_T})\) e \(\exists g \in \Pol\) tais que \(p = gf\). Se \(\nexists q \in \dIv(m_{_T})\) tal que \(q \ | \ g\), então \(V_p = V_f\). 
+    \textbf{8.1.8.} Seja \(\an_{_T} \neq \{0\}\) e \(p \in \Pol\). Então, \(V_p\neq \{0\}\ \leftrightharpoons\ \exists f \in \dIv(m_{_T})\) e \(\exists g \in \Pol\) tais que \(p = gf\). Se \(\nexists q \in \dIv(m_{_T})\) tal que \(q \ | \ g\), então \(V_p = V_f\). 
 \end{corollary}
 
 \demo{
@@ -88,12 +88,10 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 }
 
 \begin{definition}
-    Sejam \(v\in V\) e \(\forall k \in \mathbb{Z}_{\geq 0}, \ v_k = T^k(v)\). A família \(\mathscr{C}^\infty_{T}(v):= (v_k)\)  é o \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_{_T}(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). 
+    Sejam \(v\in V\) e \(\forall k \in \mathbb{Z}_{\geq 0}, \ v_k = T^k(v)\). A família \(\mathscr{C}^\infty_{T}(v):= (v_k)\)  é o \(T\)\emph{-ciclo} gerado por \(v\), enquanto \(C_{_T}(v) := [\mathscr{C}^\infty_T(v)]\) é o \emph{subespaço} \(T\)\emph{-cíclico} gerado por \(v\). \footnote{É fácil ver que \(C_{_T}(v)\) é \(T\)-inv.}
 \end{definition}
 
-\begin{note}
-    É fácil ver que \(C_{_T}(v)\) é \(T\)-inv. Alternativamente, pode-se definir \(C_{_T}(v) = [\mathscr{C}_T^m(v)] \), onde \(m = \dim (C_{_T}(v)) \in \mathbb{Z}_{\geq 0} \cup \{\infty\}\). 
-\end{note}
+     %Alternativamente, pode-se definir \(C_{_T}(v) = [\mathscr{C}_T^m(v)] \), onde \(m = \dim (C_{_T}(v)) \in \mathbb{Z}_{\geq 0} \cup \{\infty\}\). 
 
 %\begin{definition}
 %    \(W\leq V\) é \(T\)\emph{-cíclico} se \(\exists w \in V\) tal que \(W = C_T(w)\).
@@ -112,7 +110,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 %\end{note}
 
 \begin{note}
-    Se \(\dim V = n < \infty\), então num análise análogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) com \(m := \min \{k \in \mathbb{Z}_{\geq 0 }: \mathscr{C}^k_{T}(v)\text{ é l.d.}\}\). Também, note que \(C_{_T}(v)\subseteq V_{m_v}\) que é \(T\)-inv, logo, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
+    Se \(\dim V = n < \infty\), então num análise análogo da \(\square\) \ref{prop:8.1.3} pode-se construir \(m_{_{T,v}}= m_v\) com \(m := \min \{k \in \mathbb{Z}_{\geq 0 }: \mathscr{C}^k_{T}(v)\text{ é l.d.}\}\). Também, note que \(C_{_T}(v)\subset V_{m_v}\) que é \(T\)-inv, logo, sendo \(S = T|_{_{V_{m_v}}}\) temos \(m_v = m_{_S}\). 
 \end{note}
 
 \begin{corollary}
@@ -122,7 +120,7 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
 \propositionnum{8.1.11.}
 \begin{proposition}
     \label{prop:8.1.11}
-    Sejam \(m \in \N\) e \(p_1, p_2, \ldots, p_m\in \Pol \) coprimos dois a dois. Então, a soma \(\sum_{j\leq m} V_{\ p_j}^\infty\) é direta.
+    Sejam \(m \in \N\) e \(p_1, p_2, \ldots, p_m\in \Pol \) coprimos dois a dois. Então, a soma \(\underset{j\leq m}{\sum} V_{\ p_j}^\infty\) é direta.
 \end{proposition}
 
 \demo{
@@ -183,76 +181,76 @@ Lembre-se que \(\dim (\ehom(V)) = n^2\), logo, \( \exists m \leq n^2\) tal que \
     Pode e deve-se verificar que \(\min\{k: V_{\ p }^\infty = V_{p^k}\} = k_j\) do \(\blacksquare\) \hyperlink{thmDP}{8.1.13. (\emph{DP})}, é assim que conseguimos definir o \emph{polinômio característico} como sendo \(c_{_T} := \prod^m p_j^{n_j} \in \an_{_T}\), exatamente o mesmo do \(\blacksquare\) (\emph{Cayley-Hamilton}). 
 \end{note}
  
-\ejemplo{
-    \centering Encontrando a Decomposição Primária
-    \tcblower
-    \par\noindent\textbf{Passo 1.} Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
-   {\footnotesize  
-\[  \text{\small Sejam \(V\) \(\R\)-espaço e \(A = \)}
-    \begin{bmatrix}
-    0 & -1 & -1 & 0 & -1 & -1\\
-    2 & 3 & 1 & 0 & 1 & 2\\
-    -2 & -2 & 0 & 0 & -1 & -2\\
-    -1 & -1 & -1 & 1 & -1 & -1\\
-    0 & 0 & 0 & 1 & 0 & -2\\
-    0 & 0 & 0 & 0 & 0 & 2\\
-  \end{bmatrix} 
-\]}
-    \par\noindent\textbf{Passo 2.} Encontre \(c_{_T}= \det (t\id - A)\) e sua fatoração em primos \(c_{_T} = \prod^m p_j^{n_j}\). \comentario{Precisa de habilidade na hora das contas do \(\det\)}
-{\footnotesize  
-\begin{align*}
- \text{\small $_{F_1 \to F_1 - F_4} \ \ \rotatebox{-90}{$\longrightarrow$} \ \ _{F_2 \to F_2 + F_3}$}
- \hspace{0.8cm}   \longleftarrow  \ \ \  
-     \left|\begin{array}{*6{c}}
-    t & 1 & 1 & 0 & 1 & 1\\
-    -2 & t - 3 & -1 & 0 & -1 & -2\\
-    2 & 2 & t & 0 & 1 & 2\\
-    1 & 1 & 1 & t - 1 & 1 & 1\\
-    0 & 0 & 0 & -1 & t & 2\\
-    0 & 0 & 0 & 0 & 0 & t - 2\\
-  \end{array}\right| = \text{\small \(c_{_T}\)}   \\   
-    \left|\begin{array}{*6{c}}
-    (t-1) & \textcolor{gray}{0} & \textcolor{gray}{0} & -(t-1) & \textcolor{gray}{0} &  \\ 
-    \textcolor{gray}{0} & (t - 1) & (t-1) & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
-    2 & 2 & t & 0 & 1 &  \\
-    1 & 1 & 1 & t - 1 & 1 &\\
-    0 & 0 & 0 & -1 & t &\\ 
-    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & (t - 2)\\ 
-  \end{array}\right|^{(*)} \hspace{-0.5cm} 
-    =
-    (t-2)(t-1)^2 \left|\begin{array}{*5{c}}
-    1 & 0 & 0 & -1 & 0   \\
-    0 & 1 & 1 & 0 & 0 \\
-    2 & 2 & t & 0 & 1   \\
-    1 & 1 & 1 & t - 1 & 1 \\
-    0 & 0 & 0 & -1 & t \\
-  \end{array}\right| \\ 
-    (t-2)(t-1)^2 \left|\begin{array}{*3{c}}
-    1  & \textcolor{gray}{0} & \textcolor{gray}{0}  \\
-     & 1  & 1  \\
-     & 2 & t  
-  \end{array}\right| 
-   \left|\begin{array}{*2{c}}
-    t  & 1  \\
-    -1 & t  
-  \end{array}\right| = 
-(t-2)(t-1)^2 \left|\begin{array}{*6{c}}
-    1  & 0 & 0 &  &  \\
-    0 & 1  & 1  &  & \\
-    2 & 2 & t &  &  \\
-    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & t  & 1 \\
-    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & t \\
-  \end{array}\right|  
-\text{\small\(\overset{F_4 \to F_4 - F_2 - F_1}{\longleftarrow}\)}
-\end{align*}
-}
-\[c_{_T} = (t-2)^2 (t-1)^2 (t^2+ 1 ) \]
-\par\noindent\textbf{Passo 3.} Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\). Neste caso, não vou por as contas, mas de fato, 
-\[m_{_T} = (t-2)^2(t-1)(t^2+1) \ \Rightarrow \  V =  V_{(t-2)^2} \oplus V_{t-1} \oplus V_{t^2+1}.\]
+%\ejemplo{
+%    \centering Encontrando a Decomposição Primária
+%    \tcblower
+%    \par\noindent\textbf{Passo 1.} Escolha uma base \(\alpha\) pra seu espaço \(V\) e determine \([T]^\alpha_\alpha =A\). 
+%   {\footnotesize  
+%\[  \text{\small Sejam \(V\) \(\R\)-espaço e \(A = \)}
+%    \begin{bmatrix}
+%    0 & -1 & -1 & 0 & -1 & -1\\
+%    2 & 3 & 1 & 0 & 1 & 2\\
+%    -2 & -2 & 0 & 0 & -1 & -2\\
+%    -1 & -1 & -1 & 1 & -1 & -1\\
+%    0 & 0 & 0 & 1 & 0 & -2\\
+%    0 & 0 & 0 & 0 & 0 & 2\\
+%  \end{bmatrix} 
+%\]}
+%    \par\noindent\textbf{Passo 2.} Encontre \(c_{_T}= \det (t\id - A)\) e sua fatoração em primos \(c_{_T} = \prod^m p_j^{n_j}\). \comentario{Precisa de habilidade na hora das contas do \(\det\)}
+%{\footnotesize  
+%\begin{align*}
+% \text{\small $_{F_1 \to F_1 - F_4} \ \ \rotatebox{-90}{$\longrightarrow$} \ \ _{F_2 \to F_2 + F_3}$}
+% \hspace{0.8cm}   \longleftarrow  \ \ \  
+%     \left|\begin{array}{*6{c}}
+%    t & 1 & 1 & 0 & 1 & 1\\
+%    -2 & t - 3 & -1 & 0 & -1 & -2\\
+%    2 & 2 & t & 0 & 1 & 2\\
+%    1 & 1 & 1 & t - 1 & 1 & 1\\
+%    0 & 0 & 0 & -1 & t & 2\\
+%    0 & 0 & 0 & 0 & 0 & t - 2\\
+%  \end{array}\right| = \text{\small \(c_{_T}\)}   \\   
+%    \left|\begin{array}{*6{c}}
+%    (t-1) & \textcolor{gray}{0} & \textcolor{gray}{0} & -(t-1) & \textcolor{gray}{0} &  \\ 
+%    \textcolor{gray}{0} & (t - 1) & (t-1) & \textcolor{gray}{0} & \textcolor{gray}{0} & \\ 
+%    2 & 2 & t & 0 & 1 &  \\
+%    1 & 1 & 1 & t - 1 & 1 &\\
+%    0 & 0 & 0 & -1 & t &\\ 
+%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & (t - 2)\\ 
+%  \end{array}\right|^{(*)} \hspace{-0.5cm} 
+%    =
+%    (t-2)(t-1)^2 \left|\begin{array}{*5{c}}
+%    1 & 0 & 0 & -1 & 0   \\
+%    0 & 1 & 1 & 0 & 0 \\
+%    2 & 2 & t & 0 & 1   \\
+%    1 & 1 & 1 & t - 1 & 1 \\
+%    0 & 0 & 0 & -1 & t \\
+%  \end{array}\right| \\ 
+%    (t-2)(t-1)^2 \left|\begin{array}{*3{c}}
+%    1  & \textcolor{gray}{0} & \textcolor{gray}{0}  \\
+%     & 1  & 1  \\
+%     & 2 & t  
+%  \end{array}\right| 
+%   \left|\begin{array}{*2{c}}
+%    t  & 1  \\
+%    -1 & t  
+%  \end{array}\right| = 
+%(t-2)(t-1)^2 \left|\begin{array}{*6{c}}
+%    1  & 0 & 0 &  &  \\
+%    0 & 1  & 1  &  & \\
+%    2 & 2 & t &  &  \\
+%%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & t  & 1 \\
+%    \textcolor{gray}{0} & \textcolor{gray}{0} & \textcolor{gray}{0} & -1 & t \\
+%  \end{array}\right|  
+%\text{\small\(\overset{F_4 \to F_4 - F_2 - F_1}{\longleftarrow}\)}
+%\end{align*}
+%}
+%\[c_{_T} = (t-2)^2 (t-1)^2 (t^2+ 1 ) \]
+%\par\noindent\textbf{Passo 3.} Estude subespaços e encontre o \(\min k : \dim V_{p_j^{k}} = \gr(p_j)n_j\). Neste caso, não vou por as contas, mas de fato, 
+%\[m_{_T} = (t-2)^2(t-1)(t^2+1) \ \Rightarrow \  V =  V_{(t-2)^2} \oplus V_{t-1} \oplus V_{t^2+1}.\]
 %\begin{tikzpicture}[overlay, shift= {(-1cm, -2.5cm)}]
 %    \fill[white] (0,0) rectangle (20,2.5);
 %\end{tikzpicture} 
-}
+%}
 %\ejemplo{
 %\begin{tikzpicture}[overlay, shift= {(-1cm, 0cm)}]
 %    \fill[white] (0,0) rectangle (20,2.5);

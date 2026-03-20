@@ -116,3 +116,56 @@
         \item \(g:Y \to X\) é contínua \(\leftrightharpoons \ \forall j \in I, \ f_j \circ g\) é contínua. 
     \end{enumerate}
 \end{proposition}
+
+\subsection*{O espaço quociente}
+
+\begin{proposition}
+    \textbf{11.1.} Sejam \((X, \tau)\), \(Y\) um conjunto qualquer e \(\pi : X \twoheadrightarrow Y\). Então, a coleção 
+    \[\tau_\pi := \{V\subset Y : \pi^{-1}(V)\ab \subset X\}\] 
+    é uma topologia em \(Y\) que chamamos de \emph{topologia quociente} dada por \(\pi\).
+\end{proposition}
+
+\begin{definition}
+    Uma aplicação \(\pi: (X,\tau_X) \twoheadrightarrow (Y, \tau_Y)\) é \emph{quociente} se \(\tau_Y = \tau_\pi\).  
+\end{definition}
+
+\begin{proposition}
+    \textbf{11.3.} A topologia \(\tau_\pi\) é a mais fraca tal que \(\pi: X \to (Y,\tau_\pi)\) é contínua. 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{11.4.} Sejam \(\pi : X \to Y\) aplicação quociente e \(g: Y \to (Z,\tau_Z)\) uma função. Então, \(g\) é contínua \ \(\leftrightharpoons\) \ \(g\circ \pi: X \to Z\) é contínua.
+\end{proposition}
+
+\begin{proposition}
+    \textbf{11.5.} Seja \(\pi: X \twoheadrightarrow Y\) contínua. Se \(\pi\) é aberta (ou fechada), então \(\tau_Y = \tau_\pi\). \comentario{É coisa de provar as duas contenções, não é díficil}
+\end{proposition}
+
+\begin{example}
+    Seja \(\pi : [0,2\pi] \to \E^1\) tal que  \(t \mapsto (\cos t, \sin t)\). \comentario{Sobrejetiva e fechada}
+\end{example}
+
+\begin{proposition}
+    \textbf{11.7.} Sejam \((X, \tau_X)\), \ \( \mathcal{D} \subset \wp(X) : X = \bigsqcup \{A : A \in \mathcal{D}\}\) e  
+    \[\tau_{\mathcal{D}} = \left\{\mathcal{A}\subset \mathcal{D} : \left(\bigcup \{A : A \in \mathcal{A}\}\right)\ab \subset X\right\}.\footnote{\(\mathcal{D}\) é uma decomposição de \(X\).}\]
+    Então \(\tau_{\mathcal{D}}\) é uma topologia em \(\mathcal{D}\). \comentario{Não é díficil}
+\end{proposition}
+
+\begin{note}
+    Dado \(x \in X, \ \exists ! A_x \in \mathcal{D} : x \in A_x \), logo \(P : X \to \mathcal{D}\) tal que \(x \mapsto A_x\) é bem definida, chamamos ela de \emph{aplicação decomposição}. 
+\end{note}
+
+\begin{proposition}
+    \textbf{11.8.} Toda aplicação decomposição é uma aplicação quociente.  
+\end{proposition}
+
+\begin{proposition}
+    \textbf{11.9.} Dada \(\pi\) aplicação quociente, existem \(P\) aplicação decomposição e \(f: Y \simeq \mathcal{D}  \) tal que \(f \circ \pi = P\). \comentario{Olha \cite[pag. 30]{mujica2005}}
+\end{proposition}
+
+\begin{definition}
+    Dados \(X\) e \(\sim \) relação de equivalência em \(X\), o espaço \(\nicefrac{X}{\sim}\) é chamado de \emph{espaço de identificação} de \(X\) módulo \(\sim\). 
+\end{definition}
+
+
+

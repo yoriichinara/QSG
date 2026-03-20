@@ -46,23 +46,23 @@ No caso finito é fazer conta com matrizes. De fato, se \(\dim V = n < \infty\) 
    \rotatebox{0}{$|$} &  & \rotatebox{0}{$|$}  
 \end{bmatrix} = \id_n.\]
 Note também que \(\alpha \) e \(\beta \) são bases \(\leftrightharpoons\) as matrizes acima são invertíveis.
-\newline \vspace{-0.4cm}
-\begin{example}
-    Sejam \(V = \mathcal{P}_2(\R)\) e \(\beta = f_1, f_2, f_3\) dadas por, 
-    \[\textstyle f_1(p) = p(1), \hspace{1cm} f_2(p) = \dot{p}(0),\hspace{1cm} f_3(p) = \int_0^{\sqrt{2}} \dot{p}(t)t^3 \ dt. \]
-    Sendo \(p(t) = a + bt + ct^2 \in \mathcal{P}_2(\R)\) qualquer, temos \(\textstyle f_1(p) = a+b+c,\  f_2(p) = b,\ f_3(p) = b + \frac{8\sqrt{2}}{5} c= b+\lambda c\). Assim, em termos matriciais, 
-    \[\begin{bmatrix}
-        1 & 1 & 1\\ 
-        0 & 1 & 0\\ 
-        0 & 1 & \lambda\\ 
-    \end{bmatrix}\begin{bmatrix}
-        1 & \frac{1}{\lambda} -1 & -\frac{1}{\lambda}\\
-        0 & 1 & 0\\
-        0 & -\frac{1}{\lambda}  & \frac{1}{\lambda}\\
-    \end{bmatrix} = \id.\]
-    Visto que tudo está pensado em termos da base canônica (\(1, t, t^2\)), temos 
-    \[\textstyle\alpha = \left\{1, (\frac{1}{\lambda}-1) + t- \frac{1}{\lambda}t^2, -\frac{1}{\lambda} + \frac{1}{\lambda}t^2\right\} : \alpha' = \beta. \]
-\end{example}
+%\newline \vspace{-0.4cm}
+%begin{example}
+%   Sejam \(V = \mathcal{P}_2(\R)\) e \(\beta = f_1, f_2, f_3\) dadas por, 
+%   \[\textstyle f_1(p) = p(1), \hspace{1cm} f_2(p) = \dot{p}(0),\hspace{1cm} f_3(p) = \int_0^{\sqrt{2}} \dot{p}(t)t^3 \ dt. \]
+%   Sendo \(p(t) = a + bt + ct^2 \in \mathcal{P}_2(\R)\) qualquer, temos \(\textstyle f_1(p) = a+b+c,\  f_2(p) = b,\ f_3(p) = b + \frac{8\sqrt{2}}{5} c= b+\lambda c\). Assim, em termos matriciais, 
+%   \[\begin{bmatrix}
+%       1 & 1 & 1\\ 
+%       0 & 1 & 0\\ 
+%       0 & 1 & \lambda\\ 
+%   \end{bmatrix}\begin{bmatrix}
+%       1 & \nicefrac{1}{\lambda} -1 & -\nicefrac{1}{\lambda}\\
+%       0 & 1 & 0\\
+%       0 & -\nicefrac{1}{\lambda}  & \nicefrac{1}{\lambda}\\
+%   \end{bmatrix} = \id.\]
+%   Visto que tudo está pensado em termos da base canônica (\(1, t, t^2\)), temos 
+%   \[\textstyle\alpha = \left\{1, (\nicefrac{1}{\lambda}-1) + t- \nicefrac{1}{\lambda} \ t^2, -\nicefrac{1}{\lambda} + \nicefrac{1}{\lambda}t^2 \ \right\} : \alpha' = \beta. \]
+%end{example}
 }
 
 \begin{corollary}

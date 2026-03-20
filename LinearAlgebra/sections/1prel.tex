@@ -23,19 +23,19 @@
 
 \subsection*{Espaços Vetoriais}
 
-\begin{definition}
-   Sejam \(\F\) um corpo e \(V\neq \emptyset\). Um \(\F\)\emph{-espaço vetorial} é uma tripla \((V,+,\cdot)\) onde, \(+:V\times V \to V\) e \(\cdot : \F \times V \to V\) são operações tais que, \(\forall \lambda, \mu \in \F\), \(\forall v, w \in V\), 
-   \begin{enumerate}[left =1.7cm]
-        \item[(V1)] \((V,+)\) é grupo abeliano.  
-        \item[(V2)] \((V,\cdot)\) associa, \(\lambda \cdot(\mu \cdot v) = (\lambda \cdot \mu) \cdot v\).  
-        \item[(V3)] Distributividade I, \((\lambda + \mu ) \cdot v = \lambda \cdot v + \mu\cdot  v\).  
-        \item[(V4)] Distributividade II, \(\lambda \cdot (v+ w) = \lambda \cdot v + \lambda \cdot w\).  
-        \item[(V5)] Neutro da multiplicação (por escalar), \(1 \cdot v = v \).  
-   \end{enumerate}
-\end{definition}
+%\begin{definition}
+%   Sejam \(\F\) um corpo e \(V\neq \emptyset\). Um \(\F\)\emph{-espaço vetorial} é uma tripla \((V,+,\cdot)\) onde, \(+:V\times V \to V\) e \(\cdot : \F \times V \to V\) são operações tais que, \(\forall \lambda, \mu \in \F\), \(\forall v, w \in V\), 
+%   \begin{enumerate}[left =1.7cm]
+%        \item[(V1)] \((V,+)\) é grupo abeliano.  
+%        \item[(V2)] \((V,\cdot)\) associa, \(\lambda \cdot(\mu \cdot v) = (\lambda \cdot \mu) \cdot v\).  
+%        \item[(V3)] Distributividade I, \((\lambda + \mu ) \cdot v = \lambda \cdot v + \mu\cdot  v\).  
+%        \item[(V4)] Distributividade II, \(\lambda \cdot (v+ w) = \lambda \cdot v + \lambda \cdot w\).  
+%        \item[(V5)] Neutro da multiplicação (por escalar), \(1 \cdot v = v \).  
+%   \end{enumerate}
+%\end{definition}
 
 \begin{definition}
-    Um subconjunto \(W \subseteq V\) \textbf{não vazio} é dito de \emph{subespaço}, denotamos \(W\leq V\), se \(\forall w_1, w_2 \in W\), \(\forall \lambda \in \F\), \( w_1 + \lambda w_2 \in W \).   
+    Sejam \(\F\) um corpo e \(V\) um \(\F\)-espaço vetorial. Um subconjunto \(W \subset V\) \textbf{não vazio} é dito de \emph{subespaço}, \(W\leq V\), se \(\forall w_1, w_2 \in W\), \(\forall \lambda \in \F\), \( w_1 + \lambda w_2 \in W \).   
 \end{definition}
 
 \begin{definition}
@@ -60,13 +60,17 @@
 \end{definition}
 
 \begin{definition}
-    Seja \((V_i)_{i\in I}\) família de subespaços em \(V\), definimos a soma deles como sendo \(\sum V_i := \left[\bigcup V_i\right]\). A soma é direta sse \(\forall j\in I\), \(V_j \cap \sum_{i\neq j} V_i =\{0\}\). \footnote{Acostuma-se denotar uma soma direta como \(\bigoplus V_i\).}
+    Seja \((V_i)_{i\in I}\) família de subespaços em \(V\), definimos a soma deles como sendo \(\sum V_i := \left[\bigcup V_i\right]\). A soma é direta se \(\forall j\in I\), \(V_j \cap \underset{i\neq j}{\sum} V_i =\{0\}\). 
 \end{definition}
+
+\begin{note}
+    Acostuma-se denotar uma soma direta como \(\bigoplus V_i\).
+\end{note}
 
 \propositionnum{5.3.7.}
 \begin{proposition}
     \label{prop:5.3.7}
-    \(\sum V_i\) é direta \(\leftrightharpoons\) \(\forall v\in \sum V_i\), \(\exists! v_{i_j} \in V_{i_j} : v = \sum_{j\leq m} v_{i_j}\). \textcolor{gray}{\(\rightarrow\)  \cite[Pág. 174]{MA719}} 
+    \(\sum V_i\) é direta \(\leftrightharpoons\) \(\forall v\in \sum V_i\), \(\exists! v_{i_j} \in V_{i_j} : v = \underset{j\leq m}{\sum} v_{i_j}\). \textcolor{gray}{\(\rightarrow\)  \cite[Pág. 174]{MA719}} 
 \end{proposition}
 
 \propositionnum{5.4.6.}
@@ -79,7 +83,7 @@
 
 \hypertarget{corol5410}{}
 \begin{corollary}
-    \textbf{5.4.10.} \(\alpha\) é base \(\leftrightharpoons\) \(\forall i\in I,\ v_i \neq 0\) e \(V = \bigoplus \F v_i\). Segue da \(\square \) \ref{prop:5.3.7} que \(\forall v\in V\), \(\exists !x_{i_j} \in \F\) tais que \(v = \sum_{j\leq m } x_{i_j}v_{i_j}\). \comentario{\cite[Pág. 178]{MA719}}
+    \textbf{5.4.10.} \(\alpha\) é base \(\leftrightharpoons\) \(\forall i\in I,\ v_i \neq 0\) e \(V = \bigoplus \F v_i\). Segue da \(\square \) \ref{prop:5.3.7} que \(\forall v\in V\), \(\exists !x_{i_j} \in \F\) tais que \(v = \underset{j\leq m }{\sum} x_{i_j}v_{i_j}\). \comentario{\cite[Pág. 178]{MA719}}
 \end{corollary}
 
 \begin{note}
@@ -114,37 +118,37 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
     O espaço vetorial das funções \(f: V \to W\), com a soma e o produto usuais é denotado no texto como \(\mathcal{F}(V,W)\).   
 \end{note}
 
-\renewcommand{\hom}{\operatorname{Hom}_\F}
-\newcommand{\ehom}{\operatorname{End}_\F}
+\renewcommand{\hom}{\mathcal{L}}
+\newcommand{\ehom}{\mathcal{L}}
 
 \begin{definition}  
-  \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \). Se \(V = W\), então escrevemos simplesmente \(\ehom(V) = \hom(V,V)\).\footnote{"\(\operatorname{Hom}\)" vem de homomorfismo e "\(\operatorname{End}\)" de endomorfismo.}   
+  \centering \(\hom(V,W):= \{T \in \mathcal{F}(V,W): T \text{ é linear}\} \ \textcolor{gray}{\leq \mathcal{F}(V,W)}\). \footnote{\emph{Homomorfismos} de \(V\) em \(W\); \emph{endomorfismos} se \(V=W\), cujo caso \(\hom(V, V) = \ehom(V)\).}%Se \(V = W\), então escrevemos simplesmente \(\ehom(V) = \hom(V,V)\).%   
 \end{definition}   
 
-\propositionnum{0.1.}
-\begin{proposition}
+%\propositionnum{0.1.}
+%\begin{proposition}
     %Sejam \(\alpha\) e \(\beta\) bases de \(V\) e \(W\) respetivamente, então, 
-\label{prop:0.1}
-    Algumas propriedades coletadas de \cite[Seç. 6.1]{MA719}. 
-    \begin{enumerate}[left = 0.55cm, label = (\alph*)]
-        \item \(\hom(V,W) \leq \mathcal{F}(V,W)\). 
-        \item Sejam \(\alpha = (v_j)\) e \(\beta = (w_i) \) bases de \(V\) e \(W\) fixas. A função  \(\Phi : \hom(V,W) \ni T \mapsto [T]^\alpha_\beta \in M_{|I| \times |J|}(\F) \) é linear e injetora. 
-        \item Sejam \(\gamma, \ \alpha\) e \(\beta\) bases de \(U,\ V\) e \(W\), \(S \in \hom(U,V)\) e \(T\in \hom(V,W)\). Então, \(T\circ S \in \hom(U,W)\) e \([T\circ S]^\gamma_\beta = [T]^\alpha_\beta [S]^\gamma_\alpha\).
-        \item Se \(\alpha \) e \(\beta \) bases de \(V\) e \(W\), e \(T \in \hom(V,W)\) invertível. Então, \(T^{-1} \in \hom(W,V)\) e \([T^{-1}]^\beta_\alpha = ([T]^\alpha_\beta)^{-1}\).
-    \end{enumerate}
-\end{proposition}
+%\label{prop:0.1}
+%    Algumas propriedades coletadas de \cite[Seç. 6.1]{MA719}. 
+%    \begin{enumerate}[left = 0.55cm, label = (\alph*)]
+%%        \item \(\hom(V,W) \leq \mathcal{F}(V,W)\). 
+%        \item Sejam \(\alpha = (v_j)\) e \(\beta = (w_i) \) bases de \(V\) e \(W\) fixas. A função  \(\Phi : \hom(V,W) \ni T \mapsto [T]^\alpha_\beta \in M_{|I| \times |J|}(\F) \) é linear e injetora. 
+%%        \item Sejam \(\gamma, \ \alpha\) e \(\beta\) bases de \(U,\ V\) e \(W\), \(S \in \hom(U,V)\) e \(T\in \hom(V,W)\). Então, \(T\circ S \in \hom(U,W)\) e \([T\circ S]^\gamma_\beta = [T]^\alpha_\beta [S]^\gamma_\alpha\).
+%        \item Se \(\alpha \) e \(\beta \) bases de \(V\) e \(W\), e \(T \in \hom(V,W)\) invertível. Então, \(T^{-1} \in \hom(W,V)\) e \([T^{-1}]^\beta_\alpha = ([T]^\alpha_\beta)^{-1}\).
+%    \end{enumerate}
+%\end{proposition}
 
 \begin{definition}
-    \(T\in \hom(V,W)\) é \emph{isomorfismo} se fora bijetiva. Dois espaços são \emph{isomorfos}, \(V\cong W\), se \(\exists T\in \hom(V,W)\) isomorfismo.  
+    \(T\in \hom(V,W)\) é \emph{isomorfismo} se fora bijetiva, nesse caso \(T: V\cong W\).  
 \end{definition}
 
-\begin{note}
-    A transformação \(\Phi\) da \(\square\) \ref{prop:0.1} (b) é sobrejetiva se \(|J| < \infty\).
-\end{note}
+%\begin{note}
+%    A transformação \(\Phi\) da \(\square\) \ref{prop:0.1} (b) é sobrejetiva se \(|J| < \infty\).
+%\end{note}
 
 \theoremnum{6.1.9.}
 \begin{theorem}
-    \(V\cong W\) \(\leftrightharpoons\) \(\dim V = \dim W\). \comentario{\cite[Pág. 191]{MA719}}
+    \(V\cong W \ \leftrightharpoons \ \dim V = \dim W\). \comentario{\cite[Pág. 191]{MA719}}
 \end{theorem}
 
 \begin{lemma}
@@ -157,7 +161,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 \end{definition}
 
 \begin{note}
-    Chamamos estos espaços especiais de \emph{núcleo} e \emph{imagem} de \(T\) e suas dimensões de \emph{nulidade} e \emph{posto}. \footnote{No texto o professor denota por \(\mathcal{N}(T)\) o núcleo de \(T\), só que eu não gosto dessa.}
+    Estos espaços são o \emph{núcleo} e \emph{imagem} de \(T\), suas dimensões são a \emph{nulidade} e o \emph{posto} de \(T\). O professor denota \(\mathcal{N}(T) = \ker T\), só que eu não gosto dessa.
 \end{note}
 
 \theoremnum{6.3.6.}
@@ -167,7 +171,7 @@ No contexto do {\scriptsize \(\boxtimes\)} \hyperlink{corol5410}{5.4.10.} os \(x
 
 \propositionnum{6.3.9.}
 \begin{proposition}
-    \(T \) é injetora \(\leftrightharpoons\) \(V_{_T} = \{0\}\). \comentario{\cite[Pág. 202]{MA719}}
+    \(T \) é injetora \ \(\leftrightharpoons\)  \ \(V_{_T} = \{0\}\). \comentario{\cite[Pág. 202]{MA719}}
 \end{proposition}
 
 \begin{definition}
