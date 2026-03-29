@@ -1,0 +1,75 @@
+\section{Redes e filtros}
+
+\subsection*{Convergência de seqüências}
+
+\begin{definition}
+    Seja \((X,d)\) e \((x_n)_{n\in \N}\subset X\) uma seqüência. Dizemos que \(x_n \to x \in X\) (\emph{converge}) sse \(\forall \epsilon >0, \ \exists n_0 \in \N : d(x_n, x) <\epsilon \) se \(n\geq n_0\).
+\end{definition}
+
+\begin{proposition}
+    \textbf{12.2.} Sejam \(A \subset (X, d)\) e \(x\in X\). Então, \(x \in \overline{A} \ \leftrightharpoons \ \exists (x_n) \subset A : x_n \to x\). 
+\end{proposition}
+
+\begin{corollary}
+    \textbf{12.3.} \(A\ce \subset (X,d) \ \leftrightharpoons \ \forall (x_n)\subset A: x_n \to x\) tem-se \(x\in A\). 
+\end{corollary}
+
+\begin{proposition}
+    \textbf{12.4.} Uma função \(f : (X, d_X) \to (Y, d_Y)\) é contínua em \(a\in X\) \ \(\leftrightharpoons\) \ Pra cada \(x_n \to a \) (em \(X\)) tem-se que \(f(x_n) \to f(a)\) (em \(Y\)). \textcolor{gray}{(\(\Leftarrow\)) Contrapositiva}
+\end{proposition}
+
+\begin{definition}
+    Dizemos que \(x_n \to x\) (em \((X, \tau)\)) sse \(\forall U \in \U_x, \ \exists n_0 \in \N : (x_n) \subset U \) se \(n \geq n_0\).
+\end{definition}
+
+\begin{definition}
+    Chamamos de \emph{subseqüência} de \((x_n)_{n\in \N}\) qualquer \((x_{n_k})_{k\in \N} : (n_k)_{k\in \N}\) é uma seqüências estritamente crescente em \(\N\). 
+\end{definition}
+
+\subsection*{Convergência de redes}
+
+\begin{definition}
+    Um duplo \((\Lambda, \leq)\) é chamado de \emph{conjunto dirigido} se a relação verificar (D1) reflexividade; (D2) transitividade e (D3) \(\forall \lambda, \mu \in \Lambda, \ \exists \nu \in \Lambda : \lambda, \mu \leq \nu\).
+\end{definition}
+
+\begin{definition}
+    Sejam \(\Lambda\) dirigido e \((X, \tau)\). Chamamos de \emph{rede} qualquer função \(\x : \Lambda \to X\), escrevemos \( (x(\lambda))_{\lambda\in \Lambda} = (x_\lambda)_{\lambda \in \Lambda} \subset X\). Dizemos que \(x_\lambda \to x \in X\) (\emph{converges}) sse \(\forall U \in \U_x: \exists \lambda_0 \in \Lambda : (x_\lambda) \subset U\) se \(\lambda \geq \lambda_0\).  
+\end{definition}
+
+\ejemplo{\centering Vizinhanças dirigidas
+\tcblower
+\begin{example}
+    Dadas \(U, V \in \U_x\) defina \(U \leq V \ \leftrightharpoons \ V \subset U\). Assim definido \((\U_x, \leq) \)  é dirigido. Seja \((x_U)_{U\in \U_x} : x_U \in U \in \U_x\), é claro que \(x_U \to x\).  
+\end{example}
+}
+
+\begin{proposition}
+    \textbf{13.5.} Sejam \(A \subset (X, \tau)\) e \(x \in X\). Então, \(x \in \overline{A} \ \leftrightharpoons \ \exists (x_\lambda)\subset A : x_\lambda \to x\). \comentario{Prova as duas direções usando a \(\square \) \hyperlink{prop58}{5.8.}}
+\end{proposition}
+
+\hypertarget{prop136}{}
+\begin{proposition}
+    \textbf{13.6.} Uma função \(f : (X, \tau_X) \to (Y, \tau_Y)\) é contínua em \(a \in X \ \leftrightharpoons \ \) Pra cada \(x_\lambda \to a\) (em \(X\)) tem-se que \(f(x_\lambda) \to f(a)\) (em \(Y\)). \textcolor{gray}{(\(\Leftarrow\)) Contrapositiva}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{13.7.} Sejam \(X := \prod X_i\) e \((\x_\lambda)_{\lambda \in \Lambda} \subset X\). Então, \(\x_\lambda \to \x \in X\) \ \(\leftrightharpoons\) \ \(\pi_i(\x_\lambda) \to \pi_i(\x) \in X_i, \ \forall i \in I\).
+\end{proposition}
+
+\demo{(\(\Rightarrow\)) \(\square\) \hyperlink{prop136}{13.6.}; (\(\Leftarrow\)) Seja \(U \in \U_\x\) (em \(X\)), então \(\exists V \in \U_\x : \x\in V \subset U\) e, 
+\[V = \bigcap_{j\in J} \pi_j^{-1}(V_j) : J \subset I \text{ finito  e } V_j\ab \subset X_j. \]
+Em particular, \(V_j \in \U_{\pi_j(\x)}\) (em \(X_j\)), logo \(\forall j \in J, \ \exists \lambda_j \in \Lambda : \pi(\x_\lambda) \subset V_j \) se \(\lambda \geq \lambda_j\). Finalmente, \(\exists \lambda_0 \in \Lambda : \lambda_0 \geq \lambda_j, \ \forall j \in J \) e \((\x_\lambda) \subset V \subset U\) se \(\lambda \geq \lambda_0\).% e \(\x_\lambda \to \x\). 
+}
+
+\begin{definition}
+    Um ponto \(x \in X\) é \emph{ponto de acumulação} de \((x_\lambda) \subset X\) se dados \(U \in \U_x\) e \(\lambda_0 \in \Lambda, \ \exists \lambda \geq \lambda_0\) tal que \( x_\lambda \in U\).
+\end{definition}
+
+\begin{definition}
+    Chamamos de \emph{subrede} de \(\x : \Lambda \to X\) qualquer rede da forma \(\x \circ \phi : M \to X\), onde \(M \) é dirigido e \(\phi:M \to \Lambda\) é uma função verificando:
+    \vspace{-0.2cm}
+    \begin{itemize}[left = 1.8cm]
+        \item[(Sr1)] \(\mu_1 \leq \mu_2 \Rightarrow \phi(\mu_1) \leq \phi(\mu_2) \ \leftarrow\) \ Crescente 
+        \item[(Sr2)] \(\forall  \lambda \in \Lambda, \ \exists \mu \in M : \phi(\mu )\geq \lambda\ \leftarrow\) \ \emph{Cofinal}
+    \end{itemize}
+\end{definition}
