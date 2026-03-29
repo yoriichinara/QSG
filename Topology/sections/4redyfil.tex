@@ -53,7 +53,7 @@
 \end{proposition}
 
 \begin{proposition}
-    \textbf{13.7.} Sejam \(X := \prod X_i\) e \((\x_\lambda)_{\lambda \in \Lambda} \subset X\). Então, \(\x_\lambda \to \x \in X\) \ \(\leftrightharpoons\) \ \(\pi_i(\x_\lambda) \to \pi_i(\x) \in X_i, \ \forall i \in I\).
+    \textbf{13.7.} Sejam \((\x_\lambda) \subset X := \prod X_i\) e \(\x \in X\). Então, \(\x_\lambda \to \x \in X\) \ \(\leftrightharpoons\) \ \(\pi_i(\x_\lambda) \to \pi_i(\x)\) (em \( X_i\)), pra cada \(i \in I\).
 \end{proposition}
 
 \demo{(\(\Rightarrow\)) \(\square\) \hyperlink{prop136}{13.6.}; (\(\Leftarrow\)) Seja \(U \in \U_\x\) (em \(X\)), então \(\exists V \in \U_\x : \x\in V \subset U\) e, 
@@ -66,10 +66,24 @@ Em particular, \(V_j \in \U_{\pi_j(\x)}\) (em \(X_j\)), logo \(\forall j \in J, 
 \end{definition}
 
 \begin{definition}
-    Chamamos de \emph{subrede} de \(\x : \Lambda \to X\) qualquer rede da forma \(\x \circ \phi : M \to X\), onde \(M \) é dirigido e \(\phi:M \to \Lambda\) é uma função verificando:
+    Chamamos de \emph{subrede} de \(\x : \Lambda \to X\) qualquer rede da forma \(\x \circ \phi : M \to X\), denotada \((x_{\phi(\mu)})_{\mu \in M}\), onde \(M \) é dirigido e \(\phi:M \to \Lambda\) verifica:
     \vspace{-0.2cm}
     \begin{itemize}[left = 1.8cm]
         \item[(Sr1)] \(\mu_1 \leq \mu_2 \Rightarrow \phi(\mu_1) \leq \phi(\mu_2) \ \leftarrow\) \ Crescente 
         \item[(Sr2)] \(\forall  \lambda \in \Lambda, \ \exists \mu \in M : \phi(\mu )\geq \lambda\ \leftarrow\) \ \emph{Cofinal}
     \end{itemize}
 \end{definition}
+
+\begin{proposition}
+    \textbf{13.10.} Sejam \((x_\lambda) \subset X\) e \(x \in X\). Então, \(x\) é ponto de acumulação de \((x_\lambda)\) \ \(\leftrightharpoons\) \ \(\exists (x_{\phi(\mu)})\) subrede de \((x_\lambda)\) tal que \(  x_{\phi(\mu)} \to x\). 
+\end{proposition}
+
+\demo{(\(\Rightarrow\)) Defina \(M := \{(\lambda, U) \in \Lambda \times \U_x : x_\lambda\in U\}\), \(\phi : M \to \Lambda \) tal que \((\lambda, U) \mapsto \lambda\) e mostra que \((x_{\phi(\mu)})\) é subrede de \((x_\lambda) : x_{\phi(\mu)} \to x\); (\(\Leftarrow \)) Segue das definições.}
+
+\begin{definition}
+    Uma rede \((x_\lambda) \subset X\) é dita \emph{universal} se dado \(A \subset X, \ \exists \lambda_0 \in \Lambda \) tal que \(\{x_\lambda : \lambda \geq \lambda_0\} \subset A\) ou \(\{x_\lambda : \lambda \geq \lambda_0\} \subset X \setminus A\).
+\end{definition}
+
+\begin{proposition}
+    \textbf{13.12.} Sejam \((x_\lambda) \subset X\) universal e \(x\in X\). Se \(x\) é ponto de acumulação de \((x_\lambda)\), então \(x_\lambda \to x\). \comentario{Segue direto das definições}
+\end{proposition}
