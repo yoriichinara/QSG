@@ -446,9 +446,6 @@ INPUT /usr/share/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/doublestroke/dsrom12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/doublestroke/dsrom10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/doublestroke/dsrom12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/doublestroke/dsrom12.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
@@ -467,6 +464,9 @@ INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/doublestroke/dsrom12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/doublestroke/dsrom12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT ./sections/2esptop.tex
