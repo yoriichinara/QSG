@@ -87,3 +87,43 @@ Em particular, \(V_j \in \U_{\pi_j(\x)}\) (em \(X_j\)), logo \(\forall j \in J, 
 \begin{proposition}
     \textbf{13.12.} Sejam \((x_\lambda) \subset X\) universal e \(x\in X\). Se \(x\) é ponto de acumulação de \((x_\lambda)\), então \(x_\lambda \to x\). \comentario{Segue direto das definições}
 \end{proposition}
+
+%\begin{definition}
+%    Uma conjunto \((X, \leq)\) é \emph{parcialmente ordenado} se a \emph{relação} \(\leq\) for (P$1$) reflexiva; (P$2$) antisimétrica e (P$3$) transitiva. %É \emph{total} se +(P$4$) \(\forall x,y \in X, \ x\leq y\) ou \(y\leq x\).
+%\end{definition}
+%%
+%\begin{example}
+%    \((\mathcal{P}(X), \subseteq)\) e \((\R, \leq)\) são parcialmente ordenados. 
+%\end{example}
+%
+%\begin{definition}
+%    Sejam \(X\) parcialmente ordenado e \(A \subset X\), 
+%    \begin{itemize}[label = \(\star\)]
+%        \item Se \(\exists a_0 \in A : a_0 \leq a, \ \forall a \in A  \ \leftarrow \) \ \emph{Elemento mínimo} (ou máximo resp.)
+%        \item Se \(\exists a_0 \in A : a \leq a_0 \Rightarrow a = a_0, \ \forall a \in A  \ \leftarrow \) \ \emph{Elemento mínimo}
+%    \end{itemize}
+%\end{definition}
+
+\hypertarget{lemma145}{}
+\begin{lemma}
+    \textbf{14.5. (\emph{Zorn})} Seja \(X\neq \varnothing\) parcialmente ordenado tal que cada cadeia em \(X\) é limitada superiormente. Então \(X\) possui pelo menos um elemento maximal.
+\end{lemma}
+
+\hypertarget{thm146}{}
+\begin{theorem}
+    \textbf{14.6. (\emph{Zermelo})} Todo conjunto \(X\neq \varnothing\) pode ser bem ordenado.
+\end{theorem}
+
+\begin{theorem}
+    \textbf{14.7.} Axioma da escolha \ \(\leftrightharpoons\) \ {\scriptsize $\square$}\ \hyperlink{lemma145}{14.5. (\emph{Zorn})} \ \(\leftrightharpoons\) \ \(\blacksquare\) \ \hyperlink{thm146}{14.6. (\emph{Zermelo})}. \comentario{Não suporta resumo, olha se queser \cite[pag. 39]{mujica2005}}
+\end{theorem}
+
+\subsection*{Convergência de filtros}
+
+\begin{definition}
+    Sejam \(X \neq \varnothing\). Dizemos que uma familia não vazia \(\neq \mathcal{F}\subset \mathcal{P}(X)\) é um \emph{filtro} em \(X\) se verificar as seguintes condições: 
+    \begin{enumerate}[left = 3cm]
+        \item[(F$1$)] \(A \neq \varnothing, \ \forall A \in \mathcal{F}\). \hspace{1cm} (F$2$) \(A, B \in \mathcal{F} \Rightarrow A\cap B \in \mathcal{F}\).
+        \item[]\hspace{1cm}(F$3$) \(A \in \mathcal{F}\) e \(A \subset B \subset X \Rightarrow B \in \mathcal{F}\). 
+    \end{enumerate}
+\end{definition}
