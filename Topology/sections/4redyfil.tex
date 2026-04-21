@@ -104,26 +104,105 @@ Em particular, \(V_j \in \U_{\pi_j(\x)}\) (em \(X_j\)), logo \(\forall j \in J, 
 %    \end{itemize}
 %\end{definition}
 
+\begin{definition}
+    Seja \(X\) parcialmente ordenado. Um subconjunto \(A \subset X\) é dito de \emph{cadeia} se for totalmente ordenado com a relação de orden induzida por \(X\). 
+\end{definition}
+
 \hypertarget{lemma145}{}
 \begin{lemma}
-    \textbf{14.5. (\emph{Zorn})} Seja \(X\neq \varnothing\) parcialmente ordenado tal que cada cadeia em \(X\) é limitada superiormente. Então \(X\) possui pelo menos um elemento maximal.
+    \textbf{14.5. (\emph{Zorn})} Seja \(X\) parcialmente ordenado tal que cada cadeia em \(X\) é limitada superiormente. Então \(X\) possui pelo menos um elemento maximal.
 \end{lemma}
 
 \hypertarget{thm146}{}
 \begin{theorem}
-    \textbf{14.6. (\emph{Zermelo})} Todo conjunto \(X\neq \varnothing\) pode ser bem ordenado.
+    \textbf{14.6. (\emph{Zermelo})} Todo conjunto não vazio pode ser bem ordenado.
 \end{theorem}
 
 \begin{theorem}
     \textbf{14.7.} Axioma da escolha \ \(\leftrightharpoons\) \ {\scriptsize $\square$}\ \hyperlink{lemma145}{14.5. (\emph{Zorn})} \ \(\leftrightharpoons\) \ \(\blacksquare\) \ \hyperlink{thm146}{14.6. (\emph{Zermelo})}. \comentario{Não suporta resumo, olha se queser \cite[pag. 39]{mujica2005}}
 \end{theorem}
 
-\subsection*{Convergência de filtros}
+\subsection*{Convergência de filtros (\(X \neq \varnothing\))}
 
 \begin{definition}
-    Sejam \(X \neq \varnothing\). Dizemos que uma familia não vazia \(\neq \mathcal{F}\subset \mathcal{P}(X)\) é um \emph{filtro} em \(X\) se verificar as seguintes condições: 
-    \begin{enumerate}[left = 3cm]
-        \item[(F$1$)] \(A \neq \varnothing, \ \forall A \in \mathcal{F}\). \hspace{1cm} (F$2$) \(A, B \in \mathcal{F} \Rightarrow A\cap B \in \mathcal{F}\).
-        \item[]\hspace{1cm}(F$3$) \(A \in \mathcal{F}\) e \(A \subset B \subset X \Rightarrow B \in \mathcal{F}\). 
-    \end{enumerate}
+    Uma familia \(\varnothing \neq \mathcal{F}\subset \mathcal{P}(X)\) é um \emph{filtro} em \(X\) se verificar: (F$1$)  \(A \neq \varnothing, \ \forall A \in \mathcal{F}\); (F$2$)  \(A, B \in \mathcal{F} \Rightarrow A\cap B \in \mathcal{F}\) e (F$3$) \(A \in \mathcal{F}\) e \(A \subset B \subset X \Rightarrow B \in \mathcal{F}\).
 \end{definition}
+
+\begin{definition}
+    Uma familia \(\varnothing \neq \mathcal{B} \subset \mathcal{P}(X)\) é uma \emph{base de filtro} em \(X\) se \(\mathcal{F}:= \{A \subset X : \exists B \in \mathcal{B} \text{ tal que } B \subset A\} = \langle \mathcal{B}\rangle\) é um filtro em \(X\). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{15.3.} \(\varnothing \neq \mathcal{B}\subset \mathcal{P}(X)\) é base de filtro\(\ \leftrightharpoons \ \) (B$1$) \(A \neq \varnothing, \ \forall A \in \mathcal{B}\) e (B$2$) Dados \(A,B \in \mathcal{B}, \ \exists C \in \mathcal{B} : C \subset A \cap B\). \comentario{Mogollas}  
+\end{proposition}
+
+\ejemplo{
+    \begin{example}
+        Dado \(x \in (X, \tau)\), \(\U_x \subset \mathcal{P}(X)\) é um filtro em \(X\) e qualquer base de vizinhanças \(\B_x\) é uma base desse filtro. 
+    \end{example}
+}
+
+\begin{definition}
+    \textbf{15.6.} Sejam \(x \in (X, \tau)\) e \(\B\) uma base de filtro em \(X\). Dizemos que \(\B \to x\) (\emph{converges}) se \(\forall U \in \U_x,\  \exists B \in \B : B \subset U\). 
+\end{definition}
+
+\begin{note}
+    É claro que \(\B \to x \ \leftrightharpoons \ \U_x \subset \langle \B \rangle\). Trabalhar com bases e filtros é equivalente, escolha um ou outro, o que for mais facil no contexto.  
+\end{note}
+
+\begin{proposition}
+    \textbf{15.8.} Sejam \(E \subset (X,\tau)\) e \(x \in X\). Então, \(x \in \overline{E} \ \leftrightharpoons \ \exists \mathcal{F} \) filtro em \(X : E \in \mathcal{F} \to x\).  
+\end{proposition}
+
+\demo{(\(\Rightarrow\)) \ Dado \(x \in \overline{E}, \ \B := \{U \cap E : U \in \U_x\}\) é base de filtro \(: \B \to x\); \ (\(\Leftarrow\)) \ \(\U_x \subset \mathcal{F}\) e \(E \in \mathcal{F}\), logo \(U \cap E \neq \varnothing, \ \forall U \in \U_x \ \leftrightharpoons \ x \in \overline{E}\).}
+
+\begin{proposition}
+    \textbf{15.9.} Dada \(\B\) uma base de filtro em \(X\) e \(f: X \to Y\) função qualquer, \(f(\B):= \{f(B) : B \in \B\}\) é uma base de filtro em \(Y\). \comentario{Mogollas } 
+\end{proposition}
+
+\hypertarget{prop1510}{}
+\begin{proposition}
+    \textbf{15.10.} Uma função \(f : (X, \tau_X) \to (Y, \tau_Y)\) é contínua em \(a \in X \ \leftrightharpoons \ f(\B) \to f(a), \ \forall \B\) base de filtro em \(X : \B \to a\). \comentario{Mogollas}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{15.11.} Sejam \(\B\) base de filtro em \(X := \prod X_i\) e \(\x \in X\). Então, \(\B \to \x \ \leftrightharpoons \ \pi_i(\B) \to \pi_i(\x)\) (em \(X_i\)), pra cada \(i\in I\).
+\end{proposition}
+
+\demo{(\(\Rightarrow\)) \(\square\) \hyperlink{prop1510}{15.10.}; (\(\Leftarrow\)) Seja \(U \in \U_\x\) (em \(X\)), então \(\exists V \in \U_\x : \x\in V \subset U\) e, 
+\[V = \bigcap_{j\in J} \pi_j^{-1}(V_j) : J \subset I \text{ finito  e } V_j\ab \subset X_j. \]
+Em particular, \(V_j \in \U_{\pi_j(\x)}\) (em \(X_j\)), logo \(\forall j \in J, \ \exists B_j \in \B : \pi(B_j) \subset V_j \). Segue que \(\exists B\in \B : B \subset \bigcap B_j \subset V \subset U\), portanto \(\B \to \x\).}
+
+\begin{definition}
+    Sejam \(\B\) base de filtro em \((X,\tau)\). Dizemos que \(x \in X\) é \emph{ponto de acumulação} de \(\B\) se \(U \cap B \neq \varnothing, \ \forall U \in \U_x, \ \forall B \in \B\), ou seja \(x \in \bigcap\{\overline{B}: B \in \B\}\). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{15.13.} Sejam \(\mathcal{F}\) filtro em \((X,\tau)\) e \(x \in X\). Então, \(x \) é ponto de acumulação de \(\mathcal{F} \ \leftrightharpoons \ \exists \mathcal{G}\supset \mathcal{F} \) filtro em \(X\) tal que \(\mathcal{G} \to x\).  
+\end{proposition}
+
+\demo{ 
+    (\(\Rightarrow\)) \(\B := \{U \cap A : U \in \U_x, \ A \in \mathcal{F}\}\) gera um filtro \(\mathcal{G} \supset \mathcal{F} : \mathcal{G} \to x\); (\(\Leftarrow\)) \ \(\U_x \subset \mathcal{G}\), logo \(U \cap A \neq \varnothing, \ \forall U \in \U_x, A\in \mathcal{F} \ \leftrightharpoons \ x\) é ponto de acumulação de \(\mathcal{F}\).  
+}
+
+\begin{definition}
+    Um filtro \(\mathcal{F}\) em \(X\) é dito de \emph{ultrafiltro} se for maximal. 
+\end{definition}
+
+\begin{proposition}
+    \textbf{15.15.} Um filtro \(\mathcal{F}\) em \(X\) é ultrafiltro \ \(\leftrightharpoons\) \ \(\forall E \subset X\) temos que \(E \in \mathcal{F}\) ou \(X\setminus E \in \mathcal{F}\).
+\end{proposition}
+
+\demo{
+    (\(\Rightarrow\)) Dado \(E \subset X\), se \(A \cap E\neq \varnothing, \ \forall A \in \mathcal{F} \), então \(\B:= \{A \cap E : A \in \mathcal{F}\}\) gera um filtro \(\mathcal{G}\supset \mathcal{F}\), segue que \(E \in \mathcal{G} = \mathcal{F}\), caso contrário \(\exists A_0 \in \mathcal{F} : A_0 \subset X\setminus E \in \mathcal{F}\); (\(\Leftarrow\)) Se \(\exists E \in \mathcal{G}\setminus \mathcal{F}\), então \(X\setminus E \in \mathcal{F} \subset \mathcal{G}\) e \(E \cap (X \setminus E) = \varnothing \in \mathcal{G}\).\Lightning 
+}
+
+\begin{proposition}
+    \textbf{15.16.} Sejam \(\mathcal{F}\) um ultrafiltro em \((X,\tau)\). Se \(x \in X\) é um ponto de acumulação de \(\mathcal{F}\), então \(\mathcal{F} \to x\). \comentario{
+    Se \(\exists U \in \U_x : U \notin \mathcal{F}\), então \( X\setminus U =: A \in \mathcal{F}\) e \(U \cap A = \varnothing\). \Lightning
+}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{15.17.} Cada filtro \(\mathcal{F}\) em \(X\) está contido em algum ultrafiltro. \comentario{Segue do {\scriptsize \(\square\)} \hyperlink{lemma145}{14.5. (\emph{Zorn})} em \(\mathcal{P}:= \{\mathcal{G} : \mathcal{G}\supset \mathcal{F}\}\), toda cadeia \(\{\mathcal{G}_i\}_{i\in I}\) é limitada por \(\bigcup \mathcal{G}_i\) }
+\end{proposition}
