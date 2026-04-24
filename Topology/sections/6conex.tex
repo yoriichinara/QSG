@@ -1,1 +1,50 @@
 \section{Conexidade}
+ 
+\subsection*{Espaços conexos}
+
+\begin{definition}
+    Um espaço \((X,\tau)\) é dito \emph{desconexo} se \(\exists A\ab, B\ab \in \tau \setminus \{\varnothing\} : X = A \cup B\) e \(A \cap B = \varnothing\), nesse casso \(X = A \mid B\) é uma \emph{separação} de \(X\). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{26.3.} Cada \([a,b] \subset (\R, \tau_2) : a < b\) é conexo. \comentario{Suponha que \(\exists A \mid B = [a,b], \ b \in B\), \(c := \sup A\) e consiga a contradição}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{26.4.} \(X\) é conexo \(\ \leftrightharpoons \ \) \(A = \overline{A} = A^\circ \subset X \) implica \(A = \varnothing\) ou \(A = X\). \comentario{Mogollas}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{26.5.} Imagem contínua de conexo é conexo. \comentario{Mogollas}
+\end{proposition}
+
+\hypertarget{prop266}{}
+\begin{proposition}
+    \textbf{26.6.} Se \(S \subset X\)  é conexo, então \(\overline{S}\) também é conexo. \comentario{Supondo que \(\exists A \mid B = \overline{S}\), então \((S \cap A) \mid (S\cap B) = S\)\Lightning}
+\end{proposition}
+
+\begin{corollary}
+    \textbf{26.7.} Se \(S \subset X\) é conexo e \(S \subset T \subset \overline{S}\), então \(T\) é conexo. \comentario{\(X = T \) em \(\square\) \hyperlink{prop266}{26.6.}}
+\end{corollary}
+
+%\begin{definition}
+%    \(A, B \subset (X, \tau)\) são \emph{mutuamente separados} se \(\overline{A} \cap B = A \cap \overline{B} = \varnothing\). 
+%\end{definition}
+
+%\begin{proposition}
+%    \textbf{26.9.} \(X\) é disconexo  \(\ \leftrightharpoons \ \) \(\exists A, B\subset X\) mutuamente separados \(: X = A \cup B\). 
+%\end{proposition}
+
+%\demo{(\(\Rightarrow\)) \(\exists A \mid B = X\), com \(A\) e \(B\) abertos e fechados, em particular, mutuamente separados; (\(\Leftarrow\)) \(\exists A, B \subset X\) mutuamente separados \(: X = A\cup B = \overline{A} \cup B = A \cup \overline{B}\), segue que \(A\mid B = X\). }
+
+\begin{lemma}
+    \textbf{*26.11.} Se \( X = A \mid B\) e \(S \subset X\) é conexo, então \(S \subset A\) ou \(S \subset B\). \comentario{Se não \(S = S \cap X = (S \cap A)\ab \cup (S \cap B)\ab \ \leftrightharpoons \ S\cap A = \varnothing\) ou \(S\cap B = \varnothing\)}
+\end{lemma}
+
+\begin{proposition}
+    \textbf{26.12.} Sejam \((S_i)_{i\in I} : X \supset S_i \) é conexo \(\forall i \in I,  \ X = \bigcup S_i\) e \(\bigcap S_i \neq \varnothing\), então o \(X\) todo é conexo. \comentario{Supõe que \(\exists A \mid B = X\) e seja \(s \in \bigcap S_i\) então \(S_i \subset A\) ou \(S_i \subset B, \ \forall i \in I\) logo \(A = \varnothing \) ou \(B = \varnothing\)} 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{26.13.} Se \(\forall x,y \in X, \ \exists S_{xy} \subset X\) conexo, então \(X \) é conexo.  \comentario{Fixo \(a \in X, \ X= \underset{x \in X}{\bigcup} S_{ax}\) e \(a \in \underset{x\in X}{\bigcap}S_{ax}\), logo \(X\) é conexo, \(\square\) \hyperlink{prop2612}{26.12.} }
+\end{proposition}
