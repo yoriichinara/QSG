@@ -41,10 +41,33 @@
     \textbf{*26.11.} Se \( X = A \mid B\) e \(S \subset X\) é conexo, então \(S \subset A\) ou \(S \subset B\). \comentario{Se não \(S = S \cap X = (S \cap A)\ab \cup (S \cap B)\ab \ \leftrightharpoons \ S\cap A = \varnothing\) ou \(S\cap B = \varnothing\)}
 \end{lemma}
 
+\hypertarget{prop2612}{}
 \begin{proposition}
     \textbf{26.12.} Sejam \((S_i)_{i\in I} : X \supset S_i \) é conexo \(\forall i \in I,  \ X = \bigcup S_i\) e \(\bigcap S_i \neq \varnothing\), então o \(X\) todo é conexo. \comentario{Supõe que \(\exists A \mid B = X\) e seja \(s \in \bigcap S_i\) então \(S_i \subset A\) ou \(S_i \subset B, \ \forall i \in I\) logo \(A = \varnothing \) ou \(B = \varnothing\)} 
 \end{proposition}
 
 \begin{proposition}
-    \textbf{26.13.} Se \(\forall x,y \in X, \ \exists S_{xy} \subset X\) conexo, então \(X \) é conexo.  \comentario{Fixo \(a \in X, \ X= \underset{x \in X}{\bigcup} S_{ax}\) e \(a \in \underset{x\in X}{\bigcap}S_{ax}\), logo \(X\) é conexo, \(\square\) \hyperlink{prop2612}{26.12.} }
+    \textbf{26.13.} Se \(\forall x,y \in X, \ \exists S_{xy} \subset X \) conexo \(: x,y \in S_{xy}\), então \(X \) é conexo.  \comentario{Fixo \(a \in X, \ X= \underset{x \in X}{\bigcup} S_{ax}\) e \(a \in \underset{x\in X}{\bigcap}S_{ax}\), logo \(X\) é conexo, \(\square\) \hyperlink{prop2612}{26.12.} }
 \end{proposition}
+
+\begin{proposition}
+    \textbf{26.14.} Se \(X = \displaystyle\bigcup_{n\in \N} S_n : S_n \cap S_{n+1} \neq \varnothing, \ \forall n \in \N\), então \(X\) é conexo. %\comentario{}
+\end{proposition}
+
+\demo{Por indução e \(\square\) \hyperlink{prop2612}{26.12.} que \(T_n := \overset{n}{\bigcup}\  S_k\) é conexo. Logo, \(X = \bigcup T_n\) e \(\bigcap T_n = T_1 \neq \varnothing\), segue mais uma vez da mesma proposição que \(X\) é conexo.  }
+
+\begin{example}
+    \(\R = \displaystyle\bigcup_{n\in \N}[-n,n]\) e \(\R^n = \displaystyle\bigcup \{\ell : \ell \text{ é reta e \textbf{0}} \in \ell\}\) são conexos.   
+\end{example}
+
+\begin{proposition}
+    \textbf{26.16.} \(X:= \prod X_i\) é conexo \(\ \leftrightharpoons \ \) \(X_i \) é conexo, \(\forall i \in I\). 
+\end{proposition}
+
+\newcommand{\p}{\textbf{a}}
+\demo{(\(\Rightarrow\)) \(\operatorname{Im} \pi_i = X_i\) conexo; (\(\Leftarrow\)) Demonstração da profe (mais bonita): (i) Mostra que \(X_1 \times X_2 \) é conexo; (ii) Fixo \(\p \in X, \ \forall J\subset I\) finito seja 
+\[X_J := \prod_{i \in I\setminus J}\{a_i\}\times \prod_{j \in J} X_j \simeq \prod_{j\in J} X_j \ \text{ conexo \ (indução)}.\]
+\(Y:= \bigcup X_J\) é conexo pois \(\p \in \bigcap X_J\), \(\square\) \hyperlink{prop2612}{26.12.}; (iii) Mostra que \(\overline{Y} = X\). 
+}
+
+\subsection*{Espaços conexos por caminhos}
