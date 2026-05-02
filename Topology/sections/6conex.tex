@@ -23,6 +23,7 @@
     \textbf{26.6.} Se \(S \subset X\)  é conexo, então \(\overline{S}\) também é conexo. \comentario{Supondo que \(\exists A \mid B = \overline{S}\), então \((S \cap A) \mid (S\cap B) = S\)\Lightning}
 \end{proposition}
 
+\hypertarget{coro267}{}
 \begin{corollary}
     \textbf{26.7.} Se \(S \subset X\) é conexo e \(S \subset T \subset \overline{S}\), então \(T\) é conexo. \comentario{\(X = T \) em \(\square\) \hyperlink{prop266}{26.6.}}
 \end{corollary}
@@ -70,4 +71,75 @@
 \(Y:= \bigcup X_J\) é conexo pois \(\p \in \bigcap X_J\), \(\square\) \hyperlink{prop2612}{26.12.}; (iii) Mostra que \(\overline{Y} = X\). 
 }
 
+\subsection*{Componentes conexas}
+
+\begin{definition}
+    Dado \(x \in (X, \tau)\) denotamos por \(C_x := \bigcup \{S \subset X : x \in S \text{ conexo}\}\), o maior subconjunto conexo que contém \(x\) (\emph{componente conexa} de \(x\)). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{27.2.} Dados \(x,y \in X\) tem-se que \(C_x = C_y\) ou \(C_x \cap C_y = \varnothing\). \comentario{\(\square\) \hyperlink{prop2612}{26.12.} } 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{27.3.} As componentes conexas são sempre fechadas. \comentario{{\scriptsize \(\boxtimes\)} \hyperlink{coro267}{26.7. } }
+\end{proposition}
+
+\begin{definition}
+    Um espaço \((X,\tau)\) é \emph{localmente conexo} se para cada \( x \in X, \ \exists \B_x \subset \U_x\), base de vizinhanças abertas e conexas. 
+\end{definition}
+
+\begin{proposition}
+    \textbf{27.6.} \(X\) é localmente conexo \(\ \leftrightharpoons \ \) Componenentes conexas dos abertos são abertas. % e fechadas.  %, \ C_x = \operatorname{int}(C_x) = \overline{C_x} : x \in U \).
+\end{proposition}
+
+\demo{
+    (\(\Rightarrow\)) Dados \(x \in U\ab\subset X\), \(\forall y \in C_x\) (em \(U\)), \(\exists V\in \B_y: V \subset C_x \ab \subset U\); (\(\Leftarrow\)) Dados \( x \in U\ab \in \U_x, \ C_x\ab \subset U\), em particular, \(C_x \ab \in \U_x\) é conexa. 
+}
+
+\begin{corollary}
+    \textbf{27.7.} Componentes conexas de localmente conexo são abertas e fechadas. 
+\end{corollary}
+
+\begin{proposition}
+    \textbf{27.8.} Cada quociente de localmente conexo é localmente conexo. 
+\end{proposition}
+
+\demo{
+    %Sejam \((X, \tau)\) localmente conexo, 
+    Sejam \(q: X \twoheadrightarrow Y\) quociente, \(V\ab \subset Y\) e \(D\subset V\) componente conexa. Dada \(C_x\) (em \(q^{-1}(V)\)) \(: x \in q^{-1}(D)\), temos \(q(C_x)\subset V\) conexo, mas \( q(x) \in D\), logo \(q(C_x) \subset D\) e \(C_x\ab \subset q^{-1}(D)\ab \subset X \) e portanto \(D\ab \subset Y\). 
+}
+
 \subsection*{Espaços conexos por caminhos}
+
+\begin{definition}
+    Diz-se que \((X,\tau)\) é \emph{conexo por caminhos} se \(\forall a, b \in X, \ \exists f: [0,1] \to X\) função (\emph{caminho}) contínua tal que \(f(0) = a\) e \(f(1) = b \). Escrevemos \(f: a \leadsto b\).  
+\end{definition}
+
+\begin{proposition}
+    \textbf{28.2.} Cada espaço conexo por caminhos é conexo. \comentario{Se \(\exists A \mid B = X\), então basta pegar \(a \in A, \ b\in B\) e \(f: a\leadsto b\), assim \([0,1] = f^{-1}(A) \mid f^{-1} (B )\)\Lightning}
+\end{proposition}
+
+\begin{example}
+    \(\R^n \setminus E : E \subset \R^n\) é enumeravél é conexo por caminhos. \comentario{Pensa em retas}
+\end{example}
+
+\begin{definition}
+    Dados \(f: a \leadsto b \) e \(g : b \leadsto c\) em \(X\) definimos \(f *g : a \leadsto c\) tal que:
+    \[(f*g) (t) := \begin{cases}
+        f(2t), &0\leq t \leq \nicefrac{1}{2} \\ 
+        g(2t-1), & \nicefrac{1}{2} \leq t \leq 1
+    \end{cases}.\] 
+\end{definition}
+
+\vspace{-0.4cm}
+\begin{definition}
+    Um espaço \((X, \tau)\) é \emph{localmente conexo por caminhos} se cada \( x \in X\) admite uma base de vizinhanças abertas e  conexas por caminhos. 
+\end{definition}
+
+\begin{proposition}
+    \textbf{28.6.} Se \(X\) é localmente conexo por caminhos, então é conexo por caminhos. \comentario{Seja \(a \in X\), mostra que \(S:= \{x \in X : \exists f:a\leadsto x\}\neq \varnothing\) é aberto e fechado }
+\end{proposition}
+
+ %Dado \(b \in S, \ \exists U\ab \in \U_b\) conexa por caminhos, \(\forall c \in U, \ \exists g: b \leadsto c\), e como \(b \in S, \ \exists f: a \leadsto b\), logo \(f*g : a \leadsto c\) e \(U\ab \subset S \ \leftrightharpoons \ S\ab\subset X\).   }
+
