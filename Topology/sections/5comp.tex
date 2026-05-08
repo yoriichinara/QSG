@@ -1,1 +1,102 @@
-\section{Compacidade}
+\section{Espaços de Hausdorff}
+
+\begin{definition}
+    Sejam \(a, b \in (X,\tau) : a \neq b\) dizemos que \(X\) é  \ \(\rotatebox{90}{\Big|} \star \rotatebox{90}{\Big|} \) \ se:%é \(T_0\) se dados \(a,b \in X : a \neq b\), existe pelo menos uma vizinhança de um deles que não contém o outro. %\(\exists U \in \U_a : b \notin U\). 
+    \vspace{-0.3cm}
+    \begin{itemize}[label = \(\star\), left = 1cm]
+        \item \(T_0 \ \ \leftarrow \exists U \in \U_a : b \notin U\). \hfill \(\star \ \ T_1 \ \ \leftarrow \exists U \in \U_a\) e \(\exists V \in \U_b : b \notin U, \ a \notin V\).
+        \item[]\hspace{1.8cm} \(\star \ \ T_2\) (\emph{Hausdorff}) \(\ \ \leftarrow \exists U \in \U_a\) e \(\exists V \in \U_b : U\cap V = \varnothing\).
+    \end{itemize}
+\end{definition}
+
+\alerta{
+    \centering \(T_2 \ \ \textcolor{verdeoscuro}{\Rightarrow} \ \ T_1 \ \ \textcolor{verdeoscuro}{\Rightarrow} \ \ \  T_0 \ \ \  \mid \ \ T_0 \ \ \underset{\text{Sierpinski}}{\textcolor{red}{\nRightarrow}} \ \ T_1 \ \ \underset{\text{Cofinita}\  : \ |X| = \infty}{\textcolor{red}{\nRightarrow}} \ \ T_2\)
+}
+
+\begin{proposition}
+    \textbf{16.3.} \(X\) é \(T_0 \ \leftrightharpoons \ \forall a,b \in X : a \neq b, \ \overline{\{a\}}\neq \overline{\{b\}}\).  \textcolor{gray}{(\(\Leftarrow\)) \ Contrapositiva}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{16.6.} \(X\) é \(T_1 \ \leftrightharpoons \ \forall a \in X, \ \{a\}\ce \subset X\). \comentario{É fácil ver que \((X \setminus \{a\})\ab \subset X\)} 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{16.9.} \((X, \tau)\) é Hausdorff \(\ \leftrightharpoons \ \) Toda rede (filtro) convergente tem  límite único. 
+\end{proposition}
+
+\demo{(\(\Rightarrow\)) Sejam \((x_\lambda)\subset X : x_\lambda \to x,y: x\neq y\) e \(U \in \U_x, V \in \U_y : U \cap V \neq \varnothing\), então \(\exists \mu \in \Lambda : (x_\lambda) \subset U, V \) se \(\lambda \geq \mu\), em particular \(x_\mu \in U \cap V\)\ \Lightning; \ \  (\(\Leftarrow\)) Por contrapositiva, \(\exists x,y \in X : x\neq y \) e \(U \cap V \neq \varnothing, \ \forall U \in \U_x, V\in \U_y\), logo tambem \(\exists (x_{U \times V})_{\U_x \times \U_y}\subset X : x_{U\times V}\to x, y\).  }
+
+\begin{proposition}
+    \textbf{16.10.} Cada subespaço de Hausdorff é Hausdorff. \comentario{Se \(a, b \in S\leq X : a \neq b, \ \exists U_1\in\U_a, V_1\in \U_b \) (em \(X\)) \( : U_1 \cap V_1 = \varnothing\), pega  \( U:= U_1\cap S\) e \(V:= V_1\cap S\)} 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{16.11.} Seja \(X:= \prod X_i\). Então, \(X\) é Hausdorff \( \ \leftrightharpoons \ \forall i \in I, \ X_i \) é Hausdorff, . 
+\end{proposition}
+
+\demo{
+    (\(\Rightarrow\)) \(\square\) \hyperlink{prop1610}{16.10.} + (\textcolor{rojoscuro}{Ex. 10.C.}); (\(\Leftarrow\)) Dados \(\textbf{a}, \textbf{b} \in X : \textbf{a}\neq \textbf{b} \),  \(\exists j \in I : a_j \neq b_j\) e \(U_j\ab, V_j\ab \subset X_j  : U_j \cap V_j = \varnothing\), segue que \(\textbf{a} \in  \pi_j^{-1}(U_j)\) e \( \textbf{b}\in \pi^{-1}(V_j)\), ambos abertos e disjuntos em \(X\), pronto.  
+}
+
+\begin{proposition}
+    \textbf{16.12.} Sejam \(f ,g : X \to Y\) contínuas tais que \(f(x) = g(x), \ \forall x \in D\subset X\) denso. Mostre que se \(Y\) é Hausdorff, então \(f(x) = g(x), \ \forall x \in X\).  \comentario{\(\forall x \in X, \ \exists (x_\lambda) \subset D : x_\lambda \to x\), logo \(f(x_\lambda)= g(x_\lambda) \to f(x), g(x)  \ \leftrightharpoons \ f(x) = g(x)\) }
+\end{proposition}
+
+\subsection*{Espaços Compactos}
+
+\begin{definition}
+    Um espaço \((X,\tau)\) é \emph{compacto} se \(\forall (U_i)_{i\in I}: U_i\ab \subset  X = \displaystyle\bigcup U_i\) (\emph{cobertura aberta}), \(\exists (U_j)_{j\in J} : J \subset I\), subcobertura finita de \(X\).   
+\end{definition}
+
+\hypertarget{prop213}{}
+\begin{proposition}
+    \textbf{21.3.} Cada intervalo fechado e limitado em \((\R, \tau_2)\) é compacto. \comentario{\cite[pag. 69]{mujica2005}}
+\end{proposition}
+
+\begin{definition}
+    Seja \(\mathcal{A}\) familia não vazia de subconjuntos de \(X \neq \varnothing\). Diz-se que \(\mathcal{A}\) tem a \emph{\textbf{p}ropriedade da \textbf{i}nterseção \textbf{f}inita} se \(\bigcap \{F: F  \in \mathcal{F}\} \neq \varnothing\), pra cada \(\mathcal{F}\subset \mathcal{A}\) finita. 
+\end{definition}
+
+\begin{theorem}
+    \textbf{21.6.} Sejam \((x_\lambda)_{\lambda \in \Lambda} \subset (X, \tau)\) as seguintes são equivalentes: 
+    \vspace{-0.3cm}
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item \(X\) é compacto. \hfill (b) \  \(\forall \mathcal{A}\subset \overline{\tau}\) com (pif), temos \(\displaystyle \bigcap \{A : A \in \mathcal{A}\} \neq \varnothing\). 
+        \item[(f)] \(\exists x \in X\) ponto de acumulação de \((x_\lambda)\). \hfill (g) \ \(\exists (x_{\phi(\mu)})\subset X : x_{\phi(\mu)} \to x\). 
+        \item[] \hspace{2cm}(h) Se \((x_\lambda)\) é universal, então \(\exists x \in X : x_\lambda \to x\).  
+    \end{enumerate}
+\end{theorem}
+\vspace{-0.1cm}
+\comentario{Segue o caminho (a) \(\ \leftrightharpoons \ \) (b)  \(\ \leftrightharpoons \ \) (f) \(\ \leftrightharpoons \ \) (g); logo (h) \( \ \leftrightharpoons \ \) (a); ítens faltantes são equivalências análogas a (f), (g) e (h) em termos de filtros, olha \cite[pag. 71]{mujica2005} }
+
+\hypertarget{prop217}{}
+\begin{proposition}
+    \textbf{21.7.} (a) Subespaço fechado de compacto é compacto e (b) Subespaço compacto de Hausdorff é fechado. 
+\end{proposition}
+
+\demo{(a) Dada \((V_i \cap S) : V_i\ab \subset X\) cobertura aberta de \(S\ce \leq X\), \(\exists (V_j) \cup \{(X \setminus S)\ab \subset X\}\) subcobertura finita de \(X\), logo \((V_j \cap S)\) é subcobertura finita de \(S\); (b) Seja \((x_\lambda) \subset S : x_\lambda \to x \in \overline{S}, \ \exists (x_{\phi(\mu)}) \subset S : x_{\phi(\mu)} \to y,x : y \in S \ \leftrightharpoons \ x=y \).   }
+
+\hypertarget{prop218}{}
+\begin{proposition}
+    \textbf{21.8.} A imagem contínua de compacto é compacto. \comentario{Mogollas }
+\end{proposition}
+
+\begin{corollary}
+    \textbf{21.9.} Sejam \(f : X\to Y\) contínua \(: X \) é compacto e \(Y\) Hausdorff. Então, (a) \(f\) é fechada e (b) Se \(f \) é sobrejetora (bijetora), então \(f\) é quociente (homeomorfismo).
+\end{corollary}
+
+\demo{\(\forall A\ce \subset X\), \(A\) é compacto, logo \(f(A) \subset Y\) é compacto em \(Y\) e portanto \(f(A)\ce \subset Y\), \(\square\) \hyperlink{prop217}{21.7.} + \(\square\) \hyperlink{prop218}{21.8.}; (b) Segue de (a) +  \(\square\) \hyperlink{prop115}{11.5.} + \(\square\) \hyperlink{prop89}{8.9.}.  }
+
+\hypertarget{thm219}{}
+\begin{theorem}
+    \textbf{21.9. (\emph{Tychonoff})} \(X:= \prod X_i\)  é compacto \(\ \leftrightharpoons \ \)  \(\forall i \in I, \ X_i\) é compacto. 
+\end{theorem}
+
+\demo{(\(\Rightarrow\)) \(\square\) \hyperlink{218}{21.8.}; (\(\Leftarrow\)) Seja \((\x_\lambda)_{\lambda \in \Lambda}\subset X\) universal, então \(\forall i \in I,\ (\pi_i(\x_\lambda))\subset X_i\) é universal (\textcolor{rojoscuro}{Ex. 13.F.}), \(\pi_i(\x_\lambda) \to x_i\), \(\square\) \hyperlink{thm216}{21.6. (h)} e  \(\x_\lambda \to \x := (x_i)\), \(\square\) \hyperlink{prop137}{13.7.}.}
+
+\begin{corollary}
+    \textbf{21.12.} Um conjunto \(K\subset \R^n\) é compacto \( \ \leftrightharpoons \ \) \(K\) é fechado e limitado.
+\end{corollary}
+
+\demo{(\(\Rightarrow\)) \(K\ce\subset \R^n\) pela \(\square\) \hyperlink{prop217}{21.7.}, agora \((B(0; n))_{n\in \N}\) é uma cobertura aberta de \(K\), logo \(\exists (B(0;j))\) subcobertura finita e \(R>0 : K \subset B(0;R)\); (\(\Leftarrow\)) \(K\ce \subset B(0;R) \subset [-R,R]^n\) compacto, \(\square\) \hyperlink{prop213}{21.3.} + \(\blacksquare\) \hyperlink{thm219}{21.9. (\emph{Tychonoff})}. }

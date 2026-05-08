@@ -1,7 +1,7 @@
 \section{Funções contínuas}
 
 \begin{definition}
-    Uma função \(f: X \to Y \) é contínua num ponto \(a \in X\) se \(\forall V\ab \subset Y : f(a) \in V\), \(\exists U\ab\subset X : a \in U\) e \(f(U)\subset V\).
+    Uma função \(f: (X,\tau_X) \to (Y, \tau_Y) \) é contínua num ponto \(a \in X\) se \(\forall V\ab \subset Y : f(a) \in V\), \(\exists U\ab\subset X : a \in U\) e \(f(U)\subset V\).
 \end{definition}
 
 \begin{note}
@@ -9,7 +9,7 @@
 \end{note}
 
 \begin{proposition}
-    \textbf{8.3.} Dada \(f : X \to Y\) são equivalentes:
+    \textbf{8.3.} Dada \(f : (X, \tau_X) \to (Y, \tau_Y)\) são equivalentes:
     \vspace{-0.3cm}
     \begin{enumerate}[label =(\alph*), left = 0.6cm]
         \item \(f\in C(X,Y)\). \hspace{3.9cm} (b) \ \(\forall V \in \U_{f(a)}, \ \exists U \in \U_a : f(U) \subset V\). 
@@ -41,6 +41,7 @@
     \(f\) é \emph{aberta} se \(f(U)\ab\subset Y, \ \forall U\ab\subset X\); \emph{fechada} se \(f(B)\ce\subset Y, \ \forall B\ce\subset X\). 
 \end{definition}
 
+\hypertarget{prop89}{}
 \begin{proposition}
     \textbf{8.9.} Dada \(f: X \to Y\) bijetiva, são equivalentes: 
     \vspace{-0.3cm}
@@ -120,29 +121,30 @@
 \subsection*{O espaço quociente}
 
 \begin{proposition}
-    \textbf{11.1.} Sejam \((X, \tau)\), \(Y\) um conjunto qualquer e \(\pi : X \twoheadrightarrow Y\). Então, a coleção 
-    \[\tau_\pi := \{V\subset Y : \pi^{-1}(V)\ab \subset X\}\] 
-    é uma topologia em \(Y\) que chamamos de \emph{topologia quociente} dada por \(\pi\).
+    \textbf{11.1.} Sejam \((X, \tau)\), \(Y\) um conjunto qualquer e \(q : X \twoheadrightarrow Y\). Então, a coleção 
+    \[\tau_q := \{V\subset Y : q^{-1}(V)\ab \subset X\}\] 
+    é uma topologia em \(Y\) que chamamos de \emph{topologia quociente} dada por \(q\).
 \end{proposition}
 
 \begin{definition}
-    Uma aplicação \(\pi: (X,\tau_X) \twoheadrightarrow (Y, \tau_Y)\) é \emph{quociente} se \(\tau_Y = \tau_\pi\).  
+    Uma aplicação \(q: (X,\tau_X) \twoheadrightarrow (Y, \tau_Y)\) é \emph{quociente} se \(\tau_Y = \tau_q\).  
 \end{definition}
 
 \begin{proposition}
-    \textbf{11.3.} A topologia \(\tau_\pi\) é a mais fraca tal que \(\pi: X \to (Y,\tau_\pi)\) é contínua. 
+    \textbf{11.3.} A topologia \(\tau_q\) é a mais fraca tal que \(q: X \to (Y,\tau_q)\) é contínua. 
 \end{proposition}
 
 \begin{proposition}
-    \textbf{11.4.} Sejam \(\pi : X \to Y\) aplicação quociente e \(g: Y \to (Z,\tau_Z)\) uma função. Então, \(g\) é contínua \ \(\leftrightharpoons\) \ \(g\circ \pi: X \to Z\) é contínua.
+    \textbf{11.4.} Sejam \(q : X \to Y\) aplicação quociente e \(g: Y \to (Z,\tau_Z)\) uma função. Então, \(g\) é contínua \ \(\leftrightharpoons\) \ \(g\circ q: X \to Z\) é contínua.
 \end{proposition}
 
+\hypertarget{prop115}{}
 \begin{proposition}
-    \textbf{11.5.} Seja \(\pi: X \twoheadrightarrow Y\) contínua. Se \(\pi\) é aberta (ou fechada), então \(\tau_Y = \tau_\pi\). \comentario{É coisa de provar as duas contenções, não é díficil}
+    \textbf{11.5.} Seja \(q: X \twoheadrightarrow Y\) contínua. Se \(q\) é aberta (ou fechada), então \(\tau_Y = \tau_q\). \comentario{É coisa de provar as duas contenções, não é díficil}
 \end{proposition}
 
 \begin{example}
-    Seja \(\pi : [0,2\pi] \to \E^1\) tal que  \(t \mapsto (\cos t, \sin t)\). \comentario{Sobrejetiva e fechada}
+    Seja \(q : [0,2\pi] \to \E^1\) tal que  \(t \mapsto (\cos t, \sin t)\). \comentario{Sobrejetiva e fechada}
 \end{example}
 
 \begin{proposition}
@@ -160,7 +162,7 @@
 \end{proposition}
 
 \begin{proposition}
-    \textbf{11.9.} Dada \(\pi\) aplicação quociente, existem \(P\) aplicação decomposição e \(f: Y \simeq \mathcal{D}  \) tal que \(f \circ \pi = P\). \comentario{Olha \cite[pag. 30]{mujica2005}}
+    \textbf{11.9.} Dada \(q\) aplicação quociente, existem \(P\) aplicação decomposição e \(f: Y \simeq \mathcal{D}  \) tal que \(f \circ q = P\). \comentario{Olha \cite[pag. 30]{mujica2005}}
 \end{proposition}
 
 \begin{definition}
