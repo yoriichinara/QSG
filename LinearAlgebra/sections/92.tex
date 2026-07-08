@@ -33,9 +33,10 @@ Sejam \(\alpha = (v_i)\) base de \(V\) e \(\mathcal{F} (I,\F) \ni (a_i) \sim a: 
     T: V' \ni f\mapsto (f(v_i)) \in \mathcal{F} (I,\F)\) e \(S: \mathcal{F} (I, \F) \ni (a_i) \mapsto (f: v_j \mapsto a_j)\), mostra que são lineares e inversas a uma da outra. 
 }
 
-\ejemplo{Conta con duais \centering
-\tcblower
-No caso finito é fazer conta com matrizes. De fato, se \(\dim V = n < \infty\) e \(\alpha =(v_j)\), \(\beta = (f_j)\) bases pra \(V\) e \(V'\), então  
+\ejemplo{%Conta con duais \centering
+%\tcblower
+\begin{example}
+No caso \(\dim V = n < \infty\) é fazer conta com matrizes. Sejam \(\alpha =(v_j)\), \(\beta = (f_j)\) bases pra \(V\) e \(V'\), então temos
 \[\beta = \alpha ' \ \leftrightharpoons \ \begin{bmatrix}
    \rotatebox{90}{$|$} & f_1 & \rotatebox{90}{$|$} \\ 
     & \rotatebox{90}{$\ldots$}& \\ 
@@ -46,6 +47,7 @@ No caso finito é fazer conta com matrizes. De fato, se \(\dim V = n < \infty\) 
    \rotatebox{0}{$|$} &  & \rotatebox{0}{$|$}  
 \end{bmatrix} = \id_n.\]
 Note também que \(\alpha \) e \(\beta \) são bases \(\leftrightharpoons\) as matrizes acima são invertíveis.
+\end{example}
 %\newline \vspace{-0.4cm}
 %begin{example}
 %   Sejam \(V = \mathcal{P}_2(\R)\) e \(\beta = f_1, f_2, f_3\) dadas por, 
@@ -74,10 +76,9 @@ Note também que \(\alpha \) e \(\beta \) são bases \(\leftrightharpoons\) as m
 \end{note}
 
 \propositionnum{}
-\vspace{-0.5cm}
+%\vspace{-0.5cm}
 \begin{lemma}
-    Sendo \(V\) \(\F\)-espaço vetorial a função \(J_{_V}: V \ni \textcolor{red}{v \mapsto} \overset{\underset{\rotatebox{90}{$\in$}}{V''}}{\textcolor{red}{J_{_V}(v)}}: \overset{\underset{\rotatebox{90}{$\in$}}{V'}}{f}\mapsto f(v) \in \F\) 
-    é bem definida, linear e injetora.  
+    \(J_{_V}:V \ni v \mapsto [J_{_V}(v): f \mapsto f(v)] \in V''\) é função bem definida, linear e injetora. % \(J_{_V}: V \hookrightarrow V''\).  
 \end{lemma}
 
 \demo{

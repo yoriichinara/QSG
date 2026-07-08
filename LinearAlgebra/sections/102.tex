@@ -2,6 +2,7 @@
 
 \begin{definition}
     Seja \((V_j)\) família de \(\F\)-espaços vetoriais, \(j\leq k \in \N\). Um \(\F\)\emph{-produto tensorial} pra \((V_j)\) é um par universal \((\phi, V)\) sobre \(X = \Pi V_j\) onde,   
+    \vspace{-0.2cm}
     \begin{itemize}[left = 1cm]
         \item \(V\) é \(\F\)-espaço vetorial e \(\phi \in \hom^k(\Pi V_j, V)\). 
         \item \(P_1 = \) "ser $k$-linear" e \(P_2 = \) "ser linear".
@@ -114,13 +115,13 @@
 \propositionnum{10.2.10.}
 \begin{proposition}
     \label{prop:10210}
-    \(\exists ! \Gamma : V' \otimes W \ni  \textcolor{red}{f \otimes w \mapsto} \ \overset{\underset{\rotatebox{90}{$\in$}}{\hom(V,W)}}{\textcolor{red}{\Gamma(f\otimes w)}}: \overset{\underset{\rotatebox{90}{$\in$}}{V}}{v}\mapsto f(v)w \in W\). \footnote{Propriedade universal no pareamento bilinear \(\psi : V' \times W \ni (f,w) \mapsto f(v)w\).} Além disso, 
+    \(\exists ! \Gamma: V'\otimes W \to \hom(V,W)\) linear  tal que \(\Gamma: f \otimes w \mapsto [\Gamma(f\otimes w): v \mapsto f(v)w ], \ \forall f \in V', \ \forall w \in W, \ \forall v \in V\).\footnote{Propriedade universal no pareamento bilinear \(\psi : V' \times W \ni (f,w) \mapsto f(v)w\).} Além disso, 
 \end{proposition}
 
 \begin{enumerate}[label = , left = 0.5cm ]
-    \item \vspace{-1.3cm} \begin{exercise}
-        \textbf{9.2.5.} Sejam \(m \in \mathbb{Z}_{>0}\) e \((f_j)_{j\leq m}\) família l.i. em \(V'\). Então, \(\forall j\leq m, \exists v \in V : \forall i\leq m, f_i(v) = \delta_{ij}\). \comentario{\(T: V \ni v \twoheadrightarrow (f_j(v)) \in \F^m \ \leftrightharpoons \ T' : (\F^m)' \hookrightarrow V'\)}
-    \end{exercise}
+    \item \vspace{-1.3cm} \begin{lemma}
+        (\textcolor{rojoscuro}{Ex. 9.2.5.}) Sejam \(m \in \mathbb{Z}_{>0}\) e \((f_j)_{j\leq m}\) família l.i. em \(V'\). Então, \(\forall j\leq m, \exists v \in V : \forall i\leq m, f_i(v) = \delta_{ij}\). \comentario{\(T: V \ni v \twoheadrightarrow (f_j(v)) \in \F^m \ \leftrightharpoons \ T' : (\F^m)' \hookrightarrow V'\)}
+    \end{lemma}
     \begin{tcolorbox}[colframe=gray, colback=white, boxrule=0.8pt]
         \centering (a) \(\Gamma \) é injetora 
         \tcblower
@@ -155,7 +156,7 @@
     \(\Gamma: V' \otimes W \cong F := \{T \in \hom(V,W): \pt T < \infty\}\). Se \(\alpha = (v_j)_{j\leq n}\), \(\alpha' = (f_j)\)  e \(\beta = (w_i)_{i\leq m}\), então \([\Gamma(f_j\otimes w_i)]_\beta^\alpha = E_{ij}\). Assim,  
     \[[T]^\alpha_\beta = (a_{ij}) \ \ \Rightarrow  \ \ T = \Gamma \left(\sum_{i,j} a_{ij} f_j \otimes w_i\right). \]
 \end{note}
-
+\vspace{-0.3cm}
 \propositionnum{10.2.11.}
 \begin{proposition}
     \(\exists ! \tau \in (V'\otimes V)' \) tal que \(\tau (f\otimes v) = f(v)\). Além disso, se \(\dim V < \infty \), segue da \(\square\) \ref{prop:10210} que \(\forall T \in \ehom (V), \ \tau(\Gamma^{-1}(T)) = \operatorname{tr}T\).  

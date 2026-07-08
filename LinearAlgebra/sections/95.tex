@@ -1,8 +1,8 @@
 \subsection{Transformações Ortogonais e Simpléticas}
 
 \begin{definition}
-    Sejam \(V,W\) \(\F\)-espaços, \(\phi \in B(V), \ \psi \in B(W)\) e \(T\in \hom(V,W)\). Diz-se que \(T\) é \emph{compatível} com o par (\(\phi, \psi\)) sse \(\forall u,v \in V, \ \phi(u,v) = \psi(T(u), T(v))\). Se ambas \(\phi \) é \(\psi\) forem não degeneradas, então 
-    \[ \star \ \phi, \ \psi \ \text{simétricas} \ \rightarrow \ T \text{ \emph{ortogonal}} \hspace{1cm} \star \ \phi, \ \psi \ \text{alternadas} \ \rightarrow \ T \text{ \emph{simplética.}}\]
+    Sejam \(V,W\) \(\F\)-espaços, \(\phi \in B(V), \ \psi \in B(W)\) e \(T\in \hom(V,W)\). Diz-se que \(T\) é \emph{compatível} com o par (\(\phi, \psi\)) se \(\forall u,v \in V, \ \phi(u,v) = \psi(T(u), T(v))\). Se ambas \(\phi \) é \(\psi\) forem não degeneradas, então 
+    \[ \star \ \phi, \ \psi \ \text{simétricas} \leftarrow \ T \text{\emph{ ortogonal.}} \hspace{1cm} \star \ \phi, \ \psi \ \text{alternadas} \leftarrow \ T \text{ \emph{simplética.}}\]
 \end{definition}
 
 \propositionnum{9.5.1.}
@@ -47,7 +47,7 @@
     Seja \(w \in V\) não isotrópico  e \(W = [w]\). Chamamos de \emph{reflexão simples} à função, 
     \[R_{_W}^\phi : V \ni v \mapsto v - 2\frac{\phi(v,w)}{\phi(w,w)} w \in V. \]
 \end{definition}
-
+\vspace{-0.33cm}
 \begin{note}
     No texto, você pode encontrar todos os detalhes e as verificações que sustentam a definição prévia. Olha se quiser \cite[Pág. 323]{MA719}. 
 \end{note}
@@ -61,7 +61,6 @@
     \label{thm:957}
     Sejam \(\operatorname{car}\F \neq 2\), \(\dim V \in \N \), \(\phi \) não degenerada e \(T \in \ehom(V)\). Então, \(T\) é ortogonal \(\leftrightharpoons\) \(T\) for composição de reflexões simples. \comentario{Olha \cite[Pág. 325]{MA719} }
 \end{theorem}
-
 %\begin{note}
 %   A prova do \(\blacksquare\) \ref{thm:957} fornece um método pra encontrar uma decomposição. De fato, você começa pegando \(w_j\) não isotrópico e calcula \(R_j = R_{[w_j]}^\phi\), logo olha pra o induzido em \(S_j = R_j \circ T\) no subespaço ortogonal e repete (com \(T =S_j\)).   
 %\end{note}

@@ -1,0 +1,166 @@
+\section{Axiomas de separação}
+
+\subsection*{Espaços de Hausdorff}
+
+\begin{definition}
+    Sejam \(a, b \in (X,\tau) : a \neq b\) dizemos que \(X\) é  \ \(\rotatebox{90}{\Big|} \star \rotatebox{90}{\Big|} \) \ se:%é \(T_0\) se dados \(a,b \in X : a \neq b\), existe pelo menos uma vizinhança de um deles que não contém o outro. %\(\exists U \in \U_a : b \notin U\). 
+    \vspace{-0.3cm}
+    \begin{itemize}[label = \(\star\), left = 1cm]
+        \item \(T_0 \ \ \leftarrow \exists U \in \U_a : b \notin U\). \hfill \(\star \ \ T_1 \ \ \leftarrow \exists U \in \U_a\) e \(\exists V \in \U_b : b \notin U, \ a \notin V\).
+        \item[]\hspace{1.8cm} \(\star \ \ T_2\) (\emph{Hausdorff}) \(\ \ \leftarrow \exists U \in \U_a\) e \(\exists V \in \U_b : U\cap V = \varnothing\).
+    \end{itemize}
+\end{definition}
+
+\alerta{
+    \centering \( T_2 \ \ \textcolor{verdeoscuro}{\Rightarrow} \ \ T_1 \ \ \textcolor{verdeoscuro}{\Rightarrow} \ \ \  T_0 \ \ \  \mid \ \ T_0 \ \ \underset{\text{Sierpinski}}{\textcolor{red}{\nRightarrow}} \ \ T_1 \ \ \underset{\text{Cofinita}\  : \ |X| = \infty}{\textcolor{red}{\nRightarrow}} \ \ T_2\)
+}
+
+\begin{proposition}
+    \textbf{16.3.} \(X\) é \(T_0 \ \leftrightharpoons \ \forall a,b \in X : a \neq b, \ \overline{\{a\}}\neq \overline{\{b\}}\).  \textcolor{gray}{(\(\Leftarrow\)) \ Contrapositiva}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{16.6.} \(X\) é \(T_1 \ \leftrightharpoons \ \forall a \in X, \ \{a\}\ce \subset X\). \comentario{É fácil ver que \((X \setminus \{a\})\ab \subset X\)} 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{16.9.} \((X, \tau)\) é Hausdorff \(\ \leftrightharpoons \ \) Toda rede (filtro) convergente tem  límite único. 
+\end{proposition}
+
+\demo{(\(\Rightarrow\)) Sejam \((x_\lambda)\subset X : x_\lambda \to x,y: x\neq y\) e \(U \in \U_x, V \in \U_y : U \cap V \neq \varnothing\), então \(\exists \mu \in \Lambda : (x_\lambda) \subset U, V \) se \(\lambda \geq \mu\), em particular \(x_\mu \in U \cap V\)\ \Lightning; \ \  (\(\Leftarrow\)) Por contrapositiva, \(\exists x,y \in X : x\neq y \) e \(U \cap V \neq \varnothing, \ \forall U \in \U_x, V\in \U_y\), logo tambem \(\exists (x_{U \times V})_{\U_x \times \U_y}\subset X : x_{U\times V}\to x, y\).  }
+
+\begin{proposition}
+    \textbf{16.10.} Cada subespaço de Hausdorff é Hausdorff. \comentario{Se \(a, b \in S\leq X : a \neq b, \ \exists U_1\in\U_a, V_1\in \U_b \) (em \(X\)) \( : U_1 \cap V_1 = \varnothing\), pega  \( U:= U_1\cap S\) e \(V:= V_1\cap S\)} 
+\end{proposition}
+
+\begin{proposition}
+    \textbf{16.11.} \(X:= \prod X_i\) é Hausdorff \( \ \leftrightharpoons \ X_i \) é Hausdorff, \ \(\forall i \in I\). 
+\end{proposition}
+
+\demo{
+    (\(\Rightarrow\)) \(\square\) \hyperlink{prop1610}{16.10.} + (\textcolor{rojoscuro}{Ex. 10.C.}); (\(\Leftarrow\)) Dados \(\textbf{a}, \textbf{b} \in X : \textbf{a}\neq \textbf{b} \),  \(\exists j \in I : a_j \neq b_j\) e \(U_j\ab, V_j\ab \subset X_j  : U_j \cap V_j = \varnothing\), segue que \(\textbf{a} \in  \pi_j^{-1}(U_j)\) e \( \textbf{b}\in \pi^{-1}(V_j)\), ambos abertos e disjuntos em \(X\), pronto.  
+}
+
+\begin{proposition}
+    \textbf{16.12.} Sejam \(f ,g : X \to Y\) contínuas tais que \(f(x) = g(x), \ \forall x \in D\subset X\) denso. Mostre que se \(Y\) é Hausdorff, então \(f(x) = g(x), \ \forall x \in X\).  \comentario{\(\forall x \in X, \ \exists (x_\lambda) \subset D : x_\lambda \to x\), logo \(f(x_\lambda)= g(x_\lambda) \to f(x), g(x)  \ \leftrightharpoons \ f(x) = g(x)\) }
+\end{proposition}
+
+\subsection*{Espaços regulares}
+
+\begin{definition}
+    \((X, \tau)\) é \emph{regular} se dados \(A\ce\subset X\) e \(b \in X \setminus A, \ \exists U\ab, V\ab\subset X\) disjuntos tais que \( A\subset U\) e \( b \in V\). Também, \((X,\tau)\) será \(T_3\) se for regular + \(T_1\). 
+\end{definition}
+
+\hypertarget{prop173}{}
+\begin{proposition}
+    \textbf{17.3.} Num espaço \((X,\tau)\) as seguintes condições são equivalentes: 
+    \vspace{-0.3cm}
+    \begin{enumerate}[left = 0.6cm, label = (\alph*)]
+        \item \(X\) é regular. \hfill (b) \ Dados \( a \in U\ab\subset X, \ \exists V \ab \subset X : a \in V\subset \overline{V} \subset U \). 
+        \item[] \hspace{2.5cm}(c) \ \(\forall x \in X, \ \exists \B_x\) base de vizinhanças fechadas.
+    \end{enumerate}
+\end{proposition}
+
+\demo{(a) \(\Rightarrow \) (b) \(a \notin (X\setminus U)\ce \subset X\) logo \(\exists V\ab, W\ab \subset X\) disjuntos \(: a \in V\) e \(X \setminus U \subset W\), daí que \(a \in V\subset \overline{V} \subset (X\setminus W)\ce \subset U\); (b) \(\Rightarrow\) (c) Mogollas; (c) \(\Rightarrow\) (a) \(b \in (X\setminus A)\ab \subset X\), logo \(\exists V\ce \in \U_b : b \in V \subset X\setminus A\), aí \(b \in V^\circ \) e \(A \subset (X\setminus V)\ab \subset X\), prontinho. }
+
+\hypertarget{prop174}{}
+\begin{proposition}
+    \textbf{17.4.} Cada subespaço de regular é regular. \comentario{Dado \(b \in S \setminus (S \cap A_1\ce) = S \setminus A_1, \ \exists U_1\ab, V_1\ab \subset X\) disjuntos \(: b \in (S \cap U_1)\ab \subset S\) e \(S\cap A_1 \subset (S \cap V_1)\ab \subset S\)}
+\end{proposition}
+
+\begin{corollary}
+    \textbf{17.5.} Cada subespaço de \(T_3\) é \(T_3\). \comentario{Mogollas }
+\end{corollary}
+
+\begin{proposition}
+    \textbf{17.6.} \(X := \prod X_i\) é regular \(\ \leftrightharpoons \ \) \(X_i\) é regular, \ \(\forall i \in I\).
+\end{proposition}
+
+\demo{
+    (\(\Rightarrow\)) \(\square\) \hyperlink{prop174}{17.4.} + (\textcolor{rojoscuro}{Ex. 10.C.}); (\(\Leftarrow\)) Sejam \(\textbf{x} \in X \) e \(U \in \U_\x\), então  \(\exists J\subset I \) finito \(: U \supset \bigcap \pi^{-1}_j(U_j) : U_j\ab \subset X_j, \ j \in J\) e como cada \(X_j \) é regular \(\forall j \in J, \ \exists V_j\ce\in \U_{\pi_j(\x)} : V_j \subset U_j\), finalmente \(\x \in \left(\bigcap \pi^{-1}_j(V_j)\right)\ce \subset \bigcap \pi^{-1}_j(U_j) \subset U\), \(\square\) \hyperlink{prop173}{17.3. (c)}.    
+}
+
+\begin{corollary}
+    \textbf{17.7.} \(X:= \prod X_i\) é \(T_3 \ \leftrightharpoons \ X_i\) é \(T_3, \ \forall i \in I\). \comentario{Mogollas}
+\end{corollary}
+
+\subsection*{Espaços normais}
+
+\begin{definition}
+    \((X,\tau)\) é \emph{normal} se dados \(A\ce, B\ce \subset X\) disjuntos \(\exists U\ab, V\ab \subset X \) disjuntos tais que \( A \subset U\) e \(B \subset V\). Também, \((X, \tau)\) será \(T_4\) se for normal + \(T_1\). 
+\end{definition}
+
+\begin{note}
+    Fica claro que \(T_{j+1} \Rightarrow T_j\) mas não a contrária (testa sempre Sierpinski), é bom exercício mostrar que espaços métricos são \(T_3\) e \(T_4\) (nesse ordem). 
+\end{note}
+
+\begin{proposition}
+    \textbf{18.3.} Um espaço  \((X,\tau)\) é normal \(\ \leftrightharpoons \ \) Dados \(A\ce, U\ab \subset X\), onde \(A \subset U ,\ \exists V\ab\subset X\) tal que \( A \subset V \subset \overline{V} \subset U\). 
+\end{proposition}
+
+\demo{(\(\Rightarrow\)) \(\exists V\ab, W \ab\subset X\) disjuntos \(: A \subset V\) e \((X\setminus U)\ce \subset W\), segue que \(A \subset V \subset \overline{V}\subset (X \setminus W)\ce \subset U\); (\(\Leftarrow\)) \(A \subset (X \setminus B)\ab\), logo \(\exists U\ab \subset X : A \subset U \subset \overline{U} \subset X \setminus B\), daí que \(A \subset U\), \(B \subset (X\setminus \overline{U})\ab\) e \(U \cap X \setminus\overline{U}\subset U \cap X\setminus U = \varnothing\). }
+
+\hypertarget{prop184}{}
+\begin{proposition}
+    \textbf{18.4.} Cada subespaço \textbf{fechado} de normal é normal. \comentario{Dados \(S\ce \cap A_1\ce, S\ce \cap B_1\ce\subset S \) disjuntos, também são fechados disjuntos no \(X\)} % \(\exists U_1\ab, V_1\ab \subset X\) disjuntos \(: S \cap A_1 \subset (S\cap U_1)\ab \subset S\) e \(S\cap B_1 \subset (S\cap V_1)\ab \subset S\), prontinho}
+\end{proposition}
+
+\begin{corollary}
+    \textbf{18.5.} Cada subespaço fechado de \(T_4\) é \(T_4\). \comentario{Mogollas } 
+\end{corollary}
+
+\hypertarget{prop186}{}
+\begin{proposition}
+    \textbf{18.6.} Imagem contínua e fechada de normal é normal. 
+\end{proposition}
+
+\demo{Dados \(B_1\ce, B_2\ce \subset Y\), \(\exists U_j\ab \subset X \) disjuntos \(: f^{-1}(B_j)\ce \subset U_j, \ j=1,2\), mostre que \(V_j:= (Y\setminus f(X\setminus U_j)\ce )\ab \) oferecem a separação desejada. }
+
+\begin{corollary}
+    \textbf{18.7.} Imagem contínua e fechada de \(T_4\) é \(T_4\). \comentario{\(\square\) \hyperlink{prop186}{18.6} + (\textcolor{rojoscuro}{Ex. 16.E.})}
+\end{corollary}
+
+\hypertarget{lemma188}{}
+\begin{lemma}
+    \textbf{18.8. (\emph{Urysohn})} Um espaço \((X, \tau)\) é normal \(\ \leftrightharpoons \ \) dados \(A\ce, B\ce \subset X\) disjuntos, \(\exists f : X \to [0,1]\) contínua \(: f(A) \subset \{0\}\) e \(f(B) \subset \{1\}\). 
+\end{lemma}
+
+\demo{(\(\Leftarrow\)) \(U:= f^{-1}([0, \nicefrac{1}{2})) \) e \(V:= f^{-1}((\nicefrac{1}{2}, 1])\) são abertos disjuntos em \(X : A \subset U\) e \(B \subset V\); (\(\Rightarrow\)) Pesada, olha se precisar \cite[pag. 53]{mujica2005}. }
+
+\begin{theorem}
+    \textbf{18.9. (\emph{Tietze})} Em \((X, \tau)\) as seguintes condições são equivalentes:  
+    \vspace{-0.3cm}
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item \(X\) é normal. 
+        \item Dados \(A\ce \subset X\) e \(f \in C(A,[c,d]) : c<d, \  \exists F \in C (X , [c,d]): F|_{_A} = f\). 
+        \item Dados \(A\ce \subset X\) e \(f \in C(A, \R), \ \exists F \in C(X, \R) : F|_{_A} = f\). 
+    \end{enumerate}
+\end{theorem}
+
+\comentario{Mais uma vez não suporta resumos, olha se precisar \cite[pag. 55]{mujica2005}}
+
+\subsection*{Espaços completamente regulares}
+
+\begin{definition}
+    \((X, \tau)\) é \emph{completamente regular} se dados \(b \in X\setminus A\ce, \ \exists f\in C(X,[0,1]) : f(A) \subset \{0\} \) e \(f(b) = 1\). Também, \((X,\tau)\) será \emph{Tychonoff} se for completamente regular + \(T_1\). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{19.2.} Cada espaço \(T_4\) é Tychonoff. \comentario{{\scriptsize \(\square\)} \hyperlink{lemma188}{18.8. (\emph{Urysohn})} }
+\end{proposition}
+
+\begin{proposition}
+    \textbf{19.3.} Cada espaço completamente regular é regular. \comentario{Exatamente igual à implicação fácil (\(\Leftarrow\)) do {\scriptsize \(\square\)} \hyperlink{lemma188}{18.8. (\emph{Urysohn})}}
+\end{proposition}
+
+\begin{corollary}
+    \textbf{19.4.} Cada espaço de Tychonoff é \(T_3\). \comentario{Mogollas}
+\end{corollary}
+
+\begin{proposition}
+    \textbf{19.6.} Cada subespaço de completamente regular é completamente regular. \comentario{Dados \(b \in S \setminus (S \cap A_1\ce) = S \setminus A_1, \ \exists f|_{_S} \in (S,[0,1]) : f|_{_S}(S\cap A_1) \subset \{0\}\) e \(f|_{_S}(b) = 1\)}
+\end{proposition}
+
+\begin{corollary}
+    \textbf{19.7.} Cada subespaço de Tychonoff é Tychonoff. \comentario{Mogollas}
+\end{corollary}

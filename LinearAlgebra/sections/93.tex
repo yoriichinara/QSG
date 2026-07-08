@@ -28,10 +28,9 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 \begin{definition}
     Considere as transformações (lineares) \(_\phi D : V \to W'\) e \(D_\phi: W \to V'\) tais que \(_\phi D (w)(v) = D_\phi (v)(w) = \phi(v,w)\). Definimos: 
     \begin{itemize}[label = \(\star\)]
-        \item \emph{Radical} a esquerda \( \rightarrow \ker \textcolor{red}{_\phi} D  \ni v \leftarrow \) \emph{Vetor degenerado} a esquerda.  
-        \item \(\phi\) é \emph{não degenerada} a esquerda sse \(\ker {_\phi D} = \{0\}\). 
+        \item \emph{Radical} a esquerda \( \rightarrow \ \ker \textcolor{red}{_\phi} D  \ni v \ \leftarrow \) \emph{Vetor degenerado} a esquerda.  
+        \item \(\phi\) é \emph{não degenerada} a esquerda se \(\ker {_\phi D} = \{0\}\).\footnote{As definições pra o caso \emph{direita} são semelhantes.}
     \end{itemize}
-    Com definições análogas pra o caso de \(D_\phi\) (direita). 
 \end{definition}
 
 \newcommand{\pt}{\operatorname{pt}}
@@ -46,9 +45,9 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 
 \begin{corollary}
     \textbf{9.3.4.} Se \(\dim V\) \textcolor{gray}{(ou \(W\))} é finita e \( \ker {_\phi D} = \{0\}\), são equivalentes: %\(\leftrightharpoons\) \(_\phi D, \ D_\phi\) são isomorfismos. Em particular, \(\dim V = \dim W\). 
-    \begin{enumerate}[left = 1.8cm, label = \roman*.]
-        \item \(\{0\} = \ker D_\phi  \).  \hspace{4cm} ii. \(\dim V = \dim W\).  
-        \item[iii.] \(_\phi D\) é isomorfismo. \hspace{3cm} iv. \(D_\phi\) é isomorfismo. 
+    \vspace{-0.2cm}
+    \begin{enumerate}[left = -0.1cm, label = \roman*.]
+        \item \(\{0\} = \ker D_\phi\);  \hfill ii. \(\dim V = \dim W\); \hfill iii. \(_\phi D : V \cong W'\); \hfill iv. \(D_\phi: W \cong V'\). 
     \end{enumerate}
 \end{corollary}
 
@@ -62,9 +61,10 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 
 \begin{definition}
     Uma forma bilinear \(\phi \in B(V)\)  é \ \(\textcolor{gray}{\rotatebox{90}{\Big|}}\star\textcolor{gray}{\rotatebox{90}{\Big|}}\) \ se \(\forall v,w \in V\), 
+    \vspace{-0.2cm}
     \begin{itemize}[label = \(\star\)]
-        \item \emph{Simétrica} \(\rightarrow \phi(v,w) = \phi(w,v)\). \hspace{1.4cm}{ \(\star\)} \emph{Alternada} \(\rightarrow \phi(v,v) = 0\). \vspace{0.3cm}\\
-        \- \hspace{3cm}\(\star\) \emph{Antissimétrica} \(\rightarrow \phi(v,w) =- \phi(w,v) \). 
+        \item \emph{Simétrica} \(\rightarrow \ \phi(v,w) = \phi(w,v)\). \hspace{1.4cm}{ \(\star\)} \ \emph{Alternada} \(\rightarrow \ \phi(v,v) = 0\). \vspace{0.3cm}\\
+        \- \hspace{3cm}\(\star\) \emph{Antissimétrica} \(\rightarrow \ \phi(v,w) =- \phi(w,v) \). 
     \end{itemize}
 \end{definition}
 
@@ -75,7 +75,8 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 \propositionnum{9.3.5.}
 \begin{proposition}
     Sejam \(\phi \in B(V)\) e \(\alpha = (v_i)\) uma base de \(V\). Então, 
-    \begin{enumerate}[label = (\alph*), left = 0.5cm]
+    \vspace{-0.2cm}
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
         \item \(\phi \) é \textcolor{gray}{(antis)}simétrica \(\leftrightharpoons\) \(_\alpha [\phi]_\alpha\) é \textcolor{gray}{(anti)}simétrica.
         \item \(\phi \) é alternada \(\leftrightharpoons\) \(_\alpha [\phi]_\alpha\) é antissimétrica e \(\operatorname{diag}(_\alpha[\phi]_\alpha) = (0, 0, \ldots)\).% \ \leftrightharpoons \ \phi(v_i,v_i)= 0 \).
     \end{enumerate}
@@ -100,6 +101,7 @@ Agora queremos um análogo geral do produto interno visto no \cite[Cap. 7]{MA719
 
 \begin{lemma}
     \textbf{9.3.6.} Se \(\dim V < \infty \), são equivalentes: 
+    \vspace{-0.2cm}
     \begin{enumerate}[left = -0.5cm, label= \roman*.]
         \centering
         \item \(\phi \) degenerada. \hspace{2cm} ii. \(V^{\perp_\phi}\neq \{0\}\). \hspace{2cm} iii. \(^{\perp_\phi}V\neq \{0\}\).
