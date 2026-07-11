@@ -107,6 +107,7 @@
     \textbf{10.4.}  \(g : Y \to \prod X_i\) é contínua \(\leftrightharpoons \ \forall j \in I, \ \pi_j\circ g : Y \to X_j\) é contínua. \comentario{Pra a volta trabalha a expressão como interseções} 
 \end{proposition}
 
+\hypertarget{prop105}{}
 \begin{proposition}
     \textbf{10.5.} Sejam \(X\) um conjunto e \((f_i : X \to X_i)_{i\in I}\) uma familia de funções e 
     \[\B := \left\{\bigcap_{j\in J} f_j^{-1}(U_j) : J \subset I \ \text{ é finito e } \forall j \in J, \  U_j\ab \subset X_j\right\}.\] 
@@ -117,6 +118,17 @@
         \item \(g:Y \to X\) é contínua \(\leftrightharpoons \ \forall j \in I, \ f_j \circ g\) é contínua. 
     \end{enumerate}
 \end{proposition}
+
+\begin{definition}
+    Diz-se que uma familia de funções \((f_i: X \to X_i)_{i\in I}\) \emph{separa pontos} se \(\forall x, y \in X : x \neq y, \ \exists j \in I : f_j(x) \neq f_j(y)\). 
+\end{definition}
+
+\hypertarget{prop108}{}
+\begin{proposition}
+    \textbf{10.8.} Sejam \(f_i : (X,\tau) \to (X_i, \tau_i)\) e \(\epsilon_{_X} : X \ni x \mapsto (f_i(x))_{i\in I} \in \prod X_i\) (\emph{avaliação}). Então, \(\epsilon_{_X}: X \simeq \operatorname{Im}\epsilon_{_X} \leq \prod X_i\) se e somente se verificar: 
+    \[\text{(E1) \ A familia }(f_i)_{i\in I} \text{ separa pontos} \hspace{0.8cm}  \text{e \hspace{0.8cm}(E2) \ }\tau = \tau_w \text{ definida pelas } (f_i). \]
+\end{proposition}
+\comentario{Não suporta resumo, olha se quiser \cite[pag. 27]{mujica2005}}
 
 \subsection*{O espaço quociente}
 

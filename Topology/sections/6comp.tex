@@ -1,5 +1,46 @@
 \section{Espaços compactos}
 
+\subsection*{AN1 e AN2 - Axiomas de enumerabilidade}
+
+\begin{definition}
+    Um espaço \((X, \tau)\) é \emph{separável} se \(\exists D \subset X\) denso enumerável.  
+\end{definition}
+
+ \begin{definition}
+    Um espaço \((X,\tau)\) é \emph{Lindelöf} se \(\forall (U_i)_{i\in I}: U_i\ab \subset  X = \displaystyle\bigcup U_i\) (\emph{cobertura aberta}), \(\exists (U_j)_{j\in J} : J \subset I\), subcobertura enumerável de \(X\).   
+\end{definition}   
+
+\hypertarget{prop203}{}
+\begin{proposition}
+    \textbf{20.3.} Se um espaço topologico \((X,\tau)\) satisfaz AN2, então: (a) \(X\) satisfaz AN1; (b) \(X\) é separável e (c) \(X\) é Lindelöf. 
+\end{proposition}
+
+\demo{(a) Sendo \(\B = (V_n)_{n\in \N}\) base temos que \(\B_x:= \{V\in \B :x \in V \}\) é base de vizinhaças \(: |\B_x| \leq |\B|, \forall x \in X\); (b) \(D:=  \{x_n : x_n \in V_n \in \B\}_{n\in \N}\) é denso e (c) Dada \((U_i)_{i\in I}\) cobertura aberta, \(\forall x \in X, \ \exists U_x\) e \(\exists V_x \in \B : x \in V_x \subset U_x\),  \(\#\{V_x :  V_x \subset U_x\} \leq |\B|\), logo \((U_n)_{n\in \N} : V_n \subset U_n\) é uma subcobertura enumerável. }
+
+\begin{proposition}
+    \textbf{20.4.} Num espaço métrico \((X,\tau_d)\) as seguintes condições são equivalentes: 
+    \vspace{-0.2cm}
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item \(X\) satifaz AN2. \hfill (b) \(X\) é separável. \hfill (c) \(X\) é Lindelöf. 
+    \end{enumerate}
+\end{proposition}
+
+\demo{(a) \(\Rightarrow \) (b) e (c) \(\square\) \hyperlink{prop203}{20.3.}; (b) \(\Rightarrow\) (a) Sendo \(D= \{x_m \}_{m\in \N}\) denso, mostra que \(\B:= \{B(x_m; \nicefrac{1}{n}) : n,m \in \N\}\) é uma base enumerável pra \(\tau_d\); (c) \(\Rightarrow\) (a) Mostra que a subcobertura enumerável de \((B(x;\nicefrac{1}{n}))_{x \in X} : n \in \N\) é base.  }
+
+\begin{proposition}
+    \textbf{20.*.} Sejam \(X_i\) espaços \( T_1, \ \forall i \in I\), Então, \(X:= \prod X_i\) satisfaz AN1 (AN2) \(\ \leftrightharpoons \ X_i\) satisfaz AN1 (AN2), \(\forall i \in I\) e \(|I| < |\N|\). \comentario{Olha \cite[pag. 65]{mujica2005}}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{20.7.} Sejam \(X_i\) espaços Hausdorff não trivias, \(\forall i \in I\), Então, \(X:= \prod X_i\) é separável \(\ \leftrightharpoons \ X_i\) é separável, \(\forall i \in I\) e \(|I| < |\R|\). \comentario{Olha \cite[pag. 66]{mujica2005}}
+\end{proposition}
+
+\begin{theorem}
+    \textbf{20.8.} Cada espaço de Lindelöf regular é normal. \comentario{Olha \cite[pag. 67]{mujica2005}}
+\end{theorem}
+
+\subsection*{Espaços compactos}
+
 \begin{definition}
     Um espaço \((X,\tau)\) é \emph{compacto} se \(\forall (U_i)_{i\in I}: U_i\ab \subset  X = \displaystyle\bigcup U_i\) (\emph{cobertura aberta}), \(\exists (U_j)_{j\in J} : J \subset I\), subcobertura finita de \(X\).   
 \end{definition}
@@ -55,3 +96,55 @@
 \end{corollary}
 
 \demo{(\(\Rightarrow\)) \(K\ce\subset \R^n\) pela \(\square\) \hyperlink{prop217}{21.7.}, agora \((B(0; n))_{n\in \N}\) é uma cobertura aberta de \(K\), logo \(\exists (B(0;j))\) subcobertura finita e \(R>0 : K \subset B(0;R)\); (\(\Leftarrow\)) \(K\ce \subset B(0;R) \subset [-R,R]^n\) compacto, \(\square\) \hyperlink{prop213}{21.3.} + \(\blacksquare\) \hyperlink{thm219}{21.9. (\emph{Tychonoff})}. }
+
+\hypertarget{thm2113}{}
+\begin{theorem}
+    \textbf{21.13.} Cada espaço de Hausdorff compacto é \(T_4\). 
+\end{theorem}
+
+\demo{Compacto \( \Rightarrow \) Lindelöf \textcolor{red}{+ regular} \(\Rightarrow \) Normal, \(\blacksquare\) \hyperlink{thm208}{20.8.}. Basta verificar que \(X\) é regular. Sejam \(b \in X\setminus A\ce\), então \(\forall a \in \exists U_a\ab, V_a\ab \subset X\) disjuntos \(: a \in U_a\) e \(b \in V_a\), \((U_a)_{a\in A}\) e cobertura aberta de \(A\) e \(\exists a_1, a_2, \ldots a_n \in A : \)
+\[A \subset  \bigcup A_{a_j} =: U\ab \subset X, \hspace{0.3cm} b \in \bigcap V_{a_j} \ab \subset X \text{ e } U\cap V = \varnothing. \]
+\vspace{-0.3cm}
+}
+
+\subsection*{Espaços localmente compactos}
+
+\begin{definition}
+    \((X,\tau)\) é \emph{locamente compacto} se \(\forall x \in X, \ \exists \B_x\) base de vizinhanças compactas.  
+\end{definition}
+
+\begin{proposition}
+    \textbf{22.1.} Um espaço de Hausdorff  é localmente compacto \(\ \leftrightharpoons \ \) Existir pelo menos uma vizinhança compacta, \(\forall x \in X\).  
+\end{proposition}
+
+\demo{
+    (\(\Leftarrow \)) Sejam \(x \in K \in \U_x : K\) é compacta, \(U \in \U_x\) e \(V := (U \cap K)^\circ\), percebe que \(V \in \U_x\) (em \(K\)) que é regular, \(\blacksquare\) \hyperlink{thm2113}{21.13.}. Segue que \(\exists W_1\ab \cap K =: W \ab \subset K : x\in W \subset \overline{W}^K \subset V \subset U \), onde \(\overline{W}^K \in \U_x \) (em \(X\)) é compacta, \(\square\) \hyperlink{prop173}{17.3. (b)}.    
+}
+
+\begin{theorem}
+    \textbf{22.4.} Cada espaço de Hausdorff localmente compacto é Tychonoff. \comentario{\cite[pag. 76]{mujica2005}}
+\end{theorem}
+
+\begin{proposition}
+    \textbf{22.5.} Sejam \((X,\tau)\) Hausdorff e \(C\leq X\) localmente compacto. Então, \(\exists A\ab, B\ce \subset X : C  = A \cap B \). \comentario{Não suporta resumo, olha \cite[pag. 77]{mujica2005}}
+\end{proposition}
+
+\begin{proposition}
+    \textbf{22.7.} \(X:= \prod X_i\) é localmente compacto \(\ \leftrightharpoons \ X_i\) é localmaente compacto \(\forall i \in I\) e \(\exists J\subset I\) finito \(: X_i \) é compacto \(\forall i \in I \setminus J\).  \comentario{Olha \cite[pag. 77]{mujica2005}}
+\end{proposition}
+
+\vspace{0.5cm}
+\hrule 
+
+\begin{definition}
+    Chamamos de \emph{compactificação} de \((X,\tau)\) Hausdorff, um par \((Y, \phi): \) (C1) \(Y\) é Hausdorff compacto e (C2) \(\ \phi: X \simeq S \leq Y\). 
+\end{definition}
+
+\begin{theorem}
+    \textbf{23.2. (\emph{Alexandroff})} Sejam \((X, \tau)\) Hausdorff localmente compacto (não compacto), \(p : p \notin X\) e \(X^*:= X \cup \{p\}\). Pra cada \(x \in X\) sejam \(\B_x(X^*) = \B_x(X)\) (bases de vizinhanças em \(X\))  e  \(\B_p(X^*):=\{\{p\} \cup (X\setminus K) : K\subset X \text{ é compacto}\}\). Então, 
+    \begin{enumerate}[label = (\alph*), left = 0.6cm]
+        \item As familias \(\B_x(X^*)_{x\in X}\) e \(\B_p(X^*)\) definem uma topologia em \(X^*\) que induz em \(X\) a sua topologia original. 
+        \item \(X^*\) é Hausdorff compacto e \(\overline{X} = X^*\).  \comentario{Olha \cite[pag. 79]{mujica2005}}
+    \end{enumerate}
+\end{theorem}
+%\comentario{Naturalmente não suporta resumo, olha se queser \cite[pag. 79]{mujica2005}} 

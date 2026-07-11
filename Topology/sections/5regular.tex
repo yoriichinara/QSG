@@ -128,7 +128,7 @@
 \demo{(\(\Leftarrow\)) \(U:= f^{-1}([0, \nicefrac{1}{2})) \) e \(V:= f^{-1}((\nicefrac{1}{2}, 1])\) são abertos disjuntos em \(X : A \subset U\) e \(B \subset V\); (\(\Rightarrow\)) Pesada, olha se precisar \cite[pag. 53]{mujica2005}. }
 
 \begin{theorem}
-    \textbf{18.9. (\emph{Tietze})} Em \((X, \tau)\) as seguintes condições são equivalentes:  
+    \textbf{18.9. (\emph{Tietze})} Em \((X, \tau)\) as seguintes condições são equivalentes:  \comentario{\cite[pag. 55]{mujica2005}}
     \vspace{-0.3cm}
     \begin{enumerate}[label = (\alph*), left = 0.6cm]
         \item \(X\) é normal. 
@@ -137,7 +137,7 @@
     \end{enumerate}
 \end{theorem}
 
-\comentario{Mais uma vez não suporta resumos, olha se precisar \cite[pag. 55]{mujica2005}}
+%\comentario{Mais uma vez não suporta resumos, olha se precisar \cite[pag. 55]{mujica2005}}
 
 \subsection*{Espaços completamente regulares}
 
@@ -157,10 +157,64 @@
     \textbf{19.4.} Cada espaço de Tychonoff é \(T_3\). \comentario{Mogollas}
 \end{corollary}
 
+\hypertarget{prop196}{}
 \begin{proposition}
     \textbf{19.6.} Cada subespaço de completamente regular é completamente regular. \comentario{Dados \(b \in S \setminus (S \cap A_1\ce) = S \setminus A_1, \ \exists f|_{_S} \in (S,[0,1]) : f|_{_S}(S\cap A_1) \subset \{0\}\) e \(f|_{_S}(b) = 1\)}
 \end{proposition}
 
 \begin{corollary}
     \textbf{19.7.} Cada subespaço de Tychonoff é Tychonoff. \comentario{Mogollas}
+\end{corollary}
+
+\begin{proposition}
+    \textbf{19.8.} \(X := \prod X_i\) é completamente regular \(\ \leftrightharpoons \ \) \(X_i\) é completamente regular, \(\forall i \in I\).
+\end{proposition}
+
+\demo{
+    (\(\Rightarrow\)) \(\square\) \hyperlink{prop196}{19.6.} + (\textcolor{rojoscuro}{Ex. 10.C.}); (\(\Leftarrow\)) Sejam \(\textbf{b}   \in  \bigcap \pi^{-1}_j(U_j) \subset  X\setminus A\ce \), onde \(J\subset I \) é finito e \(U_j\ab \subset X_j, \ j \in J\). Note que \(\pi_j(\textbf{b}) \in U_j, \ \forall j \in J\), também,  
+    \[A \subset X \setminus \left(\bigcap \pi_j^{-1}(U_j)\right)= \bigcup X\setminus \pi_j^{-1}(U_j) = \bigcup \pi_j^{-1}(X_j\setminus U_j).\]
+    Agora, \(\forall j \in J, \ \exists g_j \in C(X_j, [0,1]) : g_j(X_j \setminus U_j) \subset \{0\}\) e \(g_j(\pi_j(\textbf{b})) = 1\), finalmente \(\min g_j \circ \pi_j =: f \in C(X, [0,1])\) é tal que \(f(A)\subset \{0\}\) e \(f(\textbf{b}) = 1\).    
+}
+
+\begin{corollary}
+    \textbf{19.9.} \(X := \prod X_i\) é Tychonoff \(\ \leftrightharpoons \ \) \(X_i\) é Tychonoff, \(\forall i \in I\). \comentario{Mogollas }
+\end{corollary}
+
+\begin{definition}
+    \centering\(\displaystyle C_b(X):= \{f \in C(X, \R) : \sup |f| < \infty\}.\)
+\end{definition}
+
+\hypertarget{thm1910}{}
+\begin{theorem}
+    \textbf{19.10.} \((X,\tau)\) é completamente regular \(\ \leftrightharpoons \ \) \(X\) tem a topologia fraca \((\tau = \tau_w)\) definida pela familia \(C_b(X)\). \comentario{Não suporta resumo, olha \cite[pag. 59]{mujica2005}}
+\end{theorem}
+
+\begin{theorem}
+    \textbf{19.11.} Em \((X, \tau)\) as seguintes condições são equivalentes: 
+    \[\text{(a) \ } X \text{ é Tychonoff;\hspace{1cm} (b) \ } X\simeq S \leq [0,1]^{C_b(X)}; \text{\hspace{1cm} (c) \ } \exists I : X\simeq S \leq [0,1]^I.  \]
+\end{theorem}
+
+\demo{(a) \(\Rightarrow \) (b) \(\forall f \in C_b(X)\) sejam \(\R \supset [a_f, b_f] \supset \operatorname{Im} f \) e considere a avaliação: 
+\[\epsilon_{_X} : X \ni \x \mapsto (f(x))_{x \in X} \in \prod_{f \in C_b(X)} [a_f, b_f].\]
+É claro que \(C_b(X)\) separa pontos de \(X\) e pelo \(\blacksquare\) \hyperlink{prop1910}{19.10.} \(\tau_X = \tau_w\), logo segue da \(\square\) \hyperlink{prop108}{10.8.} que \(\epsilon_{_X}: X \simeq \operatorname{Im}\epsilon_{_X}\); (b) \(\Rightarrow \) (c) \(\Rightarrow \) (a) Mogollas.   
+}
+
+\begin{definition}
+    Diz-se que uma familia de funções \((f_i: (X,\tau) \to (X_i, \tau_i))_{i\in I}\) \emph{separa pontos de fechados} se dados \(b \in X \setminus A\ce, \ \exists j \in I : f_j(b) \notin  \overline{f_j(A)}\). 
+\end{definition}
+
+\hypertarget{prop1913}{anchor text}
+\begin{proposition}
+    \textbf{19.13.} Sejam \((f_i)_{i\in I} : f_i \in C(X, X_i), \ \forall i \in I\). Então, \((f_i)\) separa pontos de fechados \(\ \leftrightharpoons \ \) \(\B:= \{f_i^{-1}(V_i) : V_i\ab \subset X_i\}\) é base de  \(\tau_X\). 
+\end{proposition}
+
+\demo{(\(\Rightarrow \)) Se \( a\in X \setminus(X \setminus U)\ce\), então \(\exists j \in I : f_j(a)\notin \overline{f_j(X\setminus U)} \ \leftrightharpoons \ a \in f^{-1}_j(V_j\ab) := f^{-1}_j(X\setminus \overline{f_j(X\setminus U)})\subset U\); (\(\Leftarrow\)) Se \(b \in X\setminus A\ce, \ \exists j \in I : b \in f_j^{-1}(V_j\ab)\subset (X \setminus A)\ab \), aí \(V_j \cap f_j(A) = \varnothing \ \leftrightharpoons \ f_j(b) \notin \overline{f_j(A)}\). }
+
+\hypertarget{coro1914}{}
+\begin{corollary}
+    \textbf{19.14.} Se \((f_i)_{i\in I} : f_i \in C(X, X_i)\) separa pontos de fechados, então \(\tau_X = \tau_w\), topologia fraca definida pelas \((f_i)\). \comentario{\(\square\) \hyperlink{prop1913}{19.13.} + \(\square\) \hyperlink{prop105}{10.5.}}
+\end{corollary}
+
+\begin{corollary}
+    \textbf{19.15.} Se \((X, \tau)\) for \(T_1\) e \((f_i)_{i\in I} : f_i \in C(X, X_i)\) separar pontos de fechados, então a avaliação \(\epsilon_{_X} : X \simeq \operatorname{Im}\epsilon_{_X}\). \comentario{{\scriptsize\(\boxtimes\)} \hyperlink{coro1914}{19.14.} + \(\square\) \hyperlink{prop108}{10.8.}}
 \end{corollary}

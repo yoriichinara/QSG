@@ -118,9 +118,9 @@
     \textbf{28.2.} Cada espaço conexo por caminhos é conexo. \comentario{Se \(\exists A \mid B = X\), então basta pegar \(a \in A, \ b\in B\) e \(f: a\leadsto b\), assim \([0,1] = f^{-1}(A) \mid f^{-1} (B )\)\Lightning}
 \end{proposition}
 
-\begin{example}
-    \(\R^n \setminus E : E \subset \R^n\) é enumeravél é conexo por caminhos. \comentario{Pensa em retas}
-\end{example}
+%\begin{example}
+%    \(\R^n \setminus E : E \subset \R^n\) é enumerável é conexo por caminhos. \comentario{Pensa em retas}
+%\end{example}
 
 \begin{definition}
     Dados \(f: a \leadsto b \) e \(g : b \leadsto c\) em \(X\) definimos \(f *g : a \leadsto c\) tal que:
@@ -141,3 +141,69 @@
 
  %Dado \(b \in S, \ \exists U\ab \in \U_b\) conexa por caminhos, \(\forall c \in U, \ \exists g: b \leadsto c\), e como \(b \in S, \ \exists f: a \leadsto b\), logo \(f*g : a \leadsto c\) e \(U\ab \subset S \ \leftrightharpoons \ S\ab\subset X\).   }
 
+\subsection*{Homotopia}
+
+\begin{definition}
+    Dadas \(f,g \in C(X,Y )\). Diremos que \(f\) e \(g\) são homotópicas se existir \(H: X \times [0,1] \to Y\) contínua \(: H(x,0) = f(x)\) e \(H(x,1) = g(x)\), escrevemos \(H: f \simeq g\).  
+\end{definition}
+
+\begin{example}
+    \((X,\tau)\) qualquer, \(Y \subset \R^n\) convexo, então pra quaisquer \(f,g \in C(X,Y)\) temos \(H: f\simeq g\) vía \(H(x,t):= (1-t)f(x) + tg(x)\). 
+\end{example}
+
+\begin{proposition}
+    \textbf{29.3.} A relação \(f\simeq g\) é uma relação de equivalência em \(C(X,Y)\). \comentario{(ref.) mogollas; (sim.) compõe com \(t \mapsto 1 - t\) e (trans.) pega \(H_1(x,t) * H_2(x,t) \), em \(t\).  }
+\end{proposition}
+
+\begin{proposition}
+    \textbf{29.4.} Sejam \(X,Y \) e \(Z\) espaços topológicos, \(f_1, g_1 \in C(X,Y)\) e \(f_2, g_2 \in C(Y,Z) \ \mid \  H_1:  f_1\simeq f_2\) e \(H_2: g_1 \simeq g_2\). Então, \(f_2 \circ f_1 \simeq g_2 \circ g_1\).  \comentario{\(H_3(x,t):= H_2(H_1(x,t), t )\)}
+\end{proposition}
+
+\begin{definition}
+    Um espaço \((X, \tau)\) é \emph{contrátil} se \(\id_{_X} \simeq x_0\), onde \(x_0 \in X\) é constante.   
+\end{definition}
+
+\begin{proposition}
+    \textbf{29.6.} \((X, \tau)\) é contrátil \(\ \leftrightharpoons \ \forall f,g \in C(Y, X)\) tem-se que \(f \simeq g\), sendo \(Y\) qualquer espaço topológico.  \textcolor{gray}{(\(\Rightarrow\)) \(f = \id_{_X} \circ f \simeq x_0 \circ f = x_0 \circ g \simeq \id_{_X} \circ g = g\)}  
+\end{proposition}
+
+\begin{definition}
+    Dos espaços topológicos \(X \) e \(Y\) são homotopicamente equivalentes se \(\exists f \in C(X,Y)\) e \(\exists g \in C(Y,X) : g\circ f \simeq \id_{_X}\) e \(f\circ g \simeq \id_{_Y}\), escrevemos \(X \sim Y\). 
+\end{definition}
+
+\begin{proposition}
+    \textbf{29.9.} \((X,\tau)\) é contrátil \(\ \leftrightharpoons \ X \sim \{x_0\}\). \textcolor{gray}{(\(\Rightarrow\)) \(\iota:\{x_0\} \hookrightarrow X\) é tal que \(\iota \circ x_0 = x_0 \simeq \id_{_X}\) e \(x_0 \circ \iota = x_0 \simeq \id_{\{x_0\}}\); (\(\Leftarrow\)) \(g \circ f \simeq \id_{\{x_0\}} = x_0\) que é constante} 
+\end{proposition}
+
+\subsection*{O grupo fundamental}
+
+\begin{definition}
+    \(\star\) \ Dado \(x_0 \in (X, \tau)\) fixo, denotamos por \(\Omega(X, x_0):= \{f \in C([0,1], X) : f(0) = f(1) = x_0\}\), cujos elementos são chamamos de \emph{laços} baseados em \(x_0\). 
+
+    \(\star\) \ \(f, g \in \Omega(X, x_0)\) são \emph{homotopicos relativos} a \(\{0,1\} \subset [0,1]\) se \(H: f\simeq g\) e \(H(s,t) = f(s) = g(s), \ \forall s \in \{0,1\}, \ t \in [0,1]\), escrevemos \(f\simeq_{x_0} g [\{0,1\}]\). 
+
+    \(\star\) \ Denotamos por \(\Pi_1(X, x_0)\) as classes de equivalência em \(\Omega(X,x_0)\) sob a relação \(\simeq_{x_0}\). %\( := \nicefrac{\Omega(X,x_0)}{\simeq_{x_0}}\)
+\end{definition}
+
+\begin{theorem}
+    \textbf{30.2.} O conjunto \(\Pi_1(X, x_0)\) junto com a operação \(* : ([f] , [g]) \mapsto [f*g]\) é um grupo, chamado de \emph{grupo fundamental} de \(X\) baseado em \(x_0\). \comentario{\cite[pag. 99]{mujica2005}}
+\end{theorem}
+
+\begin{proposition}
+    \textbf{30.3.} Sejam \(x_0, x_1 \in (X,\tau)\) e \(\phi : x_0 \leadsto x_1\), então a função \(\phi^*: [f]\mapsto [\phi^{-1} \circ f \circ \phi]\) é um isorfismo (de grupos) \(\phi^*: \Pi_1(X, x_0) \cong \Pi_1(X, x_1)\). \comentario{(\textcolor{rojoscuro}{Ex. 29.E.})}
+\end{proposition}
+
+\begin{corollary}
+    \textbf{30.4.} Se \((X, \tau)\) é conexo por caminhos, então \(\Pi_1(X,x_0)\) não depende do ponto base. 
+\end{corollary}
+
+\begin{definition}
+    \((X,\tau)\) é \emph{simplesmente conexo} se for conexo por caminhos e \(\Pi_1(X, x_0) = \{\id\}\). 
+\end{definition}
+
+\begin{definition}
+    \centering \(\partial \mathbb{D} \simeq \E^1 := \{\x \in \R^2 : \|\x\| = 1\} \).
+\end{definition}
+\begin{theorem}
+    \textbf{31.1.} \(\displaystyle \Pi_1(\E^1 , 1) \cong \mathbb{Z}\). \comentario{Não suporta resumo, olha \cite[pag. 103]{mujica2005}}
+\end{theorem}
