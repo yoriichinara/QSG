@@ -4,9 +4,9 @@
 <h1 align="center"> QUALI SURVIVAL GUIDE  </h1>
 <h3 align="center"> Mestrado em Matemática </h3>
 
-<p align="center"> 
+<!-- p align="center" 
   <img src="gif/fightclub.gif" alt="Animated gif pacman game" style="width:100%; height:auto;">
-</p>
+</p> -->
 
 <!-- ABOUT THE PROJECT -->
 <h2 id="about-the-project"> :pencil: Sobre o projeto</h2>
