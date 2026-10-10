@@ -4,7 +4,7 @@
 <h1 align="center"> QUALI SURVIVAL GUIDE  </h1>
 <h3 align="center"> Mestrado em Matemática </h3>
 
-<p align="center" 
+<p align="center">
   <img src="gif/horse.gif" alt="Animated gif pacman game" style="width:100%; height:auto;">
 </p> 
 
