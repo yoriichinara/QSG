@@ -30,7 +30,7 @@
   <li><b>Integração</b>: Variedades >> Differenciabilidade (análogos) >> Espaço Tangente >> Valores Regulares >> Formas Differenciais >> Integração em Variedades.</li></ul>
   </li>
 
-  <li><b>Exercícios</b> - Tem as <a href="AnalysisRn/listas/listas.pdf">listas</a> da matéria <a href="AnalysisRn/listas/1-8.pdf">resolvidas</a> (certeza tem error, perdão), os gabaritos das <a href="AnalysisRn/listas/P1.pdf">P1</a> e <a href="AnalysisRn/listas/P2.pdf">P2</a> e alguns <a href="Qualis/analysis/main.pdf">seleçõados</a> por mim, que atualizare depois como ja falei. </li>
+  <li><b>Exercícios</b> - Tem as <a href="AnalysisRn/listas/listas.pdf">listas</a> da matéria <a href="AnalysisRn/listas/1-8.pdf">resolvidas</a> (certeza tem error, perdão), os gabaritos das <a href="AnalysisRn/listas/P1.pdf">P1</a> e <a href="AnalysisRn/listas/P2.pdf">P2</a> e alguns <a href="Qualis/analisys/main.pdf">selecionados</a> por mim, que atualizare depois como ja falei. </li>
 </ul>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
