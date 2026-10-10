@@ -4,9 +4,9 @@
 <h1 align="center"> QUALI SURVIVAL GUIDE  </h1>
 <h3 align="center"> Mestrado em Matemática </h3>
 
-<!-- p align="center" 
-  <img src="gif/fightclub.gif" alt="Animated gif pacman game" style="width:100%; height:auto;">
-</p> -->
+<p align="center" 
+  <img src="gif/horse.gif" alt="Animated gif pacman game" style="width:100%; height:auto;">
+</p> 
 
 <!-- ABOUT THE PROJECT -->
 <h2 id="about-the-project"> :pencil: Sobre o projeto</h2>
@@ -38,7 +38,7 @@
 <h2 id="overview"> :book: Álgebra Linear (MM719) </h2>
 
 <p align="justify"> 
-  Eu tomei o curso com o professor <a href = "https://www.ime.unicamp.br/~aamoura/Ensino/MM719/2025-2-MA719.html"> Adriano </a>, esse curso em particular não tem un texto padrão mas o  livro dele vai caminho de ser, a notação é um pouco pesada mas faz sentido, vai dar certo, confia. 
+  Eu tomei o curso com o professor <a href = "https://www.ime.unicamp.br/~aamoura/Ensino/MM719/2025-2-MA719.html"> Adriano</a>, esse curso em particular não tem un texto padrão mas o  livro dele vai caminho de ser, a notação é um pouco pesada mas faz sentido, vai dar certo, confia. 
 </p> 
 
 <ul>
@@ -72,7 +72,7 @@
   <li><b>Espaçõs Conexos</b>: Definição >> Componentes Conexas >> Espaços Conexos por Caminhos >> Homotopia >> Grupo Fundamental.</li>
   </li> </ul>
 
-  <li><b>Exercícios</b> - As listas estão no texto, aquí tem resolvidos os Capítulos <a href="Topology/listas/Mujica1-15.pdf"> 1-15</a> e <a href="Topology/listas/Mujica16-28.pdf"> 16-28</a> (certeza tem error, perdão de novo), tem os gabaritos das <a href="Topology/listas/Viviana/P1.pdf">P1</a> e <a href="Topology/listas/Viviana/P2.pdf">P2</a>. Tambem tem alguns  <a href="Qualis/top/main.pdf"> seleçoados </a> que ireí atualizando no futuro.  </li>
+  <li><b>Exercícios</b> - As listas estão no texto, aquí tem resolvidos os Capítulos <a href="Topology/listas/Mujica1-15.pdf"> 1-15</a> e <a href="Topology/listas/Mujica16-28.pdf"> 16-28</a> (certeza tem error, perdão de novo), tem os gabaritos das <a href="Topology/listas/Viviana/P1.pdf">P1</a> e <a href="Topology/listas/Viviana/P2.pdf">P2</a>. Tambem tem alguns  <a href="Qualis/top/main.pdf"> seleçoados</a> que ireí atualizando no futuro.  </li>
 </ul>
 
 <!-- CREDITS -->
