@@ -1,11 +1,11 @@
 <p align="center"> 
-  <img src="gif/Header.png" alt="Pacman Logo" width="300px" height="100px"> 
+  <img src="gif/Header.png" alt="Pacman Logo" style ="width:80%; height:auto;"> 
 </p>   
 <h1 align="center"> QUALI SURVIVAL GUIDE  </h1>
 <h3 align="center"> Mestrado em Matemática </h3>
 
 <p align="center"> 
-  <img src="gif/horse.gif" alt="Animated gif pacman game" height="210px" width="637">
+  <img src="gif/horse.gif" alt="Animated gif pacman game" style="width:90%; height:auto;">
 </p>
 
 <!-- ABOUT THE PROJECT -->
