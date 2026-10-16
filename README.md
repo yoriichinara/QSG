@@ -42,10 +42,10 @@
 </p> 
 
 <ul>
-  <li><b><a href="LinearAlgebra/QSG_Algebra.pdf">Notas</a></b> - Ahí ta tudo, com versão pra imprimir <a href="LinearAlgebra/printversion.pdf">aquí</a>. A estrutura tem três grandes blocos: 
-  <ul> <li><b> Teoría Geral de Operadores </b>: Polinômio Mínimo >> Decomposição Primária >> Decomposição Cíclica >> Formas Canônicas.</li>
-  <li><b>Multilinearidade</b>: Dual >> Pareamentos Bilineares >> Bases Hiperbólicas e Ortogonais >> Transformações Ortogonais e Simpléticas >> Adjunção. </li>
-  <li><b>Álgebra Tensorial</b>: Produto Tensorial >> Produto Tensorial de Transformações Lineares >> Potências Simétrica e Exterior.   </li></ul></ul>
+  <li><b><a href="LinearAlgebra/QSG_Algebra.pdf">Notas</a></b> - Ahí ta tudo, com versão pra imprimir <a href="LinearAlgebra/printversion.pdf">aquí</a>. A ememta cobre os capítulos 8, 9 e 10 do texto: 
+  <ul> <li><b> 8 Teoría Geral de Operadores </b>: Polinômio Mínimo >> Decomposição Primária >> Decomposição Cíclica >> Formas Canônicas.</li>
+  <li><b>9 Multilinearidade</b>: Dual >> Pareamentos Bilineares >> Bases Hiperbólicas e Ortogonais >> Transformações Ortogonais e Simpléticas >> Adjunção. </li>
+  <li><b>10 Álgebra Tensorial</b>: Produto Tensorial >> Produto Tensorial de Transformações Lineares >> Potências Simétrica e Exterior.   </li></ul></ul>
   </li>
 
   <li><b>Exercícios</b> - As listas estão no texto, aquí tem resolvido apenas a Seção <a href="LinearAlgebra/listas/81.pdf"> 8.1.</a> e os Capítulos <a href="LinearAlgebra/listas/9-10.pdf"> 9-10</a> (certeza tem error, perdão de novo), tambem alguns exercícios (só téoricos) que caíram nas <a href="Qualis/linear/main.pdf">provas</a>. </li>
